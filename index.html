@@ -174,66 +174,134 @@ h1,h2,h3{font-family:var(--fd);letter-spacing:.04em}
 .cmp-sm.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
 
 
-/* ── VF-CB ─────────────────────────────────────────────────────────────────── */
-.droid-fab{
-  position:fixed;
-  right:14px;
-  bottom:calc(var(--nav) + var(--sb) + 18px);
-  z-index:140;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 14px;
-  border-radius:999px;
-  border:1px solid var(--acc);
-  background:rgba(18,18,26,.96);
-  color:var(--acc);
-  box-shadow:0 8px 30px rgba(0,0,0,.35);
-  backdrop-filter:blur(14px);
-  cursor:pointer;
-  transition:transform .15s, background .15s, color .15s;
-  font-size:12px;
-  font-weight:600;
-  letter-spacing:.05em;
-  text-transform:uppercase;
+/* ── VF-CB PANEL ─────────────────────────────────────────────────────────────── */
+
+/* Backdrop overlay */
+.droid-backdrop{
+  display:none;position:fixed;inset:0;z-index:290;
+  background:rgba(0,0,0,.5);backdrop-filter:blur(3px);
 }
-.droid-fab:active{transform:scale(.97)}
-.droid-fab:hover{background:var(--acc);color:var(--bg)}
-.droid-fab-ic{font-size:16px;line-height:1}
-.droid-chat-wrap{padding:14px 14px 100px}
-.droid-help{font-size:11px;color:var(--dim);line-height:1.5;margin-bottom:12px}
-.droid-examples{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.droid-backdrop.on{display:block;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+/* Slide-up panel */
+.droid-panel{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;
+  max-width:600px;margin:0 auto;
+  height:72vh;
+  background:var(--surf);
+  border:1px solid var(--b2);
+  border-bottom:none;
+  border-radius:20px 20px 0 0;
+  box-shadow:0 -8px 40px rgba(0,0,0,.5);
+  flex-direction:column;
+  overflow:hidden;
+}
+.droid-panel.on{
+  display:flex;
+  animation:slideUp .28s cubic-bezier(.32,.72,0,1);
+}
+@keyframes slideUp{from{transform:translateY(100%);opacity:0}to{transform:translateY(0);opacity:1}}
+
+/* Panel header */
+.droid-header{
+  display:flex;align-items:center;gap:10px;
+  padding:14px 16px 12px;
+  border-bottom:1px solid var(--b);
+  flex-shrink:0;
+}
+.droid-header-ic{
+  width:36px;height:36px;border-radius:10px;
+  background:var(--acc);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
+}
+.droid-header-title{font-family:var(--fd);font-size:18px;letter-spacing:.06em;color:var(--txt)}
+.droid-header-sub{font-size:10px;color:var(--dimmer);font-family:var(--fm);margin-top:1px}
+.droid-close{
+  margin-left:auto;width:30px;height:30px;border-radius:8px;
+  border:1px solid var(--b2);background:transparent;
+  color:var(--dim);font-size:18px;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .15s;flex-shrink:0;line-height:1;
+}
+.droid-close:active{background:var(--surf2)}
+
+/* Drag handle */
+.droid-handle{
+  width:36px;height:4px;border-radius:2px;
+  background:var(--b3);margin:10px auto 0;flex-shrink:0;
+}
+
+/* Scrollable chat area */
+.droid-chat-wrap{flex:1;overflow-y:auto;padding:14px 14px 0;scrollbar-width:none}
+.droid-chat-wrap::-webkit-scrollbar{display:none}
+
+.droid-help{font-size:11px;color:var(--dim);line-height:1.5;margin-bottom:10px}
+.droid-examples{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .droid-chip{
-  padding:7px 10px;border-radius:999px;border:1px solid var(--b2);
-  background:var(--surf);color:var(--txt);font-size:11px;cursor:pointer;transition:all .15s
+  padding:6px 10px;border-radius:999px;border:1px solid var(--b2);
+  background:var(--surf2);color:var(--txt);font-size:11px;cursor:pointer;transition:all .15s
 }
 .droid-chip:active{transform:scale(.97)}
 .droid-chip:hover{border-color:var(--acc);color:var(--acc)}
-.droid-log{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.droid-log{display:flex;flex-direction:column;gap:10px;padding-bottom:14px}
 .droid-msg{
   padding:10px 12px;border-radius:12px;border:1px solid var(--b);
   font-size:13px;line-height:1.6;white-space:pre-wrap
 }
-.droid-msg.user{background:var(--surf);color:var(--txt)}
-.droid-msg.ai{background:var(--surf2);color:var(--txt);border-color:var(--b2)}
+.droid-msg.user{background:var(--acc0);border-color:var(--acc);color:var(--txt);border-radius:12px 12px 4px 12px}
+.droid-msg.ai{background:var(--surf2);color:var(--txt);border-color:var(--b2);border-radius:12px 12px 12px 4px}
+
+/* Input bar */
+.droid-status{font-size:10px;color:var(--dimmer);padding:4px 16px 2px;flex-shrink:0}
 .droid-inputbar{
-  position:sticky;bottom:0;display:flex;gap:8px;
-  padding:12px 14px calc(12px + var(--sb));
-  background:linear-gradient(180deg, rgba(10,10,15,0) 0%, rgba(10,10,15,.96) 25%);
-  backdrop-filter:blur(14px)
+  display:flex;gap:8px;flex-shrink:0;
+  padding:10px 14px calc(10px + var(--sb));
+  border-top:1px solid var(--b);
+  background:var(--surf);
 }
 .droid-input{
-  flex:1;min-height:44px;max-height:120px;resize:none;background:var(--surf);
-  border:1px solid var(--b2);border-radius:12px;padding:11px 12px;color:var(--txt);
-  font-family:var(--fb);font-size:14px;outline:none
+  flex:1;min-height:42px;max-height:100px;resize:none;background:var(--surf2);
+  border:1px solid var(--b2);border-radius:12px;padding:10px 12px;color:var(--txt);
+  font-family:var(--fb);font-size:14px;outline:none;
 }
 .droid-input:focus{border-color:var(--acc)}
 .droid-send{
-  min-width:88px;height:44px;border:none;border-radius:12px;background:var(--acc);
-  color:var(--bg);font-weight:700;letter-spacing:.04em;cursor:pointer
+  width:60px;height:42px;border:none;border-radius:12px;background:var(--acc);
+  color:var(--bg);font-size:20px;cursor:pointer;flex-shrink:0;
+  transition:transform .15s;
 }
-.droid-send:active{transform:scale(.98)}
-.droid-status{font-size:11px;color:var(--dimmer);margin:0 14px 8px}
+.droid-send:active{transform:scale(.95)}
+
+/* ── PROMINENT FAB ── */
+.droid-fab{
+  position:fixed;
+  bottom:calc(var(--nav) + var(--sb) + 12px);
+  left:50%;
+  transform:translateX(-50%);
+  z-index:140;
+  display:flex;align-items:center;gap:10px;
+  padding:13px 22px;
+  border-radius:999px;
+  border:none;
+  background:var(--acc);
+  color:var(--bg);
+  box-shadow:0 4px 24px rgba(212,168,67,.45), 0 2px 8px rgba(0,0,0,.4);
+  cursor:pointer;
+  transition:transform .15s, box-shadow .15s;
+  font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  font-family:var(--fb);
+}
+.droid-fab:active{transform:translateX(-50%) scale(.97)}
+.droid-fab:hover{box-shadow:0 6px 32px rgba(212,168,67,.6), 0 2px 8px rgba(0,0,0,.4)}
+.droid-fab-ic{font-size:18px;line-height:1}
+.droid-fab-pulse{
+  position:absolute;inset:0;border-radius:999px;
+  background:var(--acc);opacity:.3;
+  animation:pulse 2.5s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:.3}50%{transform:scale(1.12);opacity:0}}
 
 </style>
 </head>
@@ -797,8 +865,7 @@ async function sendDroidMessage(prefilledText) {
   const rawMessage = (prefilledText ?? input?.value ?? '').trim();
   if (!rawMessage) return;
 
-  openScr('sDroid');
-  initDroidIntro();
+  openDroid();
   addDroidMessage('user', rawMessage);
   setDroidStatus('VF-CB is thinking…');
 
@@ -820,6 +887,24 @@ function useDroidPrompt(text) {
   const input = droidInputEl();
   if (input) input.value = text;
   sendDroidMessage(text);
+}
+
+function openDroid() {
+  document.getElementById('droidPanel')?.classList.add('on');
+  document.getElementById('droidBackdrop')?.classList.add('on');
+  document.body.style.overflow = 'hidden';
+  initDroidIntro();
+  // Scroll log to bottom
+  setTimeout(() => {
+    const log = document.getElementById('droidLog');
+    if (log) log.scrollTop = log.scrollHeight;
+  }, 50);
+}
+
+function closeDroid() {
+  document.getElementById('droidPanel')?.classList.remove('on');
+  document.getElementById('droidBackdrop')?.classList.remove('on');
+  document.body.style.overflow = '';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -1611,8 +1696,7 @@ async function sendDroidMessage(prefilledText) {
   const rawMessage = (prefilledText ?? input?.value ?? '').trim();
   if (!rawMessage) return;
 
-  openScr('sDroid');
-  initDroidIntro();
+  openDroid();
   addDroidMessage('user', rawMessage);
   setDroidStatus('VF-CB is thinking…');
 
@@ -1636,6 +1720,24 @@ function useDroidPrompt(text) {
   sendDroidMessage(text);
 }
 
+function openDroid() {
+  document.getElementById('droidPanel')?.classList.add('on');
+  document.getElementById('droidBackdrop')?.classList.add('on');
+  document.body.style.overflow = 'hidden';
+  initDroidIntro();
+  // Scroll log to bottom
+  setTimeout(() => {
+    const log = document.getElementById('droidLog');
+    if (log) log.scrollTop = log.scrollHeight;
+  }, 50);
+}
+
+function closeDroid() {
+  document.getElementById('droidPanel')?.classList.remove('on');
+  document.getElementById('droidBackdrop')?.classList.remove('on');
+  document.body.style.overflow = '';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const input = droidInputEl();
   if (!input) return;
@@ -1650,41 +1752,45 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <!-- VF-CB -->
-<div class="scr" id="sDroid">
-  <div class="sh">
-    <button class="bb" onclick="closeScr('sDroid')">‹</button>
-    <div class="stw">
-      <div class="st">VF-CB</div>
-      <div class="ss">Vintage Figures Chat Bot</div>
+<!-- VF-CB backdrop -->
+<div class="droid-backdrop" id="droidBackdrop" onclick="closeDroid()"></div>
+
+<!-- VF-CB slide-up panel -->
+<div class="droid-panel" id="droidPanel">
+  <div class="droid-handle"></div>
+  <div class="droid-header">
+    <div class="droid-header-ic">🤖</div>
+    <div>
+      <div class="droid-header-title">VF-CB</div>
+      <div class="droid-header-sub">Vintage Figures Chat Bot</div>
     </div>
+    <button class="droid-close" onclick="closeDroid()">✕</button>
   </div>
 
   <div class="droid-chat-wrap">
-    <div class="droid-help">
-      Ask direct collector questions. Example: What accessories does Farmboy Luke need?
-    </div>
-
+    <div class="droid-help">Ask any collector question about figures, variants, accessories or COOs.</div>
     <div class="droid-examples">
       <button class="droid-chip" onclick="useDroidPrompt('What accessories does Farmboy Luke need?')">Farmboy Luke accessories</button>
       <button class="droid-chip" onclick="useDroidPrompt('What does COO mean?')">What does COO mean?</button>
-      <button class="droid-chip" onclick="useDroidPrompt('Which figures use the Rebel Blaster?')">Rebel Blaster</button>
+      <button class="droid-chip" onclick="useDroidPrompt('Which figures use the Rebel Blaster?')">Rebel Blaster figures</button>
       <button class="droid-chip" onclick="useDroidPrompt('Which Luke variants can use different yellow sabers?')">Luke saber variants</button>
     </div>
-
     <div class="droid-log" id="droidLog"></div>
   </div>
 
   <div class="droid-status" id="droidStatus"></div>
 
   <div class="droid-inputbar">
-    <textarea id="droidInput" class="droid-input" placeholder="Ask VF-CB…" rows="1"></textarea>
-    <button class="droid-send" onclick="sendDroidMessage()">Send</button>
+    <textarea id="droidInput" class="droid-input" placeholder="Ask VF-CB anything…" rows="1"></textarea>
+    <button class="droid-send" onclick="sendDroidMessage()">➤</button>
   </div>
 </div>
 
-<button class="droid-fab" onclick="openScr('sDroid'); initDroidIntro();">
+<!-- Prominent centred FAB -->
+<button class="droid-fab" onclick="openDroid()">
+  <div class="droid-fab-pulse"></div>
   <span class="droid-fab-ic">🤖</span>
-  <span>VF-CB</span>
+  <span>Ask VF-CB</span>
 </button>
 
 </body>
