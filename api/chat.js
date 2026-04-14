@@ -54,7 +54,7 @@ If the user asks about Luke accessories, completeness, or correct weapon, use th
         'anthropic-version': '2023-06-01'
       },
       body: JSON.stringify({
-        model: 'claude-3-sonnet-20240229',
+        model: 'claude-haiku-4-5-20251001',
         max_tokens: 700,
         system: systemPrompt,
         messages: [
@@ -73,8 +73,9 @@ If the user asks about Luke accessories, completeness, or correct weapon, use th
     }
 
     return res.status(200).json({
-      reply: data.content?.[0]?.text || 'No response from Claude'
+      reply: data.content?.[0]?.text || 'No response'
     });
+
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
