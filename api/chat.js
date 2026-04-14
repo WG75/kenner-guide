@@ -45,7 +45,7 @@ Accessory rule:
 - The double-telescoping (DT) yellow saber came with the very earliest 12 Back examples only
 - All other production runs came with a single-telescoping yellow saber
 - Lettered hilt variants (LL, BP, KK, JJ, S, R stamped on hilt) are earlier production and more desirable
-- The yellow Bespin saber (non-telescoping handheld) is NOT correct for Farmboy Luke — that belongs to Bespin Luke
+- The yellow Bespin saber (non-telescoping) is generally NOT correct for Farmboy Luke — it belongs to Bespin Luke. Exception: one later Farmboy Luke variant is known to have been packed with the yellow Bespin saber, allegedly because the arm hole was too small to fit the telescoping saber. Full details on Variant Villain. Do not state this saber is always wrong — acknowledge the exception if relevant.
 
 Known variants (COO / mould):
 - Kader M1 — Hong Kong (GMFGI 1977)
