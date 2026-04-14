@@ -1372,7 +1372,7 @@ async function askAI(message) {
 
     console.log("AI reply:", data.reply);
 
-    alert(data.reply); // quick test output
+    alert(data.reply || JSON.stringify(data)); // quick test output
 
   } catch (err) {
     console.error(err);
