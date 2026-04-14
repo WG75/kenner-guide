@@ -1344,49 +1344,70 @@ document.getElementById('si').addEventListener('input', function() {
     document.getElementById('srchR').appendChild(el);
   }
 });
-document.getElementById('si').addEventListener('focus', function() {
-  if (this.value.length > 1) openScr('sSrch');
-});
-
-// ── INIT ──────────────────────────────────────────────────────────────────────
-(function init() {
-  renderHomeFigs('SW');
-  renderHomeAccs();
-  renderFigList('all');
-  renderAccList('all');
-  renderCbs('all');
-  renderVeh('all');
-  renderKnow();
-})();
-async function askAI(message) {
-  try {
-    const response = await fetch('/api/chat', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ message })
-    });
-
-    const data = await response.json();
-
-    console.log("AI reply:", data.reply);
-
-    alert(data.reply || JSON.stringify(data)); // quick test output
-
-  } catch (err) {
-    console.error(err);
-    alert("Error talking to AI");
-  }
-}
 document.getElementById('si').addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') {
-    const message = this.value.trim();
-    if (message) {
-      askAI(message);
-    }
+  if (e.key !== 'Enter') return;
+
+  e.preventDefault();
+
+  const rawMessage = this.value.trim();
+  if (!rawMessage) return;
+
+  const message = normaliseCollectorQuery(rawMessage);
+
+  const looksLikeQuestion =
+    rawMessage.includes('?') ||
+    /^(what|which|who|when|where|why|how|is|are|do|does|did|can|could|would|should)\b/i.test(rawMessage);
+
+  if (looksLikeQuestion) {
+    askAI(message);
+    return;
   }
+
+  openScr('sSrch');
+  document.getElementById('srchT').textContent = 'RESULTS FOR "' + rawMessage.toUpperCase() + '"';
 });
+
+const LUKE_ALIASES = [
+  'luke',
+  'luke skywalker',
+  'farmboy',
+  'farm boy',
+  'farmboy luke',
+  'farm boy luke',
+  'luke farm boy',
+  'luke farmboy',
+  'original luke',
+  'og luke',
+  'first 12 luke',
+  '12 back luke',
+  'earlybird luke',
+  'anh luke',
+  'new hope luke',
+  'pbp luke',
+  'yellow hair luke',
+  'reddish hair luke',
+  'ginger luke',
+  'brown hair luke',
+  'kader luke',
+  'kader china luke',
+  'unitoy luke',
+  'taiwan luke',
+  'smile luke',
+  'tri logo luke',
+  'beater luke',
+  'discoloured luke'
+];
+
+function normaliseCollectorQuery(input) {
+  const q = input.trim().toLowerCase();
+
+  if (LUKE_ALIASES.some(alias => q.includes(alias))) {
+    return input + ' [Mapped figure: Luke Skywalker original farmboy]';
+  }
+
+  return input;
+}
+
 </script>
 </body>
 </html>
