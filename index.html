@@ -173,6 +173,68 @@ h1,h2,h3{font-family:var(--fd);letter-spacing:.04em}
 .cmp-sm{font-size:10px;padding:5px 10px}
 .cmp-sm.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
 
+
+/* ── VF-CB ─────────────────────────────────────────────────────────────────── */
+.droid-fab{
+  position:fixed;
+  right:14px;
+  bottom:calc(var(--nav) + var(--sb) + 18px);
+  z-index:140;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid var(--acc);
+  background:rgba(18,18,26,.96);
+  color:var(--acc);
+  box-shadow:0 8px 30px rgba(0,0,0,.35);
+  backdrop-filter:blur(14px);
+  cursor:pointer;
+  transition:transform .15s, background .15s, color .15s;
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.droid-fab:active{transform:scale(.97)}
+.droid-fab:hover{background:var(--acc);color:var(--bg)}
+.droid-fab-ic{font-size:16px;line-height:1}
+.droid-chat-wrap{padding:14px 14px 100px}
+.droid-help{font-size:11px;color:var(--dim);line-height:1.5;margin-bottom:12px}
+.droid-examples{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.droid-chip{
+  padding:7px 10px;border-radius:999px;border:1px solid var(--b2);
+  background:var(--surf);color:var(--txt);font-size:11px;cursor:pointer;transition:all .15s
+}
+.droid-chip:active{transform:scale(.97)}
+.droid-chip:hover{border-color:var(--acc);color:var(--acc)}
+.droid-log{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.droid-msg{
+  padding:10px 12px;border-radius:12px;border:1px solid var(--b);
+  font-size:13px;line-height:1.6;white-space:pre-wrap
+}
+.droid-msg.user{background:var(--surf);color:var(--txt)}
+.droid-msg.ai{background:var(--surf2);color:var(--txt);border-color:var(--b2)}
+.droid-inputbar{
+  position:sticky;bottom:0;display:flex;gap:8px;
+  padding:12px 14px calc(12px + var(--sb));
+  background:linear-gradient(180deg, rgba(10,10,15,0) 0%, rgba(10,10,15,.96) 25%);
+  backdrop-filter:blur(14px)
+}
+.droid-input{
+  flex:1;min-height:44px;max-height:120px;resize:none;background:var(--surf);
+  border:1px solid var(--b2);border-radius:12px;padding:11px 12px;color:var(--txt);
+  font-family:var(--fb);font-size:14px;outline:none
+}
+.droid-input:focus{border-color:var(--acc)}
+.droid-send{
+  min-width:88px;height:44px;border:none;border-radius:12px;background:var(--acc);
+  color:var(--bg);font-weight:700;letter-spacing:.04em;cursor:pointer
+}
+.droid-send:active{transform:scale(.98)}
+.droid-status{font-size:11px;color:var(--dimmer);margin:0 14px 8px}
+
 </style>
 </head>
 <body>
@@ -656,6 +718,8 @@ const KNOWLEDGE=[
 ];
 
 
+
+// ── VF-CB ────────────────────────────────────────────────────────────────────
 const droidLog = [];
 const droidLogEl = () => document.getElementById('droidLog');
 const droidInputEl = () => document.getElementById('droidInput');
@@ -673,13 +737,11 @@ function escapeHtml(str) {
 function renderDroidLog() {
   const el = droidLogEl();
   if (!el) return;
-
   el.innerHTML = droidLog.map(msg => `
     <div class="droid-msg ${msg.role}">
       ${escapeHtml(msg.text)}
     </div>
   `).join('');
-
   el.scrollTop = el.scrollHeight;
 }
 
@@ -693,53 +755,31 @@ function setDroidStatus(text = '') {
   if (el) el.textContent = text;
 }
 
+function initDroidIntro() {
+  if (droidLog.length) return;
+  addDroidMessage('ai', "Hello, I am VF-CB, the Vintage Figures Chat Bot. Fluent in collector's speak and knowledgeable across vintage Kenner Star Wars figures, variants and accessories. How may I help you today?");
+}
+
 function normaliseCollectorQuery(input) {
   const q = input.trim().toLowerCase();
-
   const lukeAliases = [
-    'luke',
-    'luke skywalker',
-    'farmboy',
-    'farm boy',
-    'farmboy luke',
-    'farm boy luke',
-    'luke farm boy',
-    'luke farmboy',
-    'original luke',
-    'og luke',
-    'first 12 luke',
-    '12 back luke',
-    'earlybird luke',
-    'anh luke',
-    'new hope luke',
-    'pbp luke',
-    'yellow hair luke',
-    'reddish hair luke',
-    'ginger luke',
-    'brown hair luke',
-    'kader luke',
-    'kader china luke',
-    'unitoy luke',
-    'taiwan luke',
-    'smile luke',
-    'tri logo luke',
-    'beater luke',
-    'discoloured luke'
+    'luke','luke skywalker','farmboy','farm boy','farmboy luke','farm boy luke',
+    'luke farm boy','luke farmboy','original luke','og luke','first 12 luke',
+    '12 back luke','earlybird luke','anh luke','new hope luke','pbp luke',
+    'yellow hair luke','reddish hair luke','ginger luke','brown hair luke',
+    'kader luke','kader china luke','unitoy luke','taiwan luke','smile luke',
+    'tri logo luke','beater luke','discoloured luke'
   ];
-
   if (lukeAliases.some(alias => q.includes(alias))) {
     return input + ' [Mapped figure: Luke Skywalker original farmboy]';
   }
-
   return input;
 }
 
 async function askAI(message) {
   const response = await fetch('/api/chat', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ message })
   });
 
@@ -758,12 +798,11 @@ async function sendDroidMessage(prefilledText) {
   if (!rawMessage) return;
 
   openScr('sDroid');
+  initDroidIntro();
   addDroidMessage('user', rawMessage);
-  setDroidStatus('Collector Droid is thinking…');
+  setDroidStatus('VF-CB is thinking…');
 
-  if (input && !prefilledText) {
-    input.value = '';
-  }
+  if (input && !prefilledText) input.value = '';
 
   try {
     const message = normaliseCollectorQuery(rawMessage);
@@ -786,7 +825,6 @@ function useDroidPrompt(text) {
 document.addEventListener('DOMContentLoaded', function() {
   const input = droidInputEl();
   if (!input) return;
-
   input.addEventListener('keydown', function(e) {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
@@ -1483,196 +1521,145 @@ document.getElementById('si').addEventListener('input', function() {
     document.getElementById('srchR').appendChild(el);
   }
 });
-document.getElementById('si').addEventListener('keydown', function(e) {
-  if (e.key !== 'Enter') return;
-
-  e.preventDefault();
-
-  const rawMessage = this.value.trim();
-  if (!rawMessage) return;
-
-  const message = normaliseCollectorQuery(rawMessage);
-
-  const looksLikeQuestion =
-    rawMessage.includes('?') ||
-    /^(what|which|who|when|where|why|how|is|are|do|does|did|can|could|would|should)\b/i.test(rawMessage);
-
-  if (looksLikeQuestion) {
-    askAI(message);
-    return;
-  }
-
-  openScr('sSrch');
-  document.getElementById('srchT').textContent = 'RESULTS FOR "' + rawMessage.toUpperCase() + '"';
+document.getElementById('si').addEventListener('focus', function() {
+  if (this.value.length > 1) openScr('sSrch');
 });
 
-const LUKE_ALIASES = [
-  'luke',
-  'luke skywalker',
-  'farmboy',
-  'farm boy',
-  'farmboy luke',
-  'farm boy luke',
-  'luke farm boy',
-  'luke farmboy',
-  'original luke',
-  'og luke',
-  'first 12 luke',
-  '12 back luke',
-  'earlybird luke',
-  'anh luke',
-  'new hope luke',
-  'pbp luke',
-  'yellow hair luke',
-  'reddish hair luke',
-  'ginger luke',
-  'brown hair luke',
-  'kader luke',
-  'kader china luke',
-  'unitoy luke',
-  'taiwan luke',
-  'smile luke',
-  'tri logo luke',
-  'beater luke',
-  'discoloured luke'
-];
+// ── INIT ──────────────────────────────────────────────────────────────────────
+(function init() {
+  renderHomeFigs('SW');
+  renderHomeAccs();
+  renderFigList('all');
+  renderAccList('all');
+  renderCbs('all');
+  renderVeh('all');
+  renderKnow();
+})();
+
+
+// ── VF-CB ────────────────────────────────────────────────────────────────────
+const droidLog = [];
+const droidLogEl = () => document.getElementById('droidLog');
+const droidInputEl = () => document.getElementById('droidInput');
+const droidStatusEl = () => document.getElementById('droidStatus');
+
+function escapeHtml(str) {
+  return String(str)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function renderDroidLog() {
+  const el = droidLogEl();
+  if (!el) return;
+  el.innerHTML = droidLog.map(msg => `
+    <div class="droid-msg ${msg.role}">
+      ${escapeHtml(msg.text)}
+    </div>
+  `).join('');
+  el.scrollTop = el.scrollHeight;
+}
+
+function addDroidMessage(role, text) {
+  droidLog.push({ role, text });
+  renderDroidLog();
+}
+
+function setDroidStatus(text = '') {
+  const el = droidStatusEl();
+  if (el) el.textContent = text;
+}
+
+function initDroidIntro() {
+  if (droidLog.length) return;
+  addDroidMessage('ai', "Hello, I am VF-CB, the Vintage Figures Chat Bot. Fluent in collector's speak and knowledgeable across vintage Kenner Star Wars figures, variants and accessories. How may I help you today?");
+}
 
 function normaliseCollectorQuery(input) {
   const q = input.trim().toLowerCase();
-
-  if (LUKE_ALIASES.some(alias => q.includes(alias))) {
+  const lukeAliases = [
+    'luke','luke skywalker','farmboy','farm boy','farmboy luke','farm boy luke',
+    'luke farm boy','luke farmboy','original luke','og luke','first 12 luke',
+    '12 back luke','earlybird luke','anh luke','new hope luke','pbp luke',
+    'yellow hair luke','reddish hair luke','ginger luke','brown hair luke',
+    'kader luke','kader china luke','unitoy luke','taiwan luke','smile luke',
+    'tri logo luke','beater luke','discoloured luke'
+  ];
+  if (lukeAliases.some(alias => q.includes(alias))) {
     return input + ' [Mapped figure: Luke Skywalker original farmboy]';
   }
-
   return input;
 }
 
-/* ── COLLECTOR DROID ── */
-.droid-fab{
-  position:fixed;
-  right:14px;
-  bottom:calc(var(--nav) + var(--sb) + 18px);
-  z-index:140;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 14px;
-  border-radius:999px;
-  border:1px solid var(--acc);
-  background:rgba(18,18,26,.96);
-  color:var(--acc);
-  box-shadow:0 8px 30px rgba(0,0,0,.35);
-  backdrop-filter:blur(14px);
-  cursor:pointer;
-  transition:transform .15s, background .15s, color .15s;
-  font-size:12px;
-  font-weight:600;
-  letter-spacing:.05em;
-  text-transform:uppercase;
+async function askAI(message) {
+  const response = await fetch('/api/chat', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ message })
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    throw new Error(data.error || JSON.stringify(data));
+  }
+
+  return data.reply || 'No reply received';
 }
-.droid-fab:active{transform:scale(.97)}
-.droid-fab:hover{background:var(--acc);color:var(--bg)}
-.droid-fab-ic{font-size:16px;line-height:1}
-.droid-chat-wrap{
-  padding:14px 14px 100px;
+
+async function sendDroidMessage(prefilledText) {
+  const input = droidInputEl();
+  const rawMessage = (prefilledText ?? input?.value ?? '').trim();
+  if (!rawMessage) return;
+
+  openScr('sDroid');
+  initDroidIntro();
+  addDroidMessage('user', rawMessage);
+  setDroidStatus('VF-CB is thinking…');
+
+  if (input && !prefilledText) input.value = '';
+
+  try {
+    const message = normaliseCollectorQuery(rawMessage);
+    const reply = await askAI(message);
+    addDroidMessage('ai', reply);
+    setDroidStatus('');
+  } catch (err) {
+    console.error(err);
+    addDroidMessage('ai', 'Sorry, there was a problem getting an answer.');
+    setDroidStatus(err.message || 'Error');
+  }
 }
-.droid-help{
-  font-size:11px;
-  color:var(--dim);
-  line-height:1.5;
-  margin-bottom:12px;
+
+function useDroidPrompt(text) {
+  const input = droidInputEl();
+  if (input) input.value = text;
+  sendDroidMessage(text);
 }
-.droid-examples{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-bottom:14px;
-}
-.droid-chip{
-  padding:7px 10px;
-  border-radius:999px;
-  border:1px solid var(--b2);
-  background:var(--surf);
-  color:var(--txt);
-  font-size:11px;
-  cursor:pointer;
-  transition:all .15s;
-}
-.droid-chip:active{transform:scale(.97)}
-.droid-chip:hover{border-color:var(--acc);color:var(--acc)}
-.droid-log{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  margin-bottom:14px;
-}
-.droid-msg{
-  padding:10px 12px;
-  border-radius:12px;
-  border:1px solid var(--b);
-  font-size:13px;
-  line-height:1.6;
-  white-space:pre-wrap;
-}
-.droid-msg.user{
-  background:var(--surf);
-  color:var(--txt);
-}
-.droid-msg.ai{
-  background:var(--surf2);
-  color:var(--txt);
-  border-color:var(--b2);
-}
-.droid-inputbar{
-  position:sticky;
-  bottom:0;
-  display:flex;
-  gap:8px;
-  padding:12px 14px calc(12px + var(--sb));
-  background:linear-gradient(180deg, rgba(10,10,15,0) 0%, rgba(10,10,15,.96) 25%);
-  backdrop-filter:blur(14px);
-}
-.droid-input{
-  flex:1;
-  min-height:44px;
-  max-height:120px;
-  resize:none;
-  background:var(--surf);
-  border:1px solid var(--b2);
-  border-radius:12px;
-  padding:11px 12px;
-  color:var(--txt);
-  font-family:var(--fb);
-  font-size:14px;
-  outline:none;
-}
-.droid-input:focus{border-color:var(--acc)}
-.droid-send{
-  min-width:88px;
-  height:44px;
-  border:none;
-  border-radius:12px;
-  background:var(--acc);
-  color:var(--bg);
-  font-weight:700;
-  letter-spacing:.04em;
-  cursor:pointer;
-}
-.droid-send:active{transform:scale(.98)}
-.droid-status{
-  font-size:11px;
-  color:var(--dimmer);
-  margin:0 14px 8px;
-}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const input = droidInputEl();
+  if (!input) return;
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendDroidMessage();
+    }
+  });
+});
 
 </script>
 
+<!-- VF-CB -->
 <div class="scr" id="sDroid">
   <div class="sh">
     <button class="bb" onclick="closeScr('sDroid')">‹</button>
     <div class="stw">
-      <div class="st">COLLECTOR DROID</div>
-      <div class="ss">Ask about figures, accessories, variants and cardbacks</div>
+      <div class="st">VF-CB</div>
+      <div class="ss">Vintage Figures Chat Bot</div>
     </div>
   </div>
 
@@ -1694,19 +1681,15 @@ function normaliseCollectorQuery(input) {
   <div class="droid-status" id="droidStatus"></div>
 
   <div class="droid-inputbar">
-    <textarea
-      id="droidInput"
-      class="droid-input"
-      placeholder="Ask Collector Droid…"
-      rows="1"
-    ></textarea>
+    <textarea id="droidInput" class="droid-input" placeholder="Ask VF-CB…" rows="1"></textarea>
     <button class="droid-send" onclick="sendDroidMessage()">Send</button>
   </div>
 </div>
 
-<button class="droid-fab" onclick="openScr('sDroid')">
+<button class="droid-fab" onclick="openScr('sDroid'); initDroidIntro();">
   <span class="droid-fab-ic">🤖</span>
-  <span>Collector Droid</span>
+  <span>VF-CB</span>
 </button>
+
 </body>
 </html>
