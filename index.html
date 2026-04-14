@@ -179,6 +179,7 @@ h1,h2,h3{font-family:var(--fd);letter-spacing:.04em}
 /* Backdrop overlay */
 .droid-backdrop{
   display:none;position:fixed;inset:0;z-index:290;
+  max-width:none!important;
   background:rgba(0,0,0,.5);backdrop-filter:blur(3px);
 }
 .droid-backdrop.on{display:block;animation:fadeIn .2s ease}
@@ -802,12 +803,38 @@ function escapeHtml(str) {
     .replaceAll("'", '&#39;');
 }
 
+function renderMarkdown(text) {
+  // Escape HTML first
+  let s = String(text)
+    .replaceAll('&','&amp;').replaceAll('<','&lt;')
+    .replaceAll('>','&gt;').replaceAll('"','&quot;');
+  // Bold **text**
+  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // Italic *text*
+  s = s.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
+  // Inline code `text`
+  s = s.replace(/`([^`]+)`/g, '<code style="background:var(--surf);padding:1px 5px;border-radius:4px;font-family:var(--fm);font-size:12px">$1</code>');
+  // Links [text](url)
+  s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color:var(--acc);text-decoration:none">$1 ↗</a>');
+  // Bare URLs https://...
+  s = s.replace(/(?<!href=")(?<!\()https:\/\/[^\s<]+/g, (url) => {
+    const display = url.replace('https://','').replace(/\/$/,'');
+    return `<a href="${url}" target="_blank" style="color:var(--acc);text-decoration:none;font-size:11px">${display} ↗</a>`;
+  });
+  // Line breaks
+  s = s.replace(/\n/g, '<br>');
+  // Bullet points - text
+  s = s.replace(/<br>- /g, '<br>• ');
+  s = s.replace(/^- /g, '• ');
+  return s;
+}
+
 function renderDroidLog() {
   const el = droidLogEl();
   if (!el) return;
   el.innerHTML = droidLog.map(msg => `
     <div class="droid-msg ${msg.role}">
-      ${escapeHtml(msg.text)}
+      ${msg.role === 'ai' ? renderMarkdown(msg.text) : escapeHtml(msg.text)}
     </div>
   `).join('');
   el.scrollTop = el.scrollHeight;
@@ -826,6 +853,75 @@ function setDroidStatus(text = '') {
 function initDroidIntro() {
   if (droidLog.length) return;
   addDroidMessage('ai', "Hello, I am VF-CB, the Vintage Figures Chat Bot. Fluent in collector's speak and knowledgeable across vintage Kenner Star Wars figures, variants and accessories. How may I help you today?");
+}
+
+// Map query keywords to VV URLs
+function getVVLinkForQuery(query) {
+  const q = query.toLowerCase();
+  const figureLinks = {
+    // SW
+    'luke': 'https://www.variantvillain.com/characters/sw/luke-skywalker/',
+    'farmboy': 'https://www.variantvillain.com/characters/sw/luke-skywalker/',
+    'leia': 'https://www.variantvillain.com/characters/sw/princess-leia-organa/',
+    'r2-d2': 'https://www.variantvillain.com/characters/sw/r2-d2/',
+    'r2d2': 'https://www.variantvillain.com/characters/sw/r2-d2/',
+    'artoo': 'https://www.variantvillain.com/characters/sw/r2-d2/',
+    'c-3po': 'https://www.variantvillain.com/characters/sw/c-3po/',
+    'c3po': 'https://www.variantvillain.com/characters/sw/c-3po/',
+    'threepio': 'https://www.variantvillain.com/characters/sw/c-3po/',
+    'chewbacca': 'https://www.variantvillain.com/characters/sw/chewbacca/',
+    'chewie': 'https://www.variantvillain.com/characters/sw/chewbacca/',
+    'darth vader': 'https://www.variantvillain.com/characters/sw/darth-vader/',
+    'vader': 'https://www.variantvillain.com/characters/sw/darth-vader/',
+    'stormtrooper': 'https://www.variantvillain.com/characters/sw/stormtrooper/',
+    'han solo': 'https://www.variantvillain.com/characters/sw/han-solo/',
+    'han': 'https://www.variantvillain.com/characters/sw/han-solo/',
+    'obi-wan': 'https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/',
+    'ben kenobi': 'https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/',
+    'kenobi': 'https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/',
+    'jawa': 'https://www.variantvillain.com/characters/sw/jawa/',
+    'tusken': 'https://www.variantvillain.com/characters/sw/sand-people/',
+    'sand people': 'https://www.variantvillain.com/characters/sw/sand-people/',
+    'boba fett': 'https://www.variantvillain.com/characters/sw/boba-fett/',
+    'fett': 'https://www.variantvillain.com/characters/sw/boba-fett/',
+    'greedo': 'https://www.variantvillain.com/characters/sw/greedo/',
+    'hammerhead': 'https://www.variantvillain.com/characters/sw/hammerhead/',
+    'walrus man': 'https://www.variantvillain.com/characters/sw/walrus-man/',
+    'snaggletooth': 'https://www.variantvillain.com/characters/sw/snaggletooth/',
+    // ESB
+    'yoda': 'https://www.variantvillain.com/characters/esb/yoda/',
+    'lando': 'https://www.variantvillain.com/characters/esb/lando-calrissian/',
+    'bossk': 'https://www.variantvillain.com/characters/esb/bossk/',
+    'ig-88': 'https://www.variantvillain.com/characters/esb/ig-88/',
+    'ig88': 'https://www.variantvillain.com/characters/esb/ig-88/',
+    'dengar': 'https://www.variantvillain.com/characters/esb/dengar/',
+    '4-lom': 'https://www.variantvillain.com/characters/esb/4-lom/',
+    'zuckuss': 'https://www.variantvillain.com/characters/esb/zuckuss/',
+    'snowtrooper': 'https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/',
+    // ROTJ
+    'biker scout': 'https://www.variantvillain.com/characters/rotj/biker-scout/',
+    'ackbar': 'https://www.variantvillain.com/characters/rotj/admiral-ackbar/',
+    'emperor': 'https://www.variantvillain.com/characters/rotj/the-emperor/',
+    'gamorrean': 'https://www.variantvillain.com/characters/rotj/gamorrean-guard/',
+    'wicket': 'https://www.variantvillain.com/characters/rotj/wicket-w-warrick/',
+    // Accessories
+    'telescoping': 'https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/',
+    'lightsaber': 'https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/',
+    'imperial blaster': 'https://www.variantvillain.com/accessory-guide/imperial-blaster/',
+    'rebel blaster': 'https://www.variantvillain.com/accessory-guide/rebel-blaster/',
+    'bowcaster': 'https://www.variantvillain.com/accessory-guide/chewbacca-bowcaster/',
+    'coo': 'https://www.variantvillain.com/knowledge/introduction-to-coos/',
+    'country of origin': 'https://www.variantvillain.com/knowledge/introduction-to-coos/',
+    'hard torso': 'https://www.variantvillain.com/variations/kenner-guide/hard-torso/',
+    'lili ledy': 'https://www.variantvillain.com/variations/lili-ledy-guide/',
+    'glasslite': 'https://www.variantvillain.com/variations/glasslite-guide/',
+  };
+  // Return first matching link — more specific matches first
+  const sortedKeys = Object.keys(figureLinks).sort((a,b) => b.length - a.length);
+  for (const key of sortedKeys) {
+    if (q.includes(key)) return figureLinks[key];
+  }
+  return null;
 }
 
 function normaliseCollectorQuery(input) {
@@ -874,7 +970,12 @@ async function sendDroidMessage(prefilledText) {
   try {
     const message = normaliseCollectorQuery(rawMessage);
     const reply = await askAI(message);
-    addDroidMessage('ai', reply);
+    // Append relevant VV link if a figure is mentioned
+    const vvLink = getVVLinkForQuery(rawMessage);
+    const replyWithLink = vvLink
+      ? reply + '\n\n[View on Variant Villain](' + vvLink + ')'
+      : reply;
+    addDroidMessage('ai', replyWithLink);
     setDroidStatus('');
   } catch (err) {
     console.error(err);
@@ -1633,12 +1734,38 @@ function escapeHtml(str) {
     .replaceAll("'", '&#39;');
 }
 
+function renderMarkdown(text) {
+  // Escape HTML first
+  let s = String(text)
+    .replaceAll('&','&amp;').replaceAll('<','&lt;')
+    .replaceAll('>','&gt;').replaceAll('"','&quot;');
+  // Bold **text**
+  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // Italic *text*
+  s = s.replace(/(?<!\*)\*([^*]+)\*(?!\*)/g, '<em>$1</em>');
+  // Inline code `text`
+  s = s.replace(/`([^`]+)`/g, '<code style="background:var(--surf);padding:1px 5px;border-radius:4px;font-family:var(--fm);font-size:12px">$1</code>');
+  // Links [text](url)
+  s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" style="color:var(--acc);text-decoration:none">$1 ↗</a>');
+  // Bare URLs https://...
+  s = s.replace(/(?<!href=")(?<!\()https:\/\/[^\s<]+/g, (url) => {
+    const display = url.replace('https://','').replace(/\/$/,'');
+    return `<a href="${url}" target="_blank" style="color:var(--acc);text-decoration:none;font-size:11px">${display} ↗</a>`;
+  });
+  // Line breaks
+  s = s.replace(/\n/g, '<br>');
+  // Bullet points - text
+  s = s.replace(/<br>- /g, '<br>• ');
+  s = s.replace(/^- /g, '• ');
+  return s;
+}
+
 function renderDroidLog() {
   const el = droidLogEl();
   if (!el) return;
   el.innerHTML = droidLog.map(msg => `
     <div class="droid-msg ${msg.role}">
-      ${escapeHtml(msg.text)}
+      ${msg.role === 'ai' ? renderMarkdown(msg.text) : escapeHtml(msg.text)}
     </div>
   `).join('');
   el.scrollTop = el.scrollHeight;
@@ -1657,6 +1784,75 @@ function setDroidStatus(text = '') {
 function initDroidIntro() {
   if (droidLog.length) return;
   addDroidMessage('ai', "Hello, I am VF-CB, the Vintage Figures Chat Bot. Fluent in collector's speak and knowledgeable across vintage Kenner Star Wars figures, variants and accessories. How may I help you today?");
+}
+
+// Map query keywords to VV URLs
+function getVVLinkForQuery(query) {
+  const q = query.toLowerCase();
+  const figureLinks = {
+    // SW
+    'luke': 'https://www.variantvillain.com/characters/sw/luke-skywalker/',
+    'farmboy': 'https://www.variantvillain.com/characters/sw/luke-skywalker/',
+    'leia': 'https://www.variantvillain.com/characters/sw/princess-leia-organa/',
+    'r2-d2': 'https://www.variantvillain.com/characters/sw/r2-d2/',
+    'r2d2': 'https://www.variantvillain.com/characters/sw/r2-d2/',
+    'artoo': 'https://www.variantvillain.com/characters/sw/r2-d2/',
+    'c-3po': 'https://www.variantvillain.com/characters/sw/c-3po/',
+    'c3po': 'https://www.variantvillain.com/characters/sw/c-3po/',
+    'threepio': 'https://www.variantvillain.com/characters/sw/c-3po/',
+    'chewbacca': 'https://www.variantvillain.com/characters/sw/chewbacca/',
+    'chewie': 'https://www.variantvillain.com/characters/sw/chewbacca/',
+    'darth vader': 'https://www.variantvillain.com/characters/sw/darth-vader/',
+    'vader': 'https://www.variantvillain.com/characters/sw/darth-vader/',
+    'stormtrooper': 'https://www.variantvillain.com/characters/sw/stormtrooper/',
+    'han solo': 'https://www.variantvillain.com/characters/sw/han-solo/',
+    'han': 'https://www.variantvillain.com/characters/sw/han-solo/',
+    'obi-wan': 'https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/',
+    'ben kenobi': 'https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/',
+    'kenobi': 'https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/',
+    'jawa': 'https://www.variantvillain.com/characters/sw/jawa/',
+    'tusken': 'https://www.variantvillain.com/characters/sw/sand-people/',
+    'sand people': 'https://www.variantvillain.com/characters/sw/sand-people/',
+    'boba fett': 'https://www.variantvillain.com/characters/sw/boba-fett/',
+    'fett': 'https://www.variantvillain.com/characters/sw/boba-fett/',
+    'greedo': 'https://www.variantvillain.com/characters/sw/greedo/',
+    'hammerhead': 'https://www.variantvillain.com/characters/sw/hammerhead/',
+    'walrus man': 'https://www.variantvillain.com/characters/sw/walrus-man/',
+    'snaggletooth': 'https://www.variantvillain.com/characters/sw/snaggletooth/',
+    // ESB
+    'yoda': 'https://www.variantvillain.com/characters/esb/yoda/',
+    'lando': 'https://www.variantvillain.com/characters/esb/lando-calrissian/',
+    'bossk': 'https://www.variantvillain.com/characters/esb/bossk/',
+    'ig-88': 'https://www.variantvillain.com/characters/esb/ig-88/',
+    'ig88': 'https://www.variantvillain.com/characters/esb/ig-88/',
+    'dengar': 'https://www.variantvillain.com/characters/esb/dengar/',
+    '4-lom': 'https://www.variantvillain.com/characters/esb/4-lom/',
+    'zuckuss': 'https://www.variantvillain.com/characters/esb/zuckuss/',
+    'snowtrooper': 'https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/',
+    // ROTJ
+    'biker scout': 'https://www.variantvillain.com/characters/rotj/biker-scout/',
+    'ackbar': 'https://www.variantvillain.com/characters/rotj/admiral-ackbar/',
+    'emperor': 'https://www.variantvillain.com/characters/rotj/the-emperor/',
+    'gamorrean': 'https://www.variantvillain.com/characters/rotj/gamorrean-guard/',
+    'wicket': 'https://www.variantvillain.com/characters/rotj/wicket-w-warrick/',
+    // Accessories
+    'telescoping': 'https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/',
+    'lightsaber': 'https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/',
+    'imperial blaster': 'https://www.variantvillain.com/accessory-guide/imperial-blaster/',
+    'rebel blaster': 'https://www.variantvillain.com/accessory-guide/rebel-blaster/',
+    'bowcaster': 'https://www.variantvillain.com/accessory-guide/chewbacca-bowcaster/',
+    'coo': 'https://www.variantvillain.com/knowledge/introduction-to-coos/',
+    'country of origin': 'https://www.variantvillain.com/knowledge/introduction-to-coos/',
+    'hard torso': 'https://www.variantvillain.com/variations/kenner-guide/hard-torso/',
+    'lili ledy': 'https://www.variantvillain.com/variations/lili-ledy-guide/',
+    'glasslite': 'https://www.variantvillain.com/variations/glasslite-guide/',
+  };
+  // Return first matching link — more specific matches first
+  const sortedKeys = Object.keys(figureLinks).sort((a,b) => b.length - a.length);
+  for (const key of sortedKeys) {
+    if (q.includes(key)) return figureLinks[key];
+  }
+  return null;
 }
 
 function normaliseCollectorQuery(input) {
@@ -1705,7 +1901,12 @@ async function sendDroidMessage(prefilledText) {
   try {
     const message = normaliseCollectorQuery(rawMessage);
     const reply = await askAI(message);
-    addDroidMessage('ai', reply);
+    // Append relevant VV link if a figure is mentioned
+    const vvLink = getVVLinkForQuery(rawMessage);
+    const replyWithLink = vvLink
+      ? reply + '\n\n[View on Variant Villain](' + vvLink + ')'
+      : reply;
+    addDroidMessage('ai', replyWithLink);
     setDroidStatus('');
   } catch (err) {
     console.error(err);
