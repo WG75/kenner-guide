@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<title>Kenner Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0f;--surf:#12121a;--surf2:#1a1a26;
+  --b:#ffffff0f;--b2:#ffffff18;--b3:#ffffff28;
+  --txt:#e8e8f0;--dim:#8888a0;--dimmer:#55556a;
+  --acc:#d4a843;--acc0:#d4a84322;
+  --sw:#d4a843;--esb:#7ec8e3;--rotj:#4a9460;--potf:#8e44ad;
+  --sw0:#d4a84320;--esb0:#7ec8e320;--rotj0:#4a946020;--potf0:#8e44ad20;
+  --fd:Bebas\ Neue,sans-serif;--fb:DM\ Sans,sans-serif;--fm:DM\ Mono,monospace;
+  --r:12px;--nav:56px;--sb:env(safe-area-inset-bottom,0px);
+  --com:#27ae60;--unc:#d4a843;--rar:#c0392b;--vr:#8e44ad;
+}
+html{background:var(--bg);color:var(--txt);font-family:var(--fb);-webkit-text-size-adjust:100%}
+body{min-height:100dvh;overflow-x:hidden;max-width:600px;margin:0 auto}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
+h1,h2,h3{font-family:var(--fd);letter-spacing:.04em}
+.app{display:flex;flex-direction:column;min-height:100dvh}
+.main{flex:1;padding-bottom:calc(var(--nav)+var(--sb)+8px)}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(10,10,15,.94);backdrop-filter:blur(20px);border-bottom:1px solid var(--b)}
+.hdr-i{display:flex;align-items:center;gap:10px;padding:10px 14px}
+.logo{display:flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0}
+.logo-m{width:32px;height:32px;background:var(--acc);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:17px;color:var(--bg);letter-spacing:0;line-height:1}
+.logo-t{font-family:var(--fd);font-size:18px;letter-spacing:.06em;line-height:1}
+.logo-s{font-size:9px;color:var(--dimmer);font-weight:300;letter-spacing:.12em;text-transform:uppercase;line-height:1;margin-top:2px}
+.sw{flex:1;position:relative}
+.si{width:100%;background:var(--surf);border:1px solid var(--b);border-radius:10px;padding:8px 10px 8px 34px;color:var(--txt);font-family:var(--fb);font-size:14px;outline:none;transition:border-color .2s}
+.si::placeholder{color:var(--dimmer)}.si:focus{border-color:var(--acc)}
+.si-ic{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--dimmer);pointer-events:none;font-size:14px}
+.cmp-bar{display:none;position:fixed;bottom:calc(var(--nav)+var(--sb));left:0;right:0;z-index:99;max-width:600px;margin:0 auto;background:var(--surf);border-top:1px solid var(--acc);padding:10px 14px;flex-direction:row;align-items:center;gap:10px;transition:background .3s}
+.cmp-label{flex:1;font-size:12px;color:var(--txt);font-family:var(--fm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cmp-clear{font-size:11px;color:var(--dimmer);cursor:pointer;padding:4px 8px;flex-shrink:0}
+.cmp-go{padding:7px 16px;background:var(--acc);border-radius:8px;font-size:12px;font-weight:600;color:var(--bg);cursor:pointer;flex-shrink:0;transition:all .15s;letter-spacing:.04em}
+.cmp-go:active{transform:scale(.97)}
+.cmp-btn{width:26px;height:26px;border-radius:6px;border:1px solid var(--b2);background:transparent;color:var(--dim);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0;line-height:1}
+.cmp-btn.on{background:var(--acc);border-color:var(--acc);color:var(--bg);font-weight:700}
+.cmp-btn:active{transform:scale(.92)}
+.ha.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+.bnav{position:fixed;bottom:0;left:0;right:0;z-index:100;height:calc(var(--nav)+var(--sb));padding-bottom:var(--sb);background:rgba(10,10,15,.96);backdrop-filter:blur(20px);border-top:1px solid var(--b)}
+.bnav-i{max-width:600px;margin:0 auto;height:var(--nav);display:flex;align-items:stretch}
+.ni{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;color:var(--dimmer);transition:color .15s;-webkit-tap-highlight-color:transparent;position:relative}
+.ni.on{color:var(--acc)}.ni.on::before{content:'';position:absolute;top:0;left:20%;right:20%;height:2px;background:var(--acc);border-radius:0 0 2px 2px}
+.ni-ic{font-size:19px;line-height:1}.ni-lb{font-size:10px;font-weight:500;letter-spacing:.04em}
+.scr{display:none;position:fixed;inset:0;z-index:200;background:var(--bg);overflow-y:auto;max-width:600px;margin:0 auto}
+.scr.on{display:block;animation:su .22s cubic-bezier(.32,.72,0,1)}
+@keyframes su{from{transform:translateY(50px);opacity:0}to{transform:translateY(0);opacity:1}}
+.sh{position:sticky;top:0;z-index:10;background:rgba(10,10,15,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--b);padding:10px 14px;display:flex;align-items:center;gap:8px}
+.bb{width:34px;height:34px;flex-shrink:0;background:var(--surf);border:1px solid var(--b);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--txt);cursor:pointer;font-size:18px;transition:all .15s;line-height:1}
+.bb:active{background:var(--surf2);transform:scale(.95)}
+.stw{flex:1;min-width:0}.st{font-family:var(--fd);font-size:20px;letter-spacing:.06em;line-height:1}.ss{font-size:10px;color:var(--dimmer);font-family:var(--fm);letter-spacing:.08em}
+.ha{padding:6px 11px;background:var(--acc0);border:1px solid var(--acc);border-radius:8px;font-size:11px;font-weight:600;color:var(--acc);cursor:pointer;letter-spacing:.06em;transition:all .15s;white-space:nowrap;flex-shrink:0}
+.ha:active{background:var(--acc);color:var(--bg)}
+.hero{padding:18px 14px 14px;background:linear-gradient(180deg,#1a140a 0%,transparent 100%);border-bottom:1px solid var(--b)}
+.ey{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);font-weight:600;margin-bottom:3px}
+.ht{font-family:var(--fd);font-size:40px;line-height:.92;letter-spacing:.04em;margin-bottom:7px}.ht span{color:var(--acc)}
+.hd{font-size:13px;color:var(--dim);line-height:1.5;font-weight:300}
+.hs{display:flex;gap:14px;margin-top:14px;padding-top:12px;border-top:1px solid var(--b)}
+.sn{font-family:var(--fd);font-size:24px;color:var(--acc);letter-spacing:.04em}
+.sl{font-size:9px;color:var(--dimmer);text-transform:uppercase;letter-spacing:.14em}
+.sec{padding:14px 0 0}.sech{display:flex;align-items:center;justify-content:space-between;padding:0 14px 9px}
+.sect{font-family:var(--fd);font-size:17px;letter-spacing:.06em}.secm{font-size:11px;color:var(--acc);font-weight:500;cursor:pointer;letter-spacing:.04em}
+.ps{display:flex;gap:7px;padding:0 14px 12px;overflow-x:auto;scrollbar-width:none}
+.ps::-webkit-scrollbar{display:none}
+.pl{flex-shrink:0;padding:5px 13px;border-radius:20px;border:1px solid var(--b2);background:transparent;color:var(--dim);font-size:11px;font-weight:500;cursor:pointer;transition:all .15s;white-space:nowrap;letter-spacing:.04em}
+.pl.on{background:var(--acc);border-color:var(--acc);color:var(--bg)}
+.pl[data-w=SW].on{background:var(--sw);border-color:var(--sw);color:var(--bg)}
+.pl[data-w=ESB].on{background:var(--esb);border-color:var(--esb);color:var(--bg)}
+.pl[data-w=ROTJ].on{background:var(--rotj);border-color:var(--rotj);color:#fff}
+.pl[data-w=POTF].on{background:var(--potf);border-color:var(--potf);color:#fff}
+.qg{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;padding:0 14px}
+.qc{background:var(--surf);border:1px solid var(--b);border-radius:var(--r);padding:13px;cursor:pointer;transition:all .15s;display:flex;flex-direction:column;gap:5px;position:relative;overflow:hidden}
+.qc::after{content:"›";position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--dimmer);font-size:16px}
+.qc:active{transform:scale(.97);border-color:var(--acc)}
+.qi{font-size:22px}.qt{font-family:var(--fd);font-size:16px;letter-spacing:.04em}.qs{font-size:10px;color:var(--dimmer);font-family:var(--fm)}
+.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 14px}
+.fc{background:var(--surf);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:all .15s}
+.fc:active{transform:scale(.97);border-color:var(--acc)}
+.fci{aspect-ratio:3/4;background:var(--surf2);display:flex;align-items:center;justify-content:center;position:relative;font-size:30px;overflow:hidden}
+.wd{position:absolute;top:5px;right:5px;width:8px;height:8px;border-radius:50%}
+.fcb{padding:6px 7px 7px}
+.fcn{font-size:10px;font-weight:500;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.fcs{font-size:9px;color:var(--dimmer);font-family:var(--fm);margin-top:2px}
+.as{display:flex;gap:9px;padding:0 14px 2px;overflow-x:auto;scrollbar-width:none}
+.as::-webkit-scrollbar{display:none}
+.am{flex-shrink:0;width:110px;background:var(--surf);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:all .15s}
+.am:active{transform:scale(.97);border-color:var(--acc)}
+.ami{height:58px;background:var(--surf2);display:flex;align-items:center;justify-content:center;font-size:22px}
+.amb{padding:6px 7px 7px}.amc{font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:var(--acc);font-weight:600;margin-bottom:2px}.amn{font-size:10px;font-weight:500;line-height:1.3}
+.lsec{padding:9px 14px 5px;font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--dimmer);background:var(--bg);position:sticky;top:56px;z-index:4;border-bottom:1px solid var(--b);display:flex;align-items:center;gap:6px}
+.lsc{font-family:var(--fm);color:var(--acc)}
+.li{display:flex;align-items:center;gap:11px;padding:11px 14px;border-bottom:1px solid var(--b);-webkit-tap-highlight-color:transparent}
+.li:active{background:var(--surf)}
+.lth{width:42px;height:42px;flex-shrink:0;background:var(--surf2);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:20px;border:1px solid var(--b);cursor:pointer;overflow:hidden}
+.lif{flex:1;min-width:0;cursor:pointer}.ln{font-size:13px;font-weight:500}.lm{font-size:10px;color:var(--dimmer);margin-top:2px;font-family:var(--fm);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.la{color:var(--dimmer);font-size:14px;flex-shrink:0;cursor:pointer}
+.rd{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.r-common{background:var(--com)}.r-uncommon{background:var(--unc)}.r-rare{background:var(--rar)}.r-very_rare{background:var(--vr)}
+.rp{padding:2px 7px;border-radius:4px;font-size:9px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.rp-Common{background:#27ae6018;color:#2ecc71;border:1px solid #27ae6030}
+.rp-Uncommon{background:#d4a84318;color:var(--acc);border:1px solid #d4a84330}
+.rp-Rare{background:#c0392b18;color:#e74c3c;border:1px solid #c0392b30}
+.rp-Very_Rare{background:#8e44ad18;color:#bb88dd;border:1px solid #8e44ad30}
+.wb{display:inline-block;padding:2px 6px;border-radius:4px;font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.wb-SW{background:var(--sw0);color:var(--sw);border:1px solid #d4a84330}
+.wb-ESB{background:var(--esb0);color:var(--esb);border:1px solid #7ec8e330}
+.wb-ROTJ{background:var(--rotj0);color:#6bbf80;border:1px solid #4a946040}
+.wb-POTF{background:var(--potf0);color:#b57ed4;border:1px solid #8e44ad30}
+.fdh{aspect-ratio:2/1;max-height:160px;background:linear-gradient(180deg,var(--surf) 0%,var(--bg) 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.fdhe{font-size:60px;opacity:.1;position:absolute}
+.fdg{position:absolute;bottom:0;left:0;right:0;height:50%;background:linear-gradient(0deg,var(--bg) 0%,transparent 100%)}
+.fdtop{position:absolute;top:10px;left:12px;display:flex;gap:6px}
+.fdb{padding:14px 0 80px}
+.fn{font-family:var(--fd);font-size:26px;letter-spacing:.04em;line-height:1;margin-bottom:3px;padding:0 14px}
+.fsub{font-size:11px;color:var(--dim);font-family:var(--fm);padding:0 14px}
+.acs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 14px}
+.ac{padding:4px 9px;border-radius:20px;font-size:10px;font-weight:500;background:var(--surf);border:1px solid var(--b2);color:var(--dim)}
+.ac.p{background:#27ae6010;border-color:#27ae6030;color:#6bbf80}
+.ac.na{background:var(--surf2);border-color:var(--b);color:var(--dimmer);font-style:italic}
+.ib{background:var(--surf);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;margin-bottom:10px}
+.ibh{padding:9px 13px;border-bottom:1px solid var(--b);font-family:var(--fd);font-size:12px;letter-spacing:.1em;color:var(--dimmer)}
+.ir{display:flex;align-items:center;padding:9px 13px;border-bottom:1px solid var(--b);gap:8px}
+.ir:last-child{border-bottom:none}
+.il{font-size:11px;color:var(--dimmer);flex:1}.iv{font-size:12px;font-weight:500;font-family:var(--fm)}
+.it{font-size:12px;color:var(--dim);line-height:1.6;padding:11px 13px;white-space:pre-line}
+.dtabs{display:flex;border-bottom:1px solid var(--b);position:sticky;top:56px;z-index:5;background:var(--bg)}
+.dt{flex:1;padding:10px 8px;text-align:center;font-size:11px;font-weight:500;color:var(--dimmer);cursor:pointer;transition:all .15s;border-bottom:2px solid transparent;letter-spacing:.04em}
+.dt.on{color:var(--acc);border-bottom-color:var(--acc)}
+.vr{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:9px 13px;border-bottom:1px solid var(--b);transition:background .1s}
+.vr:last-child{border-bottom:none}.vr:active{background:var(--surf2)}
+.vn{font-size:11px;font-weight:500}.vs{font-size:10px;color:var(--dimmer);font-family:var(--fm);margin-top:2px}
+.pv-img{width:100%;height:calc(100dvh - 56px);object-fit:contain;background:var(--bg)}
+.ki{display:flex;align-items:flex-start;gap:11px;padding:13px 14px;border-bottom:1px solid var(--b);cursor:pointer;transition:background .1s}
+.ki:active{background:var(--surf)}
+.kic{width:38px;height:38px;flex-shrink:0;background:var(--surf2);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;border:1px solid var(--b)}
+.kii{flex:1}.kit{font-size:13px;font-weight:600;margin-bottom:3px}.kid{font-size:11px;color:var(--dim);line-height:1.45}
+.kia{color:var(--dimmer);font-size:14px;flex-shrink:0;margin-top:2px}
+.kd-content{padding:16px 14px 80px}.kd-title{font-family:var(--fd);font-size:26px;letter-spacing:.04em;margin-bottom:8px}.kd-text{font-size:13px;color:var(--dim);line-height:1.7;white-space:pre-line}
+.veh{display:flex;align-items:center;gap:11px;padding:12px 14px;border-bottom:1px solid var(--b);cursor:pointer;transition:background .1s}
+.veh:active{background:var(--surf)}
+.veht{width:50px;height:38px;flex-shrink:0;background:var(--surf2);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;border:1px solid var(--b)}
+.vehi{flex:1}.vehn{font-size:13px;font-weight:500}.vehm{font-size:10px;color:var(--dimmer);margin-top:2px;font-family:var(--fm)}
+.vty{padding:2px 7px;border-radius:4px;font-size:9px;font-weight:600;letter-spacing:.06em;flex-shrink:0}
+.vt-Vehicle{background:#2980b920;color:#5dade2;border:1px solid #2980b930}
+.vt-Creature{background:#27ae6020;color:#6bbf80;border:1px solid #27ae6030}
+.vt-MiniRig{background:#d4a84320;color:var(--acc);border:1px solid #d4a84330}
+.vt-Playset{background:#c0392b20;color:#e74c3c;border:1px solid #c0392b30}
+.cb{padding:12px 14px;border-bottom:1px solid var(--b)}
+.cbh{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.cbf{display:flex;flex-wrap:wrap;gap:4px}
+.cbfc{display:inline-block;padding:2px 7px;border-radius:12px;font-size:10px;background:var(--surf2);border:1px solid var(--b2);color:var(--dim)}
+.srg{padding:8px 14px 4px;font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:var(--acc);font-weight:600;background:var(--bg)}
+.se{padding:40px 20px;text-align:center;color:var(--dimmer);font-size:14px}
+.pb20{padding-bottom:20px}.mt10{margin-top:10px}
+
+/* ── EXPANDABLE ROWS ── */
+.xrow{cursor:pointer;user-select:none;transition:background .1s}
+.xrow:active{background:var(--surf2)}
+.xarrow{color:var(--acc);font-size:14px;font-weight:600;transition:transform .2s;flex-shrink:0;width:16px;text-align:center}
+.xpanel{display:none;padding:10px 13px;border-bottom:1px solid var(--b);background:var(--surf2);font-size:12px;color:var(--dim);line-height:1.6}
+.xpanel .vr{background:transparent}
+.xpanel .vr:first-child{border-top:none}
+
+/* ── COMPARE SM BUTTON ── */
+.cmp-sm{font-size:10px;padding:5px 10px}
+.cmp-sm.on{background:var(--acc);color:var(--bg);border-color:var(--acc)}
+
+</style>
+</head>
+<body>
+<div class="app">
+<header class="hdr">
+  <div class="hdr-i">
+    <a class="logo" href="#"><div class="logo-m">KG</div><div><div class="logo-t">KENNER GUIDE</div><div class="logo-s">Vintage Star Wars</div></div></a>
+    <div class="sw"><span class="si-ic">🔍</span><input class="si" id="si" type="search" placeholder="Search figures, accessories…" autocomplete="off"></div>
+  </div>
+</header>
+
+<div class="cmp-bar" id="cmpBar">
+  <div class="cmp-label" id="cmpLabel">—</div>
+  <div class="cmp-clear" onclick="clearCompare()">✕ Clear</div>
+  <div class="cmp-go" id="cmpGo" onclick="runCompare()">Compare</div>
+</div>
+
+<main class="main">
+  <div class="hero">
+    <div class="ey">Kenner 1977–1985 · Complete Reference</div>
+    <h1 class="ht">VINTAGE<br><span>GUIDE</span></h1>
+    <p class="hd">The most comprehensive app-format guide to vintage Kenner Star Wars figures, variants, accessories and more.</p>
+    <div class="hs">
+      <div><div class="sn">97</div><div class="sl">Figures</div></div>
+      <div><div class="sn">90</div><div class="sl">Accessories</div></div>
+      <div><div class="sn">4</div><div class="sl">Waves</div></div>
+      <div><div class="sn">500+</div><div class="sl">Variants</div></div>
+    </div>
+  </div>
+  <div class="sec">
+    <div class="sech"><h2 class="sect">BROWSE</h2></div>
+    <div class="qg">
+      <div class="qc" onclick="openScr('sFigs')"><div class="qi">🪆</div><div class="qt">FIGURES</div><div class="qs">97 figures · 4 waves</div></div>
+      <div class="qc" onclick="openScr('sAccs')"><div class="qi">⚔️</div><div class="qt">WEAPONS</div><div class="qs">90 items · 8 categories</div></div>
+      <div class="qc" onclick="openScr('sCbs')"><div class="qi">🃏</div><div class="qt">CARDBACKS</div><div class="qs">12 back through 92 back</div></div>
+      <div class="qc" onclick="openScr('sVeh')"><div class="qi">🚀</div><div class="qt">VEHICLES</div><div class="qs">Ships · Creatures · Mini Rigs</div></div>
+    </div>
+  </div>
+  <div class="sec mt10">
+    <div class="sech"><h2 class="sect">FIGURES</h2><span class="secm" onclick="openScr('sFigs')">See all ›</span></div>
+    <div class="ps" id="hpills">
+      <div class="pl on" data-w="SW" onclick="hPill(this,'SW')">⭐ Star Wars</div>
+      <div class="pl" data-w="ESB" onclick="hPill(this,'ESB')">❄️ Empire</div>
+      <div class="pl" data-w="ROTJ" onclick="hPill(this,'ROTJ')">🌲 Jedi</div>
+      <div class="pl" data-w="POTF" onclick="hPill(this,'POTF')">💫 POTF</div>
+    </div>
+    <div class="fg" id="hfig"></div>
+  </div>
+  <div class="sec mt10">
+    <div class="sech"><h2 class="sect">ACCESSORIES</h2><span class="secm" onclick="openScr('sAccs')">See all ›</span></div>
+    <div class="as" id="hacc"></div>
+  </div>
+  <div class="sec mt10 pb20">
+    <div class="sech"><h2 class="sect">KNOWLEDGE</h2><span class="secm" onclick="openScr('sKnow')">See all ›</span></div>
+    <div class="qg">
+      <div class="qc" onclick="openScr('sKnow')"><div class="qi">📖</div><div class="qt">COO GUIDE</div><div class="qs">Factory codes explained</div></div>
+      <div class="qc" onclick="openScr('sKnow')"><div class="qi">🌍</div><div class="qt">INTERNATIONAL</div><div class="qs">Glasslite · Lili Ledy · Poch</div></div>
+    </div>
+  </div>
+</main>
+
+<nav class="bnav">
+  <div class="bnav-i">
+    <div class="ni on" id="niHome" onclick="navTo('Home')"><div class="ni-ic">🏠</div><div class="ni-lb">Home</div></div>
+    <div class="ni" id="niFigs" onclick="navTo('Figs')"><div class="ni-ic">🪆</div><div class="ni-lb">Figures</div></div>
+    <div class="ni" id="niAccs" onclick="navTo('Accs')"><div class="ni-ic">⚔️</div><div class="ni-lb">Weapons</div></div>
+    <div class="ni" id="niMore" onclick="navTo('More')"><div class="ni-ic">📖</div><div class="ni-lb">More</div></div>
+  </div>
+</nav>
+</div>
+
+<!-- FIGURES -->
+<div class="scr" id="sFigs">
+  <div class="sh"><button class="bb" onclick="closeScr('sFigs')">‹</button><div class="stw"><div class="st">FIGURES</div><div class="ss">97 figures · tap + to compare</div></div></div>
+  <div class="ps" id="fPills" style="padding-top:10px">
+    <div class="pl on" onclick="filtFigs(this,'all')">All</div>
+    <div class="pl" data-w="SW" onclick="filtFigs(this,'SW')">⭐ Star Wars</div>
+    <div class="pl" data-w="ESB" onclick="filtFigs(this,'ESB')">❄️ Empire</div>
+    <div class="pl" data-w="ROTJ" onclick="filtFigs(this,'ROTJ')">🌲 Jedi</div>
+    <div class="pl" data-w="POTF" onclick="filtFigs(this,'POTF')">💫 POTF</div>
+  </div>
+  <div id="figList"></div>
+</div>
+
+<!-- ACCESSORIES -->
+<div class="scr" id="sAccs">
+  <div class="sh"><button class="bb" onclick="closeScr('sAccs')">‹</button><div class="stw"><div class="st">WEAPONS & ACCESSORIES</div><div class="ss">90 items · 8 categories</div></div></div>
+  <div class="ps" id="aPills" style="padding-top:10px">
+    <div class="pl on" onclick="filtAccs(this,'all')">All</div>
+    <div class="pl" onclick="filtAccs(this,'Sabers')">⚔️ Sabers</div>
+    <div class="pl" onclick="filtAccs(this,'Blasters')">🔫 Blasters</div>
+    <div class="pl" onclick="filtAccs(this,'Rifles')">🎯 Rifles</div>
+    <div class="pl" onclick="filtAccs(this,'Staffs, Axes, Spears, Canes &amp; Pikes')">🪄 Staffs</div>
+    <div class="pl" onclick="filtAccs(this,'Belts')">🎗️ Belts</div>
+    <div class="pl" onclick="filtAccs(this,'Hoods &amp; Helmets')">🪖 Hoods</div>
+    <div class="pl" onclick="filtAccs(this,'Capes, Skirts &amp; Cloaks')">🌿 Capes</div>
+    <div class="pl" onclick="filtAccs(this,'Other Accessories')">🎒 Other</div>
+  </div>
+  <div id="accList"></div>
+</div>
+
+<!-- FIGURE DETAIL -->
+<div class="scr" id="sFigD">
+  <div class="sh">
+    <button class="bb" onclick="closeScr('sFigD')">‹</button>
+    <div class="stw"><div class="st" id="fdT">FIGURE</div><div class="ss" id="fdW">—</div></div>
+    <button class="ha cmp-sm" id="fdCmpBtn" onclick="toggleCmpFromDetail()">+ Compare</button>
+    <button class="ha" id="fdCollBtn" onclick="addToCollection()" style="background:var(--acc);color:var(--bg);border-color:var(--acc)">+ Add to Collection</button>
+  </div>
+  <div class="fdh"><div class="fdhe" id="fdE">🧑</div><div class="fdg"></div><div class="fdtop" id="fdTop"></div></div>
+  <div class="fdb">
+    <h1 class="fn" id="fdN">Figure Name</h1>
+    <div class="fsub" id="fdS">—</div>
+    <div class="acs" id="fdAcs"></div>
+    <div id="fdGallery"></div>
+    <div id="fdDetailBlock" style="padding:0 14px"></div>
+  </div>
+</div>
+
+<!-- COMPARE -->
+<div class="scr" id="sCmp">
+  <div class="sh">
+    <button class="bb" onclick="closeScr('sCmp')">‹</button>
+    <div class="stw"><div class="st">COMPARE</div><div class="ss">Side by side</div></div>
+    <button class="ha" onclick="clearCompare();closeScr('sCmp')">Clear</button>
+  </div>
+  <div class="ps" id="cmpAnglePills" style="padding-top:10px"></div>
+  <div id="cmpNames" style="display:flex;padding:0 14px 8px;gap:6px"></div>
+  <div id="cmpPhotos"></div>
+  <div id="cmpInfo" style="padding-bottom:80px"></div>
+</div>
+
+<!-- ACCESSORY DETAIL -->
+<div class="scr" id="sAccD">
+  <div class="sh">
+    <button class="bb" onclick="closeScr('sAccD')">‹</button>
+    <div class="stw"><div class="st" id="adT">ACCESSORY</div><div class="ss" id="adC">—</div></div>
+    <div class="ha" id="adR">Common</div>
+  </div>
+  <div class="fdh"><div class="fdhe" id="adE">⚔️</div><div class="fdg"></div></div>
+  <div class="fdb">
+    <h1 class="fn" id="adN">Accessory</h1>
+    <div class="fsub" id="adW" style="margin-bottom:12px">—</div>
+    <div id="adPhotos"></div>
+    <div style="padding:0 14px">
+      <div class="ib"><div class="ibh">USED WITH</div><div id="adFigs"></div></div>
+      <div class="ib"><div class="ibh">VARIANTS</div><div id="adVars"></div></div>
+      <div class="ib"><div class="ibh">NOTES</div><div class="it" id="adNt">—</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PHOTO VIEWER -->
+<div class="scr" id="sPhotoV">
+  <div class="sh"><button class="bb" onclick="closeScr('sPhotoV')">‹</button><div class="stw"><div class="st" id="pvTitle">Photo</div></div></div>
+  <img id="pvImg" class="pv-img" src="" alt="">
+</div>
+
+<!-- CARDBACKS -->
+<div class="scr" id="sCbs">
+  <div class="sh"><button class="bb" onclick="closeScr('sCbs')">‹</button><div class="stw"><div class="st">CARDBACKS</div><div class="ss">ANH · ESB · ROTJ · POTF</div></div></div>
+  <div class="ps" style="padding-top:10px" id="cbPills">
+    <div class="pl on" onclick="filtCbs(this,'all')">All</div>
+    <div class="pl" data-w="SW" onclick="filtCbs(this,'SW')">⭐ ANH</div>
+    <div class="pl" data-w="ESB" onclick="filtCbs(this,'ESB')">❄️ ESB</div>
+    <div class="pl" data-w="ROTJ" onclick="filtCbs(this,'ROTJ')">🌲 ROTJ</div>
+    <div class="pl" data-w="POTF" onclick="filtCbs(this,'POTF')">💫 POTF</div>
+  </div>
+  <div id="cbList"></div>
+</div>
+
+<!-- VEHICLES -->
+<div class="scr" id="sVeh">
+  <div class="sh"><button class="bb" onclick="closeScr('sVeh')">‹</button><div class="stw"><div class="st">VEHICLES & MORE</div><div class="ss">Ships · Creatures · Mini Rigs</div></div></div>
+  <div class="ps" style="padding-top:10px" id="vPills">
+    <div class="pl on" onclick="filtVeh(this,'all')">All</div>
+    <div class="pl" onclick="filtVeh(this,'Vehicle')">🚀 Vehicles</div>
+    <div class="pl" onclick="filtVeh(this,'MiniRig')">🏎️ Mini Rigs</div>
+    <div class="pl" onclick="filtVeh(this,'Creature')">🦁 Creatures</div>
+    <div class="pl" onclick="filtVeh(this,'Playset')">🏰 Playsets</div>
+  </div>
+  <div id="vehList"></div>
+</div>
+
+<!-- VEHICLE DETAIL -->
+<div class="scr" id="sVehD">
+  <div class="sh"><button class="bb" onclick="closeScr('sVehD')">‹</button><div class="stw"><div class="st" id="vdT">VEHICLE</div><div class="ss" id="vdS">—</div></div></div>
+  <div class="fdh"><div class="fdhe" id="vdE">🚀</div><div class="fdg"></div></div>
+  <div class="fdb">
+    <h1 class="fn" id="vdN">—</h1>
+    <div class="fsub" id="vdW" style="margin-bottom:12px">—</div>
+    <div style="padding:0 14px">
+      <div class="ib"><div class="ibh">DETAILS</div>
+        <div class="ir"><div class="il">Type</div><div class="iv" id="vdTy">—</div></div>
+        <div class="ir"><div class="il">Wave</div><div class="iv" id="vdWv">—</div></div>
+        <div class="ir"><div class="il">Pilot / Figure</div><div class="iv" id="vdPi">—</div></div>
+      </div>
+      <div class="ib"><div class="ibh">COLLECTOR NOTES</div><div class="it" id="vdNt">—</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- KNOWLEDGE -->
+<div class="scr" id="sKnow">
+  <div class="sh"><button class="bb" onclick="closeScr('sKnow')">‹</button><div class="stw"><div class="st">KNOWLEDGE BASE</div><div class="ss">Guides · COO · Variants · International</div></div></div>
+  <div id="knowList" style="padding-top:6px"></div>
+</div>
+<div class="scr" id="sKnowD">
+  <div class="sh"><button class="bb" onclick="closeScr('sKnowD')">‹</button><div class="stw"><div class="st" id="kdT">GUIDE</div></div></div>
+  <div class="kd-content"><h1 class="kd-title" id="kdN">—</h1><div class="kd-text" id="kdC">—</div></div>
+</div>
+
+<!-- SEARCH -->
+<div class="scr" id="sSrch">
+  <div class="sh"><button class="bb" onclick="closeSearch()">‹</button><div class="stw"><div class="st" id="srchT">SEARCH</div></div></div>
+  <div id="srchR"></div>
+</div>
+
+<script>
+
+// ── DATA INLINE ──────────────────────────────────────────────────────────────
+
+// Figures array is loaded from external data file via script tag below
+const WAVE_META={SW:{label:'Star Wars',color:'#d4a843',emoji:'⭐',year:'1977–1979'},ESB:{label:'Empire Strikes Back',color:'#7ec8e3',emoji:'❄️',year:'1980–1982'},ROTJ:{label:'Return of the Jedi',color:'#4a9460',emoji:'🌲',year:'1983–1984'},POTF:{label:'Power of the Force',color:'#8e44ad',emoji:'💫',year:'1984–1985'}};
+
+const FIGURES=[
+// ── SW ──────────────────────────────────────────────────────────────────────
+{id:'luke-skywalker',name:'Luke Skywalker',wave:'SW',cardback:'12 Back',emoji:'🧑',acc:['Telescoping Lightsaber (Yellow)'],rarity:'Common',vcount:9,notes:'Original 12 Back Luke came with a double-telescoping yellow lightsaber — now one of the rarest accessories. Later versions used single telescoping. Hilt lettered variants (LL, BP, KK, JJ, S, R) are highly desirable. White hair and grey hair paint variants noted.',variants:[{n:'Kader M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M1 1a',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Unitoy M1',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'PBP M1',s:'LFL 1980 · No COO',r:'uncommon'},{n:'Kader M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'uncommon'},{n:'Taiwan M3',s:'LFL 1983 · Taiwan',r:'rare'},{n:'Lili Ledy M1',s:'Mexico · Hard torso',r:'very_rare'}]},
+{id:'princess-leia-organa',name:'Princess Leia Organa',wave:'SW',cardback:'12 Back',emoji:'👸',acc:['Leia Blaster','Princess Leia Organa Cape'],rarity:'Common',vcount:6,notes:'Blaster comes in black and blue variants. Complete examples with both accessories are scarce — the blaster is easily lost.',variants:[{n:'Smile M4',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M3',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Kader M4',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M4',s:'LFL 1983 · Taiwan',r:'rare'},{n:'Lili Ledy M4',s:'Mexico',r:'very_rare'}]},
+{id:'r2-d2',name:'R2-D2',wave:'SW',cardback:'12 Back',emoji:'🤖',acc:[],rarity:'Common',noAcc:true,vcount:7,notes:'No accessories on original 12 Back. Dome sticker condition is the key value indicator — faded or missing stickers significantly reduce value.',variants:[{n:'Kader M3',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M3 1a',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Unitoy M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M7',s:'LFL 1983 · Hong Kong',r:'uncommon'},{n:'Kader M7 1b',s:'LFL 1983 · Hong Kong',r:'rare'},{n:'Taiwan M6',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'chewbacca',name:'Chewbacca',wave:'SW',cardback:'12 Back',emoji:'🦁',acc:['Chewbacca Bowcaster'],rarity:'Common',vcount:7,notes:'The PBP M1 "Floating G" variant is notable. Bowcaster comes in Kader M1 and Unitoy M2 variants. Bowcaster is a commonly missing accessory.',variants:[{n:'Smile M3',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'PBP M1 2a (Floating G)',s:'GMFGI 1977 · No COO',r:'rare'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M3',s:'LFL 1983 · Taiwan',r:'uncommon'},{n:'Lili Ledy M3',s:'Mexico',r:'very_rare'}]},
+{id:'c-3po',name:'C-3PO',wave:'SW',cardback:'12 Back',emoji:'🤖',acc:[],rarity:'Common',noAcc:true,vcount:5,notes:'Original fixed limbs version. No accessories. Gold paint rubs — especially face and chest — are the main condition consideration. Replaced by Removable Limbs version on 45 Back.',variants:[{n:'Kader M3',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Unitoy M4',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Kader M5',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M5',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'darth-vader',name:'Darth Vader',wave:'SW',cardback:'12 Back',emoji:'🦹',acc:['Telescoping Lightsaber (Red)','Darth Vader Cape'],rarity:'Common',vcount:10,notes:'Most tracked variants of any figure — 25 known COO/mould combinations. Original 12 Back had a red double-telescoping saber. Fabric cape varies in shade. Complete with DT saber is the premium combination.',variants:[{n:'Kader M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M4',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'PBP M1',s:'LFL 1980 · No COO',r:'uncommon'},{n:'Smile M5',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M5',s:'LFL 1982 · Hong Kong',r:'uncommon'},{n:'Kader M7',s:'LFL 1983 · Hong Kong',r:'rare'},{n:'Kader M8',s:'LFL 1984 · Hong Kong',r:'rare'},{n:'PBP M2 (Scarred COO)',s:'LFL 1980',r:'uncommon'},{n:'Lili Ledy M1',s:'Mexico',r:'very_rare'}]},
+{id:'stormtrooper',name:'Stormtrooper',wave:'SW',cardback:'12 Back',emoji:'💂',acc:['Imperial Blaster'],rarity:'Common',vcount:8,notes:'Most-bought army builder. Imperial Blaster in black and blue — both correct. 20 tracked variants. Hard torso variants exist and command a premium. Most common figure encountered loose.',variants:[{n:'Kader M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M7',s:'LFL 1983 · Hong Kong',r:'uncommon'},{n:'PBP M2',s:'LFL 1980 · No COO',r:'uncommon'},{n:'Unitoy M3',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M4',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'ben-obi-wan-kenobi',name:'Ben (Obi-Wan) Kenobi',wave:'SW',cardback:'12 Back',emoji:'🧙',acc:['Telescoping Lightsaber (Blue)','Ben (Obi-Wan) Kenobi Cape'],rarity:'Common',vcount:7,notes:'White hair vs grey hair paint variants — both documented. Lettered hilt saber variants (LL stamped on hilt) are highly desirable. Cape fabric varies across production runs.',variants:[{n:'Unitoy M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M3 (white hair)',s:'GMFGI 1977 · Hong Kong',r:'uncommon'},{n:'Kader M3 (grey hair)',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'PBP M1',s:'LFL 1980 · No COO',r:'uncommon'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'uncommon'},{n:'Lili Ledy M3',s:'Mexico',r:'very_rare'}]},
+{id:'han-solo',name:'Han Solo',wave:'SW',cardback:'12 Back',emoji:'🤠',acc:['Rebel Blaster'],rarity:'Common',vcount:7,notes:'Two head sculpts — Big Head (early, more desirable) and Small Head (later, more common). Rebel/Smuggler Blaster comes in multiple colours. Complete examples surprisingly rare — blaster easily lost.',variants:[{n:'Kader M1 (Big Head)',s:'GMFGI 1977 · Hong Kong',r:'uncommon'},{n:'Smile M1 (Small Head)',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M4',s:'LFL 1983 · Taiwan',r:'rare'},{n:'PBP M2',s:'LFL 1980 · No COO',r:'uncommon'},{n:'Lili Ledy M2',s:'Mexico',r:'very_rare'}]},
+{id:'jawa',name:'Jawa',wave:'SW',cardback:'12 Back',emoji:'👶',acc:['Jawa Blaster','Jawa Cloak'],rarity:'Common',vcount:5,notes:'Famous for the Jawa Vinyl Cape on the earliest 12 Back examples — worth £1,000+. All Jawas commonly found have the cloth cloak. The tiny Jawa Blaster is often missing.',variants:[{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'PBP M1',s:'LFL 1980 · No COO',r:'uncommon'},{n:'Unitoy M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'sand-people',name:'Sand People',wave:'SW',cardback:'12 Back',emoji:'🗡️',acc:['Gaderffii Stick','Tusken Raider Cape'],rarity:'Common',vcount:6,notes:'Also known as Tusken Raider. Robust Gaderffii Stick usually survives with the figure. Complete examples common. High purchase volume for troop-building.',variants:[{n:'Smile M3',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'PBP M1',s:'LFL 1980 · No COO',r:'uncommon'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M3',s:'LFL 1983 · Taiwan',r:'uncommon'},{n:'Lili Ledy M3',s:'Mexico',r:'very_rare'}]},
+{id:'death-squad-commander',name:'Death Squad Commander',wave:'SW',cardback:'12 Back',emoji:'👮',acc:['Imperial Blaster'],rarity:'Common',vcount:4,notes:'Also called Star Destroyer Commander on later cards. Rarely found complete — blaster is first to go missing.',variants:[{n:'Smile M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'rare'}]},
+{id:'greedo',name:'Greedo',wave:'SW',cardback:'20 Back',emoji:'👽',acc:['Palace Blaster'],rarity:'Common',vcount:4,notes:'Cantina alien. Palace Blaster is frequently missing. Only around 12% of Greedos are found complete with blaster.',variants:[{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Unitoy M1',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M1',s:'LFL 1982 · Taiwan',r:'rare'}]},
+{id:'hammerhead',name:'Hammerhead',wave:'SW',cardback:'20 Back',emoji:'🐘',acc:[],rarity:'Common',noAcc:true,vcount:3,notes:'Officially Momaw Nadon. No accessories. Paint on the head is the main condition indicator. Robust figure.',variants:[{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'snaggletooth',name:'Snaggletooth',wave:'SW',cardback:'20 Back',emoji:'🔴',acc:['Imperial Blaster'],rarity:'Common',vcount:3,notes:'The standard red Snaggletooth — not to be confused with the Blue Snaggletooth which is an entirely different and much rarer figure from the Sears Cantina set.',variants:[{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Unitoy M1',s:'LFL 1980 · Hong Kong',r:'uncommon'}]},
+{id:'blue-snaggletooth',name:'Blue Snaggletooth',wave:'SW',cardback:'Sears Exclusive',emoji:'🔵',acc:['Imperial Blaster'],rarity:'Very Rare',vcount:1,notes:'Iconic Sears-exclusive variant from the 1978 Cantina Adventure Set. Blue suit, taller than the red version. Never on a solo card. Genuine examples £200–£400+. Many fakes exist — check the leg stamp carefully.',variants:[{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'very_rare'}]},
+{id:'walrus-man',name:'Walrus Man',wave:'SW',cardback:'20 Back',emoji:'🦭',acc:['Imperial Blaster'],rarity:'Common',vcount:4,notes:'Officially Ponda Baba. PBP M1 2b with smooth COO delete is a notable variant. Comes with Imperial Blaster.',variants:[{n:'PBP M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Kader M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'rare'}]},
+{id:'luke-x-wing-pilot',name:'Luke Skywalker (X-Wing Pilot)',wave:'SW',cardback:'20 Back',emoji:'✈️',acc:['Rebel Blaster'],rarity:'Common',vcount:4,notes:'Luke in orange X-Wing pilot suit. Often called Snowspeeder Pilot on later cards. Hard torso variants exist. Orange suit makes paint rubs particularly visible.',variants:[{n:'Kader M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M2',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M3',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'r5-d4',name:'R5-D4',wave:'SW',cardback:'20 Back',emoji:'🔴',acc:[],rarity:'Common',noAcc:true,vcount:3,notes:'No accessories. Front sticker is the main condition point — worn or faded stickers significantly reduce value. Pop-up sensor in dome can also be broken.',variants:[{n:'Kader M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'death-star-droid',name:'Death Star Droid',wave:'SW',cardback:'20 Back',emoji:'⚫',acc:[],rarity:'Common',noAcc:true,vcount:3,notes:'No accessories. Metallic silver paint is the condition indicator. Nearly always found "complete" as there is nothing to lose.',variants:[{n:'Kader M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'power-droid',name:'Power Droid',wave:'SW',cardback:'20 Back',emoji:'🔋',acc:[],rarity:'Common',noAcc:true,vcount:2,notes:'The Gonk Droid. No accessories. Very robust, rarely damaged. One of the simpler and more affordable figures in the line.',variants:[{n:'Kader M1',s:'GMFGI 1977 · Hong Kong',r:'common'},{n:'Smile M1',s:'GMFGI 1977 · Hong Kong',r:'common'}]},
+{id:'boba-fett',name:'Boba Fett',wave:'SW',cardback:'21 Back',emoji:'🪖',acc:['Rebel Blaster'],rarity:'Uncommon',vcount:6,notes:'Consistently one of the most valuable standard figures. The rocket-firing prototype is one of the rarest items in all Star Wars collecting. Standard release has non-firing rocket. T-visor and detailed paint are the condition focus. Strong prices at all grades.',variants:[{n:'Kader M1',s:'LFL 1979 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1979 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M2 (painted helmet)',s:'LFL 1983 · Taiwan',r:'rare'},{n:'PBP M2',s:'LFL 1980 · No COO',r:'uncommon'},{n:'Lili Ledy M2',s:'Mexico',r:'very_rare'}]},
+// ── ESB ──────────────────────────────────────────────────────────────────────
+{id:'leia-bespin',name:'Leia Organa (Bespin Gown)',wave:'ESB',cardback:'31 Back',emoji:'👘',acc:['Leia Bespin Cape'],rarity:'Common',vcount:4,notes:'Two distinct sculpts — crew neck and turtle neck. Turtle neck is less common. Leia Bespin Cape is often missing.',variants:[{n:'Smile M4 (crew neck)',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M4 (turtle neck)',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Unitoy M4',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M4',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'fx-7',name:'FX-7',wave:'ESB',cardback:'31 Back',emoji:'🦾',acc:[],rarity:'Common',noAcc:true,vcount:2,notes:'Medical droid from Echo Base. No accessories. Extending arms are the main fragility point — often found broken or bent. A complete undamaged example is worth seeking.',variants:[{n:'Kader M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'snowtrooper',name:'Imperial Stormtrooper (Hoth Battle Gear)',wave:'ESB',cardback:'31 Back',emoji:'❄️',acc:['Imperial Hoth Rifle'],rarity:'Common',vcount:4,notes:'The Snowtrooper. Popular army-builder. White soft goods skirt is frequently yellowed or damaged. Imperial Hoth Rifle is a chunky piece that more often survives.',variants:[{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M2',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'rebel-soldier-hoth',name:'Rebel Soldier (Hoth Battle Gear)',wave:'ESB',cardback:'31 Back',emoji:'🎿',acc:['Hoth Rebel Rifle'],rarity:'Common',vcount:3,notes:'Comes with the Hoth Rebel Rifle shared with Luke Hoth and Rebel Commander. Good condition examples are common.',variants:[{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M1',s:'LFL 1980 · Hong Kong',r:'uncommon'}]},
+{id:'bossk',name:'Bossk',wave:'ESB',cardback:'31 Back',emoji:'🦎',acc:['Bossk Rifle'],rarity:'Common',vcount:4,notes:'Trandoshan bounty hunter. The distinctive long brown Bossk Rifle. The yellow/green paint on the reptilian face and hands shows wear on heavily used examples.',variants:[{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'uncommon'},{n:'Lili Ledy M2',s:'Mexico',r:'very_rare'}]},
+{id:'ig-88',name:'IG-88',wave:'ESB',cardback:'31 Back',emoji:'🤖',acc:['IG-88 Rifle','SA80 Rifle'],rarity:'Common',vcount:3,notes:'Uniquely came with two accessories — the IG-88 Rifle and SA80 Rifle. Complete examples with both weapons are notably harder to find.',variants:[{n:'Smile M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'luke-bespin',name:'Luke Skywalker (Bespin Fatigues)',wave:'ESB',cardback:'31 Back',emoji:'🟡',acc:['Handheld Lightsaber (Yellow)','Rebel Blaster'],rarity:'Common',vcount:5,notes:'Brown hair vs ginger/yellow hair head variants — ginger is increasingly sought. The yellow Handheld Lightsaber (Bespin Saber) is often missing.',variants:[{n:'Kader M2 (brown hair)',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M2 (ginger hair)',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'rare'},{n:'Lili Ledy M2',s:'Mexico',r:'very_rare'}]},
+{id:'han-hoth',name:'Han Solo (Hoth Outfit)',wave:'ESB',cardback:'31 Back',emoji:'🏔️',acc:['Rebel Blaster'],rarity:'Common',vcount:4,notes:'Han in blue/white Hoth gear. White face paint variant is notable. Dark blue suit shows fewer scuffs than lighter figures.',variants:[{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M2 (white face)',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M3',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'lando-calrissian',name:'Lando Calrissian',wave:'ESB',cardback:'31 Back',emoji:'🎰',acc:['Lando Calrissian Cape'],rarity:'Common',vcount:5,notes:'Teeth vs no-teeth face paint variant. Vinyl cape version rarer than fabric. Cape colour varies across production runs.',variants:[{n:'Smile M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M3 (teeth)',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Kader M3 (no teeth)',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M3',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Lili Ledy M3',s:'Mexico',r:'very_rare'}]},
+{id:'bespin-guard-white',name:'Bespin Security Guard (White)',wave:'ESB',cardback:'31 Back',emoji:'👷',acc:['Bespin Blaster'],rarity:'Common',vcount:3,notes:'Comes with Bespin Blaster. Often found in bundles. Light blue uniform can show staining.',variants:[{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'yoda',name:'Yoda',wave:'ESB',cardback:'32 Back',emoji:'🟢',acc:['Yoda Cane','Yoda Belt','Yoda Snake','Yoda Cloak','Yoda Backpack'],rarity:'Common',vcount:5,notes:'Most complex accessory set — Cane, Belt, Snake, Cloak and Backpack. Snake in brown (common) or orange (uncommon). Cane in brown or light brown. Finding all five accessories is genuinely difficult. Cloak is most often missing. Very popular and holds value well.',variants:[{n:'Smile M3 (brown snake)',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M3 (orange snake)',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Unitoy M3',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Kader M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Lili Ledy M3',s:'Mexico',r:'very_rare'}]},
+{id:'ugnaught',name:'Ugnaught',wave:'ESB',cardback:'41 Back',emoji:'🐷',acc:['Ugnaught Case'],rarity:'Common',vcount:4,notes:'Big eyes and small eyes variants. Ugnaught Case (bag) frequently missing. Do not confuse with the Ugnaught Smock (apron). Often comes in pairs.',variants:[{n:'Smile M1 (big eyes)',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Smile M1 (small eyes)',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'rare'}]},
+{id:'dengar',name:'Dengar',wave:'ESB',cardback:'41 Back',emoji:'🎳',acc:['Imperial Hoth Rifle'],rarity:'Common',vcount:3,notes:'White bandage wrapping is vulnerable to yellowing. Comes with Imperial Hoth Rifle. Popular bounty hunter.',variants:[{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'han-bespin',name:'Han Solo (Bespin Outfit)',wave:'ESB',cardback:'41 Back',emoji:'👔',acc:['Rebel Blaster'],rarity:'Common',vcount:3,notes:'Han in Cloud City outfit. Detailed blue/grey jacket with yellow stripe. Rebel Blaster frequently missing.',variants:[{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'}]},
+{id:'lobot',name:'Lobot',wave:'ESB',cardback:'41 Back',emoji:'🎧',acc:['Bespin Blaster'],rarity:'Common',vcount:2,notes:'Cybernetic headpiece is the distinctive feature. White outfit susceptible to staining and yellowing.',variants:[{n:'Smile M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1980 · Hong Kong',r:'common'}]},
+{id:'leia-hoth',name:'Leia (Hoth Outfit)',wave:'ESB',cardback:'41 Back',emoji:'🧣',acc:['Rebel Blaster'],rarity:'Common',vcount:4,notes:'Big eyes and small eyes variants — big eyes is less common. Rebel Blaster frequently missing. One of the fewer Princess Leia variants.',variants:[{n:'Smile M4 (big eyes)',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Smile M4 (small eyes)',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M4',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M4',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'rebel-commander',name:'Rebel Commander',wave:'ESB',cardback:'41 Back',emoji:'🎖️',acc:['Hoth Rebel Rifle'],rarity:'Common',vcount:4,notes:'Solid ESB troop builder. Shares Hoth Rebel Rifle with Luke Hoth. No standout rare variants. Affordable and commonly found.',variants:[{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2 1a',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'}]},
+{id:'at-at-driver',name:'AT-AT Driver',wave:'ESB',cardback:'41 Back',emoji:'🏍️',acc:['AT-AT Driver Rifle'],rarity:'Common',vcount:4,notes:'Popular army-builder. White armour is the main condition focus. Complete with rifle is the standard collector target.',variants:[{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'rare'}]},
+{id:'imperial-commander',name:'Imperial Commander',wave:'ESB',cardback:'41 Back',emoji:'⚫',acc:['Imperial Blaster'],rarity:'Common',vcount:3,notes:'All-black uniform Imperial Commander. Durable and shows fewer marks than lighter figures.',variants:[{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'2-1b',name:'2-1B',wave:'ESB',cardback:'41 Back',emoji:'🏥',acc:['2-1B Probe','2-1B Mouthpiece'],rarity:'Common',vcount:3,notes:'Two accessories — Probe (walking stick) and Mouthpiece. The Mouthpiece is tiny and almost always missing. Complete with both accessories is the target.',variants:[{n:'Smile M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'r2-d2-sensorscope',name:'R2-D2 (with Sensorscope)',wave:'ESB',cardback:'45 Back',emoji:'🔭',acc:[],rarity:'Common',noAcc:true,vcount:5,notes:'Replaced the Solid Dome R2-D2 on the 45 Back. Extending sensor scope in dome is the key feature — often stuck or broken. Sticker condition is key.',variants:[{n:'Unitoy M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M1 1a',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2 1b',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Unitoy M1 2b',s:'LFL 1980 · Hong Kong',r:'uncommon'}]},
+{id:'c-3po-removable',name:'C-3PO (Removable Limbs)',wave:'ESB',cardback:'45 Back',emoji:'🦿',acc:['C-3PO (Removable Limbs) Net'],rarity:'Common',vcount:4,notes:'Came with a mesh net for carrying dismembered parts. Net is almost always missing. Complete with original net is a true rarity. Limbs can become loose or detached.',variants:[{n:'Kader M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M4',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Smile M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M4',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'luke-hoth',name:'Luke Skywalker (Hoth Battle Gear)',wave:'ESB',cardback:'45 Back',emoji:'🏔️',acc:['Hoth Rebel Rifle'],rarity:'Common',vcount:3,notes:'Luke in orange/white Hoth gear. Not to be confused with the X-Wing Pilot. Face paint can vary noticeably between production runs.',variants:[{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M1',s:'LFL 1980 · Hong Kong',r:'uncommon'}]},
+{id:'at-at-commander',name:'AT-AT Commander',wave:'ESB',cardback:'45 Back',emoji:'🎩',acc:['Imperial Blaster'],rarity:'Common',vcount:3,notes:'White/grey uniform with distinctive head dress. Popular with Imperial collectors.',variants:[{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'}]},
+{id:'cloud-car-pilot',name:'(Twin-Pod) Cloud Car Pilot',wave:'ESB',cardback:'45 Back',emoji:'☁️',acc:['Bespin Blaster','Commlink'],rarity:'Common',vcount:4,notes:'Hard torso variant is more desirable. The Commlink accessory is a tiny piece almost always missing. Orange uniform is bold and distinctive.',variants:[{n:'Smile M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M3 (hard torso)',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Kader M3',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M3',s:'LFL 1982 · Taiwan',r:'rare'}]},
+{id:'bespin-guard-black',name:'Bespin Security Guard (Black)',wave:'ESB',cardback:'45 Back',emoji:'🧔',acc:['Bespin Blaster'],rarity:'Common',vcount:3,notes:'Notable face paint variations across production runs. Comes with Bespin Blaster — often missing.',variants:[{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Taiwan M2',s:'LFL 1982 · Taiwan',r:'uncommon'}]},
+{id:'4-lom',name:'4-LOM',wave:'ESB',cardback:'48 Back',emoji:'🦟',acc:['SA80 Rifle'],rarity:'Common',vcount:2,notes:'Names of 4-LOM and Zuckuss were swapped by Kenner on original cards. The insect-headed droid. Comes with SA80 Rifle. Also had separate armour and jacket accessories noted by variant collectors.',variants:[{n:'Smile M1',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1980 · Hong Kong',r:'common'}]},
+{id:'zuckuss',name:'Zuckuss',wave:'ESB',cardback:'47 Back',emoji:'🎭',acc:['SA80 Rifle'],rarity:'Common',vcount:2,notes:'The Gand bounty hunter. Note: Kenner confused the names on original cards. Popular bounty hunter figure. SA80 Rifle shared with 4-LOM.',variants:[{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'}]},
+{id:'tie-fighter-pilot',name:'Imperial TIE Fighter Pilot',wave:'ESB',cardback:'47 Back',emoji:'✈️',acc:['Imperial Blaster'],rarity:'Common',vcount:4,notes:'Popular army-builder. All-black uniform is durable. Helmet detail is the main condition indicator.',variants:[{n:'Kader M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1980 · Hong Kong',r:'common'},{n:'Unitoy M2',s:'LFL 1980 · Hong Kong',r:'uncommon'},{n:'Taiwan M2',s:'LFL 1983 · Taiwan',r:'rare'}]},
+// ── ROTJ ──────────────────────────────────────────────────────────────────────
+{id:'admiral-ackbar',name:'Admiral Ackbar',wave:'ROTJ',cardback:'65 Back',emoji:'🦈',acc:['Ackbar Staff'],rarity:'Common',vcount:3,notes:'"It\'s a trap!" Distinctive orange/salmon skin tone. Ackbar Staff is a robust piece usually found with the figure. Popular with ROTJ collectors.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'uncommon'}]},
+{id:'luke-jedi',name:'Luke Skywalker (Jedi Knight Outfit)',wave:'ROTJ',cardback:'65 Back',emoji:'⚔️',acc:['Handheld Lightsaber (Green)','Luke Jedi Cloak'],rarity:'Common',vcount:4,notes:'Popular figure with two accessories — green Handheld Lightsaber and black fabric cloak with snap variant. Cloak has a snap variant (less common). Cloak frequently missing. Dedicated cardback variant guides exist.',variants:[{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Unitoy M1',s:'LFL 1982 · Hong Kong',r:'uncommon'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'leia-boushh',name:'Princess Leia Organa (Boushh Disguise)',wave:'ROTJ',cardback:'65 Back',emoji:'🪖',acc:['Leia Boushh Rifle','Leia Boushh Helmet'],rarity:'Common',vcount:3,notes:'Two accessories — distinctive rifle and removable helmet. Helmet is frequently missing and significantly affects value. Complete with both is the target.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'rare'}]},
+,
+{id:'gamorrean-guard',name:'Gamorrean Guard',wave:'ROTJ',cardback:'65 Back',emoji:'🐗',acc:['Gamorrean Axe'],rarity:'Common',vcount:4,notes:'Notable for being almost exclusively Macau-produced — unusual compared to most Hong Kong figures. Gamorrean Axe is robust and usually found with the figure.',variants:[{n:'Macau M3',s:'LFL 1982 · Macau',r:'common'},{n:'Macau M2',s:'LFL 1982 · Macau',r:'common'},{n:'Macau M1',s:'LFL 1982 · Macau',r:'uncommon'},{n:'Macau M6',s:'LFL 1983 · Macau',r:'rare'}]},
+{id:'emperors-royal-guard',name:"Emperor's Royal Guard",wave:'ROTJ',cardback:'65 Back',emoji:'🔴',acc:["Emperor's Royal Guard Pike"],rarity:'Common',vcount:4,notes:'Iconic red guard. ERG Pike is a prominent large accessory usually found with the figure. Popular army-builder. Lili Ledy version sought by international collectors.',variants:[{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'uncommon'},{n:'Lili Ledy M1',s:'Mexico',r:'very_rare'}]},
+{id:'chief-chirpa',name:'Chief Chirpa',wave:'ROTJ',cardback:'65 Back',emoji:'🐻',acc:['Chief Chirpa Staff','Chief Chirpa Hood'],rarity:'Common',vcount:4,notes:'White fur variant is less common than standard brown/grey — commands a premium. Fabric hood frequently missing.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1 (white fur)',s:'LFL 1982 · Hong Kong',r:'uncommon'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'logray',name:'Logray (Ewok Medicine Man)',wave:'ROTJ',cardback:'65 Back',emoji:'🎩',acc:['Logray Staff','Logray Hood','Logray Satchel'],rarity:'Common',vcount:2,notes:'Three accessories — staff, hood and satchel. Satchel (Logray Satchel on VV) is most commonly missing. Staff features a skull totem design.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'klaatu',name:'Klaatu',wave:'ROTJ',cardback:'65 Back',emoji:'🟤',acc:['Klaatu Skirt'],rarity:'Common',vcount:3,notes:'Standard Klaatu (not Skiff Guard version). Fluffy skirt variant is less common. Klaatu Skirt frequently missing.',variants:[{n:'Smile M1 (fluffy skirt)',s:'LFL 1982 · Hong Kong',r:'uncommon'},{n:'Smile M1 (standard skirt)',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'rebel-commando',name:'Rebel Commando',wave:'ROTJ',cardback:'65 Back',emoji:'🪖',acc:['SA80 Rifle'],rarity:'Common',vcount:4,notes:'Moulded face variant has more pronounced face detail — less common. Comes with SA80 Rifle. Popular ROTJ troop-builder.',variants:[{n:'Smile M1 (moulded face)',s:'LFL 1982 · Hong Kong',r:'uncommon'},{n:'Smile M1 (standard)',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Unitoy M1',s:'LFL 1982 · Hong Kong',r:'uncommon'}]},
+{id:'weequay',name:'Weequay',wave:'ROTJ',cardback:'65 Back',emoji:'🧶',acc:['Skiff Vibro Staff'],rarity:'Common',vcount:3,notes:'Jabba skiff guard. Detailed rope/leather textured skin. Comes with Skiff Vibro Staff. One of the more detailed alien sculpts.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'squid-head',name:'Squid Head',wave:'ROTJ',cardback:'65 Back',emoji:'🦑',acc:['Squid Head Belt','Squid Head Skirt','Palace Blaster'],rarity:'Common',vcount:3,notes:'Three accessories — belt, skirt and blaster. Complete examples very challenging to find. Cape colour varies between runs.',variants:[{n:'Smile M1 (brown cape)',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1 (light brown cape)',s:'LFL 1982 · Hong Kong',r:'uncommon'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'general-madine',name:'General Madine',wave:'ROTJ',cardback:'65 Back',emoji:'📋',acc:['General Madine Staff'],rarity:'Common',vcount:2,notes:'White Rebel uniform. Madine Staff (baton) is a simple robust accessory. Beard sculpt is distinctive.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'bib-fortuna',name:'Bib Fortuna',wave:'ROTJ',cardback:'65 Back',emoji:'🐛',acc:['Bib Fortuna Staff','Bib Fortuna Belt','Bib Fortuna Cloak'],rarity:'Common',vcount:3,notes:'Three accessories — staff, belt and cloak. Complete examples are rare as all three are individually significant. Tentacle head detail is excellent.',variants:[{n:'Kader M2',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M2',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M2 (moulded head)',s:'LFL 1982 · Hong Kong',r:'uncommon'}]},
+{id:'ree-yees',name:'Ree Yees',wave:'ROTJ',cardback:'65 Back',emoji:'🐐',acc:['Ree Yees Rifle'],rarity:'Common',vcount:3,notes:'Ree Yees — no hyphen (VV convention). Three-eyed Gran from Jabba\'s Palace. Ree Yees Rifle frequently missing from bundle figures.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'uncommon'}]},
+{id:'biker-scout',name:'Biker Scout',wave:'ROTJ',cardback:'65 Back',emoji:'🏍️',acc:['Biker Scout Blaster'],rarity:'Common',vcount:5,notes:'Hugely popular figure. Biker Scout Blaster sits in leg holster — frequently lost. Palitoy produced a unique sculpt for the UK. White armour condition is the key quality indicator.',variants:[{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Macau M1',s:'LFL 1982 · Macau',r:'uncommon'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'rare'},{n:'Palitoy (unique sculpt)',s:'LFL 1982 · Hong Kong',r:'rare'}]},
+{id:'lando-skiff',name:'Lando Calrissian (Skiff Guard Disguise)',wave:'ROTJ',cardback:'65 Back',emoji:'🎭',acc:['Lando Skiff Helmet'],rarity:'Common',vcount:2,notes:'Lando in disguise on Jabba\'s sail barge. Metallic gold/brown Skiff Helmet is frequently missing. Complete with helmet is the target.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'nien-nunb',name:'Nien Nunb',wave:'ROTJ',cardback:'65 Back',emoji:'🧑',acc:['Palace Blaster'],rarity:'Common',vcount:2,notes:'Lando\'s co-pilot at Endor. Palace Blaster. Excellent alien face sculpt. Popular ROTJ figure.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'nikto',name:'Nikto',wave:'ROTJ',cardback:'77 Back',emoji:'🦎',acc:['Skiff Vibro Axe'],rarity:'Common',vcount:2,notes:'Jabba skiff guard. Comes with Skiff Vibro Axe (VV entry pending). Green skin with detailed scale texture. Accessory often missing.',variants:[{n:'Smile M2',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M2',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'8d8',name:'8D8',wave:'ROTJ',cardback:'77 Back',emoji:'🤖',acc:[],rarity:'Common',noAcc:true,vcount:2,notes:'Torture droid from Jabba\'s Palace. No accessories. Slender form is fairly fragile — arms and neck can be damaged.',variants:[{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'leia-combat-poncho',name:'Princess Leia Organa (in Combat Poncho)',wave:'ROTJ',cardback:'77 Back',emoji:'🌲',acc:['Leia Endor Poncho','Leia Endor Helmet','Leia Endor Belt','Rebel Blaster'],rarity:'Common',vcount:3,notes:'Four accessories — poncho, helmet, belt and blaster. Complete example is genuinely difficult to find. Poncho most retained; belt and blaster most often missing.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'wicket',name:'Wicket W. Warrick',wave:'ROTJ',cardback:'77 Back',emoji:'🐻',acc:['Ewok Spear','Wicket Hood'],rarity:'Common',vcount:3,notes:'The most beloved Ewok. Ewok Spear and fabric hood. Hood frequently missing. Consistently popular across all collector levels.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'the-emperor',name:'The Emperor',wave:'ROTJ',cardback:'77 Back',emoji:'⚡',acc:['Emperor Cane'],rarity:'Common',vcount:3,notes:'Emperor Palpatine with walking cane. Hooded cloak and gnarled face make this one of the most detailed sculpts. Emperor Cane is small but robust.',variants:[{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'uncommon'}]},
+{id:'b-wing-pilot',name:'B-Wing Pilot',wave:'ROTJ',cardback:'77 Back',emoji:'✈️',acc:['Palace Blaster'],rarity:'Common',vcount:2,notes:'Distinctive red and white helmet. Comes with Palace Blaster. Popular with Rebel collectors.',variants:[{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'klaatu-skiff',name:'Klaatu (in Skiff Guard Outfit)',wave:'ROTJ',cardback:'77 Back',emoji:'🟠',acc:['Skiff Vibro Staff'],rarity:'Common',vcount:2,notes:'Different from standard Klaatu — green skiff guard outfit. Comes with Skiff Vibro Staff (VV entry pending). Often confused with standard Klaatu by casual collectors.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'han-trench-coat',name:'Han Solo (in Trench Coat)',wave:'ROTJ',cardback:'77 Back',emoji:'🧥',acc:['Trench Coat (Han Endor)','Rebel Blaster'],rarity:'Common',vcount:3,notes:'Han at Endor. Camo lapel variant is less common. Fabric coat usually attached to figure. Rebel Blaster frequently missing.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1 (camo lapels)',s:'LFL 1982 · Hong Kong',r:'uncommon'}]},
+{id:'teebo',name:'Teebo',wave:'ROTJ',cardback:'77 Back',emoji:'🐾',acc:['Teebo Axe','Teebo Headpiece','Teebo Battle Horn','Teebo Bag'],rarity:'Common',vcount:2,notes:'Most complex Ewok accessory set — axe, headpiece, battle horn, and bag. All four missing is common. Headpiece most retained; horn and bag most often missing.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'prune-face',name:'Prune Face',wave:'ROTJ',cardback:'77 Back',emoji:'🎭',acc:['Prune Face Rifle','Prune Face Cape'],rarity:'Common',vcount:2,notes:'Wrinkled alien Imperial. Rifle and cape frequently both missing from loose figures.',variants:[{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'at-st-driver',name:'AT-ST Driver',wave:'ROTJ',cardback:'77 Back',emoji:'🦒',acc:['Imperial Blaster'],rarity:'Common',vcount:3,notes:'The Chicken Walker pilot. Distinctive helmet and facial detail. Popular with Imperial collectors.',variants:[{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Taiwan M1',s:'LFL 1983 · Taiwan',r:'rare'}]},
+{id:'rancor-keeper',name:'Rancor Keeper',wave:'ROTJ',cardback:'77 Back',emoji:'🗿',acc:['Rancor Keeper Staff','Rancor Keeper Hood'],rarity:'Common',vcount:2,notes:'Malakili the Rancor Keeper. Portly memorable sculpt. Hood frequently missing. Often found bare without accessories from bundles.',variants:[{n:'Kader M1',s:'LFL 1982 · Hong Kong',r:'common'},{n:'Smile M1',s:'LFL 1982 · Hong Kong',r:'common'}]},
+{id:'lumat',name:'Lumat',wave:'ROTJ',cardback:'79 Back',emoji:'🏹',acc:['Lumat Bow'],rarity:'Uncommon',vcount:2,notes:'Late-wave ROTJ Ewok. Also available carded as a POTF figure with coin. Lili Ledy Mexico version sought by international variant collectors.',variants:[{n:'Lili Ledy M1',s:'LFL 1983 · Mexico',r:'uncommon'},{n:'Smile M1',s:'LFL 1983 · Hong Kong',r:'uncommon'}]},
+{id:'paploo',name:'Paploo',wave:'ROTJ',cardback:'79 Back',emoji:'🐾',acc:['Ewok Spear'],rarity:'Uncommon',vcount:2,notes:'The scout Ewok who steals the speeder bike. Late production — slightly less common than earlier ROTJ figures.',variants:[{n:'Lili Ledy M1',s:'LFL 1983 · Mexico',r:'uncommon'},{n:'Smile M1',s:'LFL 1983 · Hong Kong',r:'uncommon'}]},
+// ── POTF ──────────────────────────────────────────────────────────────────────
+{id:'luke-battle-poncho',name:'Luke Skywalker (in Battle Poncho)',wave:'POTF',cardback:'92 Back',emoji:'🌿',acc:['Handheld Lightsaber (Green)','Rebel Blaster'],rarity:'Uncommon',vcount:2,notes:'Luke Endor in battle poncho. POTF figures generally less common. Fabric poncho often missing. Carded POTF examples with coin are significantly valuable.',variants:[{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'uncommon'},{n:'Kader M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'r2-d2-pop-up',name:'Artoo-Detoo (R2-D2) with pop-up Lightsaber',wave:'POTF',cardback:'92 Back',emoji:'🔦',acc:['Pop-Up Saber'],rarity:'Rare',vcount:3,notes:'Rarest standard R2-D2. Pop-up lightsaber mechanism extends from dome. The saber accessory itself (Smile M1/M2) is among the most expensive in the line — £200–£500 for the saber alone. Complete figure with saber is a premium POTF piece.',variants:[{n:'Smile M1',s:'LFL 1985 · Hong Kong',r:'rare'},{n:'Smile M1 1c',s:'LFL 1985 · Hong Kong',r:'rare'},{n:'Smile M2',s:'LFL 1985 · Hong Kong',r:'very_rare'}]},
+{id:'romba',name:'Romba',wave:'POTF',cardback:'92 Back',emoji:'🐻',acc:['Ewok Spear'],rarity:'Uncommon',vcount:1,notes:'Late-wave Ewok. Generally uncommon as a POTF figure. Romba Hood not yet officially catalogued on VV. Comes with Ewok Spear.',variants:[{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'amanaman',name:'Amanaman',wave:'POTF',cardback:'92 Back',emoji:'👾',acc:['Amanaman Staff'],rarity:'Rare',vcount:2,notes:'One of the more expensive standard POTF figures. Striking alien sculpt with long neck. Amanaman Staff is a distinctive weapon. Expect £100–£200+ for a nice loose complete example.',variants:[{n:'Smile M1 1a',s:'LFL 1984 · Hong Kong',r:'rare'},{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'rare'}]},
+{id:'barada',name:'Barada',wave:'POTF',cardback:'92 Back',emoji:'🔧',acc:['Skiff Vibro Staff'],rarity:'Uncommon',vcount:1,notes:'Klatooinian skiff mechanic. POTF figure with Skiff Vibro Staff. Less common than earlier waves.',variants:[{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'imperial-gunner',name:'Imperial Gunner',wave:'POTF',cardback:'92 Back',emoji:'🎯',acc:['Imperial Blaster'],rarity:'Uncommon',vcount:1,notes:'Death Star gunner in distinctive black uniform with large round helmet. POTF figure. All-black suit is durable. A cool Imperial figure with decent value.',variants:[{n:'Kader M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'han-carbonite',name:'Han Solo (in Carbonite Chamber)',wave:'POTF',cardback:'92 Back',emoji:'🧊',acc:['Carbonite Chamber'],rarity:'Uncommon',vcount:1,notes:'Han encased in carbonite. Carbonite Chamber slab is the key accessory — significantly increases complete value. Often recorded as "Han Carboniet block" (common misspelling) in collection records.',variants:[{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'luke-stormtrooper',name:'Luke Skywalker (Imperial Stormtrooper Outfit)',wave:'POTF',cardback:'92 Back',emoji:'💂',acc:['Imperial Blaster'],rarity:'Rare',vcount:2,notes:'Luke in disguise as a Stormtrooper from the Death Star rescue. One of the rarer POTF figures. Expect £150–£250+ for a nice loose example.',variants:[{n:'Kader M1',s:'LFL 1984 · Hong Kong',r:'rare'},{n:'Kader M1 1d',s:'LFL 1984 · Hong Kong',r:'rare'}]},
+{id:'anakin-skywalker',name:'Anakin Skywalker',wave:'POTF',cardback:'92 Back',emoji:'👻',acc:[],rarity:'Common',noAcc:true,vcount:2,notes:'Anakin as a Force ghost. No accessories. Ethereal blue/grey finish is distinctive. One of the more affordable POTF figures. Popular for Return of the Jedi dioramas.',variants:[{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'common'},{n:'Kader M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'ev-9d9',name:'EV-9D9',wave:'POTF',cardback:'92 Back',emoji:'🤖',acc:[],rarity:'Uncommon',noAcc:true,vcount:1,notes:'Droid overseer from Jabba\'s Palace. No accessories. Slender articulated limbs are fragile and often damaged. A complete undamaged example is harder to find than expected.',variants:[{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'warok',name:'Warok',wave:'POTF',cardback:'92 Back',emoji:'🏹',acc:['Lumat Bow'],rarity:'Uncommon',vcount:1,notes:'Ewok warrior. Comes with bow (same mould as Lumat Bow). POTF Ewok — less common than earlier ROTJ Ewoks. Generally found in good condition.',variants:[{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'lando-general',name:'Lando Calrissian (General Pilot)',wave:'POTF',cardback:'92 Back',emoji:'✈️',acc:['Rebel Blaster'],rarity:'Uncommon',vcount:1,notes:'Lando as General Pilot at Endor. POTF in distinctive flight suit. Expect £80–£200 for nice loose examples — a mid-tier POTF in terms of value.',variants:[{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'a-wing-pilot',name:'A-Wing Pilot',wave:'POTF',cardback:'92 Back',emoji:'🚀',acc:['Rebel Blaster'],rarity:'Uncommon',vcount:1,notes:'Anonymous A-Wing Pilot in red and white. POTF figure. Popular with Rebel fleet collectors. Prices typically £40–£80 loose.',variants:[{n:'Smile M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'imperial-dignitary',name:'Imperial Dignitary',wave:'POTF',cardback:'92 Back',emoji:'🎩',acc:[],rarity:'Uncommon',noAcc:true,vcount:1,notes:'Sate Pestage from the Emperor\'s entourage. No accessories. Elaborate sculpted robes. POTF — less commonly encountered.',variants:[{n:'Kader M1',s:'LFL 1984 · Hong Kong',r:'uncommon'}]},
+{id:'yak-face',name:'Yak Face',wave:'POTF',cardback:'92 Back (Non-US)',emoji:'🦁',acc:['Vibro Axe'],rarity:'Rare',vcount:1,notes:'The Holy Grail of standard vintage Kenner — never released in the US. Only available in Canada, Europe and other international markets on the 92 Back POTF card. UK/Palitoy examples are particularly desirable. Loose examples £100–£400+ depending on condition. Carded examples are exceptional pieces.',variants:[{n:'Smile M1',s:'LFL 1985 · Hong Kong',r:'rare'}]},
+];
+
+const ACCESSORIES=[
+  {id:'pop-up-saber',name:'Pop-Up Saber',cat:'Sabers',emoji:'⭐',rarity:'Very Rare',wave:'POTF',figures:['Artoo-Detoo (R2-D2) with pop-up Lightsaber'],variants:[{n:'Smile M1',notes:'Standard'},{n:'Smile M2',notes:'Rarer later production run'}],notes:'The rarest accessory in the standard line. Attaches to the POTF R2-D2 dome. Expect £200–£500 for the saber alone. Both Smile M1 and the rarer Smile M2 variants exist.'},
+  {id:'double-telescoping',name:'Double-Telescoping Lightsaber',cat:'Sabers',emoji:'⚔️',rarity:'Very Rare',wave:'SW',figures:['Luke Skywalker','Darth Vader','Ben (Obi-Wan) Kenobi'],variants:[{n:'Yellow (Luke)',notes:'12 Back Luke'},{n:'Red (Vader)',notes:'12 Back Darth Vader'},{n:'Blue (Ben)',notes:'12 Back Ben Kenobi'}],notes:'Only included with original 12 Back figures. Two extending sections rather than single. Quickly replaced by single telescoping version. A complete 12 Back figure with DT saber is a premium collectible. The saber alone commands significant prices.'},
+  {id:'telescoping-lightsaber',name:'Telescoping Lightsaber',cat:'Sabers',emoji:'⚔️',rarity:'Common',wave:'SW',figures:['Luke Skywalker','Darth Vader','Ben (Obi-Wan) Kenobi'],variants:[{n:'Yellow (Luke)',notes:'Single extending blade'},{n:'Red (Vader)',notes:'Single extending blade'},{n:'Blue (Ben)',notes:'Single extending blade'},{n:'Lettered hilt variants',notes:'LL, BP, KK, JJ, S, R stamped on hilt — highly desirable, earlier production'}],notes:'"Tipless" condition means the thin extending tip is broken off — very common and significantly reduces value. "Tipped" means intact. Lettered hilt variants (letters stamped on hilt base) are considerably more desirable — represent earlier production runs.'},
+  {id:'handheld-lightsaber',name:'Handheld Lightsaber',cat:'Sabers',emoji:'💛',rarity:'Common',wave:'ESB/ROTJ',figures:['Luke Skywalker (Bespin Fatigues)','Luke Skywalker (Jedi Knight Outfit)'],variants:[{n:'Yellow/Bespin',notes:'ESB Luke Bespin — often called Bespin Saber'},{n:'Green/Jedi',notes:'ROTJ Luke Jedi Knight'},{n:'Blue/Jedi',notes:'Some production runs — blue version also exists'}],notes:'Non-telescoping handheld saber. Yellow/gold with ESB Luke Bespin; green with ROTJ Luke Jedi. Blue Jedi saber also exists from some production runs. More robust than telescoping versions.'},
+  {id:'leia-blaster',name:'Leia Blaster',cat:'Blasters',emoji:'🔫',rarity:'Common',wave:'SW',figures:['Princess Leia Organa','Leia (Hoth Outfit)'],variants:[{n:'Black',notes:'Most common'},{n:'Blue',notes:'Less common variant'}],notes:'Small pistol carried by Princess Leia. Comes in black (most common) and blue variants. Very small — frequently missing from Leia figures.'},
+  {id:'imperial-blaster',name:'Imperial Blaster',cat:'Blasters',emoji:'🔫',rarity:'Common',wave:'SW',figures:['Stormtrooper','Darth Vader','Death Squad Commander','AT-AT Commander','TIE Fighter Pilot','Imperial Commander'],variants:[{n:'Black',notes:'Most common — Kader M1–M8'},{n:'Blue',notes:'Blue plastic variant'},{n:'Blue/Black (Kader M7)',notes:'Two-tone variant'}],notes:'Most common accessory in the line — carried by nearly all Imperial figures. Black is standard; blue and blue/black variants exist. Essential for completing Imperial figures.'},
+  {id:'rebel-blaster',name:'Rebel Blaster',cat:'Blasters',emoji:'🔫',rarity:'Common',wave:'SW',figures:['Han Solo','Boba Fett','Han Solo (Bespin Outfit)','Han Solo (Hoth Outfit)'],variants:[{n:'Standard',notes:'Kader M5'},{n:'Blue',notes:'Less common'},{n:'Blue Smuggler',notes:'Longer barrel version'}],notes:'Also called Smuggler Blaster or Pilot Blaster. Comes in several variants. Blue version less common. One of the most frequently missing accessories.'},
+  {id:'jawa-blaster',name:'Jawa Blaster',cat:'Blasters',emoji:'🟡',rarity:'Common',wave:'SW',figures:['Jawa'],variants:[{n:'Standard yellow',notes:'Single variant'}],notes:'Small yellow blaster unique to the Jawa figure. Tiny — very easily lost. Complete Jawas with blaster are much harder to find than bare figures.'},
+  {id:'bespin-blaster',name:'Bespin Blaster',cat:'Blasters',emoji:'🔫',rarity:'Common',wave:'ESB',figures:['Lando Calrissian','Bespin Security Guard (White)','Bespin Security Guard (Black)','Han Solo (Bespin Outfit)','Lobot','Cloud Car Pilot'],variants:[{n:'Grey',notes:'Most common'},{n:'Yellow',notes:'Yellow variant'}],notes:'Distinctive ESB blaster used across multiple Cloud City figures. Grey is standard. Second most bought accessory by volume after Imperial Blaster.'},
+  {id:'pilot-blaster',name:'Pilot Blaster',cat:'Blasters',emoji:'🔫',rarity:'Common',wave:'ESB',figures:['Luke Skywalker (X-Wing Pilot)'],variants:[{n:'Grey',notes:'Standard'},{n:'Black',notes:'Less common'}],notes:'Grey/black blaster used by Rebel pilots. Grey and black variants documented.'},
+  {id:'palace-blaster',name:'Palace Blaster',cat:'Blasters',emoji:'🔫',rarity:'Common',wave:'ROTJ',figures:['Greedo','Nien Nunb','Squid Head'],variants:[{n:'Grey',notes:'Standard'},{n:'Black',notes:'Black variant'}],notes:'Longer-barrelled blaster used by Jabba\'s Palace aliens and some other ROTJ figures.'},
+  {id:'biker-scout-blaster',name:'Biker Scout Blaster',cat:'Blasters',emoji:'🔫',rarity:'Common',wave:'ROTJ',figures:['Biker Scout'],variants:[{n:'Standard',notes:'Sits in leg holster'}],notes:'Small pistol that fits in the Biker Scout\'s right leg holster. Very frequently missing. The leg holster provides a clue when absent.'},
+  {id:'endor-blaster',name:'Endor Blaster',cat:'Blasters',emoji:'🔫',rarity:'Common',wave:'ROTJ',figures:['Princess Leia Organa (in Combat Poncho)','Han Solo (in Trench Coat)','Rebel Commando'],variants:[{n:'Black',notes:'Standard'},{n:'Blue',notes:'Blue variant'}],notes:'Blaster used by Endor-based Rebel figures. Black is standard; blue variant exists. Also fitted as the gun on the Speeder Bike.'},
+  {id:'chewbacca-bowcaster',name:'Chewbacca Bowcaster',cat:'Rifles',emoji:'🎯',rarity:'Common',wave:'SW',figures:['Chewbacca'],variants:[{n:'Kader M1',notes:'Most common'},{n:'Unitoy M2',notes:'Common variant'}],notes:'Distinctive bowcaster unique to Chewbacca. Robust accessory that survives better than smaller pieces.'},
+  {id:'imperial-hoth-rifle',name:'Imperial Hoth Rifle',cat:'Rifles',emoji:'❄️',rarity:'Common',wave:'ESB',figures:['Imperial Stormtrooper (Hoth)','AT-AT Driver','Dengar'],variants:[{n:'Standard grey',notes:'Single variant'}],notes:'Chunky grey rifle used by Hoth Imperial troops. More robust than many accessories due to its size.'},
+  {id:'bossk-rifle',name:'Bossk Rifle',cat:'Rifles',emoji:'🦎',rarity:'Common',wave:'ESB',figures:['Bossk'],variants:[{n:'Standard brown',notes:'Single colour'}],notes:'Unique long brown rifle exclusive to Bossk. Distinctive shape makes it easy to identify loose.'},
+  {id:'ig-88-rifle',name:'IG-88 Rifle',cat:'Rifles',emoji:'🤖',rarity:'Common',wave:'ESB',figures:['IG-88'],variants:[{n:'Standard',notes:'Long barrelled rifle'}],notes:'One of two weapons included with IG-88 — the longer of the pair. Complete IG-88 with both weapons is sought after.'},
+  {id:'hoth-rebel-rifle',name:'Hoth Rebel Rifle',cat:'Rifles',emoji:'❄️',rarity:'Common',wave:'ESB',figures:['Rebel Soldier (Hoth)','Luke Skywalker (Hoth)','Rebel Commander'],variants:[{n:'Kader M2',notes:'Standard'},{n:'Unitoy M1',notes:'Variant'}],notes:'Shared across three ESB figures. Solid, well-shaped accessory that survives well.'},
+  {id:'at-at-driver-rifle',name:'AT-AT Driver Rifle',cat:'Rifles',emoji:'🏍️',rarity:'Common',wave:'ESB',figures:['AT-AT Driver'],variants:[{n:'Kader M2',notes:'Standard'}],notes:'Short distinctive rifle used by the AT-AT Driver. Usually found with the figure.'},
+  {id:'leia-boushh-rifle',name:'Leia Boushh Rifle',cat:'Rifles',emoji:'🪖',rarity:'Common',wave:'ROTJ',figures:['Princess Leia Organa (Boushh Disguise)'],variants:[{n:'Smile M1',notes:'Standard'}],notes:'Uniquely shaped rifle for Leia Boushh. Frequently missing from figures.'},
+  {id:'ree-yees-rifle',name:'Ree Yees Rifle',cat:'Rifles',emoji:'🐐',rarity:'Common',wave:'ROTJ',figures:['Ree Yees'],variants:[{n:'Taiwan M1',notes:'Standard'}],notes:'Ree Yees\' unique weapon. Taiwan M1 is the standard production variant.'},
+  {id:'prune-face-rifle',name:'Prune Face Rifle',cat:'Rifles',emoji:'🎭',rarity:'Common',wave:'ROTJ',figures:['Prune Face'],variants:[{n:'Standard',notes:''}],notes:'The rifle for Prune Face.'},
+  {id:'sa80-rifle',name:'SA80 Rifle',cat:'Rifles',emoji:'🔫',rarity:'Common',wave:'ESB/ROTJ',figures:['4-LOM','Zuckuss','IG-88','Rebel Commando'],variants:[{n:'Standard',notes:'Shared across multiple figures'}],notes:'Shared across several bounty hunters and ROTJ Rebel figures. One of the most versatile accessories in the line.'},
+  {id:'gamorrean-axe',name:'Gamorrean Axe',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🪓',rarity:'Common',wave:'ROTJ',figures:['Gamorrean Guard'],variants:[{n:'Macau M3',notes:'Most common'},{n:'Macau M2',notes:'Earlier variant'},{n:'Macau M1',notes:'Rarest Macau variant'},{n:'Macau M6',notes:'Late production'}],notes:'Notable for almost exclusively Macau production — matching the unusual Macau production of the figure itself. Robust and usually found with the figure.'},
+  {id:'amanaman-staff',name:'Amanaman Staff',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'💀',rarity:'Rare',wave:'POTF',figures:['Amanaman'],variants:[{n:'Standard',notes:'Features skull/bone totem design'}],notes:'Distinctive staff with skull decorations unique to Amanaman. POTF accessory frequently separated from the figure.'},
+  {id:'gaderffii-stick',name:'Gaderffii Stick',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🗡️',rarity:'Common',wave:'SW',figures:['Sand People'],variants:[{n:'Kader M2',notes:'Standard'},{n:'Smile M3',notes:'Variant'}],notes:'The Gaffi Stick — the iconic Sand People weapon. One of the more robust accessories that tends to survive with figures.'},
+  {id:'teebo-axe',name:'Teebo Axe',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🪓',rarity:'Common',wave:'ROTJ',figures:['Teebo'],variants:[{n:'Standard',notes:'Stone-look axe head'}],notes:'Teebo\'s stone axe. Part of Teebo\'s four-accessory set. One of the more commonly retained Teebo accessories.'},
+  {id:'ackbar-staff',name:'Ackbar Staff',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🏛️',rarity:'Common',wave:'ROTJ',figures:['Admiral Ackbar'],variants:[{n:'Standard',notes:'Walking staff with decorative head'}],notes:'Admiral Ackbar\'s ceremonial staff. Robust — usually found with the figure.'},
+  {id:'emperor-cane',name:'Emperor Cane',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🦯',rarity:'Common',wave:'ROTJ',figures:['The Emperor'],variants:[{n:'Standard',notes:'Simple walking cane'}],notes:'The Emperor\'s walking cane. Small but robust enough to survive well.'},
+  {id:'ewok-spear',name:'Ewok Spear',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🪃',rarity:'Common',wave:'ROTJ',figures:['Wicket W. Warrick','Romba','Warok','Paploo'],variants:[{n:'Standard',notes:'Shared across multiple Ewoks'}],notes:'Shared across multiple Ewok figures. Frequently missing from Ewoks found loose in bundles.'},
+  {id:'erg-pike',name:"Emperor's Royal Guard Pike",cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🔱',rarity:'Common',wave:'ROTJ',figures:["Emperor's Royal Guard"],variants:[{n:'Standard',notes:'Force pike with distinctive head'}],notes:'One of the most distinctive ROTJ accessories. Usually found with the figure as it\'s a prominent large piece.'},
+  {id:'yoda-cane',name:'Yoda Cane',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🦯',rarity:'Common',wave:'ESB',figures:['Yoda'],variants:[{n:'Brown',notes:'Most common'},{n:'Light brown',notes:'Slightly different shade — less common'}],notes:'Yoda\'s walking cane. Part of the five-accessory set. Brown is standard; light brown variant exists.'},
+  {id:'general-madine-staff',name:'General Madine Staff',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'📏',rarity:'Common',wave:'ROTJ',figures:['General Madine'],variants:[{n:'Standard baton',notes:'Simple command baton'}],notes:'Madine\'s command baton. Robust — usually found with the figure.'},
+  {id:'vibro-axe',name:'Vibro Axe',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🔱',rarity:'Common',wave:'ROTJ',figures:['Weequay','Klaatu','Yak Face'],variants:[{n:'Standard',notes:'Shared across multiple skiff guard figures'}],notes:'Shared across multiple Jabba\'s skiff guard figures. One of the most commonly found ROTJ accessories by volume — 67+ purchases in tracking data.'},
+  {id:'bib-fortuna-staff',name:'Bib Fortuna Staff',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🐛',rarity:'Common',wave:'ROTJ',figures:['Bib Fortuna'],variants:[{n:'Kader M2',notes:'Standard'}],notes:'One of three Bib Fortuna accessories. Distinctive curved staff. Usually the most retained of Bib\'s accessories.'},
+  {id:'2-1b-probe',name:'2-1B Probe',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🩺',rarity:'Common',wave:'ESB',figures:['2-1B'],variants:[{n:'Standard',notes:'Walking probe/stick'}],notes:'The more robust of 2-1B\'s two accessories. The Mouthpiece is the one most frequently missing.'},
+  {id:'skiff-vibro-axe',name:'Skiff Vibro Axe',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🪓',rarity:'Common',wave:'ROTJ',figures:['Nikto'],variants:[{n:'Standard',notes:'VV entry pending full details'}],notes:'Named on the Nikto VV page — entry details not yet published. Not to be confused with the standard Vibro Axe or Gamorrean Axe.'},
+  {id:'skiff-vibro-staff',name:'Skiff Vibro Staff',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🪄',rarity:'Common',wave:'ROTJ',figures:['Klaatu (in Skiff Guard Outfit)','Weequay'],variants:[{n:'Standard',notes:'VV entry pending full details'}],notes:'Named on the Klaatu Skiff Guard VV page. Entry details not yet published. Shared between Klaatu Skiff and Weequay.'},
+  {id:'logray-staff',name:'Logray Staff',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🎩',rarity:'Common',wave:'ROTJ',figures:['Logray (Ewok Medicine Man)'],variants:[{n:'Standard',notes:'Features skull/totem head'}],notes:'Logray\'s medicine staff with skull head decoration. Usually the most retained of Logray\'s accessories.'},
+  {id:'chief-chirpa-staff',name:'Chief Chirpa Staff',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🐻',rarity:'Common',wave:'ROTJ',figures:['Chief Chirpa'],variants:[{n:'Standard',notes:''}],notes:'Chief Chirpa\'s warrior staff. Usually found with the figure.'},
+  {id:'rancor-keeper-staff',name:'Rancor Keeper Staff',cat:'Staffs, Axes, Spears, Canes & Pikes',emoji:'🗿',rarity:'Common',wave:'ROTJ',figures:['Rancor Keeper'],variants:[{n:'Standard',notes:'Heavy duty staff'}],notes:'Often missing from loose figures. Robust design survives well when present.'},
+  {id:'squid-head-belt',name:'Squid Head Belt',cat:'Belts',emoji:'🦑',rarity:'Common',wave:'ROTJ',figures:['Squid Head'],variants:[{n:'Standard',notes:''}],notes:'One of three Squid Head accessories. A fabric belt. Usually the second to go missing after the blaster.'},
+  {id:'bib-fortuna-belt',name:'Bib Fortuna Belt',cat:'Belts',emoji:'🐛',rarity:'Common',wave:'ROTJ',figures:['Bib Fortuna'],variants:[{n:'Standard',notes:''}],notes:'One of three Bib Fortuna accessories.'},
+  {id:'yoda-belt',name:'Yoda Belt',cat:'Belts',emoji:'🟢',rarity:'Common',wave:'ESB',figures:['Yoda'],variants:[{n:'Standard',notes:''}],notes:'Part of Yoda\'s five-accessory set. A small fabric belt — often missing.'},
+  {id:'hoth-survival-belt',name:'Hoth Survival Belt',cat:'Belts',emoji:'❄️',rarity:'Common',wave:'ESB',figures:['Survival Kit'],variants:[{n:'Standard',notes:'Mail-away Survival Kit item'}],notes:'The grappling belt from the Hoth Survival Kit. Also called Hoth Grappling Belt. Mail-away item — not sold separately in shops. Came with AT-AT and Rebel Transporter or by mail order.'},
+  {id:'leia-endor-belt',name:'Leia Endor Belt',cat:'Belts',emoji:'🌲',rarity:'Common',wave:'ROTJ',figures:['Princess Leia Organa (in Combat Poncho)'],variants:[{n:'Standard',notes:''}],notes:'One of four Princess Leia Endor accessories. Often the hardest of the four to find.'},
+  {id:'leia-combat-poncho-belt',name:'Princess Leia Organa (in Combat Poncho) Belt',cat:'Belts',emoji:'🌿',rarity:'Common',wave:'ROTJ',figures:['Princess Leia Organa (in Combat Poncho)'],variants:[{n:'Standard',notes:''}],notes:'The belt accessory for the Combat Poncho Leia figure.'},
+  {id:'leia-boushh-helmet',name:'Leia Boushh Helmet',cat:'Hoods & Helmets',emoji:'🪖',rarity:'Common',wave:'ROTJ',figures:['Princess Leia Organa (Boushh Disguise)'],variants:[{n:'Standard',notes:'Removable gold/tan helmet'}],notes:'Removable bounty hunter helmet. Frequently missing. Complete Boushh with both rifle and helmet is the collector target.'},
+  {id:'lando-skiff-helmet',name:'Lando Skiff Helmet',cat:'Hoods & Helmets',emoji:'🎭',rarity:'Common',wave:'ROTJ',figures:['Lando Calrissian (Skiff Guard Disguise)'],variants:[{n:'Standard',notes:'Gold/brown metallic helmet'}],notes:'Removable helmet for Lando\'s skiff guard disguise. Frequently missing.'},
+  {id:'teebo-headpiece',name:'Teebo Headpiece',cat:'Hoods & Helmets',emoji:'🐾',rarity:'Common',wave:'ROTJ',figures:['Teebo'],variants:[{n:'Standard',notes:'Animal skull headpiece'}],notes:'Teebo\'s animal skull headpiece. Usually the most retained of Teebo\'s four accessories.'},
+  {id:'chief-chirpa-hood',name:'Chief Chirpa Hood',cat:'Hoods & Helmets',emoji:'🐻',rarity:'Common',wave:'ROTJ',figures:['Chief Chirpa'],variants:[{n:'Standard',notes:'Fabric hood'}],notes:'Chief Chirpa\'s fabric hood. Frequently missing from loose figures.'},
+  {id:'logray-hood',name:'Logray Hood',cat:'Hoods & Helmets',emoji:'🎩',rarity:'Common',wave:'ROTJ',figures:['Logray (Ewok Medicine Man)'],variants:[{n:'Standard',notes:''}],notes:'Part of the three-accessory set. Often the first Logray accessory to go missing.'},
+  {id:'rancor-keeper-hood',name:'Rancor Keeper Hood',cat:'Hoods & Helmets',emoji:'🗿',rarity:'Common',wave:'ROTJ',figures:['Rancor Keeper'],variants:[{n:'Standard',notes:''}],notes:'Not yet a full VV entry but a documented accessory.'},
+  {id:'wicket-hood',name:'Wicket Hood',cat:'Hoods & Helmets',emoji:'🐻',rarity:'Common',wave:'ROTJ',figures:['Wicket W. Warrick'],variants:[{n:'Standard',notes:''}],notes:'Wicket\'s fabric hood. Frequently missing.'},
+  {id:'leia-endor-helmet',name:'Leia Endor Helmet',cat:'Hoods & Helmets',emoji:'🪖',rarity:'Common',wave:'ROTJ',figures:['Princess Leia Organa (in Combat Poncho)'],variants:[{n:'Standard',notes:'VV entry pending full details'}],notes:'Leia\'s Endor combat helmet. Listed on VV but full entry details not yet published. One of four Leia Endor accessories.'},
+  {id:'romba-hood',name:'Romba Hood',cat:'Hoods & Helmets',emoji:'🐻',rarity:'Uncommon',wave:'POTF',figures:['Romba'],variants:[{n:'Standard',notes:'Not yet on VV'}],notes:'Not yet listed on the VV accessory guide. POTF Ewok accessory.'},
+  {id:'paploo-hood',name:'Paploo Hood',cat:'Hoods & Helmets',emoji:'🐾',rarity:'Uncommon',wave:'ROTJ',figures:['Paploo'],variants:[{n:'Standard',notes:'Not yet on VV'}],notes:'Not yet listed on the VV accessory guide.'},
+  {id:'ugnaught-smock',name:'Ugnaught Smock',cat:'Capes, Skirts & Cloaks',emoji:'🐷',rarity:'Common',wave:'ESB',figures:['Ugnaught'],variants:[{n:'Standard',notes:'Blue/white apron'}],notes:'The Ugnaught\'s work smock/apron. Not to be confused with the Ugnaught Case (bag). Frequently missing from loose figures.'},
+  {id:'squid-head-skirt',name:'Squid Head Skirt',cat:'Capes, Skirts & Cloaks',emoji:'🦑',rarity:'Common',wave:'ROTJ',figures:['Squid Head'],variants:[{n:'Standard',notes:''},{n:'Cape variant',notes:'Also called Squidhead Cape'}],notes:'One of three Squid Head accessories. The skirt/cape wrapping the lower body.'},
+  {id:'bib-fortuna-cloak',name:'Bib Fortuna Cloak',cat:'Capes, Skirts & Cloaks',emoji:'🐛',rarity:'Common',wave:'ROTJ',figures:['Bib Fortuna'],variants:[{n:'Standard',notes:'Also called Bib Jacket in collector records'}],notes:'The most frequently missing of Bib\'s three accessories. The fabric cloak completes the outfit.'},
+  {id:'luke-jedi-cloak',name:'Luke Jedi Cloak',cat:'Capes, Skirts & Cloaks',emoji:'⚔️',rarity:'Common',wave:'ROTJ',figures:['Luke Skywalker (Jedi Knight Outfit)'],variants:[{n:'Standard',notes:'Black fabric cloak'},{n:'Snap cape',notes:'Features snap fastener — less common, sought after'}],notes:'The snap cape variant is sought after by variant collectors. Frequently missing from loose figures.'},
+  {id:'trench-coat',name:'Trench Coat (Han Endor)',cat:'Capes, Skirts & Cloaks',emoji:'🧥',rarity:'Common',wave:'ROTJ',figures:['Han Solo (in Trench Coat)'],variants:[{n:'Standard',notes:'Camouflage lapel version'},{n:'Camo lapels',notes:'More detailed camo pattern — less common'}],notes:'Han Solo\'s Endor trench coat. Usually attached/integral to figure. Camo lapel variant is more detailed and less common. Also called Endor Jacket in some records.'},
+  {id:'ben-kenobi-cape',name:'Ben (Obi-Wan) Kenobi Cape',cat:'Capes, Skirts & Cloaks',emoji:'🧙',rarity:'Common',wave:'SW',figures:['Ben (Obi-Wan) Kenobi'],variants:[{n:'Standard',notes:'Cream/off-white fabric'}],notes:'Ben Kenobi\'s distinctive fabric robe. Comes in slightly different shades across production runs.'},
+  {id:'tusken-raider-cape',name:'Tusken Raider Cape',cat:'Capes, Skirts & Cloaks',emoji:'🗡️',rarity:'Common',wave:'SW',figures:['Sand People'],variants:[{n:'Standard',notes:'Brown fabric wrap'}],notes:'The Sand People\'s fabric cape/wrap. Usually found with figures — fairly robust.'},
+  {id:'darth-vader-cape',name:'Darth Vader Cape',cat:'Capes, Skirts & Cloaks',emoji:'🌑',rarity:'Common',wave:'SW',figures:['Darth Vader'],variants:[{n:'Standard black',notes:'Most common'},{n:'Deep black variant',notes:'Slightly different shade in later runs'}],notes:'Darth Vader\'s iconic black fabric cape. Usually attached at the shoulders. Fabric comes in slightly different shades across production runs.'},
+  {id:'jawa-cloak',name:'Jawa Cloak',cat:'Capes, Skirts & Cloaks',emoji:'👶',rarity:'Common',wave:'SW',figures:['Jawa'],variants:[{n:'Standard cloth',notes:'Brown cloth — all commonly found examples'}],notes:'Standard cloth brown cloak. Not to be confused with the Jawa Vinyl Cape. Almost all Jawas found have the cloth version.'},
+  {id:'jawa-vinyl-cape',name:'Jawa Vinyl Cape',cat:'Capes, Skirts & Cloaks',emoji:'✨',rarity:'Very Rare',wave:'SW',figures:['Jawa'],variants:[{n:'Original vinyl',notes:'Only on earliest 12 Back production'}],notes:'One of the holy grails of vintage Star Wars collecting. Original Jawa came with vinyl cape before cheapened to cloth. Genuine examples £800–£2,000+. Many fakes exist. Vinyl is darker, stiffer and has a different texture to the cloth version.'},
+  {id:'klaatu-skirt',name:'Klaatu Skirt',cat:'Capes, Skirts & Cloaks',emoji:'🟤',rarity:'Common',wave:'ROTJ',figures:['Klaatu'],variants:[{n:'Standard',notes:'Most common'},{n:'Fluffy',notes:'Different texture fabric — less common'}],notes:'Klaatu\'s fabric skirt. Standard and fluffy variants documented.'},
+  {id:'princess-leia-cape',name:'Princess Leia Organa Cape',cat:'Capes, Skirts & Cloaks',emoji:'👸',rarity:'Common',wave:'SW',figures:['Princess Leia Organa'],variants:[{n:'Standard',notes:'White/cream fabric'}],notes:'The original Princess Leia\'s white fabric cape. Frequently missing from 12 Back Leia figures.'},
+  {id:'leia-bespin-cape',name:'Leia Bespin Cape',cat:'Capes, Skirts & Cloaks',emoji:'👘',rarity:'Common',wave:'ESB',figures:['Leia Organa (Bespin Gown)'],variants:[{n:'Standard',notes:'Soft fabric cape'}],notes:'Fabric cape for Leia Bespin. Often missing. Comes in slightly varying shades.'},
+  {id:'hoth-trooper-skirt',name:'Hoth Trooper Skirt',cat:'Capes, Skirts & Cloaks',emoji:'❄️',rarity:'Common',wave:'ESB',figures:['Imperial Stormtrooper (Hoth)'],variants:[{n:'Standard',notes:'White soft goods skirt/kilt'}],notes:'The fabric skirt of the Snowtrooper. Often yellowed or damaged. Complete white condition is rare.'},
+  {id:'lando-cape',name:'Lando Calrissian Cape',cat:'Capes, Skirts & Cloaks',emoji:'🎰',rarity:'Common',wave:'ESB',figures:['Lando Calrissian'],variants:[{n:'Standard fabric',notes:'Most common'},{n:'Vinyl cape',notes:'Rarer vinyl version'}],notes:'Standard fabric version most common. A vinyl variant exists and is notably rarer. Cape colour varies between production runs.'},
+  {id:'prune-face-cape',name:'Prune Face Cape',cat:'Capes, Skirts & Cloaks',emoji:'🎭',rarity:'Common',wave:'ROTJ',figures:['Prune Face'],variants:[{n:'Standard',notes:'Also called Prune Face Cloak'}],notes:'Frequently missing from loose figures.'},
+  {id:'leia-endor-poncho',name:'Leia Endor Poncho',cat:'Capes, Skirts & Cloaks',emoji:'🌲',rarity:'Common',wave:'ROTJ',figures:['Princess Leia Organa (in Combat Poncho)'],variants:[{n:'Standard',notes:'VV entry pending full details'}],notes:'Leia\'s Endor camouflage poncho. Listed on VV but full entry not yet published. Usually the most retained of the four Leia Endor accessories.'},
+  {id:'sy-snootles-skirt',name:'Sy Snootles Skirt',cat:'Capes, Skirts & Cloaks',emoji:'🎤',rarity:'Common',wave:'ROTJ',figures:['Sy Snootles (Max Rebo Band Set)'],variants:[{n:'Standard',notes:'Max Rebo Band set item'}],notes:'Part of the Max Rebo Band playset. The three-figure set was never sold individually — came as a complete set with Jabba\'s Palace. Sy Snootles also has a microphone.'},
+  {id:'ugnaught-case',name:'Ugnaught Case',cat:'Other Accessories',emoji:'👜',rarity:'Common',wave:'ESB',figures:['Ugnaught'],variants:[{n:'Standard',notes:'Small fabric case/bag'}],notes:'The Ugnaught bag/case. Often called Ugnaught Bag in collector records. Frequently missing. Do not confuse with Ugnaught Smock (the apron).'},
+  {id:'c3po-net',name:'C-3PO (Removable Limbs) Net',cat:'Other Accessories',emoji:'🕸️',rarity:'Common',wave:'ESB',figures:['C-3PO (Removable Limbs)'],variants:[{n:'Standard',notes:'Mesh carry bag'}],notes:'Mesh net for carrying C-3PO\'s dismembered parts. Almost always missing. A complete C-3PO Removable Limbs with original net is a true rarity.'},
+  {id:'commlink',name:'Commlink',cat:'Other Accessories',emoji:'📻',rarity:'Common',wave:'ESB',figures:['(Twin-Pod) Cloud Car Pilot'],variants:[{n:'CCP Commlink',notes:'Small radio/communicator piece'}],notes:'The Cloud Car Pilot\'s commlink. A tiny piece — one of the smallest accessories in the line — almost always missing.'},
+  {id:'2-1b-mouthpiece',name:'2-1B Mouthpiece',cat:'Other Accessories',emoji:'🩺',rarity:'Common',wave:'ESB',figures:['2-1B'],variants:[{n:'Standard',notes:'Tiny circular piece'}],notes:'One of the smallest and most frequently missing accessories in the entire line. Almost always absent from loose 2-1B figures.'},
+  {id:'yoda-snake',name:'Yoda Snake',cat:'Other Accessories',emoji:'🐍',rarity:'Common',wave:'ESB',figures:['Yoda'],variants:[{n:'Brown snake',notes:'Most common'},{n:'Orange snake',notes:'Less common variant'}],notes:'Part of Yoda\'s five-accessory set. Brown is most common; orange is less common. The snake wraps around Yoda\'s arm.'},
+  {id:'teebo-battle-horn',name:'Teebo Battle Horn',cat:'Other Accessories',emoji:'📯',rarity:'Common',wave:'ROTJ',figures:['Teebo'],variants:[{n:'Standard',notes:'Called Teebo Horn in some records'}],notes:'VV calls this "Teebo Battle Horn". Part of Teebo\'s four-accessory set. One of the more frequently missing Teebo accessories.'},
+  {id:'carbonite-chamber',name:'Carbonite Chamber',cat:'Other Accessories',emoji:'🧊',rarity:'Uncommon',wave:'POTF',figures:['Han Solo (in Carbonite Chamber)'],variants:[{n:'Standard',notes:'Han Solo slab display piece'}],notes:'The carbonite slab that displays Han Solo. Often recorded as "Han Carboniet block" (common misspelling). Chamber significantly increases the value of the complete piece.'},
+  {id:'yoda-cloak',name:'Yoda Cloak',cat:'Other Accessories',emoji:'🟢',rarity:'Common',wave:'ESB',figures:['Yoda'],variants:[{n:'Standard',notes:'VV calls this Yoda Cloak — entry pending'}],notes:'Yoda\'s fabric cloak. Called "Yoda Cloak" on VV (entry details not yet published). Part of the five-accessory set and frequently the most missing item. Also called "Yoda coat" in collector records.'},
+  {id:'hoth-survival-backpack',name:'Hoth Survival Backpack',cat:'Other Accessories',emoji:'🎒',rarity:'Common',wave:'ESB',figures:['Survival Kit / Mail-Away'],variants:[{n:'Standard (Hoth Backpack)',notes:'Most common'},{n:'Dagobah Backpack',notes:'Variant for Luke Dagobah'},{n:'Jedi Backpack',notes:'Later ROTJ variant'}],notes:'Mail-away Survival Kit item — not sold separately in shops. Came with the AT-AT and Rebel Transporter, or by mail order. Grappling hooks are also grouped as Survival Kit items.'},
+  {id:'hoth-survival-gas-mask',name:'Hoth Survival Gas Mask',cat:'Other Accessories',emoji:'😷',rarity:'Common',wave:'ESB',figures:['Survival Kit / Mail-Away'],variants:[{n:'Standard',notes:'Mail-away Survival Kit item'}],notes:'The gas mask from the Hoth Survival Kit. Mail-away — not sold separately. Often found loose in ESB bundles.'},
+  {id:'yoda-backpack',name:'Yoda Backpack',cat:'Other Accessories',emoji:'🎒',rarity:'Common',wave:'ESB',figures:['Survival Kit / Mail-Away'],variants:[{n:'Standard',notes:'Yoda carrier backpack'}],notes:'The Yoda backpack allowing Luke to carry Yoda. Available as a Survival Kit/mail-away item. Often grouped with Survival Kit items.'},
+  {id:'logray-satchel',name:'Logray Satchel',cat:'Other Accessories',emoji:'👜',rarity:'Common',wave:'ROTJ',figures:['Logray (Ewok Medicine Man)'],variants:[{n:'Standard',notes:'VV entry pending full details'}],notes:'Logray\'s medicine satchel/bag. VV calls this "Logray Satchel" — full entry not yet published. Part of Logray\'s three-accessory set and frequently the most missing item.'},
+  {id:'teebo-bag',name:'Teebo Bag',cat:'Other Accessories',emoji:'👜',rarity:'Common',wave:'ROTJ',figures:['Teebo'],variants:[{n:'Standard',notes:'Small fabric pouch'}],notes:'Teebo\'s small fabric pouch/bag. Different from the Teebo Battle Horn. Part of Teebo\'s four-accessory set.'},
+  {id:'4-lom-armour',name:'4-LOM Armour',cat:'Other Accessories',emoji:'🦟',rarity:'Common',wave:'ESB',figures:['4-LOM'],variants:[{n:'Standard',notes:'Not yet on VV accessory guide'}],notes:'The body armour piece for 4-LOM. Not yet catalogued on the VV accessory guide.'},
+  {id:'4-lom-jacket',name:'4-LOM Jacket',cat:'Other Accessories',emoji:'🦟',rarity:'Common',wave:'ESB',figures:['4-LOM'],variants:[{n:'Standard',notes:'Not yet on VV accessory guide'}],notes:'The jacket/coat piece for 4-LOM. Not yet catalogued on the VV accessory guide.'},
+  {id:'lumat-bow',name:'Lumat Bow',cat:'Other Accessories',emoji:'🏹',rarity:'Uncommon',wave:'ROTJ',figures:['Lumat','Warok'],variants:[{n:'Standard',notes:'Shared by Lumat and Warok'}],notes:'Ewok bow shared by Lumat and Warok. Late-wave ROTJ/POTF accessory.'},
+];
+
+const VEHICLES=[
+  // ── ANH VEHICLES ──
+  {id:'x-wing',name:'X-Wing Fighter',type:'Vehicle',wave:'SW',emoji:'✈️',pilot:'Luke Skywalker (X-Wing Pilot)',notes:'One of the most iconic vehicles. Features battery-operated light and sound, retractable landing gear, pop-up R2-D2 figure in rear socket. The wing-lock mechanism is often broken. Excellent unplayed condition commands premium prices.'},
+  {id:'tie-fighter',name:'TIE Fighter',type:'Vehicle',wave:'SW',emoji:'🛸',pilot:'Imperial TIE Fighter Pilot',notes:'Classic Imperial fighter. The solar panel wings are the most vulnerable part — often bent or cracked. The ball cockpit houses a figure. Early versions had a different wing mechanism.'},
+  {id:'landspeeder',name:'Land Speeder',type:'Vehicle',wave:'SW',emoji:'🚗',pilot:'Luke Skywalker',notes:'One of the earliest and most common vehicles. The hover effect is achieved by wheels beneath the body. Sticker condition is key. Usually found without figures.'},
+  {id:'millennium-falcon',name:'Millennium Falcon',type:'Vehicle',wave:'SW',emoji:'🚀',pilot:'Han Solo / Chewbacca',notes:'The largest and most desirable ANH vehicle. Complete with all accessories — training ball, arm, headsets, radar dish, ramp, boarding ramp, cockpit canopy, chairs — is very hard to find. The chest/game board is often missing pieces. Even incomplete Falcons hold significant value.'},
+  {id:'death-star',name:'Death Star Space Station',type:'Playset',wave:'SW',emoji:'⚫',pilot:'None',notes:'Large playset with multiple levels. Complete examples with all accessories and stickers are exceptional. The trash compactor foam piece is particularly fragile and usually degraded.'},
+  {id:'darth-vader-tie',name:"Darth Vader's TIE Fighter",type:'Vehicle',wave:'SW',emoji:'🛸',pilot:'Darth Vader',notes:"Darth Vader's unique bent-wing TIE Advanced. Like the standard TIE, the wings are the vulnerable point. The Darth Vader version is more sought after than the standard TIE."},
+  {id:'dewback',name:'Dewback',type:'Creature',wave:'SW',emoji:'🦎',pilot:'Stormtrooper',notes:'Large green lizard creature. Usually found in fair condition as the vinyl body is robust. The saddle and reins are soft goods and frequently missing.'},
+  // ── ESB VEHICLES ──
+  {id:'at-at',name:'AT-AT Walker',type:'Vehicle',wave:'ESB',emoji:'🦕',pilot:'AT-AT Driver / AT-AT Commander',notes:'The most impressive ESB vehicle. Motorised walking mechanism often seized but can be repaired. Complete with all chin guns, side guns, head panels and tow cables is a premium piece. One of the highest-value vehicles in the line when complete and working.'},
+  {id:'snowspeeder',name:'Snowspeeder',type:'Vehicle',wave:'ESB',emoji:'✈️',pilot:'Luke Skywalker (Hoth) / Rebel Commander',notes:'ESB vehicle that fires harpoon and tow cable. The harpoon block mechanism is often broken. Canopy cracks are common. One of the more commonly found vehicles in good condition.'},
+  {id:'rebel-transport',name:'Rebel Armoured Snowspeeder Transport',type:'Vehicle',wave:'ESB',emoji:'🚀',pilot:'Rebel Soldier (Hoth)',notes:'Large ESB transport. Came with the Hoth Survival Kit accessories. Complete with all kit components is rare. The hatch mechanisms can stick or break.'},
+  {id:'tauntaun',name:'Tauntaun',type:'Creature',wave:'ESB',emoji:'🦌',pilot:'Luke Skywalker (Hoth) / Han Solo (Hoth)',notes:'The beloved Hoth creature. Comes with saddle and reins — both soft goods frequently missing. The split belly (later "open belly") variant for storing a figure is more sought after than the closed belly original.'},
+  {id:'slave-1',name:"Slave I",type:'Vehicle',wave:'ESB',emoji:'🛸',pilot:'Boba Fett',notes:"Boba Fett's distinctive ship with rotating cockpit. The Han Solo in Carbonite block is a key accessory often missing. Wings and guns can be loose. Complete with carbonite block is the target."},
+  {id:'scout-walker',name:'Scout Walker (AT-ST)',type:'Vehicle',wave:'ESB',emoji:'🦒',pilot:'AT-ST Driver',notes:'The Chicken Walker. Battery-operated walking mechanism. The chin gun can be fragile. An iconic and popular vehicle.'},
+  // ── ROTJ VEHICLES ──
+  {id:'speeder-bike',name:'Speeder Bike',type:'Vehicle',wave:'ROTJ',emoji:'🏍️',pilot:'Biker Scout / Luke Skywalker',notes:'Extremely popular vehicle. The exploding feature (pressing the button blows the bike apart) means complete bikes are harder to find — the pieces scatter. The blaster underneath is often missing. One of the most bought vehicles.'},
+  {id:'rancor',name:'Rancor Monster',type:'Creature',wave:'ROTJ',emoji:'🦖',pilot:'None — figure scales incorrectly for playset use',notes:'Large articulated rubber monster. The articulated arms and jaw are the playability features. The rubber body can dry out, crack and discolour over time. A nice clean undamaged Rancor is harder to find than it sounds.'},
+  {id:'jabba-playset',name:"Jabba the Hutt Action Playset",type:'Playset',wave:'ROTJ',emoji:'🐍',pilot:'None',notes:"Jabba comes as a playset with multiple accessories — dais, throne, pipe, dish, and more. The Salacious Crumb figure is a tiny piece almost always missing. Complete Jabba playsets are quite rare. The rubber body can degrade."},
+  {id:'b-wing',name:'B-Wing Fighter',type:'Vehicle',wave:'ROTJ',emoji:'✈️',pilot:'B-Wing Pilot',notes:'Sleek Rebel fighter with rotating cockpit and folding wings. The wing mechanism can be stiff or broken. One of the more impressive ROTJ vehicles. Electronic lights and sounds feature.'},
+  // ── MINI RIGS ──
+  {id:'cap-2',name:'CAP-2 (Captivator)',type:'MiniRig',wave:'ESB',emoji:'🏎️',pilot:'Rebel Soldier (Hoth)',notes:'ESB Mini Rig. Small capture vehicle. Complete with gun and figure is the standard. Used sticker sheets are commonly encountered.'},
+  {id:'mtv-7',name:'MTV-7 (Multi-Terrain Vehicle)',type:'MiniRig',wave:'ESB',emoji:'🚗',pilot:'AT-AT Driver',notes:'ESB Mini Rig. Walker-style vehicle. Top gun is frequently missing. Very commonly found in bundles.'},
+  {id:'int-4',name:'INT-4 (Interceptor)',type:'MiniRig',wave:'ESB',emoji:'✈️',pilot:'Snowtrooper',notes:'ESB Mini Rig. Wing gun frequently missing. Part of the Imperial mini rig range.'},
+  {id:'mlc-3',name:'MLC-3 (Mobile Laser Cannon)',type:'MiniRig',wave:'ESB',emoji:'💫',pilot:'Rebel Soldier (Hoth)',notes:'ESB Mini Rig laser cannon. Often found loose with used sticker sheet.'},
+  {id:'ast-5',name:'AST-5 (Armoured Sentinel Transport)',type:'MiniRig',wave:'ROTJ',emoji:'🚁',pilot:'Rebel Commando',notes:'ROTJ Mini Rig. Round hover vehicle. Compact and often found in good condition.'},
+  {id:'vehicle-maintenance-energizer',name:'Vehicle Maintenance Energizer',type:'MiniRig',wave:'ESB',emoji:'🔧',pilot:'AT-AT Driver',notes:'Unusual ground crew mini rig. Comes with tools and hoses. Complete with all accessories is genuinely difficult.'},
+];
+
+const CARDBACKS=[
+  {id:'12-back',name:'12 Back',wave:'SW',year:'1977–1978',figures:12,description:'The original Star Wars cardback featuring 12 figures on the back of the card. Includes the first twelve figures: Luke, Leia, R2-D2, C-3PO, Chewbacca, Darth Vader, Stormtrooper, Ben Kenobi, Han Solo, Jawa, Sand People and Death Squad Commander. The 12 Back is the most historically significant and collectible cardback. Early production runs feature the double-telescoping lightsaber with Luke, Vader and Ben.',color:'#d4a843',figs:['Luke Skywalker','Princess Leia Organa','R2-D2','C-3PO','Chewbacca','Darth Vader','Stormtrooper','Ben (Obi-Wan) Kenobi','Han Solo','Jawa','Sand People','Death Squad Commander']},
+  {id:'20-back',name:'20 Back',wave:'SW',year:'1978–1979',figures:20,description:'Added 8 new figures to the original 12. New additions include Greedo, Hammerhead, Snaggletooth, Walrus Man, Luke X-Wing Pilot, R5-D4, Death Star Droid and Power Droid. Also the first appearance of the Boba Fett offer sticker on some examples.',color:'#d4a843',figs:['Greedo','Hammerhead','Snaggletooth','Walrus Man','Luke Skywalker (X-Wing Pilot)','R5-D4','Death Star Droid','Power Droid']},
+  {id:'21-back',name:'21 Back',wave:'SW',year:'1979',figures:21,description:'Added Boba Fett to the lineup — his first carded appearance. The addition of Boba Fett makes this one of the most significant cardbacks in the line.',color:'#d4a843',figs:['Boba Fett']},
+  {id:'31-back',name:'31 Back',wave:'ESB',year:'1980',figures:31,description:'The first Empire Strikes Back wave cardback. Introduced the majority of the ESB figures including Yoda, Lando, Bossk, IG-88, the bounty hunters, and Hoth-themed figures.',color:'#7ec8e3',figs:['Leia Organa (Bespin Gown)','FX-7','Imperial Stormtrooper (Hoth)','Rebel Soldier (Hoth)','Bossk','IG-88','Luke Skywalker (Bespin)','Han Solo (Hoth)','Lando Calrissian']},
+  {id:'32-back',name:'32 Back',wave:'ESB',year:'1980',figures:32,description:'Added Yoda to the ESB lineup — one of the most anticipated figures of the line.',color:'#7ec8e3',figs:['Yoda']},
+  {id:'41-back',name:'41 Back',wave:'ESB',year:'1980–1981',figures:41,description:'Expanded the ESB lineup with more Cloud City and Hoth figures.',color:'#7ec8e3',figs:['Ugnaught','Dengar','Han Solo (Bespin)','Lobot','Leia (Hoth Outfit)','Rebel Commander','AT-AT Driver','Imperial Commander','2-1B']},
+  {id:'45-back',name:'45 Back',wave:'ESB',year:'1981',figures:45,description:'Added the later ESB figures including the revised R2-D2 and C-3PO.',color:'#7ec8e3',figs:['R2-D2 (Sensorscope)','C-3PO (Removable Limbs)','Luke Skywalker (Hoth)','AT-AT Commander','Cloud Car Pilot','Bespin Guard (Black)']},
+  {id:'47-back',name:'47/48 Back',wave:'ESB',year:'1982',figures:48,description:'Final ESB waves featuring 4-LOM, Zuckuss and the TIE Fighter Pilot.',color:'#7ec8e3',figs:['4-LOM','Zuckuss','Imperial TIE Fighter Pilot']},
+  {id:'65-back',name:'65 Back',wave:'ROTJ',year:'1983',figures:65,description:'The first Return of the Jedi wave — a massive expansion of the lineup. Introduced most of the Jabba\'s Palace and Ewok figures.',color:'#4a9460',figs:['Admiral Ackbar','Luke (Jedi Knight)','Leia Boushh','Gamorrean Guard',"Emperor's Royal Guard",'Chief Chirpa','Logray','Klaatu','Rebel Commando','Weequay','Squid Head','General Madine','Bib Fortuna','Ree Yees','Biker Scout','Lando Skiff','Nien Nunb']},
+  {id:'77-back',name:'77/79 Back',wave:'ROTJ',year:'1983–1984',figures:79,description:'Later ROTJ waves with additional figures including the late Ewoks and Jabba-era characters.',color:'#4a9460',figs:['Nikto','8D8','Princess Leia (Combat Poncho)','Wicket W. Warrick','The Emperor','B-Wing Pilot','Klaatu Skiff','Han Solo (Trench Coat)','Teebo','Prune Face','AT-ST Driver','Rancor Keeper','Lumat','Paploo']},
+  {id:'92-back',name:'92 Back',wave:'POTF',year:'1984–1985',figures:92,description:'The Power of the Force wave — the rarest and most valuable carded figures. POTF cards came with a collector coin unique to each figure. The coin significantly adds to the value of carded examples. Figures include Amanaman, Barada, Imperial Gunner, EV-9D9, and the legendary Yak Face (non-US only).',color:'#8e44ad',figs:['Luke (Battle Poncho)','R2-D2 (Pop-Up Saber)','Romba','Amanaman','Barada','Imperial Gunner','Han Carbonite','Luke Stormtrooper','Anakin Skywalker','EV-9D9','Warok','Lando General','A-Wing Pilot','Imperial Dignitary','Yak Face (Non-US)']},
+];
+
+const KNOWLEDGE=[
+  {icon:'🔬',title:'101 Reference Guide',desc:'Introduction to collecting vintage Kenner Star Wars figures — terminology, condition grades, and what to look for when buying.',content:'A comprehensive beginner\'s guide covering the basics of vintage collecting, how to authenticate figures, and what the key condition indicators are for each type of figure.'},
+  {icon:'🏭',title:'Introduction to COOs',desc:'Understanding Country of Origin markings on figure legs — what they mean and how they identify variants.',content:'COO (Country of Origin) markings appear as stamps on the inside of figure legs. The most common are "Hong Kong", "Taiwan", "Macau" and "Mexico". Combined with the factory/mould code, these identify which factory produced a specific figure and which production run it came from.'},
+  {icon:'📋',title:'COO Terminology',desc:'Factory codes explained: Kader, Smile, Unitoy, PBP, Macau, Taiwan, Lili Ledy and more.',content:'Key factory codes:\n\n• Kader — One of the primary Kenner factories in Hong Kong. The most common COO code.\n• Smile — Another major Hong Kong factory. Often used alongside Kader across production runs.\n• Unitoy — Third major Hong Kong factory. Slightly less common than Kader/Smile.\n• PBP — Hong Kong factory. Produces the "No COO" variants — no country printed on leg.\n• Taiwan — Figures produced in Taiwan from early 1980s. Often later production runs.\n• Macau — Used almost exclusively for Gamorrean Guard and a few other ROTJ figures.\n• Lili Ledy — Mexican licensee. Hard torso variants are particularly sought after.\n• GMFGI — The stamp seen on original 1977 production (stands for General Mills Fun Group Inc., Kenner\'s parent company at the time).'},
+  {icon:'⚙️',title:'Accessory Production',desc:'How vintage accessories were manufactured and how to identify genuine vs reproduction parts.',content:'Vintage Kenner accessories were injection-moulded in Hong Kong, Taiwan and Macau. Genuine accessories typically have specific mould seam lines, colour tones and plastic densities. Modern reproductions are widely available — check the weight, colour exactness, and mould seam placement against reference examples.'},
+  {icon:'🏷️',title:'Vendor / Factory Codes',desc:'Complete reference to factory vendor codes found on accessories.',content:'Accessories carry their own vendor codes separate from figure leg stamps. Common codes:\n\n• Kader M1–M8: Most common Imperial Blaster variants\n• Smile M1–M5: Used across blasters, rifles and sabers\n• Unitoy M1–M3: Less common accessory production\n• Macau M1–M6: Almost exclusively Gamorrean Axe\n• Taiwan M1–M4: Later production accessories\n• PBP: No factory name — identified as "PBP" by VV researchers'},
+  {icon:'📐',title:'Hard Torso Variations',desc:'Guide to identifying hard torso variants — rarer versions of standard figures.',content:'Hard torso figures have a rigid (hard plastic) torso rather than the standard softer material. These were produced in smaller quantities and are more valuable. The Cloud Car Pilot hard torso is one of the most documented examples. Hard torso figures can be identified by the feel and rigidity of the chest section.'},
+  {icon:'🎨',title:'Mould-Colour Variants',desc:'Colour variations across different production runs and their impact on value.',content:'Many figures have documented colour variations across production runs — hair colour (Luke\'s white vs yellow hair on some examples), skin tone variations, and outfit colour differences. These are not errors but reflect different pigment batches used across factories and production runs.'},
+  {icon:'🌍',title:'International Figures — Overview',desc:'Glasslite, Lili Ledy, Poch, Meccano, Top Toys and other licensed international variants.',content:'Several international licensees produced their own versions of Kenner figures:\n\n• Glasslite (Brazil): Distinctive packaging and figure variants\n• Lili Ledy (Mexico): Hard torso variants are highly sought\n• Poch/PBP (Spain): Unique packaging designs\n• Meccano (France): Palitoy companion, different card designs\n• Top Toys (Argentina): Very rare, unique colour variants\n• Toltoys (Australia): Palitoy-adjacent distribution\n• UZAY (Turkey): Bootleg-adjacent unlicensed variants — unique and collectible'},
+  {icon:'🎭',title:'Glasslite Guide',desc:'Brazil\'s Glasslite produced unique variants with different moulds and packaging.',content:'Glasslite produced Brazilian versions of the line with some unique figure variants and distinctive packaging. Some figures feature different paint applications and plastic colours not found in the Kenner versions.'},
+  {icon:'🌵',title:'Lili Ledy Guide',desc:'Mexico\'s Lili Ledy produced hard torso variants that are particularly sought after.',content:'Lili Ledy is notable for producing hard torso versions of many standard Kenner figures — a different manufacturing process that resulted in a harder, more rigid torso section. These are documented by VV and are consistently more valuable than their standard counterparts.'},
+  {icon:'🏴',title:'Bootlegs & Knockoffs',desc:'How to identify bootlegs and unlicensed knockoffs from genuine Kenner figures.',content:'Bootleg and unlicensed figures vary widely in quality. Key tells:\n\n• COO stamps: Bootlegs often lack genuine stamps or have incorrect factory codes\n• Plastic quality: Often different density/colour to genuine examples\n• Paint: Bootleg paint is often lower quality — runs, incorrect colours\n• Proportions: Some bootlegs have slightly different head/body proportions\n• The UZAY Turkish figures are notable as unlicensed but collector-legitimate pieces'},
+];
+
+
+</script>
+<script>
+// ── APP STATE ─────────────────────────────────────────────────────────────────
+let scrStack = [];
+let compareList = [];
+let _curFig = null; // currently open figure
+
+// ── PHOTO LOOKUP ──────────────────────────────────────────────────────────────
+// Add photos here as they become available:
+// PHOTOS['han-solo'] = { front:'photos/han-solo-front.png', back:'photos/han-solo-back.png', left:'...', right:'...' }
+const PHOTOS = {
+  'chewbacca': {
+    front: 'https://www.dropbox.com/scl/fi/t98vbn7oxnxb33bi83e32/chewbacca-front.png?rlkey=szur7b862ed85ane7cpek1mmg&raw=1',
+  },
+};
+
+function getPhoto(figId, angle) {
+  return PHOTOS[figId]?.[angle] || null;
+}
+
+// ── VV URL HELPERS ────────────────────────────────────────────────────────────
+const VV_WAVE_PATH = { SW:'sw', ESB:'esb', ROTJ:'rotj', POTF:'potf' };
+const VV_FIG_SLUGS = {
+  'r2-d2-pop-up':'artoo-detoo-r2-d2-with-pop-up-lightsaber',
+  'luke-x-wing-pilot':'luke-skywalker-x-wing-pilot',
+  'c-3po-removable':'c-3po-removable-limbs',
+  'leia-boushh':'princess-leia-organa-boushh-disguise',
+  'leia-combat-poncho':'princess-leia-organa-in-combat-poncho',
+  'leia-bespin':'leia-organa-bespin-gown',
+  'han-hoth':'han-solo-hoth-outfit','han-bespin':'han-solo-bespin-outfit',
+  'han-trench-coat':'han-solo-in-trench-coat','han-carbonite':'han-solo-in-carbonite-chamber',
+  'luke-bespin':'luke-skywalker-bespin-fatigues','luke-hoth':'luke-skywalker-hoth-battle-gear',
+  'luke-jedi':'luke-skywalker-jedi-knight-outfit','luke-battle-poncho':'luke-skywalker-in-battle-poncho',
+  'luke-stormtrooper':'luke-skywalker-imperial-stormtrooper-outfit',
+  'bespin-guard-white':'bespin-security-guard-white','bespin-guard-black':'bespin-security-guard-black',
+  'lando-skiff':'lando-calrissian-skiff-guard-disguise','lando-general':'lando-calrissian-general-pilot',
+  'klaatu-skiff':'klaatu-in-skiff-guard-outfit','cloud-car-pilot':'twin-pod-cloud-car-pilot',
+  'rebel-soldier-hoth':'rebel-soldier-hoth-battle-gear','snowtrooper':'imperial-stormtrooper-hoth-battle-gear',
+  'r2-d2-sensorscope':'r2-d2-with-sensorscope','tie-fighter-pilot':'imperial-tie-fighter-pilot',
+  '2-1b':'2-1b','4-lom':'4-lom','8d8':'8d8',
+};
+const VV_NO_PAGE = new Set(['blue-snaggletooth']); // no dedicated VV page
+
+function vvFigUrl(f) {
+  if (VV_NO_PAGE.has(f.id)) return null;
+  const slug = VV_FIG_SLUGS[f.id] || f.id;
+  const wavePath = VV_WAVE_PATH[f.wave] || 'sw';
+  return `https://www.variantvillain.com/characters/${wavePath}/${slug}/`;
+}
+
+function vvAccUrl(a) {
+  return `https://www.variantvillain.com/accessory-guide/${a.id}/`;
+}
+
+// ── SCREEN MANAGEMENT ─────────────────────────────────────────────────────────
+function openScr(id) { document.getElementById(id)?.classList.add('on'); scrStack.push(id); }
+function closeScr(id) { document.getElementById(id)?.classList.remove('on'); scrStack = scrStack.filter(s => s !== id); }
+function closeSearch() { closeScr('sSrch'); document.getElementById('si').value = ''; }
+
+// ── NAV ───────────────────────────────────────────────────────────────────────
+function navTo(tab) {
+  document.querySelectorAll('.ni').forEach(el => el.classList.remove('on'));
+  document.getElementById('ni' + tab)?.classList.add('on');
+  if (tab === 'Figs') openScr('sFigs');
+  else if (tab === 'Accs') openScr('sAccs');
+  else if (tab === 'More') openScr('sKnow');
+  else if (tab === 'Compare') openScr('sCmp');
+  else { document.querySelectorAll('.scr').forEach(s => s.classList.remove('on')); document.getElementById('niHome').classList.add('on'); }
+}
+
+// ── COLOUR HELPERS ────────────────────────────────────────────────────────────
+function wCol(w) { return {SW:'#d4a843',ESB:'#7ec8e3',ROTJ:'#4a9460',POTF:'#8e44ad'}[w]||'#d4a843'; }
+function rCol(r) { return {common:'#27ae60',uncommon:'#d4a843',rare:'#c0392b',very_rare:'#8e44ad'}[r]||'#aaa'; }
+
+// ── EXPANDABLE ROW TOGGLE ─────────────────────────────────────────────────────
+function toggleExpand(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  const isOpen = el.style.display !== 'none';
+  el.style.display = isOpen ? 'none' : 'block';
+  // flip arrow
+  const arrow = document.getElementById(id + '_arrow');
+  if (arrow) arrow.textContent = isOpen ? '›' : '⌄';
+}
+
+// ── HOME FIGURE GRID ──────────────────────────────────────────────────────────
+function hPill(el, wave) {
+  document.querySelectorAll('#hpills .pl').forEach(p => p.classList.remove('on'));
+  el.classList.add('on');
+  renderHomeFigs(wave);
+}
+
+function renderHomeFigs(wave) {
+  const grid = document.getElementById('hfig');
+  const figs = FIGURES.filter(f => f.wave === wave).slice(0, 6);
+  grid.innerHTML = figs.map(f => {
+    const photo = getPhoto(f.id, 'front');
+    return `
+    <div class="fc" onclick="showFig('${f.id}')">
+      <div class="fci" style="${photo?'background:#000':''}">
+        ${photo ? `<img src="${photo}" alt="${f.name}" style="width:100%;height:100%;object-fit:contain">` : `${f.emoji}<div class="wd" style="background:${wCol(f.wave)}"></div>`}
+      </div>
+      <div class="fcb"><div class="fcn">${f.name}</div><div class="fcs">${f.vcount} variants</div></div>
+    </div>`;
+  }).join('');
+}
+
+function renderHomeAccs() {
+  document.getElementById('hacc').innerHTML = ACCESSORIES.slice(0, 8).map(a => `
+    <div class="am" onclick="showAcc('${a.id}')">
+      <div class="ami">${a.emoji}</div>
+      <div class="amb"><div class="amc">${a.cat.split(',')[0].split(' ')[0]}</div><div class="amn">${a.name}</div></div>
+    </div>`).join('');
+}
+
+// ── FIGURES LIST ──────────────────────────────────────────────────────────────
+function filtFigs(el, wave) {
+  document.querySelectorAll('#fPills .pl').forEach(p => p.classList.remove('on'));
+  el.classList.add('on');
+  renderFigList(wave);
+}
+
+function renderFigList(wave = 'all') {
+  const list = document.getElementById('figList');
+  const waves = wave === 'all' ? ['SW','ESB','ROTJ','POTF'] : [wave];
+  let html = '';
+  waves.forEach(w => {
+    const figs = FIGURES.filter(f => f.wave === w);
+    const wm = WAVE_META[w];
+    html += `<div class="lsec" data-w="${w}">${wm.emoji} ${wm.label} <span class="lsc">${figs.length}</span></div>`;
+    html += figs.map(f => {
+      const inCmp = compareList.includes(f.id);
+      const photo = getPhoto(f.id, 'front');
+      return `
+      <div class="li" data-id="${f.id}">
+        <div class="lth" onclick="showFig('${f.id}')" style="${photo?'background:#111;padding:2px':''}">
+          ${photo ? `<img src="${photo}" alt="${f.name}" style="width:100%;height:100%;object-fit:contain;border-radius:8px">` : f.emoji}
+        </div>
+        <div class="lif" onclick="showFig('${f.id}')">
+          <div class="ln">${f.name}</div>
+          <div class="lm">${f.cardback} · ${f.vcount} variants · ${f.acc.length ? f.acc[0] : 'No accessories'}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:7px;flex-shrink:0">
+          <div class="rd r-${f.rarity.toLowerCase().replace(' ','_')}"></div>
+          <button class="cmp-btn ${inCmp?'on':''}" onclick="toggleCompare('${f.id}',this)">${inCmp?'✓':'+'}</button>
+          <div class="la" onclick="showFig('${f.id}')">›</div>
+        </div>
+      </div>`;
+    }).join('');
+  });
+  list.innerHTML = html;
+  updateCmpBar();
+}
+
+// ── COMPARE LOGIC ─────────────────────────────────────────────────────────────
+function toggleCompare(id, btn) {
+  const idx = compareList.indexOf(id);
+  if (idx > -1) {
+    compareList.splice(idx, 1);
+    btn.classList.remove('on'); btn.textContent = '+';
+  } else {
+    if (compareList.length >= 3) {
+      const bar = document.getElementById('cmpBar');
+      bar.style.background = 'var(--rar)';
+      setTimeout(() => bar.style.background = '', 400);
+      return;
+    }
+    compareList.push(id);
+    btn.classList.add('on'); btn.textContent = '✓';
+  }
+  updateCmpBar();
+}
+
+function updateCmpBar() {
+  const bar = document.getElementById('cmpBar');
+  const btn = document.getElementById('cmpGo');
+  const label = document.getElementById('cmpLabel');
+  if (compareList.length === 0) { bar.style.display = 'none'; return; }
+  bar.style.display = 'flex';
+  label.textContent = compareList.map(id => {
+    const f = FIGURES.find(x => x.id === id);
+    return f ? f.name.split(' ')[0] : id;
+  }).join(' · ');
+  btn.textContent = compareList.length < 2 ? 'Select more' : `Compare ${compareList.length}`;
+  btn.style.opacity = compareList.length < 2 ? '0.4' : '1';
+  btn.style.pointerEvents = compareList.length < 2 ? 'none' : 'auto';
+}
+
+function clearCompare() {
+  compareList = [];
+  document.querySelectorAll('.cmp-btn.on').forEach(b => { b.classList.remove('on'); b.textContent = '+'; });
+  updateCmpBar();
+  // Reset detail screen button
+  const db = document.getElementById('fdCmpBtn');
+  if (db) { db.textContent = '+ Compare'; db.className = 'ha'; }
+}
+
+function runCompare() {
+  if (compareList.length < 2) return;
+  renderCompareScreen();
+  openScr('sCmp');
+}
+
+function renderCompareScreen() {
+  const figs = compareList.map(id => FIGURES.find(f => f.id === id)).filter(Boolean);
+  const cols = figs.length;
+  document.getElementById('cmpAnglePills').innerHTML =
+    ['front','back','left','right'].map((a,i) =>
+      `<div class="pl ${i===0?'on':''}" onclick="setCmpAngle(this,'${a}')">${a.charAt(0).toUpperCase()+a.slice(1)}</div>`
+    ).join('');
+  document.getElementById('cmpNames').innerHTML = figs.map(f => `
+    <div style="flex:1;text-align:center;padding:0 4px">
+      <div style="font-family:var(--fd);font-size:14px;letter-spacing:.06em;color:var(--txt)">${f.name.split(' ').slice(0,2).join(' ')}</div>
+      <div style="font-size:9px;color:var(--dimmer);font-family:var(--fm);margin-top:2px">${f.cardback}</div>
+    </div>`).join('');
+  setCmpAngleRaw('front', figs);
+  document.getElementById('cmpInfo').innerHTML = `
+    <div class="ib" style="margin:0 14px 10px">
+      <div class="ibh">QUICK COMPARE</div>
+      ${['Wave','Rarity','Variants','Accessories'].map(field => `
+        <div class="ir">
+          <div class="il">${field}</div>
+          ${figs.map(f => {
+            let val = field==='Wave' ? WAVE_META[f.wave].emoji+' '+f.wave
+              : field==='Rarity' ? f.rarity
+              : field==='Variants' ? f.vcount+' known'
+              : f.noAcc ? 'None' : f.acc.length+' item'+(f.acc.length!==1?'s':'');
+            return `<div style="flex:1;text-align:center;font-size:11px;font-family:var(--fm);font-weight:500;color:var(--txt)">${val}</div>`;
+          }).join('')}
+        </div>`).join('')}
+    </div>
+    ${figs.map(f => `
+      <div class="ib" style="margin:0 14px 10px">
+        <div class="ibh">${f.name}</div>
+        <div class="it">${f.notes ? f.notes.slice(0,200)+'…' : 'No notes.'}</div>
+      </div>`).join('')}`;
+}
+
+function setCmpAngle(el, angle) {
+  document.querySelectorAll('#cmpAnglePills .pl').forEach(p => p.classList.remove('on'));
+  el.classList.add('on');
+  const figs = compareList.map(id => FIGURES.find(f => f.id === id)).filter(Boolean);
+  setCmpAngleRaw(angle, figs);
+}
+
+function setCmpAngleRaw(angle, figs) {
+  document.getElementById('cmpPhotos').innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(${figs.length},1fr);gap:8px;padding:0 14px">
+      ${figs.map(f => {
+        const photo = getPhoto(f.id, angle);
+        return `
+        <div style="aspect-ratio:3/4;background:var(--surf2);border-radius:10px;overflow:hidden;border:1px solid var(--b2)">
+          ${photo ? `<img src="${photo}" alt="${f.name}" style="width:100%;height:100%;object-fit:contain">`
+            : `<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+                <div style="font-size:${figs.length===3?'28px':'38px'};opacity:.15">${f.emoji}</div>
+                <div style="font-size:8px;color:var(--dimmer);letter-spacing:.1em;text-transform:uppercase;font-family:var(--fm)">No photo</div>
+               </div>`}
+        </div>`;
+      }).join('')}
+    </div>`;
+}
+
+// ── FIGURE DETAIL ─────────────────────────────────────────────────────────────
+function showFig(id) {
+  const f = FIGURES.find(x => x.id === id);
+  if (!f) return;
+  _curFig = f;
+
+  // Header
+  document.getElementById('fdT').textContent = f.name.split(' ')[0].toUpperCase();
+  document.getElementById('fdW').textContent = WAVE_META[f.wave].label + ' · ' + WAVE_META[f.wave].year;
+  document.getElementById('fdN').textContent = f.name;
+  document.getElementById('fdS').textContent = 'Debut: ' + f.cardback;
+  document.getElementById('fdTop').innerHTML = `<span class="wb wb-${f.wave}">${f.wave}</span>`;
+
+  // Collection button (top right)
+  document.getElementById('fdCollBtn').textContent = '+ Add to Collection';
+  document.getElementById('fdCollBtn').className = 'ha';
+
+  // Compare button
+  const inCmp = compareList.includes(f.id);
+  document.getElementById('fdCmpBtn').textContent = inCmp ? '✓ In Compare' : '+ Compare';
+  document.getElementById('fdCmpBtn').className = 'ha cmp-sm' + (inCmp ? ' on' : '');
+
+  // Accessories chips
+  document.getElementById('fdAcs').innerHTML = f.noAcc
+    ? '<div class="ac na">No accessories</div>'
+    : f.acc.map(a => `<div class="ac p">✓ ${a}</div>`).join('');
+
+  // 4-angle photo gallery
+  document.getElementById('fdGallery').innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:0 14px;margin-bottom:14px">
+      ${['front','back','left','right'].map(angle => {
+        const photo = getPhoto(f.id, angle);
+        return `
+        <div style="aspect-ratio:3/4;background:var(--surf2);border-radius:8px;overflow:hidden;border:1px solid var(--b2);cursor:${photo?'pointer':'default'}"
+             onclick="${photo?`openPhotoView('${f.id}','${angle}')`:''}" >
+          ${photo ? `<img src="${photo}" alt="${f.name} ${angle}" style="width:100%;height:100%;object-fit:contain">`
+            : `<div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px">
+                <div style="font-size:18px;opacity:.12">${f.emoji}</div>
+                <div style="font-size:7px;color:var(--dimmer);letter-spacing:.08em;text-transform:uppercase;font-family:var(--fm)">${angle}</div>
+               </div>`}
+        </div>`;
+      }).join('')}
+    </div>`;
+
+  // Build the expandable info block
+  const vvUrl = vvFigUrl(f);
+  const vvLink = vvUrl
+    ? `<a href="${vvUrl}" target="_blank" style="color:var(--acc);text-decoration:none;font-size:11px;font-family:var(--fm)">View on Variant Villain ↗</a>`
+    : '';
+
+  // Variants expanded content
+  const variantRows = f.variants.map(v => `
+    <div class="vr">
+      <div><div class="vn">${v.n}</div><div class="vs">${v.s}</div></div>
+      <div style="font-size:10px;color:var(--dimmer)">${v.r.replace('_',' ')}</div>
+      <div class="rd" style="background:${rCol(v.r)}"></div>
+    </div>`).join('');
+
+  // Accessories expanded content
+  const accDetails = f.noAcc ? '<div style="padding:10px 13px;font-size:12px;color:var(--dimmer);font-style:italic">No accessories for this figure.</div>'
+    : f.acc.map(accName => {
+        const accObj = ACCESSORIES.find(a => a.name === accName || accName.startsWith(a.name));
+        const accVvLink = accObj ? `<a href="${vvAccUrl(accObj)}" target="_blank" style="color:var(--acc);text-decoration:none;font-size:10px;font-family:var(--fm)">View on VV ↗</a>` : '';
+        const accPhoto = accObj ? getPhoto(accObj.id, 'front') : null;
+        return `
+        <div style="padding:10px 13px;border-bottom:1px solid var(--b)">
+          <div style="display:flex;align-items:center;gap:10px">
+            <div style="width:50px;height:38px;background:var(--surf2);border-radius:6px;border:1px solid var(--b2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;overflow:hidden">
+              ${accPhoto ? `<img src="${accPhoto}" style="width:100%;height:100%;object-fit:contain">` : (accObj?.emoji || '⚔️')}
+            </div>
+            <div style="flex:1">
+              <div style="font-size:12px;font-weight:500;color:var(--txt);margin-bottom:2px">${accName}</div>
+              ${accObj ? `<div style="font-size:10px;color:var(--dimmer);font-family:var(--fm)">${accObj.cat}</div>` : ''}
+            </div>
+            ${accVvLink}
+          </div>
+        </div>`;
+      }).join('');
+
+  // Rarity expanded content
+  const rarityDetail = buildRarityDetail(f);
+
+  document.getElementById('fdDetailBlock').innerHTML = `
+    <div class="ib" id="fdIb">
+      <div class="ibh">KEY DETAILS</div>
+
+      <!-- Wave -->
+      <div class="ir">
+        <div class="il">Wave</div>
+        <div class="iv">${WAVE_META[f.wave].emoji} ${WAVE_META[f.wave].label}</div>
+      </div>
+
+      <!-- Debut cardback — expandable -->
+      <div class="ir xrow" onclick="toggleExpand('fdCbExp')">
+        <div class="il">Debut Kenner Cardback</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="iv">${f.cardback}</div>
+          <div class="xarrow" id="fdCbExp_arrow">›</div>
+        </div>
+      </div>
+      <div id="fdCbExp" class="xpanel">
+        <div style="font-size:12px;color:var(--dim);line-height:1.6">
+          ${getCardbackNote(f)}
+        </div>
+        ${vvLink ? `<div style="margin-top:8px">${vvLink}</div>` : ''}
+      </div>
+
+      <!-- Variants — expandable -->
+      <div class="ir xrow" onclick="toggleExpand('fdVarExp')">
+        <div class="il">Variants tracked</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="iv">${f.vcount} documented</div>
+          <div class="xarrow" id="fdVarExp_arrow">›</div>
+        </div>
+      </div>
+      <div id="fdVarExp" class="xpanel">
+        ${variantRows}
+        ${vvLink ? `<div style="padding:10px 13px;border-top:1px solid var(--b)">${vvLink}</div>` : ''}
+      </div>
+
+      <!-- Accessories — expandable -->
+      <div class="ir xrow" onclick="toggleExpand('fdAccExp')">
+        <div class="il">Accessories</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="iv">${f.noAcc ? 'None' : f.acc.length + ' item' + (f.acc.length!==1?'s':'')}</div>
+          <div class="xarrow" id="fdAccExp_arrow">›</div>
+        </div>
+      </div>
+      <div id="fdAccExp" class="xpanel">${accDetails}</div>
+
+      <!-- Rarity — expandable -->
+      <div class="ir xrow" onclick="toggleExpand('fdRarExp')">
+        <div class="il">Rarity</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="rp rp-${f.rarity.replace(' ','_')}">${f.rarity}</div>
+          <div class="xarrow" id="fdRarExp_arrow">›</div>
+        </div>
+      </div>
+      <div id="fdRarExp" class="xpanel">
+        <div style="font-size:12px;color:var(--dim);line-height:1.7">${rarityDetail}</div>
+      </div>
+
+      <!-- Notes — expandable -->
+      <div class="ir xrow" onclick="toggleExpand('fdNotExp')">
+        <div class="il">Collector Notes</div>
+        <div class="xarrow" id="fdNotExp_arrow">›</div>
+      </div>
+      <div id="fdNotExp" class="xpanel">
+        <div style="font-size:12px;color:var(--dim);line-height:1.7">${f.notes || 'No additional notes recorded.'}</div>
+      </div>
+
+    </div>`;
+
+  // Close all expanded panels fresh
+  ['fdCbExp','fdVarExp','fdAccExp','fdRarExp','fdNotExp'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+    const arrow = document.getElementById(id + '_arrow');
+    if (arrow) arrow.textContent = '›';
+  });
+
+  dTab(document.querySelector('#sFigD .dtabs .dt'), 'ov');
+  openScr('sFigD');
+}
+
+// ── CARDBACK NOTE HELPER ──────────────────────────────────────────────────────
+function getCardbackNote(f) {
+  const notes = {
+    'blue-snaggletooth': 'Blue Snaggletooth was never released on an individual cardback. He was exclusively available in the Sears Cantina Adventure Set in 1978.',
+    'yak-face': 'Yak Face was never released in the US market. He appeared on the 92 Back POTF card in Canada, Europe and other international markets only.',
+  };
+  if (notes[f.id]) return notes[f.id];
+  return `First appeared on the <strong style="color:var(--txt)">${f.cardback}</strong> card in the ${WAVE_META[f.wave].year} production run. The cardback number reflects how many figures were listed on the back of the card at time of release.`;
+}
+
+// ── RARITY DETAIL HELPER ──────────────────────────────────────────────────────
+function buildRarityDetail(f) {
+  const waveYears = { SW:'1977–1979', ESB:'1980–1982', ROTJ:'1983–1984', POTF:'1984–1985' };
+  const rarityDescs = {
+    'Common': 'Commonly encountered in both the UK and US markets. Found regularly in job lots, collections and loose figure sales. Good examples with accessories are more selectively available.',
+    'Uncommon': 'Less frequently encountered than standard figures. Either from a later production wave with lower distribution, or a figure that was produced in smaller quantities.',
+    'Rare': 'Genuinely hard to find. Either late-wave POTF production with limited distribution, or a figure with restricted regional availability. Premium prices even in average condition.',
+    'Very Rare': 'Exceptionally difficult to find. Very limited production, regional exclusivity, or both. Prices are strong regardless of condition.',
+  };
+  const desc = rarityDescs[f.rarity] || '';
+  return `${desc}<br><br>Wave production period: <strong style="color:var(--txt)">${waveYears[f.wave]}</strong>. First released on the ${f.cardback} card and continued in production through subsequent cardback variations.`;
+}
+
+// ── COMPARE FROM DETAIL ───────────────────────────────────────────────────────
+function toggleCmpFromDetail() {
+  if (!_curFig) return;
+  const id = _curFig.id;
+  const btn = document.getElementById('fdCmpBtn');
+  const idx = compareList.indexOf(id);
+  if (idx > -1) {
+    compareList.splice(idx, 1);
+    btn.textContent = '+ Compare'; btn.className = 'ha cmp-sm';
+  } else {
+    if (compareList.length >= 3) {
+      btn.textContent = 'Max 3!';
+      setTimeout(() => { btn.textContent = '+ Compare'; }, 1500);
+      return;
+    }
+    compareList.push(id);
+    btn.textContent = '✓ In Compare'; btn.className = 'ha cmp-sm on';
+  }
+  updateCmpBar();
+  const listBtn = document.querySelector(`.li[data-id="${id}"] .cmp-btn`);
+  if (listBtn) { listBtn.classList.toggle('on', compareList.includes(id)); listBtn.textContent = compareList.includes(id)?'✓':'+'; }
+}
+
+// ── COLLECTION BUTTON ─────────────────────────────────────────────────────────
+function addToCollection() {
+  // Subscription feature — show teaser for now
+  const btn = document.getElementById('fdCollBtn');
+  btn.textContent = '🔒 Premium Feature';
+  setTimeout(() => { btn.textContent = '+ Add to Collection'; }, 2000);
+}
+
+// ── DETAIL TABS ───────────────────────────────────────────────────────────────
+function dTab(el, tab) {
+  if (!el) return;
+  document.querySelectorAll('#sFigD .dt').forEach(t => t.classList.remove('on'));
+  el.classList.add('on');
+}
+
+// ── PHOTO VIEWER ──────────────────────────────────────────────────────────────
+function openPhotoView(figId, angle) {
+  const photo = getPhoto(figId, angle);
+  if (!photo) return;
+  const f = FIGURES.find(x => x.id === figId);
+  document.getElementById('pvImg').src = photo;
+  document.getElementById('pvTitle').textContent = (f?.name || '') + ' — ' + angle;
+  openScr('sPhotoV');
+}
+
+// ── ACCESSORIES LIST ──────────────────────────────────────────────────────────
+function filtAccs(el, cat) {
+  document.querySelectorAll('#aPills .pl').forEach(p => p.classList.remove('on'));
+  el.classList.add('on');
+  renderAccList(cat);
+}
+
+function renderAccList(cat = 'all') {
+  const list = document.getElementById('accList');
+  const cats = cat === 'all' ? [...new Set(ACCESSORIES.map(a => a.cat))] : [cat];
+  let html = '';
+  cats.forEach(c => {
+    const items = ACCESSORIES.filter(a => a.cat === c);
+    html += `<div class="lsec">${c} <span class="lsc">${items.length}</span></div>`;
+    html += items.map(a => `
+      <div class="li" onclick="showAcc('${a.id}')">
+        <div class="lth">${a.emoji}</div>
+        <div class="lif">
+          <div class="ln">${a.name}</div>
+          <div class="lm">${a.wave} · ${a.figures.length} figure${a.figures.length!==1?'s':''} · ${a.rarity}</div>
+        </div>
+        <div style="display:flex;align-items:center;gap:6px">
+          <div class="rd r-${a.rarity.toLowerCase().replace(' ','_')}"></div>
+          <div class="la">›</div>
+        </div>
+      </div>`).join('');
+  });
+  list.innerHTML = html;
+}
+
+// ── ACCESSORY DETAIL ──────────────────────────────────────────────────────────
+function showAcc(id) {
+  const a = ACCESSORIES.find(x => x.id === id);
+  if (!a) return;
+  document.getElementById('adT').textContent = a.name.split(' ').slice(0,2).join(' ').toUpperCase();
+  document.getElementById('adC').textContent = a.cat;
+  document.getElementById('adR').textContent = a.rarity;
+  document.getElementById('adE').textContent = a.emoji;
+  document.getElementById('adN').textContent = a.name;
+  document.getElementById('adW').textContent = a.wave + ' · ' + a.cat;
+
+  // Photo slots for accessory
+  const frontPhoto = getPhoto(a.id, 'front');
+  const backPhoto  = getPhoto(a.id, 'back');
+  document.getElementById('adPhotos').innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 14px;margin-bottom:14px">
+      ${['front','back'].map(angle => {
+        const photo = getPhoto(a.id, angle);
+        return `
+        <div style="aspect-ratio:4/3;background:var(--surf2);border-radius:8px;overflow:hidden;border:1px solid var(--b2);cursor:${photo?'pointer':'default'}"
+             onclick="${photo?`openAccPhotoView('${a.id}','${angle}')`:''}" >
+          ${photo ? `<img src="${photo}" alt="${a.name} ${angle}" style="width:100%;height:100%;object-fit:contain">`
+            : `<div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px">
+                <div style="font-size:24px;opacity:.15">${a.emoji}</div>
+                <div style="font-size:8px;color:var(--dimmer);letter-spacing:.08em;text-transform:uppercase;font-family:var(--fm)">${angle}</div>
+               </div>`}
+        </div>`;
+      }).join('')}
+    </div>`;
+
+  const vvUrl = vvAccUrl(a);
+  document.getElementById('adFigs').innerHTML = a.figures.map(f =>
+    `<div class="ir"><div class="il">${f}</div></div>`).join('');
+  document.getElementById('adVars').innerHTML = a.variants.map(v =>
+    `<div class="ir"><div class="il">${v.n}</div><div style="font-size:11px;color:var(--dimmer)">${v.notes}</div></div>`).join('');
+  document.getElementById('adNt').innerHTML = (a.notes || 'No additional notes.') +
+    `<br><br><a href="${vvUrl}" target="_blank" style="color:var(--acc);text-decoration:none;font-size:11px;font-family:var(--fm)">View on Variant Villain ↗</a>`;
+  openScr('sAccD');
+}
+
+function openAccPhotoView(accId, angle) {
+  const photo = getPhoto(accId, angle);
+  if (!photo) return;
+  const a = ACCESSORIES.find(x => x.id === accId);
+  document.getElementById('pvImg').src = photo;
+  document.getElementById('pvTitle').textContent = (a?.name || '') + ' — ' + angle;
+  openScr('sPhotoV');
+}
+
+// ── CARDBACKS ─────────────────────────────────────────────────────────────────
+function filtCbs(el, wave) {
+  document.querySelectorAll('#cbPills .pl').forEach(p => p.classList.remove('on'));
+  el.classList.add('on'); renderCbs(wave);
+}
+function renderCbs(wave = 'all') {
+  const cbs = wave === 'all' ? CARDBACKS : CARDBACKS.filter(c => c.wave === wave);
+  document.getElementById('cbList').innerHTML = cbs.map(cb => `
+    <div class="cb" data-w="${cb.wave}">
+      <div class="cbh">
+        <span class="wb wb-${cb.wave}">${cb.wave}</span>
+        <span style="font-family:var(--fd);font-size:20px;letter-spacing:.04em;color:var(--txt)">${cb.name}</span>
+        <span style="font-size:10px;color:var(--dimmer);font-family:var(--fm);margin-left:auto">${cb.year}</span>
+      </div>
+      <div style="font-size:12px;color:var(--dim);line-height:1.5;margin-bottom:8px">${cb.description}</div>
+      <div class="cbf">${cb.figs.map(f => `<span class="cbfc">${f}</span>`).join('')}</div>
+    </div>`).join('');
+}
+
+// ── VEHICLES ──────────────────────────────────────────────────────────────────
+function filtVeh(el, type) {
+  document.querySelectorAll('#vPills .pl').forEach(p => p.classList.remove('on'));
+  el.classList.add('on'); renderVeh(type);
+}
+function renderVeh(type = 'all') {
+  const items = type === 'all' ? VEHICLES : VEHICLES.filter(v => v.type === type);
+  document.getElementById('vehList').innerHTML = items.map(v => `
+    <div class="veh" onclick="showVeh('${v.id}')">
+      <div class="veht">${v.emoji}</div>
+      <div class="vehi"><div class="vehn">${v.name}</div><div class="vehm">${v.wave} · ${v.pilot}</div></div>
+      <span class="vty vt-${v.type}">${v.type==='MiniRig'?'Mini Rig':v.type}</span>
+    </div>`).join('');
+}
+function showVeh(id) {
+  const v = VEHICLES.find(x => x.id === id);
+  if (!v) return;
+  document.getElementById('vdT').textContent = v.type.toUpperCase();
+  document.getElementById('vdS').textContent = v.wave + ' · ' + v.type;
+  document.getElementById('vdE').textContent = v.emoji;
+  document.getElementById('vdN').textContent = v.name;
+  document.getElementById('vdW').textContent = WAVE_META[v.wave]?.label || v.wave;
+  document.getElementById('vdTy').textContent = v.type;
+  document.getElementById('vdWv').textContent = v.wave;
+  document.getElementById('vdPi').textContent = v.pilot;
+  document.getElementById('vdNt').textContent = v.notes;
+  openScr('sVehD');
+}
+
+// ── KNOWLEDGE ─────────────────────────────────────────────────────────────────
+function renderKnow() {
+  document.getElementById('knowList').innerHTML = KNOWLEDGE.map((k, i) => `
+    <div class="ki" onclick="showKnow(${i})">
+      <div class="kic">${k.icon}</div>
+      <div class="kii"><div class="kit">${k.title}</div><div class="kid">${k.desc}</div></div>
+      <div class="kia">›</div>
+    </div>`).join('');
+}
+function showKnow(i) {
+  const k = KNOWLEDGE[i];
+  document.getElementById('kdT').textContent = k.icon;
+  document.getElementById('kdN').textContent = k.title;
+  document.getElementById('kdC').textContent = k.content;
+  openScr('sKnowD');
+}
+
+// ── SEARCH ────────────────────────────────────────────────────────────────────
+document.getElementById('si').addEventListener('input', function() {
+  const q = this.value.trim().toLowerCase();
+  if (!q) { closeScr('sSrch'); return; }
+  if (q.length < 2) return;
+  openScr('sSrch');
+  document.getElementById('srchT').textContent = 'RESULTS FOR "' + this.value.toUpperCase() + '"';
+  const figs = FIGURES.filter(f => f.name.toLowerCase().includes(q) || f.acc.some(a => a.toLowerCase().includes(q)));
+  const accs = ACCESSORIES.filter(a => a.name.toLowerCase().includes(q) || a.figures.some(f => f.toLowerCase().includes(q)));
+  const vehs = VEHICLES.filter(v => v.name.toLowerCase().includes(q));
+  let html = '';
+  if (figs.length) {
+    html += `<div class="srg">Figures (${figs.length})</div>`;
+    html += figs.slice(0,12).map(f => `
+      <div class="li" onclick="showFig('${f.id}')">
+        <div class="lth">${f.emoji}</div>
+        <div class="lif"><div class="ln">${f.name}</div><div class="lm">${WAVE_META[f.wave].label} · ${f.cardback}</div></div>
+        <div class="la">›</div>
+      </div>`).join('');
+  }
+  if (accs.length) {
+    html += `<div class="srg">Accessories (${accs.length})</div>`;
+    html += accs.slice(0,12).map(a => `
+      <div class="li" onclick="showAcc('${a.id}')">
+        <div class="lth">${a.emoji}</div>
+        <div class="lif"><div class="ln">${a.name}</div><div class="lm">${a.cat}</div></div>
+        <div class="la">›</div>
+      </div>`).join('');
+  }
+  if (vehs.length) {
+    html += `<div class="srg">Vehicles (${vehs.length})</div>`;
+    html += vehs.slice(0,8).map(v => `
+      <div class="li" onclick="showVeh('${v.id}')">
+        <div class="lth">${v.emoji}</div>
+        <div class="lif"><div class="ln">${v.name}</div><div class="lm">${v.type} · ${v.wave}</div></div>
+        <div class="la">›</div>
+      </div>`).join('');
+  }
+  document.getElementById('srchR').innerHTML = html || '';
+  if (!html) {
+    const el = document.createElement('div');
+    el.className = 'se';
+    el.textContent = 'No results for "' + this.value + '"';
+    document.getElementById('srchR').appendChild(el);
+  }
+});
+document.getElementById('si').addEventListener('focus', function() {
+  if (this.value.length > 1) openScr('sSrch');
+});
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+(function init() {
+  renderHomeFigs('SW');
+  renderHomeAccs();
+  renderFigList('all');
+  renderAccList('all');
+  renderCbs('all');
+  renderVeh('all');
+  renderKnow();
+})();
+
+</script>
+</body>
+</html>
