@@ -1358,7 +1358,35 @@ document.getElementById('si').addEventListener('focus', function() {
   renderVeh('all');
   renderKnow();
 })();
+async function askAI(message) {
+  try {
+    const response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ message })
+    });
 
+    const data = await response.json();
+
+    console.log("AI reply:", data.reply);
+
+    alert(data.reply); // quick test output
+
+  } catch (err) {
+    console.error(err);
+    alert("Error talking to AI");
+  }
+}
+document.getElementById('si').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    const message = this.value.trim();
+    if (message) {
+      askAI(message);
+    }
+  }
+});
 </script>
 </body>
 </html>
