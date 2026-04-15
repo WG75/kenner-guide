@@ -1,3 +1,23 @@
+import fs from 'fs';
+import path from 'path';
+
+function loadFigureData() {
+  const basePath = path.join(process.cwd(), 'data/figures');
+  const indexPath = path.join(basePath, 'index.json');
+
+  if (!fs.existsSync(indexPath)) return [];
+
+  const index = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
+
+  return index.map(entry => {
+    const filePath = path.join(process.cwd(), entry.file);
+    if (!fs.existsSync(filePath)) return null;
+
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    return data;
+  }).filter(Boolean);
+}
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -10,53 +30,52 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Message is required' });
     }
 
-    const lukeReference = `
-Figure: Luke Skywalker
-Type: Original / Farmboy Luke
+    // 🔍 Load figures + detect match
+    const figures = loadFigureData();
+    const lowerMsg = message.toLowerCase();
 
-Short answer:
-Original Luke needs a yellow telescoping lightsaber.
+    let matchedFigure = null;
 
-Advanced answer:
-The exact correct saber depends on the Luke variant.
-Early Kader figures are more likely to come with lettered M1.
-Kader China and French Trilogo figures came with round tip M5.
-Glasslite came with M8.
-Early Unitoy used DT circled M1, then mostly M2, later M3.
-Brown-haired Unitoy Lukes are generally associated with M3.
-Taiwan figures are associated with M7.
-Smile figures used lettered M1 on 12-backs, then M5 later.
-Some Trilogo era Smile no-COO Lukes with light brown hair were packed with a Bespin handheld saber M3.
+    for (const fig of figures) {
+      if (fig.aliases.some(a => lowerMsg.includes(a))) {
+        matchedFigure = fig;
+        break;
+      }
+    }
 
-Variant families:
-1. Kader / Poch / Kader China / Meccano / Glasslite
-2. Unitoy / Poch / PBP
-3. Taiwan
-4. Smile
+    // 🧠 Build dynamic reference
+    let dynamicReference = '';
 
-Collector notes:
-Variants matter.
-Accessory match depends on COO family and production stage.
-Glasslite Luke has a unique resident saber.
-Some Poch and Trilogo examples complicate simple matching.
+    if (matchedFigure) {
+      dynamicReference = `
+Figure: ${matchedFigure.name}
+
+Default:
+${matchedFigure.defaultAnswer}
+
+Advanced:
+${Object.entries(matchedFigure.advanced)
+  .map(([k, v]) => `- ${k}: ${v}`)
+  .join('\n')}
 `;
+    }
 
-const systemPrompt = `
+    // 🤖 System prompt
+    const systemPrompt = `
 You are VF-CB, the Vintage Figures Chat Bot.
 
-You answer questions about vintage Kenner Star Wars figures.
-
 Rules:
-- Use the reference data provided below as your primary source
-- Do not guess or invent accessory matches
-- If unsure, say you are unsure
-- Keep default answers short and clear
-- Only give detailed variant breakdown if the user asks for more detail
+- Use the reference data if available
+- Keep answers short by default
+- Expand only if needed
+- Do not guess unknown info
+- Speak like a knowledgeable collector
 
-REFERENCE DATA:
-${lukeReference}
+REFERENCE:
+${dynamicReference}
 `;
 
+    // 🔗 Call Claude API
     const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: {
