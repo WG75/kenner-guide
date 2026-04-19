@@ -1,0 +1,16 @@
+{
+  "id": "compat_luke_st_m1_yellow",
+  "entity_type": "compatibility_rule",
+  "figure_id": "figure_luke_skywalker_farmboy",
+  "accessory_variant_id": "accvar_st_lightsaber_m1_yellow",
+  "compatibility_type": "valid",
+  "confidence": "high",
+  "era": "standard",
+  "notes": [
+    "Valid for early standard single-telescoping Luke figures."
+  ],
+  "source_ids": [
+    "ref_variantvillain_luke_skywalker",
+    "ref_variantvillain_single_telescoping_lightsaber"
+  ]
+}

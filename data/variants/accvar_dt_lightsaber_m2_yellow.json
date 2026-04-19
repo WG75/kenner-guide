@@ -1,0 +1,28 @@
+{
+  "id": "accvar_dt_lightsaber_m2_yellow",
+  "entity_type": "accessory_variant",
+  "accessory_id": "accessory_lightsaber",
+  "variant_name": "Double Telescoping Lightsaber M2 Yellow",
+  "variant_code": "M2",
+  "subtype": "double_telescoping",
+  "character_colour": "yellow",
+  "physical_type": "integrated",
+  "factory_ids": [
+    "factory_kader",
+    "factory_smile",
+    "factory_unitoy"
+  ],
+  "key_traits": [
+    "Two-stage extension",
+    "Lettered hilt",
+    "Very early Luke accessory"
+  ],
+  "quick_id": "Yellow DT lightsaber with lettered hilt.",
+  "notes": [
+    "Rare early production accessory used with Luke."
+  ],
+  "source_ids": [
+    "ref_variantvillain_double_telescoping_lightsaber"
+  ],
+  "status": "active"
+}

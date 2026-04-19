@@ -1,0 +1,16 @@
+{
+  "id": "compat_luke_dt_m2_yellow",
+  "entity_type": "compatibility_rule",
+  "figure_id": "figure_luke_skywalker_farmboy",
+  "accessory_variant_id": "accvar_dt_lightsaber_m2_yellow",
+  "compatibility_type": "valid",
+  "confidence": "high",
+  "era": "early",
+  "notes": [
+    "Valid for very early Luke examples."
+  ],
+  "source_ids": [
+    "ref_variantvillain_luke_skywalker",
+    "ref_variantvillain_double_telescoping_lightsaber"
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "factory_kader",
+    "name": "Kader",
+    "country": "Hong Kong"
+  },
+  {
+    "id": "factory_unitoy",
+    "name": "Unitoy",
+    "country": "Hong Kong"
+  },
+  {
+    "id": "factory_smile",
+    "name": "Smile",
+    "country": "Hong Kong"
+  },
+  {
+    "id": "factory_taiwan",
+    "name": "Taiwan",
+    "country": "Taiwan"
+  }
+]

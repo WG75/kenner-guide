@@ -1,0 +1,16 @@
+{
+  "id": "compat_luke_handheld_m3_yellow",
+  "entity_type": "compatibility_rule",
+  "figure_id": "figure_luke_skywalker_farmboy",
+  "accessory_variant_id": "accvar_handheld_lightsaber_m3_yellow",
+  "compatibility_type": "late_variant",
+  "confidence": "medium",
+  "era": "trilogo",
+  "notes": [
+    "Observed on some No COO Smile Lukes with light brown hair in the Trilogo era."
+  ],
+  "source_ids": [
+    "ref_variantvillain_luke_skywalker",
+    "ref_variantvillain_handheld_lightsaber"
+  ]
+}

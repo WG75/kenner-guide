@@ -1,0 +1,42 @@
+[
+  {
+    "id": "term_moc",
+    "term": "MOC",
+    "term_type": "collector_term",
+    "meaning": "Mint on card",
+    "notes": [
+      "Used for a figure sealed on its original card."
+    ],
+    "related_terms": [
+      "carded",
+      "sealed"
+    ]
+  },
+  {
+    "id": "term_dt",
+    "term": "DT",
+    "term_type": "collector_term",
+    "meaning": "Double-telescoping lightsaber",
+    "notes": [
+      "Early two-stage lightsaber type."
+    ],
+    "related_terms": [
+      "lightsaber",
+      "single telescoping"
+    ]
+  },
+  {
+    "id": "term_beater",
+    "term": "Beater",
+    "term_type": "collector_term",
+    "meaning": "A heavily worn loose figure with obvious damage or paint loss.",
+    "notes": [
+      "Usually low value unless the figure is rare."
+    ],
+    "related_terms": [
+      "loose",
+      "paint rubs",
+      "played with"
+    ]
+  }
+]

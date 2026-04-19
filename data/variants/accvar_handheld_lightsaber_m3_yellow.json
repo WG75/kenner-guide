@@ -1,0 +1,26 @@
+{
+  "id": "accvar_handheld_lightsaber_m3_yellow",
+  "entity_type": "accessory_variant",
+  "accessory_id": "accessory_lightsaber",
+  "variant_name": "Handheld Lightsaber M3 Yellow",
+  "variant_code": "M3",
+  "subtype": "handheld",
+  "character_colour": "yellow",
+  "physical_type": "loose",
+  "factory_ids": [
+    "factory_smile"
+  ],
+  "key_traits": [
+    "Handheld lightsaber",
+    "Yellow",
+    "Late Trilogo-era Luke pairing"
+  ],
+  "quick_id": "Yellow handheld lightsaber associated with some No COO Smile Lukes.",
+  "notes": [
+    "Observed on some Trilogo-era No COO Smile Luke figures with light brown hair."
+  ],
+  "source_ids": [
+    "ref_variantvillain_handheld_lightsaber"
+  ],
+  "status": "active"
+}

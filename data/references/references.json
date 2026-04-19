@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ref_variantvillain_luke_skywalker",
+    "entity_type": "reference",
+    "source_type": "website",
+    "title": "Variant Villain Luke Skywalker",
+    "publisher": "Variant Villain",
+    "url": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+    "authority_rank": "primary"
+  },
+  {
+    "id": "ref_variantvillain_double_telescoping_lightsaber",
+    "entity_type": "reference",
+    "source_type": "website",
+    "title": "Variant Villain Double-Telescoping Lightsaber",
+    "publisher": "Variant Villain",
+    "url": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
+    "authority_rank": "primary"
+  },
+  {
+    "id": "ref_variantvillain_single_telescoping_lightsaber",
+    "entity_type": "reference",
+    "source_type": "website",
+    "title": "Variant Villain Telescoping Lightsaber",
+    "publisher": "Variant Villain",
+    "url": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
+    "authority_rank": "primary"
+  },
+  {
+    "id": "ref_variantvillain_handheld_lightsaber",
+    "entity_type": "reference",
+    "source_type": "website",
+    "title": "Variant Villain Handheld Lightsaber",
+    "publisher": "Variant Villain",
+    "url": "https://www.variantvillain.com/accessory-guide/handheld-lightsaber/",
+    "authority_rank": "primary"
+  }
+]

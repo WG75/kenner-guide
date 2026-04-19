@@ -1,0 +1,23 @@
+{
+  "id": "accessory_lightsaber",
+  "entity_type": "accessory",
+  "display_name": "Lightsaber",
+  "accessory_class": "lightsaber",
+  "description_short": "Lightsaber accessory class covering DT, ST and handheld saber types.",
+  "subtypes": [
+    "double_telescoping",
+    "single_telescoping",
+    "handheld"
+  ],
+  "material_type": "plastic",
+  "notes_general": [
+    "This is a top-level accessory class, not one physical item.",
+    "Correct matching depends on figure, factory, era and variant."
+  ],
+  "source_ids": [
+    "ref_variantvillain_double_telescoping_lightsaber",
+    "ref_variantvillain_single_telescoping_lightsaber",
+    "ref_variantvillain_handheld_lightsaber"
+  ],
+  "status": "active"
+}

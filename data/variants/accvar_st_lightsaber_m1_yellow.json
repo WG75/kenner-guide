@@ -1,0 +1,29 @@
+{
+  "id": "accvar_st_lightsaber_m1_yellow",
+  "entity_type": "accessory_variant",
+  "accessory_id": "accessory_lightsaber",
+  "variant_name": "Single Telescoping Lightsaber M1 Yellow",
+  "variant_code": "M1",
+  "subtype": "single_telescoping",
+  "character_colour": "yellow",
+  "physical_type": "integrated",
+  "factory_ids": [
+    "factory_kader",
+    "factory_unitoy",
+    "factory_smile",
+    "factory_taiwan"
+  ],
+  "key_traits": [
+    "Flat transition",
+    "Lettered hilt",
+    "Early single-telescoping mould"
+  ],
+  "quick_id": "Yellow single-telescoping saber with flat transition and lettered hilt.",
+  "notes": [
+    "Used on early Luke examples across multiple factories."
+  ],
+  "source_ids": [
+    "ref_variantvillain_single_telescoping_lightsaber"
+  ],
+  "status": "active"
+}
