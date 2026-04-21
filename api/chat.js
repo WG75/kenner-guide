@@ -44,8 +44,12 @@ export default async function handler(req, res) {
     }
 
     const reply =
-      data?.content?.[0]?.text ||
-      "No response from AI";
+      data &&
+      data.content &&
+      data.content[0] &&
+      data.content[0].text
+        ? data.content[0].text
+        : "No response from AI";
 
     return res.status(200).json({ reply });
 
