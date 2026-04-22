@@ -1,0 +1,51 @@
+Topic: Accessory Production
+
+Category:
+General Reference / Production Knowledge
+
+Overview:
+Vintage Star Wars weapons and accessories were produced using injection moulding. Understanding how they were made helps explain many of the marks and variations collectors see on original accessories.
+
+Core Production Terms:
+
+Cavity Mold:
+The metal mould used to form the accessory. A mould can contain one or more cavities.
+
+Sprue:
+The plastic frame that connects multiple pieces during production before they are cut apart.
+
+Runner:
+The channel that carries plastic from the sprue into the item cavities.
+
+Gate:
+The point where plastic enters the accessory cavity. Once removed from the sprue, this often leaves a visible gate scar.
+
+Gate Scar:
+The mark left where the accessory was cut from the sprue.
+
+Parting Line:
+A seam line created where the mould halves meet.
+
+Ejector Pin Mark (EPM):
+Marks left by the ejector pins that push the finished accessory out of the mould. These should not be confused with gate scars.
+
+Why It Matters:
+Collectors use these production marks to identify:
+- mould families
+- factory differences
+- authenticity
+- possible reproduction pieces
+
+Important Collector Note:
+Vintage accessories were often produced on sprue trees rather than as single loose items. Different variants can come from the same cavity family but still show noticeable differences in gate scar location, ejector pin marks, or mould finish.
+
+Practical Use:
+When identifying an accessory, collectors should check:
+- gate scar location
+- parting line position
+- ejector pin marks
+- mould detail
+- overall plastic colour and finish
+
+Collector Summary:
+Production marks are one of the most important tools for identifying genuine vintage accessories and separating true mould variants from damage, wear, or reproductions.

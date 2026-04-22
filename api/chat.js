@@ -5,7 +5,6 @@ function slugify(text) {
   return String(text || "")
     .toLowerCase()
     .replace(/\.txt$/i, "")
-    .replace(/\.json$/i, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
@@ -28,18 +27,11 @@ function getSearchTerms(message) {
     jawa: ["jawa"],
     jawas: ["jawa"],
     luke: ["luke-skywalker"],
-    leia: ["princess-leia-organa", "leia"],
+    leia: ["princess-leia-organa"],
     chewy: ["chewbacca"],
-    chewie: ["chewbacca"],
     vader: ["darth-vader"],
-    obiwan: ["obi-wan-kenobi", "ben-obi-wan-kenobi", "ben-kenobi"],
-    earlybird: ["early-bird", "early-bird-certificate-package"],
-    "early-bird": ["early-bird", "early-bird-certificate-package"],
-    coo: ["coo", "country-of-origin", "factory-codes", "vendor-codes"],
-    factory: ["factory-codes", "vendor-codes", "coo"],
-    vendor: ["vendor-codes", "factory-codes"],
-    accessory: ["accessory-production"],
-    accessories: ["accessory-production"]
+    obiwan: ["obi-wan-kenobi"],
+    earlybird: ["early-bird", "early-bird-certificate-package"]
   };
 
   const expanded = [...words];
@@ -70,15 +62,7 @@ async function safeReadFile(filePath) {
 }
 
 async function collectFiles(baseDir) {
-  const folders = [
-    "figures",
-    "accessories",
-    "references",
-    "terms",
-    "variants",
-    "compatibility"
-  ];
-
+  const folders = ["figures", "accessories", "references"];
   const files = [];
 
   for (const folder of folders) {
@@ -88,14 +72,12 @@ async function collectFiles(baseDir) {
     for (const entry of entries) {
       if (!entry.isFile()) continue;
 
-      const ext = path.extname(entry.name).toLowerCase();
-      if (ext !== ".txt" && ext !== ".json") continue;
+      if (!entry.name.endsWith(".txt")) continue;
 
-      const stem = entry.name.replace(/\.(txt|json)$/i, "");
       files.push({
         folder,
         name: entry.name,
-        slug: slugify(stem),
+        slug: slugify(entry.name.replace(".txt", "")),
         fullPath: path.join(folderPath, entry.name)
       });
     }
@@ -104,44 +86,28 @@ async function collectFiles(baseDir) {
   return files;
 }
 
-function extractEntityBase(file) {
-  if (file.folder === "figures") {
-    return file.slug.replace("-reference", "");
-  }
-  return file.slug.split("-")[0];
-}
-
 function scoreFile(file, message, searchTerms) {
-  const lower = normaliseMessage(message);
   let score = 0;
+  const lower = normaliseMessage(message);
 
   for (const term of searchTerms) {
-    if (file.slug === term) score += 40;
     if (file.slug.includes(term)) score += 20;
-    if (file.slug.startsWith(term + "-")) score += 15;
-  }
-
-  if ((lower.includes("what comes with") || lower.includes("comes with")) && file.folder === "accessories") {
-    score += 25;
-  }
-
-  if (lower.includes("early bird") && file.slug.includes("early-bird")) {
-    score += 60;
-  }
-
-  if ((lower.includes("coo") || lower.includes("country of origin")) && file.slug.includes("coo")) {
-    score += 60;
-  }
-
-  if ((lower.includes("factory") || lower.includes("vendor code")) && (file.slug.includes("factory-codes") || file.slug.includes("vendor-codes"))) {
-    score += 60;
-  }
-
-  if ((lower.includes("accessory production") || lower.includes("gate scar") || lower.includes("ejector pin")) && file.slug.includes("accessory-production")) {
-    score += 60;
   }
 
   if (file.folder === "figures") score += 5;
+
+  // Smart boosts for reference knowledge
+  if (lower.includes("what comes with") || lower.includes("identify")) {
+    if (file.folder === "references") score += 10;
+  }
+
+  if (lower.includes("variant") || lower.includes("difference")) {
+    if (file.folder === "references") score += 20;
+  }
+
+  if (lower.includes("early bird")) {
+    if (file.slug.includes("early-bird")) score += 50;
+  }
 
   return score;
 }
@@ -154,7 +120,6 @@ async function buildContext(message) {
   const ranked = files
     .map(file => ({
       ...file,
-      entityBase: extractEntityBase(file),
       score: scoreFile(file, message, searchTerms)
     }))
     .filter(f => f.score > 0)
@@ -165,8 +130,9 @@ async function buildContext(message) {
 
   for (const file of ranked) {
     const content = await safeReadFile(file.fullPath);
-    if (!content.trim()) continue;
-    context += `\nFILE: ${file.folder}/${file.name}\n${content}\n`;
+    if (content.trim()) {
+      context += `\n${content}\n`;
+    }
   }
 
   return context;
@@ -174,15 +140,7 @@ async function buildContext(message) {
 
 export default async function handler(req, res) {
   try {
-    if (req.method !== "POST") {
-      return res.status(405).json({ error: "Method not allowed" });
-    }
-
-    const { message } = req.body || {};
-
-    if (!message) {
-      return res.status(400).json({ error: "No message provided" });
-    }
+    const { message } = req.body;
 
     const context = await buildContext(message);
 
@@ -193,59 +151,56 @@ Default assumption:
 The user means the original vintage Star Wars toy line from 1977 to 1985 unless they clearly say otherwise.
 
 Important wording rule:
-- Do NOT default to saying "Kenner" in every answer
-- Prefer "the vintage Star Wars line" or "the original vintage line" unless a specific company or country matters
-- Only mention specific brands or companies such as Kenner, Palitoy, PBP, Meccano, Lili Ledy, Glasslite, Toltoys, Top Toys or others when the supplied information supports that detail or the question specifically requires it
+- Do NOT default to saying "Kenner"
+- Only mention specific companies (Kenner, Palitoy, Meccano, PBP, Lili Ledy, etc.) when relevant
 
 Your job:
 Answer using the supplied information first.
 
-Your style:
+Answer style:
 - Speak like an experienced collector
-- Be clear, practical, and confident
-- Avoid filler or generic explanations
+- Be clear, practical, and direct
+- Avoid filler
 
-Answer rules:
+Core behaviour:
 
-1. Start with a clear direct answer
+1. Start with a direct answer
 
-2. If variants exist:
-   - Briefly mention that deeper variation exists
-   - Highlight the most important distinguishing factor
+2. If the topic involves accessories or identification:
+   - Briefly guide the user on how collectors identify it
+   - Reference key factors like:
+     • body covering
+     • COO
+     • mould type
+     • production differences
 
-3. If the question is simple:
-   - Keep it simple
-   - Do not overload the reply
+3. If variants exist:
+   - Mention them naturally
+   - Highlight what actually matters
 
-4. If identification, rarity, regional branding, or value is implied:
-   - Add relevant collector detail
+4. Never invent information
 
-5. Never invent information
+5. Never claim something is "most common" unless clearly supported
 
-6. Never say a specific mould, factory, accessory type, or version is "the most common" unless that is clearly supported by the supplied information
-
-7. Never mention:
+6. Never mention:
    - files
-   - reference files
    - context
+   - system
    - database
-   - prompts
-   - or how the answer was generated
 
 Optional personality:
-You may add one short polite droid-like opening line occasionally, but do not name or roleplay as C-3PO.
+You may add one short polite droid-like opening line occasionally.
+Do not roleplay as a named character.
 
-Important behaviour:
-- Use real collector logic
-- If the answer depends on country, factory, regional branding, or COO, say that clearly
-- If the user is likely trying to identify something, guide them naturally toward the next useful question
+Goal:
+Sound like a knowledgeable collector helping another collector identify or understand something.
 `;
 
     const userPrompt = `
 Question:
 ${message}
 
-Supporting information:
+Information:
 ${context}
 `;
 
@@ -266,14 +221,6 @@ ${context}
 
     const data = await response.json();
 
-    if (!response.ok) {
-      console.error("Anthropic error:", data);
-      return res.status(500).json({
-        error: "API error",
-        details: data
-      });
-    }
-
     return res.status(200).json({
       reply: data?.content?.[0]?.text || "No response"
     });
@@ -281,8 +228,7 @@ ${context}
   } catch (err) {
     console.error(err);
     return res.status(500).json({
-      error: "Server error",
-      details: err.message
+      error: "Server error"
     });
   }
 }
