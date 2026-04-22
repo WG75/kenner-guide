@@ -4,58 +4,57 @@ import path from "path";
 function slugify(text) {
   return String(text || "")
     .toLowerCase()
+    .replace(/\.txt$/i, "")
+    .replace(/\.json$/i, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
 
-function unique(array) {
-  return [...new Set(array)];
+function unique(arr) {
+  return [...new Set(arr)];
 }
 
-function getKeywords(message) {
-  const cleaned = String(message || "").toLowerCase();
+function normaliseMessage(text) {
+  return String(text || "").toLowerCase();
+}
 
-  const synonymMap = {
+function getSearchTerms(message) {
+  const lower = normaliseMessage(message);
+
+  const rawWords = lower.match(/[a-z0-9'-]+/g) || [];
+  const words = rawWords.map(slugify).filter(Boolean);
+
+  const aliases = {
     jawa: ["jawa"],
     jawas: ["jawa"],
-    chewie: ["chewbacca"],
-    chewy: ["chewbacca"],
-    obiwan: ["ben-obi-wan-kenobi", "ben-kenobi", "obi-wan-kenobi"],
+    luke: ["luke-skywalker"],
     leia: ["princess-leia-organa", "leia"],
-    luke: ["luke-skywalker", "farmboy-luke", "luke"],
-    vader: ["darth-vader", "vader"],
+    chewy: ["chewbacca"],
+    chewie: ["chewbacca"],
+    obiwan: ["ben-obi-wan-kenobi", "obi-wan-kenobi", "ben-kenobi"],
+    vader: ["darth-vader"],
     tusken: ["sand-people", "tusken-raider"],
     sandpeople: ["sand-people", "tusken-raider"],
+    sandcrawler: ["sandcrawler", "jawa"],
     blaster: ["blaster"],
-    cape: ["cape", "cloak"],
     cloak: ["cloak", "cape"],
-    lightsaber: ["lightsaber", "telescoping-lightsaber", "double-telescoping-lightsaber"],
-    coo: ["coo", "factory", "factories"],
-    factory: ["factory", "factories", "coo"],
-    variant: ["variant", "variants"],
+    cape: ["cape", "cloak"],
     moc: ["moc", "carded"],
     carded: ["carded", "moc"],
+    coo: ["coo", "factory", "factories"],
+    factory: ["coo", "factory", "factories"],
+    variant: ["variant", "variants"]
   };
 
-  const rawWords = cleaned.match(/[a-z0-9'-]+/g) || [];
-  const filtered = rawWords.filter((w) => w.length > 2);
+  const expanded = [...words];
 
-  let expanded = [...filtered];
-
-  for (const word of filtered) {
-    if (synonymMap[word]) expanded.push(...synonymMap[word]);
+  for (const word of words) {
+    if (aliases[word]) {
+      expanded.push(...aliases[word]);
+    }
   }
 
   return unique(expanded.map(slugify)).filter(Boolean);
-}
-
-async function fileExists(filePath) {
-  try {
-    await fs.access(filePath);
-    return true;
-  } catch {
-    return false;
-  }
 }
 
 async function safeReadDir(dirPath) {
@@ -74,19 +73,19 @@ async function safeReadFile(filePath) {
   }
 }
 
-async function collectCandidateFiles(baseDir) {
-  const subfolders = [
+async function collectFiles(baseDir) {
+  const folders = [
     "figures",
     "accessories",
     "terms",
     "variants",
     "references",
-    "compatibility",
+    "compatibility"
   ];
 
   const files = [];
 
-  for (const folder of subfolders) {
+  for (const folder of folders) {
     const folderPath = path.join(baseDir, folder);
     const entries = await safeReadDir(folderPath);
 
@@ -96,122 +95,205 @@ async function collectCandidateFiles(baseDir) {
       const ext = path.extname(entry.name).toLowerCase();
       if (ext !== ".txt" && ext !== ".json") continue;
 
+      const stem = entry.name.replace(/\.(txt|json)$/i, "");
       files.push({
         folder,
         name: entry.name,
-        fullPath: path.join(folderPath, entry.name),
-        slug: slugify(entry.name.replace(/\.(txt|json)$/i, "")),
+        stem,
+        slug: slugify(stem),
+        fullPath: path.join(folderPath, entry.name)
       });
     }
-  }
-
-  const rootFiles = await safeReadDir(baseDir);
-  for (const entry of rootFiles) {
-    if (!entry.isFile()) continue;
-
-    const ext = path.extname(entry.name).toLowerCase();
-    if (ext !== ".txt" && ext !== ".json") continue;
-
-    files.push({
-      folder: "root",
-      name: entry.name,
-      fullPath: path.join(baseDir, entry.name),
-      slug: slugify(entry.name.replace(/\.(txt|json)$/i, "")),
-    });
   }
 
   return files;
 }
 
-function scoreFile(file, keywords, fullMessage) {
+function extractEntityBase(file) {
+  const slug = file.slug;
+
+  if (file.folder === "figures") {
+    if (slug.endsWith("-reference")) {
+      return slug.replace(/-reference$/, "");
+    }
+    return slug;
+  }
+
+  const parts = slug.split("-");
+  if (parts.length >= 2) {
+    return parts[0];
+  }
+
+  return slug;
+}
+
+function scoreFile(file, message, searchTerms, matchedEntities) {
+  const lower = normaliseMessage(message);
+  const slug = file.slug;
+  const entityBase = extractEntityBase(file);
+
   let score = 0;
-  const lowerMessage = fullMessage.toLowerCase();
 
-  for (const keyword of keywords) {
-    if (file.slug === keyword) score += 30;
-    if (file.slug.includes(keyword)) score += 12;
-    if (keyword.includes(file.slug)) score += 8;
+  for (const term of searchTerms) {
+    if (slug === term) score += 40;
+    if (slug.startsWith(term + "-")) score += 30;
+    if (slug.includes(term)) score += 12;
+    if (entityBase === term) score += 35;
   }
 
-  if (file.folder === "figures") score += 2;
-  if (file.folder === "accessories") score += 1;
-
-  if (lowerMessage.includes("what comes with") || lowerMessage.includes("comes with")) {
-    if (file.folder === "figures") score += 5;
-    if (file.folder === "accessories") score += 5;
+  for (const entity of matchedEntities) {
+    if (entityBase === entity) score += 50;
+    if (slug.startsWith(entity + "-")) score += 35;
+    if (slug === `${entity}-reference`) score += 70;
+    if (slug === entity) score += 60;
   }
 
-  if (lowerMessage.includes("variant")) {
-    if (file.folder === "variants") score += 6;
+  if (lower.includes("what comes with") || lower.includes("comes with")) {
+    if (file.folder === "figures") score += 15;
+    if (file.folder === "accessories") score += 20;
   }
 
-  if (lowerMessage.includes("coo") || lowerMessage.includes("factory")) {
-    if (file.folder === "references" || file.folder === "root") score += 4;
+  if (lower.includes("variant")) {
+    if (file.folder === "variants") score += 20;
+    if (file.folder === "accessories" || file.folder === "figures") score += 8;
   }
+
+  if (lower.includes("coo") || lower.includes("factory")) {
+    if (file.folder === "references" || file.folder === "compatibility") score += 20;
+  }
+
+  if (file.folder === "terms") score += 2;
 
   return score;
 }
 
-async function buildReferenceContext(message) {
-  const baseDir = path.join(process.cwd(), "data");
-  const hasData = await fileExists(baseDir);
+function detectMatchedEntities(files, searchTerms, message) {
+  const lower = normaliseMessage(message);
+  const figureBases = unique(
+    files
+      .filter((f) => f.folder === "figures")
+      .map((f) => extractEntityBase(f))
+      .filter(Boolean)
+  );
 
-  if (!hasData) {
-    return {
-      context: "",
-      matchedFiles: [],
-      note: "No local data folder found.",
-    };
+  const matched = [];
+
+  for (const base of figureBases) {
+    if (searchTerms.includes(base)) {
+      matched.push(base);
+      continue;
+    }
+
+    const spaced = base.replace(/-/g, " ");
+    if (lower.includes(spaced)) {
+      matched.push(base);
+      continue;
+    }
+
+    const split = base.split("-");
+    if (split.some((part) => searchTerms.includes(part))) {
+      matched.push(base);
+    }
   }
 
-  const keywords = getKeywords(message);
-  const allFiles = await collectCandidateFiles(baseDir);
+  return unique(matched);
+}
 
-  const ranked = allFiles
+async function buildReferenceContext(message) {
+  const baseDir = path.join(process.cwd(), "data");
+  const files = await collectFiles(baseDir);
+  const searchTerms = getSearchTerms(message);
+  const matchedEntities = detectMatchedEntities(files, searchTerms, message);
+
+  const ranked = files
     .map((file) => ({
       ...file,
-      score: scoreFile(file, keywords, message),
+      entityBase: extractEntityBase(file),
+      score: scoreFile(file, message, searchTerms, matchedEntities)
     }))
     .filter((file) => file.score > 0)
     .sort((a, b) => b.score - a.score);
 
-  const alwaysInclude = allFiles.filter(
+  const selected = [];
+  const selectedPaths = new Set();
+
+  for (const entity of matchedEntities) {
+    const figurePriority = files.find(
+      (f) =>
+        f.folder === "figures" &&
+        (f.slug === `${entity}-reference` || f.slug === entity)
+    );
+
+    if (figurePriority && !selectedPaths.has(figurePriority.fullPath)) {
+      selected.push(figurePriority);
+      selectedPaths.add(figurePriority.fullPath);
+    }
+
+    const related = files
+      .filter((f) => extractEntityBase(f) === entity)
+      .sort((a, b) => {
+        const folderOrder = {
+          figures: 1,
+          accessories: 2,
+          variants: 3,
+          references: 4,
+          compatibility: 5,
+          terms: 6
+        };
+        return (folderOrder[a.folder] || 99) - (folderOrder[b.folder] || 99);
+      });
+
+    for (const file of related) {
+      if (!selectedPaths.has(file.fullPath)) {
+        selected.push(file);
+        selectedPaths.add(file.fullPath);
+      }
+    }
+  }
+
+  for (const file of ranked) {
+    if (selected.length >= 10) break;
+    if (!selectedPaths.has(file.fullPath)) {
+      selected.push(file);
+      selectedPaths.add(file.fullPath);
+    }
+  }
+
+  const glossaryFiles = files.filter(
     (f) =>
-      f.folder === "terms" ||
-      f.slug === "factories" ||
-      f.slug === "collector-terms" ||
-      f.slug === "collector-glossary"
+      f.folder === "terms" &&
+      (f.slug.includes("collector-glossary") || f.slug.includes("collector-terms"))
   );
 
-  const selected = unique(
-    [...ranked.slice(0, 8), ...alwaysInclude.slice(0, 3)].map((f) => f.fullPath)
-  )
-    .slice(0, 10);
+  for (const file of glossaryFiles) {
+    if (selected.length >= 12) break;
+    if (!selectedPaths.has(file.fullPath)) {
+      selected.push(file);
+      selectedPaths.add(file.fullPath);
+    }
+  }
 
   const matchedFiles = [];
-  const parts = [];
+  const contextBlocks = [];
   let totalChars = 0;
-  const maxChars = 18000;
+  const maxChars = 22000;
 
-  for (const filePath of selected) {
-    const file = allFiles.find((f) => f.fullPath === filePath);
-    if (!file) continue;
-
+  for (const file of selected) {
     const content = await safeReadFile(file.fullPath);
     if (!content.trim()) continue;
 
     const block = `FILE: ${file.folder}/${file.name}\n${content.trim()}\n`;
     if (totalChars + block.length > maxChars) break;
 
-    parts.push(block);
+    contextBlocks.push(block);
     matchedFiles.push(`${file.folder}/${file.name}`);
     totalChars += block.length;
   }
 
   return {
-    context: parts.join("\n---\n\n"),
+    matchedEntities,
     matchedFiles,
-    note: matchedFiles.length ? "" : "No strongly matching local files found.",
+    context: contextBlocks.join("\n---\n\n")
   };
 }
 
@@ -228,51 +310,51 @@ export default async function handler(req, res) {
     }
 
     const MODEL = "claude-haiku-4-5";
-    const { context, matchedFiles, note } = await buildReferenceContext(message);
+    const { matchedEntities, matchedFiles, context } = await buildReferenceContext(message);
 
     const systemPrompt = `
 You are VF-CB, a Vintage Star Wars Kenner expert.
 
 Default assumption:
-The user is asking about the original Kenner toy line from 1977 to 1985 unless they clearly say otherwise.
+The user means the original Kenner toy line from 1977 to 1985 unless they clearly ask about something else.
 
 Your job:
 Answer using the supplied local reference files first.
-Do not rely on generic Star Wars lore when the reference files provide the answer.
-Do not invent accessories, variants, dates, packaging details, COO details, or vehicle contents.
+Do not fall back to generic Star Wars lore if the local files contain the answer.
+Do not invent accessories, variants, dates, factories, COO details, or packaging information.
 
 Rules:
-- Prioritise the local reference context over your own memory
-- If the local context is silent or incomplete, say so briefly instead of guessing
-- Use concise, collector-friendly language
+- Prioritise local reference context over your own memory
+- Be concise, specific, and collector-friendly
 - Use British English
+- If local files are incomplete, say so briefly instead of pretending certainty
 - For "what comes with" questions, state the standard accessory first, then important variant differences
-- Keep answers focused on vintage Kenner unless the user clearly asks about something else
+- Keep the answer focused on vintage Kenner unless the user clearly asks otherwise
 
 Important Jawa rules:
 - Standard accessory: Jawa Blaster
-- Early rare releases: vinyl cape
-- Later, more common releases: cloth cloak
+- Early rare release: vinyl cape
+- Later more common release: cloth cloak
 - Do not describe the vinyl cape as the standard accessory
-- Describe the eyes as yellow, not glowing
+- The Jawa's eyes should be described as yellow, not glowing
 
-When useful, end with one short follow-up question about identifying a specific loose figure, MOC, COO, or variant.
+When useful, end with one short follow-up question about identifying a specific loose figure, MOC, COO, factory item, or variant.
 `;
 
     const userPrompt = `
 User question:
 ${message}
 
-Local reference context:
-${context || "No local reference context was matched."}
+Matched entity bases:
+${matchedEntities.length ? matchedEntities.join(", ") : "None"}
 
 Matched files:
 ${matchedFiles.length ? matchedFiles.join(", ") : "None"}
 
-Additional note:
-${note || "None"}
+Local reference context:
+${context || "No local reference context matched."}
 
-Answer the user using the local reference context first.
+Answer the question using the local reference context first.
 `;
 
     const response = await fetch("https://api.anthropic.com/v1/messages", {
@@ -307,9 +389,9 @@ Answer the user using the local reference context first.
 
     return res.status(200).json({
       reply: data?.content?.[0]?.text || "No response from AI",
+      matchedEntities,
       matchedFiles
     });
-
   } catch (err) {
     console.error("Server error:", err);
     return res.status(500).json({
