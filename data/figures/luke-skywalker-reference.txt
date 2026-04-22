@@ -1,47 +1,34 @@
-Figure name as it appears on cardback: Luke Skywalker
+Figure Name: Luke Skywalker
 
-Luke Skywalker is a fictional character in the Star Wars franchise. He was introduced in the original Star Wars film (1977) later renamed A New Hope and its novelization (1976). He is the main protagonist of the original trilogy, and also appears in the sequel trilogy. Raised as a moisture farmer on the desert planet Tatooine, Luke joins the Rebel Alliance and becomes a pivotal figure in its struggle against the Galactic Empire. He trains as a Jedi Knight under the Jedi Masters Obi-Wan Kenobi and Yoda, and eventually confronts his father, the Sith Lord Darth Vader. 
+Category:
+Action Figure
 
-Mark Hamill portrays Luke in all the films of the original and sequel trilogies. 
+Line:
+Star Wars (Kenner, 1978 to 1984)
 
-The vintage action figure is often referred to as: Luke, Farmboy, OG, O.G., Original, First 12, 12 back Luke.
+Overview:
+Luke Skywalker is one of the core figures in the original Kenner Star Wars line and remained in circulation across multiple cardback eras. He is one of the most important figures in the line due to his early lightsaber variants, especially the rare Double Telescoping (DT) version.
 
-Available from 1978 until 1984. Spanning the Star Wars, Empire Strikes Back, Return of the Jedi cardabcks.
+Core Collector Note:
+Luke Skywalker was one of the first four figures released by Kenner through the Early Bird Certificate Package in early 1978.
 
-Part of the very first Star Wars Kenner figures (the Early Bird Certificate package) which were available to be mailed in early 1978, starting around February or March. 
-While the certificate itself was sold during the holiday season in 1977 (often called the Early Bird Kit), the actual figures: Luke Skywalker, Princess Leia, Chewbacca, and R2-D2 did not ship to customers until the following spring of 1978.
-Also part of the Wave A original 12 Back cardbacks. 
+The first four Early Bird figures were:
+- Luke Skywalker
+- Princess Leia Organa
+- Chewbacca
+- R2-D2
 
-Accessories
+Early Bird Significance:
+The Early Bird Luke is especially important because it came with the original arm-fed lightsaber featuring a double-telescoping tip. Kenner quickly removed the extra extending tip because it was too fragile and easily broken.
 
-The exact correct saber depends on the Luke variant.
-Early Kader figures are more likely to come with lettered M1.
-Kader China and French Trilogo figures came with round tip M5.
-Glasslite came with M8.
-Early Unitoy used Double Telescoping (DT) circled M1, then mostly M2, later M3. (part of the Early Bird set)
-Brown-haired Unitoy Lukes are generally associated with M3.
-Taiwan figures are associated with M7.
-Smile figures used lettered M1 on 12-backs, then M5 later.
-Some Trilogo era Smile no-COO Lukes with light brown hair were packed with a 'Bespin handheld' saber M3.
+Accessory Guidance:
+Luke Skywalker is primarily associated with early lightsaber variants:
+- Double Telescoping lightsaber (very early and rare)
+- Single Telescoping / standard early arm-fed lightsaber
+- Later mould and factory differences depending on COO and production period
 
-Figure variant families:
-M1. Kader / Poch / Kader China / Meccano / Glasslite
-M2. Unitoy / Poch / PBP
-M3. Taiwan
-M4. Smile
+Collector Importance:
+The Early Bird Luke is one of the standout early variants in the vintage Kenner line and is one of the most desirable loose figure and accessory combinations for collectors.
 
-Collector notes:
-
-Variants matter.
-Accessory match depends on COO family and production stage.
-Glasslite Luke has a unique resident saber.
-Some Poch and Trilogo examples complicate simple matching.
-
-
-Sources:
-
-https://www.variantvillain.com/characters/sw/luke-skywalker/
-https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/
-https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/
-https://www.imperialgunnery.com/lightsabers.htm
-
+Related reference files:
+- early-bird-certificate-package.txt

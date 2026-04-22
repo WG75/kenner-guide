@@ -13,7 +13,7 @@ Consumers bought the Early Bird Certificate Package in late 1977. It did not con
 
 The first four Early Bird figures were:
 - Luke Skywalker
-- Princess Leia
+- Princess Leia Organa
 - Chewbacca
 - R2-D2
 
@@ -31,3 +31,9 @@ The figures were mailed out in early 1978 in a plain white package rather than s
 
 Collector summary:
 The Early Bird Certificate Package was a brilliant promotional solution born out of necessity and is one of the most important early pieces in the vintage Star Wars toy line.
+
+Related figure files:
+- luke-skywalker-reference.txt
+- princess-leia-organa-reference.txt
+- chewbacca-reference.txt
+- r2-d2-reference.txt
