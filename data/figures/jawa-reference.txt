@@ -10,7 +10,7 @@ First Release:
 
 Overview:
 
-The Jawa is one of the earliest figures in the vintage Star Wars line and is best known for its distinctive body covering and early production variant using a vinyl cape.
+The Jawa is one of the earliest figures in the vintage Star Wars line and is best known for its distinctive body covering and early production vinyl cape variant.
 
 It exists in multiple variants across different factories, COO markings, and production runs.
 
@@ -18,32 +18,52 @@ It exists in multiple variants across different factories, COO markings, and pro
 
 Accessories:
 
-A Jawa is typically associated with two components:
+A Jawa is typically associated with two main accessories:
 
 1. Jawa Blaster
-2. Body covering (vinyl cape or cloth cloak)
+2. Body covering:
+   - Vinyl Cape
+   - Cloth Cloak
 
 ---
 
-Body Covering (Key Identifier):
+Body Covering:
 
-The most important variation is the body covering.
+The body covering is the most obvious first visual difference.
 
 Vinyl Cape:
 - Very early production version
-- Brown vinyl (plastic)
-- No stitching
-- Short production run
+- Brown vinyl body covering
 - Rare and highly desirable
+- Short production run
 
 Cloth Cloak:
-- Replaced the vinyl cape very early in production
+- Standard production version
 - Fabric garment with hood and stitching
-- Seen on the vast majority of figures
-- Exists in multiple fabric and construction variants
+- Exists in multiple construction variants
 
 Important Collector Note:
-The switch from vinyl to cloth happened very early. Because of this, cloth cloaks are also found on early figures, while vinyl capes remain rare due to the short production window.
+The change from vinyl cape to cloth cloak happened very early, which is why vinyl cape Jawas are rare and valuable, while cloth cloak Jawas make up the vast majority of surviving examples.
+
+---
+
+Advanced Identification:
+
+For serious collectors trying to match a Jawa correctly, the main starting point is not just vinyl vs cloth.
+
+The key factors are:
+
+1. COO (Country of Origin) on the figure
+2. Cloak or cape type
+3. Hood size and shape on cloth cloaks
+4. Stitching and construction details
+5. Blaster mould traits and markings
+
+These details help determine:
+- correct matching
+- likely production origin
+- whether parts are original or reproduction
+- whether a figure is matched or mismatched
 
 ---
 
@@ -53,68 +73,63 @@ The standard weapon accessory is the Jawa blaster.
 
 Known characteristics:
 - Small compact pistol
-- Produced in multiple mould variants (commonly referred to as M1, M2, M3)
-- Colour can vary (black, dark blue, grey tones)
-- Mould and colour differences may relate to factory and production period
+- Multiple mould variants
+- Colour variation across dark tones
+- Markings and mould traits can help with identification
 
 Collector Note:
-Blaster mould alone is not enough to identify a figure. It should be considered alongside COO, body covering, and overall figure characteristics.
+Blaster identification should be used alongside the figure COO and body covering. It is not usually enough on its own.
 
 ---
 
-COO (Country of Origin) Variants:
+COO (Country of Origin):
 
 Jawa figures exist with multiple COO markings, including:
-
 - Hong Kong
 - Taiwan
 - No COO (in some cases)
 
-COO can influence:
-- plastic tone
-- sculpt details
-- accessory pairing
+COO is one of the most important advanced identifiers because it helps narrow:
+- production period
+- factory family
+- likely correct accessory pairing
 
 ---
 
-Factory / Production Variation:
+Cloth Cloak Identification:
 
-Different manufacturers produced Jawa figures and accessories.
+For cloth cloak Jawas, one of the most useful identifiers is the hood.
 
-This can result in:
-- differences in cloak material and construction
-- variations in blaster moulds
-- subtle changes in sculpt and finish
+Collectors check:
+- hood size
+- hood shape
+- stitching style
+- fabric weave
+- overall construction
+
+These details can help match a cloak to the correct factory family and figure type.
 
 ---
 
-Identification Approach:
+Authentication:
 
-Collectors typically identify a Jawa by:
+Many collectors do not worry about perfect matching.
 
-1. Body covering (vinyl vs cloth)
-2. COO marking
-3. Cloak construction (fabric, stitching, weave)
-4. Blaster mould and colour
-5. Overall figure condition and sculpt details
+But for those who do, these details are important because they help separate:
+- original accessories
+- correct matches
+- mismatched combinations
+- reproductions
+
+This takes practice, but it is one of the most useful areas of collector knowledge.
 
 ---
 
 Collector Importance:
 
-The Jawa is one of the most recognisable and widely collected figures.
+The Jawa is one of the most recognisable and widely collected figures in the line.
 
-The vinyl cape Jawa is one of the standout early variants in the line and is heavily reproduced, making authentication important.
-
-Cloth cloak Jawas represent the standard production version but still include a wide range of subtle and collectible variations.
-
----
-
-Pairing Logic:
-
-- Vinyl cape Jawas should only be paired with early production figures
-- Cloth cloak Jawas represent the standard version across most of the line
-- Correct pairing depends on COO, factory, and production period
+The vinyl cape Jawa is one of the standout early variants, while cloth cloak Jawas offer a wide range of subtle and collectible differences for advanced collectors.
 
 ---
 
