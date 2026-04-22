@@ -1,34 +1,154 @@
 Figure Name: Luke Skywalker
 
 Category:
-Action Figure
+Figure
 
-Line:
-Star Wars (Kenner, 1978 to 1984)
+First Release:
+1978 (Early Bird Certificate Package)
+
+---
 
 Overview:
-Luke Skywalker is one of the core figures in the original Kenner Star Wars line and remained in circulation across multiple cardback eras. He is one of the most important figures in the line due to his early lightsaber variants, especially the rare Double Telescoping (DT) version.
 
-Core Collector Note:
-Luke Skywalker was one of the first four figures released by Kenner through the Early Bird Certificate Package in early 1978.
+Luke Skywalker is one of the most important figures in the entire vintage Kenner Star Wars line.
 
-The first four Early Bird figures were:
-- Luke Skywalker
-- Princess Leia Organa
-- Chewbacca
-- R2-D2
+He was one of the first four figures ever released and exists in a wide range of variants across multiple factories, countries of origin (COO), and production periods.
 
-Early Bird Significance:
-The Early Bird Luke is especially important because it came with the original arm-fed lightsaber featuring a double-telescoping tip. Kenner quickly removed the extra extending tip because it was too fragile and easily broken.
+Because of this, Luke is one of the most studied and collected figures in the hobby.
 
-Accessory Guidance:
-Luke Skywalker is primarily associated with early lightsaber variants:
-- Double Telescoping lightsaber (very early and rare)
-- Single Telescoping / standard early arm-fed lightsaber
-- Later mould and factory differences depending on COO and production period
+---
 
-Collector Importance:
-The Early Bird Luke is one of the standout early variants in the vintage Kenner line and is one of the most desirable loose figure and accessory combinations for collectors.
+Early Bird Release:
+
+Luke Skywalker was included in the Early Bird Certificate Package.
+
+- Shipped in early 1978 in a plain white mailer
+- Not sold on a retail card initially
+- Represents the first production run of the figure
+
+---
+
+Key Variant Feature (Critical):
+
+Early Luke figures can come with a:
+
+DOUBLE TELESCOPING LIGHTSABER (DT)
+
+This is the most important identifying feature of the earliest Luke figures.
+
+---
+
+Double Telescoping (DT) Saber:
+
+- Two-stage extending blade
+- Inner filament extends from the outer blade
+- Extremely fragile and often broken
+- Quickly discontinued by Kenner
+
+This makes DT Luke one of the most valuable and desirable figures in the line.
+
+---
+
+Transition to Single Telescoping (ST):
+
+After DT sabers were removed, Luke figures were produced with:
+
+Single Telescoping (ST) lightsabers
+
+- One-piece extending blade
+- Stronger and more durable
+- Became the standard version
+
+---
+
+Accessory Pairing Rules:
+
+VERY IMPORTANT:
+
+- DT sabers ONLY belong with the earliest Luke figures
+- ST sabers belong with later production Lukes
+
+Incorrect pairing is one of the most common collector mistakes.
+
+---
+
+COO (Country of Origin) Variants:
+
+Luke Skywalker exists with multiple COO markings:
+
+- No COO (very early)
+- Hong Kong
+- Taiwan
+
+Each COO can have:
+- Different sculpt details
+- Different plastic tones
+- Different accessory pairings
+
+---
+
+Major Variant Differences:
+
+Collectors track Luke variants based on:
+
+1. Hair colour
+   - Blonde (early)
+   - Darker tones (later)
+
+2. Face sculpt
+   - Subtle differences in expression and mould
+
+3. Torso and limb moulds
+   - Small but important variations
+
+4. COO markings
+
+5. Lightsaber type (DT vs ST)
+
+---
+
+Why Luke Is Important:
+
+- One of the first four figures ever made
+- Contains one of the most famous variants (DT saber)
+- Exists across the entire production timeline
+- Essential figure for any serious collector
+
+---
+
+Condition Considerations:
+
+Common issues include:
+
+- Yellowing of plastic
+- Paint wear (hair and face)
+- Loose limbs
+- Missing or incorrect lightsaber
+- Broken saber tips
+
+---
+
+Collector Notes:
+
+- DT Luke is one of the most faked figures in the hobby
+- Many “DT sabers” are actually cut-down or reproduction pieces
+- Correct matching of figure + saber is critical for value
+
+---
+
+Pairing Logic:
+
+Early Luke:
+- May have DT saber (rare)
+
+Mid / Late Luke:
+- Should have ST saber
+
+DT sabers should NEVER be paired with later COO figures.
+
+---
 
 Related reference files:
+- double-telescoping-lightsaber.txt
+- telescoping-lightsaber.txt
 - early-bird-certificate-package.txt

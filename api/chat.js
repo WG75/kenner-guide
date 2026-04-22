@@ -31,21 +31,10 @@ function getSearchTerms(message) {
     leia: ["princess-leia-organa", "leia"],
     chewy: ["chewbacca"],
     chewie: ["chewbacca"],
-    obiwan: ["ben-obi-wan-kenobi", "obi-wan-kenobi", "ben-kenobi"],
     vader: ["darth-vader"],
-    tusken: ["sand-people", "tusken-raider"],
-    sandpeople: ["sand-people", "tusken-raider"],
-    sandcrawler: ["sandcrawler", "jawa"],
-    blaster: ["blaster"],
-    cloak: ["cloak", "cape"],
-    cape: ["cape", "cloak"],
+    obiwan: ["obi-wan-kenobi"],
     earlybird: ["early-bird", "early-bird-certificate-package"],
-    "early-bird": ["early-bird", "early-bird-certificate-package"],
-    moc: ["moc", "carded"],
-    carded: ["carded", "moc"],
-    coo: ["coo", "factory", "factories"],
-    factory: ["coo", "factory", "factories"],
-    variant: ["variant", "variants"]
+    "early-bird": ["early-bird", "early-bird-certificate-package"]
   };
 
   const expanded = [...words];
@@ -79,10 +68,7 @@ async function collectFiles(baseDir) {
   const folders = [
     "figures",
     "accessories",
-    "terms",
-    "variants",
-    "references",
-    "compatibility"
+    "references"
   ];
 
   const files = [];
@@ -95,13 +81,12 @@ async function collectFiles(baseDir) {
       if (!entry.isFile()) continue;
 
       const ext = path.extname(entry.name).toLowerCase();
-      if (ext !== ".txt" && ext !== ".json") continue;
+      if (ext !== ".txt") continue;
 
-      const stem = entry.name.replace(/\.(txt|json)$/i, "");
+      const stem = entry.name.replace(/\.txt$/i, "");
       files.push({
         folder,
         name: entry.name,
-        stem,
         slug: slugify(stem),
         fullPath: path.join(folderPath, entry.name)
       });
@@ -112,182 +97,55 @@ async function collectFiles(baseDir) {
 }
 
 function extractEntityBase(file) {
-  const slug = file.slug;
-
   if (file.folder === "figures") {
-    if (slug.endsWith("-reference")) {
-      return slug.replace(/-reference$/, "");
-    }
-    return slug;
+    return file.slug.replace("-reference", "");
   }
-
-  const parts = slug.split("-");
-  if (parts.length >= 2) {
-    return parts[0];
-  }
-
-  return slug;
+  return file.slug.split("-")[0];
 }
 
-function scoreFile(file, message, searchTerms, matchedEntities) {
+function scoreFile(file, message, searchTerms) {
   const lower = normaliseMessage(message);
-  const slug = file.slug;
-  const entityBase = extractEntityBase(file);
-
   let score = 0;
 
   for (const term of searchTerms) {
-    if (slug === term) score += 40;
-    if (slug.startsWith(term + "-")) score += 30;
-    if (slug.includes(term)) score += 12;
-    if (entityBase === term) score += 35;
+    if (file.slug.includes(term)) score += 20;
   }
 
-  for (const entity of matchedEntities) {
-    if (entityBase === entity) score += 50;
-    if (slug.startsWith(entity + "-")) score += 35;
-    if (slug === `${entity}-reference`) score += 70;
-    if (slug === entity) score += 60;
+  if (lower.includes("what comes with") && file.folder === "accessories") {
+    score += 25;
   }
 
-  if (lower.includes("what comes with") || lower.includes("comes with")) {
-    if (file.folder === "figures") score += 15;
-    if (file.folder === "accessories") score += 20;
+  if (lower.includes("early bird") && file.slug.includes("early-bird")) {
+    score += 50;
   }
 
-  if (lower.includes("variant")) {
-    if (file.folder === "variants") score += 20;
-    if (file.folder === "accessories" || file.folder === "figures") score += 8;
-  }
-
-  if (lower.includes("coo") || lower.includes("factory")) {
-    if (file.folder === "references" || file.folder === "compatibility") score += 20;
-  }
-
-  if (lower.includes("early bird")) {
-    if (file.slug.includes("early-bird")) score += 80;
-    if (file.folder === "references") score += 15;
-  }
-
-  if (file.folder === "terms") score += 2;
+  if (file.folder === "figures") score += 5;
 
   return score;
 }
 
-function detectMatchedEntities(files, searchTerms, message) {
-  const lower = normaliseMessage(message);
-  const figureBases = unique(
-    files
-      .filter((f) => f.folder === "figures")
-      .map((f) => extractEntityBase(f))
-      .filter(Boolean)
-  );
-
-  const matched = [];
-
-  for (const base of figureBases) {
-    if (searchTerms.includes(base)) {
-      matched.push(base);
-      continue;
-    }
-
-    const spaced = base.replace(/-/g, " ");
-    if (lower.includes(spaced)) {
-      matched.push(base);
-      continue;
-    }
-
-    const split = base.split("-");
-    if (split.some((part) => searchTerms.includes(part))) {
-      matched.push(base);
-    }
-  }
-
-  return unique(matched);
-}
-
-async function buildReferenceContext(message) {
+async function buildContext(message) {
   const baseDir = path.join(process.cwd(), "data");
   const files = await collectFiles(baseDir);
   const searchTerms = getSearchTerms(message);
-  const matchedEntities = detectMatchedEntities(files, searchTerms, message);
 
   const ranked = files
-    .map((file) => ({
+    .map(file => ({
       ...file,
-      entityBase: extractEntityBase(file),
-      score: scoreFile(file, message, searchTerms, matchedEntities)
+      score: scoreFile(file, message, searchTerms)
     }))
-    .filter((file) => file.score > 0)
-    .sort((a, b) => b.score - a.score);
+    .filter(f => f.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 8);
 
-  const selected = [];
-  const selectedPaths = new Set();
-
-  for (const entity of matchedEntities) {
-    const figurePriority = files.find(
-      (f) =>
-        f.folder === "figures" &&
-        (f.slug === `${entity}-reference` || f.slug === entity)
-    );
-
-    if (figurePriority && !selectedPaths.has(figurePriority.fullPath)) {
-      selected.push(figurePriority);
-      selectedPaths.add(figurePriority.fullPath);
-    }
-
-    const related = files
-      .filter((f) => extractEntityBase(f) === entity)
-      .sort((a, b) => {
-        const folderOrder = {
-          figures: 1,
-          accessories: 2,
-          variants: 3,
-          references: 4,
-          compatibility: 5,
-          terms: 6
-        };
-        return (folderOrder[a.folder] || 99) - (folderOrder[b.folder] || 99);
-      });
-
-    for (const file of related) {
-      if (!selectedPaths.has(file.fullPath)) {
-        selected.push(file);
-        selectedPaths.add(file.fullPath);
-      }
-    }
-  }
+  let context = "";
 
   for (const file of ranked) {
-    if (selected.length >= 12) break;
-    if (!selectedPaths.has(file.fullPath)) {
-      selected.push(file);
-      selectedPaths.add(file.fullPath);
-    }
-  }
-
-  const matchedFiles = [];
-  const contextBlocks = [];
-  let totalChars = 0;
-  const maxChars = 22000;
-
-  for (const file of selected) {
     const content = await safeReadFile(file.fullPath);
-    if (!content.trim()) continue;
-
-    const block = `FILE: ${file.folder}/${file.name}\n${content.trim()}\n`;
-    if (totalChars + block.length > maxChars) break;
-
-    contextBlocks.push(block);
-    matchedFiles.push(`${file.folder}/${file.name}`);
-    totalChars += block.length;
+    context += `\n${content}\n`;
   }
 
-  return {
-    matchedEntities,
-    matchedFiles,
-    context: contextBlocks.join("\n---\n\n")
-  };
+  return context;
 }
 
 export default async function handler(req, res) {
@@ -296,56 +154,65 @@ export default async function handler(req, res) {
       return res.status(405).json({ error: "Method not allowed" });
     }
 
-    const { message } = req.body || {};
+    const { message } = req.body;
 
     if (!message) {
       return res.status(400).json({ error: "No message provided" });
     }
 
-    const MODEL = "claude-haiku-4-5";
-    const { matchedEntities, matchedFiles, context } = await buildReferenceContext(message);
+    const context = await buildContext(message);
 
     const systemPrompt = `
 You are VF-CB, a Vintage Star Wars Kenner expert.
 
 Default assumption:
-The user means the original Kenner toy line from 1977 to 1985 unless they clearly ask about something else.
+The user means the original Kenner toy line from 1977 to 1985 unless they clearly say otherwise.
 
 Your job:
 Answer using the supplied information first.
-Do not fall back to generic Star Wars lore if the supplied information contains the answer.
-Do not invent accessories, variants, dates, factories, COO details, or packaging information.
 
-Rules:
-- Prioritise the supplied information over your own memory
-- Be concise, specific, and collector-friendly
-- Use British English
-- If the supplied information is incomplete, say so briefly instead of pretending certainty
-- For "what comes with" questions, state the standard accessory first, then important variant differences
-- Keep the answer focused on vintage Kenner unless the user clearly asks otherwise
-- Do not mention local files, reference files, context, database, prompts, or how the answer was generated
+Your style:
+- Speak like an experienced collector
+- Be clear, practical, and confident
+- Avoid filler or generic explanations
 
-Important Jawa rules:
-- Standard accessory: Jawa Blaster
-- Early rare release: vinyl cape
-- Later more common release: cloth cloak
-- Do not describe the vinyl cape as the standard accessory
-- The Jawa's eyes should be described as yellow, not glowing
+Answer rules:
 
-When useful, end with one short follow-up question about identifying a specific loose figure, MOC, factory item, or variant.
+1. Start with a clear direct answer
+
+2. If variants exist:
+   - Briefly mention them
+   - Highlight the most important difference
+
+3. If the question is simple:
+   - Keep it simple
+
+4. If identification or value is implied:
+   - Add relevant collector detail
+
+5. Never invent information
+
+6. Never mention:
+   - files
+   - context
+   - database
+   - system
+
+Optional personality:
+You may add ONE short polite C-3PO-style opening line occasionally.
+Keep it brief and do not let it affect clarity.
+
+Important:
+- Use real collector logic
+- Guide the user naturally if they are identifying something
 `;
 
     const userPrompt = `
 Question:
 ${message}
 
-Known matched topics:
-${matchedEntities.length ? matchedEntities.join(", ") : "None"}
-
-Supporting information:
-${context || ""}
-
-Answer naturally as a knowledgeable vintage Kenner collector.
+Information:
+${context}
 `;
 
     const response = await fetch("https://api.anthropic.com/v1/messages", {
@@ -356,38 +223,23 @@ Answer naturally as a knowledgeable vintage Kenner collector.
         "anthropic-version": "2023-06-01"
       },
       body: JSON.stringify({
-        model: MODEL,
+        model: "claude-haiku-4-5",
         max_tokens: 700,
         system: systemPrompt,
-        messages: [
-          {
-            role: "user",
-            content: userPrompt
-          }
-        ]
+        messages: [{ role: "user", content: userPrompt }]
       })
     });
 
     const data = await response.json();
 
-    if (!response.ok) {
-      console.error("Anthropic error:", data);
-      return res.status(500).json({
-        error: "API error",
-        details: data
-      });
-    }
-
     return res.status(200).json({
-      reply: data?.content?.[0]?.text || "No response from AI",
-      matchedEntities,
-      matchedFiles
+      reply: data?.content?.[0]?.text || "No response"
     });
+
   } catch (err) {
-    console.error("Server error:", err);
+    console.error(err);
     return res.status(500).json({
-      error: "Server error",
-      details: err.message
+      error: "Server error"
     });
   }
 }

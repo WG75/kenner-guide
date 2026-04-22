@@ -1,79 +1,136 @@
 Accessory Name: Double Telescoping Lightsaber (DT)
 
 Category:
-Primary Weapon – Early Kenner Line
+Accessory
 
 Used With:
-- Luke Skywalker
-- Darth Vader (rare)
-- Ben Kenobi (extremely rare)
+- Luke Skywalker (Early Bird and earliest production)
+- Darth Vader (very early release)
+- Obi-Wan Kenobi (very early release)
 
---------------------------------------------------
+---
 
-OVERVIEW
+Overview:
 
-The Double Telescoping Lightsaber is the earliest lightsaber type released by Kenner. It features two extending sections and was quickly discontinued due to fragility and production issues.
+The Double Telescoping Lightsaber (DT) is the earliest and rarest lightsaber type produced by Kenner.
 
---------------------------------------------------
+It features a two-stage extending blade:
+- First section extends from the arm
+- Second inner filament extends from within the first blade
 
-MAIN MOULD TYPES
+This design was quickly abandoned due to fragility and production issues.
 
-M1 – Circled DT
-- Unknown factory
-- Earliest version
-- Often found with Unitoy Luke
-- Inner blade frequently broken
+---
 
-Colours:
-- Yellow
-- Red (mostly pre-production)
+Why It Matters:
 
---------------------------------------------------
+- One of the most important accessories in vintage Star Wars collecting
+- Found only on the earliest figures
+- Extremely rare in complete form
+- Frequently broken, shortened, or missing the inner filament
 
-M2 – Lettered DT
+---
 
-- Produced in multiple mould cavities
-- Letters stamped on hilt
-- Found with Kader, Smile, Unitoy
+Core Structure:
 
-Colours:
-- Pale yellow
-- Red (rare)
-- Pale blue (very rare)
+A DT lightsaber consists of:
+- Hilt (solid plastic handle)
+- Outer blade
+- Inner telescoping filament
 
---------------------------------------------------
+Most surviving examples are:
+- Missing inner filament
+- Snapped at the tip
+- Trimmed or repaired
 
-KEY TRAITS
+---
 
-- Two-stage extension
-- Very fragile
-- Inner blade often missing
-- Slightly softer plastic
+Known Variants:
 
---------------------------------------------------
+There are two primary DT types:
 
-PRODUCTION NOTE
+---
 
-DT production was stopped early.
-Moulds were later reworked into single telescoping sabers.
+M1 – “Circled DT” (Unitoy associated)
 
---------------------------------------------------
+Key features:
+- Slightly thicker outer blade
+- Surface may show a subtle “circle” texture effect
+- No letter markings on hilt
+- Often associated with early Unitoy production
 
-IDENTIFICATION
+Notes:
+- Often considered the earliest DT type
+- Found on early Luke Skywalker figures
+- Typically yellow in colour
 
-Check:
-1. Two extending sections
-2. Hilt markings (lettered vs circled)
-3. Inner blade condition
+---
 
---------------------------------------------------
+M2 – “Lettered DT”
 
-COLLECTOR INSIGHT
+Key features:
+- Letter markings near the hilt (can appear on left or right side)
+- Slightly different mould profile vs M1
+- Produced using multi-cavity tooling
+- Inner filament often shorter than M1 examples
 
-- One of the most valuable accessories in the line
-- Correct pairing massively impacts figure value
+Notes:
+- Found across early production runs
+- Can be associated with multiple factories
+- Colour ranges from pale yellow to deeper yellow
 
---------------------------------------------------
+---
 
-SOURCES:
-https://www.variantvillain.com/
+Important Distinction:
+
+M1 vs M2 is NOT just colour — it is mould structure:
+- Shape
+- Surface texture
+- Markings
+
+---
+
+Condition & Authenticity:
+
+Collectors must assess:
+
+1. Inner filament presence
+2. Blade length consistency
+3. Plastic colour and ageing
+4. Mould details (M1 vs M2)
+5. Signs of trimming or reproduction
+
+---
+
+Common Issues:
+
+- Inner filament snapped off
+- Blade cut down to look “complete”
+- Reproduction sabers (very common in market)
+- Discolouration from age
+
+---
+
+Collector Notes:
+
+- Complete DT sabers are extremely rare
+- Matching correct DT type to correct figure increases value significantly
+- DT sabers are one of the most faked accessories in the hobby
+
+---
+
+Pairing Logic:
+
+DT sabers should ONLY be paired with:
+- Very early Luke Skywalker
+- Early Obi-Wan Kenobi
+- Early Darth Vader
+
+They are NOT correct for later carded releases.
+
+---
+
+Related reference files:
+- luke-skywalker-reference.txt
+- early-bird-certificate-package.txt
+- telescoping-lightsaber.txt

@@ -1,259 +1,158 @@
-Accessory Name: Single Telescoping Lightsaber
+Accessory Name: Telescoping Lightsaber (Single Telescoping / ST)
 
 Category:
-Primary Weapon – Early Kenner Line
+Accessory
 
 Used With:
 - Luke Skywalker
 - Darth Vader
-- Ben (Obi-Wan) Kenobi
+- Obi-Wan Kenobi
 
---------------------------------------------------
+---
 
-OVERVIEW
+Overview:
 
-The Single Telescoping Lightsaber replaced the earlier Double Telescoping version early in production. It became the standard lightsaber type used throughout the vintage Kenner Star Wars line.
+The Telescoping Lightsaber (ST) replaced the earlier Double Telescoping (DT) design.
 
-Unlike DT sabers, the blade consists of a single extendable piece.
+It features a single extending blade that slides out from the arm, without the fragile inner filament found in DT versions.
 
---------------------------------------------------
+This became the standard lightsaber type used across the majority of the vintage Kenner line.
 
-COLOUR ASSOCIATION (STANDARD)
+---
 
-Yellow:
-- Luke Skywalker
+Why It Exists:
 
-Red:
-- Darth Vader
+The original DT lightsaber design proved too fragile in real-world use.
 
-Blue:
-- Ben (Obi-Wan) Kenobi
+Kenner simplified the design:
+- Removed the inner filament
+- Strengthened the blade
+- Improved durability for mass production
 
---------------------------------------------------
+---
 
-CRITICAL COLLECTOR NOTE
+Core Structure:
 
-👉 Colour alone is NOT enough to identify a correct saber  
-👉 Mould type + factory origin is critical
+An ST lightsaber consists of:
+- Hilt (fixed plastic section)
+- Single extending blade
 
---------------------------------------------------
+No secondary inner filament is present.
 
-MAIN MOULD VARIANTS
+---
 
-There are 10 primary mould types (M1–M10), plus subvariants.
+Production Evolution:
 
---------------------------------------------------
+Lightsabers evolved in this order:
 
-M1 – Flat Transition, Lettered Hilt
+1. Double Telescoping (DT)
+   - Two-stage blade
+   - Very early releases only
+   - Extremely rare
 
-- Earliest mass-production single telescoping saber
-- Used across ALL major factories:
-  - Kader
-  - Unitoy
-  - Smile
-  - Taiwan
+2. Early Single Telescoping (ST)
+   - Transitional stage after DT removal
+   - Slight mould variation overlap
 
-Traits:
-- Flat transition between blade and hilt
-- Letter stamped on hilt (cavity marking)
-- Often found on early 12-back figures
+3. Standard Telescoping (ST)
+   - Main production version
+   - Used throughout the line lifecycle
 
-Water Test:
-- Sinks
+---
 
---------------------------------------------------
+Colour Variants:
 
-M2 – Flat Transition, Unlettered Hilt (Unitoy)
+Lightsabers were produced in multiple colours depending on figure:
 
-- Produced by Unitoy (Hong Kong)
+Luke Skywalker:
+- Yellow (most common)
+- Pale yellow
+- Darker yellow tones
 
-Traits:
-- No letters on hilt
-- Slightly thicker build than M1
-- Found mainly from 12C–21 backs
+Darth Vader:
+- Red (various shades)
 
-Water Test:
-- Floats
+Obi-Wan Kenobi:
+- Blue (less common than Luke/Vader variants)
 
-Colours:
-- Blue
-- Red
-- Yellow (translucent variants exist)
+---
 
---------------------------------------------------
+Mould Variations:
 
-M3 – Flat Transition, Thin Tip (Unitoy)
+Across production, multiple moulds were used:
 
-- Later Unitoy production
+- Differences in blade thickness
+- Variations in tip shape
+- Surface texture differences
+- Hilt detail variation
 
-Traits:
-- Thinner blade tip
-- Multiple subtle subvariants
-- Often shows injection issues (dents)
+Factories involved include:
+- Unitoy
+- Kader
+- Smile
+- Glasslite
+- PBP / European production
 
-Water Test:
-- Floats
+---
 
---------------------------------------------------
+Country of Origin (COO) Influence:
 
-M4 – Takara (Japan Exclusive)
+Different factories and COO markings affect which lightsaber is considered correct.
 
-Traits:
-- Shorter shaft
-- Unique sculpt
-- Only appears with Takara figures
+Matching the correct saber depends on:
+- Figure COO
+- Production period
+- Factory origin
 
-Water Test:
-- Floats
+---
 
---------------------------------------------------
+Condition & Wear:
 
-M5 – Round Transition, Wide Shaft (Kader / Smile / PBP)
+Common issues:
 
-Traits:
-- Rounded transition (not flat)
-- Thicker shaft
-- Used later in production
+- Blade stress whitening
+- Warping
+- Discolouration
+- Tip rounding or flattening
+- Snapped or shortened blades
 
-Subvariant:
-- M5b (longer version, sometimes floats)
+---
 
-Water Test:
-- Usually sinks (except M5b)
+Collector Notes:
 
---------------------------------------------------
+- ST sabers are far more common than DT
+- Correct pairing still matters for accuracy
+- Subtle mould differences can affect value for advanced collectors
 
-M6 – Unknown Factory (Likely Palitoy)
+---
 
-Traits:
-- Seen on Trilogo releases
-- Lower detail quality
-- No fluorescence under UV
+Key Distinction vs DT:
 
-Water Test:
-- Floats
+DT (Double Telescoping):
+- Two-stage blade
+- Inner filament
+- Extremely rare
 
---------------------------------------------------
+ST (Single Telescoping):
+- One-piece extending blade
+- Much more durable
+- Standard production version
 
-M7 – Taiwan
+---
 
-Traits:
-- Distinct EPM (ejection pin marks)
-- Appears early (even 12-back era)
-- Small vs large EPM variants
+Pairing Logic:
 
-Water Test:
-- Floats
+ST sabers are correct for:
+- Most Luke Skywalker figures (post-DT)
+- Most Darth Vader figures
+- Most Obi-Wan Kenobi figures
 
---------------------------------------------------
+DT sabers should NOT be paired with standard production figures.
 
-M8 – Glasslite (Brazil)
+---
 
-Traits:
-- Unique mould
-- Wide gate scar on hilt
-- Exclusive to Glasslite figures
-
-Water Test:
-- Floats
-
---------------------------------------------------
-
-M9 – Lili Ledy (Mexico)
-
-Traits:
-- Lettered hilts
-- Slightly different sculpt proportions
-- Used on later Mexican releases
-
-Water Test:
-- Floats
-
---------------------------------------------------
-
-M10 – Top Toys (Argentina)
-
-Traits:
-- EPM located on shaft
-- Rare regional variant
-
-Water Test:
-- Floats
-
---------------------------------------------------
-
-PRODUCTION LOGIC
-
-Originally:
-- Moulds likely shared across factories
-
-Over time:
-- Each factory developed its own mould variations
-
-Result:
-👉 No single “correct saber” without knowing:
-- Figure
-- COO
-- Production stage
-
---------------------------------------------------
-
-IDENTIFICATION STRATEGY
-
-To correctly identify a lightsaber:
-
-Check:
-
-1. Transition type:
-   - Flat vs Round vs Smooth
-
-2. Hilt markings:
-   - Lettered vs Unlettered
-
-3. Blade thickness:
-   - Thick vs Thin tip
-
-4. EPM (ejection pin marks)
-
-5. Plastic feel:
-   - Rigid vs flexible
-
-6. Water test:
-   - Sink vs Float
-
---------------------------------------------------
-
-COMMON MISTAKES
-
-- Matching by colour only
-- Ignoring mould differences
-- Assuming all yellow sabers are Luke correct
-- Confusing repro sabers with M5 or M3
-
---------------------------------------------------
-
-REPRODUCTION WARNING
-
-Reproduction sabers often:
-
-- Look closest to M5 variants
-- Lack fine mould detail
-- Have incorrect tip proportions
-- May feel too rigid or too soft
-
---------------------------------------------------
-
-COLLECTOR INSIGHT
-
-This is one of the most:
-
-- Confusing
-- Misidentified
-- Replaced accessories in the line
-
-👉 Correct pairing significantly impacts value
-
---------------------------------------------------
-
-SOURCES:
-https://www.variantvillain.com/
+Related reference files:
+- double-telescoping-lightsaber.txt
+- luke-skywalker-reference.txt
+- darth-vader-reference.txt
+- obi-wan-kenobi-reference.txt
