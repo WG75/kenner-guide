@@ -1,0 +1,285 @@
+Figure Name: Darth Vader
+
+Character Overview:
+Darth Vader is a central character in the Star Wars franchise. Originally Anakin Skywalker, he becomes a Sith Lord under Emperor Palpatine. He first appeared in Star Wars (1977). Portrayed physically by David Prowse and voiced by James Earl Jones.
+
+Collector Names / Aliases:
+Vader, Dark Vader
+
+Release Information:
+- Released: 1978–1985
+- Appears on: Star Wars, Empire Strikes Back, Return of the Jedi, POTF cardbacks
+- Early Bird mail-away figure (1978)
+- Part of original 12 Back figures
+
+--------------------------------------------------
+
+ACCESSORIES
+
+Primary Accessories:
+- Red Lightsaber
+- Black Vinyl Cape
+
+Accessory Matching Rules:
+- Saber type depends heavily on factory and production period
+- Cape variations are extremely complex and factory-dependent
+
+--------------------------------------------------
+
+LIGHTSABERS (RED)
+
+Mould Variants:
+
+M1 – Flat transition, lettered hilt (early Kader, Unitoy, Smile, Taiwan)
+M2 – Flat transition, unlettered (Unitoy up to 21-back)
+M3 – Flat transition, thin tip (Unitoy post 21-back, also Lili Ledy Retorno)
+M4 – Flat transition, short shaft (Takara)
+M5 – Round transition, wide shaft (Kader & Smile post 12c-back, also PBP)
+M6 – Round transition, thin shaft (PBP)
+M7 – Smooth transition, EPM to handle (Taiwan)
+M8 – Smooth transition, fat tip, long shaft (Glasslite)
+M9 – Smooth transition, fat tip, short shaft (Lili Ledy Regreso)
+M10 – Smooth transition, EPM to shaft (Top Toys)
+
+Notes:
+- 10 main moulds + subvariants
+- Produced in multi-cavity mould trees (up to ~40 cavity marks)
+- Letter stamping A–Z and AA–NN observed
+
+Timeline Behaviour:
+- Early: M1
+- Mid: M2 / M3
+- Later: M5 dominant for Kader/Smile
+- Regional:
+  - Taiwan → M7
+  - Glasslite → M8
+  - Lili Ledy → M9
+  - Top Toys → M10
+
+--------------------------------------------------
+
+VINYL CAPES
+
+General Notes:
+- 18 main cape variants + subvariants
+- PVC material, cut under tension → natural variation
+- No true front/back, only left/right orientation
+
+KADER (M1–M5)
+- Symmetrical shape
+- Rounded collar
+- Misaligned armholes common
+
+UNITOY (M6–M11)
+- Bulgy shape
+- Narrow armholes (often split)
+
+TAIWAN (M12)
+- No crosshatch
+- Small armholes
+- Large collar
+
+GLASSLITE (M13)
+- Smooth, glossy
+- Symmetrical bulges
+
+TOP TOYS (M14)
+- Narrow shape
+- Leathery texture
+
+TAKARA (M15)
+- Very wide
+- Mixed surface texture
+
+LILI LEDY (M16)
+- Rounded edges
+- No crosshatch
+
+POCH (M17)
+- Large armholes
+- Rough cut edges
+
+PBP (M18)
+- Rounded edges
+- Multiple surface patterns
+
+Reissues:
+- 1995 Kenner: similar to Kader M2
+- 2019 Retro: oversized, smooth
+
+--------------------------------------------------
+
+COO FAMILIES
+
+COO Family 1: Kader / Kader China  
+COO Family 2: Kader  
+COO Family 3: Kader / Glasslite  
+COO Family 4: Smile / Lili Ledy  
+COO Family 5: Unitoy  
+COO Family 6: Unitoy  
+COO Family 7: Unitoy  
+COO Family 8: Unitoy / PBP  
+COO Family 9: Top Toys  
+COO Family 10: Taiwan  
+COO Family 11: Taiwan  
+COO Family 12: Takara  
+
+--------------------------------------------------
+
+TORSO MOULDS
+
+- M1–M3 used across Kader production
+- M3a early → M3b later retool
+- Glasslite used M2 only
+
+Smile:
+- M4 torso only
+
+Unitoy:
+- M5 earliest → M6 → M7 progression
+
+Taiwan:
+- M9 → M10 progression
+
+Takara:
+- Unique M11 mould
+
+--------------------------------------------------
+
+HEAD MOULDS
+
+Kader:
+- M1, M2, M3 mixed
+- M1 degraded over time
+
+Smile:
+- M4
+
+Lili Ledy:
+- M5, M6
+
+Unitoy:
+- M7–M11 range
+
+Taiwan:
+- M13–M16 unique
+
+Takara:
+- M12
+
+--------------------------------------------------
+
+KADER PRODUCTION
+
+COO Family 1:
+- Full mixing of torso and head moulds
+- Colours: light orange → dark red
+- Paired with M1 or M5 sabers
+
+Kader China (No COO):
+- Only M3 head
+- Later production
+- Colours: dark orange → dark red
+- Paired with M5
+
+COO Family 2:
+- Early production
+- Mostly M1 head
+- Paired with M1 sabers
+
+COO Family 3:
+- Full mixing again
+- Paired with M1 and M5
+
+COO Family 3 No COO / Glasslite:
+- Only M3 head
+- Glasslite used M2 torso only
+- Traits:
+  - No white belt detail
+  - Unique saber + cape
+  - Bright red chest variation
+
+--------------------------------------------------
+
+SMILE / LILI LEDY
+
+Smile:
+- M4 torso and head
+- Light orange paint
+
+Lili Ledy:
+- Coral (Retorno) early
+- Red/dark red (Regreso) later
+- Own head moulds
+
+Accessory Pairing:
+- Smile → M4 then M3
+- Lili Ledy → M3 then M9
+
+--------------------------------------------------
+
+UNITOY
+
+COO Family 5:
+- M5 torso only
+- Early production
+
+COO Family 6 / 7:
+- M5 and M6 torsos
+- Mixed legs
+
+COO Family 8:
+- M6 and M7 torsos
+- Later production
+
+Colours:
+- Dark orange, red, raspberry
+
+Accessory Pairing:
+- M1, M2, M3
+
+--------------------------------------------------
+
+PBP
+
+- Uses Unitoy moulds (M6/M7)
+- Scarred COO
+- Wide colour variation
+
+Accessory Pairing:
+- M5 and M6
+
+--------------------------------------------------
+
+TOP TOYS
+
+- Cast from production figure (not original tooling)
+- Lower quality
+- Paired with:
+  - M10 saber
+  - M14 cape
+
+--------------------------------------------------
+
+TAIWAN
+
+COO Family 10:
+- M9 torso
+- Raspberry chest
+
+COO Family 11:
+- M10 torso
+- Unique 3-grill head sculpt
+- Wide stance
+
+--------------------------------------------------
+
+TAKARA
+
+- Completely unique tooling
+- Screw in back
+- Only Vader, Stormtrooper, C-3PO produced
+
+Accessory Pairing:
+- M4 saber
+- M15 cape

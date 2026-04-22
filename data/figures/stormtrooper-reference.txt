@@ -1,0 +1,167 @@
+Figure Name: Imperial Stormtrooper
+
+Character Overview:
+The Imperial Stormtrooper is the standard infantry soldier of the Galactic Empire. First appearing in Star Wars (1977), Stormtroopers are instantly recognisable by their white armour and black detailing. They are one of the most iconic troop builders in the Star Wars line.
+
+Collector Names / Aliases:
+Stormtrooper, Stormy, Stormie, Trooper, TK, White Trooper
+
+Release Information:
+- Released: 1978–1985
+- Appears on: Star Wars, Empire Strikes Back, Return of the Jedi cardbacks
+- Early Bird mail-away figure (1978)
+- Part of original Wave A 12 Back figures
+
+--------------------------------------------------
+
+ACCESSORIES
+
+Primary Accessory:
+- Imperial Blaster (E-11 style)
+
+Accessory Matching Rules:
+- Multiple moulds and colour variations exist
+- Correct pairing depends on COO family and production period
+- Extremely high variation due to mass production
+
+--------------------------------------------------
+
+IMPERIAL BLASTER (SUMMARY)
+
+General:
+- One of the most widely produced accessories in the entire line
+- Used across multiple figures (not Stormtrooper-exclusive)
+
+Key Notes:
+- Large number of moulds (M1–Mx variants)
+- Colour ranges:
+  - black
+  - dark blue
+  - mid blue
+  - light blue / grey-blue
+
+Important:
+- Blaster ID should be handled separately in a dedicated accessory file
+
+--------------------------------------------------
+
+FIGURE VARIANT FAMILIES
+
+COO Family 1: Kader / Poch / Nina  
+COO Family 2: Unitoy / PBP  
+COO Family 3: Unitoy / Poch / PBP / Lili Ledy  
+COO Family 4: Smile  
+COO Family 5: Smile (No COO)
+
+--------------------------------------------------
+
+GENERAL PRODUCTION NOTES
+
+- Stormtrooper is one of the highest volume figures produced
+- Heavy variation exists across:
+  - plastic tone (bright white → cream)
+  - helmet sculpt
+  - torso material
+  - COO markings
+
+Important:
+- COO alone is not sufficient for identification
+- Must combine:
+  - torso type
+  - helmet details
+  - plastic colour
+  - mould features
+
+--------------------------------------------------
+
+HARD TORSO VARIANT (IMPORTANT)
+
+Definition:
+- Torso made from a noticeably harder plastic compared to standard versions
+
+Factory:
+- Smile
+
+COO:
+- Always No COO (Family V)
+
+Key Traits:
+- Hard, rigid torso plastic
+- Visual similarity to Lili Ledy / PBP figures (but different COO)
+
+Important Warning:
+- Do NOT confuse with:
+  - Lili Ledy Stormtrooper
+  - PBP Stormtrooper
+
+Helmet Subvariant:
+- Back of helmet shows two known variations:
+  - curved (arc shape)
+  - flat line
+
+Collector Tip:
+- Hard torso version is typically found alongside standard Smile figures for comparison
+- Best identified by feel + COO + helmet detail combination
+
+--------------------------------------------------
+
+COLOUR VARIATION
+
+Common Tones:
+- Bright white
+- Off-white / cream
+- Slight yellowing (age or production)
+
+Notes:
+- Discolouration vs factory tone can be difficult to separate
+- Compare across limbs and torso for consistency
+
+--------------------------------------------------
+
+HELMET VARIATION
+
+Look for:
+- Eye paint shape
+- Mouth vent paint
+- Back mould line (arc vs flat)
+- Symmetry differences
+
+Important:
+- Helmet sculpt is one of the key identifiers across COO families
+
+--------------------------------------------------
+
+REPRODUCTIONS (IMPORTANT)
+
+Stormtrooper is one of the most reproduced figures.
+
+Warning Signs:
+- Incorrect plastic tone (too bright or too matte)
+- Soft or incorrect helmet details
+- Incorrect proportions
+- Poor paint alignment
+- Incorrect COO or missing expected traits
+
+Collector Tip:
+- Always compare:
+  - helmet sculpt
+  - torso feel
+  - blaster style
+  - COO marking
+
+--------------------------------------------------
+
+COMMON MISTAKES
+
+- Confusing hard torso with Lili Ledy / PBP
+- Over-relying on COO alone
+- Ignoring helmet sculpt differences
+- Assuming all white figures are identical
+- Not checking torso material
+
+--------------------------------------------------
+
+Sources:
+- Variant Villain Stormtrooper Guide
+- Variant Villain Imperial Blaster Guide
+- Hard torso notes (user supplied)
