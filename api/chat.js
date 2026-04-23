@@ -36,8 +36,7 @@ function getSearchTerms(message, history = []) {
     chewie: ["chewbacca"],
     vader: ["darth-vader"],
     obiwan: ["obi-wan-kenobi", "ben-obi-wan-kenobi", "ben-kenobi"],
-    earlybird: ["early-bird", "early-bird-certificate-package"],
-    "early-bird": ["early-bird", "early-bird-certificate-package"]
+    earlybird: ["early-bird", "early-bird-certificate-package"]
   };
 
   const expanded = [...words];
@@ -91,9 +90,10 @@ async function collectFiles(baseDir) {
   return files;
 }
 
-function scoreFile(file, message, searchTerms) {
+function scoreFile(file, message, searchTerms, history = []) {
   let score = 0;
-  const lower = normaliseMessage(message);
+  const combined = `${history.map(h => h.content || "").join(" ")} ${message}`;
+  const lower = normaliseMessage(combined);
 
   for (const term of searchTerms) {
     if (file.slug.includes(term)) score += 20;
@@ -116,6 +116,35 @@ function scoreFile(file, message, searchTerms) {
   return score;
 }
 
+function sanitiseHistory(history) {
+  if (!Array.isArray(history)) return [];
+
+  return history
+    .filter(
+      m =>
+        m &&
+        typeof m.content === "string" &&
+        (m.role === "user" || m.role === "assistant")
+    )
+    .slice(-12);
+}
+
+function buildTranscript(history) {
+  if (!history.length) return "None";
+
+  return history
+    .map(m => `${m.role === "user" ? "User" : "VF-CB"}: ${m.content}`)
+    .join("\n\n");
+}
+
+function isShortFollowUp(message) {
+  const trimmed = String(message || "").trim().toLowerCase();
+  if (!trimmed) return false;
+
+  const wordCount = trimmed.split(/\s+/).length;
+  return wordCount <= 5;
+}
+
 async function buildContext(message, history = []) {
   const baseDir = path.join(process.cwd(), "data");
   const files = await collectFiles(baseDir);
@@ -124,7 +153,7 @@ async function buildContext(message, history = []) {
   const ranked = files
     .map(file => ({
       ...file,
-      score: scoreFile(file, `${history.map(h => h.content || "").join(" ")} ${message}`, searchTerms)
+      score: scoreFile(file, message, searchTerms, history)
     }))
     .filter(f => f.score > 0)
     .sort((a, b) => b.score - a.score)
@@ -142,19 +171,6 @@ async function buildContext(message, history = []) {
   return context;
 }
 
-function sanitiseHistory(history) {
-  if (!Array.isArray(history)) return [];
-
-  return history
-    .filter(
-      m =>
-        m &&
-        typeof m.content === "string" &&
-        (m.role === "user" || m.role === "assistant")
-    )
-    .slice(-12);
-}
-
 export default async function handler(req, res) {
   try {
     if (req.method !== "POST") {
@@ -169,6 +185,8 @@ export default async function handler(req, res) {
 
     const cleanHistory = sanitiseHistory(history);
     const context = await buildContext(message, cleanHistory);
+    const transcript = buildTranscript(cleanHistory);
+    const shortFollowUp = isShortFollowUp(message);
 
     const systemPrompt = `
 You are VF-CB, a vintage Star Wars figure and accessory expert.
@@ -216,7 +234,16 @@ Examples:
 
 4. Make it clear that COO alone is not enough to confirm a figure's origins
 
-5. When the user gives a short reply such as "cloth", "vinyl", "hong kong", "no blaster", or similar, treat it as part of the ongoing identification conversation and continue from the previous step rather than starting over
+5. If the latest user message is short, such as:
+- cloth
+- vinyl
+- no blaster
+- hong kong
+- taiwan
+- no coo
+then treat it as a direct reply to the previous identification question and continue the same conversation
+
+6. Do not restart the conversation or reintroduce yourself unless the user clearly starts a new topic
 
 Never:
 - Invent information
@@ -232,24 +259,25 @@ Goal:
 Sound like a knowledgeable collector helping another collector identify or understand something, using only grounded, reliable information.
 `;
 
-    const conversationalHistory = cleanHistory.map(m => ({
-      role: m.role,
-      content: m.content
-    }));
-
-    const messages = [
-      ...conversationalHistory,
-      {
-        role: "user",
-        content: `
-Question:
+    const userPrompt = `
+Current user message:
 ${message}
+
+Is this a short follow-up reply?
+${shortFollowUp ? "Yes" : "No"}
+
+Recent conversation:
+${transcript}
 
 Supporting information:
 ${context}
-`
-      }
-    ];
+
+Instructions for this turn:
+- Use the recent conversation to understand what the user means
+- If the current message is a short follow-up, continue from the previous question
+- Do not restart or introduce yourself again
+- Move the identification forward by asking or answering the next useful step
+`;
 
     const response = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
@@ -262,7 +290,12 @@ ${context}
         model: "claude-haiku-4-5",
         max_tokens: 700,
         system: systemPrompt,
-        messages
+        messages: [
+          {
+            role: "user",
+            content: userPrompt
+          }
+        ]
       })
     });
 
