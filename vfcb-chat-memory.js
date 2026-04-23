@@ -72,27 +72,38 @@
   }
 
   function isJawaStart(msg) {
-    const t = normalise(msg);
-    return t.includes("jawa");
+    return normalise(msg).includes("jawa");
   }
 
   function isCooQuestion(msg) {
     const t = normalise(msg);
-    return t === "coo" || t.includes("what's coo") || t.includes("whats coo") || t.includes("what does coo mean");
+    return (
+      t === "coo" ||
+      t.includes("what's coo") ||
+      t.includes("whats coo") ||
+      t.includes("what does coo mean")
+    );
   }
 
   function detectCapeAnswer(msg) {
-    const t = normalise(msg);
+    if (!msg) return null;
 
-    if (t === "1" || t === "vinyl" || t.includes("vinyl cape")) return "vinyl";
-    if (t === "2" || t === "cloth" || t.includes("cloth cloak") || t.includes("cloth cape")) return "cloth";
+    const m = String(msg).trim().toLowerCase();
+
+    if (m === "1") return "vinyl";
+    if (m === "2") return "cloth";
+    if (m === "3") return "none";
+
+    if (m.includes("vinyl")) return "vinyl";
+    if (m.includes("cloth") || m.includes("fabric")) return "cloth";
+
     if (
-      t === "3" ||
-      t === "no cape" ||
-      t === "missing cloak" ||
-      t === "missing cape" ||
-      t === "naked" ||
-      t === "no covering"
+      m.includes("none") ||
+      m.includes("no cape") ||
+      m.includes("missing cloak") ||
+      m.includes("missing cape") ||
+      m.includes("naked") ||
+      m.includes("no covering")
     ) {
       return "none";
     }
