@@ -114,20 +114,33 @@
   function looksLikeNoCooJawa(msg) {
     const t = normalise(msg);
 
-    return (
+    if (
       t.includes("g.m.f.g.i") ||
       t.includes("gmfgi") ||
       t.includes("cmfg 1977") ||
-      t.includes("gmfgi 1977") ||
+      t.includes("gmfgi 1977")
+    ) {
+      return true;
+    }
+
+    if (
+      t.includes("1977") &&
+      !t.includes("hong kong") &&
+      !t.includes("taiwan") &&
+      !t.includes("macau") &&
+      !t.includes("china") &&
       (
-        t.includes("1977") &&
-        !t.includes("hong kong") &&
-        !t.includes("taiwan") &&
-        !t.includes("macau") &&
-        !t.includes("china") &&
-        (t.includes("hard to tell") || t.includes("looks like") || t.includes("just says"))
+        t.includes("hard to tell") ||
+        t.includes("looks like") ||
+        t.includes("just says") ||
+        t.includes("only says") ||
+        t.includes("cant see")
       )
-    );
+    ) {
+      return true;
+    }
+
+    return false;
   }
 
   function jawaOpening() {
@@ -214,14 +227,14 @@ To confirm a Jawa properly, you also need to check:
   }
 
   function noCooKaderReply() {
-    return `If you can't see Hong Kong on the leg, you must have a Kader China variant.
+    return `If there’s no Hong Kong marking on the leg, you must have a Kader China variant.
 
 It will have just one line of text reading:
 © G.M.F.G.I. 1977
 
 That stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
 
-KADER (CHINA) NCOO should be:
+KADER (CHINA) NO COO should be:
 
 • Rectangular dark brown bandolier
 • Round yellow eyes
@@ -235,15 +248,14 @@ or
 
 Paired with an M2 Kader Jawa Blaster — the one with the short bump.
 
-There are two variants within this Kader China NCOO version.
+There are two variants within this Kader China NO COO version.
 The difference is the size of the copyright text on the back of the leg.
 
-If you want, next send:
-• a close photo of the back of the legs
-• a front photo of the figure
-• and the cloak hood if present
-
-That will let me narrow down which of the two Kader China NCOO variants it is.`;
+The next useful checks are:
+• bandolier tone
+• eye colour
+• whether the cloak is smooth cloth
+• and whether the blaster is an M2 with the short bump`;
   }
 
   async function askApi(message) {
