@@ -227,36 +227,39 @@ To confirm a Jawa properly, you also need to check:
   }
 
   function noCooKaderReply() {
-    return `If there’s no Hong Kong marking on the leg, you must have a Kader China variant.
+  return `If there’s no Hong Kong marking on the leg, you’re looking at a Kader China variant.
+
+M2 Kader China on Variant Villain.
 
 It will have just one line of text reading:
 © G.M.F.G.I. 1977
 
 That stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
 
-KADER (CHINA) NO COO should be:
+This variant was originally paired with:
+• an M2 Kader Jawa Blaster (short rear bump)
+• a small hood, smooth cloth cloak
 
-• Rectangular dark brown bandolier
-• Round yellow eyes
-• Smooth cloth cloak
+KADER (CHINA) NO COO Jawas should have:
+
+• Rectangular dark brown bandolier  
+• Round yellow eyes  
+• Smooth cloth cloak  
 
 or
 
-• Rectangular, very dark brown bandolier
-• Round yellow eyes
-• Smooth cloth cloak
-
-Paired with an M2 Kader Jawa Blaster — the one with the short bump.
+• Rectangular, very dark brown bandolier  
+• Round yellow eyes  
+• Smooth cloth cloak  
 
 There are two variants within this Kader China NO COO version.
-The difference is the size of the copyright text on the back of the leg.
 
-The next useful checks are:
-• bandolier tone
-• eye colour
-• whether the cloak is smooth cloth
-• and whether the blaster is an M2 with the short bump`;
-  }
+The most noticeable difference is the size of the copyright text on the back of the leg.
+
+Next useful checks:
+• bandolier tone  
+• eye colour`;
+}
 
   async function askApi(message) {
     setStatus("Thinking...");
