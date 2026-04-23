@@ -17,10 +17,11 @@ function normaliseMessage(text) {
   return String(text || "").toLowerCase();
 }
 
-function getSearchTerms(message, history = []) {
+function getSearchTerms(message, history = [], activeFigure = "") {
   const combined = [
     ...history.map(m => m?.content || ""),
     message || "",
+    activeFigure || ""
   ].join(" ");
 
   const lower = normaliseMessage(combined);
@@ -31,12 +32,14 @@ function getSearchTerms(message, history = []) {
     jawa: ["jawa"],
     jawas: ["jawa"],
     luke: ["luke-skywalker"],
-    leia: ["princess-leia-organa"],
+    leia: ["princess-leia-organa", "leia"],
     chewy: ["chewbacca"],
     chewie: ["chewbacca"],
     vader: ["darth-vader"],
     obiwan: ["obi-wan-kenobi", "ben-obi-wan-kenobi", "ben-kenobi"],
-    earlybird: ["early-bird", "early-bird-certificate-package"]
+    ben: ["obi-wan-kenobi", "ben-obi-wan-kenobi", "ben-kenobi"],
+    earlybird: ["early-bird", "early-bird-certificate-package"],
+    "early-bird": ["early-bird", "early-bird-certificate-package"]
   };
 
   const expanded = [...words];
@@ -47,7 +50,70 @@ function getSearchTerms(message, history = []) {
     }
   }
 
+  if (activeFigure) {
+    expanded.push(activeFigure);
+  }
+
   return unique(expanded.map(slugify)).filter(Boolean);
+}
+
+function sanitiseHistory(history) {
+  if (!Array.isArray(history)) return [];
+
+  return history
+    .filter(
+      m =>
+        m &&
+        typeof m.content === "string" &&
+        (m.role === "user" || m.role === "assistant")
+    )
+    .slice(-12);
+}
+
+function buildTranscript(history) {
+  if (!history.length) return "None";
+
+  return history
+    .map(m => `${m.role === "user" ? "User" : "VF-CB"}: ${m.content}`)
+    .join("\n\n");
+}
+
+function isShortFollowUp(message) {
+  const trimmed = String(message || "").trim().toLowerCase();
+  if (!trimmed) return false;
+  return trimmed.split(/\s+/).length <= 5;
+}
+
+function detectActiveFigure(message, history = []) {
+  const combined = [
+    ...history.map(m => m?.content || ""),
+    message || ""
+  ].join(" ");
+
+  const lower = normaliseMessage(combined);
+
+  const figurePatterns = [
+    { key: "jawa", patterns: ["jawa", "jawas"] },
+    { key: "luke-skywalker", patterns: ["luke skywalker", "luke"] },
+    { key: "princess-leia-organa", patterns: ["princess leia", "leia"] },
+    { key: "chewbacca", patterns: ["chewbacca", "chewie", "chewy"] },
+    { key: "r2-d2", patterns: ["r2-d2", "r2d2", "r2"] },
+    { key: "darth-vader", patterns: ["darth vader", "vader"] },
+    { key: "obi-wan-kenobi", patterns: ["obi-wan", "obi wan", "ben kenobi", "ben"] },
+    { key: "sand-people", patterns: ["sand people", "tusken", "tusken raider"] }
+  ];
+
+  let found = "";
+
+  for (const figure of figurePatterns) {
+    for (const pattern of figure.patterns) {
+      if (lower.includes(pattern)) {
+        found = figure.key;
+      }
+    }
+  }
+
+  return found;
 }
 
 async function safeReadDir(dirPath) {
@@ -90,7 +156,7 @@ async function collectFiles(baseDir) {
   return files;
 }
 
-function scoreFile(file, message, searchTerms, history = []) {
+function scoreFile(file, message, searchTerms, history = [], activeFigure = "") {
   let score = 0;
   const combined = `${history.map(h => h.content || "").join(" ")} ${message}`;
   const lower = normaliseMessage(combined);
@@ -113,47 +179,23 @@ function scoreFile(file, message, searchTerms, history = []) {
     score += 50;
   }
 
+  if (activeFigure) {
+    if (file.slug.includes(activeFigure)) score += 60;
+    if (file.folder === "figures" && file.slug === `${activeFigure}-reference`) score += 80;
+  }
+
   return score;
 }
 
-function sanitiseHistory(history) {
-  if (!Array.isArray(history)) return [];
-
-  return history
-    .filter(
-      m =>
-        m &&
-        typeof m.content === "string" &&
-        (m.role === "user" || m.role === "assistant")
-    )
-    .slice(-12);
-}
-
-function buildTranscript(history) {
-  if (!history.length) return "None";
-
-  return history
-    .map(m => `${m.role === "user" ? "User" : "VF-CB"}: ${m.content}`)
-    .join("\n\n");
-}
-
-function isShortFollowUp(message) {
-  const trimmed = String(message || "").trim().toLowerCase();
-  if (!trimmed) return false;
-
-  const wordCount = trimmed.split(/\s+/).length;
-  return wordCount <= 5;
-}
-
-async function buildContext(message, history = []) {
+async function buildContext(message, history = [], activeFigure = "") {
   const baseDir = path.join(process.cwd(), "data");
   const files = await collectFiles(baseDir);
-  const searchTerms = getSearchTerms(message, history);
+  const searchTerms = getSearchTerms(message, history, activeFigure);
 
   const ranked = files
     .map(file => ({
       ...file,
-      score: scoreFile(file, message, searchTerms, history)
+      score: scoreFile(file, message, searchTerms, history, activeFigure)
     }))
     .filter(f => f.score > 0)
     .sort((a, b) => b.score - a.score)
@@ -184,7 +226,8 @@ export default async function handler(req, res) {
     }
 
     const cleanHistory = sanitiseHistory(history);
-    const context = await buildContext(message, cleanHistory);
+    const activeFigure = detectActiveFigure(message, cleanHistory);
+    const context = await buildContext(message, cleanHistory, activeFigure);
     const transcript = buildTranscript(cleanHistory);
     const shortFollowUp = isShortFollowUp(message);
 
@@ -243,7 +286,11 @@ Examples:
 - no coo
 then treat it as a direct reply to the previous identification question and continue the same conversation
 
-6. Do not restart the conversation or reintroduce yourself unless the user clearly starts a new topic
+6. If an active figure has already been established in the recent conversation, stay locked on that figure unless the user clearly changes subject
+
+7. Do not switch to another figure just because a word such as "cape", "vinyl", "cloth", or "hood" could also apply elsewhere
+
+8. Do not restart the conversation or reintroduce yourself unless the user clearly starts a new topic
 
 Never:
 - Invent information
@@ -263,8 +310,11 @@ Sound like a knowledgeable collector helping another collector identify or under
 Current user message:
 ${message}
 
-Is this a short follow-up reply?
+Short follow-up reply?
 ${shortFollowUp ? "Yes" : "No"}
+
+Active figure/topic from the recent conversation:
+${activeFigure || "None clearly established"}
 
 Recent conversation:
 ${transcript}
@@ -275,6 +325,7 @@ ${context}
 Instructions for this turn:
 - Use the recent conversation to understand what the user means
 - If the current message is a short follow-up, continue from the previous question
+- If an active figure/topic is already established, stay on that figure/topic
 - Do not restart or introduce yourself again
 - Move the identification forward by asking or answering the next useful step
 `;
