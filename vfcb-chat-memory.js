@@ -231,8 +231,7 @@ To confirm a Jawa properly, you also need to check:
 
 M2 Kader China on Variant Villain.
 
-It will have just one line of text reading:
-© G.M.F.G.I. 1977
+It will have just one line of text reading: © G.M.F.G.I. 1977
 
 That stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
 
@@ -240,19 +239,10 @@ This variant was originally paired with:
 • an M2 Kader Jawa Blaster (short rear bump)
 • a small hood, smooth cloth cloak
 
-KADER (CHINA) NO COO Jawas should have:
+KADER (CHINA) No COO Jawas should have:
+A rectangular dark brown/very dark brown bandolier  
 
-• Rectangular dark brown bandolier  
-• Round yellow eyes  
-• Smooth cloth cloak  
-
-or
-
-• Rectangular, very dark brown bandolier  
-• Round yellow eyes  
-• Smooth cloth cloak  
-
-There are two variants within this Kader China NO COO version.
+There are two variants within this Kader China No COO version.
 
 The most noticeable difference is the size of the copyright text on the back of the leg.
 
