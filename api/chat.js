@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 
 function normaliseText(text) {
-  return String(text || "").toLowerCase();
+  return String(text || "").toLowerCase().trim();
 }
 
 function sanitiseHistory(history) {
@@ -36,29 +36,159 @@ function detectActiveFigure(message, history = []) {
   return "";
 }
 
-function expandShortReply(message, activeFigure) {
-  const m = String(message || "").trim().toLowerCase();
+function buildConversationText(message, history = []) {
+  return [
+    ...history.map((m) => m.content || ""),
+    message || "",
+  ].join(" ").toLowerCase();
+}
 
-  if (!activeFigure) return message;
+function looksLikeJawaNoCooMarking(message) {
+  const lower = normaliseText(message);
 
-  const map = {
-    "1": `User is identifying a ${activeFigure} and says it has a vinyl cape.`,
-    "2": `User is identifying a ${activeFigure} and says it has a cloth cloak or cloth cape.`,
-    "3": `User is identifying a ${activeFigure} and says it has no cape or cloak present.`,
-    "vinyl": `User is identifying a ${activeFigure} and says it has a vinyl cape.`,
-    "cloth": `User is identifying a ${activeFigure} and says it has a cloth cloak or cloth cape.`,
-    "no cape": `User is identifying a ${activeFigure} and says it has no cape or cloak present.`,
-    "missing cloak": `User is identifying a ${activeFigure} and says it has no cape or cloak present.`,
-    "naked": `User is identifying a ${activeFigure} and says it has no cape or cloak present.`,
-    "no blaster": `User is identifying a ${activeFigure} and says the blaster is missing.`,
-    "hong kong": `User is identifying a ${activeFigure} and says the COO marking is Hong Kong.`,
-    "taiwan": `User is identifying a ${activeFigure} and says the COO marking is Taiwan.`,
-    "china": `User is identifying a ${activeFigure} and says the COO marking is China.`,
-    "macau": `User is identifying a ${activeFigure} and says the COO marking is Macau.`,
-    "no coo": `User is identifying a ${activeFigure} and says there is no COO marking visible.`,
-  };
+  return (
+    lower.includes("gmfgi") ||
+    lower.includes("g.m.f.g.i") ||
+    lower.includes("cmfg") ||
+    (lower.includes("1977") && (lower.includes("hard to tell") || lower.includes("just says") || lower.includes("looks like")))
+  );
+}
 
-  return map[m] || message;
+function getDeterministicReply(message, history = [], activeFigure = "") {
+  const lower = normaliseText(message);
+  const convo = buildConversationText(message, history);
+
+  if (activeFigure === "jawa") {
+    if (
+      lower === "help me identify a jawa" ||
+      lower === "help me identify my jawa" ||
+      lower === "can you help me identify a jawa" ||
+      lower === "can you help me identify my jawa" ||
+      lower === "help me identify a jawa please" ||
+      lower === "help me identify my jawa please"
+    ) {
+      return `Yes I can do that — let's start with the cape.
+
+Which of these does your Jawa have?
+
+1. Vinyl cape - smooth plastic
+2. Cloth cloak - fabric
+3. Or neither. Just a naked figure
+
+Just tell me: vinyl, cloth, or missing cloak.
+Or you can reply with 1, 2 or 3.`;
+    }
+
+    if (lower === "1" || lower === "vinyl") {
+      return `Good — that means you have the early vinyl cape version.
+
+Next step:
+Check the COO marking on the legs.
+
+Then we confirm it properly using:
+• body sculpt
+• plastic colour
+• paint details
+• and the correct blaster pairing
+
+Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.
+
+What does the leg marking say?`;
+    }
+
+    if (lower === "2" || lower === "cloth") {
+      return `Good — so we're dealing with a cloth cloak Jawa.
+
+Next step:
+Check the COO marking on the legs.
+
+After that, the next useful things are:
+• hood size and shape
+• stitching / construction
+• eye colour
+• bandolier shape and tone
+• and whether the blaster is present
+
+Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.
+
+What does the leg marking say?`;
+    }
+
+    if (
+      lower === "3" ||
+      lower === "no cape" ||
+      lower === "missing cloak" ||
+      lower === "naked"
+    ) {
+      return `Right — so your Jawa is missing its cape, what collectors would usually call a naked figure.
+
+That’s common, so we identify it from the figure itself.
+
+Next step:
+Check the COO marking on the legs.
+
+Then we confirm it using:
+• mould / sculpt
+• plastic colour
+• eye paint
+• bandolier shape and tone
+• and any remaining accessories
+
+Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.
+
+What does the leg marking say?`;
+    }
+
+    if (lower.includes("what's coo") || lower.includes("whats coo") || lower === "coo") {
+      return `COO means Country of Origin.
+
+That is the country marking usually found on the legs of vintage figures, such as Hong Kong or Taiwan.
+
+On Jawas, COO is a very useful starting point — but not enough on its own.
+
+To confirm a Jawa properly, you also need to check:
+• mould / sculpt
+• eye colour
+• plastic colour
+• bandolier shape and tone
+• and cloak or blaster pairing if present`;
+    }
+
+    if (looksLikeJawaNoCooMarking(message) || convo.includes("jawa") && looksLikeJawaNoCooMarking(message)) {
+      return `If you can't see Hong Kong on the leg, you must have a Kader China variant.
+
+It will have just one line of text reading:
+© G.M.F.G.I. 1977
+
+That stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
+
+KADER (CHINA) NCOO should be:
+
+• Rectangular dark brown bandolier
+• Round yellow eyes
+• Smooth cloth cloak
+
+or
+
+• Rectangular, very dark brown bandolier
+• Round yellow eyes
+• Smooth cloth cloak
+
+Paired with an M2 Kader Jawa Blaster — the one with the short bump.
+
+There are two variants within this Kader China NCOO version.
+The difference is the size of the copyright text on the back of the leg.
+
+If you want, next send:
+• a close photo of the back of the legs
+• a front photo of the figure
+• and the cloak hood if present
+
+That will let me narrow down which of the two Kader China NCOO variants it is.`;
+    }
+  }
+
+  return null;
 }
 
 async function safeReadDir(dirPath) {
@@ -86,15 +216,14 @@ async function collectFiles(baseDir) {
     const entries = await safeReadDir(folderPath);
 
     for (const entry of entries) {
-      if (!entry.isFile()) continue;
-      if (!entry.name.endsWith(".txt")) continue;
-
-      files.push({
-        folder,
-        name: entry.name,
-        slug: entry.name.replace(/\.txt$/i, "").toLowerCase(),
-        fullPath: path.join(folderPath, entry.name),
-      });
+      if (entry.isFile() && entry.name.endsWith(".txt")) {
+        files.push({
+          folder,
+          name: entry.name,
+          slug: entry.name.replace(/\.txt$/i, "").toLowerCase(),
+          fullPath: path.join(folderPath, entry.name),
+        });
+      }
     }
   }
 
@@ -188,9 +317,17 @@ export default async function handler(req, res) {
     const lastUserMessage =
       [...incomingMessages].reverse().find((m) => m.role === "user")?.content || "";
 
-    const historyOnly = incomingMessages.slice(0, -1).filter((m) => m.role === "user" || m.role === "assistant");
+    const historyOnly = incomingMessages
+      .slice(0, -1)
+      .filter((m) => m.role === "user" || m.role === "assistant");
+
     const activeFigure = detectActiveFigure(lastUserMessage, historyOnly);
-    const expandedUserMessage = expandShortReply(lastUserMessage, activeFigure);
+
+    const deterministicReply = getDeterministicReply(lastUserMessage, historyOnly, activeFigure);
+    if (deterministicReply) {
+      return res.status(200).json({ reply: deterministicReply });
+    }
+
     const context = await buildContext(activeFigure);
 
     const systemPrompt = `
@@ -212,23 +349,8 @@ Core rules:
 - Do not state rarity or frequency unless clearly supported
 - Do not rely on COO alone; mould, paint, plastic colour and assembly traits also matter
 
-Jawa flow:
-If the user is identifying a Jawa, start with:
-1. Vinyl cape
-2. Cloth cloak / cloth cape
-3. No covering present / naked
-
 Collectors may casually call both vinyl and cloth versions a cape.
 
-If the user says no cape, missing cloak, naked, or 3:
-- Keep the subject locked on Jawa
-- Confirm the cape is missing
-- Explain that this is common
-- Move to the next step:
-  check the COO marking on the legs
-- Then explain that mould, paint, plastic colour and assembly traits are needed to confirm the figure
-
-Do not restart the conversation or reintroduce yourself after the first turn.
 Keep replies short and practical.
 `;
 
@@ -247,7 +369,7 @@ Supporting reference context:
 ${context}
 
 Current user message:
-${expandedUserMessage}
+${lastUserMessage}
         `.trim(),
       },
     ];
@@ -261,7 +383,7 @@ ${expandedUserMessage}
       body: JSON.stringify({
         model: "gpt-4o-mini",
         messages: messagesForOpenAI,
-        temperature: 0.3,
+        temperature: 0.2,
       }),
     });
 
