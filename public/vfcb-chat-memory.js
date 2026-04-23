@@ -1,68 +1,66 @@
-/*
-  VF-CB conversation memory helper
-  --------------------------------
-  1. Include this file on the page that hosts your chat UI.
-  2. Wire sendVFChat(message) into your existing chat submit button.
-  3. It stores the last 12 turns in localStorage and sends them to /api/chat.
-*/
+const chatBox = document.querySelector("#vfcb-chat-box");
+const input = document.querySelector("#vfcb-input");
+const sendBtn = document.querySelector("#vfcb-send");
 
-const VF_CB_STORAGE_KEY = "vfcb_chat_history_v1";
+let history = [];
 
-function vfcbLoadHistory() {
+function addMessage(role, text) {
+  const div = document.createElement("div");
+  div.className = role === "user" ? "user-msg" : "bot-msg";
+  div.innerText = text;
+  chatBox.appendChild(div);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+async function sendMessage() {
+  const message = input.value.trim();
+  if (!message) return;
+
+  addMessage("user", message);
+
+  history.push({ role: "user", content: message });
+
+  input.value = "";
+
   try {
-    const raw = localStorage.getItem(VF_CB_STORAGE_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    if (!Array.isArray(parsed)) return [];
-    return parsed.filter(m => m && typeof m.content === "string" && (m.role === "user" || m.role === "assistant"));
-  } catch {
-    return [];
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        message,
+        history,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (!data.reply) {
+      throw new Error("No reply");
+    }
+
+    addMessage("assistant", data.reply);
+
+    history.push({
+      role: "assistant",
+      content: data.reply,
+    });
+
+  } catch (err) {
+    console.error(err);
+
+    addMessage(
+      "assistant",
+      "Something went wrong getting a response. Try again."
+    );
   }
 }
 
-function vfcbSaveHistory(history) {
-  localStorage.setItem(VF_CB_STORAGE_KEY, JSON.stringify(history.slice(-12)));
-}
+sendBtn.addEventListener("click", sendMessage);
 
-function vfcbClearHistory() {
-  localStorage.removeItem(VF_CB_STORAGE_KEY);
-}
-
-async function sendVFChat(message) {
-  const history = vfcbLoadHistory();
-
-  const response = await fetch("/api/chat", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      message,
-      history,
-    }),
-  });
-
-  const data = await response.json();
-
-  if (!response.ok) {
-    throw new Error(data?.error || "Chat request failed");
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    sendMessage();
   }
-
-  const updatedHistory = [
-    ...history,
-    { role: "user", content: message },
-    { role: "assistant", content: data.reply || "" },
-  ].slice(-12);
-
-  vfcbSaveHistory(updatedHistory);
-
-  return data;
-}
-
-// Optional helper for debugging in browser console
-window.VFCB = {
-  sendVFChat,
-  vfcbLoadHistory,
-  vfcbSaveHistory,
-  vfcbClearHistory,
-};
+});
