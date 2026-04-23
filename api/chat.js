@@ -17,6 +17,79 @@ function normaliseMessage(text) {
   return String(text || "").toLowerCase();
 }
 
+function sanitiseHistory(history) {
+  if (!Array.isArray(history)) return [];
+  return history
+    .filter(
+      m =>
+        m &&
+        typeof m.content === "string" &&
+        (m.role === "user" || m.role === "assistant")
+    )
+    .slice(-12);
+}
+
+function isShortFollowUp(message) {
+  const trimmed = String(message || "").trim().toLowerCase();
+  if (!trimmed) return false;
+  return trimmed.split(/\s+/).length <= 5;
+}
+
+function detectActiveFigure(message, history = []) {
+  const combined = [
+    ...history.map(m => m?.content || ""),
+    message || ""
+  ].join(" ");
+
+  const lower = normaliseMessage(combined);
+
+  const figurePatterns = [
+    { key: "jawa", patterns: ["jawa", "jawas"] },
+    { key: "luke-skywalker", patterns: ["luke skywalker", "luke"] },
+    { key: "princess-leia-organa", patterns: ["princess leia", "leia"] },
+    { key: "chewbacca", patterns: ["chewbacca", "chewie", "chewy"] },
+    { key: "r2-d2", patterns: ["r2-d2", "r2d2", "r2"] },
+    { key: "darth-vader", patterns: ["darth vader", "vader"] },
+    { key: "obi-wan-kenobi", patterns: ["obi-wan", "obi wan", "ben kenobi"] },
+    { key: "sand-people", patterns: ["sand people", "tusken", "tusken raider"] }
+  ];
+
+  let found = "";
+
+  for (const figure of figurePatterns) {
+    for (const pattern of figure.patterns) {
+      if (lower.includes(pattern)) {
+        found = figure.key;
+      }
+    }
+  }
+
+  return found;
+}
+
+function expandShortReply(message, activeFigure) {
+  const trimmed = String(message || "").trim().toLowerCase();
+
+  if (!activeFigure || !trimmed) return message;
+
+  const map = {
+    "cloth": `The user is identifying a ${activeFigure} and says it has a cloth body covering.`,
+    "cloth cloak": `The user is identifying a ${activeFigure} and says it has a cloth cloak.`,
+    "vinyl": `The user is identifying a ${activeFigure} and says it has a vinyl cape.`,
+    "vinyl cape": `The user is identifying a ${activeFigure} and says it has a vinyl cape.`,
+    "no cape": `The user is identifying a ${activeFigure} and says it has no body covering present.`,
+    "no cloak": `The user is identifying a ${activeFigure} and says it has no body covering present.`,
+    "no blaster": `The user is identifying a ${activeFigure} and says the accessory weapon is missing.`,
+    "hong kong": `The user is identifying a ${activeFigure} and says the COO is Hong Kong.`,
+    "taiwan": `The user is identifying a ${activeFigure} and says the COO is Taiwan.`,
+    "china": `The user is identifying a ${activeFigure} and says the COO is China.`,
+    "macau": `The user is identifying a ${activeFigure} and says the COO is Macau.`,
+    "no coo": `The user is identifying a ${activeFigure} and says there is no COO marking visible.`
+  };
+
+  return map[trimmed] || message;
+}
+
 function getSearchTerms(message, history = [], activeFigure = "") {
   const combined = [
     ...history.map(m => m?.content || ""),
@@ -50,70 +123,9 @@ function getSearchTerms(message, history = [], activeFigure = "") {
     }
   }
 
-  if (activeFigure) {
-    expanded.push(activeFigure);
-  }
+  if (activeFigure) expanded.push(activeFigure);
 
   return unique(expanded.map(slugify)).filter(Boolean);
-}
-
-function sanitiseHistory(history) {
-  if (!Array.isArray(history)) return [];
-
-  return history
-    .filter(
-      m =>
-        m &&
-        typeof m.content === "string" &&
-        (m.role === "user" || m.role === "assistant")
-    )
-    .slice(-12);
-}
-
-function buildTranscript(history) {
-  if (!history.length) return "None";
-
-  return history
-    .map(m => `${m.role === "user" ? "User" : "VF-CB"}: ${m.content}`)
-    .join("\n\n");
-}
-
-function isShortFollowUp(message) {
-  const trimmed = String(message || "").trim().toLowerCase();
-  if (!trimmed) return false;
-  return trimmed.split(/\s+/).length <= 5;
-}
-
-function detectActiveFigure(message, history = []) {
-  const combined = [
-    ...history.map(m => m?.content || ""),
-    message || ""
-  ].join(" ");
-
-  const lower = normaliseMessage(combined);
-
-  const figurePatterns = [
-    { key: "jawa", patterns: ["jawa", "jawas"] },
-    { key: "luke-skywalker", patterns: ["luke skywalker", "luke"] },
-    { key: "princess-leia-organa", patterns: ["princess leia", "leia"] },
-    { key: "chewbacca", patterns: ["chewbacca", "chewie", "chewy"] },
-    { key: "r2-d2", patterns: ["r2-d2", "r2d2", "r2"] },
-    { key: "darth-vader", patterns: ["darth vader", "vader"] },
-    { key: "obi-wan-kenobi", patterns: ["obi-wan", "obi wan", "ben kenobi", "ben"] },
-    { key: "sand-people", patterns: ["sand people", "tusken", "tusken raider"] }
-  ];
-
-  let found = "";
-
-  for (const figure of figurePatterns) {
-    for (const pattern of figure.patterns) {
-      if (lower.includes(pattern)) {
-        found = figure.key;
-      }
-    }
-  }
-
-  return found;
 }
 
 async function safeReadDir(dirPath) {
@@ -156,6 +168,35 @@ async function collectFiles(baseDir) {
   return files;
 }
 
+function isGeneralReference(file) {
+  const generalRefs = [
+    "accessory-production",
+    "coo-guide",
+    "vendor-codes",
+    "early-bird-certificate-package"
+  ];
+  return file.folder === "references" && generalRefs.some(ref => file.slug.includes(ref));
+}
+
+function isFigureRelated(file, activeFigure) {
+  if (!activeFigure) return false;
+  return file.slug.includes(activeFigure);
+}
+
+function isAccessoryRelated(file, activeFigure) {
+  if (!activeFigure) return false;
+
+  const map = {
+    "jawa": ["jawa-blaster", "jawa-cloak", "jawa-vinyl-cape"],
+    "luke-skywalker": ["double-telescoping-lightsaber", "telescoping-lightsaber", "lightsaber"],
+    "darth-vader": ["lightsaber", "darth-vader-cape"],
+    "obi-wan-kenobi": ["lightsaber", "ben-obi-wan-kenobi-cape"]
+  };
+
+  const related = map[activeFigure] || [];
+  return related.some(item => file.slug.includes(item));
+}
+
 function scoreFile(file, message, searchTerms, history = [], activeFigure = "") {
   let score = 0;
   const combined = `${history.map(h => h.content || "").join(" ")} ${message}`;
@@ -168,7 +209,7 @@ function scoreFile(file, message, searchTerms, history = [], activeFigure = "") 
   if (file.folder === "figures") score += 5;
 
   if (lower.includes("identify") || lower.includes("which") || lower.includes("difference")) {
-    if (file.folder === "references") score += 15;
+    if (file.folder === "references") score += 10;
   }
 
   if (lower.includes("what comes with")) {
@@ -180,8 +221,9 @@ function scoreFile(file, message, searchTerms, history = [], activeFigure = "") 
   }
 
   if (activeFigure) {
-    if (file.slug.includes(activeFigure)) score += 60;
-    if (file.folder === "figures" && file.slug === `${activeFigure}-reference`) score += 80;
+    if (isFigureRelated(file, activeFigure)) score += 80;
+    if (isAccessoryRelated(file, activeFigure)) score += 60;
+    if (isGeneralReference(file)) score += 15;
   }
 
   return score;
@@ -192,7 +234,18 @@ async function buildContext(message, history = [], activeFigure = "") {
   const files = await collectFiles(baseDir);
   const searchTerms = getSearchTerms(message, history, activeFigure);
 
-  const ranked = files
+  let candidateFiles = files;
+
+  if (activeFigure) {
+    candidateFiles = files.filter(
+      file =>
+        isFigureRelated(file, activeFigure) ||
+        isAccessoryRelated(file, activeFigure) ||
+        isGeneralReference(file)
+    );
+  }
+
+  const ranked = candidateFiles
     .map(file => ({
       ...file,
       score: scoreFile(file, message, searchTerms, history, activeFigure)
@@ -213,6 +266,14 @@ async function buildContext(message, history = [], activeFigure = "") {
   return context;
 }
 
+function buildTranscript(history) {
+  if (!history.length) return "None";
+
+  return history
+    .map(m => `${m.role === "user" ? "User" : "VF-CB"}: ${m.content}`)
+    .join("\n\n");
+}
+
 export default async function handler(req, res) {
   try {
     if (req.method !== "POST") {
@@ -227,9 +288,10 @@ export default async function handler(req, res) {
 
     const cleanHistory = sanitiseHistory(history);
     const activeFigure = detectActiveFigure(message, cleanHistory);
-    const context = await buildContext(message, cleanHistory, activeFigure);
-    const transcript = buildTranscript(cleanHistory);
     const shortFollowUp = isShortFollowUp(message);
+    const expandedMessage = shortFollowUp ? expandShortReply(message, activeFigure) : message;
+    const context = await buildContext(expandedMessage, cleanHistory, activeFigure);
+    const transcript = buildTranscript(cleanHistory);
 
     const systemPrompt = `
 You are VF-CB, a vintage Star Wars figure and accessory expert.
@@ -263,7 +325,7 @@ Collector logic:
 
 Examples:
 - Jawa identification → first ask whether it has a vinyl cape, cloth cloak, or no body covering present
-- If cloth cloak Jawa → hood shape before stitching detail
+- If cloth cloak Jawa → next check COO, then hood shape before finer stitching detail
 - Luke → DT vs ST first
 
 2. For incomplete loose figures, still help identify them using figure traits even if accessories are missing
@@ -277,20 +339,11 @@ Examples:
 
 4. Make it clear that COO alone is not enough to confirm a figure's origins
 
-5. If the latest user message is short, such as:
-- cloth
-- vinyl
-- no blaster
-- hong kong
-- taiwan
-- no coo
-then treat it as a direct reply to the previous identification question and continue the same conversation
+5. If an active figure has already been established in the recent conversation, stay locked on that figure unless the user clearly changes subject
 
-6. If an active figure has already been established in the recent conversation, stay locked on that figure unless the user clearly changes subject
+6. Do not switch to another figure just because a word such as "cape", "vinyl", "cloth", "hood", or "blaster" could also apply elsewhere
 
-7. Do not switch to another figure just because a word such as "cape", "vinyl", "cloth", or "hood" could also apply elsewhere
-
-8. Do not restart the conversation or reintroduce yourself unless the user clearly starts a new topic
+7. Do not restart the conversation or reintroduce yourself unless the user clearly starts a new topic
 
 Never:
 - Invent information
@@ -310,6 +363,9 @@ Sound like a knowledgeable collector helping another collector identify or under
 Current user message:
 ${message}
 
+Expanded meaning of current message:
+${expandedMessage}
+
 Short follow-up reply?
 ${shortFollowUp ? "Yes" : "No"}
 
@@ -323,9 +379,9 @@ Supporting information:
 ${context}
 
 Instructions for this turn:
-- Use the recent conversation to understand what the user means
-- If the current message is a short follow-up, continue from the previous question
-- If an active figure/topic is already established, stay on that figure/topic
+- Use the expanded meaning if the current message is short
+- Stay on the active figure/topic
+- Do not switch to another figure unless the user clearly does so
 - Do not restart or introduce yourself again
 - Move the identification forward by asking or answering the next useful step
 `;
