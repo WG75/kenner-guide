@@ -6,12 +6,9 @@
   const state = {
     history: [],
     currentFigure: null,
-    step: null
+    step: null,
+    cooExplained: false
   };
-
-  function setStatus(text) {
-    if (statusEl) statusEl.textContent = text || "";
-  }
 
   function appendMessage(role, text) {
     const div = document.createElement("div");
@@ -61,6 +58,20 @@
     return normalise(msg).includes("hong kong");
   }
 
+  function cooIntro() {
+    return `Check the Country of Origin (COO) markings on the legs.
+
+Original vintage figures usually have:
+• Hong Kong
+• China
+• Taiwan
+• or no COO marking
+
+Some say "Made in" followed by the country, others just list the country name.
+
+What does your figure say?`;
+  }
+
   function jawaStart() {
     return `Yes I can do that — let's start with the cape.
 
@@ -75,12 +86,48 @@ Or you can reply with 1, 2 or 3.`;
   }
 
   function jawaNoCape() {
-    return `Right — so your Jawa is missing its cape.
+    if (!state.cooExplained) {
+      state.cooExplained = true;
+      return `Right — so your Jawa is missing its cape.
 
 That’s common.
 
-Next step:
-Check the COO marking on the legs.
+${cooIntro()}`;
+    }
+
+    return `Right — so your Jawa is missing its cape.
+
+Next step: check the COO marking on the legs.
+
+What does it say?`;
+  }
+
+  function jawaCloth() {
+    if (!state.cooExplained) {
+      state.cooExplained = true;
+      return `Good — cloth cloak.
+
+${cooIntro()}`;
+    }
+
+    return `Good — cloth cloak.
+
+Next step: check the COO marking on the legs.
+
+What does it say?`;
+  }
+
+  function jawaVinyl() {
+    if (!state.cooExplained) {
+      state.cooExplained = true;
+      return `Vinyl cape — early production.
+
+${cooIntro()}`;
+    }
+
+    return `Vinyl cape — early production.
+
+Next step: check the COO marking on the legs.
 
 What does it say?`;
   }
@@ -88,17 +135,33 @@ What does it say?`;
   function noCooReply() {
     return `If there’s no Hong Kong marking on the leg, you’re looking at a Kader China variant.
 
-It will read:
+It will have just one line of text reading:
 © G.M.F.G.I. 1977
 
-This variant was paired with:
-• M2 Jawa blaster (short bump)
-• Smooth cloth cloak
+That stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
 
-Two variants exist, based on copyright text size.
+This variant was originally paired with:
+• an M2 Kader Jawa Blaster (short rear bump)
+• a small hood, smooth cloth cloak
 
-Next checks:
-• bandolier tone
+KADER (CHINA) NO COO Jawas should have:
+
+• Rectangular dark brown bandolier  
+• Round yellow eyes  
+• Smooth cloth cloak  
+
+or
+
+• Rectangular, very dark brown bandolier  
+• Round yellow eyes  
+• Smooth cloth cloak  
+
+There are two variants within this Kader China NO COO version.
+
+The most noticeable difference is the size of the copyright text on the back of the leg.
+
+Next useful checks:
+• bandolier tone  
 • eye colour`;
   }
 
@@ -112,12 +175,12 @@ We need to narrow it down using figure traits.
 
 Check:
 
-• Eye colour (bright yellow / dull / orange tone)
-• Bandolier (shape + colour tone)
-• Cloak type (if present)
-• Blaster mould (if present)
+• Eye colour  
+• Bandolier (shape + tone)  
+• Cloak type  
+• Blaster mould  
 
-Hong Kong Jawas have multiple factory variations, so COO alone is not enough.
+COO alone is not enough.
 
 Tell me what you see for eye colour and bandolier.`;
   }
@@ -149,8 +212,15 @@ Tell me what you see for eye colour and bandolier.`;
         return;
       }
 
-      addBot("Next step: check COO marking on the legs.");
-      return;
+      if (cape === "cloth") {
+        addBot(jawaCloth());
+        return;
+      }
+
+      if (cape === "vinyl") {
+        addBot(jawaVinyl());
+        return;
+      }
     }
 
     if (state.step === "coo") {
