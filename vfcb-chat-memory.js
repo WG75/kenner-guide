@@ -8,7 +8,8 @@
   const state = {
     history: [],
     currentFigure: null,
-    step: null
+    step: null,
+    selectedReference: null
   };
 
   function setStatus(text) {
@@ -166,6 +167,43 @@
     return null;
   }
 
+  function detectFollowUpChoice(text) {
+    const t = normalise(text);
+
+    if (
+      t === "1" ||
+      t.includes("go deeper") ||
+      t.includes("deeper") ||
+      t.includes("variant") ||
+      t.includes("confirm")
+    ) {
+      return "deeper";
+    }
+
+    if (
+      t === "2" ||
+      t.includes("accessory") ||
+      t.includes("accessories") ||
+      t.includes("blaster") ||
+      t.includes("weapon")
+    ) {
+      return "accessories";
+    }
+
+    return null;
+  }
+
+  function referenceLabel(choice) {
+    const labels = {
+      "kader-m1": "Kader M1",
+      "kader-m2": "Kader M2",
+      "unitoy-m3": "Unitoy M3",
+      "unitoy-lili-ledy-m4": "Unitoy / Lili Ledy M4"
+    };
+
+    return labels[choice] || "that Jawa";
+  }
+
   function jawaOpening() {
     return `Yes I can do that — let's start with the cape.
 
@@ -186,13 +224,7 @@ Or you can reply with 1, 2 or 3.`;
 In that case, let's identify the figure itself.
 
 Next step:
-Check the Country of Origin (COO) markings on the legs.
-
-Vintage Jawas should show:
-© G.M.F.G.I. 1977 on top, with HONG KONG underneath
-
-or just:
-© G.M.F.G.I. 1977
+Check the Country of Origin markings on the legs.
 
 Reply with:
 
@@ -205,13 +237,7 @@ Reply with:
       return `Good — so we're dealing with a cloth cloak Jawa.
 
 Next step:
-Check the Country of Origin (COO) markings on the legs.
-
-Vintage Jawas should show:
-© G.M.F.G.I. 1977 on top, with HONG KONG underneath
-
-or just:
-© G.M.F.G.I. 1977
+Check the Country of Origin markings on the legs.
 
 Reply with:
 
@@ -224,13 +250,7 @@ Reply with:
       return `Good — that means you may have the early vinyl cape version.
 
 Next step:
-Check the Country of Origin (COO) markings on the legs.
-
-Vintage Jawas should show:
-© G.M.F.G.I. 1977 on top, with HONG KONG underneath
-
-or just:
-© G.M.F.G.I. 1977
+Check the Country of Origin markings on the legs.
 
 Reply with:
 
@@ -250,8 +270,6 @@ It should show just:
 
 No HONG KONG underneath.
 
-G.M.F.G.I. stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
-
 Compare your leg marking with this reference:`);
 
     appendImageCard(
@@ -264,23 +282,15 @@ Notice the size difference between 2a and 2b, and how the 2a version's text alig
     );
 
     addBot(`This variant was originally paired with:
-• an M2 Kader Jawa Blaster - short rear bump
-• a small hood, smooth cloth cloak
+• M2 Kader Jawa Blaster - short rear bump
+• small hood, smooth cloth cloak
 
-Kader China M2 No COO Jawas should have:
-
-• Rectangular dark brown bandolier
-• Round yellow eyes
-• Smooth cloth cloak
-
-or
-
-• Rectangular, very dark brown bandolier
-• Round yellow eyes
-• Smooth cloth cloak
-
-Important:
-DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+To confirm it properly, also check:
+• bandolier shape and colour
+• eye colour
+• plastic colour
+• cloak type, if present
+• blaster mould, if present
 
 Full Jawa guide on Variant Villain:
 ${VV_JAWA_URL}`);
@@ -337,60 +347,58 @@ The M of G.M.F.G.I. aligns with the H of HONG, and the middle of the second 7 fr
     );
 
     addBot(`Full Jawa guide on Variant Villain:
-${VV_JAWA_URL}
-
-Important:
-DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.`);
+${VV_JAWA_URL}`);
   }
 
   function choiceReply(choice) {
-    const replies = {
-      "kader-m1": `Closest match: Kader M1.
+    const label = referenceLabel(choice);
 
-Now confirm with:
-• bandolier shape and tone
-• eye colour
-• plastic colour
-• cloak type, if present
-• blaster mould, if present
+    return `Closest match: ${label}.
 
-This is a strong starting point, but do not rely on the leg marking alone.`,
+Would you like to go deeper to confirm the exact variant, or see the correct accessories?
 
-      "kader-m2": `Closest match: Kader M2.
+1. Go deeper - mould, paint, bandolier etc
+2. Show correct accessories`;
+  }
 
-Now confirm with:
-• bandolier shape and tone
-• eye colour
-• plastic colour
-• cloak type, if present
-• blaster mould, if present
+  function deeperReply() {
+    const label = referenceLabel(state.selectedReference);
 
-This is a strong starting point, but do not rely on the leg marking alone.`,
+    return `Ok — let's go deeper on ${label}.
 
-      "unitoy-m3": `Closest match: Unitoy M3.
+Next, check the bandolier across the chest.
 
-Now confirm with:
-• bandolier shape and tone
-• eye colour
-• plastic colour
-• cloak type, if present
-• blaster mould, if present
+Reply with:
 
-This is a strong starting point, but do not rely on the leg marking alone.`,
+1. Rectangular dark brown bandolier
+2. Rounded or softer shaped bandolier
+3. Very dark / almost black bandolier
+4. Not sure`;
+  }
 
-      "unitoy-lili-ledy-m4": `Closest match: Unitoy / Lili Ledy M4.
+  function accessoriesReply() {
+    const label = referenceLabel(state.selectedReference);
 
-Now confirm with:
-• bandolier shape and tone
-• eye colour
-• plastic colour
-• cloak type, if present
-• blaster mould, if present
+    return `For ${label}, the key accessory to check is the Jawa blaster.
 
-This is a strong starting point, but do not rely on the leg marking alone.`
-    };
+Look for:
+• correct vintage Jawa blaster shape
+• short rear bump or long rear bump, depending on the mould
+• original black plastic, not modern repro plastic
+• clean mould detail
+• no soft, rubbery, glossy repro look
 
-    return replies[choice] || null;
+For a complete Jawa, also check:
+• correct cloth cloak or vinyl cape
+• hood size and stitching
+• cloak texture
+• figure and weapon match
+
+Full Jawa guide on Variant Villain:
+${VV_JAWA_URL}
+
+Next useful step:
+Send or compare a clear photo of the blaster.`;
   }
 
   function unclearReply() {
@@ -446,6 +454,7 @@ For now, check under strong light and look again at the back of the left leg.`;
     if (!state.currentFigure && isJawaStart(t)) {
       state.currentFigure = "jawa";
       state.step = "cape";
+      state.selectedReference = null;
       addBot(jawaOpening());
       return;
     }
@@ -496,8 +505,74 @@ For now, check under strong light and look again at the back of the left leg.`;
         return;
       }
 
-      state.step = "confirm-traits";
+      state.selectedReference = choice;
+      state.step = "jawa-follow-up-choice";
       addBot(choiceReply(choice));
+      return;
+    }
+
+    if (state.currentFigure === "jawa" && state.step === "jawa-follow-up-choice") {
+      const choice = detectFollowUpChoice(t);
+
+      if (choice === "deeper") {
+        state.step = "jawa-deeper-bandolier";
+        addBot(deeperReply());
+        return;
+      }
+
+      if (choice === "accessories") {
+        state.step = "jawa-accessories";
+        addBot(accessoriesReply());
+        return;
+      }
+
+      addBot("Please reply with 1 for Go deeper, or 2 for correct accessories.");
+      return;
+    }
+
+    if (state.currentFigure === "jawa" && state.step === "jawa-deeper-bandolier") {
+      addBot(`Got it.
+
+Next, check the eyes.
+
+Reply with:
+
+1. Round yellow eyes
+2. Larger / softer yellow eyes
+3. Orange or darker eyes
+4. Not sure`);
+      state.step = "jawa-deeper-eyes";
+      return;
+    }
+
+    if (state.currentFigure === "jawa" && state.step === "jawa-deeper-eyes") {
+      addBot(`Good. Final quick check for now:
+
+What is the cloak situation?
+
+1. Smooth cloth cloak
+2. Rougher textured cloth cloak
+3. Vinyl cape
+4. Missing cloak`);
+      state.step = "jawa-deeper-cloak";
+      return;
+    }
+
+    if (state.currentFigure === "jawa" && state.step === "jawa-deeper-cloak") {
+      const label = referenceLabel(state.selectedReference);
+
+      addBot(`Thanks. Based on the leg marking, your closest starting point is still ${label}.
+
+To confirm it properly, compare:
+• leg marking
+• bandolier shape and colour
+• eye paint
+• cloak material and hood shape
+• blaster mould
+
+Full Jawa guide on Variant Villain:
+${VV_JAWA_URL}`);
+      state.step = "jawa-complete";
       return;
     }
 
