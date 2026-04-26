@@ -4,8 +4,8 @@
   const statusEl = document.getElementById("droidStatus");
 
   const VV_JAWA_URL = "https://www.variantvillain.com/characters/jawa/";
-  const VV_JAWA_BASE_URL = "https://www.variantvillain.com/characters/sw/jawa/";
   const VV_JAWA_CLOAK_URL = "https://www.variantvillain.com/accessory-guide/jawa-cloak/";
+  const VV_JAWA_VINYL_CAPE_URL = "https://www.variantvillain.com/accessory-guide/jawa-vinyl-cape/";
   const VV_JAWA_BLASTER_URL = "https://www.variantvillain.com/accessory-guide/jawa-blaster/";
 
   const state = {
@@ -145,7 +145,16 @@
   function detectLegMarkingAnswer(text) {
     const t = normalise(text);
 
-    if (t === "1" || t.includes("hong kong")) return "hong-kong";
+    if (
+      t === "1" ||
+      t.includes("hong kong") ||
+      t.includes("says hong") ||
+      t.includes("has hong") ||
+      t.includes("it says hong") ||
+      t.includes("yes says hong")
+    ) {
+      return "hong-kong";
+    }
 
     if (
       t === "2" ||
@@ -276,9 +285,11 @@ Reply with:
     }
 
     if (capeType === "vinyl") {
-      return `Ok — treat this as a potential vinyl cape Jawa, not confirmed yet.
+      return `Ok — let's treat this as a potential vinyl cape Jawa, not confirmed yet.
 
-Original vinyl cape Jawas are valuable, so there are many fakes and cut-down Ben Kenobi capes around. This app is a useful starting point, but don't rely on it alone. For anything valuable, get confirmation from experienced collector groups as well.
+Original vinyl cape Jawas are very valuable, so unfortunately there are many fakes and cut-down Ben Kenobi capes around.
+
+This app is a useful starting point, but don't rely on it alone. For anything valuable, get confirmation from experienced collector groups as well.
 
 First, compare your cape shape, surface texture and colour against this reference:`;
     }
@@ -297,6 +308,13 @@ First, compare your cape shape, surface texture and colour against this referenc
 • signs of a cut-down cape
 
 A cut-down Ben cape is usually noticeably darker and the shape will not match correctly.`
+    );
+
+    appendBotHtml(
+      `For more detailed information and reference photos, please check:<br>
+<a href="${VV_JAWA_VINYL_CAPE_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_VINYL_CAPE_URL}</a>`,
+      `For more detailed information and reference photos, please check:
+${VV_JAWA_VINYL_CAPE_URL}`
     );
 
     addBot(`Next, let's identify the figure itself.
@@ -351,7 +369,9 @@ Do you also want help checking the Jawa blaster?
   }
 
   function showHongKongReferenceImages() {
-    addBot(`Ok, compare your left-leg marking with these reference images and choose the closest match.
+    addBot(`Great! Now let's check which figure variant you have.
+
+Compare your left-leg marking with these reference images and choose the closest match.
 
 Use the following images to compare your leg marks. On the images, look at the parts indicated in green.`);
 
@@ -475,12 +495,13 @@ For original vintage Jawa figures, the normal left-leg markings are either:
 • or just © G.M.F.G.I. 1977 with no HONG KONG underneath
 
 If yours appears to have neither, possible explanations include:
-• very worn or faint markings
-• poor lighting / difficult angle
-• bootleg
-• reproduction
+
+• Very damaged, worn or faint markings
+• Poor lighting / difficult angle
+• Bootleg
+• Reproduction
 • Retro Collection
-• modern figure
+• Modern figure
 
 For now, check under strong light and look again at the back of the left leg.`;
   }
@@ -547,7 +568,10 @@ For now, check under strong light and look again at the back of the left leg.`;
       return;
     }
 
-    if (state.currentFigure === "jawa" && state.step === "leg-marking") {
+    if (
+      state.currentFigure === "jawa" &&
+      (state.step === "leg-marking" || state.step === "unclear-marking")
+    ) {
       const answer = detectLegMarkingAnswer(t);
 
       if (answer === "no-coo") {
