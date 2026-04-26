@@ -3,7 +3,10 @@
   const inputEl = document.getElementById("droidInput");
   const statusEl = document.getElementById("droidStatus");
 
-  const state = { history: [] };
+  const state = {
+    history: [],
+    flowState: null
+  };
 
   function setStatus(text) {
     if (statusEl) statusEl.textContent = text || "";
@@ -30,6 +33,7 @@
 
   function appendMessage(role, text) {
     if (!logEl) return;
+
     const wrap = document.createElement("div");
     wrap.className = `vfcb-msg vfcb-${role}`;
     wrap.style.margin = "10px 0";
@@ -37,12 +41,14 @@
     wrap.style.borderRadius = "12px";
     wrap.style.lineHeight = "1.5";
     wrap.innerHTML = formatText(text);
+
     logEl.appendChild(wrap);
     logEl.scrollTop = logEl.scrollHeight;
   }
 
   function appendImageCard(title, imageUrl, caption) {
     if (!logEl || !imageUrl) return;
+
     const card = document.createElement("div");
     card.className = "vfcb-image-card";
     card.style.margin = "12px 0";
@@ -86,34 +92,49 @@
     state.history.push({ role: "user", content: text });
   }
 
-  function addBot(text) {
-    appendMessage("assistant", text);
-    state.history.push({ role: "assistant", content: text });
+  function addBot(visibleText) {
+    appendMessage("assistant", visibleText);
+    state.history.push({ role: "assistant", content: visibleText });
   }
 
   async function askApi(message) {
     setStatus("Thinking...");
+
     const res = await fetch("/api/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message, history: state.history.slice(-30) })
+      body: JSON.stringify({
+        message,
+        history: state.history.slice(-30),
+        flowState: state.flowState
+      })
     });
+
     const data = await res.json().catch(() => ({}));
     setStatus("");
+
     if (!res.ok) throw new Error(data?.error || "API error");
+
     return data;
   }
 
   async function processMessage(rawMessage) {
     const message = String(rawMessage || "").trim();
     if (!message) return;
+
     addUser(message);
+
     try {
       const data = await askApi(message);
+
+      state.flowState = data.flowState || null;
+
       if (Array.isArray(data.images)) {
         data.images.forEach((img) => appendImageCard(img.title, img.url, img.caption));
       }
+
       addBot(data.reply || "I could not find a useful answer from the reference files.");
+
       if (data.debug && window.VFCB_DEBUG) console.log("VF-CB debug", data.debug);
     } catch (err) {
       console.error(err);

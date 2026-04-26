@@ -6,31 +6,39 @@ const FLOWS_ROOT = path.join(DATA_ROOT, "flows");
 const MODEL = process.env.ANTHROPIC_MODEL || "claude-haiku-4-5-20251001";
 
 const ACCESSORY_TERMS = {
-  blaster: ["blaster","gun","pistol","weapon","laser","laser gun","laser pistol","ray","ray gun","shooter","zapper","pew","pew pew","sidearm"],
-  lightsaber: ["lightsaber","light saber","saber","sabre"],
-  cape: ["cape","vinyl cape"],
-  cloak: ["cloak","cloth cloak","robe"],
-  bowcaster: ["bowcaster","bow caster"],
-  gaderffi: ["gaffi","gaffi stick","gaderffii","gaderffi"]
+  blaster: [
+    "blaster", "gun", "pistol", "weapon", "laser", "laser gun", "laser pistol",
+    "ray", "ray gun", "shooter", "zapper", "pew", "pew pew", "sidearm"
+  ],
+  lightsaber: ["lightsaber", "light saber", "saber", "sabre"],
+  "vinyl-cape": ["vinyl cape", "vinyl"],
+  "cloth-cloak": ["cloth cloak", "cloth", "cloak", "robe"],
+  cape: ["cape"],
+  bowcaster: ["bowcaster", "bow caster"],
+  gaderffi: ["gaffi", "gaffi stick", "gaderffii", "gaderffi"]
 };
 
 const FIGURE_ALIASES = [
   { slug: "jawa", terms: ["jawa"] },
-  { slug: "luke-skywalker", terms: ["luke skywalker","farmboy luke","luke"] },
-  { slug: "darth-vader", terms: ["darth vader","vader"] },
-  { slug: "ben-obi-wan-kenobi", terms: ["ben obi-wan kenobi","obi-wan","obi wan","ben kenobi","ben"] },
-  { slug: "princess-leia-organa", terms: ["princess leia","leia organa","leia"] },
-  { slug: "han-solo", terms: ["han solo","han"] },
-  { slug: "chewbacca", terms: ["chewbacca","chewie"] },
-  { slug: "stormtrooper", terms: ["stormtrooper","storm trooper"] },
-  { slug: "r2-d2", terms: ["r2-d2","r2d2","r2"] },
-  { slug: "c-3po", terms: ["c-3po","c3po","3po"] },
+  { slug: "luke-skywalker", terms: ["luke skywalker", "farmboy luke", "luke"] },
+  { slug: "darth-vader", terms: ["darth vader", "vader"] },
+  { slug: "ben-obi-wan-kenobi", terms: ["ben obi-wan kenobi", "obi-wan", "obi wan", "ben kenobi", "ben"] },
+  { slug: "princess-leia-organa", terms: ["princess leia", "leia organa", "leia"] },
+  { slug: "han-solo", terms: ["han solo", "han"] },
+  { slug: "chewbacca", terms: ["chewbacca", "chewie"] },
+  { slug: "stormtrooper", terms: ["stormtrooper", "storm trooper"] },
+  { slug: "r2-d2", terms: ["r2-d2", "r2d2", "r2"] },
+  { slug: "c-3po", terms: ["c-3po", "c3po", "3po"] },
   { slug: "death-squad-commander", terms: ["death squad commander"] },
-  { slug: "sand-people", terms: ["sand people","sand person","tusken"] }
+  { slug: "sand-people", terms: ["sand people", "sand person", "tusken"] }
 ];
 
 function normalise(text) {
-  return String(text || "").toLowerCase().replace(/[^a-z0-9\s\-]/g, " ").replace(/\s+/g, " ").trim();
+  return String(text || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9\s\-]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function hasAny(text, terms) {
@@ -42,22 +50,11 @@ function fileExists(relPath) {
 }
 
 function readRel(relPath) {
-  try { return fs.readFileSync(path.join(process.cwd(), relPath), "utf8"); } catch { return ""; }
-}
-
-function walkFiles(dir) {
-  const files = [];
-  if (!fs.existsSync(dir)) return files;
-  for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, item.name);
-    if (item.isDirectory()) files.push(...walkFiles(full));
-    else if (/\.(txt|json|md)$/i.test(item.name)) files.push(full);
+  try {
+    return fs.readFileSync(path.join(process.cwd(), relPath), "utf8");
+  } catch {
+    return "";
   }
-  return files;
-}
-
-function rel(filePath) {
-  return path.relative(process.cwd(), filePath).replace(/\\/g, "/");
 }
 
 function detectEntity(message) {
@@ -79,139 +76,282 @@ function detectAccessory(message) {
 function detectIntent(message) {
   const t = normalise(message);
   if (detectAccessory(message)) return "accessory";
-  if (t.includes("coo") || t.includes("country of origin") || t.includes("leg mark") || t.includes("leg marking")) return "figure";
-  if (t.includes("id") || t.includes("identify") || t.includes("variant") || t.includes("figure")) return "figure";
+  if (
+    t.includes("coo") ||
+    t.includes("country of origin") ||
+    t.includes("leg mark") ||
+    t.includes("leg marking")
+  ) return "figure";
+  if (
+    t.includes("id") ||
+    t.includes("identify") ||
+    t.includes("variant") ||
+    t.includes("figure")
+  ) return "figure";
   if (detectEntity(message)) return "figure";
   return "unknown";
 }
 
-function flowPath(entity, intent, accessory) {
+function flowFilePath(flowId) {
+  return path.join(FLOWS_ROOT, `${flowId}.json`);
+}
+
+function flowIdFor(entity, intent, accessory) {
   if (!entity) return null;
-  if (intent === "figure") {
-    const candidate = path.join(FLOWS_ROOT, `${entity}.figure.json`);
-    if (fs.existsSync(candidate)) return candidate;
-  }
+
+  if (intent === "figure") return `${entity}.figure`;
+
   if (intent === "accessory" && accessory) {
-    const candidate = path.join(FLOWS_ROOT, `${entity}.${accessory}.json`);
-    if (fs.existsSync(candidate)) return candidate;
+    const direct = `${entity}.${accessory}`;
+    if (fs.existsSync(flowFilePath(direct))) return direct;
+
+    if (entity === "jawa" && accessory === "cape") return "jawa.vinyl-cape";
+    if (entity === "jawa" && accessory === "cloth-cloak") return "jawa.cloth-cloak";
+    if (entity === "jawa" && accessory === "vinyl-cape") return "jawa.vinyl-cape";
+    if (entity === "jawa" && accessory === "blaster") return "jawa.blaster";
   }
+
   return null;
 }
 
-function loadFlow(filePath) {
-  try { return JSON.parse(fs.readFileSync(filePath, "utf8")); } catch (err) { console.error("Bad flow file", filePath, err); return null; }
-}
-
-function lastAssistant(history) {
-  const items = Array.isArray(history) ? history : [];
-  for (let i = items.length - 1; i >= 0; i--) {
-    if (items[i]?.role === "assistant") return String(items[i].content || "");
+function loadFlowById(flowId) {
+  if (!flowId) return null;
+  const file = flowFilePath(flowId);
+  try {
+    if (!fs.existsSync(file)) return null;
+    return JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch (err) {
+    console.error("Bad flow file", file, err);
+    return null;
   }
-  return "";
 }
 
-function inferFlowState(history) {
-  const assistant = lastAssistant(history);
-  const match = assistant.match(/\[vfcb-state:([^\]]+)\]/);
-  return match ? match[1].trim() : null;
-}
-
-function stripStateMarker(text) {
-  return String(text || "").replace(/\n?\[vfcb-state:[^\]]+\]/g, "").trim();
-}
-
-function optionMatch(input, options) {
-  const t = normalise(input);
-  for (const option of options || []) {
-    if (String(option.value).toLowerCase() === t) return option;
-    if (normalise(option.label || "") === t) return option;
-    if (Array.isArray(option.aliases) && option.aliases.some((a) => normalise(a) === t || t.includes(normalise(a)))) return option;
-  }
-  return null;
-}
-
-function stateWithMarker(text, nextState) {
-  if (!nextState) return text;
-  return `${text}\n\n[vfcb-state:${nextState}]`;
-}
-
-function formatFlowStep(step) {
-  let reply = step.prompt || "";
-  if (Array.isArray(step.options) && step.options.length) {
-    const optionLines = step.options.map((option) => `${option.value} ${option.label}`).join("\n");
-    reply = `${reply}\n\nReply with:\n\n${optionLines}`;
-  }
-  return reply.trim();
+function getStartStepId(flow) {
+  return flow?.start_step || flow?.start || "start";
 }
 
 function getStep(flow, stepId) {
   return flow?.steps?.[stepId] || null;
 }
 
-function flowStartResponse(flow) {
-  const startId = flow?.start;
-  const step = getStep(flow, startId);
-  if (!step) return null;
-  return { reply: stateWithMarker(formatFlowStep(step), startId), images: step.images || [] };
+function stepText(step) {
+  return String(step?.content || step?.prompt || "").trim();
 }
 
-function startNamedFlow(flowId) {
-  const file = path.join(FLOWS_ROOT, `${flowId}.json`);
-  if (!fs.existsSync(file)) return null;
-  const flow = loadFlow(file);
-  return flowStartResponse(flow);
-}
+function normaliseOptions(step) {
+  const options = step?.options;
 
-function flowNextResponse(flow, currentState, message) {
-  const step = getStep(flow, currentState);
-  if (!step) return null;
-  const selected = optionMatch(message, step.options || []);
-  if (!selected) {
-    return { reply: stateWithMarker(`Please reply with one of the listed options.\n\n${formatFlowStep(step)}`, currentState), images: [] };
+  if (!options) return [];
+
+  if (Array.isArray(options)) {
+    return options;
   }
-  if (selected.flow) return startNamedFlow(selected.flow);
-  if (selected.reply) {
-    if (selected.next) {
-      const nextStep = getStep(flow, selected.next);
-      if (!nextStep) return { reply: stripStateMarker(selected.reply), images: selected.images || [] };
-      return { reply: stateWithMarker(`${selected.reply}\n\n${formatFlowStep(nextStep)}`.trim(), selected.next), images: nextStep.images || [] };
+
+  if (typeof options === "object") {
+    return Object.entries(options).map(([value, target]) => ({
+      value,
+      label: value,
+      next: target
+    }));
+  }
+
+  return [];
+}
+
+function optionMatch(input, step) {
+  const t = normalise(input);
+  const options = normaliseOptions(step);
+
+  for (const option of options) {
+    if (String(option.value).toLowerCase() === t) return option;
+
+    if (normalise(option.label || "") === t) return option;
+
+    if (Array.isArray(option.aliases)) {
+      for (const alias of option.aliases) {
+        const a = normalise(alias);
+        if (a && (t === a || t.includes(a))) return option;
+      }
     }
-    return { reply: stripStateMarker(selected.reply), images: selected.images || [] };
   }
-  if (selected.next) {
-    const nextStep = getStep(flow, selected.next);
-    if (!nextStep) return null;
-    return { reply: stateWithMarker(formatFlowStep(nextStep), selected.next), images: nextStep.images || [] };
-  }
+
   return null;
 }
 
-function findActiveFlow(history) {
-  const state = inferFlowState(history);
-  if (!state) return null;
-  const allFlowFiles = walkFiles(FLOWS_ROOT).filter((f) => f.endsWith(".json"));
-  for (const file of allFlowFiles) {
-    const flow = loadFlow(file);
-    if (flow?.steps?.[state]) return { flow, state, file };
+function imageFromStep(step) {
+  if (!step) return null;
+
+  if (step.type === "image") {
+    return {
+      title: step.title || "",
+      url: step.url || "",
+      caption: step.caption || ""
+    };
   }
+
   return null;
+}
+
+function questionReply(step) {
+  let reply = stepText(step);
+  const options = normaliseOptions(step);
+
+  if (options.length) {
+    const lines = options.map((option) => {
+      const label = option.label || option.text || option.value;
+      return `${option.value} ${label}`;
+    });
+
+    if (!reply.includes("Reply with")) {
+      reply = `${reply}\n\nReply with:\n\n${lines.join("\n")}`;
+    }
+  }
+
+  return reply.trim();
+}
+
+function routeTargetFromStep(step) {
+  return step?.target || step?.flow || null;
+}
+
+function selectedTarget(option) {
+  return option?.target || option?.flow || option?.next || null;
+}
+
+function makeResponse(reply, images, flowId, stepId, done = false) {
+  return {
+    reply: String(reply || "").trim(),
+    images: images || [],
+    flowState: done || !flowId || !stepId ? null : { flowId, stepId }
+  };
+}
+
+function runFlowUntilQuestion(flowId, stepId, previousText = "", images = [], safety = 0) {
+  if (safety > 20) return makeResponse(previousText || "Flow stopped.", images, null, null, true);
+
+  const flow = loadFlowById(flowId);
+  if (!flow) return null;
+
+  const step = getStep(flow, stepId);
+  if (!step) return null;
+
+  if (step.type === "route") {
+    const target = routeTargetFromStep(step);
+    const targetFlow = loadFlowById(target);
+    if (!target || !targetFlow) {
+      return makeResponse("I could not find that flow yet.", images, null, null, true);
+    }
+    return runFlowUntilQuestion(target, getStartStepId(targetFlow), previousText, images, safety + 1);
+  }
+
+  const image = imageFromStep(step);
+  if (image) images.push(image);
+
+  const text = stepText(step);
+  const combinedText = [previousText, text].filter(Boolean).join("\n\n");
+
+  if (step.type === "question" || normaliseOptions(step).length) {
+    return makeResponse(questionReply(step), images, flowId, stepId);
+  }
+
+  if (step.type === "ai") {
+    return makeResponse(
+      combinedText || "Ask me your question and I’ll use the reference files to help.",
+      images,
+      null,
+      null,
+      true
+    );
+  }
+
+  if (step.next) {
+    return runFlowUntilQuestion(flowId, step.next, combinedText, images, safety + 1);
+  }
+
+  return makeResponse(combinedText, images, null, null, true);
+}
+
+function startFlow(flowId) {
+  const flow = loadFlowById(flowId);
+  if (!flow) return null;
+  return runFlowUntilQuestion(flowId, getStartStepId(flow));
+}
+
+function continueFlow(flowState, message) {
+  if (!flowState?.flowId || !flowState?.stepId) return null;
+
+  const flow = loadFlowById(flowState.flowId);
+  if (!flow) return null;
+
+  const step = getStep(flow, flowState.stepId);
+  if (!step) return null;
+
+  const selected = optionMatch(message, step);
+
+  if (!selected) {
+    return makeResponse(
+      `Please reply with one of the listed options.\n\n${questionReply(step)}`,
+      [],
+      flowState.flowId,
+      flowState.stepId
+    );
+  }
+
+  const target = selectedTarget(selected);
+
+  if (!target) {
+    return makeResponse(selected.reply || "Got it.", selected.images || [], null, null, true);
+  }
+
+  if (target.includes(".")) {
+    return startFlow(target);
+  }
+
+  if (selected.reply) {
+    return runFlowUntilQuestion(flowState.flowId, target, selected.reply, selected.images || []);
+  }
+
+  return runFlowUntilQuestion(flowState.flowId, target, "", selected.images || []);
+}
+
+function walkFiles(dir) {
+  const files = [];
+  if (!fs.existsSync(dir)) return files;
+
+  for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
+    const full = path.join(dir, item.name);
+    if (item.isDirectory()) files.push(...walkFiles(full));
+    else if (/\.(txt|json|md)$/i.test(item.name)) files.push(full);
+  }
+
+  return files;
+}
+
+function rel(filePath) {
+  return path.relative(process.cwd(), filePath).replace(/\\/g, "/");
 }
 
 function sourceFilesFor(entity, intent, accessory) {
   const files = [];
+
   if (entity && intent === "figure") files.push(`data/figures/${entity}-reference.txt`);
+
   if (entity === "jawa" && accessory === "blaster") files.push("data/accessories/jawa-blaster.txt");
-  if (entity === "jawa" && accessory === "cloak") files.push("data/accessories/jawa-cloak.txt");
+  if (entity === "jawa" && accessory === "cloth-cloak") files.push("data/accessories/jawa-cloak.txt");
+  if (entity === "jawa" && accessory === "vinyl-cape") files.push("data/accessories/jawa-vinyl-cape.txt");
   if (entity === "jawa" && accessory === "cape") files.push("data/accessories/jawa-vinyl-cape.txt", "data/accessories/jawa-cloak.txt");
   if (entity === "stormtrooper" && accessory === "blaster") files.push("data/accessories/imperial-blaster.txt");
-  if (entity === "leia" && accessory === "blaster") files.push("data/accessories/leia-blaster.txt");
+  if (entity === "princess-leia-organa" && accessory === "blaster") files.push("data/accessories/leia-blaster.txt");
   if (entity === "chewbacca" && accessory === "bowcaster") files.push("data/accessories/chewbacca-bowcaster.txt");
+
   if (accessory === "lightsaber") files.push("data/accessories/lightsaber.txt");
+
   const existing = files.filter(fileExists);
   if (existing.length) return existing.slice(0, 5);
 
   const all = walkFiles(DATA_ROOT);
   const terms = normalise(`${entity || ""} ${accessory || ""}`).split(" ").filter(Boolean);
+
   return all
     .map((file) => {
       const r = rel(file).toLowerCase();
@@ -228,7 +368,9 @@ function sourceFilesFor(entity, intent, accessory) {
 }
 
 function sourceBlock(files) {
-  return files.map((file) => `SOURCE FILE: ${file}\n${readRel(file).slice(0, 7000)}`).join("\n\n---\n\n");
+  return files
+    .map((file) => `SOURCE FILE: ${file}\n${readRel(file).slice(0, 7000)}`)
+    .join("\n\n---\n\n");
 }
 
 function buildSystemPrompt(files, message, entity, intent, accessory) {
@@ -241,8 +383,8 @@ Rules:
 - Prefer numbered replies.
 - Keep answers concise.
 - Do not repeat the same line twice.
-- Do not invent a guided flow if a flow file should exist.
-- If the user asks "id jawa", assume they mean the Jawa figure.
+- If a guided flow file exists, it should be used instead of inventing a new flow.
+- If the user asks "id jawa" or "jawa figure", assume they mean the Jawa figure.
 - If the user includes accessory words, treat it as an accessory request.
 - If uncertain, ask a useful clarification question.
 - Never claim something is original unless the evidence is strong.
@@ -268,30 +410,55 @@ Return ONLY valid JSON:
 async function callClaude(systemPrompt, history, message) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error("Missing ANTHROPIC_API_KEY");
+
   const messages = [];
+
   const cleanHistory = Array.isArray(history) ? history.slice(-10) : [];
   for (const item of cleanHistory) {
     if (!item || !item.role || !item.content) continue;
     if (item.role !== "user" && item.role !== "assistant") continue;
-    messages.push({ role: item.role, content: stripStateMarker(String(item.content)).slice(0, 1500) });
+    messages.push({
+      role: item.role,
+      content: String(item.content).slice(0, 1500)
+    });
   }
+
   messages.push({ role: "user", content: message });
+
   const response = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
-    headers: { "Content-Type": "application/json", "x-api-key": apiKey, "anthropic-version": "2023-06-01" },
-    body: JSON.stringify({ model: MODEL, max_tokens: 700, temperature: 0.1, system: systemPrompt, messages })
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": apiKey,
+      "anthropic-version": "2023-06-01"
+    },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 700,
+      temperature: 0.1,
+      system: systemPrompt,
+      messages
+    })
   });
+
   const data = await response.json();
   if (!response.ok) throw new Error(data?.error?.message || "Anthropic API error");
+
   return data?.content?.[0]?.text || "";
 }
 
 function parseJson(text) {
-  try { return JSON.parse(text); } catch {
+  try {
+    return JSON.parse(text);
+  } catch {
     const start = text.indexOf("{");
     const end = text.lastIndexOf("}");
     if (start >= 0 && end > start) {
-      try { return JSON.parse(text.slice(start, end + 1)); } catch { return null; }
+      try {
+        return JSON.parse(text.slice(start, end + 1));
+      } catch {
+        return null;
+      }
     }
     return null;
   }
@@ -302,19 +469,20 @@ module.exports = async function handler(req, res) {
     res.status(405).json({ error: "Method not allowed" });
     return;
   }
+
   try {
     const message = String(req.body?.message || "").trim();
     const history = Array.isArray(req.body?.history) ? req.body.history : [];
+    const flowState = req.body?.flowState || null;
+
     if (!message) {
       res.status(400).json({ error: "Missing message" });
       return;
     }
 
-    const active = findActiveFlow(history);
-    if (active) {
-      const flowResponse = flowNextResponse(active.flow, active.state, message);
+    if (flowState?.flowId && flowState?.stepId) {
+      const flowResponse = continueFlow(flowState, message);
       if (flowResponse) {
-        flowResponse.reply = stripStateMarker(flowResponse.reply);
         res.status(200).json(flowResponse);
         return;
       }
@@ -323,18 +491,18 @@ module.exports = async function handler(req, res) {
     const entity = detectEntity(message);
     const accessory = detectAccessory(message);
     const intent = detectIntent(message);
-    const maybeFlow = flowPath(entity, intent, accessory);
+    const flowId = flowIdFor(entity, intent, accessory);
 
-    if (maybeFlow) {
-      const flow = loadFlow(maybeFlow);
-      const response = flowStartResponse(flow);
-      if (response) {
-        res.status(200).json(response);
+    if (flowId && fs.existsSync(flowFilePath(flowId))) {
+      const flowResponse = startFlow(flowId);
+      if (flowResponse) {
+        res.status(200).json(flowResponse);
         return;
       }
     }
 
     const files = sourceFilesFor(entity, intent, accessory);
+
     if (!files.length) {
       res.status(200).json({
         reply: `I’m not sure what you want to identify yet.
@@ -345,7 +513,8 @@ Tell me the figure or accessory, for example:
 • Jawa blaster
 • Luke lightsaber
 • Stormtrooper blaster`,
-        images: []
+        images: [],
+        flowState: null
       });
       return;
     }
@@ -355,11 +524,19 @@ Tell me the figure or accessory, for example:
     const parsed = parseJson(text);
 
     if (!parsed || !parsed.reply) {
-      res.status(200).json({ reply: stripStateMarker(text) || "I found the relevant file, but could not format a clean answer.", images: [] });
+      res.status(200).json({
+        reply: text || "I found the relevant file, but could not format a clean answer.",
+        images: [],
+        flowState: null
+      });
       return;
     }
 
-    res.status(200).json({ reply: stripStateMarker(parsed.reply), images: Array.isArray(parsed.images) ? parsed.images : [] });
+    res.status(200).json({
+      reply: parsed.reply,
+      images: Array.isArray(parsed.images) ? parsed.images : [],
+      flowState: null
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: err.message || "Server error" });
