@@ -1,126 +1,58 @@
-(function () {
-  const logEl = document.getElementById("droidLog");
-  const inputEl = document.getElementById("droidInput");
-  const statusEl = document.getElementById("droidStatus");
+const chatBox = document.querySelector("#vfcb-chat-box");
+const input = document.querySelector("#vfcb-input");
+const sendBtn = document.querySelector("#vfcb-send");
 
-  const state = {
-    history: [],
-    currentFigure: null,
-    step: null
-  };
+let history = [];
 
-  function setStatus(text) {
-    if (statusEl) statusEl.textContent = text || "";
+function addMessage(role, text, imageUrl = null) {
+  const div = document.createElement("div");
+  div.className = role === "user" ? "user-msg" : "bot-msg";
+  div.innerText = text;
+
+  chatBox.appendChild(div);
+
+  // Add image if provided
+  if (imageUrl) {
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    img.style.maxWidth = "100%";
+    img.style.marginTop = "8px";
+    img.style.borderRadius = "6px";
+    chatBox.appendChild(img);
   }
 
-  function escapeHtml(text) {
-    return String(text || "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;");
-  }
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
 
-  function formatText(text) {
-    return escapeHtml(text).replace(/\n/g, "<br>");
-  }
+function normalise(text) {
+  return (text || "").toLowerCase().trim();
+}
 
-  function appendMessage(role, text) {
-    if (!logEl) return;
+function isNoCOO(text) {
+  return (
+    text.includes("no coo") ||
+    text.includes("no country") ||
+    text.includes("nothing") ||
+    text.includes("just 1977") ||
+    text.includes("only copyright") ||
+    text.includes("no marking")
+  );
+}
 
-    const wrap = document.createElement("div");
-    wrap.className = `vfcb-msg vfcb-${role}`;
-    wrap.style.margin = "10px 0";
-    wrap.style.padding = "12px 14px";
-    wrap.style.borderRadius = "12px";
-    wrap.style.lineHeight = "1.5";
-    wrap.style.whiteSpace = "normal";
+function sendMessage() {
+  const message = input.value.trim();
+  if (!message) return;
 
-    if (role === "user") {
-      wrap.style.background = "rgba(255, 184, 0, 0.12)";
-      wrap.style.border = "1px solid rgba(255, 184, 0, 0.35)";
-      wrap.style.color = "#f5f5f5";
-    } else {
-      wrap.style.background = "rgba(255,255,255,0.04)";
-      wrap.style.border = "1px solid rgba(255,255,255,0.08)";
-      wrap.style.color = "#f5f5f5";
-    }
+  addMessage("user", message);
+  input.value = "";
 
-    wrap.innerHTML = formatText(text);
-    logEl.appendChild(wrap);
-    logEl.scrollTop = logEl.scrollHeight;
-  }
+  const lower = normalise(message);
 
-  function pushHistory(role, content) {
-    state.history.push({ role, content });
-    if (state.history.length > 12) {
-      state.history = state.history.slice(-12);
-    }
-  }
-
-  function addBot(text) {
-    appendMessage("assistant", text);
-    pushHistory("assistant", text);
-  }
-
-  function addUser(text) {
-    appendMessage("user", text);
-    pushHistory("user", text);
-  }
-
-  function normalise(text) {
-    return String(text || "").trim().toLowerCase();
-  }
-
-  function isJawaStart(msg) {
-    const t = normalise(msg);
-    return t.includes("jawa");
-  }
-
-  function isCooQuestion(msg) {
-    const t = normalise(msg);
-    return t === "coo" || t.includes("what's coo") || t.includes("whats coo") || t.includes("what does coo mean");
-  }
-
-  function detectCapeAnswer(msg) {
-    const t = normalise(msg);
-
-    if (t === "1" || t === "vinyl" || t.includes("vinyl cape")) return "vinyl";
-    if (t === "2" || t === "cloth" || t.includes("cloth cloak") || t.includes("cloth cape")) return "cloth";
-    if (
-      t === "3" ||
-      t === "no cape" ||
-      t === "missing cloak" ||
-      t === "missing cape" ||
-      t === "naked" ||
-      t === "no covering"
-    ) {
-      return "none";
-    }
-
-    return null;
-  }
-
-  function looksLikeNoCooJawa(msg) {
-    const t = normalise(msg);
-
-    return (
-      t.includes("g.m.f.g.i") ||
-      t.includes("gmfgi") ||
-      t.includes("cmfg 1977") ||
-      t.includes("gmfgi 1977") ||
-      (
-        t.includes("1977") &&
-        !t.includes("hong kong") &&
-        !t.includes("taiwan") &&
-        !t.includes("macau") &&
-        !t.includes("china") &&
-        (t.includes("hard to tell") || t.includes("looks like") || t.includes("just says"))
-      )
-    );
-  }
-
-  function jawaOpening() {
-    return `Yes I can do that — let's start with the cape.
+  // STEP 1: Jawa detection
+  if (lower.includes("jawa")) {
+    addMessage(
+      "assistant",
+      `Yes I can do that — let's start with the cape.
 
 Which of these does your Jawa have?
 
@@ -128,218 +60,82 @@ Which of these does your Jawa have?
 2. Cloth cloak - fabric
 3. Or neither. Just a naked figure
 
-Just tell me: vinyl, cloth, or missing cloak.
-Or you can reply with 1, 2 or 3.`;
+Reply with 1, 2 or 3.`
+    );
+    return;
   }
 
-  function jawaNoCapeReply() {
-    return `Right — so your Jawa is missing its cape, what collectors would usually call a naked figure.
-
-That’s common, so we identify it from the figure itself.
+  // STEP 2: Cape missing
+  if (lower === "3" || lower.includes("missing")) {
+    addMessage(
+      "assistant",
+      `Right — so your Jawa is missing its cape, what collectors would usually call a naked figure.
 
 Next step:
-Check the COO marking on the legs.
+Check the Country of Origin (COO) markings on the legs.
 
-Then we confirm it using:
-• mould / sculpt
-• plastic colour
-• eye paint
-• bandolier shape and tone
-• and any remaining accessories
+Original vintage figures usually have:
+• Hong Kong
+• China
+• Taiwan
+• or no COO marking
 
-Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.
-
-What does the leg marking say?`;
+What does your figure say?`
+    );
+    return;
   }
 
-  function jawaClothReply() {
-    return `Good — so we're dealing with a cloth cloak Jawa.
+  // STEP 3: NO COO logic (THIS is the fix)
+  if (isNoCOO(lower)) {
+    addMessage(
+      "assistant",
+      `Right — if there’s no country marking and only a copyright line, you’re into Kader China territory.
 
-Next step:
-Check the COO marking on the legs.
-
-After that, the next useful things are:
-• hood size and shape
-• stitching / construction
-• eye colour
-• bandolier shape and tone
-• and whether the blaster is present
-
-Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.
-
-What does the leg marking say?`;
-  }
-
-  function jawaVinylReply() {
-    return `Good — that means you have the early vinyl cape version.
-
-Next step:
-Check the COO marking on the legs.
-
-Then we confirm it properly using:
-• body sculpt
-• plastic colour
-• paint details
-• and the correct blaster pairing
-
-Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.
-
-What does the leg marking say?`;
-  }
-
-  function cooMeaningReply() {
-    return `COO means Country of Origin.
-
-That is the country marking usually found on the legs of vintage figures, such as Hong Kong or Taiwan.
-
-On Jawas, COO is a very useful starting point — but not enough on its own.
-
-To confirm a Jawa properly, you also need to check:
-• mould / sculpt
-• eye colour
-• plastic colour
-• bandolier shape and tone
-• and cloak or blaster pairing if present.`;
-  }
-
-  function noCooKaderReply() {
-    return `If you can't see Hong Kong on the leg, you must have a Kader China variant.
-
-It will have just one line of text reading:
+These typically read:
 © G.M.F.G.I. 1977
 
-That stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
+That stands for General Mills Fun Group Incorporated.
 
-KADER (CHINA) NCOO should be:
+This is what collectors call a No COO Jawa, produced in China by Kader.
 
-• Rectangular dark brown bandolier
-• Round yellow eyes
+This variant originally came with:
 • Smooth cloth cloak
+• M2 Kader Jawa blaster (short bump)
 
-or
+Compare your leg marking to this reference:`,
+      "/images/jawa_figure_kader_china_M2.png"
+    );
 
-• Rectangular, very dark brown bandolier
-• Round yellow eyes
-• Smooth cloth cloak
+    addMessage(
+      "assistant",
+      `View the full guide on Variant Villain:
+https://www.variantvillain.com/characters/jawa/`
+    );
 
-Paired with an M2 Kader Jawa Blaster — the one with the short bump.
+    addMessage(
+      "assistant",
+      `Next checks:
+• bandolier tone
+• eye colour
+• cloak type (if present)
 
-There are two variants within this Kader China NCOO version.
-The difference is the size of the copyright text on the back of the leg.
+There are two main No COO variants, mainly distinguished by the size of the copyright text.`
+    );
 
-If you want, next send:
-• a close photo of the back of the legs
-• a front photo of the figure
-• and the cloak hood if present
-
-That will let me narrow down which of the two Kader China NCOO variants it is.`;
+    return;
   }
 
-  async function askApi(message) {
-    setStatus("Thinking...");
+  // fallback
+  addMessage(
+    "assistant",
+    "Tell me what the leg marking says — for example Hong Kong, Taiwan, or no COO."
+  );
+}
 
-    const res = await fetch("/api/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        message,
-        history: state.history
-      })
-    });
+sendBtn.addEventListener("click", sendMessage);
 
-    const data = await res.json();
-    setStatus("");
-
-    if (!res.ok) {
-      throw new Error(data?.error || "API error");
-    }
-
-    return data?.reply || "Sorry, there was a problem getting an answer.";
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    sendMessage();
   }
-
-  async function processMessage(rawMessage) {
-    const message = String(rawMessage || "").trim();
-    if (!message) return;
-
-    addUser(message);
-
-    const t = normalise(message);
-
-    if (!state.currentFigure && isJawaStart(t)) {
-      state.currentFigure = "jawa";
-      state.step = "cape";
-      addBot(jawaOpening());
-      return;
-    }
-
-    if (state.currentFigure === "jawa" && state.step === "cape") {
-      const cape = detectCapeAnswer(t);
-
-      if (!cape) {
-        addBot("Just reply with 1, 2 or 3 — or vinyl, cloth, or missing cloak.");
-        return;
-      }
-
-      state.step = "coo";
-
-      if (cape === "none") {
-        addBot(jawaNoCapeReply());
-        return;
-      }
-
-      if (cape === "cloth") {
-        addBot(jawaClothReply());
-        return;
-      }
-
-      if (cape === "vinyl") {
-        addBot(jawaVinylReply());
-        return;
-      }
-    }
-
-    if (state.currentFigure === "jawa" && state.step === "coo") {
-      if (isCooQuestion(t)) {
-        addBot(cooMeaningReply());
-        return;
-      }
-
-      if (looksLikeNoCooJawa(t)) {
-        state.step = "confirm-kader";
-        addBot(noCooKaderReply());
-        return;
-      }
-    }
-
-    try {
-      const reply = await askApi(message);
-      addBot(reply);
-    } catch (err) {
-      console.error(err);
-      addBot("Something went wrong getting a response.");
-    }
-  }
-
-  window.sendDroidMessage = function sendDroidMessage() {
-    if (!inputEl) return;
-    const msg = inputEl.value.trim();
-    inputEl.value = "";
-    processMessage(msg);
-  };
-
-  window.useDroidPrompt = function useDroidPrompt(promptText) {
-    if (!promptText) return;
-    processMessage(promptText);
-  };
-
-  if (inputEl) {
-    inputEl.addEventListener("keydown", function (e) {
-      if (e.key === "Enter" && !e.shiftKey) {
-        e.preventDefault();
-        window.sendDroidMessage();
-      }
-    });
-  }
-})();
+});
