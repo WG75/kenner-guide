@@ -150,7 +150,7 @@ function normaliseOptions(step) {
   if (typeof options === "object") {
     return Object.entries(options).map(([value, target]) => ({
       value,
-      label: value,
+      label: "",
       next: target
     }));
   }
@@ -165,7 +165,7 @@ function optionMatch(input, step) {
   for (const option of options) {
     if (String(option.value).toLowerCase() === t) return option;
 
-    if (normalise(option.label || "") === t) return option;
+    if (option.label && normalise(option.label) === t) return option;
 
     if (Array.isArray(option.aliases)) {
       for (const alias of option.aliases) {
@@ -178,33 +178,51 @@ function optionMatch(input, step) {
   return null;
 }
 
-function imageFromStep(step) {
-  if (!step) return null;
+function imagesFromStep(step) {
+  const images = [];
 
-  if (step.type === "image") {
-    return {
-      title: step.title || "",
-      url: step.url || "",
-      caption: step.caption || ""
-    };
+  if (!step) return images;
+
+  if (Array.isArray(step.images)) {
+    for (const img of step.images) {
+      if (img && img.url) {
+        images.push({
+          title: img.title || "",
+          url: img.url,
+          caption: img.caption || ""
+        });
+      }
+    }
   }
 
-  return null;
+  if (step.type === "image" && step.url) {
+    images.push({
+      title: step.title || "",
+      url: step.url,
+      caption: step.caption || ""
+    });
+  }
+
+  return images;
 }
 
 function questionReply(step) {
   let reply = stepText(step);
   const options = normaliseOptions(step);
 
+  // If the flow writer has already written the reply instructions,
+  // do not add another auto-generated Reply with block.
+  if (/reply with/i.test(reply)) {
+    return reply.trim();
+  }
+
   if (options.length) {
     const lines = options.map((option) => {
-      const label = option.label || option.text || option.value;
-      return `${option.value} ${label}`;
+      const label = option.label || option.text || "";
+      return label ? `${option.value} ${label}` : `${option.value}`;
     });
 
-    if (!reply.includes("Reply with")) {
-      reply = `${reply}\n\nReply with:\n\n${lines.join("\n")}`;
-    }
+    reply = `${reply}\n\nReply with:\n\n${lines.join("\n")}`;
   }
 
   return reply.trim();
@@ -235,6 +253,8 @@ function runFlowUntilQuestion(flowId, stepId, previousText = "", images = [], sa
   const step = getStep(flow, stepId);
   if (!step) return null;
 
+  images.push(...imagesFromStep(step));
+
   if (step.type === "route") {
     const target = routeTargetFromStep(step);
     const targetFlow = loadFlowById(target);
@@ -243,9 +263,6 @@ function runFlowUntilQuestion(flowId, stepId, previousText = "", images = [], sa
     }
     return runFlowUntilQuestion(target, getStartStepId(targetFlow), previousText, images, safety + 1);
   }
-
-  const image = imageFromStep(step);
-  if (image) images.push(image);
 
   const text = stepText(step);
   const combinedText = [previousText, text].filter(Boolean).join("\n\n");
