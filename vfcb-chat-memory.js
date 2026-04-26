@@ -36,9 +36,9 @@
     logEl.appendChild(img);
   }
 
-  // 🔥 Intent detection
   function isBlasterIntent(text) {
     const t = normalise(text);
+
     return (
       t.includes("jawa") &&
       (
@@ -48,9 +48,28 @@
         t.includes("weapon") ||
         t.includes("laser") ||
         t.includes("ray") ||
-        t.includes("pew")
+        t.includes("pew") ||
+        t.includes("shooter")
       )
     );
+  }
+
+  function isJawaMention(text) {
+    return normalise(text).includes("jawa");
+  }
+
+  function showClarification() {
+    addBot(`Not sure what you mean.
+
+Did you want help with:
+
+1. Jawa blaster (weapon)
+2. Jawa figure
+3. Jawa cloak / cape
+
+Reply with 1, 2 or 3.`);
+
+    state.step = "clarify";
   }
 
   function showBlasterStart() {
@@ -64,9 +83,9 @@
 • plastic colour
 • detail sharpness
 
-Can you identify it against the reference image?
+Can you identify it?
 
-Reply with:
+Reply:
 
 1 Yes
 2 No
@@ -79,16 +98,6 @@ Reply with:
   function askFloat() {
     addBot(`Next check: float test.
 
-• If it sinks → reproduction
-• If it floats → MAY be original
-
-Important:
-Modern repros can float, so this is not proof.
-
-Does yours sink or float?
-
-Reply with:
-
 1 float
 2 sink`);
 
@@ -96,11 +105,9 @@ Reply with:
   }
 
   function askColour() {
-    addBot(`Good. Now check the colour.
+    addBot(`Now check colour:
 
-Reply with:
-
-1 dark blue / black-blue
+1 dark blue
 2 black
 3 grey
 4 silver
@@ -111,10 +118,9 @@ Reply with:
 
   function handleColour(t) {
     if (t === "1") {
-      addBot(`Good — most originals fall in this range.
+      addBot(`Good — typical original range.
 
-Still confirm mould + bump:
-
+Check:
 ${VV_JAWA_BLASTER_URL}`);
       return;
     }
@@ -122,19 +128,13 @@ ${VV_JAWA_BLASTER_URL}`);
     if (t === "2") {
       addBot(`Black needs caution.
 
-Could be:
-• repro
-• modern
-• very dark blue mistaken
-
 Compare:
 ${VV_JAWA_BLASTER_URL}`);
       return;
     }
 
     if (t === "3") {
-      addBot(`Grey pieces:
-Very common repro colour.
+      addBot(`Grey is commonly repro.
 
 Check:
 ${VV_JAWA_BLASTER_URL}`);
@@ -144,14 +144,12 @@ ${VV_JAWA_BLASTER_URL}`);
     if (t === "4") {
       addBot(`Silver is rare Glasslite.
 
-Do not assume without exact match.
-
-Check:
+Verify carefully:
 ${VV_JAWA_BLASTER_URL}`);
       return;
     }
 
-    addBot(`Compare carefully:
+    addBot(`Compare:
 ${VV_JAWA_BLASTER_URL}`);
   }
 
@@ -159,46 +157,70 @@ ${VV_JAWA_BLASTER_URL}`);
     addUser(msg);
     const t = normalise(msg);
 
-    // 🔥 override always
+    // 🔥 Intent first
     if (isBlasterIntent(t)) {
       showBlasterStart();
       return;
     }
 
-    // STEP 1 → IMAGE CHECK
+    // 🔥 Jawa but unclear meaning
+    if (!state.step && isJawaMention(t)) {
+      showClarification();
+      return;
+    }
+
+    // clarification step
+    if (state.step === "clarify") {
+      if (t === "1") {
+        showBlasterStart();
+        return;
+      }
+
+      if (t === "2") {
+        addBot("Let's identify your Jawa figure. Start with the cape.");
+        state.step = null;
+        return;
+      }
+
+      if (t === "3") {
+        addBot("Check your cloak vs Variant Villain guide.");
+        state.step = null;
+        return;
+      }
+
+      addBot("Reply with 1, 2 or 3.");
+      return;
+    }
+
+    // blaster flow
     if (state.step === "blaster-image") {
-      // no matter what they answer → move forward
       askFloat();
       return;
     }
 
-    // STEP 2 → FLOAT
     if (state.step === "blaster-float") {
-      if (t === "2" || t.includes("sink")) {
+      if (t === "2") {
         addBot("If it sinks → reproduction.");
         state.step = null;
-        state.currentFigure = null;
         return;
       }
 
-      if (t === "1" || t.includes("float")) {
+      if (t === "1") {
         askColour();
         return;
       }
 
-      addBot("Reply with 1 (float) or 2 (sink)");
+      addBot("Reply 1 or 2.");
       return;
     }
 
-    // STEP 3 → COLOUR
     if (state.step === "blaster-colour") {
       handleColour(t);
       state.step = null;
-      state.currentFigure = null;
       return;
     }
 
-    addBot("Ask about a Jawa or blaster to get started.");
+    addBot("Try asking about a Jawa figure or blaster.");
   }
 
   window.sendDroidMessage = function () {
