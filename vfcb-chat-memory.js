@@ -228,20 +228,17 @@
   function detectYesNo(text) {
     const t = normalise(text);
 
-    if (
-      t === "1" ||
-      t === "yes" ||
-      t === "y" ||
-      t.includes("yes") ||
-      t.includes("blaster") ||
-      t.includes("weapon")
-    ) {
-      return "yes";
-    }
+    if (t === "1" || t === "yes" || t === "y" || t.includes("yes")) return "yes";
+    if (t === "2" || t === "no" || t === "n" || t.includes("no") || t.includes("done")) return "no";
 
-    if (t === "2" || t === "no" || t === "n" || t.includes("no") || t.includes("done")) {
-      return "no";
-    }
+    return null;
+  }
+
+  function detectFloatAnswer(text) {
+    const t = normalise(text);
+
+    if (t === "1" || t.includes("float") || t.includes("floats") || t.includes("floating")) return "float";
+    if (t === "2" || t.includes("sink") || t.includes("sinks") || t.includes("sank")) return "sink";
 
     return null;
   }
@@ -500,107 +497,157 @@ Do you also want help checking the Jawa blaster?
 • mould shape
 • rear bump length
 • plastic colour
-• detail sharpness
-• whether it looks like original vintage plastic or a modern repro`
+• detail sharpness`
     );
 
-    appendBotHtml(
-      `First quick test if you are unsure: try the float test.<br><br>
-Older and cheaper reproductions usually sink in water. Original vintage blasters should float, even after being pushed under.<br><br>
-Important: some newer reproductions are designed to deceive collectors and can also float. So if it floats, that does not prove it is original. You still need to compare the exact mould details.<br><br>
-Most original Jawa blasters are shades of dark blue. Grey examples need extra caution because common grey reproductions exist.<br><br>
-For more details and reference images, visit:<br>
-<a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a><br><br>
-Tell me the colour, whether it floats, or what rear bump it has, and I’ll guide you.`,
-      `First quick test if you are unsure: try the float test.
+    addBot(`Can you identify it against the reference image?
 
-Older and cheaper reproductions usually sink in water. Original vintage blasters should float, even after being pushed under.
+Reply with:
 
-Important: some newer reproductions are designed to deceive collectors and can also float. So if it floats, that does not prove it is original. You still need to compare the exact mould details.
-
-Most original Jawa blasters are shades of dark blue. Grey examples need extra caution because common grey reproductions exist.
-
-For more details and reference images, visit:
-${VV_JAWA_BLASTER_URL}
-
-Tell me the colour, whether it floats, or what rear bump it has, and I’ll guide you.`
-    );
-
+1. Yes, it looks like one of the references
+2. No, I can't match it
+3. Not sure`);
+    
     state.currentFigure = "jawa";
-    state.step = "jawa-blaster-question";
+    state.step = "jawa-blaster-image-check";
   }
 
-  function jawaBlasterQuestionReply(message) {
+  function blasterFloatQuestion() {
+    addBot(`Next check: float test.
+
+• If it sinks, treat it as a reproduction
+• If it floats, it may be original
+
+Important:
+Modern reproductions can float, so this is not proof.
+
+Does yours sink or float?
+
+Reply with:
+
+1 for float
+2 for sink`);
+  }
+
+  function blasterColourQuestion() {
+    addBot(`Good. Since it floats, next check the colour.
+
+Most original Jawa blasters are dark blue or black-blue tones.
+
+What colour does yours look like?
+
+Reply with:
+
+1. Dark blue / black-blue
+2. Black
+3. Grey
+4. Silver
+5. Not sure`);
+  }
+
+  function blasterColourReply(message) {
     const t = normalise(message);
 
-    if (t.includes("grey") || t.includes("gray") || t.includes("silver")) {
+    if (t === "1" || t.includes("dark blue") || t.includes("dark-blue") || t.includes("black-blue") || t.includes("blue")) {
       appendBotHtml(
-        `Be careful here.<br><br>
-Most original Jawa blasters are shades of dark blue. There is a very rare silver version associated with the Brazilian Glasslite figure, but grey Jawa blasters are also commonly seen as reproductions.<br><br>
-First check:<br>
-• Does it float in water?<br>
-• If it sinks, treat it as a reproduction.<br>
-• If it floats, that still does not prove it is original, because newer reproductions may also float.<br><br>
-Next compare it closely against the known Variant Villain examples:<br>
-<a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a><br><br>
-I would not call a grey Jawa blaster original without very careful comparison, especially to rule out a common grey repro.`,
-        `Be careful here.
+        `That is the safest colour range for most original Jawa blasters.<br><br>
+Known original colours include:<br>
+• black-blue, semi-translucent blueish<br>
+• black-blue, semi-translucent greenish<br>
+• black-blue, semi-translucent greyish<br>
+• dark-blue, translucent blueish<br>
+• dark-blue, translucent greenish<br>
+• dark-blue, semi-translucent greyish<br><br>
+Still compare the exact mould shape, rear bump and detail sharpness against Variant Villain:<br>
+<a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a>`,
+        `That is the safest colour range for most original Jawa blasters.
 
-Most original Jawa blasters are shades of dark blue. There is a very rare silver version associated with the Brazilian Glasslite figure, but grey Jawa blasters are also commonly seen as reproductions.
+Known original colours include:
+• black-blue, semi-translucent blueish
+• black-blue, semi-translucent greenish
+• black-blue, semi-translucent greyish
+• dark-blue, translucent blueish
+• dark-blue, translucent greenish
+• dark-blue, semi-translucent greyish
 
-First check:
-• Does it float in water?
-• If it sinks, treat it as a reproduction.
-• If it floats, that still does not prove it is original, because newer reproductions may also float.
-
-Next compare it closely against the known Variant Villain examples:
-${VV_JAWA_BLASTER_URL}
-
-I would not call a grey Jawa blaster original without very careful comparison, especially to rule out a common grey repro.`
+Still compare the exact mould shape, rear bump and detail sharpness against Variant Villain:
+${VV_JAWA_BLASTER_URL}`
       );
       return;
     }
 
-    if (t.includes("float") || t.includes("floats") || t.includes("sink") || t.includes("sinks")) {
+    if (t === "2" || t.includes("black")) {
       appendBotHtml(
-        `The float test is a useful first filter.<br><br>
-• If the blaster sinks, treat it as a reproduction.<br>
-• If it floats, it may be original, but this is not proof.<br>
-• Newer reproductions can be made to float, so you still need to compare mould shape, rear bump, detail sharpness and plastic colour.<br><br>
-Use the Variant Villain reference images here:<br>
+        `Black needs caution.<br><br>
+It could be:<br>
+• a reproduction<br>
+• a modern accessory<br>
+• a very dark blue original being mistaken for black<br>
+• or, much less commonly, a Brazilian Glasslite black blaster<br><br>
+Do not call it original based on colour alone. Compare the mould exactly against the known examples here:<br>
 <a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a>`,
-        `The float test is a useful first filter.
+        `Black needs caution.
 
-• If the blaster sinks, treat it as a reproduction.
-• If it floats, it may be original, but this is not proof.
-• Newer reproductions can be made to float, so you still need to compare mould shape, rear bump, detail sharpness and plastic colour.
+It could be:
+• a reproduction
+• a modern accessory
+• a very dark blue original being mistaken for black
+• or, much less commonly, a Brazilian Glasslite black blaster
 
-Use the Variant Villain reference images here:
+Do not call it original based on colour alone. Compare the mould exactly against the known examples here:
+${VV_JAWA_BLASTER_URL}`
+      );
+      return;
+    }
+
+    if (t === "3" || t.includes("grey") || t.includes("gray")) {
+      appendBotHtml(
+        `Grey pieces need extra caution.<br><br>
+Grey is a very common reproduction colour for Jawa blasters.<br><br>
+There are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.<br><br>
+Best next step: compare it closely with the full Variant Villain guide:<br>
+<a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a>`,
+        `Grey pieces need extra caution.
+
+Grey is a very common reproduction colour for Jawa blasters.
+
+There are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.
+
+Best next step: compare it closely with the full Variant Villain guide:
+${VV_JAWA_BLASTER_URL}`
+      );
+      return;
+    }
+
+    if (t === "4" || t.includes("silver")) {
+      appendBotHtml(
+        `Silver is unusual.<br><br>
+There is a rare silver Jawa blaster associated with the Brazilian Glasslite figure, but it is extremely uncommon.<br><br>
+Do not assume it is Glasslite without matching the mould and provenance carefully.<br><br>
+Use the full reference here:<br>
+<a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a>`,
+        `Silver is unusual.
+
+There is a rare silver Jawa blaster associated with the Brazilian Glasslite figure, but it is extremely uncommon.
+
+Do not assume it is Glasslite without matching the mould and provenance carefully.
+
+Use the full reference here:
 ${VV_JAWA_BLASTER_URL}`
       );
       return;
     }
 
     appendBotHtml(
-      `For Jawa blasters, start with the float test if you are unsure.<br><br>
-Then compare:<br>
-• mould shape<br>
-• rear bump length<br>
-• plastic colour, usually dark blue tones for most originals<br>
-• sharpness of the mould detail<br>
-• whether it matches a known original example exactly<br><br>
-Variant Villain reference page:<br>
+      `If you are not sure on colour, compare it in daylight against the known Variant Villain examples.<br><br>
+Known original colour families include dark-blue / black-blue tones, plus rare Glasslite black and silver versions.<br><br>
+Full reference:<br>
 <a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a>`,
-      `For Jawa blasters, start with the float test if you are unsure.
+      `If you are not sure on colour, compare it in daylight against the known Variant Villain examples.
 
-Then compare:
-• mould shape
-• rear bump length
-• plastic colour, usually dark blue tones for most originals
-• sharpness of the mould detail
-• whether it matches a known original example exactly
+Known original colour families include dark-blue / black-blue tones, plus rare Glasslite black and silver versions.
 
-Variant Villain reference page:
+Full reference:
 ${VV_JAWA_BLASTER_URL}`
     );
   }
@@ -752,8 +799,43 @@ For now, check under strong light and look again at the back of the left leg.`;
       return;
     }
 
-    if (state.currentFigure === "jawa" && state.step === "jawa-blaster-question") {
-      jawaBlasterQuestionReply(message);
+    if (state.currentFigure === "jawa" && state.step === "jawa-blaster-image-check") {
+      const answer = detectYesNo(t);
+
+      if (answer === "yes" || answer === "no" || t === "3" || t.includes("not sure")) {
+        state.step = "jawa-blaster-float";
+        blasterFloatQuestion();
+        return;
+      }
+
+      addBot("Please reply with 1 for yes, 2 for no, or 3 if you're not sure.");
+      return;
+    }
+
+    if (state.currentFigure === "jawa" && state.step === "jawa-blaster-float") {
+      const answer = detectFloatAnswer(t);
+
+      if (answer === "sink") {
+        addBot("If it sinks, treat it as a reproduction.");
+        state.step = null;
+        state.currentFigure = null;
+        return;
+      }
+
+      if (answer === "float") {
+        state.step = "jawa-blaster-colour";
+        blasterColourQuestion();
+        return;
+      }
+
+      addBot("Please reply with 1 for float, or 2 for sink.");
+      return;
+    }
+
+    if (state.currentFigure === "jawa" && state.step === "jawa-blaster-colour") {
+      blasterColourReply(message);
+      state.step = null;
+      state.currentFigure = null;
       return;
     }
 
