@@ -36,7 +36,7 @@
     logEl.appendChild(img);
   }
 
-  // 🔥 FINAL INTENT DETECTION
+  // 🔥 FINAL INTENT DETECTION (expanded)
   function isBlasterIntent(text) {
     const t = normalise(text);
 
@@ -132,10 +132,47 @@ Reply with:
     state.step = "blaster-colour";
   }
 
+  // ✅ FIXED COLOUR HANDLING
   function handleColour(msg) {
     const t = normalise(msg);
 
-    if (t.includes("3") || t.includes("grey")) {
+    if (t === "1") {
+      addBot(`Good — most originals fall in this range.
+
+Known original colours include:
+• black-blue (semi translucent blueish)
+• black-blue (semi translucent greenish)
+• black-blue (semi translucent greyish)
+• dark-blue (translucent blueish)
+• dark-blue (translucent greenish)
+
+Still confirm:
+• mould shape
+• rear bump
+• detail sharpness
+
+Use:
+${VV_JAWA_BLASTER_URL}`);
+      return;
+    }
+
+    if (t === "2") {
+      addBot(`Black needs caution.
+
+It could be:
+• reproduction
+• modern accessory
+• very dark blue mistaken for black
+• or a rare Brazilian Glasslite version (unlikely)
+
+Do NOT assume original based on colour.
+
+Compare carefully:
+${VV_JAWA_BLASTER_URL}`);
+      return;
+    }
+
+    if (t === "3") {
       addBot(`Grey pieces:
 Be careful — very common repro colour.
 
@@ -146,40 +183,43 @@ ${VV_JAWA_BLASTER_URL}`);
       return;
     }
 
-    if (t.includes("2") || t.includes("black")) {
-      addBot(`Black needs caution.
+    if (t === "4") {
+      addBot(`Silver is unusual.
 
-Could be:
-• repro
-• modern
-• very dark blue mistaken
+There is a rare Glasslite version, but extremely uncommon.
 
-Compare carefully:
+Do not assume without exact mould match.
+
+Check:
 ${VV_JAWA_BLASTER_URL}`);
       return;
     }
 
-    if (t.includes("1") || t.includes("blue")) {
-      addBot(`Good — most originals fall in this range.
+    if (t === "5") {
+      addBot(`If you're unsure, compare in natural light.
 
-Still confirm:
-• mould
-• rear bump
-• sharpness
+Most originals fall into dark blue / black-blue tones.
 
 Use:
 ${VV_JAWA_BLASTER_URL}`);
       return;
     }
 
-    if (t.includes("4") || t.includes("silver")) {
-      addBot(`Silver is unusual.
+    // fallback text parsing
+    if (t.includes("black")) {
+      addBot(`Black needs caution — compare carefully:
+${VV_JAWA_BLASTER_URL}`);
+      return;
+    }
 
-There is a rare Glasslite version, but extremely uncommon.
+    if (t.includes("grey") || t.includes("gray")) {
+      addBot(`Grey is commonly repro — check here:
+${VV_JAWA_BLASTER_URL}`);
+      return;
+    }
 
-Do not assume without exact match.
-
-Check:
+    if (t.includes("blue")) {
+      addBot(`Blue tones are correct range — confirm mould:
 ${VV_JAWA_BLASTER_URL}`);
       return;
     }
@@ -192,7 +232,7 @@ ${VV_JAWA_BLASTER_URL}`);
     addUser(msg);
     const t = normalise(msg);
 
-    // 🔥 ALWAYS override with blaster intent
+    // 🔥 ALWAYS OVERRIDE WITH BLASTER INTENT
     if (isBlasterIntent(t)) {
       showBlasterStart();
       return;
@@ -216,7 +256,7 @@ ${VV_JAWA_BLASTER_URL}`);
     }
 
     if (state.step === "blaster-float") {
-      if (t.includes("2") || t.includes("sink")) {
+      if (t === "2" || t.includes("sink")) {
         addBot("If it sinks → reproduction.");
         state.step = null;
         state.currentFigure = null;
