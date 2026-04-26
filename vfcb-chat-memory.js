@@ -187,32 +187,6 @@
     return null;
   }
 
-  function detectFollowUpChoice(text) {
-    const t = normalise(text);
-
-    if (
-      t === "1" ||
-      t.includes("go deeper") ||
-      t.includes("deeper") ||
-      t.includes("variant") ||
-      t.includes("confirm")
-    ) {
-      return "deeper";
-    }
-
-    if (
-      t === "2" ||
-      t.includes("accessory") ||
-      t.includes("accessories") ||
-      t.includes("blaster") ||
-      t.includes("weapon")
-    ) {
-      return "accessories";
-    }
-
-    return null;
-  }
-
   function referenceLabel(choice) {
     const labels = {
       "kader-m1": "Kader M1",
@@ -222,6 +196,17 @@
     };
 
     return labels[choice] || "that Jawa";
+  }
+
+  function referenceUrl(choice) {
+    const links = {
+      "kader-m1": "https://www.variantvillain.com/characters/sw/jawa/#f1",
+      "kader-m2": "https://www.variantvillain.com/characters/sw/jawa/#f2",
+      "unitoy-m3": "https://www.variantvillain.com/characters/sw/jawa/#f3",
+      "unitoy-lili-ledy-m4": "https://www.variantvillain.com/characters/sw/jawa/#f3"
+    };
+
+    return links[choice] || VV_JAWA_URL;
   }
 
   function jawaOpening() {
@@ -305,27 +290,21 @@ Notice the size difference between 2a and 2b, and how the 2a version's text alig
       `This variant was originally paired with:<br>
 • M2 Kader Jawa Blaster - short rear bump<br>
 • small hood, smooth cloth cloak<br><br>
-To confirm it properly, also check:<br>
-• bandolier shape and colour<br>
-• eye colour<br>
-• plastic colour<br>
-• cloak type, if present<br>
-• blaster mould, if present<br><br>
-Full Jawa guide on Variant Villain: 
-<a href="${VV_JAWA_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_URL}</a>`,
+For a more detailed look at the Kader China M2 No COO Jawa, please visit:<br>
+<a href="https://www.variantvillain.com/characters/sw/jawa/#f2" target="_blank" rel="noopener noreferrer">https://www.variantvillain.com/characters/sw/jawa/#f2</a><br><br>
+Is there anything else I can help you with?`,
       `This variant was originally paired with:
 • M2 Kader Jawa Blaster - short rear bump
 • small hood, smooth cloth cloak
 
-To confirm it properly, also check:
-• bandolier shape and colour
-• eye colour
-• plastic colour
-• cloak type, if present
-• blaster mould, if present
+For a more detailed look at the Kader China M2 No COO Jawa, please visit:
+https://www.variantvillain.com/characters/sw/jawa/#f2
 
-Full Jawa guide on Variant Villain: ${VV_JAWA_URL}`
+Is there anything else I can help you with?`
     );
+
+    state.step = null;
+    state.currentFigure = null;
   }
 
   function showHongKongReferenceImages() {
@@ -374,14 +353,15 @@ The M of G.M.F.G.I. aligns with the H of HONG, and the middle of the second 7 fr
     );
 
     appendBotHtml(
-      `Full Jawa guide on Variant Villain: 
+      `Full Jawa guide on Variant Villain:<br>
 <a href="${VV_JAWA_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_URL}</a><br><br>
 If you can match your figure to one of the above reference images, please reply with:<br><br>
 1 for Kader M1<br>
 2 for Kader M2<br>
 3 for Unitoy M3<br>
 4 for Unitoy / Lili Ledy M4`,
-      `Full Jawa guide on Variant Villain: ${VV_JAWA_URL}
+      `Full Jawa guide on Variant Villain:
+${VV_JAWA_URL}
 
 If you can match your figure to one of the above reference images, please reply with:
 
@@ -394,50 +374,20 @@ If you can match your figure to one of the above reference images, please reply 
 
   function choiceReply(choice) {
     const label = referenceLabel(choice);
+    const url = referenceUrl(choice);
 
-    return `Closest match: ${label}.
+    appendBotHtml(
+      `Closest match: ${label}.<br><br>
+For a more detailed look at the ${label} Jawas, please visit:<br>
+<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a><br><br>
+Is there anything else I can help you with?`,
+      `Closest match: ${label}.
 
-Would you like to go deeper to confirm the exact variant, or see the correct accessories?
+For a more detailed look at the ${label} Jawas, please visit:
+${url}
 
-1. Go deeper - mould, paint, bandolier etc
-2. Show correct accessories`;
-  }
-
-  function deeperReply() {
-    const label = referenceLabel(state.selectedReference);
-
-    return `Ok — let's go deeper on ${label}.
-
-Next, check the bandolier across the chest.
-
-Reply with:
-
-1. Rectangular dark brown bandolier
-2. Rounded or softer shaped bandolier
-3. Very dark / almost black bandolier
-4. Not sure`;
-  }
-
-  function accessoriesReply() {
-    const label = referenceLabel(state.selectedReference);
-
-    return `For ${label}, the key accessory to check is the Jawa blaster.
-
-Look for:
-• correct vintage Jawa blaster shape
-• short rear bump or long rear bump, depending on the mould
-• original black plastic, not modern repro plastic
-• clean mould detail
-• no soft, rubbery, glossy repro look
-
-For a complete Jawa, also check:
-• correct cloth cloak or vinyl cape
-• hood size and stitching
-• cloak texture
-• figure and weapon match
-
-Next useful step:
-Send or compare a clear photo of the blaster.`;
+Is there anything else I can help you with?`
+    );
   }
 
   function unclearReply() {
@@ -515,7 +465,6 @@ For now, check under strong light and look again at the back of the left leg.`;
       const answer = detectLegMarkingAnswer(t);
 
       if (answer === "no-coo") {
-        state.step = "confirm-kader-no-coo";
         noCooKaderReply();
         return;
       }
@@ -545,84 +494,9 @@ For now, check under strong light and look again at the back of the left leg.`;
       }
 
       state.selectedReference = choice;
-      state.step = "jawa-follow-up-choice";
-      addBot(choiceReply(choice));
-      return;
-    }
-
-    if (state.currentFigure === "jawa" && state.step === "jawa-follow-up-choice") {
-      const choice = detectFollowUpChoice(t);
-
-      if (choice === "deeper") {
-        state.step = "jawa-deeper-bandolier";
-        addBot(deeperReply());
-        return;
-      }
-
-      if (choice === "accessories") {
-        state.step = "jawa-accessories";
-        addBot(accessoriesReply());
-        return;
-      }
-
-      addBot("Please reply with 1 for Go deeper, or 2 for correct accessories.");
-      return;
-    }
-
-    if (state.currentFigure === "jawa" && state.step === "jawa-deeper-bandolier") {
-      addBot(`Got it.
-
-Next, check the eyes.
-
-Reply with:
-
-1. Round yellow eyes
-2. Larger / softer yellow eyes
-3. Orange or darker eyes
-4. Not sure`);
-      state.step = "jawa-deeper-eyes";
-      return;
-    }
-
-    if (state.currentFigure === "jawa" && state.step === "jawa-deeper-eyes") {
-      addBot(`Good. Final quick check for now:
-
-What is the cloak situation?
-
-1. Smooth cloth cloak
-2. Rougher textured cloth cloak
-3. Vinyl cape
-4. Missing cloak`);
-      state.step = "jawa-deeper-cloak";
-      return;
-    }
-
-    if (state.currentFigure === "jawa" && state.step === "jawa-deeper-cloak") {
-      const label = referenceLabel(state.selectedReference);
-
-      appendBotHtml(
-        `Thanks. Based on the leg marking, your closest starting point is still ${label}.<br><br>
-To confirm it properly, compare:<br>
-• leg marking<br>
-• bandolier shape and colour<br>
-• eye paint<br>
-• cloak material and hood shape<br>
-• blaster mould<br><br>
-Full Jawa guide on Variant Villain: 
-<a href="${VV_JAWA_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_URL}</a>`,
-        `Thanks. Based on the leg marking, your closest starting point is still ${label}.
-
-To confirm it properly, compare:
-• leg marking
-• bandolier shape and colour
-• eye paint
-• cloak material and hood shape
-• blaster mould
-
-Full Jawa guide on Variant Villain: ${VV_JAWA_URL}`
-      );
-
-      state.step = "jawa-complete";
+      choiceReply(choice);
+      state.step = null;
+      state.currentFigure = null;
       return;
     }
 
