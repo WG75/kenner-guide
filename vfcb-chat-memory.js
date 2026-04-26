@@ -3,11 +3,12 @@
   const inputEl = document.getElementById("droidInput");
   const statusEl = document.getElementById("droidStatus");
 
+  const VV_JAWA_URL = "https://www.variantvillain.com/characters/jawa/";
+
   const state = {
     history: [],
     currentFigure: null,
-    step: null,
-    cooExplained: false
+    step: null
   };
 
   function setStatus(text) {
@@ -34,9 +35,46 @@
     wrap.style.padding = "12px 14px";
     wrap.style.borderRadius = "12px";
     wrap.style.lineHeight = "1.5";
-
     wrap.innerHTML = formatText(text);
+
     logEl.appendChild(wrap);
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+
+  function appendImageCard(title, imageUrl, caption) {
+    if (!logEl) return;
+
+    const card = document.createElement("div");
+    card.className = "vfcb-image-card";
+    card.style.margin = "12px 0";
+    card.style.padding = "12px";
+    card.style.borderRadius = "12px";
+    card.style.border = "1px solid rgba(255,255,255,0.15)";
+    card.style.background = "rgba(255,255,255,0.04)";
+
+    const heading = document.createElement("div");
+    heading.textContent = title;
+    heading.style.fontWeight = "700";
+    heading.style.marginBottom = "8px";
+
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    img.alt = title;
+    img.loading = "lazy";
+    img.style.width = "100%";
+    img.style.maxWidth = "100%";
+    img.style.borderRadius = "10px";
+    img.style.display = "block";
+
+    const note = document.createElement("div");
+    note.innerHTML = formatText(caption);
+    note.style.marginTop = "8px";
+    note.style.lineHeight = "1.45";
+
+    card.appendChild(heading);
+    card.appendChild(img);
+    card.appendChild(note);
+    logEl.appendChild(card);
     logEl.scrollTop = logEl.scrollHeight;
   }
 
@@ -63,7 +101,8 @@
     const t = normalise(text);
 
     if (t === "1" || t.includes("vinyl")) return "vinyl";
-    if (t === "2" || t.includes("cloth")) return "cloth";
+    if (t === "2" || t.includes("cloth") || t.includes("fabric")) return "cloth";
+
     if (
       t === "3" ||
       t.includes("no cape") ||
@@ -78,65 +117,54 @@
     return null;
   }
 
-  function looksLikeNoCooJawa(text) {
+  function detectLegMarkingAnswer(text) {
     const t = normalise(text);
+
+    if (t === "1" || t.includes("hong kong")) return "hong-kong";
 
     if (
+      t === "2" ||
+      t.includes("no hong kong") ||
+      t.includes("no coo") ||
+      t.includes("no country") ||
+      t.includes("just copyright") ||
+      t.includes("only copyright") ||
+      t.includes("just 1977") ||
+      t.includes("only 1977") ||
       t.includes("g.m.f.g.i") ||
       t.includes("gmfgi") ||
-      t.includes("cmfg 1977") ||
-      t.includes("gmfgi 1977")
+      t.includes("cmfg")
     ) {
-      return true;
+      return "no-coo";
     }
 
-    return (
-      t.includes("1977") &&
-      !t.includes("hong kong") &&
-      !t.includes("taiwan") &&
-      !t.includes("macau") &&
-      !t.includes("china") &&
-      (
-        t.includes("hard to tell") ||
-        t.includes("looks like") ||
-        t.includes("just says") ||
-        t.includes("only says") ||
-        t.includes("cant see")
-      )
-    );
+    if (
+      t === "3" ||
+      t.includes("can't tell") ||
+      t.includes("cant tell") ||
+      t.includes("doesn't appear") ||
+      t.includes("doesnt appear") ||
+      t.includes("neither") ||
+      t.includes("repro") ||
+      t.includes("bootleg") ||
+      t.includes("retro")
+    ) {
+      return "unclear";
+    }
+
+    return null;
   }
 
-  function isHongKong(text) {
-    return normalise(text).includes("hong kong");
-  }
-
-  function isTaiwan(text) {
-    return normalise(text).includes("taiwan");
-  }
-
-  function isCooQuestion(text) {
+  function detectReferenceChoice(text) {
     const t = normalise(text);
-    return (
-      t === "coo" ||
-      t.includes("what is coo") ||
-      t.includes("what's coo") ||
-      t.includes("whats coo") ||
-      t.includes("what does coo mean")
-    );
-  }
 
-  function cooIntro() {
-    return `Check the Country of Origin (COO) markings on the legs.
+    if (t === "1" || t.includes("kader m1")) return "kader-m1";
+    if (t === "2" || t.includes("kader m2")) return "kader-m2";
+    if (t === "3" || t.includes("kader china")) return "kader-china-m2";
+    if (t === "4" || t.includes("unitoy m3")) return "unitoy-m3";
+    if (t === "5" || t.includes("lili ledy") || t.includes("unitoy/lili")) return "unitoy-lili-ledy-m4";
 
-Original vintage figures usually have:
-• Hong Kong
-• China
-• Taiwan
-• or no COO marking
-
-Some say "Made in" followed by the country, others just list the country name.
-
-What does your figure say?`;
+    return null;
   }
 
   function jawaOpening() {
@@ -152,85 +180,84 @@ Just tell me: vinyl, cloth, or missing cloak.
 Or you can reply with 1, 2 or 3.`;
   }
 
-  function jawaNoCapeReply() {
-    return `Right — so your Jawa is missing its cape, what collectors would usually call a naked figure.
+  function jawaLegQuestion(capeType) {
+    if (capeType === "none") {
+      return `Right — so your Jawa is missing its cape, what collectors often refer to as a naked figure.
 
-That’s common, so we identify it from the figure itself.
-
-Next step:
-${cooIntro()}
-
-After that, we confirm it using:
-• mould / sculpt
-• plastic colour
-• eye paint
-• bandolier shape and tone
-• and any remaining accessories
-
-Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.`;
-  }
-
-  function jawaClothReply() {
-    return `Good — so we're dealing with a cloth cloak Jawa.
+In that case, let's identify the figure itself.
 
 Next step:
-${cooIntro()}
+Check the Country of Origin (COO) markings on the legs.
 
-After that, the next useful things are:
-• hood size and shape
-• stitching / construction
-• eye colour
-• bandolier shape and tone
-• and whether the blaster is present
+Vintage Jawas should show:
+© G.M.F.G.I. 1977 on top, with HONG KONG underneath
 
-Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.`;
-  }
+or just:
+© G.M.F.G.I. 1977
 
-  function jawaVinylReply() {
-    return `Good — that means you have the early vinyl cape version.
+Reply with:
+
+1 for Hong Kong
+2 if it doesn't show Hong Kong
+3 if you can't tell / it doesn't appear to have either`;
+    }
+
+    if (capeType === "cloth") {
+      return `Good — so we're dealing with a cloth cloak Jawa.
 
 Next step:
-${cooIntro()}
+Check the Country of Origin (COO) markings on the legs.
 
-Then we confirm it properly using:
-• body sculpt
-• plastic colour
-• paint details
-• and the correct blaster pairing
+Vintage Jawas should show:
+© G.M.F.G.I. 1977 on top, with HONG KONG underneath
 
-Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.`;
-  }
+or just:
+© G.M.F.G.I. 1977
 
-  function cooMeaningReply() {
-    return `COO means Country of Origin.
+Reply with:
 
-It is the country marking usually found on the legs of vintage figures, such as Hong Kong, China, Taiwan, or no COO marking.
+1 for Hong Kong
+2 if it doesn't show Hong Kong
+3 if you can't tell / it doesn't appear to have either`;
+    }
 
-Some figures say "Made in" followed by the country. Others just list the country name.
+    if (capeType === "vinyl") {
+      return `Good — that means you may have the early vinyl cape version.
 
-For Jawas, COO is useful, but not enough on its own. You still need to check:
-• mould / sculpt
-• eye colour
-• plastic colour
-• bandolier shape and tone
-• cloak or blaster pairing, if present`;
+Next step:
+Check the Country of Origin (COO) markings on the legs.
+
+Vintage Jawas should show:
+© G.M.F.G.I. 1977 on top, with HONG KONG underneath
+
+or just:
+© G.M.F.G.I. 1977
+
+Reply with:
+
+1 for Hong Kong
+2 if it doesn't show Hong Kong
+3 if you can't tell / it doesn't appear to have either`;
+    }
+
+    return "";
   }
 
   function noCooKaderReply() {
-    return `If there’s no Hong Kong marking on the leg, you’re looking at a Kader China variant.
+    return `That points to the Kader China M2 No COO Jawa.
 
-M2 Kader China on Variant Villain.
-
-It will have just one line of text reading:
+It should show just:
 © G.M.F.G.I. 1977
 
-That stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
+No HONG KONG underneath.
+
+G.M.F.G.I. stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
 
 This variant was originally paired with:
 • an M2 Kader Jawa Blaster - short rear bump
 • a small hood, smooth cloth cloak
 
-KADER (CHINA) No COO Jawas should have:
+Kader China M2 No COO Jawas should have:
 
 • Rectangular dark brown bandolier
 • Round yellow eyes
@@ -246,41 +273,142 @@ There are two variants within this Kader China No COO version.
 
 The most noticeable difference is the size of the copyright text on the back of the leg.
 
-Next useful checks:
-• bandolier tone
-• eye colour`;
+Important:
+DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.`;
   }
 
-  function hongKongReply() {
-    return `Good — Hong Kong COO.
+  function showJawaReferenceImages() {
+    addBot(`Ok, compare your left-leg marking with these reference images and choose the closest match.
 
-This is where most Jawa variants sit, so we need to narrow it down using figure traits.
+Reply with:
 
-Next checks:
-• eye colour
+1 for Kader M1
+2 for Kader M2
+3 for Kader China M2
+4 for Unitoy M3
+5 for Unitoy / Lili Ledy M4`);
+
+    appendImageCard(
+      "1. Kader M1",
+      "/images/jawa_figure_kader_M1.png",
+      `Kader M1 1a:
+The copyright C (©) aligns with the G of HONG, and the F of G.M.F.G.I. aligns with the G of KONG.
+
+Kader M1 1b:
+The copyright C (©) aligns with the O of HONG, and the second G of G.M.F.G.I. aligns with the G of KONG.`
+    );
+
+    appendImageCard(
+      "2. Kader M2",
+      "/images/jawa_figure_kader_M2.png",
+      `Kader M2 1a:
+The right side of the copyright C (©) aligns with the H of HONG, and the 1 of 1977 aligns with the G of KONG.
+
+Kader M2 1b:
+The right side of the copyright C (©) aligns with the H of HONG, and the middle of the 9 and 7 of 1977 aligns with the G of KONG.`
+    );
+
+    appendImageCard(
+      "3. Kader China M2",
+      "/images/jawa_figure_kader_china_M2.png",
+      `Kader China M2 2a and M2 2b:
+Only © G.M.F.G.I. 1977. No HONG KONG marking.
+
+Notice the size difference between 2a and 2b, and how the 2a version's text aligns with the fold.`
+    );
+
+    appendImageCard(
+      "4. Unitoy M3",
+      "/images/jawa_figure_unitoy_M3.png",
+      `Unitoy M3 1a:
+The first G of G.M.F.G.I. aligns with the H of HONG, and the middle of the 77 from 1977 aligns with the G of KONG.
+
+Unitoy M3 1b:
+The first G of G.M.F.G.I. aligns with the H of HONG, and the middle of the 77 from 1977 aligns with the G of KONG.`
+    );
+
+    appendImageCard(
+      "5. Unitoy / Lili Ledy M4",
+      "/images/jawa_figure_unitoy_lili-ledy_M4.png",
+      `Unitoy / Lili Ledy M4 1a:
+The M of G.M.F.G.I. aligns with the H of HONG, and the middle of the second 7 from 1977 aligns with the G of KONG.
+
+Unitoy / Lili Ledy M4 1b:
+The M of G.M.F.G.I. aligns with the H of HONG, and the middle of the second 7 from 1977 aligns with the G of KONG.`
+    );
+
+    addBot(`Full Jawa guide on Variant Villain:
+${VV_JAWA_URL}
+
+Important:
+DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.`);
+  }
+
+  function choiceReply(choice) {
+    const replies = {
+      "kader-m1": `Closest match: Kader M1.
+
+Now confirm with:
 • bandolier shape and tone
+• eye colour
 • plastic colour
 • cloak type, if present
 • blaster mould, if present
 
-COO alone is not enough.
+This is a strong starting point, but do not rely on the leg marking alone.`,
+      "kader-m2": `Closest match: Kader M2.
 
-Tell me what you can see for the eye colour and bandolier.`;
-  }
-
-  function taiwanReply() {
-    return `Good — Taiwan COO.
-
-Next checks:
-• eye colour
+Now confirm with:
 • bandolier shape and tone
+• eye colour
 • plastic colour
 • cloak type, if present
 • blaster mould, if present
 
-COO is useful, but not enough on its own.
+This is a strong starting point, but do not rely on the leg marking alone.`,
+      "kader-china-m2": noCooKaderReply(),
+      "unitoy-m3": `Closest match: Unitoy M3.
 
-Tell me what you can see for the eye colour and bandolier.`;
+Now confirm with:
+• bandolier shape and tone
+• eye colour
+• plastic colour
+• cloak type, if present
+• blaster mould, if present
+
+This is a strong starting point, but do not rely on the leg marking alone.`,
+      "unitoy-lili-ledy-m4": `Closest match: Unitoy / Lili Ledy M4.
+
+Now confirm with:
+• bandolier shape and tone
+• eye colour
+• plastic colour
+• cloak type, if present
+• blaster mould, if present
+
+This is a strong starting point, but do not rely on the leg marking alone.`
+    };
+
+    return replies[choice] || null;
+  }
+
+  function unclearReply() {
+    return `If it doesn't show either expected marking, be careful.
+
+For original vintage Jawa figures, the normal left-leg markings are either:
+
+• © G.M.F.G.I. 1977 with HONG KONG underneath
+• or just © G.M.F.G.I. 1977 with no HONG KONG underneath
+
+If yours appears to have neither, possible explanations include:
+• very worn or faint markings
+• poor lighting / difficult angle
+• bootleg
+• reproduction
+• Retro Collection
+• modern figure
+
+For now, check under strong light and look again at the back of the left leg.`;
   }
 
   async function askApi(message) {
@@ -312,7 +440,6 @@ Tell me what you can see for the eye colour and bandolier.`;
     if (!message) return;
 
     addUser(message);
-
     const t = normalise(message);
 
     if (!state.currentFigure && isJawaStart(t)) {
@@ -330,49 +457,53 @@ Tell me what you can see for the eye colour and bandolier.`;
         return;
       }
 
-      state.step = "coo";
-
-      if (cape === "none") {
-        addBot(jawaNoCapeReply());
-        return;
-      }
-
-      if (cape === "cloth") {
-        addBot(jawaClothReply());
-        return;
-      }
-
-      if (cape === "vinyl") {
-        addBot(jawaVinylReply());
-        return;
-      }
+      state.step = "leg-marking";
+      addBot(jawaLegQuestion(cape));
+      return;
     }
 
-    if (state.currentFigure === "jawa" && state.step === "coo") {
-      if (isCooQuestion(t)) {
-        addBot(cooMeaningReply());
-        return;
-      }
+    if (state.currentFigure === "jawa" && state.step === "leg-marking") {
+      const answer = detectLegMarkingAnswer(t);
 
-      if (looksLikeNoCooJawa(t)) {
-        state.step = "confirm-kader";
+      if (answer === "no-coo") {
+        state.step = "confirm-kader-no-coo";
         addBot(noCooKaderReply());
+        appendImageCard(
+          "Kader China M2 No COO reference",
+          "/images/jawa_figure_kader_china_M2.png",
+          "Only © G.M.F.G.I. 1977. No HONG KONG marking."
+        );
+        addBot(`Full Jawa guide on Variant Villain:
+${VV_JAWA_URL}`);
         return;
       }
 
-      if (isHongKong(t)) {
-        state.step = "hk-detail";
-        addBot(hongKongReply());
+      if (answer === "hong-kong") {
+        state.step = "choose-reference";
+        showJawaReferenceImages();
         return;
       }
 
-      if (isTaiwan(t)) {
-        state.step = "taiwan-detail";
-        addBot(taiwanReply());
+      if (answer === "unclear") {
+        state.step = "unclear-marking";
+        addBot(unclearReply());
         return;
       }
 
-      addBot("I need to know what the Country of Origin (COO) marking says — Hong Kong, Taiwan, or just the copyright line such as © G.M.F.G.I. 1977?");
+      addBot("Please reply with 1, 2, or 3.");
+      return;
+    }
+
+    if (state.currentFigure === "jawa" && state.step === "choose-reference") {
+      const choice = detectReferenceChoice(t);
+
+      if (!choice) {
+        addBot("Please reply with 1, 2, 3, 4, or 5 for the closest reference image.");
+        return;
+      }
+
+      state.step = "confirm-traits";
+      addBot(choiceReply(choice));
       return;
     }
 
