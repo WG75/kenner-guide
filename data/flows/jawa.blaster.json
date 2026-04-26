@@ -1,0 +1,123 @@
+{
+  "id": "jawa.blaster",
+  "entity": "jawa",
+  "intent": "accessory",
+  "accessory": "blaster",
+  "start": "jawa-blaster-image",
+  "steps": {
+    "jawa-blaster-image": {
+      "type": "question",
+      "prompt": "Ok \u2014 compare your blaster with this reference.\n\nCheck:\n\u2022 mould shape\n\u2022 rear bump length\n\u2022 plastic colour\n\u2022 detail sharpness\n\nCan you identify it against the reference image?",
+      "images": [
+        {
+          "title": "Jawa Blaster Reference",
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/JawaBlaster_000.jpg",
+          "caption": "Compare mould shape, rear bump length, plastic colour and detail sharpness."
+        }
+      ],
+      "options": [
+        {
+          "value": "1",
+          "label": "Yes",
+          "aliases": [
+            "yes"
+          ],
+          "next": "jawa-blaster-float"
+        },
+        {
+          "value": "2",
+          "label": "No",
+          "aliases": [
+            "no"
+          ],
+          "next": "jawa-blaster-float"
+        },
+        {
+          "value": "3",
+          "label": "Not sure",
+          "aliases": [
+            "not sure",
+            "unsure"
+          ],
+          "next": "jawa-blaster-float"
+        }
+      ]
+    },
+    "jawa-blaster-float": {
+      "type": "question",
+      "prompt": "Next check: float test.\n\n\u2022 If it sinks, treat it as a reproduction\n\u2022 If it floats, it may be original\n\nImportant:\nModern reproductions can float, so this is not proof.\n\nDoes yours sink or float?",
+      "options": [
+        {
+          "value": "1",
+          "label": "Float",
+          "aliases": [
+            "float",
+            "floats",
+            "floating"
+          ],
+          "next": "jawa-blaster-colour"
+        },
+        {
+          "value": "2",
+          "label": "Sink",
+          "aliases": [
+            "sink",
+            "sinks",
+            "sank"
+          ],
+          "reply": "If it sinks, treat it as a reproduction."
+        }
+      ]
+    },
+    "jawa-blaster-colour": {
+      "type": "question",
+      "prompt": "Good. Since it floats, next check the colour.\n\nMost original Jawa blasters are dark blue or black-blue tones.\n\nWhat colour does yours look like?",
+      "options": [
+        {
+          "value": "1",
+          "label": "Dark blue / black-blue",
+          "aliases": [
+            "dark blue",
+            "black blue",
+            "blue"
+          ],
+          "reply": "That is the safest colour range for most original Jawa blasters.\n\nKnown original colours include:\n\u2022 black-blue, semi-translucent blueish\n\u2022 black-blue, semi-translucent greenish\n\u2022 black-blue, semi-translucent greyish\n\u2022 dark-blue, translucent blueish\n\u2022 dark-blue, translucent greenish\n\u2022 dark-blue, semi-translucent greyish\n\nStill compare the exact mould shape, rear bump and detail sharpness against Variant Villain:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+        },
+        {
+          "value": "2",
+          "label": "Black",
+          "aliases": [
+            "black"
+          ],
+          "reply": "Black needs caution.\n\nIt could be:\n\u2022 a reproduction\n\u2022 a modern accessory\n\u2022 a very dark blue original being mistaken for black\n\u2022 or, much less commonly, a Brazilian Glasslite black blaster\n\nDo not call it original based on colour alone. Compare the mould exactly against the known examples:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+        },
+        {
+          "value": "3",
+          "label": "Grey",
+          "aliases": [
+            "grey",
+            "gray"
+          ],
+          "reply": "Grey pieces need extra caution.\n\nGrey is a very common reproduction colour for Jawa blasters.\n\nThere are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.\n\nBest next step: compare it closely with the full Variant Villain guide:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+        },
+        {
+          "value": "4",
+          "label": "Silver",
+          "aliases": [
+            "silver"
+          ],
+          "reply": "Silver is unusual.\n\nThere is a rare silver Jawa blaster associated with the Brazilian Glasslite figure, but it is extremely uncommon.\n\nDo not assume it is Glasslite without matching the mould and provenance carefully.\n\nUse the full reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+        },
+        {
+          "value": "5",
+          "label": "Not sure",
+          "aliases": [
+            "not sure",
+            "unsure"
+          ],
+          "reply": "If you are not sure on colour, compare it in natural light against the known Variant Villain examples.\n\nKnown original colour families include dark-blue / black-blue tones, plus rare Glasslite black and silver versions.\n\nFull reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+        }
+      ]
+    }
+  }
+}

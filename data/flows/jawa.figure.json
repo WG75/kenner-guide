@@ -1,0 +1,135 @@
+{
+  "id": "jawa.figure",
+  "type": "figure",
+  "entity": "jawa",
+  "name": "Jawa Figure Identification",
+  "start_step": "cape_question",
+  "steps": {
+    "cape_question": {
+      "type": "question",
+      "content": "Yes I can do that — let's start with the cape.\n\nWhich of these does your Jawa have?\n\n1 Vinyl cape - smooth plastic\n2 Cloth cloak - fabric\n3 Or neither. Just a naked figure\n\nJust reply with 1, 2 or 3.",
+      "options": {
+        "1": "route_vinyl_cape",
+        "2": "route_cloth_cloak",
+        "3": "leg_marking_question"
+      }
+    },
+    "route_vinyl_cape": {
+      "type": "route",
+      "target": "jawa.vinyl-cape"
+    },
+    "route_cloth_cloak": {
+      "type": "route",
+      "target": "jawa.cloth-cloak"
+    },
+    "leg_marking_question": {
+      "type": "question",
+      "content": "Right — so your Jawa is missing its cape, what collectors often refer to as a naked figure.\n\nIn that case, let's identify the figure itself.\n\nNext step:\nCheck the Country of Origin markings on the legs.\n\nReply with:\n\n1 for Hong Kong\n2 if it doesn't show Hong Kong\n3 if you can't tell / it doesn't appear to have either",
+      "options": {
+        "1": "hong_kong_references",
+        "2": "no_coo_kader",
+        "3": "unclear_marking"
+      }
+    },
+    "hong_kong_references": {
+      "type": "message",
+      "content": "Great! Now let's check which figure variant you have.\n\nCompare your left-leg marking with the reference images and choose the closest match.\n\nUse the images to compare your leg marks. On the images, look at the parts indicated in green.",
+      "next": "hong_kong_image_1"
+    },
+    "hong_kong_image_1": {
+      "type": "image",
+      "title": "1. Kader M1",
+      "url": "/public/images/jawa_figure_kader_M1.png",
+      "caption": "Kader M1 1a:\nThe copyright C (©) aligns with the G of HONG, and the F of G.M.F.G.I. aligns with the G of KONG.\n\nKader M1 1b:\nThe copyright C (©) aligns with the O of HONG, and the second G of G.M.F.G.I. aligns with the G of KONG.",
+      "next": "hong_kong_image_2"
+    },
+    "hong_kong_image_2": {
+      "type": "image",
+      "title": "2. Kader M2",
+      "url": "/public/images/jawa_figure_kader_M2.png",
+      "caption": "Kader M2 1a:\nThe right side of the copyright C (©) aligns with the H of HONG, and the 1 of 1977 aligns with the G of KONG.\n\nKader M2 1b:\nThe right side of the copyright C (©) aligns with the H of HONG, and the middle of the 9 and 7 of 1977 aligns with the G of KONG.",
+      "next": "hong_kong_image_3"
+    },
+    "hong_kong_image_3": {
+      "type": "image",
+      "title": "3. Unitoy M3",
+      "url": "/public/images/jawa_figure_unitoy_M3.png",
+      "caption": "Unitoy M3 1a:\nThe first G of G.M.F.G.I. aligns with the H of HONG, and the middle of the 77 from 1977 aligns with the G of KONG.\n\nUnitoy M3 1b:\nThe first G of G.M.F.G.I. aligns with the H of HONG, and the middle of the 77 from 1977 aligns with the G of KONG.",
+      "next": "hong_kong_image_4"
+    },
+    "hong_kong_image_4": {
+      "type": "image",
+      "title": "4. Unitoy / Lili Ledy M4",
+      "url": "/public/images/jawa_figure_unitoy_lili-ledy_M4.png",
+      "caption": "Unitoy / Lili Ledy M4 1a:\nThe M of G.M.F.G.I. aligns with the H of HONG, and the middle of the second 7 from 1977 aligns with the G of KONG.\n\nUnitoy / Lili Ledy M4 1b:\nThe M of G.M.F.G.I. aligns with the H of HONG, and the middle of the second 7 from 1977 aligns with the G of KONG.",
+      "next": "choose_hong_kong_variant"
+    },
+    "choose_hong_kong_variant": {
+      "type": "question",
+      "content": "Full Jawa guide on Variant Villain:\nhttps://www.variantvillain.com/characters/jawa/\n\nIf you can match your figure to one of the above reference images, please reply with:\n\n1 for Kader M1\n2 for Kader M2\n3 for Unitoy M3\n4 for Unitoy / Lili Ledy M4",
+      "options": {
+        "1": "result_kader_m1",
+        "2": "result_kader_m2",
+        "3": "result_unitoy_m3",
+        "4": "result_unitoy_lili_ledy_m4"
+      }
+    },
+    "result_kader_m1": {
+      "type": "message",
+      "content": "Closest match: Kader M1.\n\nFor a more detailed look at the Kader M1 Jawas, please visit:\nhttps://www.variantvillain.com/characters/sw/jawa/#f1",
+      "next": "ask_blaster"
+    },
+    "result_kader_m2": {
+      "type": "message",
+      "content": "Closest match: Kader M2.\n\nFor a more detailed look at the Kader M2 Jawas, please visit:\nhttps://www.variantvillain.com/characters/sw/jawa/#f2",
+      "next": "ask_blaster"
+    },
+    "result_unitoy_m3": {
+      "type": "message",
+      "content": "Closest match: Unitoy M3.\n\nFor a more detailed look at the Unitoy M3 Jawas, please visit:\nhttps://www.variantvillain.com/characters/sw/jawa/#f3",
+      "next": "ask_blaster"
+    },
+    "result_unitoy_lili_ledy_m4": {
+      "type": "message",
+      "content": "Closest match: Unitoy / Lili Ledy M4.\n\nFor a more detailed look at the Unitoy / Lili Ledy M4 Jawas, please visit:\nhttps://www.variantvillain.com/characters/sw/jawa/#f3",
+      "next": "ask_blaster"
+    },
+    "no_coo_kader": {
+      "type": "message",
+      "content": "That points to the Kader China M2 No COO Jawa.\n\nIt should show just:\n© G.M.F.G.I. 1977\n\nNo HONG KONG underneath.\n\nCompare your leg marking with this reference.",
+      "next": "no_coo_image"
+    },
+    "no_coo_image": {
+      "type": "image",
+      "title": "Kader China M2 No COO",
+      "url": "/public/images/jawa_figure_kader_china_M2.png",
+      "caption": "Kader China M2 2a and M2 2b:\nOnly © G.M.F.G.I. 1977. No HONG KONG marking.\n\nNotice the size difference between 2a and 2b, and how the 2a version's text aligns with the fold.",
+      "next": "no_coo_result"
+    },
+    "no_coo_result": {
+      "type": "message",
+      "content": "This figure variant is associated with Kader M2.\n\nFor a more detailed look at the Kader M2 Jawa, please visit:\nhttps://www.variantvillain.com/characters/sw/jawa/#f2",
+      "next": "ask_blaster"
+    },
+    "unclear_marking": {
+      "type": "message",
+      "content": "If it doesn't show either expected marking, be careful.\n\nFor original vintage Jawa figures, the normal left-leg markings are either:\n\n• © G.M.F.G.I. 1977 with HONG KONG underneath\n• or just © G.M.F.G.I. 1977 with no HONG KONG underneath\n\nIf yours appears to have neither, possible explanations include:\n\n• Very damaged, worn or faint markings\n• Poor lighting / difficult angle\n• Bootleg\n• Reproduction\n• Retro Collection\n• Modern figure\n\nFor now, check under strong light and look again at the back of the left leg."
+    },
+    "ask_blaster": {
+      "type": "question",
+      "content": "Do you also want help checking the Jawa blaster?\n\n1 Yes, help me identify the blaster\n2 No, I’m done for now",
+      "options": {
+        "1": "route_blaster",
+        "2": "done"
+      }
+    },
+    "route_blaster": {
+      "type": "route",
+      "target": "jawa.blaster"
+    },
+    "done": {
+      "type": "message",
+      "content": "No problem. Is there anything else I can help you with?"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "jawa.cloth-cloak",
+  "type": "accessory",
+  "entity": "jawa",
+  "name": "Jawa Cloth Cloak Identification",
+  "start_step": "intro",
+  "steps": {
+    "intro": {
+      "type": "message",
+      "content": "Ok — let’s check your Jawa cloth cloak.\n\nThere are 5 known cloth cloak types, and they can be difficult to identify precisely without direct visual comparison.",
+      "next": "cloak_info"
+    },
+    "cloak_info": {
+      "type": "message",
+      "content": "Key differences include:\n\n• Hood size and shape\n• Material texture\n• Colour tone\n• Stitching and cut\n\nFor accurate identification, use the full Variant Villain guide:\nhttps://www.variantvillain.com/accessory-guide/jawa-cloak/",
+      "next": "next_action"
+    },
+    "next_action": {
+      "type": "question",
+      "content": "What would you like to do next?\n\n1 Identify the Jawa figure\n2 Check the blaster\n3 Ask a question",
+      "options": {
+        "1": "route_figure",
+        "2": "route_blaster",
+        "3": "free_chat"
+      }
+    },
+    "route_figure": {
+      "type": "route",
+      "target": "jawa.figure"
+    },
+    "route_blaster": {
+      "type": "route",
+      "target": "jawa.blaster"
+    },
+    "free_chat": {
+      "type": "ai"
+    }
+  }
+}

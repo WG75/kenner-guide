@@ -1,0 +1,46 @@
+{
+  "id": "jawa.vinyl-cape",
+  "type": "accessory",
+  "entity": "jawa",
+  "name": "Jawa Vinyl Cape Identification",
+  "start_step": "intro",
+  "steps": {
+    "intro": {
+      "type": "message",
+      "content": "Ok — let’s treat this as a potential vinyl cape Jawa, not confirmed yet.\n\nOriginal vinyl cape Jawas are very valuable, so unfortunately there are many fakes and cut-down Ben Kenobi capes around.\n\nThis app is a useful starting point, but do not rely on it alone. For anything valuable, get confirmation from experienced collector groups as well.",
+      "next": "show_reference"
+    },
+    "show_reference": {
+      "type": "image",
+      "title": "Jawa Vinyl Cape Authentication Reference",
+      "url": "/public/images/jawa-vinyl-cape-01.png",
+      "caption": "Compare cape shape, surface texture on both sides, colour compared with an original Ben cape, and signs of a cut-down cape.",
+      "next": "comparison_check"
+    },
+    "comparison_check": {
+      "type": "message",
+      "content": "Check the following:\n\n• Cape shape\n• Surface texture on both sides\n• Colour compared with a genuine Ben cape\n• Signs of a cut-down cape\n\nA cut-down Ben cape is usually noticeably darker and the shape will not match correctly.\n\nFor more detailed information and reference photos, please check:\nhttps://www.variantvillain.com/accessory-guide/jawa-vinyl-cape/",
+      "next": "next_action"
+    },
+    "next_action": {
+      "type": "question",
+      "content": "What would you like to do next?\n\n1 Identify the Jawa figure\n2 Check the blaster\n3 Ask a question",
+      "options": {
+        "1": "route_figure",
+        "2": "route_blaster",
+        "3": "free_chat"
+      }
+    },
+    "route_figure": {
+      "type": "route",
+      "target": "jawa.figure"
+    },
+    "route_blaster": {
+      "type": "route",
+      "target": "jawa.blaster"
+    },
+    "free_chat": {
+      "type": "ai"
+    }
+  }
+}
