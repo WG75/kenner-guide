@@ -1,231 +1,166 @@
 (function () {
   const logEl = document.getElementById("droidLog");
   const inputEl = document.getElementById("droidInput");
-
-  const VV_JAWA_BLASTER_URL = "https://www.variantvillain.com/accessory-guide/jawa-blaster/";
+  const statusEl = document.getElementById("droidStatus");
 
   const state = {
-    currentFigure: null,
-    step: null
+    history: []
   };
 
-  function normalise(text) {
-    return String(text || "").trim().toLowerCase();
+  function setStatus(text) {
+    if (statusEl) statusEl.textContent = text || "";
   }
 
-  function append(text) {
-    const div = document.createElement("div");
-    div.innerHTML = text.replace(/\n/g, "<br>");
-    logEl.appendChild(div);
-    logEl.scrollTop = logEl.scrollHeight;
+  function escapeHtml(text) {
+    return String(text || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
   }
 
-  function addUser(t) {
-    append(t);
-  }
-
-  function addBot(t) {
-    append(t);
-  }
-
-  function appendImage(src) {
-    const img = document.createElement("img");
-    img.src = src;
-    img.style.width = "100%";
-    img.style.margin = "10px 0";
-    logEl.appendChild(img);
-  }
-
-  function isBlasterIntent(text) {
-    const t = normalise(text);
-
-    return (
-      t.includes("jawa") &&
-      (
-        t.includes("blaster") ||
-        t.includes("gun") ||
-        t.includes("pistol") ||
-        t.includes("weapon") ||
-        t.includes("laser") ||
-        t.includes("ray") ||
-        t.includes("pew") ||
-        t.includes("shooter")
-      )
+  function linkify(text) {
+    const escaped = escapeHtml(text);
+    return escaped.replace(
+      /(https?:\/\/[^\s<]+)/g,
+      '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
     );
   }
 
-  function isJawaMention(text) {
-    return normalise(text).includes("jawa");
+  function formatText(text) {
+    return linkify(text).replace(/\n/g, "<br>");
   }
 
-  function showClarification() {
-    addBot(`Not sure what you mean.
+  function appendMessage(role, text) {
+    if (!logEl) return;
 
-Did you want help with:
+    const wrap = document.createElement("div");
+    wrap.className = `vfcb-msg vfcb-${role}`;
+    wrap.style.margin = "10px 0";
+    wrap.style.padding = "12px 14px";
+    wrap.style.borderRadius = "12px";
+    wrap.style.lineHeight = "1.5";
+    wrap.innerHTML = formatText(text);
 
-1. Jawa blaster (weapon)
-2. Jawa figure
-3. Jawa cloak / cape
-
-Reply with 1, 2 or 3.`);
-
-    state.step = "clarify";
+    logEl.appendChild(wrap);
+    logEl.scrollTop = logEl.scrollHeight;
   }
 
-  function showBlasterStart() {
-    addBot("Ok — compare your blaster with this reference:");
+  function appendImageCard(title, imageUrl, caption) {
+    if (!logEl || !imageUrl) return;
 
-    appendImage("https://www.variantvillain.com/wp-content/uploads/2021/12/JawaBlaster_000.jpg");
+    const card = document.createElement("div");
+    card.className = "vfcb-image-card";
+    card.style.margin = "12px 0";
+    card.style.padding = "12px";
+    card.style.borderRadius = "12px";
+    card.style.border = "1px solid rgba(255,255,255,0.15)";
+    card.style.background = "rgba(255,255,255,0.04)";
 
-    addBot(`Check:
-• mould shape
-• rear bump
-• plastic colour
-• detail sharpness
+    if (title) {
+      const heading = document.createElement("div");
+      heading.textContent = title;
+      heading.style.fontWeight = "700";
+      heading.style.marginBottom = "8px";
+      card.appendChild(heading);
+    }
 
-Can you identify it?
+    const img = document.createElement("img");
+    img.src = imageUrl;
+    img.alt = title || "VF-CB reference image";
+    img.loading = "lazy";
+    img.style.width = "100%";
+    img.style.maxWidth = "100%";
+    img.style.borderRadius = "10px";
+    img.style.display = "block";
+    img.style.marginBottom = caption ? "8px" : "0";
+    card.appendChild(img);
 
-Reply:
+    if (caption) {
+      const note = document.createElement("div");
+      note.innerHTML = formatText(caption);
+      note.style.lineHeight = "1.45";
+      card.appendChild(note);
+    }
 
-1 Yes
-2 No
-3 Not sure`);
-
-    state.step = "blaster-image";
-    state.currentFigure = "jawa";
+    logEl.appendChild(card);
+    logEl.scrollTop = logEl.scrollHeight;
   }
 
-  function askFloat() {
-    addBot(`Next check: float test.
-
-1 float
-2 sink`);
-
-    state.step = "blaster-float";
+  function addUser(text) {
+    appendMessage("user", text);
+    state.history.push({ role: "user", content: text });
   }
 
-  function askColour() {
-    addBot(`Now check colour:
-
-1 dark blue
-2 black
-3 grey
-4 silver
-5 not sure`);
-
-    state.step = "blaster-colour";
+  function addBot(text) {
+    appendMessage("assistant", text);
+    state.history.push({ role: "assistant", content: text });
   }
 
-  function handleColour(t) {
-    if (t === "1") {
-      addBot(`Good — typical original range.
+  async function askApi(message) {
+    setStatus("Thinking...");
 
-Check:
-${VV_JAWA_BLASTER_URL}`);
-      return;
-    }
+    const res = await fetch("/api/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        message,
+        history: state.history.slice(-20)
+      })
+    });
 
-    if (t === "2") {
-      addBot(`Black needs caution.
+    const data = await res.json().catch(() => ({}));
+    setStatus("");
 
-Compare:
-${VV_JAWA_BLASTER_URL}`);
-      return;
-    }
+    if (!res.ok) throw new Error(data?.error || "API error");
 
-    if (t === "3") {
-      addBot(`Grey is commonly repro.
-
-Check:
-${VV_JAWA_BLASTER_URL}`);
-      return;
-    }
-
-    if (t === "4") {
-      addBot(`Silver is rare Glasslite.
-
-Verify carefully:
-${VV_JAWA_BLASTER_URL}`);
-      return;
-    }
-
-    addBot(`Compare:
-${VV_JAWA_BLASTER_URL}`);
+    return data;
   }
 
-  function process(msg) {
-    addUser(msg);
-    const t = normalise(msg);
+  async function processMessage(rawMessage) {
+    const message = String(rawMessage || "").trim();
+    if (!message) return;
 
-    // 🔥 Intent first
-    if (isBlasterIntent(t)) {
-      showBlasterStart();
-      return;
-    }
+    addUser(message);
 
-    // 🔥 Jawa but unclear meaning
-    if (!state.step && isJawaMention(t)) {
-      showClarification();
-      return;
-    }
+    try {
+      const data = await askApi(message);
 
-    // clarification step
-    if (state.step === "clarify") {
-      if (t === "1") {
-        showBlasterStart();
-        return;
+      if (Array.isArray(data.images)) {
+        data.images.forEach((img) => {
+          appendImageCard(img.title, img.url, img.caption);
+        });
       }
 
-      if (t === "2") {
-        addBot("Let's identify your Jawa figure. Start with the cape.");
-        state.step = null;
-        return;
+      addBot(data.reply || "I could not find a useful answer from the reference files.");
+
+      if (data.debug && window.VFCB_DEBUG) {
+        console.log("VF-CB debug", data.debug);
       }
-
-      if (t === "3") {
-        addBot("Check your cloak vs Variant Villain guide.");
-        state.step = null;
-        return;
-      }
-
-      addBot("Reply with 1, 2 or 3.");
-      return;
+    } catch (err) {
+      console.error(err);
+      setStatus("");
+      addBot("Something went wrong getting a response.");
     }
-
-    // blaster flow
-    if (state.step === "blaster-image") {
-      askFloat();
-      return;
-    }
-
-    if (state.step === "blaster-float") {
-      if (t === "2") {
-        addBot("If it sinks → reproduction.");
-        state.step = null;
-        return;
-      }
-
-      if (t === "1") {
-        askColour();
-        return;
-      }
-
-      addBot("Reply 1 or 2.");
-      return;
-    }
-
-    if (state.step === "blaster-colour") {
-      handleColour(t);
-      state.step = null;
-      return;
-    }
-
-    addBot("Try asking about a Jawa figure or blaster.");
   }
 
-  window.sendDroidMessage = function () {
-    const msg = inputEl.value;
+  window.sendDroidMessage = function sendDroidMessage() {
+    if (!inputEl) return;
+    const message = inputEl.value.trim();
     inputEl.value = "";
-    process(msg);
+    processMessage(message);
   };
+
+  window.useDroidPrompt = function useDroidPrompt(promptText) {
+    if (!promptText) return;
+    processMessage(promptText);
+  };
+
+  if (inputEl) {
+    inputEl.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        window.sendDroidMessage();
+      }
+    });
+  }
 })();
