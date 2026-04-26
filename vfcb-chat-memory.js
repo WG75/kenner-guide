@@ -118,6 +118,20 @@
     return String(text || "").trim().toLowerCase();
   }
 
+  function isJawaBlasterStart(text) {
+    const t = normalise(text);
+
+    return (
+      t.includes("jawa") &&
+      (
+        t.includes("blaster") ||
+        t.includes("weapon") ||
+        t.includes("accessory") ||
+        t.includes("accessories")
+      )
+    );
+  }
+
   function isJawaStart(text) {
     return normalise(text).includes("jawa");
   }
@@ -203,7 +217,14 @@
   function detectYesNo(text) {
     const t = normalise(text);
 
-    if (t === "1" || t === "yes" || t === "y" || t.includes("yes") || t.includes("blaster") || t.includes("weapon")) {
+    if (
+      t === "1" ||
+      t === "yes" ||
+      t === "y" ||
+      t.includes("yes") ||
+      t.includes("blaster") ||
+      t.includes("weapon")
+    ) {
       return "yes";
     }
 
@@ -473,17 +494,104 @@ Do you also want help checking the Jawa blaster?
     );
 
     appendBotHtml(
-      `For more details and reference images, visit:<br>
+      `First quick test if you are unsure: try the float test.<br><br>
+Older and cheaper reproductions usually sink in water. Original vintage blasters should float, even after being pushed under.<br><br>
+Important: some newer reproductions are designed to deceive collectors and can also float. So if it floats, that does not prove it is original. You still need to compare the exact mould details.<br><br>
+Most original Jawa blasters are shades of dark blue. Grey examples need extra caution because common grey reproductions exist.<br><br>
+For more details and reference images, visit:<br>
 <a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a><br><br>
-If you have a specific question about the blaster, ask me and I’ll help as best I can.`,
-      `For more details and reference images, visit:
+Ask me what colour yours is, whether it floats, or what rear bump it has, and I’ll guide you.`,
+      `First quick test if you are unsure: try the float test.
+
+Older and cheaper reproductions usually sink in water. Original vintage blasters should float, even after being pushed under.
+
+Important: some newer reproductions are designed to deceive collectors and can also float. So if it floats, that does not prove it is original. You still need to compare the exact mould details.
+
+Most original Jawa blasters are shades of dark blue. Grey examples need extra caution because common grey reproductions exist.
+
+For more details and reference images, visit:
 ${VV_JAWA_BLASTER_URL}
 
-If you have a specific question about the blaster, ask me and I’ll help as best I can.`
+Ask me what colour yours is, whether it floats, or what rear bump it has, and I’ll guide you.`
     );
 
-    state.step = null;
-    state.currentFigure = null;
+    state.currentFigure = "jawa";
+    state.step = "jawa-blaster-question";
+  }
+
+  function jawaBlasterQuestionReply(message) {
+    const t = normalise(message);
+
+    if (t.includes("grey") || t.includes("gray") || t.includes("silver")) {
+      appendBotHtml(
+        `Be careful here.<br><br>
+Most original Jawa blasters are shades of dark blue. There is a very rare silver version associated with the Brazilian Glasslite figure, but grey Jawa blasters are also commonly seen as reproductions.<br><br>
+First check:<br>
+• Does it float in water?<br>
+• If it sinks, treat it as a reproduction.<br>
+• If it floats, that still does not prove it is original, because newer reproductions may also float.<br><br>
+Next compare it closely against the known Variant Villain examples:<br>
+<a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a><br><br>
+I would not call a grey Jawa blaster original without very careful comparison, especially to rule out a common grey repro.`,
+        `Be careful here.
+
+Most original Jawa blasters are shades of dark blue. There is a very rare silver version associated with the Brazilian Glasslite figure, but grey Jawa blasters are also commonly seen as reproductions.
+
+First check:
+• Does it float in water?
+• If it sinks, treat it as a reproduction.
+• If it floats, that still does not prove it is original, because newer reproductions may also float.
+
+Next compare it closely against the known Variant Villain examples:
+${VV_JAWA_BLASTER_URL}
+
+I would not call a grey Jawa blaster original without very careful comparison, especially to rule out a common grey repro.`
+      );
+      return;
+    }
+
+    if (t.includes("float") || t.includes("floats") || t.includes("sink") || t.includes("sinks")) {
+      appendBotHtml(
+        `The float test is a useful first filter.<br><br>
+• If the blaster sinks, treat it as a reproduction.<br>
+• If it floats, it may be original, but this is not proof.<br>
+• Newer reproductions can be made to float, so you still need to compare mould shape, rear bump, detail sharpness and plastic colour.<br><br>
+Use the Variant Villain reference images here:<br>
+<a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a>`,
+        `The float test is a useful first filter.
+
+• If the blaster sinks, treat it as a reproduction.
+• If it floats, it may be original, but this is not proof.
+• Newer reproductions can be made to float, so you still need to compare mould shape, rear bump, detail sharpness and plastic colour.
+
+Use the Variant Villain reference images here:
+${VV_JAWA_BLASTER_URL}`
+      );
+      return;
+    }
+
+    appendBotHtml(
+      `For Jawa blasters, start with the float test if you are unsure.<br><br>
+Then compare:<br>
+• mould shape<br>
+• rear bump length<br>
+• plastic colour, usually dark blue tones for most originals<br>
+• sharpness of the mould detail<br>
+• whether it matches a known original example exactly<br><br>
+Variant Villain reference page:<br>
+<a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a>`,
+      `For Jawa blasters, start with the float test if you are unsure.
+
+Then compare:
+• mould shape
+• rear bump length
+• plastic colour, usually dark blue tones for most originals
+• sharpness of the mould detail
+• whether it matches a known original example exactly
+
+Variant Villain reference page:
+${VV_JAWA_BLASTER_URL}`
+    );
   }
 
   function unclearReply() {
@@ -536,6 +644,11 @@ For now, check under strong light and look again at the back of the left leg.`;
 
     addUser(message);
     const t = normalise(message);
+
+    if (!state.currentFigure && isJawaBlasterStart(t)) {
+      showBlasterReference();
+      return;
+    }
 
     if (!state.currentFigure && isJawaStart(t)) {
       state.currentFigure = "jawa";
@@ -625,6 +738,11 @@ For now, check under strong light and look again at the back of the left leg.`;
       }
 
       addBot("Please reply with 1 for yes, or 2 for no.");
+      return;
+    }
+
+    if (state.currentFigure === "jawa" && state.step === "jawa-blaster-question") {
+      jawaBlasterQuestionReply(message);
       return;
     }
 
