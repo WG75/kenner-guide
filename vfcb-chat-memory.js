@@ -42,6 +42,26 @@
     logEl.scrollTop = logEl.scrollHeight;
   }
 
+  function appendBotHtml(html, historyText) {
+    if (!logEl) return;
+
+    const wrap = document.createElement("div");
+    wrap.className = "vfcb-msg vfcb-assistant";
+    wrap.style.margin = "10px 0";
+    wrap.style.padding = "12px 14px";
+    wrap.style.borderRadius = "12px";
+    wrap.style.lineHeight = "1.5";
+    wrap.innerHTML = html;
+
+    logEl.appendChild(wrap);
+    logEl.scrollTop = logEl.scrollHeight;
+
+    state.history.push({
+      role: "assistant",
+      content: historyText || wrap.textContent || ""
+    });
+  }
+
   function appendImageCard(title, imageUrl, caption) {
     if (!logEl) return;
 
@@ -281,7 +301,19 @@ Only © G.M.F.G.I. 1977. No HONG KONG marking.
 Notice the size difference between 2a and 2b, and how the 2a version's text aligns with the fold.`
     );
 
-    addBot(`This variant was originally paired with:
+    appendBotHtml(
+      `This variant was originally paired with:<br>
+• M2 Kader Jawa Blaster - short rear bump<br>
+• small hood, smooth cloth cloak<br><br>
+To confirm it properly, also check:<br>
+• bandolier shape and colour<br>
+• eye colour<br>
+• plastic colour<br>
+• cloak type, if present<br>
+• blaster mould, if present<br><br>
+Full Jawa guide on Variant Villain: 
+<a href="${VV_JAWA_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_URL}</a>`,
+      `This variant was originally paired with:
 • M2 Kader Jawa Blaster - short rear bump
 • small hood, smooth cloth cloak
 
@@ -292,19 +324,14 @@ To confirm it properly, also check:
 • cloak type, if present
 • blaster mould, if present
 
-Full Jawa guide on Variant Villain:
-${VV_JAWA_URL}`);
+Full Jawa guide on Variant Villain: ${VV_JAWA_URL}`
+    );
   }
 
   function showHongKongReferenceImages() {
     addBot(`Ok, compare your left-leg marking with these reference images and choose the closest match.
 
-Reply with:
-
-1 for Kader M1
-2 for Kader M2
-3 for Unitoy M3
-4 for Unitoy / Lili Ledy M4`);
+Use the following images to compare your leg marks. On the images, look at the parts indicated in green.`);
 
     appendImageCard(
       "1. Kader M1",
@@ -346,8 +373,23 @@ Unitoy / Lili Ledy M4 1b:
 The M of G.M.F.G.I. aligns with the H of HONG, and the middle of the second 7 from 1977 aligns with the G of KONG.`
     );
 
-    addBot(`Full Jawa guide on Variant Villain:
-${VV_JAWA_URL}`);
+    appendBotHtml(
+      `Full Jawa guide on Variant Villain: 
+<a href="${VV_JAWA_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_URL}</a><br><br>
+If you can match your figure to one of the above reference images, please reply with:<br><br>
+1 for Kader M1<br>
+2 for Kader M2<br>
+3 for Unitoy M3<br>
+4 for Unitoy / Lili Ledy M4`,
+      `Full Jawa guide on Variant Villain: ${VV_JAWA_URL}
+
+If you can match your figure to one of the above reference images, please reply with:
+
+1 for Kader M1
+2 for Kader M2
+3 for Unitoy M3
+4 for Unitoy / Lili Ledy M4`
+    );
   }
 
   function choiceReply(choice) {
@@ -393,9 +435,6 @@ For a complete Jawa, also check:
 • hood size and stitching
 • cloak texture
 • figure and weapon match
-
-Full Jawa guide on Variant Villain:
-${VV_JAWA_URL}
 
 Next useful step:
 Send or compare a clear photo of the blaster.`;
@@ -561,7 +600,17 @@ What is the cloak situation?
     if (state.currentFigure === "jawa" && state.step === "jawa-deeper-cloak") {
       const label = referenceLabel(state.selectedReference);
 
-      addBot(`Thanks. Based on the leg marking, your closest starting point is still ${label}.
+      appendBotHtml(
+        `Thanks. Based on the leg marking, your closest starting point is still ${label}.<br><br>
+To confirm it properly, compare:<br>
+• leg marking<br>
+• bandolier shape and colour<br>
+• eye paint<br>
+• cloak material and hood shape<br>
+• blaster mould<br><br>
+Full Jawa guide on Variant Villain: 
+<a href="${VV_JAWA_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_URL}</a>`,
+        `Thanks. Based on the leg marking, your closest starting point is still ${label}.
 
 To confirm it properly, compare:
 • leg marking
@@ -570,8 +619,9 @@ To confirm it properly, compare:
 • cloak material and hood shape
 • blaster mould
 
-Full Jawa guide on Variant Villain:
-${VV_JAWA_URL}`);
+Full Jawa guide on Variant Villain: ${VV_JAWA_URL}`
+      );
+
       state.step = "jawa-complete";
       return;
     }
