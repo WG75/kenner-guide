@@ -4,12 +4,16 @@
   const statusEl = document.getElementById("droidStatus");
 
   const VV_JAWA_URL = "https://www.variantvillain.com/characters/jawa/";
+  const VV_JAWA_BASE_URL = "https://www.variantvillain.com/characters/sw/jawa/";
+  const VV_JAWA_CLOAK_URL = "https://www.variantvillain.com/accessory-guide/jawa-cloak/";
+  const VV_JAWA_BLASTER_URL = "https://www.variantvillain.com/accessory-guide/jawa-blaster/";
 
   const state = {
     history: [],
     currentFigure: null,
     step: null,
-    selectedReference: null
+    selectedReference: null,
+    capeType: null
   };
 
   function setStatus(text) {
@@ -122,7 +126,7 @@
     const t = normalise(text);
 
     if (t === "1" || t.includes("vinyl")) return "vinyl";
-    if (t === "2" || t.includes("cloth") || t.includes("fabric")) return "cloth";
+    if (t === "2" || t.includes("cloth") || t.includes("fabric") || t.includes("cloak")) return "cloth";
 
     if (
       t === "3" ||
@@ -187,6 +191,20 @@
     return null;
   }
 
+  function detectYesNo(text) {
+    const t = normalise(text);
+
+    if (t === "1" || t === "yes" || t === "y" || t.includes("yes") || t.includes("blaster") || t.includes("weapon")) {
+      return "yes";
+    }
+
+    if (t === "2" || t === "no" || t === "n" || t.includes("no") || t.includes("done")) {
+      return "no";
+    }
+
+    return null;
+  }
+
   function referenceLabel(choice) {
     const labels = {
       "kader-m1": "Kader M1",
@@ -241,6 +259,12 @@ Reply with:
     if (capeType === "cloth") {
       return `Good — so we're dealing with a cloth cloak Jawa.
 
+There are 5 known cloth cloak types. This app can help you get started, but for cloak confirmation the best visual reference is the Variant Villain cloak guide:
+
+${VV_JAWA_CLOAK_URL}
+
+Now let's identify the figure itself.
+
 Next step:
 Check the Country of Origin markings on the legs.
 
@@ -252,19 +276,38 @@ Reply with:
     }
 
     if (capeType === "vinyl") {
-      return `Good — that means you may have the early vinyl cape version.
+      return `Ok — treat this as a potential vinyl cape Jawa, not confirmed yet.
 
-Next step:
+Original vinyl cape Jawas are valuable, so there are many fakes and cut-down Ben Kenobi capes around. This app is a useful starting point, but don't rely on it alone. For anything valuable, get confirmation from experienced collector groups as well.
+
+First, compare your cape shape, surface texture and colour against this reference:`;
+    }
+
+    return "";
+  }
+
+  function showVinylCapeReference() {
+    appendImageCard(
+      "Jawa Vinyl Cape Authentication Reference",
+      "/public/images/jawa-vinyl-cape-01.png",
+      `Compare:
+• cape shape
+• surface texture on both sides
+• colour compared with an original Ben cape
+• signs of a cut-down cape
+
+A cut-down Ben cape is usually noticeably darker and the shape will not match correctly.`
+    );
+
+    addBot(`Next, let's identify the figure itself.
+
 Check the Country of Origin markings on the legs.
 
 Reply with:
 
 1 for Hong Kong
 2 if it doesn't show Hong Kong
-3 if you can't tell / it doesn't appear to have either`;
-    }
-
-    return "";
+3 if you can't tell / it doesn't appear to have either`);
   }
 
   function noCooKaderReply() {
@@ -287,24 +330,24 @@ Notice the size difference between 2a and 2b, and how the 2a version's text alig
     );
 
     appendBotHtml(
-      `This variant was originally paired with:<br>
-• M2 Kader Jawa Blaster - short rear bump<br>
-• small hood, smooth cloth cloak<br><br>
-For a more detailed look at the Kader China M2 No COO Jawa, please visit:<br>
+      `This figure variant is associated with Kader M2.<br><br>
+For a more detailed look at the Kader M2 Jawa, please visit:<br>
 <a href="https://www.variantvillain.com/characters/sw/jawa/#f2" target="_blank" rel="noopener noreferrer">https://www.variantvillain.com/characters/sw/jawa/#f2</a><br><br>
-Is there anything else I can help you with?`,
-      `This variant was originally paired with:
-• M2 Kader Jawa Blaster - short rear bump
-• small hood, smooth cloth cloak
+Do you also want help checking the Jawa blaster?<br><br>
+1. Yes, help me identify the blaster<br>
+2. No, I’m done for now`,
+      `This figure variant is associated with Kader M2.
 
-For a more detailed look at the Kader China M2 No COO Jawa, please visit:
+For a more detailed look at the Kader M2 Jawa, please visit:
 https://www.variantvillain.com/characters/sw/jawa/#f2
 
-Is there anything else I can help you with?`
+Do you also want help checking the Jawa blaster?
+
+1. Yes, help me identify the blaster
+2. No, I’m done for now`
     );
 
-    state.step = null;
-    state.currentFigure = null;
+    state.step = "jawa-blaster-choice";
   }
 
   function showHongKongReferenceImages() {
@@ -380,14 +423,47 @@ If you can match your figure to one of the above reference images, please reply 
       `Closest match: ${label}.<br><br>
 For a more detailed look at the ${label} Jawas, please visit:<br>
 <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a><br><br>
-Is there anything else I can help you with?`,
+Do you also want help checking the Jawa blaster?<br><br>
+1. Yes, help me identify the blaster<br>
+2. No, I’m done for now`,
       `Closest match: ${label}.
 
 For a more detailed look at the ${label} Jawas, please visit:
 ${url}
 
-Is there anything else I can help you with?`
+Do you also want help checking the Jawa blaster?
+
+1. Yes, help me identify the blaster
+2. No, I’m done for now`
     );
+  }
+
+  function showBlasterReference() {
+    addBot(`Ok — compare your blaster with this Jawa blaster reference image.`);
+
+    appendImageCard(
+      "Jawa Blaster Reference",
+      "https://www.variantvillain.com/wp-content/uploads/2021/12/JawaBlaster_000.jpg",
+      `Check:
+• mould shape
+• rear bump length
+• plastic colour
+• detail sharpness
+• whether it looks like original vintage plastic or a modern repro`
+    );
+
+    appendBotHtml(
+      `For more details and reference images, visit:<br>
+<a href="${VV_JAWA_BLASTER_URL}" target="_blank" rel="noopener noreferrer">${VV_JAWA_BLASTER_URL}</a><br><br>
+If you have a specific question about the blaster, ask me and I’ll help as best I can.`,
+      `For more details and reference images, visit:
+${VV_JAWA_BLASTER_URL}
+
+If you have a specific question about the blaster, ask me and I’ll help as best I can.`
+    );
+
+    state.step = null;
+    state.currentFigure = null;
   }
 
   function unclearReply() {
@@ -444,6 +520,7 @@ For now, check under strong light and look again at the back of the left leg.`;
       state.currentFigure = "jawa";
       state.step = "cape";
       state.selectedReference = null;
+      state.capeType = null;
       addBot(jawaOpening());
       return;
     }
@@ -453,6 +530,15 @@ For now, check under strong light and look again at the back of the left leg.`;
 
       if (!cape) {
         addBot("Just reply with 1, 2 or 3 — or vinyl, cloth, or missing cloak.");
+        return;
+      }
+
+      state.capeType = cape;
+
+      if (cape === "vinyl") {
+        state.step = "leg-marking";
+        addBot(jawaLegQuestion(cape));
+        showVinylCapeReference();
         return;
       }
 
@@ -495,8 +581,26 @@ For now, check under strong light and look again at the back of the left leg.`;
 
       state.selectedReference = choice;
       choiceReply(choice);
-      state.step = null;
-      state.currentFigure = null;
+      state.step = "jawa-blaster-choice";
+      return;
+    }
+
+    if (state.currentFigure === "jawa" && state.step === "jawa-blaster-choice") {
+      const answer = detectYesNo(t);
+
+      if (answer === "yes") {
+        showBlasterReference();
+        return;
+      }
+
+      if (answer === "no") {
+        addBot("No problem. Is there anything else I can help you with?");
+        state.step = null;
+        state.currentFigure = null;
+        return;
+      }
+
+      addBot("Please reply with 1 for yes, or 2 for no.");
       return;
     }
 
