@@ -8,11 +8,62 @@
     "cape_question": {
       "type": "question",
       "content": "Yes I can do that — let's start with the cape.\n\nWhich of these does your Jawa have?\n\n1 Vinyl cape - smooth plastic\n2 Cloth cloak - fabric\n3 Or neither. Just a naked figure\n\nJust reply with 1, 2 or 3.",
-      "options": {
-        "1": "route_vinyl_cape",
-        "2": "route_cloth_cloak",
-        "3": "leg_marking_question"
-      }
+      "options": [
+        {
+          "value": "1",
+          "label": "Vinyl cape - smooth plastic",
+          "aliases": [
+            "vinyl",
+            "vinyl cape",
+            "smooth plastic",
+            "plastic cape",
+            "brown vinyl cape"
+          ],
+          "flow": "jawa.vinyl-cape"
+        },
+        {
+          "value": "2",
+          "label": "Cloth cloak - fabric",
+          "aliases": [
+            "cloth",
+            "cloth cloak",
+            "fabric",
+            "fabric cloak",
+            "cloak",
+            "hooded cloak",
+            "brown cloth cloak"
+          ],
+          "flow": "jawa.cloth-cloak"
+        },
+        {
+          "value": "3",
+          "label": "Neither / missing cape",
+          "aliases": [
+            "neither",
+            "none",
+            "no cape",
+            "missing cape",
+            "missing cloak",
+            "naked",
+            "no cloak",
+            "doesn't have one",
+            "does not have one",
+            "doesnt have one",
+            "it doesn't have one",
+            "it does not have one",
+            "it doesnt have one",
+            "without cape",
+            "without a cape",
+            "without cloak",
+            "without a cloak",
+            "no covering",
+            "nothing",
+            "just the figure",
+            "figure only"
+          ],
+          "next": "leg_marking_question"
+        }
+      ]
     },
     "route_vinyl_cape": {
       "type": "route",
@@ -25,11 +76,23 @@
     "leg_marking_question": {
       "type": "question",
       "content": "Right — so your Jawa is missing its cape, what collectors often refer to as a naked figure.\n\nIn that case, let's identify the figure itself.\n\nNext step:\nCheck the Country of Origin markings on the legs.\n\nReply with:\n\n1 for Hong Kong\n2 if it doesn't show Hong Kong\n3 if you can't tell / it doesn't appear to have either",
-      "options": {
-        "1": "hong_kong_references",
-        "2": "no_coo_kader",
-        "3": "unclear_marking"
-      }
+      "options": [
+        {
+          "value": "1",
+          "label": "hong kong references",
+          "next": "hong_kong_references"
+        },
+        {
+          "value": "2",
+          "label": "no coo kader",
+          "next": "no_coo_kader"
+        },
+        {
+          "value": "3",
+          "label": "unclear marking",
+          "next": "unclear_marking"
+        }
+      ]
     },
     "hong_kong_references": {
       "type": "message",
@@ -67,12 +130,28 @@
     "choose_hong_kong_variant": {
       "type": "question",
       "content": "Full Jawa guide on Variant Villain:\nhttps://www.variantvillain.com/characters/jawa/\n\nIf you can match your figure to one of the above reference images, please reply with:\n\n1 for Kader M1\n2 for Kader M2\n3 for Unitoy M3\n4 for Unitoy / Lili Ledy M4",
-      "options": {
-        "1": "result_kader_m1",
-        "2": "result_kader_m2",
-        "3": "result_unitoy_m3",
-        "4": "result_unitoy_lili_ledy_m4"
-      }
+      "options": [
+        {
+          "value": "1",
+          "label": "result kader m1",
+          "next": "result_kader_m1"
+        },
+        {
+          "value": "2",
+          "label": "result kader m2",
+          "next": "result_kader_m2"
+        },
+        {
+          "value": "3",
+          "label": "result unitoy m3",
+          "next": "result_unitoy_m3"
+        },
+        {
+          "value": "4",
+          "label": "result unitoy lili ledy m4",
+          "next": "result_unitoy_lili_ledy_m4"
+        }
+      ]
     },
     "result_kader_m1": {
       "type": "message",
@@ -118,10 +197,18 @@
     "ask_blaster": {
       "type": "question",
       "content": "Do you also want help checking the Jawa blaster?\n\n1 Yes, help me identify the blaster\n2 No, I’m done for now",
-      "options": {
-        "1": "route_blaster",
-        "2": "done"
-      }
+      "options": [
+        {
+          "value": "1",
+          "label": "route blaster",
+          "next": "route_blaster"
+        },
+        {
+          "value": "2",
+          "label": "done",
+          "next": "done"
+        }
+      ]
     },
     "route_blaster": {
       "type": "route",
