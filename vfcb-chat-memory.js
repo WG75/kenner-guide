@@ -65,15 +65,16 @@
     img.style.maxWidth = "100%";
     img.style.borderRadius = "10px";
     img.style.display = "block";
+    img.style.marginBottom = "8px";
 
     const note = document.createElement("div");
     note.innerHTML = formatText(caption);
-    note.style.marginTop = "8px";
     note.style.lineHeight = "1.45";
 
     card.appendChild(heading);
     card.appendChild(img);
     card.appendChild(note);
+
     logEl.appendChild(card);
     logEl.scrollTop = logEl.scrollHeight;
   }
@@ -93,8 +94,7 @@
   }
 
   function isJawaStart(text) {
-    const t = normalise(text);
-    return t.includes("jawa");
+    return normalise(text).includes("jawa");
   }
 
   function detectCapeAnswer(text) {
@@ -160,9 +160,8 @@
 
     if (t === "1" || t.includes("kader m1")) return "kader-m1";
     if (t === "2" || t.includes("kader m2")) return "kader-m2";
-    if (t === "3" || t.includes("kader china")) return "kader-china-m2";
-    if (t === "4" || t.includes("unitoy m3")) return "unitoy-m3";
-    if (t === "5" || t.includes("lili ledy") || t.includes("unitoy/lili")) return "unitoy-lili-ledy-m4";
+    if (t === "3" || t.includes("unitoy m3")) return "unitoy-m3";
+    if (t === "4" || t.includes("lili ledy") || t.includes("unitoy/lili")) return "unitoy-lili-ledy-m4";
 
     return null;
   }
@@ -244,7 +243,7 @@ Reply with:
   }
 
   function noCooKaderReply() {
-    return `That points to the Kader China M2 No COO Jawa.
+    addBot(`That points to the Kader China M2 No COO Jawa.
 
 It should show just:
 © G.M.F.G.I. 1977
@@ -253,7 +252,18 @@ No HONG KONG underneath.
 
 G.M.F.G.I. stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
 
-This variant was originally paired with:
+Compare your leg marking with this reference:`);
+
+    appendImageCard(
+      "Kader China M2 No COO",
+      "/public/images/jawa_figure_kader_china_M2.png",
+      `Kader China M2 2a and M2 2b:
+Only © G.M.F.G.I. 1977. No HONG KONG marking.
+
+Notice the size difference between 2a and 2b, and how the 2a version's text aligns with the fold.`
+    );
+
+    addBot(`This variant was originally paired with:
 • an M2 Kader Jawa Blaster - short rear bump
 • a small hood, smooth cloth cloak
 
@@ -269,28 +279,26 @@ or
 • Round yellow eyes
 • Smooth cloth cloak
 
-There are two variants within this Kader China No COO version.
-
-The most noticeable difference is the size of the copyright text on the back of the leg.
-
 Important:
-DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.`;
+DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+
+Full Jawa guide on Variant Villain:
+${VV_JAWA_URL}`);
   }
 
-  function showJawaReferenceImages() {
+  function showHongKongReferenceImages() {
     addBot(`Ok, compare your left-leg marking with these reference images and choose the closest match.
 
 Reply with:
 
 1 for Kader M1
 2 for Kader M2
-3 for Kader China M2
-4 for Unitoy M3
-5 for Unitoy / Lili Ledy M4`);
+3 for Unitoy M3
+4 for Unitoy / Lili Ledy M4`);
 
     appendImageCard(
       "1. Kader M1",
-      "/images/jawa_figure_kader_M1.png",
+      "/public/images/jawa_figure_kader_M1.png",
       `Kader M1 1a:
 The copyright C (©) aligns with the G of HONG, and the F of G.M.F.G.I. aligns with the G of KONG.
 
@@ -300,7 +308,7 @@ The copyright C (©) aligns with the O of HONG, and the second G of G.M.F.G.I. a
 
     appendImageCard(
       "2. Kader M2",
-      "/images/jawa_figure_kader_M2.png",
+      "/public/images/jawa_figure_kader_M2.png",
       `Kader M2 1a:
 The right side of the copyright C (©) aligns with the H of HONG, and the 1 of 1977 aligns with the G of KONG.
 
@@ -309,17 +317,8 @@ The right side of the copyright C (©) aligns with the H of HONG, and the middle
     );
 
     appendImageCard(
-      "3. Kader China M2",
-      "/images/jawa_figure_kader_china_M2.png",
-      `Kader China M2 2a and M2 2b:
-Only © G.M.F.G.I. 1977. No HONG KONG marking.
-
-Notice the size difference between 2a and 2b, and how the 2a version's text aligns with the fold.`
-    );
-
-    appendImageCard(
-      "4. Unitoy M3",
-      "/images/jawa_figure_unitoy_M3.png",
+      "3. Unitoy M3",
+      "/public/images/jawa_figure_unitoy_M3.png",
       `Unitoy M3 1a:
 The first G of G.M.F.G.I. aligns with the H of HONG, and the middle of the 77 from 1977 aligns with the G of KONG.
 
@@ -328,8 +327,8 @@ The first G of G.M.F.G.I. aligns with the H of HONG, and the middle of the 77 fr
     );
 
     appendImageCard(
-      "5. Unitoy / Lili Ledy M4",
-      "/images/jawa_figure_unitoy_lili-ledy_M4.png",
+      "4. Unitoy / Lili Ledy M4",
+      "/public/images/jawa_figure_unitoy_lili-ledy_M4.png",
       `Unitoy / Lili Ledy M4 1a:
 The M of G.M.F.G.I. aligns with the H of HONG, and the middle of the second 7 from 1977 aligns with the G of KONG.
 
@@ -356,6 +355,7 @@ Now confirm with:
 • blaster mould, if present
 
 This is a strong starting point, but do not rely on the leg marking alone.`,
+
       "kader-m2": `Closest match: Kader M2.
 
 Now confirm with:
@@ -366,7 +366,7 @@ Now confirm with:
 • blaster mould, if present
 
 This is a strong starting point, but do not rely on the leg marking alone.`,
-      "kader-china-m2": noCooKaderReply(),
+
       "unitoy-m3": `Closest match: Unitoy M3.
 
 Now confirm with:
@@ -377,6 +377,7 @@ Now confirm with:
 • blaster mould, if present
 
 This is a strong starting point, but do not rely on the leg marking alone.`,
+
       "unitoy-lili-ledy-m4": `Closest match: Unitoy / Lili Ledy M4.
 
 Now confirm with:
@@ -467,20 +468,13 @@ For now, check under strong light and look again at the back of the left leg.`;
 
       if (answer === "no-coo") {
         state.step = "confirm-kader-no-coo";
-        addBot(noCooKaderReply());
-        appendImageCard(
-          "Kader China M2 No COO reference",
-          "/images/jawa_figure_kader_china_M2.png",
-          "Only © G.M.F.G.I. 1977. No HONG KONG marking."
-        );
-        addBot(`Full Jawa guide on Variant Villain:
-${VV_JAWA_URL}`);
+        noCooKaderReply();
         return;
       }
 
       if (answer === "hong-kong") {
         state.step = "choose-reference";
-        showJawaReferenceImages();
+        showHongKongReferenceImages();
         return;
       }
 
@@ -498,7 +492,7 @@ ${VV_JAWA_URL}`);
       const choice = detectReferenceChoice(t);
 
       if (!choice) {
-        addBot("Please reply with 1, 2, 3, 4, or 5 for the closest reference image.");
+        addBot("Please reply with 1, 2, 3, or 4 for the closest reference image.");
         return;
       }
 
