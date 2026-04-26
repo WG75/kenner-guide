@@ -1,49 +1,194 @@
 import fs from "fs/promises";
 import path from "path";
 
-function slugify(text) {
-  return String(text || "")
-    .toLowerCase()
-    .replace(/\.txt$/i, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+function normaliseText(text) {
+  return String(text || "").toLowerCase().trim();
 }
 
-function unique(arr) {
-  return [...new Set(arr)];
+function sanitiseHistory(history) {
+  if (!Array.isArray(history)) return [];
+  return history
+    .filter(
+      (m) =>
+        m &&
+        typeof m.content === "string" &&
+        (m.role === "user" || m.role === "assistant")
+    )
+    .slice(-12);
 }
 
-function normaliseMessage(text) {
-  return String(text || "").toLowerCase();
+function detectActiveFigure(message, history = []) {
+  const combined = [
+    ...history.map((m) => m.content || ""),
+    message || "",
+  ].join(" ");
+
+  const lower = normaliseText(combined);
+
+  if (lower.includes("jawa")) return "jawa";
+  if (lower.includes("luke")) return "luke-skywalker";
+  if (lower.includes("leia")) return "princess-leia-organa";
+  if (lower.includes("chewbacca") || lower.includes("chewie") || lower.includes("chewy")) return "chewbacca";
+  if (lower.includes("r2-d2") || lower.includes("r2d2") || lower.includes("r2")) return "r2-d2";
+  if (lower.includes("vader")) return "darth-vader";
+  if (lower.includes("obi-wan") || lower.includes("obi wan") || lower.includes("ben kenobi")) return "obi-wan-kenobi";
+
+  return "";
 }
 
-function getSearchTerms(message) {
-  const lower = normaliseMessage(message);
+function buildConversationText(message, history = []) {
+  return [
+    ...history.map((m) => m.content || ""),
+    message || "",
+  ].join(" ").toLowerCase();
+}
 
-  const rawWords = lower.match(/[a-z0-9'-]+/g) || [];
-  const words = rawWords.map(slugify).filter(Boolean);
+function looksLikeJawaNoCooMarking(message) {
+  const lower = normaliseText(message);
 
-  const aliases = {
-    jawa: ["jawa"],
-    jawas: ["jawa"],
-    luke: ["luke-skywalker"],
-    leia: ["princess-leia-organa"],
-    chewy: ["chewbacca"],
-    chewie: ["chewbacca"],
-    vader: ["darth-vader"],
-    obiwan: ["obi-wan-kenobi"],
-    earlybird: ["early-bird", "early-bird-certificate-package"]
-  };
+  return (
+    lower.includes("gmfgi") ||
+    lower.includes("g.m.f.g.i") ||
+    lower.includes("cmfg") ||
+    (lower.includes("1977") && (lower.includes("hard to tell") || lower.includes("just says") || lower.includes("looks like")))
+  );
+}
 
-  const expanded = [...words];
+function getDeterministicReply(message, history = [], activeFigure = "") {
+  const lower = normaliseText(message);
+  const convo = buildConversationText(message, history);
 
-  for (const word of words) {
-    if (aliases[word]) {
-      expanded.push(...aliases[word]);
+  if (activeFigure === "jawa") {
+    if (
+      lower === "help me identify a jawa" ||
+      lower === "help me identify my jawa" ||
+      lower === "can you help me identify a jawa" ||
+      lower === "can you help me identify my jawa" ||
+      lower === "help me identify a jawa please" ||
+      lower === "help me identify my jawa please"
+    ) {
+      return `Yes I can do that — let's start with the cape.
+
+Which of these does your Jawa have?
+
+1. Vinyl cape - smooth plastic
+2. Cloth cloak - fabric
+3. Or neither. Just a naked figure
+
+Just tell me: vinyl, cloth, or missing cloak.
+Or you can reply with 1, 2 or 3.`;
+    }
+
+    if (lower === "1" || lower === "vinyl") {
+      return `Good — that means you have the early vinyl cape version.
+
+Next step:
+Check the COO marking on the legs.
+
+Then we confirm it properly using:
+• body sculpt
+• plastic colour
+• paint details
+• and the correct blaster pairing
+
+Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.
+
+What does the leg marking say?`;
+    }
+
+    if (lower === "2" || lower === "cloth") {
+      return `Good — so we're dealing with a cloth cloak Jawa.
+
+Next step:
+Check the COO marking on the legs.
+
+After that, the next useful things are:
+• hood size and shape
+• stitching / construction
+• eye colour
+• bandolier shape and tone
+• and whether the blaster is present
+
+Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.
+
+What does the leg marking say?`;
+    }
+
+    if (
+      lower === "3" ||
+      lower === "no cape" ||
+      lower === "missing cloak" ||
+      lower === "naked"
+    ) {
+      return `Right — so your Jawa is missing its cape, what collectors would usually call a naked figure.
+
+That’s common, so we identify it from the figure itself.
+
+Next step:
+Check the COO marking on the legs.
+
+Then we confirm it using:
+• mould / sculpt
+• plastic colour
+• eye paint
+• bandolier shape and tone
+• and any remaining accessories
+
+Do not rely on COO alone — mould, paint colour, plastic colour and figure assembly traits are also needed to confirm origin.
+
+What does the leg marking say?`;
+    }
+
+    if (lower.includes("what's coo") || lower.includes("whats coo") || lower === "coo") {
+      return `COO means Country of Origin.
+
+That is the country marking usually found on the legs of vintage figures, such as Hong Kong or Taiwan.
+
+On Jawas, COO is a very useful starting point — but not enough on its own.
+
+To confirm a Jawa properly, you also need to check:
+• mould / sculpt
+• eye colour
+• plastic colour
+• bandolier shape and tone
+• and cloak or blaster pairing if present`;
+    }
+
+    if (looksLikeJawaNoCooMarking(message) || convo.includes("jawa") && looksLikeJawaNoCooMarking(message)) {
+      return `If you can't see Hong Kong on the leg, you must have a Kader China variant.
+
+It will have just one line of text reading:
+© G.M.F.G.I. 1977
+
+That stands for General Mills Fun Group Incorporated, with 1977 being the year the figure was originally licensed.
+
+KADER (CHINA) NCOO should be:
+
+• Rectangular dark brown bandolier
+• Round yellow eyes
+• Smooth cloth cloak
+
+or
+
+• Rectangular, very dark brown bandolier
+• Round yellow eyes
+• Smooth cloth cloak
+
+Paired with an M2 Kader Jawa Blaster — the one with the short bump.
+
+There are two variants within this Kader China NCOO version.
+The difference is the size of the copyright text on the back of the leg.
+
+If you want, next send:
+• a close photo of the back of the legs
+• a front photo of the figure
+• and the cloak hood if present
+
+That will let me narrow down which of the two Kader China NCOO variants it is.`;
     }
   }
 
-  return unique(expanded.map(slugify)).filter(Boolean);
+  return null;
 }
 
 async function safeReadDir(dirPath) {
@@ -71,175 +216,195 @@ async function collectFiles(baseDir) {
     const entries = await safeReadDir(folderPath);
 
     for (const entry of entries) {
-      if (!entry.isFile()) continue;
-      if (!entry.name.endsWith(".txt")) continue;
-
-      files.push({
-        folder,
-        name: entry.name,
-        slug: slugify(entry.name.replace(".txt", "")),
-        fullPath: path.join(folderPath, entry.name)
-      });
+      if (entry.isFile() && entry.name.endsWith(".txt")) {
+        files.push({
+          folder,
+          name: entry.name,
+          slug: entry.name.replace(/\.txt$/i, "").toLowerCase(),
+          fullPath: path.join(folderPath, entry.name),
+        });
+      }
     }
   }
 
   return files;
 }
 
-function scoreFile(file, message, searchTerms) {
-  let score = 0;
-  const lower = normaliseMessage(message);
+function fileIsRelevant(file, activeFigure) {
+  if (!activeFigure) return true;
 
-  for (const term of searchTerms) {
-    if (file.slug.includes(term)) score += 20;
+  const generalRefs = [
+    "coo-guide",
+    "vendor-codes",
+    "accessory-production",
+    "early-bird-certificate-package",
+    "collector_glossary",
+  ];
+
+  if (file.folder === "references" && generalRefs.some((ref) => file.slug.includes(ref))) {
+    return true;
   }
 
-  if (file.folder === "figures") score += 5;
+  if (file.slug.includes(activeFigure)) return true;
 
-  if (lower.includes("identify") || lower.includes("which") || lower.includes("difference")) {
-    if (file.folder === "references") score += 15;
-  }
+  const accessoryMap = {
+    "jawa": ["jawa-blaster", "jawa-cloak", "jawa-vinyl-cape"],
+    "luke-skywalker": ["double-telescoping-lightsaber", "telescoping-lightsaber", "lightsaber"],
+    "darth-vader": ["darth-vader-cape", "lightsaber"],
+    "obi-wan-kenobi": ["ben-obi-wan-kenobi-cape", "obi-wan-kenobi-cape", "lightsaber"],
+  };
 
-  if (lower.includes("what comes with")) {
-    if (file.folder === "accessories") score += 25;
-  }
-
-  if (lower.includes("early bird") && file.slug.includes("early-bird")) {
-    score += 50;
-  }
-
-  return score;
+  const related = accessoryMap[activeFigure] || [];
+  return related.some((item) => file.slug.includes(item));
 }
 
-async function buildContext(message) {
+async function buildContext(activeFigure) {
   const baseDir = path.join(process.cwd(), "data");
   const files = await collectFiles(baseDir);
-  const searchTerms = getSearchTerms(message);
 
-  const ranked = files
-    .map(file => ({
-      ...file,
-      score: scoreFile(file, message, searchTerms)
-    }))
-    .filter(f => f.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 10);
+  const relevantFiles = files.filter((file) => fileIsRelevant(file, activeFigure)).slice(0, 20);
 
   let context = "";
 
-  for (const file of ranked) {
+  for (const file of relevantFiles) {
     const content = await safeReadFile(file.fullPath);
     if (content.trim()) {
-      context += `\n${content}\n`;
+      context += `\nFILE: ${file.folder}/${file.name}\n${content}\n`;
     }
   }
 
-  return context;
+  return context.slice(0, 18000);
+}
+
+function buildMessagesFromFrontend(body) {
+  if (Array.isArray(body.messages)) {
+    return body.messages.filter(
+      (m) =>
+        m &&
+        typeof m.content === "string" &&
+        (m.role === "user" || m.role === "assistant" || m.role === "system")
+    );
+  }
+
+  const message = typeof body.message === "string" ? body.message : "";
+  const history = sanitiseHistory(body.history);
+
+  if (!message) return [];
+
+  return [
+    ...history,
+    { role: "user", content: message },
+  ];
 }
 
 export default async function handler(req, res) {
   try {
-    const { message } = req.body;
+    if (req.method !== "POST") {
+      return res.status(405).json({ error: "Method not allowed" });
+    }
 
-    const context = await buildContext(message);
+    if (!process.env.OPENAI_API_KEY) {
+      return res.status(500).json({ error: "OPENAI_API_KEY is not configured" });
+    }
+
+    const body = req.body || {};
+    const incomingMessages = buildMessagesFromFrontend(body);
+
+    if (!incomingMessages.length) {
+      return res.status(400).json({ error: "No valid chat input received" });
+    }
+
+    const lastUserMessage =
+      [...incomingMessages].reverse().find((m) => m.role === "user")?.content || "";
+
+    const historyOnly = incomingMessages
+      .slice(0, -1)
+      .filter((m) => m.role === "user" || m.role === "assistant");
+
+    const activeFigure = detectActiveFigure(lastUserMessage, historyOnly);
+
+    const deterministicReply = getDeterministicReply(lastUserMessage, historyOnly, activeFigure);
+    if (deterministicReply) {
+      return res.status(200).json({ reply: deterministicReply });
+    }
+
+    const context = await buildContext(activeFigure);
 
     const systemPrompt = `
-You are VF-CB, a vintage Star Wars figure and accessory expert.
+You are VF-CB (Vintage Figures – Collector Bot).
 
-Default assumption:
-The user means the original vintage Star Wars toy line from 1977 to 1985.
+You are an expert in vintage Star Wars figures and accessories from 1977 to 1985.
 
-Important wording rules:
-- Do NOT default to "Kenner"
-- Only mention specific companies when relevant
+Style:
+- Clear, calm, direct
+- Sound like a knowledgeable collector
+- Slightly formal is fine, but natural
+- Ask one step at a time
+- Do not mention being an AI
 
-Critical accuracy rules:
+Core rules:
+- Stay on the current figure unless the user clearly changes subject
+- Do not switch characters just because words like cape, cloak, vinyl, hood, blaster, or saber could apply elsewhere
+- Do not guess
+- Do not state rarity or frequency unless clearly supported
+- Do not rely on COO alone; mould, paint, plastic colour and assembly traits also matter
 
-1. ONLY state specific claims such as "most common", "rarer", "typical", "usually found", or similar if they are clearly supported by the supplied information
+Collectors may casually call both vinyl and cloth versions a cape.
 
-2. If the supplied information does not confirm something:
-   - Do NOT guess
-   - Do NOT generalise
-   - Do NOT add assumptions
-
-3. Avoid stating obvious physical traits unless they add real identification value
-
-Answer style:
-- Speak like an experienced collector
-- Be clear, direct, and practical
-- Prioritise useful identification insight over general description
-
-Collector logic:
-
-1. Always prioritise the most useful identifier first
-
-Examples:
-- Jawa identification → first ask whether it has a vinyl cape, cloth cloak, or no body covering present
-- If cloth cloak Jawa → hood shape before stitching detail
-- Luke → DT vs ST first
-
-2. For incomplete loose figures, still help identify them using figure traits even if accessories are missing
-
-3. After the first obvious identifier, guide the user toward the next useful checks:
-- COO / leg markings
-- mould traits
-- paint colour
-- plastic colour
-- figure assembly traits
-
-4. Make it clear that COO alone is not enough to confirm a figure's origins
-
-5. Avoid listing everything at once
-
-6. Guide the user step by step like a collector would
-
-Never:
-- Invent information
-- Assume rarity or frequency
-- State "most common" without explicit support
-- Mention files, context, or system
-
-Optional personality:
-You may add one short polite droid-like opening line occasionally.
-Do not roleplay as a named character.
-
-Goal:
-Sound like a knowledgeable collector helping another collector identify or understand something, using only grounded, reliable information.
+Keep replies short and practical.
 `;
 
-    const userPrompt = `
-Question:
-${message}
+    const messagesForOpenAI = [
+      { role: "system", content: systemPrompt },
+      ...historyOnly.map((m) => ({
+        role: m.role,
+        content: m.content,
+      })),
+      {
+        role: "user",
+        content: `
+Current figure/topic: ${activeFigure || "not yet established"}
 
-Information:
+Supporting reference context:
 ${context}
-`;
 
-    const response = await fetch("https://api.anthropic.com/v1/messages", {
+Current user message:
+${lastUserMessage}
+        `.trim(),
+      },
+    ];
+
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        "content-type": "application/json",
-        "x-api-key": process.env.ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01"
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "claude-haiku-4-5",
-        max_tokens: 700,
-        system: systemPrompt,
-        messages: [{ role: "user", content: userPrompt }]
-      })
+        model: "gpt-4o-mini",
+        messages: messagesForOpenAI,
+        temperature: 0.2,
+      }),
     });
 
     const data = await response.json();
 
-    return res.status(200).json({
-      reply: data?.content?.[0]?.text || "No response"
-    });
+    if (!response.ok) {
+      console.error("OpenAI error:", data);
+      return res.status(500).json({
+        error: "OpenAI API error",
+        details: data,
+      });
+    }
 
-  } catch (err) {
-    console.error(err);
+    const reply = data?.choices?.[0]?.message?.content || "No response";
+
+    return res.status(200).json({ reply });
+  } catch (error) {
+    console.error("SERVER ERROR:", error);
     return res.status(500).json({
-      error: "Server error"
+      error: "Server error",
+      details: error.message,
     });
   }
 }
