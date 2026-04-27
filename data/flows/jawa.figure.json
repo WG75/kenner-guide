@@ -24,7 +24,7 @@
     },
 
     "cloth_decision": {
-      "content": "A cloth cloaked Jawa. Got it.\n\nWould you like to check:\n\n1 Which cloak version you have\n2 Whether the cloak looks original\n3 Check which Jawa figure variant you have first\n\nOr you can just type your question.",
+      "content": "A cloth cloaked Jawa. Got it.\n\nWould you like to check:\n\n1 Which cloak version you have\n2 Whether the cloak looks original\n3 Check which Jawa figure variant you have first\n\nReply with a number or just type your question in your own words.",
       "options": [
         { "match": ["1", "version"], "next": "cloak_version" },
         { "match": ["2", "original", "real"], "next": "cloak_auth" },
