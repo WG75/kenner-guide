@@ -768,6 +768,217 @@ https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
   );
 }
 
+function isVagueJawaRequest(message) {
+  const t = normalise(message);
+
+  if (!t.includes("jawa")) return false;
+
+  const specificTerms = [
+    "blaster",
+    "gun",
+    "weapon",
+    "pistol",
+    "pew",
+    "cape",
+    "cloak",
+    "vinyl",
+    "cloth",
+    "coo",
+    "country of origin",
+    "leg mark",
+    "leg marking",
+    "accessory",
+    "accessories",
+    "figure id",
+    "identify",
+    "id jawa figure",
+    "jawa figure"
+  ];
+
+  if (hasAny(t, specificTerms)) return false;
+
+  return (
+    t === "jawa" ||
+    t === "jawas" ||
+    t === "help with jawa" ||
+    t === "help with jawas" ||
+    t === "what about jawa" ||
+    t === "what about jawas" ||
+    t === "tell me about jawa" ||
+    t === "tell me about jawas"
+  );
+}
+
+function jawaFlavourLine(history) {
+  const recent = Array.isArray(history)
+    ? history.slice(-12).map((item) => String(item.content || "").toLowerCase()).join("\n")
+    : "";
+
+  if (recent.includes("jawa blaster") || recent.includes("jawa cloak") || recent.includes("jawa figure")) {
+    const laterLines = [
+      "Jawas again… what have the little scavengers dragged in this time?",
+      "More Jawa business. They do get everywhere.",
+      "Back to the Jawas. Wretched little scavengers, but useful to identify."
+    ];
+    return laterLines[Math.floor(Math.random() * laterLines.length)];
+  }
+
+  const firstLines = [
+    "Jawas! I can’t abide those creatures. Always up to something.",
+    "Jawas! Wretched little scavengers.",
+    "Jawas! Keep a close eye on your valuables around them.",
+    "Jawas! Check any droids carefully if you’re buying from them.",
+    "Jawas… filthy traders, but they do carry interesting items.",
+    "Jawas! Always rummaging through scrap.",
+    "Jawas! You never quite know what they’ve cobbled together.",
+    "Jawas! Small, hooded, and usually trouble."
+  ];
+
+  return firstLines[Math.floor(Math.random() * firstLines.length)];
+}
+
+function vagueJawaClarificationResponse(history) {
+  return {
+    reply: `${jawaFlavourLine(history)}
+
+Do you need help with a Jawa figure or one of its accessories?
+
+1 Jawa figure
+2 Jawa blaster
+3 Jawa cloak / cape
+4 Not sure
+
+You can reply with a number or describe it in your own words.`,
+    images: [],
+    flowState: { mode: "jawa-clarify" }
+  };
+}
+
+function handleVagueJawaClarification(message) {
+  const t = normalise(message);
+
+  if (
+    t === "1" ||
+    t.includes("figure") ||
+    t.includes("variant") ||
+    t.includes("coo") ||
+    t.includes("country of origin")
+  ) {
+    return startFlow("jawa.figure");
+  }
+
+  if (
+    t === "2" ||
+    t.includes("blaster") ||
+    t.includes("gun") ||
+    t.includes("weapon") ||
+    t.includes("pistol") ||
+    t.includes("pew")
+  ) {
+    return startFlow("jawa.blaster");
+  }
+
+  if (
+    t === "3" ||
+    t.includes("cloak") ||
+    t.includes("cape") ||
+    t.includes("vinyl") ||
+    t.includes("cloth")
+  ) {
+    return {
+      reply: `Got it — Jawa cloak or cape.
+
+Which one are you checking?
+
+1 Vinyl cape - smooth plastic
+2 Cloth cloak - fabric
+3 Not sure
+
+You can reply with a number or describe it in your own words.`,
+      images: [],
+      flowState: { mode: "jawa-cape-clarify" }
+    };
+  }
+
+  if (
+    t === "4" ||
+    t.includes("not sure") ||
+    t.includes("unsure") ||
+    t.includes("dont know") ||
+    t.includes("don't know")
+  ) {
+    return {
+      reply: `No problem. Start with the easiest visible thing.
+
+What does your Jawa have?
+
+1 Vinyl cape - smooth plastic
+2 Cloth cloak - fabric
+3 No cape or cloak
+
+You can reply with a number or describe it in your own words.`,
+      images: [],
+      flowState: { flowId: "jawa.figure", stepId: "cape_question" }
+    };
+  }
+
+  return {
+    reply: `I’m not quite sure which Jawa area you mean.
+
+Do you need help with:
+
+1 Jawa figure
+2 Jawa blaster
+3 Jawa cloak / cape
+4 Not sure
+
+You can reply with a number or describe it in your own words.`,
+    images: [],
+    flowState: { mode: "jawa-clarify" }
+  };
+}
+
+function handleJawaCapeClarification(message) {
+  const t = normalise(message);
+
+  if (t === "1" || t.includes("vinyl") || t.includes("plastic")) {
+    return startFlow("jawa.vinyl-cape") || startFlow("jawa.figure");
+  }
+
+  if (t === "2" || t.includes("cloth") || t.includes("fabric") || t.includes("cloak")) {
+    return startFlow("jawa.cloth-cloak") || startFlow("jawa.figure");
+  }
+
+  if (t === "3" || t.includes("not sure") || t.includes("unsure") || t.includes("dont know") || t.includes("don't know")) {
+    return {
+      reply: `No problem. If you are not sure, start by checking the figure itself.
+
+Next step:
+Check the Country of Origin markings on the legs.
+
+Reply with:
+
+1 for Hong Kong
+2 if it doesn't show Hong Kong
+3 if you can't tell / it doesn't appear to have either`,
+      images: [],
+      flowState: { flowId: "jawa.figure", stepId: "leg_marking_question" }
+    };
+  }
+
+  return {
+    reply: `Please choose the closest option:
+
+1 Vinyl cape - smooth plastic
+2 Cloth cloak - fabric
+3 Not sure
+
+You can also describe it in your own words.`,
+    images: [],
+    flowState: { mode: "jawa-cape-clarify" }
+  };
+}
+
 function genericBlasterClarificationResponse() {
   return {
     reply: `I found multiple blaster types in the Kenner Star Wars line.
@@ -1042,6 +1253,16 @@ module.exports = async function handler(req, res) {
       return;
     }
 
+    if (flowState?.mode === "jawa-clarify") {
+      res.status(200).json(handleVagueJawaClarification(message));
+      return;
+    }
+
+    if (flowState?.mode === "jawa-cape-clarify") {
+      res.status(200).json(handleJawaCapeClarification(message));
+      return;
+    }
+
     if (flowState?.mode === "blaster-clarify") {
       res.status(200).json(handleGenericBlasterClarification(message));
       return;
@@ -1058,6 +1279,11 @@ module.exports = async function handler(req, res) {
     const entity = detectEntity(message);
     const accessory = detectAccessory(message);
     const intent = detectIntent(message);
+
+    if (isVagueJawaRequest(message)) {
+      res.status(200).json(vagueJawaClarificationResponse(history));
+      return;
+    }
 
     if (!entity && accessory === "blaster") {
       res.status(200).json(genericBlasterClarificationResponse());
