@@ -1,120 +1,65 @@
-{
-  "id": "jawa_root",
-  "start": "entry",
+let currentFlow = null;
+let currentStep = null;
 
-  "steps": {
+async function handleUserMessage(message) {
+  const text = message.toLowerCase().trim();
 
-    "entry": {
-      "content": "Jawas… filthy traders. Do you need help identifying one of these?\n\n1 Figure\n2 Blaster\n3 Cloak\n4 Guide me\n\nReply with a number.",
-      "options": [
-        { "match": ["1"], "next": "figure_cape" },
-        { "match": ["2"], "next": "blaster_start" },
-        { "match": ["3"], "next": "cloak_start" },
-        { "match": ["4"], "next": "figure_cape" }
-      ]
-    },
-
-    "figure_cape": {
-      "content": "What does your Jawa have?\n\n1 Vinyl cape\n2 Cloth cloak\n3 No cape\n\nReply with 1, 2 or 3.",
-      "options": [
-        { "match": ["1"], "next": "vinyl_path" },
-        { "match": ["2"], "next": "cloth_choice" },
-        { "match": ["3"], "next": "coo_check" }
-      ]
-    },
-
-    "cloth_choice": {
-      "content": "Cloth cloaked Jawa. Got it.\n\nWhat do you want to check?\n\n1 Cloak version\n2 Cloak originality\n3 Identify figure\n\nReply with 1, 2 or 3.",
-      "options": [
-        { "match": ["1"], "next": "cloak_start" },
-        { "match": ["2"], "next": "cloak_auth" },
-        { "match": ["3"], "next": "coo_check" }
-      ]
-    },
-
-    "vinyl_path": {
-      "content": "Check COO on legs.\n\n1 Hong Kong\n2 Not Hong Kong\n3 Can't tell",
-      "options": [
-        { "match": ["1"], "next": "hk_variants" },
-        { "match": ["2"], "next": "non_hk" },
-        { "match": ["3"], "next": "coo_unknown" }
-      ]
-    },
-
-    "coo_check": {
-      "content": "Check COO markings.\n\n1 Hong Kong\n2 Not Hong Kong\n3 Can't tell",
-      "options": [
-        { "match": ["1"], "next": "hk_variants" },
-        { "match": ["2"], "next": "non_hk" },
-        { "match": ["3"], "next": "coo_unknown" }
-      ]
-    },
-
-    "hk_variants": {
-      "content": "Match your figure:\n\n1 Kader M1\n2 Kader M2\n3 Unitoy M3\n4 Unitoy M4",
-      "options": [
-        { "match": ["1"], "next": "offer_blaster" },
-        { "match": ["2"], "next": "offer_blaster" },
-        { "match": ["3"], "next": "offer_blaster" },
-        { "match": ["4"], "next": "offer_blaster" }
-      ]
-    },
-
-    "offer_blaster": {
-      "content": "Check blaster too?\n\n1 Yes\n2 No",
-      "options": [
-        { "match": ["1"], "next": "blaster_start" },
-        { "match": ["2"], "next": "end" }
-      ]
-    },
-
-    "blaster_start": {
-      "content": "Start blaster check.\n\nSee reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/\n\n1 Continue",
-      "options": [
-        { "match": ["1"], "next": "end" }
-      ]
-    },
-
-    "cloak_start": {
-      "content": "Cloak type:\n\n1 Removable hood\n2 Attached hood\n3 Not sure",
-      "options": [
-        { "match": ["1"], "next": "m5_info" },
-        { "match": ["2"], "next": "cloak_general" },
-        { "match": ["3"], "next": "cloak_general" }
-      ]
-    },
-
-    "m5_info": {
-      "content": "Possible Lili Ledy M5.\n\nCompare:\nhttps://www.variantvillain.com/characters/jawa/\n\n1 Continue",
-      "options": [
-        { "match": ["1"], "next": "end" }
-      ]
-    },
-
-    "cloak_general": {
-      "content": "Compare here:\nhttps://www.variantvillain.com/characters/jawa/",
-      "end": true
-    },
-
-    "cloak_auth": {
-      "content": "Check ageing, stitching and fabric.",
-      "end": true
-    },
-
-    "non_hk": {
-      "content": "Less common variant.",
-      "end": true
-    },
-
-    "coo_unknown": {
-      "content": "Check under strong light.",
-      "end": true
-    },
-
-    "end": {
-      "content": "Anything else you want to check?",
-      "end": true
+  // START FLOW
+  if (!currentFlow) {
+    if (text.includes("jawa")) {
+      currentFlow = await loadFlow("jawa.figure.json");
+      currentStep = currentFlow.start;
+      return currentFlow.steps[currentStep].content;
     }
 
+    return fallback();
   }
+
+  // CONTINUE FLOW
+  const step = currentFlow.steps[currentStep];
+
+  if (!step || !step.options) {
+    resetFlow();
+    return fallback();
+  }
+
+  // FIND MATCH
+  for (const option of step.options) {
+    for (const keyword of option.match) {
+      if (text === keyword || text.includes(keyword)) {
+        currentStep = option.next;
+        const nextStep = currentFlow.steps[currentStep];
+
+        if (!nextStep) {
+          resetFlow();
+          return fallback();
+        }
+
+        if (nextStep.end) {
+          const response = nextStep.content;
+          resetFlow();
+          return response;
+        }
+
+        return nextStep.content;
+      }
+    }
+  }
+
+  // NO MATCH → STAY IN FLOW (IMPORTANT)
+  return step.content;
+}
+
+function resetFlow() {
+  currentFlow = null;
+  currentStep = null;
+}
+
+function fallback() {
+  return "Sorry, that’s outside my collector database.\n\nI focus on vintage Kenner Star Wars toys from 1977 to 1985.\n\nIf you meant a figure or accessory, tell me which one and I’ll guide you.";
+}
+
+async function loadFlow(file) {
+  const res = await fetch(`/data/flows/${file}`);
+  return await res.json();
 }
