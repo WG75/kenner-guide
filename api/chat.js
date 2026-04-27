@@ -1,48 +1,8 @@
-const fs = require("fs");
-const path = require("path");
-
-const DATA_ROOT = path.join(process.cwd(), "data");
-const FLOWS_ROOT = path.join(DATA_ROOT, "flows");
-const MODEL = process.env.ANTHROPIC_MODEL || "claude-haiku-4-5-20251001";
-
-const ACCESSORY_TERMS = {
-  blaster: [
-    "blaster", "gun", "pistol", "weapon", "laser", "laser gun", "laser pistol",
-    "ray", "ray gun", "shooter", "zapper", "pew", "pew pew", "sidearm"
-  ],
-  lightsaber: ["lightsaber", "light saber", "saber", "sabre"],
-  "vinyl-cape": ["vinyl cape", "vinyl"],
-  "cloth-cloak": ["cloth cloak", "cloth", "cloak", "robe"],
-  cape: ["cape"],
-  bowcaster: ["bowcaster", "bow caster"],
-  gaderffi: ["gaffi", "gaffi stick", "gaderffii", "gaderffi"]
-};
-
-const FIGURE_ALIASES = [
-  { slug: "jawa", terms: ["jawa"] },
-  { slug: "luke-skywalker", terms: ["luke skywalker", "farmboy luke", "luke"] },
-  { slug: "darth-vader", terms: ["darth vader", "vader"] },
-  { slug: "ben-obi-wan-kenobi", terms: ["ben obi-wan kenobi", "obi-wan", "obi wan", "ben kenobi", "ben"] },
-  { slug: "princess-leia-organa", terms: ["princess leia", "leia organa", "leia"] },
-  { slug: "han-solo", terms: ["han solo", "han"] },
-  { slug: "chewbacca", terms: ["chewbacca", "chewie"] },
-  { slug: "stormtrooper", terms: ["stormtrooper", "storm trooper"] },
-  { slug: "r2-d2", terms: ["r2-d2", "r2d2", "r2"] },
-  { slug: "c-3po", terms: ["c-3po", "c3po", "3po"] },
-  { slug: "death-squad-commander", terms: ["death squad commander"] },
-  { slug: "sand-people", terms: ["sand people", "sand person", "tusken"] }
-];
-
-const STAR_WARS_GENERAL_TERMS = [
-  "star wars", "kenner", "vintage", "figure", "figures", "toy", "toys",
-  "variant", "coo", "accessory", "accessories", "cardback", "card back",
-  "moc", "loose", "weapon", "blaster", "lightsaber", "cape", "cloak"
-];
-
-function normalise(text) {
-  return String(text || "")
+function normalise(value) {
+  return String(value || "")
     .toLowerCase()
-    .replace(/[^a-z0-9\s\-]/g, " ")
+    .replace(/[’‘]/g, "'")
+    .replace(/[^a-z0-9\s\-']/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
@@ -51,916 +11,35 @@ function hasAny(text, terms) {
   return terms.some((term) => text.includes(term));
 }
 
-function fileExists(relPath) {
-  return fs.existsSync(path.join(process.cwd(), relPath));
-}
-
-function readRel(relPath) {
-  try {
-    return fs.readFileSync(path.join(process.cwd(), relPath), "utf8");
-  } catch {
-    return "";
-  }
-}
-
-function detectEntity(message) {
-  const t = normalise(message);
-  for (const item of FIGURE_ALIASES) {
-    if (hasAny(t, item.terms)) return item.slug;
-  }
-  return null;
-}
-
-function detectAccessory(message) {
-  const t = normalise(message);
-  for (const [accessory, terms] of Object.entries(ACCESSORY_TERMS)) {
-    if (hasAny(t, terms)) return accessory;
-  }
-  return null;
-}
-
-function detectIntent(message) {
-  const t = normalise(message);
-  if (detectAccessory(message)) return "accessory";
-  if (
-    t.includes("coo") ||
-    t.includes("country of origin") ||
-    t.includes("leg mark") ||
-    t.includes("leg marking")
-  ) return "figure";
-  if (
-    t.includes("id") ||
-    t.includes("identify") ||
-    t.includes("variant") ||
-    t.includes("figure")
-  ) return "figure";
-  if (detectEntity(message)) return "figure";
-  return "unknown";
-}
-
-function isProbablyVintageStarWarsRelated(message) {
-  const t = normalise(message);
-  if (!t) return false;
-  if (detectEntity(message)) return true;
-  if (detectAccessory(message)) return true;
-  return hasAny(t, STAR_WARS_GENERAL_TERMS);
-}
-
-function isClearlyOffTopic(message) {
-  const t = normalise(message);
-
-  const offTopicTerms = [
-    "weather",
-    "nice day",
-    "sunny",
-    "rain",
-    "world cup",
-    "football",
-    "soccer",
-    "cricket",
-    "rugby",
-    "politics",
-    "election",
-    "prime minister",
-    "president",
-    "stock market",
-    "bitcoin",
-    "crypto",
-    "recipe",
-    "cook",
-    "cooking",
-    "movie",
-    "tv show"
-  ];
-
-  return hasAny(t, offTopicTerms) && !isProbablyVintageStarWarsRelated(message);
-}
-
-function offTopicResponse() {
-  const variants = [
-    `Sorry, I’m not familiar with that subject.
-
-I’m a Collector Companion droid focused on vintage Star Wars toys from 1977 to 1985, mostly the figures and accessories.
-
-If you meant something vintage Star Wars related, please clarify and I’ll help.
-
-Do you have any vintage Star Wars questions I can help with?`,
-
-    `Sorry, that’s outside my collector database.
-
-I focus on vintage Kenner Star Wars toys from 1977 to 1985 — figures, variants, COOs and accessories.
-
-If you meant a figure or accessory, tell me which one and I’ll guide you.
-
-Do you have any vintage Star Wars related questions?`,
-
-    `I’m sorry, I can’t help much with that subject.
-
-I’m a Collector Companion droid for vintage Star Wars figures and accessories from 1977 to 1985.
-
-If you meant something from that era, just let me know and I’ll help.`
-  ];
-
-  return {
-    reply: variants[Math.floor(Math.random() * variants.length)],
-    images: [],
-    flowState: null
-  };
-}
-
-function flowFilePath(flowId) {
-  return path.join(FLOWS_ROOT, `${flowId}.json`);
-}
-
-function flowIdFor(entity, intent, accessory) {
-  if (!entity) return null;
-
-  if (intent === "figure") return `${entity}.figure`;
-
-  if (intent === "accessory" && accessory) {
-    const direct = `${entity}.${accessory}`;
-    if (fs.existsSync(flowFilePath(direct))) return direct;
-
-    if (entity === "jawa" && accessory === "cape") return "jawa.vinyl-cape";
-    if (entity === "jawa" && accessory === "cloth-cloak") return "jawa.cloth-cloak";
-    if (entity === "jawa" && accessory === "vinyl-cape") return "jawa.vinyl-cape";
-    if (entity === "jawa" && accessory === "blaster") return "jawa.blaster";
-  }
-
-  return null;
-}
-
-function loadFlowById(flowId) {
-  if (!flowId) return null;
-  const file = flowFilePath(flowId);
-  try {
-    if (!fs.existsSync(file)) return null;
-    return JSON.parse(fs.readFileSync(file, "utf8"));
-  } catch (err) {
-    console.error("Bad flow file", file, err);
-    return null;
-  }
-}
-
-function getStartStepId(flow) {
-  return flow?.start_step || flow?.start || "start";
-}
-
-function getStep(flow, stepId) {
-  return flow?.steps?.[stepId] || null;
-}
-
-function stepText(step) {
-  return String(step?.content || step?.prompt || "").trim();
-}
-
-function normaliseOptions(step) {
-  const options = step?.options;
-
-  if (!options) return [];
-
-  if (Array.isArray(options)) {
-    return options.map((option, index) => {
-      if (!option || typeof option !== "object") {
-        return {
-          value: String(index + 1),
-          label: String(option || ""),
-          aliases: [],
-          next: null
-        };
-      }
-
-      const value =
-        option.value !== undefined
-          ? String(option.value)
-          : Array.isArray(option.match) && option.match.length
-            ? String(option.match[0])
-            : String(index + 1);
-
-      const aliases = [];
-
-      if (Array.isArray(option.aliases)) aliases.push(...option.aliases);
-      if (Array.isArray(option.match)) aliases.push(...option.match);
-      if (option.label) aliases.push(option.label);
-      if (option.text) aliases.push(option.text);
-
-      return {
-        ...option,
-        value,
-        label: option.label || option.text || "",
-        aliases,
-        next: option.next || option.target || option.flow || null
-      };
-    });
-  }
-
-  if (typeof options === "object") {
-    return Object.entries(options).map(([value, target]) => ({
-      value,
-      label: "",
-      aliases: [value],
-      next: target
-    }));
-  }
-
-  return [];
-}
-
-function optionMatch(input, step) {
-  const t = normalise(input);
-  const options = normaliseOptions(step);
-
-  // Direct matches first.
-  for (const option of options) {
-    if (String(option.value).toLowerCase() === t) return option;
-
-    if (option.label && normalise(option.label) === t) return option;
-
-    if (Array.isArray(option.aliases)) {
-      for (const alias of option.aliases) {
-        const a = normalise(alias);
-        if (a && (t === a || t.includes(a))) return option;
-      }
-    }
-
-    if (Array.isArray(option.match)) {
-      for (const match of option.match) {
-        const m = normalise(match);
-        if (m && (t === m || t.includes(m))) return option;
-      }
-    }
-  }
-
-  // Yes / no.
-  if (t === "yes" || t === "y" || t.includes("yes") || t.includes("yeah") || t.includes("yep")) {
-    return options.find((o) => String(o.value) === "1") || null;
-  }
-
-  if (t === "no" || t === "n" || t.includes("nope")) {
-    return options.find((o) => String(o.value) === "2") || null;
-  }
-
-  // Float test.
-  if (t.includes("float") || t.includes("floats") || t.includes("floating") || t.includes("resurface")) {
-    return options.find((o) => String(o.value) === "1") || null;
-  }
-
-  if (t.includes("sink") || t.includes("sinks") || t.includes("sank")) {
-    return options.find((o) => String(o.value) === "2") || null;
-  }
-
-  // Jawa cape / cloak natural answers.
-  if (
-    t.includes("vinyl") ||
-    t.includes("smooth plastic") ||
-    t.includes("plastic cape")
-  ) {
-    return options.find((o) => String(o.value) === "1") || null;
-  }
-
-  if (
-    t.includes("cloth") ||
-    t.includes("fabric") ||
-    t.includes("hooded cloak")
-  ) {
-    return options.find((o) => String(o.value) === "2") || null;
-  }
-
-  if (
-    t.includes("neither") ||
-    t.includes("none") ||
-    t.includes("no cape") ||
-    t.includes("missing cape") ||
-    t.includes("missing cloak") ||
-    t.includes("naked") ||
-    t.includes("no cloak") ||
-    t.includes("doesnt have one") ||
-    t.includes("doesn't have one") ||
-    t.includes("does not have one") ||
-    t.includes("without cape") ||
-    t.includes("without a cape") ||
-    t.includes("without cloak") ||
-    t.includes("without a cloak")
-  ) {
-    return options.find((o) => String(o.value) === "3") || null;
-  }
-
-  // Guide-me / all routes.
-  if (
-    t.includes("all of the above") ||
-    t.includes("guide me") ||
-    t.includes("help me through") ||
-    t.includes("walk me through")
-  ) {
-    return options.find((o) => String(o.value) === "4") ||
-      options.find((o) => String(o.value) === "5") ||
-      null;
-  }
-
-  // Rear bump / mould identification.
-  if (t.includes("long")) {
-    return options.find((o) => String(o.value) === "1") || null;
-  }
-
-  if (t.includes("short") || t.includes("medium") || t.includes("middle")) {
-    return options.find((o) => String(o.value) === "2") || null;
-  }
-
-  if (
-    t.includes("no bump") ||
-    t.includes("missing bump") ||
-    t.includes("without bump") ||
-    t.includes("no rear bump")
-  ) {
-    return options.find((o) => String(o.value) === "3") || null;
-  }
-
-  if (
-    t.includes("hard to tell") ||
-    t.includes("hard to say") ||
-    t.includes("not sure") ||
-    t.includes("unsure") ||
-    t.includes("dont know") ||
-    t.includes("don't know") ||
-    t.includes("can't tell") ||
-    t.includes("cant tell")
-  ) {
-    return options.find((o) => String(o.value) === "4") ||
-      options.find((o) => String(o.value) === "3") ||
-      null;
-  }
-
-  // Colour replies.
-  if (t.includes("dark blue") || t.includes("black blue") || t.includes("black-blue") || t === "blue") {
-    return options.find((o) => String(o.value) === "1") || null;
-  }
-
-  if (t.includes("black")) {
-    return options.find((o) => String(o.value) === "2") || null;
-  }
-
-  if (t.includes("grey") || t.includes("gray")) {
-    return options.find((o) => String(o.value) === "3") || null;
-  }
-
-  if (t.includes("silver")) {
-    return options.find((o) => String(o.value) === "4") || null;
-  }
-
-  return null;
-}
-
-function imagesFromStep(step) {
-  const images = [];
-
-  if (!step) return images;
-
-  if (Array.isArray(step.images)) {
-    for (const img of step.images) {
-      if (img && img.url) {
-        images.push({
-          title: img.title || "",
-          url: img.url,
-          caption: img.caption || ""
-        });
-      }
-    }
-  }
-
-  if (step.type === "image" && step.url) {
-    images.push({
-      title: step.title || "",
-      url: step.url,
-      caption: step.caption || ""
-    });
-  }
-
-  return images;
-}
-
-function questionReply(step) {
-  let reply = stepText(step);
-  const options = normaliseOptions(step);
-
-  if (/reply with/i.test(reply)) {
-    return reply.trim();
-  }
-
-  if (options.length) {
-    const lines = options.map((option) => {
-      const label = option.label || option.text || "";
-      return label ? `${option.value} ${label}` : `${option.value}`;
-    });
-
-    reply = `${reply}\n\nReply with:\n\n${lines.join("\n")}\n\nYou can also describe it in your own words.`;
-  }
-
-  return reply.trim();
-}
-
-function routeTargetFromStep(step) {
-  return step?.target || step?.flow || null;
-}
-
-function selectedTarget(option) {
-  return option?.target || option?.flow || option?.next || null;
-}
-
-function makeResponse(reply, images, flowId, stepId, done = false) {
+function makeReply(reply, flowState = null, images = []) {
   return {
     reply: String(reply || "").trim(),
-    images: images || [],
-    flowState: done || !flowId || !stepId ? null : { flowId, stepId }
+    images: Array.isArray(images) ? images : [],
+    flowState: flowState || null
   };
 }
 
-function runFlowUntilQuestion(flowId, stepId, previousText = "", images = [], safety = 0) {
-  if (safety > 20) return makeResponse(previousText || "Flow stopped.", images, null, null, true);
-
-  const flow = loadFlowById(flowId);
-  if (!flow) return null;
-
-  const step = getStep(flow, stepId);
-  if (!step) return null;
-
-  images.push(...imagesFromStep(step));
-
-  if (step.type === "route") {
-    const target = routeTargetFromStep(step);
-    const targetFlow = loadFlowById(target);
-    if (!target || !targetFlow) {
-      return makeResponse("I could not find that flow yet.", images, null, null, true);
-    }
-    return runFlowUntilQuestion(target, getStartStepId(targetFlow), previousText, images, safety + 1);
-  }
-
-  const text = stepText(step);
-  const combinedText = [previousText, text].filter(Boolean).join("\n\n");
-
-  if (step.type === "question" || normaliseOptions(step).length) {
-    return makeResponse(questionReply(step), images, flowId, stepId);
-  }
-
-  if (step.type === "ai") {
-    return makeResponse(
-      combinedText || "Ask me your question and I’ll use the reference files to help.",
-      images,
-      null,
-      null,
-      true
-    );
-  }
-
-  if (step.next) {
-    return runFlowUntilQuestion(flowId, step.next, combinedText, images, safety + 1);
-  }
-
-  return makeResponse(combinedText, images, null, null, true);
+function optionFromMessage(message) {
+  const t = normalise(message);
+  if (/^[1-9]$/.test(t)) return t;
+  return null;
 }
 
-function startFlow(flowId) {
-  const flow = loadFlowById(flowId);
-  if (!flow) return null;
-  return runFlowUntilQuestion(flowId, getStartStepId(flow));
-}
+function jawaIntro() {
+  return makeReply(
+    `Jawas… filthy traders. Do you need help identifying one of these?
 
-function continueFlow(flowState, message) {
-  if (!flowState?.flowId || !flowState?.stepId) return null;
-
-  const flow = loadFlowById(flowState.flowId);
-  if (!flow) return null;
-
-  const step = getStep(flow, flowState.stepId);
-  if (!step) return null;
-
-  const selected = optionMatch(message, step);
-
-  if (!selected) {
-    return makeResponse(
-      `I’m not quite sure which option that matches.
-
-${questionReply(step)}`,
-      [],
-      flowState.flowId,
-      flowState.stepId
-    );
-  }
-
-  const target = selectedTarget(selected);
-
-  if (!target) {
-    return makeResponse(selected.reply || "Got it.", selected.images || [], null, null, true);
-  }
-
-  if (target.includes(".")) {
-    return startFlow(target);
-  }
-
-  if (selected.reply) {
-    return runFlowUntilQuestion(flowState.flowId, target, selected.reply, selected.images || []);
-  }
-
-  return runFlowUntilQuestion(flowState.flowId, target, "", selected.images || []);
-}
-
-function recentAssistantText(history, count = 6) {
-  const items = Array.isArray(history) ? history : [];
-  return items
-    .filter((item) => item?.role === "assistant")
-    .slice(-count)
-    .map((item) => String(item.content || ""))
-    .join("\n")
-    .toLowerCase();
-}
-
-function isRecentJawaBlasterContext(history) {
-  const items = Array.isArray(history) ? history : [];
-  const recent = items
-    .filter((item) => item?.role === "assistant")
-    .slice(-6)
-    .map((item) => String(item.content || "").toLowerCase());
-
-  const joined = recent.join("\n");
-
-  // Do not let generic fallback examples like "Jawa blaster" trigger follow-up mode.
-  if (joined.includes("tell me the figure or accessory")) return false;
-  if (joined.includes("i’m not sure what you want to identify yet")) return false;
-  if (joined.includes("i'm not sure what you want to identify yet")) return false;
-
-  return (
-    joined.includes("variantvillain.com/accessory-guide/jawa-blaster") ||
-    joined.includes("which does it look closest to?") ||
-    joined.includes("rear bump = likely") ||
-    joined.includes("m2 mould") ||
-    joined.includes("m1 unitoy mould") ||
-    joined.includes("m3 kader mould") ||
-    joined.includes("jawa blaster reference")
+1 Figure
+2 Blaster
+3 Cloak
+4 Guide me`,
+    { topic: "jawa", step: "menu" }
   );
 }
 
-function jawaBlasterFollowUp(message) {
-  const t = normalise(message);
-
-  if (t === "1" || t.includes("long")) {
-    return makeResponse(
-      `That points you towards the M1 Unitoy mould.
-
-M1 traits:
-• long rear bump
-• visible gate scar near the handle
-• slightly rougher finish
-• distinctive bump at the bottom of the handle
-
-Use the Jawa blaster guide here:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/
-
-If you want to keep checking, compare the surface finish next.
-
-Reply with:
-
-1 Rougher / more worn
-2 Clean and sharp
-3 Not sure
-
-You can also describe it in your own words.`,
-      [],
-      null,
-      null,
-      true
-    );
-  }
-
-  if (t === "2" || t.includes("short")) {
-    return makeResponse(
-      `That points you towards the M2 mould.
-
-M2 traits:
-• shorter rear bump than M1
-• cleaner, sharper mould detail
-• scar to the top right of the bump
-
-This is also the mould family used for the black Brazilian Glasslite version.
-
-Compare the M2 examples here:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2
-
-If you want to keep checking, compare the surface detail next.
-
-Reply with:
-
-1 Clean and sharp
-2 Rougher / more worn
-3 Not sure
-
-You can also describe it in your own words.`,
-      [],
-      null,
-      null,
-      true
-    );
-  }
-
-  if (
-    t === "3" ||
-    t.includes("no bump") ||
-    t.includes("none") ||
-    t.includes("missing bump") ||
-    t.includes("without bump") ||
-    t.includes("no rear bump")
-  ) {
-    return makeResponse(
-      `That points you towards the M3 Kader mould.
-
-M3 traits:
-• no rear bump
-• simplified shape compared with M1 and M2
-• cleaner silhouette
-
-Use the Jawa blaster guide here:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/
-
-If you want to keep checking, compare the mould detail next.
-
-Reply with:
-
-1 Clean and sharp
-2 Rougher / more worn
-3 Not sure
-
-You can also describe it in your own words.`,
-      [],
-      null,
-      null,
-      true
-    );
-  }
-
-  if (t.includes("rough") || t.includes("worn")) {
-    return makeResponse(
-      `A rougher or more worn finish can point more towards M1, but do not use texture alone.
-
-Next compare the rear bump.
-
-Reply with:
-
-1 Long rear bump
-2 Short rear bump
-3 No rear bump
-4 Not sure
-
-You can also describe it in your own words.
-
-Jawa blaster guide:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
-      [],
-      null,
-      null,
-      true
-    );
-  }
-
-  if (t.includes("clean") || t.includes("sharp")) {
-    return makeResponse(
-      `Cleaner, sharper mould detail can point more towards M2 or M3.
-
-Next check the rear bump.
-
-Reply with:
-
-1 Short rear bump = likely M2
-2 No rear bump = likely M3
-3 Not sure
-
-You can also describe it in your own words.
-
-M2 reference:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2`,
-      [],
-      null,
-      null,
-      true
-    );
-  }
-
-  if (t.includes("black")) {
-    return makeResponse(
-      `Black needs caution.
-
-It could be:
-• a reproduction
-• a modern accessory
-• a very dark blue original being mistaken for black
-• or, less commonly, a Brazilian Glasslite black blaster
-
-Place it against a strong light. If the edges look blue, it may actually be very dark blue / black-blue.
-
-If it stays black, compare it especially against the M2 mould:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2
-
-Reply with:
-
-1 Edges look blue when backlit
-2 It stays black
-3 Not sure
-
-You can also describe what you see.`,
-      [],
-      null,
-      null,
-      true
-    );
-  }
-
-  if (t.includes("grey") || t.includes("gray")) {
-    return makeResponse(
-      `Grey needs extra caution.
-
-Grey is a very common reproduction colour for Jawa blasters.
-
-There are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.
-
-Next check the float result.
-
-Reply with:
-
-1 It floats
-2 It sinks
-3 Not sure
-
-You can also compare carefully here:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
-      [],
-      null,
-      null,
-      true
-    );
-  }
-
-  return makeResponse(
-    `No problem. To narrow a Jawa blaster, the next best check is the rear bump.
-
-Which does it look closest to?
-
-1 Long rear bump = likely M1
-2 Short rear bump = likely M2
-3 No rear bump = likely M3
-4 Not sure
-
-You can also describe it in your own words.
-
-Reference:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
-    [],
-    null,
-    null,
-    true
-  );
-}
-
-function isVagueJawaRequest(message) {
-  const t = normalise(message);
-
-  if (!t.includes("jawa")) return false;
-
-  const specificTerms = [
-    "blaster",
-    "gun",
-    "weapon",
-    "pistol",
-    "pew",
-    "cape",
-    "cloak",
-    "vinyl",
-    "cloth",
-    "coo",
-    "country of origin",
-    "leg mark",
-    "leg marking",
-    "accessory",
-    "accessories",
-    "figure id",
-    "identify",
-    "id jawa figure",
-    "jawa figure"
-  ];
-
-  if (hasAny(t, specificTerms)) return false;
-
-  return (
-    t === "jawa" ||
-    t === "jawas" ||
-    t === "help with jawa" ||
-    t === "help with jawas" ||
-    t === "what about jawa" ||
-    t === "what about jawas" ||
-    t === "tell me about jawa" ||
-    t === "tell me about jawas"
-  );
-}
-
-function jawaFlavourLine(history) {
-  const recent = Array.isArray(history)
-    ? history.slice(-12).map((item) => String(item.content || "").toLowerCase()).join("\n")
-    : "";
-
-  if (recent.includes("jawa blaster") || recent.includes("jawa cloak") || recent.includes("jawa figure")) {
-    const laterLines = [
-      "Jawas again… what have the little scavengers dragged in this time?",
-      "More Jawa business. They do get everywhere.",
-      "Back to the Jawas. Wretched little scavengers, but useful to identify."
-    ];
-    return laterLines[Math.floor(Math.random() * laterLines.length)];
-  }
-
-  const firstLines = [
-    "Jawas! I can’t abide those creatures. Always up to something.",
-    "Jawas! Wretched little scavengers.",
-    "Jawas! Keep a close eye on your valuables around them.",
-    "Jawas! Check any droids carefully if you’re buying from them.",
-    "Jawas… filthy traders, but they do carry interesting items.",
-    "Jawas! Always rummaging through scrap.",
-    "Jawas! You never quite know what they’ve cobbled together.",
-    "Jawas! Small, hooded, and usually trouble."
-  ];
-
-  return firstLines[Math.floor(Math.random() * firstLines.length)];
-}
-
-function vagueJawaClarificationResponse(history) {
-  return {
-    reply: `${jawaFlavourLine(history)}
-
-Do you need help with a Jawa figure or one of its accessories?
-
-1 Jawa figure
-2 Jawa blaster
-3 Jawa cloak / cape
-4 All of the above — guide me
-
-You can reply with a number or describe it in your own words.`,
-    images: [],
-    flowState: { mode: "jawa-clarify" }
-  };
-}
-
-function handleVagueJawaClarification(message) {
-  const t = normalise(message);
-
-  if (
-    t === "1" ||
-    t.includes("figure") ||
-    t.includes("variant") ||
-    t.includes("coo") ||
-    t.includes("country of origin")
-  ) {
-    return startFlow("jawa.figure");
-  }
-
-  if (
-    t === "2" ||
-    t.includes("blaster") ||
-    t.includes("gun") ||
-    t.includes("weapon") ||
-    t.includes("pistol") ||
-    t.includes("pew")
-  ) {
-    return startFlow("jawa.blaster");
-  }
-
-  if (
-    t === "3" ||
-    t.includes("cloak") ||
-    t.includes("cape") ||
-    t.includes("vinyl") ||
-    t.includes("cloth")
-  ) {
-    return {
-      reply: `Got it — Jawa cloak or cape.
-
-Which one are you checking?
-
-1 Vinyl cape - smooth plastic
-2 Cloth cloak - fabric
-3 Not sure
-
-You can reply with a number or describe it in your own words.`,
-      images: [],
-      flowState: { mode: "jawa-cape-clarify" }
-    };
-  }
-
-  if (
-    t === "4" ||
-    t.includes("all of the above") ||
-    t.includes("guide me") ||
-    t.includes("help me") ||
-    t.includes("not sure") ||
-    t.includes("unsure") ||
-    t.includes("dont know") ||
-    t.includes("don't know")
-  ) {
-    return {
-      reply: `No problem. Start with the easiest visible thing.
+function jawaCapeQuestion(prefix = "Start with the easiest visible thing.") {
+  return makeReply(
+    `${prefix}
 
 What does your Jawa have?
 
@@ -968,325 +47,779 @@ What does your Jawa have?
 2 Cloth cloak - fabric
 3 No cape or cloak
 
-You can reply with a number or describe it in your own words.`,
-      images: [],
-      flowState: { flowId: "jawa.figure", stepId: "cape_question" }
-    };
-  }
-
-  return {
-    reply: `I’m not quite sure which Jawa area you mean.
-
-Do you need help with:
-
-1 Jawa figure
-2 Jawa blaster
-3 Jawa cloak / cape
-4 All of the above — guide me
-
-You can reply with a number or describe it in your own words.`,
-    images: [],
-    flowState: { mode: "jawa-clarify" }
-  };
+Reply with a number or describe it in your own words.`,
+    { topic: "jawa", step: "cape" }
+  );
 }
 
-function handleJawaCapeClarification(message) {
-  const t = normalise(message);
+function jawaClothDecision() {
+  return makeReply(
+    `A cloth cloaked Jawa. Got it.
 
-  if (t === "1" || t.includes("vinyl") || t.includes("plastic")) {
-    return startFlow("jawa.vinyl-cape") || startFlow("jawa.figure");
-  }
+Would you like to check:
 
-  if (t === "2" || t.includes("cloth") || t.includes("fabric") || t.includes("cloak")) {
-    return startFlow("jawa.cloth-cloak") || startFlow("jawa.figure");
-  }
+1 Which cloak version you have
+2 Whether the cloak looks original
+3 Check which Jawa figure variant you have first
 
-  if (t === "3" || t.includes("not sure") || t.includes("unsure") || t.includes("dont know") || t.includes("don't know")) {
-    return {
-      reply: `No problem. If you are not sure, start by checking the figure itself.
+Reply with a number or just type your question in your own words.`,
+    { topic: "jawa", step: "cloth_decision" }
+  );
+}
 
-Next step:
+function jawaCooQuestion(prefix = "Next step:") {
+  return makeReply(
+    `${prefix}
 Check the Country of Origin markings on the legs.
 
-Reply with:
+1 Hong Kong
+2 No Hong Kong / No COO
+3 Can't tell
 
-1 for Hong Kong
-2 if it doesn't show Hong Kong
-3 if you can't tell / it doesn't appear to have either`,
-      images: [],
-      flowState: { flowId: "jawa.figure", stepId: "leg_marking_question" }
-    };
-  }
-
-  return {
-    reply: `Please choose the closest option:
-
-1 Vinyl cape - smooth plastic
-2 Cloth cloak - fabric
-3 Not sure
-
-You can also describe it in your own words.`,
-    images: [],
-    flowState: { mode: "jawa-cape-clarify" }
-  };
+Reply with a number or describe what you can see.`,
+    { topic: "jawa", step: "coo" }
+  );
 }
 
-function genericBlasterClarificationResponse() {
-  return {
-    reply: `I found multiple blaster types in the Kenner Star Wars line.
+function jawaHongKongReferences() {
+  const images = [
+    {
+      title: "1. Kader M1",
+      url: "/public/images/jawa_figure_kader_M1.png",
+      caption: "Kader M1 1a: © aligns with the G of HONG, and the F of G.M.F.G.I. aligns with the G of KONG.\n\nKader M1 1b: © aligns with the O of HONG, and the second G of G.M.F.G.I. aligns with the G of KONG."
+    },
+    {
+      title: "2. Kader M2",
+      url: "/public/images/jawa_figure_kader_M2.png",
+      caption: "Kader M2 1a: right side of © aligns with the H of HONG, and the 1 of 1977 aligns with the G of KONG.\n\nKader M2 1b: right side of © aligns with the H of HONG, and the middle of the 9 and 7 of 1977 aligns with the G of KONG."
+    },
+    {
+      title: "3. Unitoy M3",
+      url: "/public/images/jawa_figure_unitoy_M3.png",
+      caption: "Unitoy M3: the first G of G.M.F.G.I. aligns with the H of HONG, and the middle of the 77 from 1977 aligns with the G of KONG."
+    },
+    {
+      title: "4. Unitoy / Lili Ledy M4",
+      url: "/public/images/jawa_figure_unitoy_lili-ledy_M4.png",
+      caption: "Unitoy / Lili Ledy M4: the M of G.M.F.G.I. aligns with the H of HONG, and the middle of the second 7 from 1977 aligns with the G of KONG."
+    }
+  ];
+
+  return makeReply(
+    `Ok, compare your left-leg marking with these reference images.
+
+Full Jawa guide on Variant Villain:
+https://www.variantvillain.com/characters/sw/jawa/
+
+Which is the closest match?
+
+1 Kader M1
+2 Kader M2
+3 Unitoy M3
+4 Unitoy / Lili Ledy M4
+
+Reply with a number or describe the closest one.`,
+    { topic: "jawa", step: "hk_variant" },
+    images
+  );
+}
+
+function jawaNoCooResult() {
+  const images = [
+    {
+      title: "Kader China M2 No COO",
+      url: "/public/images/jawa_figure_kader_china_M2.png",
+      caption: "Kader China M2 No COO: only © G.M.F.G.I. 1977. No HONG KONG marking."
+    }
+  ];
+
+  return makeReply(
+    `That points towards the Kader China M2 No COO Jawa.
+
+It should show:
+© G.M.F.G.I. 1977
+
+With no HONG KONG underneath.
+
+Full reference:
+https://www.variantvillain.com/characters/sw/jawa/#f2
+
+Do you also want help checking the Jawa blaster?
+
+1 Yes
+2 No`,
+    { topic: "jawa", step: "offer_blaster" },
+    images
+  );
+}
+
+function jawaUnclearCoo() {
+  return makeReply(
+    `If you can't see either expected marking, be careful.
+
+For original vintage Jawa figures, the normal left-leg markings are usually:
+
+• © G.M.F.G.I. 1977 with HONG KONG underneath
+• or © G.M.F.G.I. 1977 with no HONG KONG underneath
+
+Possible explanations:
+• worn or faint markings
+• difficult lighting
+• bootleg
+• reproduction
+• Retro Collection
+• modern figure
+
+Check under strong light first.
+
+Do you want to continue anyway?
+
+1 Yes, show Hong Kong references
+2 No, I'll check again`,
+    { topic: "jawa", step: "unclear_coo" }
+  );
+}
+
+function jawaVariantResult(choice) {
+  const map = {
+    "1": { name: "Kader M1", url: "https://www.variantvillain.com/characters/sw/jawa/#f1" },
+    "2": { name: "Kader M2", url: "https://www.variantvillain.com/characters/sw/jawa/#f2" },
+    "3": { name: "Unitoy M3", url: "https://www.variantvillain.com/characters/sw/jawa/#f3" },
+    "4": { name: "Unitoy / Lili Ledy M4", url: "https://www.variantvillain.com/characters/sw/jawa/#f3" }
+  };
+
+  const result = map[choice] || map["1"];
+
+  return makeReply(
+    `Closest match: ${result.name}.
+
+For a more detailed look, visit:
+${result.url}
+
+Do you also want help checking the Jawa blaster?
+
+1 Yes
+2 No`,
+    { topic: "jawa", step: "offer_blaster" }
+  );
+}
+
+function jawaCloakStart() {
+  return makeReply(
+    `Ok — let's check the Jawa cloth cloak.
+
+What do you see?
+
+1 Removable hood
+2 Attached / sewn hood
+3 Not sure
+
+Reply with a number or describe it in your own words.`,
+    { topic: "jawa", step: "cloak" }
+  );
+}
+
+function jawaCloakM5() {
+  return makeReply(
+    `A removable hood can point towards a Mexican Lili Ledy M5 Jawa cloak.
+
+Known M5 traits:
+• heavier cotton material
+• lighter colour compared with many other Jawa cloaks
+• often a separate small hood
+• beige, brown or dark brown stitching
+
+Known small hood versions include:
+• brown stitch / removable hood
+• beige stitch / removable hood
+• brown stitch / attached hood
+
+Be careful though. A damaged hood, replacement hood or reproduction can confuse things.
+
+Reference:
+https://www.variantvillain.com/accessory-guide/jawa-cloak/
+
+What would you like to do next?
+
+1 Check whether the cloak looks original
+2 Check the Jawa figure variant
+3 Check the blaster`,
+    { topic: "jawa", step: "cloak_next" }
+  );
+}
+
+function jawaCloakAttached() {
+  return makeReply(
+    `An attached hood is more typical, but some Lili Ledy M5 cloaks are also known with attached hoods.
+
+Next compare:
+• fabric weight
+• colour tone
+• stitching colour
+• hood shape
+• signs of age or modern replacement
+
+Reference:
+https://www.variantvillain.com/accessory-guide/jawa-cloak/
+
+What would you like to do next?
+
+1 Check whether the cloak looks original
+2 Check the Jawa figure variant
+3 Check the blaster`,
+    { topic: "jawa", step: "cloak_next" }
+  );
+}
+
+function jawaCloakAuth() {
+  return makeReply(
+    `To check whether the cloak looks original, compare:
+
+• fabric texture
+• stitching style and colour
+• cut and hood shape
+• signs of natural ageing
+• whether the hood looks cut, repaired or replaced
+
+For expensive examples, don't rely on this app alone. Get confirmation from experienced collector groups as well.
+
+Full cloak guide:
+https://www.variantvillain.com/accessory-guide/jawa-cloak/
+
+Do you want to check the figure variant next?
+
+1 Yes
+2 No`,
+    { topic: "jawa", step: "cloak_auth_next" }
+  );
+}
+
+function jawaBlasterStart() {
+  const images = [
+    {
+      title: "Jawa Blaster Reference",
+      url: "https://www.variantvillain.com/wp-content/uploads/2021/12/JawaBlaster_000.jpg",
+      caption: "Compare mould shape, rear bump length, plastic colour and detail sharpness."
+    }
+  ];
+
+  return makeReply(
+    `Ok — compare your blaster with this reference.
+
+First, can you identify it against the reference image?
+
+1 Yes
+2 No
+3 Not sure`,
+    { topic: "jawa_blaster", step: "reference" },
+    images
+  );
+}
+
+function jawaBlasterFloat() {
+  return makeReply(
+    `Next check: float test.
+
+• If it sinks, treat it as a reproduction
+• If it floats, it may be original
+
+Important:
+Modern reproductions can float, so this is not proof.
+
+Does yours sink or float?
+
+1 Float
+2 Sink`,
+    { topic: "jawa_blaster", step: "float" }
+  );
+}
+
+function jawaBlasterColour() {
+  return makeReply(
+    `Good. Since it floats, check the colour.
+
+Most original Jawa blasters are dark blue or black-blue tones.
+
+What colour does yours look like?
+
+1 Dark blue / black-blue
+2 Black
+3 Grey
+4 Silver
+5 Not sure`,
+    { topic: "jawa_blaster", step: "colour" }
+  );
+}
+
+function jawaBlasterBump(prefix = "Next check: rear bump.") {
+  return makeReply(
+    `${prefix}
+
+Which does it look closest to?
+
+1 Long rear bump
+2 Short rear bump
+3 No rear bump
+4 Not sure`,
+    { topic: "jawa_blaster", step: "bump" }
+  );
+}
+
+function jawaBlasterBlack() {
+  return makeReply(
+    `Black needs caution.
+
+It could be:
+• a reproduction
+• a modern accessory
+• a very dark blue original being mistaken for black
+• less commonly, a Brazilian Glasslite black blaster
+
+Place it against a strong light. If the edges look blue, it may actually be very dark blue / black-blue.
+
+If it stays black, compare it especially against the M2 mould:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2
+
+What do you see?
+
+1 Edges look blue when backlit
+2 It stays black
+3 Not sure`,
+    { topic: "jawa_blaster", step: "black_light" }
+  );
+}
+
+function jawaBlasterResult(choice) {
+  if (choice === "1") {
+    return makeReply(
+      `That points towards an M1 Jawa blaster.
+
+M1 is associated with a longer rear bump.
+
+Compare carefully here:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/
+
+Anything else you want to check?`,
+      null
+    );
+  }
+
+  if (choice === "2") {
+    return makeReply(
+      `That points towards an M2 Jawa blaster.
+
+M2 has the short rear bump and is also the mould family associated with the Brazilian Glasslite black blaster.
+
+Compare M2 here:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2
+
+Anything else you want to check?`,
+      null
+    );
+  }
+
+  if (choice === "3") {
+    return makeReply(
+      `That points towards an M3 Jawa blaster.
+
+M3 is the no rear bump version.
+
+Compare here:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/
+
+Anything else you want to check?`,
+      null
+    );
+  }
+
+  return makeReply(
+    `No problem. If the rear bump is hard to judge, compare against the full guide first:
+
+https://www.variantvillain.com/accessory-guide/jawa-blaster/
+
+Look especially at:
+• rear bump length
+• mould sharpness
+• plastic colour
+• detail around the handle
+
+Anything else you want to check?`,
+    null
+  );
+}
+
+function genericBlasterClarify() {
+  return makeReply(
+    `I found several vintage Kenner blaster types.
 
 Which one are you asking about?
 
-1 Imperial Blaster / Stormtrooper blaster
-2 Jawa Blaster
-3 Princess Leia Blaster
-4 Rebel Blaster / Han Solo blaster
-5 Not sure / something else
-
-You can reply with a number or describe it in your own words.`,
-    images: [],
-    flowState: { mode: "blaster-clarify" }
-  };
+1 Imperial / Stormtrooper blaster
+2 Jawa blaster
+3 Princess Leia blaster
+4 Rebel / Han Solo blaster
+5 Guide me`,
+    { topic: "blaster", step: "menu" }
+  );
 }
 
-function handleGenericBlasterClarification(message) {
+function offTopic() {
+  return makeReply(
+    `Sorry, I’m not familiar with that subject.
+
+I’m a Collector Companion droid focused on vintage Star Wars toys from 1977 to 1985, mostly the figures and accessories.
+
+If you meant something vintage Star Wars related, please clarify and I’ll help.
+
+Do you have any vintage Star Wars questions I can help with?`,
+    null
+  );
+}
+
+function routeInitial(message) {
   const t = normalise(message);
 
-  if (t === "1" || t.includes("imperial") || t.includes("stormtrooper") || t.includes("trooper")) {
-    return {
-      reply: `Got it — Imperial / Stormtrooper blaster.
+  const isJawa = t.includes("jawa");
+  const isBlaster = hasAny(t, ["blaster", "gun", "weapon", "pistol", "pew"]);
+  const isCloak = hasAny(t, ["cloak", "cape", "hood"]);
+  const isFigure = hasAny(t, ["figure", "variant", "coo", "country of origin", "identify", "id"]);
 
-I do not have a guided flow for that one yet, but I can still help from the reference files.
+  if (isJawa && isBlaster) return jawaBlasterStart();
+  if (isJawa && isCloak) return jawaCloakStart();
+  if (isJawa && isFigure) return jawaCapeQuestion("Let's identify your Jawa figure.");
+  if (isJawa) return jawaIntro();
 
-First quick check:
+  if (isBlaster) return genericBlasterClarify();
 
-1 Does it look like the standard Imperial E-11 style blaster?
-2 Not sure
+  if (hasAny(t, ["star wars", "kenner", "vintage", "coo", "variant", "accessory", "figure"])) {
+    return makeReply(
+      `I can help with vintage Kenner Star Wars figures and accessories.
 
-You can also describe what you see.`,
-      images: [],
-      flowState: null
-    };
+What would you like to identify?
+
+1 Jawa
+2 Blaster
+3 COO marking
+4 Guide me`,
+      { topic: "general", step: "menu" }
+    );
   }
 
-  if (t === "2" || t.includes("jawa")) {
-    return startFlow("jawa.blaster");
+  return offTopic();
+}
+
+function continueGeneral(message, flowState) {
+  const t = normalise(message);
+  const opt = optionFromMessage(t);
+
+  if (flowState.step === "menu") {
+    if (opt === "1" || t.includes("jawa")) return jawaIntro();
+    if (opt === "2" || hasAny(t, ["blaster", "gun", "weapon"])) return genericBlasterClarify();
+    if (opt === "3" || t.includes("coo")) {
+      return makeReply(
+        `COO means Country of Origin.
+
+For vintage Kenner figures, COO markings help identify the mould family, factory origin and variant.
+
+They are useful, but not enough on their own. You also need to check sculpt, paint, plastic colour and accessory match.
+
+Do you want to check a Jawa COO?
+
+1 Yes
+2 No`,
+        { topic: "general", step: "coo_offer" }
+      );
+    }
+    if (opt === "4" || t.includes("guide")) return jawaIntro();
   }
 
-  if (t === "3" || t.includes("leia")) {
-    return {
-      reply: `Got it — Princess Leia blaster.
-
-I do not have a guided Leia blaster flow yet, but I can still help from the reference files.
-
-Tell me what you want to check:
-
-1 Colour
-2 Mould/detail
-3 Float/repro check
-4 Not sure`,
-      images: [],
-      flowState: null
-    };
+  if (flowState.step === "coo_offer") {
+    if (opt === "1" || t.includes("yes")) return jawaCooQuestion("Ok.");
+    return makeReply("No problem. Ask me about a figure or accessory when you're ready.", null);
   }
 
-  if (t === "4" || t.includes("rebel") || t.includes("han") || t.includes("solo")) {
-    return {
-      reply: `Got it — Rebel / Han Solo blaster.
+  return routeInitial(message);
+}
 
-I do not have a guided flow for that one yet, but I can still help from the reference files.
+function continueGenericBlaster(message, flowState) {
+  const t = normalise(message);
+  const opt = optionFromMessage(t);
 
-Tell me what you want to check:
+  if (flowState.step === "menu") {
+    if (opt === "2" || t.includes("jawa")) return jawaBlasterStart();
 
-1 Colour
-2 Mould/detail
-3 Float/repro check
-4 Not sure`,
-      images: [],
-      flowState: null
-    };
-  }
+    if (opt === "1" || t.includes("imperial") || t.includes("stormtrooper")) {
+      return makeReply(
+        `Imperial / Stormtrooper blaster. I don't have the full guided flow for that one yet, but it's on the demo list.
 
-  if (t === "5" || t.includes("not sure") || t.includes("unsure") || t.includes("something else")) {
-    return {
-      reply: `No problem. Describe the blaster as best you can.
+For now, describe the colour, mould detail and whether it floats.`,
+        null
+      );
+    }
+
+    if (opt === "3" || t.includes("leia")) {
+      return makeReply(
+        `Princess Leia blaster. I don't have the full guided flow for that one yet.
+
+For now, describe the colour, shape and whether it floats.`,
+        null
+      );
+    }
+
+    if (opt === "4" || t.includes("rebel") || t.includes("han")) {
+      return makeReply(
+        `Rebel / Han Solo blaster. I don't have the full guided flow for that one yet.
+
+For now, describe the colour, size and mould detail.`,
+        null
+      );
+    }
+
+    if (opt === "5" || t.includes("guide")) {
+      return makeReply(
+        `No problem. Describe the blaster.
 
 Useful details:
-
-1 Colour
-2 Size
-3 Long or short barrel
-4 Which figure it came with, if known
-
-You can reply naturally, for example: “small black pistol with a short bump”.`,
-      images: [],
-      flowState: null
-    };
-  }
-
-  return {
-    reply: `Please choose one of these:
-
-1 Imperial Blaster / Stormtrooper blaster
-2 Jawa Blaster
-3 Princess Leia Blaster
-4 Rebel Blaster / Han Solo blaster
-5 Not sure / something else
-
-You can reply with a number or describe it in your own words.`,
-    images: [],
-    flowState: { mode: "blaster-clarify" }
-  };
-}
-
-function walkFiles(dir) {
-  const files = [];
-  if (!fs.existsSync(dir)) return files;
-
-  for (const item of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, item.name);
-    if (item.isDirectory()) files.push(...walkFiles(full));
-    else if (/\.(txt|json|md)$/i.test(item.name)) files.push(full);
-  }
-
-  return files;
-}
-
-function rel(filePath) {
-  return path.relative(process.cwd(), filePath).replace(/\\/g, "/");
-}
-
-function sourceFilesFor(entity, intent, accessory) {
-  const files = [];
-
-  if (entity && intent === "figure") files.push(`data/figures/${entity}-reference.txt`);
-
-  if (entity === "jawa" && accessory === "blaster") files.push("data/accessories/jawa-blaster.txt");
-  if (entity === "jawa" && accessory === "cloth-cloak") files.push("data/accessories/jawa-cloak.txt");
-  if (entity === "jawa" && accessory === "vinyl-cape") files.push("data/accessories/jawa-vinyl-cape.txt");
-  if (entity === "jawa" && accessory === "cape") files.push("data/accessories/jawa-vinyl-cape.txt", "data/accessories/jawa-cloak.txt");
-  if (entity === "stormtrooper" && accessory === "blaster") files.push("data/accessories/imperial-blaster.txt");
-  if (entity === "princess-leia-organa" && accessory === "blaster") files.push("data/accessories/leia-blaster.txt");
-  if (entity === "chewbacca" && accessory === "bowcaster") files.push("data/accessories/chewbacca-bowcaster.txt");
-
-  if (accessory === "lightsaber") files.push("data/accessories/lightsaber.txt");
-
-  const existing = files.filter(fileExists);
-  if (existing.length) return existing.slice(0, 5);
-
-  const all = walkFiles(DATA_ROOT);
-  const terms = normalise(`${entity || ""} ${accessory || ""}`).split(" ").filter(Boolean);
-
-  return all
-    .map((file) => {
-      const r = rel(file).toLowerCase();
-      let score = 0;
-      for (const term of terms) if (r.includes(term)) score += 10;
-      if (intent === "figure" && r.includes("/figures/")) score += 4;
-      if (intent === "accessory" && r.includes("/accessories/")) score += 4;
-      return { file, score };
-    })
-    .filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score)
-    .slice(0, 5)
-    .map((x) => rel(x.file));
-}
-
-function sourceBlock(files) {
-  return files
-    .map((file) => `SOURCE FILE: ${file}\n${readRel(file).slice(0, 7000)}`)
-    .join("\n\n---\n\n");
-}
-
-function buildSystemPrompt(files, message, entity, intent, accessory) {
-  return `You are VF-CB, a Vintage Kenner Star Wars identification assistant.
-
-Use the supplied local reference files as the source of truth.
-
-Rules:
-- Ask ONE question at a time.
-- Prefer numbered replies.
-- Keep answers concise.
-- Do not repeat the same line twice.
-- If a guided flow file exists, it should be used instead of inventing a new flow.
-- If the user asks "id jawa" or "jawa figure", assume they mean the Jawa figure.
-- If the user includes accessory words, treat it as an accessory request.
-- If uncertain, ask a useful clarification question.
-- Never claim something is original unless the evidence is strong.
-- For valuable items, recommend confirmation from experienced collector groups.
-
-Detected entity: ${entity || "unknown"}
-Detected intent: ${intent || "unknown"}
-Detected accessory: ${accessory || "none"}
-
-User message:
-${message}
-
-Reference files:
-${sourceBlock(files)}
-
-Return ONLY valid JSON:
-{
-  "reply": "message to user",
-  "images": []
-}`;
-}
-
-async function callClaude(systemPrompt, history, message) {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) throw new Error("Missing ANTHROPIC_API_KEY");
-
-  const messages = [];
-
-  const cleanHistory = Array.isArray(history) ? history.slice(-10) : [];
-  for (const item of cleanHistory) {
-    if (!item || !item.role || !item.content) continue;
-    if (item.role !== "user" && item.role !== "assistant") continue;
-    messages.push({
-      role: item.role,
-      content: String(item.content).slice(0, 1500)
-    });
-  }
-
-  messages.push({ role: "user", content: message });
-
-  const response = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": apiKey,
-      "anthropic-version": "2023-06-01"
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 700,
-      temperature: 0.1,
-      system: systemPrompt,
-      messages
-    })
-  });
-
-  const data = await response.json();
-  if (!response.ok) throw new Error(data?.error?.message || "Anthropic API error");
-
-  return data?.content?.[0]?.text || "";
-}
-
-function parseJson(text) {
-  try {
-    return JSON.parse(text);
-  } catch {
-    const start = text.indexOf("{");
-    const end = text.lastIndexOf("}");
-    if (start >= 0 && end > start) {
-      try {
-        return JSON.parse(text.slice(start, end + 1));
-      } catch {
-        return null;
-      }
+• colour
+• size
+• long or short barrel
+• whether it floats
+• which figure it came with, if known`,
+        null
+      );
     }
-    return null;
   }
+
+  return genericBlasterClarify();
+}
+
+function continueJawa(message, flowState) {
+  const t = normalise(message);
+  const opt = optionFromMessage(t);
+
+  if (flowState.step === "menu") {
+    if (opt === "1" || t.includes("figure")) return jawaCapeQuestion("Let's identify the figure first.");
+    if (opt === "2" || hasAny(t, ["blaster", "gun", "weapon", "pistol", "pew"])) return jawaBlasterStart();
+    if (opt === "3" || hasAny(t, ["cloak", "cape", "hood"])) return jawaCloakStart();
+    if (opt === "4" || t.includes("guide")) return jawaCapeQuestion("No problem. Start with the easiest visible thing.");
+    return jawaIntro();
+  }
+
+  if (flowState.step === "cape") {
+    if (opt === "1" || hasAny(t, ["vinyl", "plastic"])) {
+      return makeReply(
+        `Vinyl cape Jawa. Treat this as potential, not confirmed.
+
+Original vinyl cape Jawas are valuable, so there are many fakes and cut-down Ben Kenobi capes.
+
+Reference:
+https://www.variantvillain.com/accessory-guide/jawa-vinyl-cape/
+
+Let's identify the figure itself next.
+
+Reply with any key to continue.`,
+        { topic: "jawa", step: "vinyl_then_coo" }
+      );
+    }
+
+    if (opt === "2" || hasAny(t, ["cloth", "fabric", "cloak"])) return jawaClothDecision();
+
+    if (opt === "3" || hasAny(t, ["none", "naked", "missing", "no cape", "no cloak"])) {
+      return jawaCooQuestion("Right — naked Jawa. Let's identify the figure itself.");
+    }
+
+    return jawaCapeQuestion("I’m not sure which cape option that matches.");
+  }
+
+  if (flowState.step === "vinyl_then_coo") return jawaCooQuestion("Next step:");
+
+  if (flowState.step === "cloth_decision") {
+    if (opt === "1" || hasAny(t, ["version", "which cloak", "type"])) return jawaCloakStart();
+    if (opt === "2" || hasAny(t, ["original", "real", "authentic", "repro"])) return jawaCloakAuth();
+    if (opt === "3" || hasAny(t, ["figure", "variant", "coo"])) return jawaCooQuestion("Ok. Let's identify the figure first.");
+    if (hasAny(t, ["removable", "separate hood"])) return jawaCloakM5();
+    if (hasAny(t, ["attached", "sewn"])) return jawaCloakAttached();
+    return jawaClothDecision();
+  }
+
+  if (flowState.step === "coo") {
+    if (opt === "1" || hasAny(t, ["hong kong", "hk"])) return jawaHongKongReferences();
+    if (opt === "2" || hasAny(t, ["no coo", "no hong kong", "not hong kong", "just copyright", "gmfgi"])) return jawaNoCooResult();
+    if (opt === "3" || hasAny(t, ["can't tell", "cant tell", "not sure", "unsure"])) return jawaUnclearCoo();
+    return jawaCooQuestion("I’m not sure which COO option that matches.");
+  }
+
+  if (flowState.step === "unclear_coo") {
+    if (opt === "1" || t.includes("yes")) return jawaHongKongReferences();
+    return makeReply("No problem. Check under strong light and ask me again when ready.", null);
+  }
+
+  if (flowState.step === "hk_variant") {
+    if (["1", "2", "3", "4"].includes(opt)) return jawaVariantResult(opt);
+    if (t.includes("m1")) return jawaVariantResult("1");
+    if (t.includes("m2")) return jawaVariantResult("2");
+    if (t.includes("m3")) return jawaVariantResult("3");
+    if (t.includes("m4") || t.includes("lili") || t.includes("unitoy")) return jawaVariantResult("4");
+    return jawaHongKongReferences();
+  }
+
+  if (flowState.step === "offer_blaster") {
+    if (opt === "1" || t.includes("yes")) return jawaBlasterStart();
+    if (opt === "2" || t.includes("no")) return makeReply("No problem. Anything else you want to check?", null);
+    return makeReply("Do you want help checking the Jawa blaster?\n\n1 Yes\n2 No", { topic: "jawa", step: "offer_blaster" });
+  }
+
+  if (flowState.step === "cloak") {
+    if (opt === "1" || hasAny(t, ["removable", "separate"])) return jawaCloakM5();
+    if (opt === "2" || hasAny(t, ["attached", "sewn"])) return jawaCloakAttached();
+    if (opt === "3" || hasAny(t, ["not sure", "unsure"])) {
+      return makeReply(
+        `No problem. Compare the cloak visually first:
+
+https://www.variantvillain.com/accessory-guide/jawa-cloak/
+
+Look at:
+• hood shape
+• material weight
+• stitching colour
+• whether the hood is separate or sewn
+
+Do you want to check the figure variant instead?
+
+1 Yes
+2 No`,
+        { topic: "jawa", step: "cloak_auth_next" }
+      );
+    }
+    return jawaCloakStart();
+  }
+
+  if (flowState.step === "cloak_next") {
+    if (opt === "1" || hasAny(t, ["original", "authentic", "real"])) return jawaCloakAuth();
+    if (opt === "2" || hasAny(t, ["figure", "variant", "coo"])) return jawaCooQuestion("Ok. Let's check the figure itself.");
+    if (opt === "3" || hasAny(t, ["blaster", "weapon", "gun"])) return jawaBlasterStart();
+    return jawaCloakM5();
+  }
+
+  if (flowState.step === "cloak_auth_next") {
+    if (opt === "1" || t.includes("yes")) return jawaCooQuestion("Ok. Let's check the figure itself.");
+    return makeReply("No problem. Anything else you want to check?", null);
+  }
+
+  return routeInitial(message);
+}
+
+function continueJawaBlaster(message, flowState) {
+  const t = normalise(message);
+  const opt = optionFromMessage(t);
+
+  if (flowState.step === "reference") {
+    if (["1", "2", "3"].includes(opt) || hasAny(t, ["yes", "no", "not sure", "unsure"])) return jawaBlasterFloat();
+    return jawaBlasterStart();
+  }
+
+  if (flowState.step === "float") {
+    if (opt === "1" || t.includes("float")) return jawaBlasterColour();
+    if (opt === "2" || t.includes("sink")) {
+      return makeReply(
+        `If it sinks, treat it as a reproduction.
+
+Original vintage Jawa blasters should float, although floating alone does not prove originality.
+
+Full reference:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/
+
+Anything else you want to check?`,
+        null
+      );
+    }
+    return jawaBlasterFloat();
+  }
+
+  if (flowState.step === "colour") {
+    if (opt === "1" || hasAny(t, ["dark blue", "blue", "black blue", "black-blue"])) {
+      return jawaBlasterBump("That is the safest colour range for most original Jawa blasters. Next check: rear bump.");
+    }
+    if (opt === "2" || t.includes("black")) return jawaBlasterBlack();
+    if (opt === "3" || hasAny(t, ["grey", "gray"])) {
+      return makeReply(
+        `Grey needs extra caution.
+
+Grey is a very common reproduction colour for Jawa blasters.
+
+There are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.
+
+Compare:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/
+
+Anything else you want to check?`,
+        null
+      );
+    }
+    if (opt === "4" || t.includes("silver")) {
+      return makeReply(
+        `Silver is unusual.
+
+There is a rare silver Jawa blaster associated with Brazilian Glasslite production, but it is extremely uncommon.
+
+Do not assume it is Glasslite without matching the mould and provenance carefully.
+
+Reference:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/
+
+Anything else you want to check?`,
+        null
+      );
+    }
+    return jawaBlasterBump("No problem. Colour can be hard to judge. Next check: rear bump.");
+  }
+
+  if (flowState.step === "black_light") {
+    if (opt === "1" || hasAny(t, ["blue", "edges blue", "looks blue"])) {
+      return jawaBlasterBump("That may actually be very dark blue / black-blue rather than true black. Next check: rear bump.");
+    }
+
+    if (opt === "2" || hasAny(t, ["stays black", "still black", "no blue"])) {
+      return makeReply(
+        `If it stays black under strong light, compare it especially against the M2 mould.
+
+A legitimate black Jawa blaster is most likely the Brazilian Glasslite version, which belongs to the M2 mould family.
+
+M2 reference:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2
+
+Next check: rear bump.
+
+1 Long
+2 Short
+3 None
+4 Not sure`,
+        { topic: "jawa_blaster", step: "bump" }
+      );
+    }
+
+    return jawaBlasterBump("No problem. If the light test is unclear, use the rear bump next.");
+  }
+
+  if (flowState.step === "bump") {
+    if (opt === "1" || t.includes("long")) return jawaBlasterResult("1");
+    if (opt === "2" || hasAny(t, ["short", "medium"])) return jawaBlasterResult("2");
+    if (opt === "3" || hasAny(t, ["none", "no bump", "missing bump"])) return jawaBlasterResult("3");
+    return jawaBlasterResult("4");
+  }
+
+  return jawaBlasterStart();
+}
+
+function continueFlow(message, flowState) {
+  if (!flowState || !flowState.topic) return routeInitial(message);
+
+  if (flowState.topic === "jawa") return continueJawa(message, flowState);
+  if (flowState.topic === "jawa_blaster") return continueJawaBlaster(message, flowState);
+  if (flowState.topic === "blaster") return continueGenericBlaster(message, flowState);
+  if (flowState.topic === "general") return continueGeneral(message, flowState);
+
+  return routeInitial(message);
 }
 
 module.exports = async function handler(req, res) {
@@ -1297,7 +830,6 @@ module.exports = async function handler(req, res) {
 
   try {
     const message = String(req.body?.message || "").trim();
-    const history = Array.isArray(req.body?.history) ? req.body.history : [];
     const flowState = req.body?.flowState || null;
 
     if (!message) {
@@ -1305,106 +837,29 @@ module.exports = async function handler(req, res) {
       return;
     }
 
-    if (flowState?.mode === "jawa-clarify") {
-      res.status(200).json(handleVagueJawaClarification(message));
-      return;
-    }
-
-    if (flowState?.mode === "jawa-cape-clarify") {
-      res.status(200).json(handleJawaCapeClarification(message));
-      return;
-    }
-
-    if (flowState?.mode === "blaster-clarify") {
-      res.status(200).json(handleGenericBlasterClarification(message));
-      return;
-    }
-
-    if (flowState?.flowId && flowState?.stepId) {
-      const flowResponse = continueFlow(flowState, message);
-      if (flowResponse) {
-        res.status(200).json(flowResponse);
-        return;
-      }
-    }
-
-    const entity = detectEntity(message);
-    const accessory = detectAccessory(message);
-    const intent = detectIntent(message);
-
-    if (isVagueJawaRequest(message)) {
-      res.status(200).json(vagueJawaClarificationResponse(history));
-      return;
-    }
-
-    if (!entity && accessory === "blaster") {
-      res.status(200).json(genericBlasterClarificationResponse());
-      return;
-    }
-
-    const flowId = flowIdFor(entity, intent, accessory);
-
-    if (flowId && fs.existsSync(flowFilePath(flowId))) {
-      const flowResponse = startFlow(flowId);
-      if (flowResponse) {
-        res.status(200).json(flowResponse);
-        return;
-      }
-    }
-
-    if (!entity && !accessory && isClearlyOffTopic(message)) {
-      res.status(200).json(offTopicResponse());
-      return;
-    }
-
-    if (!entity && !accessory && isRecentJawaBlasterContext(history)) {
-      res.status(200).json(jawaBlasterFollowUp(message));
-      return;
-    }
-
-    if (!entity && !accessory && !isProbablyVintageStarWarsRelated(message)) {
-      res.status(200).json(offTopicResponse());
-      return;
-    }
-
-    const files = sourceFilesFor(entity, intent, accessory);
-
-    if (!files.length) {
-      res.status(200).json({
-        reply: `I’m not sure what you want to identify yet.
-
-Tell me the figure or accessory, for example:
-
-• Jawa figure
-• Jawa blaster
-• Luke lightsaber
-• Stormtrooper blaster`,
-        images: [],
-        flowState: null
-      });
-      return;
-    }
-
-    const prompt = buildSystemPrompt(files, message, entity, intent, accessory);
-    const text = await callClaude(prompt, history, message);
-    const parsed = parseJson(text);
-
-    if (!parsed || !parsed.reply) {
-      res.status(200).json({
-        reply: text || "I found the relevant file, but could not format a clean answer.",
-        images: [],
-        flowState: null
-      });
-      return;
-    }
+    const result = continueFlow(message, flowState);
 
     res.status(200).json({
-      reply: parsed.reply,
-      images: Array.isArray(parsed.images) ? parsed.images : [],
-      flowState: null
+      reply: result.reply,
+      images: result.images || [],
+      flowState: result.flowState || null
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: err.message || "Server error" });
+    const fallback = makeReply(
+      `Sorry, something went wrong inside my collector circuits.
+
+Try again with a simple phrase like:
+• Jawa
+• Jawa blaster
+• Jawa cloak`,
+      null
+    );
+
+    res.status(200).json({
+      reply: fallback.reply,
+      images: [],
+      flowState: null
+    });
   }
 };
