@@ -4,9 +4,9 @@ Category:
 Primary Weapon – Small Blaster
 
 Used With:
-- Jawa (standard Kenner release)
+- Jawa (standard Kenner release - dark blue)
 - Princess Leia Organa (Glasslite variant – silver version)
-- Glasslite figures (regional variants)
+- Han Solo (Glasslite variant – black version)
 
 --------------------------------------------------
 
@@ -17,7 +17,7 @@ The Jawa Blaster is a small, compact blaster pistol included with the Jawa figur
 There are three main mould types:
 
 - M1 (Unitoy)
-- M2 (Kader / China / Glasslite)
+- M2 (Kader / Kader China / Glasslite)
 - M3 (Kader)
 
 --------------------------------------------------
@@ -30,11 +30,12 @@ Key Traits:
 - Long “bump” on the rear section
 - Visible gate scar near handle
 - Slightly rougher finish due to mould wear
+- has a distinctive bump at the bottom of the handle 
 
 Colours:
-- Black (semi-translucent blue tint)
-- Dark blue
-- Greyish-black tones
+- black-blue (semi translucent blueish)
+- black-blue (semi translucent greenish)
+- black-blue (semi translucent greyish)
 
 Notes:
 - Early production mould
@@ -48,13 +49,15 @@ Key Traits:
 - Shorter rear bump than M1
 - Cleaner, sharper mould detail
 - More consistent finish
+- Scar to the top right of the bump
 
 Colours:
-- Dark blue
-- Blue (semi-translucent)
-- Black
-- Grey
-- Clear / translucent (Glasslite variants)
+- black-blue (semi translucent greyish)
+- dark-blue (translucent blueish)
+- dark-blue (translucent greenish)
+- silver (GLASSLITE)
+- black (GLASSLITE)
+
 
 Notes:
 - Most commonly found mould
@@ -71,8 +74,9 @@ Key Traits:
 - Cleaner silhouette
 
 Colours:
-- Dark blue
-- Blue
+- dark-blue (semi-translucent greyish)
+- dark-blue (translucent blueish)
+- dark-blue (translucent greenish)
 
 Notes:
 - Later production mould
@@ -103,17 +107,17 @@ GLASSLITE VARIANTS
 
 Glasslite Jawa blasters differ from Kenner versions:
 
-- Can appear in clear or very light plastic
+- Can appear in silver or black
 - Often paired with Glasslite figures
-- Same mould family as M2 but visually distinct
+- Same mould family as M2 but visually distinct colours
 
 --------------------------------------------------
 
 MATCHING TO FIGURES
 
-- Standard Kenner Jawa → usually M2 variants
+- Standard Kenner Jawa → can be M1, M2, or M3 depending on figure variants
 - Glasslite Leia → silver Jawa blaster
-- Glasslite Jawa → clear / lighter variants
+- Glasslite Han Solo → black Jawa blaster
 
 --------------------------------------------------
 
@@ -132,7 +136,8 @@ This is a “small accessory” but high importance piece:
 
 - Correct mould + colour pairing increases value
 - Glasslite versions are especially collectible
-- Often overlooked compared to larger weapons
+- All originals float in water (but this is not a guarantee its original) 
+- All originals have the gate scar under the handle 
 
 --------------------------------------------------
 
@@ -145,8 +150,9 @@ Watch for:
 - Too-clean mould lines
 - Wrong colour tone
 - Lack of correct bump definition
+- Sinks when placed in water
 
 --------------------------------------------------
 
 SOURCES:
-https://www.variantvillain.com/
+https://www.variantvillain.com/accessory-guide/jawa-blaster/

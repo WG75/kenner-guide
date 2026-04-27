@@ -1,13 +1,13 @@
 {
   "id": "jawa.blaster",
+  "type": "accessory",
   "entity": "jawa",
-  "intent": "accessory",
-  "accessory": "blaster",
-  "start": "jawa-blaster-image",
+  "name": "Jawa Blaster Identification",
+  "start_step": "reference_check",
   "steps": {
-    "jawa-blaster-image": {
+    "reference_check": {
       "type": "question",
-      "prompt": "Ok \u2014 compare your blaster with this reference.\n\nCheck:\n\u2022 mould shape\n\u2022 rear bump length\n\u2022 plastic colour\n\u2022 detail sharpness\n\nCan you identify it against the reference image?",
+      "content": "Ok — compare your blaster with this reference.\n\nCheck:\n• mould shape\n• rear bump length\n• plastic colour\n• detail sharpness\n\nCan you identify it against the reference image?\n\nReply with:\n\n1 Yes\n2 No\n3 Not sure",
       "images": [
         {
           "title": "Jawa Blaster Reference",
@@ -20,32 +20,47 @@
           "value": "1",
           "label": "Yes",
           "aliases": [
-            "yes"
+            "yes",
+            "yeah",
+            "yep",
+            "i can",
+            "matched",
+            "looks like it"
           ],
-          "next": "jawa-blaster-float"
+          "next": "float_test"
         },
         {
           "value": "2",
           "label": "No",
           "aliases": [
-            "no"
+            "no",
+            "nope",
+            "cannot",
+            "can't",
+            "cant",
+            "does not match",
+            "doesn't match"
           ],
-          "next": "jawa-blaster-float"
+          "next": "float_test"
         },
         {
           "value": "3",
           "label": "Not sure",
           "aliases": [
             "not sure",
-            "unsure"
+            "unsure",
+            "don't know",
+            "dont know",
+            "can't tell",
+            "cant tell"
           ],
-          "next": "jawa-blaster-float"
+          "next": "float_test"
         }
       ]
     },
-    "jawa-blaster-float": {
+    "float_test": {
       "type": "question",
-      "prompt": "Next check: float test.\n\n\u2022 If it sinks, treat it as a reproduction\n\u2022 If it floats, it may be original\n\nImportant:\nModern reproductions can float, so this is not proof.\n\nDoes yours sink or float?",
+      "content": "Next check: float test.\n\n• If it sinks, treat it as a reproduction\n• If it floats, it may be original\n\nImportant:\nModern reproductions can float, so this is not proof.\n\nDoes yours sink or float?\n\nReply with:\n\n1 Float\n2 Sink",
       "options": [
         {
           "value": "1",
@@ -53,9 +68,12 @@
           "aliases": [
             "float",
             "floats",
-            "floating"
+            "floating",
+            "it floats",
+            "resurfaces",
+            "it resurfaces"
           ],
-          "next": "jawa-blaster-colour"
+          "next": "colour_check"
         },
         {
           "value": "2",
@@ -63,33 +81,44 @@
           "aliases": [
             "sink",
             "sinks",
-            "sank"
+            "sank",
+            "it sinks",
+            "it sank"
           ],
-          "reply": "If it sinks, treat it as a reproduction."
+          "next": "sink_result"
         }
       ]
     },
-    "jawa-blaster-colour": {
+    "sink_result": {
+      "type": "message",
+      "content": "If it sinks, treat it as a reproduction.\n\nOriginal vintage Jawa blasters should float, although floating alone does not prove originality."
+    },
+    "colour_check": {
       "type": "question",
-      "prompt": "Good. Since it floats, next check the colour.\n\nMost original Jawa blasters are dark blue or black-blue tones.\n\nWhat colour does yours look like?",
+      "content": "Good. Since it floats, next check the colour.\n\nMost original Jawa blasters are dark blue or black-blue tones.\n\nWhat colour does yours look like?\n\nReply with:\n\n1 Dark blue / black-blue\n2 Black\n3 Grey\n4 Silver\n5 Not sure",
       "options": [
         {
           "value": "1",
           "label": "Dark blue / black-blue",
           "aliases": [
             "dark blue",
+            "dark-blue",
             "black blue",
-            "blue"
+            "black-blue",
+            "blue",
+            "very dark blue"
           ],
-          "reply": "That is the safest colour range for most original Jawa blasters.\n\nKnown original colours include:\n\u2022 black-blue, semi-translucent blueish\n\u2022 black-blue, semi-translucent greenish\n\u2022 black-blue, semi-translucent greyish\n\u2022 dark-blue, translucent blueish\n\u2022 dark-blue, translucent greenish\n\u2022 dark-blue, semi-translucent greyish\n\nStill compare the exact mould shape, rear bump and detail sharpness against Variant Villain:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+          "next": "dark_blue_result"
         },
         {
           "value": "2",
           "label": "Black",
           "aliases": [
-            "black"
+            "black",
+            "very black",
+            "looks black"
           ],
-          "reply": "Black needs caution.\n\nIt could be:\n\u2022 a reproduction\n\u2022 a modern accessory\n\u2022 a very dark blue original being mistaken for black\n\u2022 or, much less commonly, a Brazilian Glasslite black blaster\n\nDo not call it original based on colour alone. Compare the mould exactly against the known examples:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+          "next": "black_light_check"
         },
         {
           "value": "3",
@@ -98,26 +127,105 @@
             "grey",
             "gray"
           ],
-          "reply": "Grey pieces need extra caution.\n\nGrey is a very common reproduction colour for Jawa blasters.\n\nThere are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.\n\nBest next step: compare it closely with the full Variant Villain guide:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+          "next": "grey_result"
         },
         {
           "value": "4",
           "label": "Silver",
           "aliases": [
-            "silver"
+            "silver",
+            "metallic",
+            "chrome"
           ],
-          "reply": "Silver is unusual.\n\nThere is a rare silver Jawa blaster associated with the Brazilian Glasslite figure, but it is extremely uncommon.\n\nDo not assume it is Glasslite without matching the mould and provenance carefully.\n\nUse the full reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+          "next": "silver_result"
         },
         {
           "value": "5",
           "label": "Not sure",
           "aliases": [
             "not sure",
-            "unsure"
+            "unsure",
+            "don't know",
+            "dont know",
+            "can't tell",
+            "cant tell"
           ],
-          "reply": "If you are not sure on colour, compare it in natural light against the known Variant Villain examples.\n\nKnown original colour families include dark-blue / black-blue tones, plus rare Glasslite black and silver versions.\n\nFull reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+          "next": "not_sure_colour_result"
         }
       ]
+    },
+    "dark_blue_result": {
+      "type": "message",
+      "content": "That is the safest colour range for most original Jawa blasters.\n\nKnown original colours include dark-blue and black-blue tones, with some semi-translucent blueish, greenish or greyish variation.\n\nStill compare the exact mould shape, rear bump and detail sharpness against Variant Villain:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/\n\nIf you want to narrow the mould next, tell me whether the rear bump is long, short or missing."
+    },
+    "black_light_check": {
+      "type": "question",
+      "content": "Black needs caution.\n\nIt could be:\n• a reproduction\n• a modern accessory\n• a very dark blue original being mistaken for black\n• or, less commonly, a Brazilian Glasslite black blaster\n\nThe legitimate black Glasslite version uses the M2 mould family, so compare it especially against the M2 version:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/#m2\n\nNext check: place the blaster against a strong light.\n\nDo the edges look blue when backlit?\n\nReply with:\n\n1 Yes, the edges look blue\n2 No, it stays black\n3 Not sure",
+      "options": [
+        {
+          "value": "1",
+          "label": "Yes, the edges look blue",
+          "aliases": [
+            "yes",
+            "edges look blue",
+            "blue edges",
+            "looks blue",
+            "blue when backlit",
+            "backlit blue"
+          ],
+          "next": "black_edges_blue_result"
+        },
+        {
+          "value": "2",
+          "label": "No, it stays black",
+          "aliases": [
+            "no",
+            "stays black",
+            "still black",
+            "no blue",
+            "doesn't look blue",
+            "doesnt look blue"
+          ],
+          "next": "black_edges_not_blue_result"
+        },
+        {
+          "value": "3",
+          "label": "Not sure",
+          "aliases": [
+            "not sure",
+            "unsure",
+            "don't know",
+            "dont know",
+            "can't tell",
+            "cant tell"
+          ],
+          "next": "black_edges_unsure_result"
+        }
+      ]
+    },
+    "black_edges_blue_result": {
+      "type": "message",
+      "content": "That suggests it may actually be a very dark blue or black-blue blaster rather than a true black one.\n\nThat is more in line with common original Jawa blaster colours, but you still need to confirm the mould.\n\nNext compare the rear bump:\n• long bump = M1\n• short bump = M2\n• no bump = M3\n\nUse the full guide here:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/\n\nIf you want, tell me whether the rear bump is long, short or missing and I’ll help narrow it down."
+    },
+    "black_edges_not_blue_result": {
+      "type": "message",
+      "content": "If it stays black under strong light, be cautious.\n\nA legitimate black Jawa blaster is most likely the Brazilian Glasslite version, which belongs to the M2 mould family.\n\nSo the key question is whether it matches M2 traits:\n• short rear bump\n• clean, sharper mould detail\n• scar to the top right of the bump\n\nIf it does not match M2, treat it as suspicious rather than original.\n\nCompare carefully here:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/#m2"
+    },
+    "black_edges_unsure_result": {
+      "type": "message",
+      "content": "No problem. Black and very dark blue can be hard to judge.\n\nBest next step:\n• check it in daylight\n• place it against a strong light\n• look for blue on the edges\n• then compare the mould against M2 if it still appears black\n\nM2 reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/#m2\n\nIf you want, tell me the rear bump shape: long, short or none."
+    },
+    "grey_result": {
+      "type": "message",
+      "content": "Grey pieces need extra caution.\n\nGrey is a very common reproduction colour for Jawa blasters.\n\nThere are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.\n\nBest next step: compare it closely with the full Variant Villain guide:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+    },
+    "silver_result": {
+      "type": "message",
+      "content": "Silver is unusual.\n\nThere is a rare silver Jawa blaster associated with Brazilian Glasslite production, but it is extremely uncommon.\n\nDo not assume it is Glasslite without matching the mould and provenance carefully.\n\nUse the full reference here:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
+    },
+    "not_sure_colour_result": {
+      "type": "message",
+      "content": "If you are not sure on colour, compare it in daylight and against a strong light.\n\nMost originals fall into dark blue / black-blue tones, plus rare Glasslite black and silver versions.\n\nFull reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
     }
   }
 }
