@@ -106,6 +106,36 @@ function isProbablyVintageStarWarsRelated(message) {
   return hasAny(t, STAR_WARS_GENERAL_TERMS);
 }
 
+function isClearlyOffTopic(message) {
+  const t = normalise(message);
+
+  const offTopicTerms = [
+    "weather",
+    "nice day",
+    "sunny",
+    "rain",
+    "world cup",
+    "football",
+    "soccer",
+    "cricket",
+    "rugby",
+    "politics",
+    "election",
+    "prime minister",
+    "president",
+    "stock market",
+    "bitcoin",
+    "crypto",
+    "recipe",
+    "cook",
+    "cooking",
+    "movie",
+    "tv show"
+  ];
+
+  return hasAny(t, offTopicTerms) && !isProbablyVintageStarWarsRelated(message);
+}
+
 function offTopicResponse() {
   const variants = [
     `Sorry, I’m not familiar with that subject.
@@ -384,14 +414,27 @@ function recentAssistantText(history, count = 6) {
 }
 
 function isRecentJawaBlasterContext(history) {
-  const text = recentAssistantText(history, 8);
+  const items = Array.isArray(history) ? history : [];
+  const recent = items
+    .filter((item) => item?.role === "assistant")
+    .slice(-6)
+    .map((item) => String(item.content || "").toLowerCase());
+
+  const joined = recent.join("\n");
+
+  // Do not let generic fallback examples like "Jawa blaster" trigger follow-up mode.
+  if (joined.includes("tell me the figure or accessory")) return false;
+  if (joined.includes("i’m not sure what you want to identify yet")) return false;
+  if (joined.includes("i'm not sure what you want to identify yet")) return false;
+
   return (
-    text.includes("jawa blaster") ||
-    text.includes("jawa-blaster") ||
-    text.includes("rear bump") ||
-    text.includes("mould shape") ||
-    text.includes("mold shape") ||
-    text.includes("variantvillain.com/accessory-guide/jawa-blaster")
+    joined.includes("variantvillain.com/accessory-guide/jawa-blaster") ||
+    joined.includes("which does it look closest to?") ||
+    joined.includes("rear bump = likely") ||
+    joined.includes("m2 mould") ||
+    joined.includes("m1 unitoy mould") ||
+    joined.includes("m3 kader mould") ||
+    joined.includes("jawa blaster reference")
   );
 }
 
@@ -799,6 +842,11 @@ module.exports = async function handler(req, res) {
         res.status(200).json(flowResponse);
         return;
       }
+    }
+
+    if (!entity && !accessory && isClearlyOffTopic(message)) {
+      res.status(200).json(offTopicResponse());
+      return;
     }
 
     if (!entity && !accessory && isRecentJawaBlasterContext(history)) {
