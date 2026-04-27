@@ -238,6 +238,7 @@ function optionMatch(input, step) {
   const t = normalise(input);
   const options = normaliseOptions(step);
 
+  // Direct matches first.
   for (const option of options) {
     if (String(option.value).toLowerCase() === t) return option;
 
@@ -249,6 +250,112 @@ function optionMatch(input, step) {
         if (a && (t === a || t.includes(a))) return option;
       }
     }
+  }
+
+  // Natural language fallbacks for common collector replies.
+  // Yes / no.
+  if (t === "yes" || t === "y" || t.includes("yes") || t.includes("yeah") || t.includes("yep")) {
+    return options.find((o) => String(o.value) === "1") || null;
+  }
+
+  if (t === "no" || t === "n" || t.includes("nope")) {
+    return options.find((o) => String(o.value) === "2") || null;
+  }
+
+  // Float test.
+  if (t.includes("float") || t.includes("floats") || t.includes("floating") || t.includes("resurface")) {
+    return options.find((o) => String(o.value) === "1") || null;
+  }
+
+  if (t.includes("sink") || t.includes("sinks") || t.includes("sank")) {
+    return options.find((o) => String(o.value) === "2") || null;
+  }
+
+  // Jawa cape / cloak natural answers.
+  if (
+    t.includes("vinyl") ||
+    t.includes("smooth plastic") ||
+    t.includes("plastic cape")
+  ) {
+    return options.find((o) => String(o.value) === "1") || null;
+  }
+
+  if (
+    t.includes("cloth") ||
+    t.includes("fabric") ||
+    t.includes("hooded cloak")
+  ) {
+    return options.find((o) => String(o.value) === "2") || null;
+  }
+
+  if (
+    t.includes("neither") ||
+    t.includes("none") ||
+    t.includes("no cape") ||
+    t.includes("missing cape") ||
+    t.includes("missing cloak") ||
+    t.includes("naked") ||
+    t.includes("no cloak") ||
+    t.includes("doesnt have one") ||
+    t.includes("doesn't have one") ||
+    t.includes("does not have one") ||
+    t.includes("without cape") ||
+    t.includes("without a cape") ||
+    t.includes("without cloak") ||
+    t.includes("without a cloak")
+  ) {
+    return options.find((o) => String(o.value) === "3") || null;
+  }
+
+  // Rear bump / mould identification.
+  if (t.includes("long")) {
+    return options.find((o) => String(o.value) === "1") || null;
+  }
+
+  if (t.includes("short") || t.includes("medium") || t.includes("middle")) {
+    return options.find((o) => String(o.value) === "2") || null;
+  }
+
+  if (
+    t.includes("no bump") ||
+    t.includes("none") ||
+    t.includes("missing bump") ||
+    t.includes("without bump") ||
+    t.includes("no rear bump")
+  ) {
+    return options.find((o) => String(o.value) === "3") || null;
+  }
+
+  if (
+    t.includes("hard to tell") ||
+    t.includes("hard to say") ||
+    t.includes("not sure") ||
+    t.includes("unsure") ||
+    t.includes("dont know") ||
+    t.includes("don't know") ||
+    t.includes("can't tell") ||
+    t.includes("cant tell")
+  ) {
+    return options.find((o) => String(o.value) === "4") ||
+      options.find((o) => String(o.value) === "3") ||
+      null;
+  }
+
+  // Colour replies.
+  if (t.includes("dark blue") || t.includes("black blue") || t.includes("black-blue") || t === "blue") {
+    return options.find((o) => String(o.value) === "1") || null;
+  }
+
+  if (t.includes("black")) {
+    return options.find((o) => String(o.value) === "2") || null;
+  }
+
+  if (t.includes("grey") || t.includes("gray")) {
+    return options.find((o) => String(o.value) === "3") || null;
+  }
+
+  if (t.includes("silver")) {
+    return options.find((o) => String(o.value) === "4") || null;
   }
 
   return null;
