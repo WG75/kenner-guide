@@ -210,8 +210,6 @@ function questionReply(step) {
   let reply = stepText(step);
   const options = normaliseOptions(step);
 
-  // If the flow writer has already written the reply instructions,
-  // do not add another auto-generated Reply with block.
   if (/reply with/i.test(reply)) {
     return reply.trim();
   }
@@ -329,6 +327,187 @@ function continueFlow(flowState, message) {
   }
 
   return runFlowUntilQuestion(flowState.flowId, target, "", selected.images || []);
+}
+
+function recentAssistantText(history, count = 6) {
+  const items = Array.isArray(history) ? history : [];
+  return items
+    .filter((item) => item?.role === "assistant")
+    .slice(-count)
+    .map((item) => String(item.content || ""))
+    .join("\n")
+    .toLowerCase();
+}
+
+function isRecentJawaBlasterContext(history) {
+  const text = recentAssistantText(history, 8);
+  return (
+    text.includes("jawa blaster") ||
+    text.includes("jawa-blaster") ||
+    text.includes("rear bump") ||
+    text.includes("mould shape") ||
+    text.includes("mold shape") ||
+    text.includes("variantvillain.com/accessory-guide/jawa-blaster")
+  );
+}
+
+function jawaBlasterFollowUp(message) {
+  const t = normalise(message);
+
+  if (t.includes("short")) {
+    return makeResponse(
+      `If the rear bump looks short, compare it against the M2 mould first.
+
+M2 traits:
+• shorter rear bump than M1
+• cleaner, sharper mould detail
+• scar to the top right of the bump
+
+This is also the mould family used for the black Brazilian Glasslite version.
+
+Compare the M2 examples here:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2
+
+If you are still unsure, the next useful check is whether the detail looks clean and sharp, or rougher/worn.`,
+      [],
+      null,
+      null,
+      true
+    );
+  }
+
+  if (t.includes("long")) {
+    return makeResponse(
+      `If the rear bump looks long, compare it against the M1 Unitoy mould.
+
+M1 traits:
+• long rear bump
+• visible gate scar near the handle
+• slightly rougher finish
+• distinctive bump at the bottom of the handle
+
+Use the Jawa blaster guide here:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
+      [],
+      null,
+      null,
+      true
+    );
+  }
+
+  if (
+    t.includes("no bump") ||
+    t.includes("none") ||
+    t.includes("missing bump") ||
+    t.includes("without bump") ||
+    t.includes("no rear bump")
+  ) {
+    return makeResponse(
+      `If there is no rear bump, compare it against the M3 Kader mould.
+
+M3 traits:
+• no rear bump
+• simplified shape compared with M1 and M2
+• cleaner silhouette
+
+Use the Jawa blaster guide here:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
+      [],
+      null,
+      null,
+      true
+    );
+  }
+
+  if (t.includes("rough") || t.includes("worn")) {
+    return makeResponse(
+      `A rougher or more worn finish can point more towards M1, but do not use texture alone.
+
+Next compare the rear bump:
+• long bump = M1
+• short bump = M2
+• no bump = M3
+
+Jawa blaster guide:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
+      [],
+      null,
+      null,
+      true
+    );
+  }
+
+  if (t.includes("clean") || t.includes("sharp")) {
+    return makeResponse(
+      `Cleaner, sharper mould detail can point more towards M2 or M3.
+
+Next check the rear bump:
+• short bump = M2
+• no bump = M3
+
+M2 reference:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2`,
+      [],
+      null,
+      null,
+      true
+    );
+  }
+
+  if (t.includes("black")) {
+    return makeResponse(
+      `Black needs caution.
+
+It could be:
+• a reproduction
+• a modern accessory
+• a very dark blue original being mistaken for black
+• or, less commonly, a Brazilian Glasslite black blaster
+
+Place it against a strong light. If the edges look blue, it may actually be very dark blue / black-blue.
+
+If it stays black, compare it especially against the M2 mould:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2`,
+      [],
+      null,
+      null,
+      true
+    );
+  }
+
+  if (t.includes("grey") || t.includes("gray")) {
+    return makeResponse(
+      `Grey needs extra caution.
+
+Grey is a very common reproduction colour for Jawa blasters.
+
+There are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.
+
+Compare carefully here:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
+      [],
+      null,
+      null,
+      true
+    );
+  }
+
+  return makeResponse(
+    `No problem. To narrow a Jawa blaster, the next best check is the rear bump.
+
+Which does it look closest to?
+
+1 Long rear bump = likely M1
+2 Short rear bump = likely M2
+3 No rear bump = likely M3
+
+You can also compare here:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
+    [],
+    null,
+    null,
+    true
+  );
 }
 
 function walkFiles(dir) {
@@ -516,6 +695,11 @@ module.exports = async function handler(req, res) {
         res.status(200).json(flowResponse);
         return;
       }
+    }
+
+    if (!entity && !accessory && isRecentJawaBlasterContext(history)) {
+      res.status(200).json(jawaBlasterFollowUp(message));
+      return;
     }
 
     const files = sourceFilesFor(entity, intent, accessory);
