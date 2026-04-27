@@ -272,6 +272,14 @@ What would you like to do next?
 }
 
 function jawaCloakAuth() {
+  const images = [
+    {
+      title: "Jawa Cloth Cloak Comparison",
+      url: "/public/images/jawa-cloth-cloak-comparison.png",
+      caption: "Compare fabric texture, hood shape, cut, stitching and signs of ageing."
+    }
+  ];
+
   return makeReply(
     `To check whether the cloak looks original, compare:
 
@@ -280,6 +288,8 @@ function jawaCloakAuth() {
 • cut and hood shape
 • signs of natural ageing
 • whether the hood looks cut, repaired or replaced
+
+Use the reference image above as a starting point.
 
 For expensive examples, don't rely on this app alone. Get confirmation from experienced collector groups as well.
 
@@ -290,7 +300,8 @@ Do you want to check the figure variant next?
 
 1 Yes
 2 No`,
-    { topic: "jawa", step: "cloak_auth_next" }
+    { topic: "jawa", step: "cloak_auth_next" },
+    images
   );
 }
 
