@@ -5,26 +5,26 @@
   "steps": {
 
     "entry": {
-      "content": "Jawas… filthy traders. Do you need help identifying one of these?\n\n1 Figure\n2 Blaster\n3 Cloak\n4 Guide me\n\nYou can reply with a number or describe it.",
+      "content": "Jawas… filthy traders. Do you need help identifying one of these?\n\n1 Figure\n2 Blaster\n3 Cloak\n4 Guide me\n\nReply with a number.",
       "options": [
-        { "match": ["1", "figure"], "next": "figure_cape" },
-        { "match": ["2", "blaster"], "next": "blaster_start" },
-        { "match": ["3", "cloak", "cape"], "next": "cloak_start" },
-        { "match": ["4", "guide", "all"], "next": "figure_cape" }
+        { "match": ["1"], "next": "figure_cape" },
+        { "match": ["2"], "next": "blaster_start" },
+        { "match": ["3"], "next": "cloak_start" },
+        { "match": ["4"], "next": "figure_cape" }
       ]
     },
 
     "figure_cape": {
-      "content": "Start with the easiest visible detail.\n\nWhat does your Jawa have?\n\n1 Vinyl cape (smooth plastic)\n2 Cloth cloak (fabric)\n3 No cape or cloak\n\nReply with a number or describe it.",
+      "content": "What does your Jawa have?\n\n1 Vinyl cape\n2 Cloth cloak\n3 No cape\n\nReply with 1, 2 or 3.",
       "options": [
-        { "match": ["1", "vinyl"], "next": "vinyl_path" },
-        { "match": ["2", "cloth"], "next": "cloth_choice" },
-        { "match": ["3", "none", "naked"], "next": "coo_check" }
+        { "match": ["1"], "next": "vinyl_path" },
+        { "match": ["2"], "next": "cloth_choice" },
+        { "match": ["3"], "next": "coo_check" }
       ]
     },
 
     "cloth_choice": {
-      "content": "A cloth cloaked Jawa. Got it.\n\nWould you like to check:\n\n1 Which cloak version you have\n2 Whether the cloak looks original\n3 Identify the Jawa figure first\n\nReply with a number or just type your question.",
+      "content": "Cloth cloaked Jawa. Got it.\n\nWhat do you want to check?\n\n1 Cloak version\n2 Cloak originality\n3 Identify figure\n\nReply with 1, 2 or 3.",
       "options": [
         { "match": ["1"], "next": "cloak_start" },
         { "match": ["2"], "next": "cloak_auth" },
@@ -33,7 +33,7 @@
     },
 
     "vinyl_path": {
-      "content": "Vinyl cape Jawa.\n\nNext step: check the Country of Origin on the legs.\n\n1 Hong Kong\n2 Not Hong Kong\n3 Can't tell",
+      "content": "Check COO on legs.\n\n1 Hong Kong\n2 Not Hong Kong\n3 Can't tell",
       "options": [
         { "match": ["1"], "next": "hk_variants" },
         { "match": ["2"], "next": "non_hk" },
@@ -42,7 +42,7 @@
     },
 
     "coo_check": {
-      "content": "Next step: check the Country of Origin markings on the legs.\n\n1 Hong Kong\n2 Not Hong Kong\n3 Can't tell",
+      "content": "Check COO markings.\n\n1 Hong Kong\n2 Not Hong Kong\n3 Can't tell",
       "options": [
         { "match": ["1"], "next": "hk_variants" },
         { "match": ["2"], "next": "non_hk" },
@@ -51,7 +51,7 @@
     },
 
     "hk_variants": {
-      "content": "Match your figure:\n\n1 Kader M1\n2 Kader M2\n3 Unitoy M3\n4 Unitoy / Lili Ledy M4\n\nFull guide:\nhttps://www.variantvillain.com/characters/jawa/",
+      "content": "Match your figure:\n\n1 Kader M1\n2 Kader M2\n3 Unitoy M3\n4 Unitoy M4",
       "options": [
         { "match": ["1"], "next": "offer_blaster" },
         { "match": ["2"], "next": "offer_blaster" },
@@ -61,7 +61,7 @@
     },
 
     "offer_blaster": {
-      "content": "Do you want help checking the Jawa blaster?\n\n1 Yes\n2 No",
+      "content": "Check blaster too?\n\n1 Yes\n2 No",
       "options": [
         { "match": ["1"], "next": "blaster_start" },
         { "match": ["2"], "next": "end" }
@@ -69,107 +69,45 @@
     },
 
     "blaster_start": {
-      "content": "Jawa blaster — good.\n\nFirst check:\nCompare it to reference images:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/\n\nCan you match it?\n\n1 Yes\n2 No\n3 Not sure",
+      "content": "Start blaster check.\n\nSee reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/\n\n1 Continue",
       "options": [
-        { "match": ["1"], "next": "float_test" },
-        { "match": ["2"], "next": "float_test" },
-        { "match": ["3"], "next": "float_test" }
+        { "match": ["1"], "next": "end" }
       ]
-    },
-
-    "float_test": {
-      "content": "Next check: float test.\n\n1 Float\n2 Sink",
-      "options": [
-        { "match": ["1", "float"], "next": "colour_check" },
-        { "match": ["2", "sink"], "next": "repro_result" }
-      ]
-    },
-
-    "colour_check": {
-      "content": "What colour does it look like?\n\n1 Dark blue / black-blue\n2 Black\n3 Grey\n4 Silver\n5 Not sure",
-      "options": [
-        { "match": ["1", "blue"], "next": "bump_check" },
-        { "match": ["2", "black"], "next": "black_warning" },
-        { "match": ["3", "grey"], "next": "repro_result" },
-        { "match": ["4", "silver"], "next": "repro_result" },
-        { "match": ["5"], "next": "bump_check" }
-      ]
-    },
-
-    "black_warning": {
-      "content": "Black needs caution.\n\nCheck under strong light — edges may show blue.\n\nTrue black originals are usually Brazilian Glasslite (M2 mould).\n\nCompare here:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/#m2\n\nNext check: rear bump.\n\n1 Long\n2 Short\n3 None\n4 Not sure",
-      "options": [
-        { "match": ["1", "long"], "next": "m1_result" },
-        { "match": ["2", "short"], "next": "m2_result" },
-        { "match": ["3", "none"], "next": "m3_result" },
-        { "match": ["4"], "next": "end" }
-      ]
-    },
-
-    "bump_check": {
-      "content": "Check the rear bump.\n\n1 Long\n2 Short\n3 None\n4 Not sure",
-      "options": [
-        { "match": ["1", "long"], "next": "m1_result" },
-        { "match": ["2", "short"], "next": "m2_result" },
-        { "match": ["3", "none"], "next": "m3_result" },
-        { "match": ["4"], "next": "end" }
-      ]
-    },
-
-    "m1_result": {
-      "content": "Likely M1 blaster.\n\nCompare:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/",
-      "end": true
-    },
-
-    "m2_result": {
-      "content": "Likely M2 blaster.\n\nAlso used for Brazilian Glasslite versions.\n\nCompare:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/#m2",
-      "end": true
-    },
-
-    "m3_result": {
-      "content": "Likely M3 blaster.\n\nCompare:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/",
-      "end": true
-    },
-
-    "repro_result": {
-      "content": "This points strongly to a reproduction.\n\nCompare carefully with reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/",
-      "end": true
     },
 
     "cloak_start": {
-      "content": "Describe the cloak or choose:\n\n1 Removable hood\n2 Attached hood\n3 Not sure\n\nYou can also describe it.",
+      "content": "Cloak type:\n\n1 Removable hood\n2 Attached hood\n3 Not sure",
       "options": [
-        { "match": ["1", "removable"], "next": "m5_info" },
-        { "match": ["2", "attached"], "next": "cloak_general" },
+        { "match": ["1"], "next": "m5_info" },
+        { "match": ["2"], "next": "cloak_general" },
         { "match": ["3"], "next": "cloak_general" }
       ]
     },
 
     "m5_info": {
-      "content": "Removable hood — possible Lili Ledy M5.\n\nCheck:\n• heavier cotton\n• lighter colour\n• separate hood\n\nCompare:\nhttps://www.variantvillain.com/characters/jawa/\n\nDo you want to:\n\n1 Check authenticity\n2 Identify figure",
+      "content": "Possible Lili Ledy M5.\n\nCompare:\nhttps://www.variantvillain.com/characters/jawa/\n\n1 Continue",
       "options": [
-        { "match": ["1"], "next": "cloak_auth" },
-        { "match": ["2"], "next": "coo_check" }
+        { "match": ["1"], "next": "end" }
       ]
     },
 
     "cloak_general": {
-      "content": "Compare cut, stitching and material here:\nhttps://www.variantvillain.com/characters/jawa/\n\nDescribe what you see and I’ll guide you further.",
+      "content": "Compare here:\nhttps://www.variantvillain.com/characters/jawa/",
       "end": true
     },
 
     "cloak_auth": {
-      "content": "Check:\n• ageing\n• stitching\n• fabric texture\n\nCompare carefully with reference:\nhttps://www.variantvillain.com/characters/jawa/",
+      "content": "Check ageing, stitching and fabric.",
       "end": true
     },
 
     "non_hk": {
-      "content": "Less common variant.\n\nCompare here:\nhttps://www.variantvillain.com/characters/jawa/",
+      "content": "Less common variant.",
       "end": true
     },
 
     "coo_unknown": {
-      "content": "Try checking under strong light or magnification.\n\nIf still unsure, describe what you see.",
+      "content": "Check under strong light.",
       "end": true
     },
 
