@@ -768,6 +768,114 @@ https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
   );
 }
 
+function genericBlasterClarificationResponse() {
+  return {
+    reply: `I found multiple blaster types in the Kenner Star Wars line.
+
+Which one are you asking about?
+
+1 Imperial Blaster / Stormtrooper blaster
+2 Jawa Blaster
+3 Princess Leia Blaster
+4 Rebel Blaster / Han Solo blaster
+5 Not sure / something else
+
+You can reply with a number or describe it in your own words.`,
+    images: [],
+    flowState: { mode: "blaster-clarify" }
+  };
+}
+
+function handleGenericBlasterClarification(message) {
+  const t = normalise(message);
+
+  if (t === "1" || t.includes("imperial") || t.includes("stormtrooper") || t.includes("trooper")) {
+    return {
+      reply: `Got it — Imperial / Stormtrooper blaster.
+
+I do not have a guided flow for that one yet, but I can still help from the reference files.
+
+First quick check:
+
+1 Does it look like the standard Imperial E-11 style blaster?
+2 Not sure
+
+You can also describe what you see.`,
+      images: [],
+      flowState: null
+    };
+  }
+
+  if (t === "2" || t.includes("jawa")) {
+    return startFlow("jawa.blaster");
+  }
+
+  if (t === "3" || t.includes("leia")) {
+    return {
+      reply: `Got it — Princess Leia blaster.
+
+I do not have a guided Leia blaster flow yet, but I can still help from the reference files.
+
+Tell me what you want to check:
+
+1 Colour
+2 Mould/detail
+3 Float/repro check
+4 Not sure`,
+      images: [],
+      flowState: null
+    };
+  }
+
+  if (t === "4" || t.includes("rebel") || t.includes("han") || t.includes("solo")) {
+    return {
+      reply: `Got it — Rebel / Han Solo blaster.
+
+I do not have a guided flow for that one yet, but I can still help from the reference files.
+
+Tell me what you want to check:
+
+1 Colour
+2 Mould/detail
+3 Float/repro check
+4 Not sure`,
+      images: [],
+      flowState: null
+    };
+  }
+
+  if (t === "5" || t.includes("not sure") || t.includes("unsure") || t.includes("something else")) {
+    return {
+      reply: `No problem. Describe the blaster as best you can.
+
+Useful details:
+
+1 Colour
+2 Size
+3 Long or short barrel
+4 Which figure it came with, if known
+
+You can reply naturally, for example: “small black pistol with a short bump”.`,
+      images: [],
+      flowState: null
+    };
+  }
+
+  return {
+    reply: `Please choose one of these:
+
+1 Imperial Blaster / Stormtrooper blaster
+2 Jawa Blaster
+3 Princess Leia Blaster
+4 Rebel Blaster / Han Solo blaster
+5 Not sure / something else
+
+You can reply with a number or describe it in your own words.`,
+    images: [],
+    flowState: { mode: "blaster-clarify" }
+  };
+}
+
 function walkFiles(dir) {
   const files = [];
   if (!fs.existsSync(dir)) return files;
@@ -934,6 +1042,11 @@ module.exports = async function handler(req, res) {
       return;
     }
 
+    if (flowState?.mode === "blaster-clarify") {
+      res.status(200).json(handleGenericBlasterClarification(message));
+      return;
+    }
+
     if (flowState?.flowId && flowState?.stepId) {
       const flowResponse = continueFlow(flowState, message);
       if (flowResponse) {
@@ -945,6 +1058,12 @@ module.exports = async function handler(req, res) {
     const entity = detectEntity(message);
     const accessory = detectAccessory(message);
     const intent = detectIntent(message);
+
+    if (!entity && accessory === "blaster") {
+      res.status(200).json(genericBlasterClarificationResponse());
+      return;
+    }
+
     const flowId = flowIdFor(entity, intent, accessory);
 
     if (flowId && fs.existsSync(flowFilePath(flowId))) {
