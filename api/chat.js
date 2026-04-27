@@ -33,6 +33,12 @@ const FIGURE_ALIASES = [
   { slug: "sand-people", terms: ["sand people", "sand person", "tusken"] }
 ];
 
+const STAR_WARS_GENERAL_TERMS = [
+  "star wars", "kenner", "vintage", "figure", "figures", "toy", "toys",
+  "variant", "coo", "accessory", "accessories", "cardback", "card back",
+  "moc", "loose", "weapon", "blaster", "lightsaber", "cape", "cloak"
+];
+
 function normalise(text) {
   return String(text || "")
     .toLowerCase()
@@ -90,6 +96,42 @@ function detectIntent(message) {
   ) return "figure";
   if (detectEntity(message)) return "figure";
   return "unknown";
+}
+
+function isProbablyVintageStarWarsRelated(message) {
+  const t = normalise(message);
+  if (!t) return false;
+  if (detectEntity(message)) return true;
+  if (detectAccessory(message)) return true;
+  return hasAny(t, STAR_WARS_GENERAL_TERMS);
+}
+
+function offTopicResponse() {
+  const variants = [
+    `Sorry, I’m not familiar with that subject.
+
+I’m a Collector Companion droid focused on vintage Star Wars toys, figures, variants, COOs and accessories.
+
+If you meant something vintage Star Wars related, please clarify and I’ll help.
+
+Do you have any vintage Star Wars questions I can help with?`,
+    `Sorry, that’s outside my collector database.
+
+I’m here to help with vintage Kenner Star Wars figures, variants, COOs, cloaks, capes and accessories.
+
+If you meant a figure or accessory, tell me which one and I’ll guide you.
+
+Do you have any vintage Star Wars related questions?`,
+    `I’m sorry, I can’t help much with that subject.
+
+I’m a Collector Companion droid for vintage Star Wars toys. Ask me about a figure, COO, variant, blaster, cape, cloak or accessory and I’ll do my best.`
+  ];
+
+  return {
+    reply: variants[Math.floor(Math.random() * variants.length)],
+    images: [],
+    flowState: null
+  };
 }
 
 function flowFilePath(flowId) {
@@ -220,7 +262,7 @@ function questionReply(step) {
       return label ? `${option.value} ${label}` : `${option.value}`;
     });
 
-    reply = `${reply}\n\nReply with:\n\n${lines.join("\n")}`;
+    reply = `${reply}\n\nReply with:\n\n${lines.join("\n")}\n\nYou can also describe it in your own words.`;
   }
 
   return reply.trim();
@@ -305,7 +347,9 @@ function continueFlow(flowState, message) {
 
   if (!selected) {
     return makeResponse(
-      `Please reply with one of the listed options.\n\n${questionReply(step)}`,
+      `I’m not quite sure which option that matches.
+
+${questionReply(step)}`,
       [],
       flowState.flowId,
       flowState.stepId
@@ -354,9 +398,38 @@ function isRecentJawaBlasterContext(history) {
 function jawaBlasterFollowUp(message) {
   const t = normalise(message);
 
-  if (t.includes("short")) {
+  if (t === "1" || t.includes("long")) {
     return makeResponse(
-      `If the rear bump looks short, compare it against the M2 mould first.
+      `That points you towards the M1 Unitoy mould.
+
+M1 traits:
+• long rear bump
+• visible gate scar near the handle
+• slightly rougher finish
+• distinctive bump at the bottom of the handle
+
+Use the Jawa blaster guide here:
+https://www.variantvillain.com/accessory-guide/jawa-blaster/
+
+If you want to keep checking, compare the surface finish next.
+
+Reply with:
+
+1 Rougher / more worn
+2 Clean and sharp
+3 Not sure
+
+You can also describe it in your own words.`,
+      [],
+      null,
+      null,
+      true
+    );
+  }
+
+  if (t === "2" || t.includes("short")) {
+    return makeResponse(
+      `That points you towards the M2 mould.
 
 M2 traits:
 • shorter rear bump than M1
@@ -368,26 +441,15 @@ This is also the mould family used for the black Brazilian Glasslite version.
 Compare the M2 examples here:
 https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2
 
-If you are still unsure, the next useful check is whether the detail looks clean and sharp, or rougher/worn.`,
-      [],
-      null,
-      null,
-      true
-    );
-  }
+If you want to keep checking, compare the surface detail next.
 
-  if (t.includes("long")) {
-    return makeResponse(
-      `If the rear bump looks long, compare it against the M1 Unitoy mould.
+Reply with:
 
-M1 traits:
-• long rear bump
-• visible gate scar near the handle
-• slightly rougher finish
-• distinctive bump at the bottom of the handle
+1 Clean and sharp
+2 Rougher / more worn
+3 Not sure
 
-Use the Jawa blaster guide here:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
+You can also describe it in your own words.`,
       [],
       null,
       null,
@@ -396,6 +458,7 @@ https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
   }
 
   if (
+    t === "3" ||
     t.includes("no bump") ||
     t.includes("none") ||
     t.includes("missing bump") ||
@@ -403,7 +466,7 @@ https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
     t.includes("no rear bump")
   ) {
     return makeResponse(
-      `If there is no rear bump, compare it against the M3 Kader mould.
+      `That points you towards the M3 Kader mould.
 
 M3 traits:
 • no rear bump
@@ -411,7 +474,17 @@ M3 traits:
 • cleaner silhouette
 
 Use the Jawa blaster guide here:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
+https://www.variantvillain.com/accessory-guide/jawa-blaster/
+
+If you want to keep checking, compare the mould detail next.
+
+Reply with:
+
+1 Clean and sharp
+2 Rougher / more worn
+3 Not sure
+
+You can also describe it in your own words.`,
       [],
       null,
       null,
@@ -423,10 +496,16 @@ https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
     return makeResponse(
       `A rougher or more worn finish can point more towards M1, but do not use texture alone.
 
-Next compare the rear bump:
-• long bump = M1
-• short bump = M2
-• no bump = M3
+Next compare the rear bump.
+
+Reply with:
+
+1 Long rear bump
+2 Short rear bump
+3 No rear bump
+4 Not sure
+
+You can also describe it in your own words.
 
 Jawa blaster guide:
 https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
@@ -441,9 +520,15 @@ https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
     return makeResponse(
       `Cleaner, sharper mould detail can point more towards M2 or M3.
 
-Next check the rear bump:
-• short bump = M2
-• no bump = M3
+Next check the rear bump.
+
+Reply with:
+
+1 Short rear bump = likely M2
+2 No rear bump = likely M3
+3 Not sure
+
+You can also describe it in your own words.
 
 M2 reference:
 https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2`,
@@ -467,7 +552,15 @@ It could be:
 Place it against a strong light. If the edges look blue, it may actually be very dark blue / black-blue.
 
 If it stays black, compare it especially against the M2 mould:
-https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2`,
+https://www.variantvillain.com/accessory-guide/jawa-blaster/#m2
+
+Reply with:
+
+1 Edges look blue when backlit
+2 It stays black
+3 Not sure
+
+You can also describe what you see.`,
       [],
       null,
       null,
@@ -483,7 +576,15 @@ Grey is a very common reproduction colour for Jawa blasters.
 
 There are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.
 
-Compare carefully here:
+Next check the float result.
+
+Reply with:
+
+1 It floats
+2 It sinks
+3 Not sure
+
+You can also compare carefully here:
 https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
       [],
       null,
@@ -500,8 +601,11 @@ Which does it look closest to?
 1 Long rear bump = likely M1
 2 Short rear bump = likely M2
 3 No rear bump = likely M3
+4 Not sure
 
-You can also compare here:
+You can also describe it in your own words.
+
+Reference:
 https://www.variantvillain.com/accessory-guide/jawa-blaster/`,
     [],
     null,
@@ -699,6 +803,11 @@ module.exports = async function handler(req, res) {
 
     if (!entity && !accessory && isRecentJawaBlasterContext(history)) {
       res.status(200).json(jawaBlasterFollowUp(message));
+      return;
+    }
+
+    if (!entity && !accessory && !isProbablyVintageStarWarsRelated(message)) {
+      res.status(200).json(offTopicResponse());
       return;
     }
 
