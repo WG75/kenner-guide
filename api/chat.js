@@ -220,13 +220,45 @@ function normaliseOptions(step) {
   if (!options) return [];
 
   if (Array.isArray(options)) {
-    return options;
+    return options.map((option, index) => {
+      if (!option || typeof option !== "object") {
+        return {
+          value: String(index + 1),
+          label: String(option || ""),
+          aliases: [],
+          next: null
+        };
+      }
+
+      const value =
+        option.value !== undefined
+          ? String(option.value)
+          : Array.isArray(option.match) && option.match.length
+            ? String(option.match[0])
+            : String(index + 1);
+
+      const aliases = [];
+
+      if (Array.isArray(option.aliases)) aliases.push(...option.aliases);
+      if (Array.isArray(option.match)) aliases.push(...option.match);
+      if (option.label) aliases.push(option.label);
+      if (option.text) aliases.push(option.text);
+
+      return {
+        ...option,
+        value,
+        label: option.label || option.text || "",
+        aliases,
+        next: option.next || option.target || option.flow || null
+      };
+    });
   }
 
   if (typeof options === "object") {
     return Object.entries(options).map(([value, target]) => ({
       value,
       label: "",
+      aliases: [value],
       next: target
     }));
   }
@@ -250,9 +282,15 @@ function optionMatch(input, step) {
         if (a && (t === a || t.includes(a))) return option;
       }
     }
+
+    if (Array.isArray(option.match)) {
+      for (const match of option.match) {
+        const m = normalise(match);
+        if (m && (t === m || t.includes(m))) return option;
+      }
+    }
   }
 
-  // Natural language fallbacks for common collector replies.
   // Yes / no.
   if (t === "yes" || t === "y" || t.includes("yes") || t.includes("yeah") || t.includes("yep")) {
     return options.find((o) => String(o.value) === "1") || null;
@@ -307,6 +345,18 @@ function optionMatch(input, step) {
     return options.find((o) => String(o.value) === "3") || null;
   }
 
+  // Guide-me / all routes.
+  if (
+    t.includes("all of the above") ||
+    t.includes("guide me") ||
+    t.includes("help me through") ||
+    t.includes("walk me through")
+  ) {
+    return options.find((o) => String(o.value) === "4") ||
+      options.find((o) => String(o.value) === "5") ||
+      null;
+  }
+
   // Rear bump / mould identification.
   if (t.includes("long")) {
     return options.find((o) => String(o.value) === "1") || null;
@@ -318,7 +368,6 @@ function optionMatch(input, step) {
 
   if (
     t.includes("no bump") ||
-    t.includes("none") ||
     t.includes("missing bump") ||
     t.includes("without bump") ||
     t.includes("no rear bump")
