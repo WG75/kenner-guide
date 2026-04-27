@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 function normalise(value) {
   return String(value || "")
     .toLowerCase()
@@ -23,6 +26,44 @@ function optionFromMessage(message) {
   const t = normalise(message);
   if (/^[1-9]$/.test(t)) return t;
   return null;
+}
+
+function readFirstExisting(relativePaths) {
+  for (const rel of relativePaths) {
+    try {
+      const filePath = path.join(process.cwd(), rel);
+      if (fs.existsSync(filePath)) {
+        return fs.readFileSync(filePath, "utf8");
+      }
+    } catch (err) {
+      // If a reference file is missing, keep the deterministic fallback behaviour.
+    }
+  }
+
+  return "";
+}
+
+function lukeReferenceBundle() {
+  return {
+    figure: readFirstExisting([
+      "data/figures/luke-skywalker-reference.txt",
+      "main/data/figures/luke-skywalker-reference.txt",
+      "data/luke-skywalker-reference.txt",
+      "luke-skywalker-reference.txt"
+    ]),
+    st: readFirstExisting([
+      "data/accessories/telescoping-lightsaber.txt",
+      "main/data/accessories/telescoping-lightsaber.txt",
+      "data/telescoping-lightsaber.txt",
+      "telescoping-lightsaber.txt"
+    ]),
+    dt: readFirstExisting([
+      "data/accessories/double-telescoping-lightsaber.txt",
+      "main/data/accessories/double-telescoping-lightsaber.txt",
+      "data/double-telescoping-lightsaber.txt",
+      "double-telescoping-lightsaber.txt"
+    ])
+  };
 }
 
 function jawaIntro() {
@@ -459,6 +500,316 @@ Anything else you want to check?`,
   );
 }
 
+function lukeSelector() {
+  return makeReply(
+    `Which Luke are you checking?
+
+1 Luke Skywalker (Original / Tatooine / Farm boy)
+2 Luke Skywalker (X-Wing Pilot)
+3 Luke Skywalker (Bespin)
+4 Luke Skywalker (Hoth)
+5 Luke Skywalker (Jedi Knight)
+6 Not sure
+
+Reply with a number or describe it in your own words.`,
+    { topic: "luke", step: "selector" }
+  );
+}
+
+function lukeOriginalWeaponQuestion() {
+  return makeReply(
+    `Luke Skywalker (Original / Tatooine / Farm boy). Got it.
+
+First check the lightsaber.
+
+Does your Luke have a telescoping lightsaber?
+
+1 Yes, it slides out from the arm
+2 No, it has a separate lightsaber
+3 No weapon
+4 Not sure
+
+Reply with a number or describe it.`,
+    { topic: "luke", step: "weapon" }
+  );
+}
+
+function lukeDoubleTelescopingQuestion() {
+  return makeReply(
+    `That means you may have an early telescoping-saber Luke.
+
+Now check whether it is single or double telescoping.
+
+1 Double telescoping - a thin inner filament slides out
+2 Single telescoping - one blade only
+3 Not sure
+
+Reply with a number.`,
+    { topic: "luke", step: "double_telescoping" }
+  );
+}
+
+function lukeDoubleTelescopingResult(choice) {
+  if (choice === "1") {
+    return makeReply(
+      `Double telescoping Luke is the key early Luke feature.
+
+Important:
+• DT sabers belong only with the earliest Luke figures
+• complete DT sabers are rare
+• they are fragile and heavily faked
+• many examples are broken, cut down or reproduction pieces
+
+Do not rely on this app alone for authentication. Compare with expert references and experienced collector groups.
+
+Now let's identify the figure itself.`,
+      { topic: "luke", step: "hair" }
+    );
+  }
+
+  if (choice === "2") {
+    return makeReply(
+      `Single telescoping noted.
+
+That is the standard later telescoping style after Kenner moved away from the fragile double telescoping design.
+
+Now let's identify the figure itself.`,
+      { topic: "luke", step: "hair" }
+    );
+  }
+
+  return makeReply(
+    `No problem. If you are unsure whether it is DT or ST, treat it cautiously.
+
+A DT saber has a second thin inner filament that extends from the main blade. ST has only one extending blade.
+
+Now let's identify the figure itself.`,
+    { topic: "luke", step: "hair" }
+  );
+}
+
+function lukeHairQuestion(prefix = "Next check the figure itself.") {
+  return makeReply(
+    `${prefix}
+
+Check the hair colour.
+
+1 Blonde / yellow hair
+2 Brown / darker hair
+3 Orange / ginger hair
+4 Not sure
+
+Reply with a number or describe it.`,
+    { topic: "luke", step: "hair" }
+  );
+}
+
+function lukeCooQuestion() {
+  return makeReply(
+    `Next check the Country of Origin marking.
+
+Luke Skywalker can appear with several COO types.
+
+What do you see?
+
+1 No COO
+2 Hong Kong
+3 Taiwan
+4 Not sure
+
+Reply with a number or describe what you can see.`,
+    { topic: "luke", step: "coo" }
+  );
+}
+
+function lukeLegColourQuestion() {
+  return makeReply(
+    `Now check the plastic colour on the legs / trousers.
+
+1 White / cream
+2 Yellowed / aged
+3 Not sure
+
+Reply with a number.`,
+    { topic: "luke", step: "legs" }
+  );
+}
+
+function lukeOriginalResult() {
+  return makeReply(
+    `That gives you a useful starting point for Luke Skywalker (Original / Tatooine / Farm boy).
+
+Use this as a guide, not final authentication. Luke variants depend on several details together:
+
+• hair colour
+• COO marking
+• plastic tone
+• face and body mould details
+• lightsaber type
+• correct figure and saber pairing
+
+Important pairing note:
+DT sabers should only be paired with the earliest Luke figures. ST sabers are correct for most later Luke figures.
+
+Full Luke guide:
+https://www.variantvillain.com/characters/sw/luke-skywalker/
+
+Do you want help checking the lightsaber?
+
+1 Yes
+2 No`,
+    { topic: "luke", step: "offer_lightsaber" }
+  );
+}
+
+function lukeLightsaberStart() {
+  return makeReply(
+    `Which Luke lightsaber type do you have?
+
+1 Telescoping from the arm
+2 Separate yellow lightsaber
+3 No lightsaber
+4 Not sure
+
+Reply with a number or describe it.`,
+    { topic: "luke_lightsaber", step: "type" }
+  );
+}
+
+function lukeLightsaberFloat() {
+  return makeReply(
+    `For a separate Luke lightsaber, start with the float test.
+
+Does it float?
+
+1 Yes
+2 No
+3 Not tested
+
+Reply with a number.`,
+    { topic: "luke_lightsaber", step: "float" }
+  );
+}
+
+function lukeLightsaberColour() {
+  return makeReply(
+    `What colour is the lightsaber?
+
+1 Bright yellow
+2 Pale yellow
+3 Darker yellow / orange-yellow
+4 Other / not sure
+
+Reply with a number or describe it.`,
+    { topic: "luke_lightsaber", step: "colour" }
+  );
+}
+
+function lukeLightsaberResult() {
+  return makeReply(
+    `Good starting checks.
+
+For Luke lightsabers, compare:
+
+• whether it is DT, ST or separate
+• colour tone
+• tip shape
+• blade thickness
+• mould detail
+• signs of trimming, repair or reproduction
+• whether it is correct for the figure version
+
+ST sabers are common and correct for most post-DT Luke figures.
+DT sabers are early, rare and heavily faked.
+
+Relevant reference:
+https://www.variantvillain.com/accessory-guide/luke-lightsaber/
+
+Anything else you want to check?`,
+    null
+  );
+}
+
+function lukeNotSurePrompt() {
+  return makeReply(
+    `No problem. Describe the Luke figure as best you can.
+
+Useful details:
+
+1 Outfit
+2 Hair colour
+3 Weapon / lightsaber type
+4 COO marking on the leg
+5 Any helmet, jacket or robe
+
+Later, a Google Lens-style photo recognition feature would be ideal for this. For now, describe what you can see and I’ll guide you.`,
+    null
+  );
+}
+
+function lukeReferenceQuestion(message) {
+  const t = normalise(message);
+
+  if (hasAny(t, ["double telescoping", "dt saber", "dt lightsaber", "inner filament"])) {
+    return makeReply(
+      `Double telescoping sabers are the earliest and rarest Kenner lightsaber type.
+
+Key points:
+• two-stage blade
+• inner filament extends from the main blade
+• found only with the earliest Luke, Vader and Obi-Wan figures
+• fragile, often broken or missing the inner filament
+• frequently faked or cut down
+
+For Luke, a DT saber should only be paired with the earliest figures.
+
+Do you want to check a Luke figure now?
+
+1 Yes
+2 No`,
+      { topic: "luke", step: "reference_offer_figure" }
+    );
+  }
+
+  if (hasAny(t, ["single telescoping", "st saber", "st lightsaber"])) {
+    return makeReply(
+      `Single telescoping sabers replaced the earlier DT design.
+
+Key points:
+• one-piece extending blade
+• no inner filament
+• more durable than DT
+• correct for most later production Luke figures
+
+Do you want to check a Luke figure now?
+
+1 Yes
+2 No`,
+      { topic: "luke", step: "reference_offer_figure" }
+    );
+  }
+
+  if (hasAny(t, ["early bird", "mailer"])) {
+    return makeReply(
+      `Luke Skywalker was included in the Early Bird Certificate Package.
+
+Key points:
+• shipped in early 1978
+• plain white mailer
+• one of the first four Kenner figures
+• earliest Luke examples may be associated with double telescoping saber versions
+
+Do you want to check whether your Luke could be an early version?
+
+1 Yes
+2 No`,
+      { topic: "luke", step: "reference_offer_figure" }
+    );
+  }
+
+  return null;
+}
+
 function genericBlasterClarify() {
   return makeReply(
     `I found several vintage Kenner blaster types.
@@ -491,14 +842,22 @@ function routeInitial(message) {
   const t = normalise(message);
 
   const isJawa = t.includes("jawa");
+  const isLuke = t.includes("luke") || t.includes("skywalker");
   const isBlaster = hasAny(t, ["blaster", "gun", "weapon", "pistol", "pew"]);
+  const isLightsaber = hasAny(t, ["lightsaber", "light saber", "saber", "sabre", "telescoping", "dt saber", "st saber"]);
   const isCloak = hasAny(t, ["cloak", "cape", "hood"]);
   const isFigure = hasAny(t, ["figure", "variant", "coo", "country of origin", "identify", "id"]);
+
+  const lukeReferenceReply = lukeReferenceQuestion(message);
+  if (isLuke && lukeReferenceReply) return lukeReferenceReply;
 
   if (isJawa && isBlaster) return jawaBlasterStart();
   if (isJawa && isCloak) return jawaCloakStart();
   if (isJawa && isFigure) return jawaCapeQuestion("Let's identify your Jawa figure.");
   if (isJawa) return jawaIntro();
+
+  if (isLuke && isLightsaber) return lukeLightsaberStart();
+  if (isLuke) return lukeSelector();
 
   if (isBlaster) return genericBlasterClarify();
 
@@ -509,9 +868,10 @@ function routeInitial(message) {
 What would you like to identify?
 
 1 Jawa
-2 Blaster
-3 COO marking
-4 Guide me`,
+2 Luke Skywalker
+3 Blaster
+4 COO marking
+5 Guide me`,
       { topic: "general", step: "menu" }
     );
   }
@@ -525,8 +885,9 @@ function continueGeneral(message, flowState) {
 
   if (flowState.step === "menu") {
     if (opt === "1" || t.includes("jawa")) return jawaIntro();
-    if (opt === "2" || hasAny(t, ["blaster", "gun", "weapon"])) return genericBlasterClarify();
-    if (opt === "3" || t.includes("coo")) {
+    if (opt === "2" || t.includes("luke") || t.includes("skywalker")) return lukeSelector();
+    if (opt === "3" || hasAny(t, ["blaster", "gun", "weapon"])) return genericBlasterClarify();
+    if (opt === "4" || t.includes("coo")) {
       return makeReply(
         `COO means Country of Origin.
 
@@ -541,7 +902,7 @@ Do you want to check a Jawa COO?
         { topic: "general", step: "coo_offer" }
       );
     }
-    if (opt === "4" || t.includes("guide")) return jawaIntro();
+    if (opt === "5" || t.includes("guide")) return jawaIntro();
   }
 
   if (flowState.step === "coo_offer") {
@@ -822,11 +1183,122 @@ Next check: rear bump.
   return jawaBlasterStart();
 }
 
+function continueLuke(message, flowState) {
+  const t = normalise(message);
+  const opt = optionFromMessage(t);
+
+  if (flowState.step === "selector") {
+    if (opt === "1" || hasAny(t, ["original", "tatooine", "farm", "farmboy", "farm boy"])) return lukeOriginalWeaponQuestion();
+
+    if (opt === "2" || t.includes("x wing") || t.includes("x-wing")) {
+      return makeReply(`Luke Skywalker (X-Wing Pilot) is not fully built into this demo yet.
+
+For now, describe the figure, helmet, COO and accessory and I’ll help as best I can.`, null);
+    }
+
+    if (opt === "3" || t.includes("bespin")) {
+      return makeReply(`Luke Skywalker (Bespin) is not fully built into this demo yet.
+
+For now, describe the clothing, hair colour, COO and saber and I’ll help as best I can.`, null);
+    }
+
+    if (opt === "4" || t.includes("hoth")) {
+      return makeReply(`Luke Skywalker (Hoth) is not fully built into this demo yet.
+
+For now, describe the outfit, accessories and markings and I’ll help as best I can.`, null);
+    }
+
+    if (opt === "5" || t.includes("jedi")) {
+      return makeReply(`Luke Skywalker (Jedi Knight) is not fully built into this demo yet.
+
+For now, describe the cloak, saber, body colour and markings and I’ll help as best I can.`, null);
+    }
+
+    if (opt === "6" || hasAny(t, ["not sure", "unsure", "don't know", "dont know", "guide"])) return lukeNotSurePrompt();
+
+    return lukeSelector();
+  }
+
+  if (flowState.step === "weapon") {
+    if (opt === "1" || hasAny(t, ["telescoping", "slides", "slides out", "arm"])) return lukeDoubleTelescopingQuestion();
+    if (opt === "2" || hasAny(t, ["separate", "loose", "yellow saber", "yellow lightsaber"])) return lukeHairQuestion();
+    if (opt === "3" || hasAny(t, ["no weapon", "missing", "none"])) return lukeHairQuestion("No weapon. No problem. Let's identify the figure itself.");
+    if (opt === "4" || hasAny(t, ["not sure", "unsure", "don't know", "dont know"])) return lukeHairQuestion("No problem. Let's identify the figure itself first.");
+    return lukeOriginalWeaponQuestion();
+  }
+
+  if (flowState.step === "double_telescoping") {
+    if (opt === "1") return lukeDoubleTelescopingResult("1");
+    if (opt === "2") return lukeDoubleTelescopingResult("2");
+    return lukeDoubleTelescopingResult("3");
+  }
+
+  if (flowState.step === "hair") {
+    if (["1", "2", "3", "4"].includes(opt) || hasAny(t, ["blonde", "yellow", "brown", "dark", "orange", "ginger", "not sure", "unsure"])) return lukeCooQuestion();
+    return lukeHairQuestion("I’m not sure which hair colour that matches.");
+  }
+
+  if (flowState.step === "coo") {
+    if (["1", "2", "3", "4"].includes(opt) || hasAny(t, ["no coo", "hong kong", "taiwan", "not sure", "unsure"])) return lukeLegColourQuestion();
+    return lukeCooQuestion();
+  }
+
+  if (flowState.step === "legs") {
+    if (["1", "2", "3"].includes(opt) || hasAny(t, ["white", "cream", "yellow", "yellowed", "aged", "not sure", "unsure"])) return lukeOriginalResult();
+    return lukeLegColourQuestion();
+  }
+
+  if (flowState.step === "offer_lightsaber") {
+    if (opt === "1" || t.includes("yes")) return lukeLightsaberStart();
+    if (opt === "2" || t.includes("no")) return makeReply("No problem. Anything else you want to check?", null);
+    return makeReply("Do you want help checking the lightsaber?\n\n1 Yes\n2 No", { topic: "luke", step: "offer_lightsaber" });
+  }
+
+  if (flowState.step === "reference_offer_figure") {
+    if (opt === "1" || t.includes("yes")) return lukeOriginalWeaponQuestion();
+    return makeReply("No problem. Ask me again if you want to check a Luke figure or lightsaber.", null);
+  }
+
+  return lukeSelector();
+}
+
+function continueLukeLightsaber(message, flowState) {
+  const t = normalise(message);
+  const opt = optionFromMessage(t);
+
+  if (flowState.step === "type") {
+    if (opt === "1" || hasAny(t, ["telescoping", "slides", "arm"])) return lukeDoubleTelescopingQuestion();
+    if (opt === "2" || hasAny(t, ["separate", "loose", "yellow"])) return lukeLightsaberFloat();
+    if (opt === "3" || hasAny(t, ["none", "missing", "no lightsaber"])) return makeReply("No problem. If you find the lightsaber later, ask me to check it.", null);
+    return lukeLightsaberFloat();
+  }
+
+  if (flowState.step === "double_telescoping") {
+    if (opt === "1") return lukeDoubleTelescopingResult("1");
+    if (opt === "2") return lukeDoubleTelescopingResult("2");
+    return lukeDoubleTelescopingResult("3");
+  }
+
+  if (flowState.step === "float") {
+    if (["1", "2", "3"].includes(opt) || hasAny(t, ["float", "sink", "not tested"])) return lukeLightsaberColour();
+    return lukeLightsaberFloat();
+  }
+
+  if (flowState.step === "colour") {
+    if (["1", "2", "3", "4"].includes(opt) || hasAny(t, ["yellow", "orange", "pale", "bright", "not sure"])) return lukeLightsaberResult();
+    return lukeLightsaberColour();
+  }
+
+  return lukeLightsaberStart();
+}
+
 function continueFlow(message, flowState) {
   if (!flowState || !flowState.topic) return routeInitial(message);
 
   if (flowState.topic === "jawa") return continueJawa(message, flowState);
   if (flowState.topic === "jawa_blaster") return continueJawaBlaster(message, flowState);
+  if (flowState.topic === "luke") return continueLuke(message, flowState);
+  if (flowState.topic === "luke_lightsaber") return continueLukeLightsaber(message, flowState);
   if (flowState.topic === "blaster") return continueGenericBlaster(message, flowState);
   if (flowState.topic === "general") return continueGeneral(message, flowState);
 
@@ -862,6 +1334,8 @@ module.exports = async function handler(req, res) {
 
 Try again with a simple phrase like:
 • Jawa
+• Luke
+• Luke lightsaber
 • Jawa blaster
 • Jawa cloak`,
       null
