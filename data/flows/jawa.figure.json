@@ -76,7 +76,7 @@
     },
     "cloth_reply": {
       "type": "message",
-      "content": "Good — so we’re dealing with a cloth cloak Jawa.\n\nThere are several cloth cloak types, so the figure markings are still the best next step.",
+      "content": "Great, so you have a cloth cloaked Jawa.\n\nLet’s check the figure markings first to see which version you have. Once we’ve narrowed down the figure, we can check whether the cloak and blaster look right as well.",
       "next": "leg_marking_question"
     },
     "naked_reply": {
