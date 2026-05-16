@@ -1,65 +1,334 @@
-let currentFlow = null;
-let currentStep = null;
-
-async function handleUserMessage(message) {
-  const text = message.toLowerCase().trim();
-
-  // START FLOW
-  if (!currentFlow) {
-    if (text.includes("jawa")) {
-      currentFlow = await loadFlow("jawa.figure.json");
-      currentStep = currentFlow.start;
-      return currentFlow.steps[currentStep].content;
-    }
-
-    return fallback();
-  }
-
-  // CONTINUE FLOW
-  const step = currentFlow.steps[currentStep];
-
-  if (!step || !step.options) {
-    resetFlow();
-    return fallback();
-  }
-
-  // FIND MATCH
-  for (const option of step.options) {
-    for (const keyword of option.match) {
-      if (text === keyword || text.includes(keyword)) {
-        currentStep = option.next;
-        const nextStep = currentFlow.steps[currentStep];
-
-        if (!nextStep) {
-          resetFlow();
-          return fallback();
+{
+  "id": "jawa.figure",
+  "type": "figure",
+  "entity": "jawa",
+  "name": "Jawa Figure Identification",
+  "start_step": "intro",
+  "steps": {
+    "intro": {
+      "type": "question",
+      "content": "Jawas… filthy traders. Do you need help identifying one of these?",
+      "options": [
+        {
+          "value": "1",
+          "label": "Figure",
+          "aliases": [
+            "figure",
+            "jawa figure",
+            "body",
+            "variant",
+            "identify"
+          ],
+          "next": "cape_check"
+        },
+        {
+          "value": "2",
+          "label": "Blaster",
+          "aliases": [
+            "blaster",
+            "gun",
+            "weapon"
+          ],
+          "next": "route_blaster"
+        },
+        {
+          "value": "3",
+          "label": "Cloak",
+          "aliases": [
+            "cloak",
+            "cape",
+            "hood",
+            "vinyl cape",
+            "cloth cloak"
+          ],
+          "next": "cape_check"
+        },
+        {
+          "value": "4",
+          "label": "Guide me",
+          "aliases": [
+            "guide",
+            "not sure",
+            "help",
+            "all"
+          ],
+          "next": "cape_check"
         }
-
-        if (nextStep.end) {
-          const response = nextStep.content;
-          resetFlow();
-          return response;
+      ]
+    },
+    "cape_check": {
+      "type": "question",
+      "content": "No problem. Start with the easiest visible thing.\n\nWhat does your Jawa have?",
+      "options": [
+        {
+          "value": "1",
+          "label": "Vinyl cape - smooth plastic",
+          "aliases": [
+            "vinyl",
+            "vinyl cape",
+            "plastic cape",
+            "smooth plastic"
+          ],
+          "next": "route_vinyl_cape"
+        },
+        {
+          "value": "2",
+          "label": "Cloth cloak - fabric",
+          "aliases": [
+            "cloth",
+            "cloth cloak",
+            "fabric",
+            "fabric cloak"
+          ],
+          "next": "cloth_choice"
+        },
+        {
+          "value": "3",
+          "label": "No cape or cloak",
+          "aliases": [
+            "none",
+            "no cape",
+            "no cloak",
+            "naked",
+            "missing"
+          ],
+          "next": "coo_check"
         }
-
-        return nextStep.content;
-      }
+      ]
+    },
+    "cloth_choice": {
+      "type": "question",
+      "content": "A cloth cloaked Jawa. Got it.\n\nWould you like to check:",
+      "options": [
+        {
+          "value": "1",
+          "label": "Which cloak version you have",
+          "aliases": [
+            "cloak version",
+            "version",
+            "which cloak"
+          ],
+          "next": "route_cloth_cloak"
+        },
+        {
+          "value": "2",
+          "label": "Whether the cloak looks original",
+          "aliases": [
+            "original",
+            "authentic",
+            "real",
+            "repro",
+            "whether original"
+          ],
+          "next": "cloak_originality"
+        },
+        {
+          "value": "3",
+          "label": "Check which Jawa figure variant you have first",
+          "aliases": [
+            "figure",
+            "variant",
+            "figure variant",
+            "jawa variant"
+          ],
+          "next": "coo_check"
+        }
+      ]
+    },
+    "cloak_originality": {
+      "type": "question",
+      "content": "To check whether the cloak looks original, compare:\n\n• fabric texture\n• stitching style and colour\n• cut and hood shape\n• signs of natural ageing\n• whether the hood looks cut, repaired or replaced\n\nFor expensive examples, don't rely on this app alone. Get confirmation from experienced collector groups as well.\n\nFull cloak guide:\nhttps://www.variantvillain.com/accessory-guide/jawa-cloak/\n\nDo you want to check the figure variant next?",
+      "images": [
+        {
+          "title": "Jawa Cloth Cloak Comparison",
+          "url": "/images/jawa-cloth-cloak-comparison.png",
+          "caption": "Compare cloak shape, hood construction, material and stitching."
+        }
+      ],
+      "options": [
+        {
+          "value": "1",
+          "label": "Yes",
+          "aliases": [
+            "yes",
+            "y",
+            "check figure",
+            "variant"
+          ],
+          "next": "coo_check"
+        },
+        {
+          "value": "2",
+          "label": "No",
+          "aliases": [
+            "no",
+            "n",
+            "done"
+          ],
+          "next": "done"
+        }
+      ]
+    },
+    "coo_check": {
+      "type": "question",
+      "content": "Next step:\nCheck the Country of Origin markings on the legs.\n\nReply with:",
+      "options": [
+        {
+          "value": "1",
+          "label": "Hong Kong",
+          "aliases": [
+            "hong kong",
+            "hk"
+          ],
+          "next": "hong_kong_result"
+        },
+        {
+          "value": "2",
+          "label": "It doesn't show Hong Kong",
+          "aliases": [
+            "no hong kong",
+            "doesn't show hong kong",
+            "doesnt show hong kong",
+            "no coo",
+            "blank",
+            "removed"
+          ],
+          "next": "non_hong_kong_result"
+        },
+        {
+          "value": "3",
+          "label": "Can't tell / doesn't appear to have either",
+          "aliases": [
+            "not sure",
+            "unsure",
+            "can't tell",
+            "cant tell",
+            "don't know",
+            "dont know"
+          ],
+          "next": "unclear_coo_result"
+        }
+      ]
+    },
+    "hong_kong_result": {
+      "type": "question",
+      "content": "Hong Kong marked Jawa. Good.\n\nCompare the COO alignment against the main Variant Villain Jawa guide.\n\nFull Jawa guide:\nhttps://www.variantvillain.com/characters/jawa/\n\nIf you can match your figure to one of the reference images, please reply with:",
+      "images": [
+        {
+          "title": "Jawa Kader M1",
+          "url": "/images/jawa_figure_kader_M1.png",
+          "caption": "Kader M1 reference."
+        },
+        {
+          "title": "Jawa Kader M2",
+          "url": "/images/jawa_figure_kader_M2.png",
+          "caption": "Kader M2 reference."
+        },
+        {
+          "title": "Jawa Unitoy M3",
+          "url": "/images/jawa_figure_unitoy_M3.png",
+          "caption": "Unitoy M3 reference."
+        },
+        {
+          "title": "Jawa Unitoy / Lili Ledy M4",
+          "url": "/images/jawa_figure_unitoy_lili-ledy_M4.png",
+          "caption": "Unitoy / Lili Ledy M4 reference."
+        }
+      ],
+      "options": [
+        {
+          "value": "1",
+          "label": "Kader M1",
+          "aliases": [
+            "m1",
+            "kader m1"
+          ],
+          "next": "offer_blaster"
+        },
+        {
+          "value": "2",
+          "label": "Kader M2",
+          "aliases": [
+            "m2",
+            "kader m2"
+          ],
+          "next": "offer_blaster"
+        },
+        {
+          "value": "3",
+          "label": "Unitoy M3",
+          "aliases": [
+            "m3",
+            "unitoy m3"
+          ],
+          "next": "offer_blaster"
+        },
+        {
+          "value": "4",
+          "label": "Unitoy / Lili Ledy M4",
+          "aliases": [
+            "m4",
+            "unitoy",
+            "lili ledy",
+            "unitoy lili ledy"
+          ],
+          "next": "offer_blaster"
+        }
+      ]
+    },
+    "non_hong_kong_result": {
+      "type": "message",
+      "content": "If it does not show Hong Kong, you may be looking at a no COO or altered COO Jawa variant.\n\nCompare carefully against the full Variant Villain Jawa guide:\nhttps://www.variantvillain.com/characters/jawa/\n\nFor now, treat this as needing visual reference comparison rather than a confirmed ID.",
+      "next": "offer_blaster"
+    },
+    "unclear_coo_result": {
+      "type": "message",
+      "content": "No problem. COO marks can be difficult to read, especially on worn figures.\n\nBest next step: use strong light and compare both legs against the Variant Villain reference images:\nhttps://www.variantvillain.com/characters/jawa/",
+      "next": "offer_blaster"
+    },
+    "offer_blaster": {
+      "type": "question",
+      "content": "Do you also want help checking the Jawa blaster?\n\nReply with:",
+      "options": [
+        {
+          "value": "1",
+          "label": "Yes, help me identify the blaster",
+          "aliases": [
+            "yes",
+            "y",
+            "blaster",
+            "check blaster"
+          ],
+          "next": "route_blaster"
+        },
+        {
+          "value": "2",
+          "label": "No, I'm done for now",
+          "aliases": [
+            "no",
+            "n",
+            "done"
+          ],
+          "next": "done"
+        }
+      ]
+    },
+    "route_blaster": {
+      "type": "route",
+      "target": "jawa.blaster"
+    },
+    "route_vinyl_cape": {
+      "type": "route",
+      "target": "jawa.vinyl-cape"
+    },
+    "route_cloth_cloak": {
+      "type": "route",
+      "target": "jawa.cloth-cloak"
+    },
+    "done": {
+      "type": "message",
+      "content": "No problem. Let me know if you want help checking another vintage Star Wars figure or accessory.",
+      "end": true
     }
   }
-
-  // NO MATCH → STAY IN FLOW (IMPORTANT)
-  return step.content;
-}
-
-function resetFlow() {
-  currentFlow = null;
-  currentStep = null;
-}
-
-function fallback() {
-  return "Sorry, that’s outside my collector database.\n\nI focus on vintage Kenner Star Wars toys from 1977 to 1985.\n\nIf you meant a figure or accessory, tell me which one and I’ll guide you.";
-}
-
-async function loadFlow(file) {
-  const res = await fetch(`/data/flows/${file}`);
-  return await res.json();
 }
