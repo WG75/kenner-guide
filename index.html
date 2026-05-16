@@ -250,6 +250,30 @@
       color: var(--accent);
     }
 
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-self: flex-start;
+      max-width: min(760px, 88vw);
+    }
+
+    .action-button {
+      border: 1px solid rgba(241,194,50,0.45);
+      background: var(--panel2);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    .action-button:hover {
+      border-color: rgba(241,194,50,0.85);
+      color: var(--accent);
+    }
+
+
     @media (max-width: 640px) {
       .message,
       .image-card {
@@ -410,6 +434,24 @@
       scrollToBottom();
     }
 
+    function addActionButtons(actions) {
+      if (!Array.isArray(actions) || actions.length === 0) return;
+
+      const row = document.createElement("div");
+      row.className = "action-row";
+
+      actions.forEach((action) => {
+        const button = document.createElement("button");
+        button.className = "action-button";
+        button.textContent = action.label || action.value || "Select";
+        button.onclick = () => sendMessage(action.value || action.label || "");
+        row.appendChild(button);
+      });
+
+      chatEl.appendChild(row);
+      scrollToBottom();
+    }
+
     async function askApi(message, imageDataUrl) {
       const payload = {
         message,
@@ -461,6 +503,10 @@
         }
 
         addMessage("assistant", data.reply || "I could not find a useful answer from the reference files.");
+
+        if (Array.isArray(data.actions)) {
+          addActionButtons(data.actions);
+        }
       } catch (err) {
         console.error(err);
         addMessage("assistant", "Sorry, there was a problem getting an answer.");
@@ -527,6 +573,10 @@
         }
 
         addMessage("assistant", data.reply || "I could not identify the figure from that image.");
+
+        if (Array.isArray(data.actions)) {
+          addActionButtons(data.actions);
+        }
       } catch (err) {
         console.error(err);
         addMessage("assistant", "Sorry, there was a problem analysing the photo.");
