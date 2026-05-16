@@ -288,6 +288,24 @@
 
     <div id="status" class="status"></div>
 
+    <div id="photoPreviewWrap" style="display:none;padding:10px;border-top:1px solid #333;background:#111">
+      <img
+        id="photoPreview"
+        src=""
+        style="max-width:180px;border-radius:12px;display:block;margin-bottom:10px"
+      />
+
+      <div style="display:flex;gap:10px">
+        <button class="send" onclick="analysePhoto()">
+          Analyse
+        </button>
+
+        <button class="send" onclick="cancelPhotoPreview()">
+          Cancel
+        </button>
+      </div>
+    </div>
+
     <footer class="input-wrap">
       <input
         type="file"
@@ -449,8 +467,52 @@
       sendMessage(text);
     }
 
+    let pendingPhoto = null;
+
     function openPhotoPicker() {
       document.getElementById("photoInput").click();
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const input = document.getElementById("photoInput");
+
+      input.addEventListener("change", (event) => {
+        const file = event.target.files[0];
+
+        if (!file) return;
+
+        pendingPhoto = file;
+
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+          document.getElementById("photoPreview").src = e.target.result;
+          document.getElementById("photoPreviewWrap").style.display = "block";
+        };
+
+        reader.readAsDataURL(file);
+      });
+    });
+
+    function cancelPhotoPreview() {
+      pendingPhoto = null;
+
+      document.getElementById("photoPreviewWrap").style.display = "none";
+      document.getElementById("photoPreview").src = "";
+      document.getElementById("photoInput").value = "";
+    }
+
+    function analysePhoto() {
+      if (!pendingPhoto) return;
+
+      addMessage("user", "📷 Photo uploaded");
+
+      addMessage(
+        "bot",
+        "Photo analysis is not connected yet. The next step is wiring this into AI figure recognition."
+      );
+
+      cancelPhotoPreview();
     }
 
     function autoSizeInput() {
