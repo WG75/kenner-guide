@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({
@@ -9,8 +12,13 @@ export default async function handler(req, res) {
   try {
     const { message, image, flowState } = req.body || {};
 
+    if (flowState?.topic === "data_flow") {
+      const dataFlowReply = continueDataFlow(String(message || ""), flowState);
+      return res.status(200).json(dataFlowReply);
+    }
+
     if (flowState?.topic === "image_identified") {
-      const normalisedMessage = String(message || "").toLowerCase().trim();
+      const normalisedMessage = normalise(String(message || ""));
       const figure = flowState.figure || "unknown";
 
       if (
@@ -26,7 +34,7 @@ export default async function handler(req, res) {
 
       if (
         flowState.step === "post_identification" &&
-        ["yes", "y", "1", "yes, i have a question about this figure"].includes(normalisedMessage)
+        ["yes", "y", "1", "yes i have a question about this figure"].includes(normalisedMessage)
       ) {
         return res.status(200).json({
           reply:
@@ -51,15 +59,20 @@ export default async function handler(req, res) {
           normalisedMessage === "a"
         )
       ) {
+        if (figure === "jawa") {
+          return res.status(200).json(startDataFlow("jawa.figure"));
+        }
+
         if (figure === "luke_bespin") {
           return res.status(200).json({
             reply:
-              "Let’s start with the broad checks for Luke Skywalker in Bespin Fatigues.\n\nCheck the Country of Origin marking on the leg.\n\n1 Hong Kong\n2 No COO / removed COO\n3 Taiwan\n4 Not sure\n\nReply with a number or describe what you can see.",
-            flowState: {
-              topic: "luke_bespin_variant",
-              step: "coo"
-            },
-            actions: []
+              "Luke Skywalker in Bespin Fatigues has been recognised, but the detailed variant flow is not built yet.\n\nFor now, I can:\n\n1 Tell you the accessories this figure normally came with\n2 Help with a different figure\n3 Let you upload another photo",
+            flowState: null,
+            actions: [
+              { label: "Accessories", value: "show accessories" },
+              { label: "Another figure", value: "another figure" },
+              { label: "Upload another photo", value: "upload another photo" }
+            ]
           });
         }
 
@@ -79,6 +92,22 @@ export default async function handler(req, res) {
           normalisedMessage === "b"
         )
       ) {
+        if (figure === "jawa") {
+          return res.status(200).json({
+            reply:
+              "A Jawa may have:\n\n1 Cloth cloak or vinyl cape\n2 Jawa blaster\n\nWhat would you like to check?",
+            flowState: {
+              topic: "image_identified",
+              figure: "jawa",
+              step: "jawa_accessory_choice"
+            },
+            actions: [
+              { label: "Cloak / cape", value: "cloak" },
+              { label: "Blaster", value: "blaster" }
+            ]
+          });
+        }
+
         if (figure === "luke_bespin") {
           return res.status(200).json({
             reply:
@@ -95,27 +124,28 @@ export default async function handler(req, res) {
           actions: []
         });
       }
-    }
 
-    if (flowState?.topic === "luke_bespin_variant") {
-      if (flowState.step === "coo") {
+      if (flowState.step === "jawa_accessory_choice") {
+        if (normalisedMessage.includes("cloak") || normalisedMessage.includes("cape")) {
+          return res.status(200).json(startDataFlow("jawa.cloth-cloak"));
+        }
+
+        if (normalisedMessage.includes("blaster") || normalisedMessage.includes("gun") || normalisedMessage.includes("weapon")) {
+          return res.status(200).json(startDataFlow("jawa.blaster"));
+        }
+
         return res.status(200).json({
           reply:
-            "Good. Next check the hair colour and face paint.\n\n1 Blonde / yellow hair\n2 Brown hair\n3 Orange / ginger hair\n4 Not sure\n\nReply with a number or describe it.",
+            "Which Jawa accessory do you want to check?\n\n1 Cloak / cape\n2 Blaster",
           flowState: {
-            topic: "luke_bespin_variant",
-            step: "hair"
+            topic: "image_identified",
+            figure: "jawa",
+            step: "jawa_accessory_choice"
           },
-          actions: []
-        });
-      }
-
-      if (flowState.step === "hair") {
-        return res.status(200).json({
-          reply:
-            "That gives a basic starting point.\n\nLuke Bespin variant narrowing needs the dedicated Bespin reference flow next, including COO family, hair paint, boot colour, belt paint and accessory pairing.\n\nFor now, use this as a broad ID, not final authentication.",
-          flowState: null,
-          actions: []
+          actions: [
+            { label: "Cloak / cape", value: "cloak" },
+            { label: "Blaster", value: "blaster" }
+          ]
         });
       }
     }
@@ -250,6 +280,219 @@ confidence: "low"
       actions: []
     });
   }
+}
+
+function startDataFlow(flowId) {
+  const flow = loadFlow(flowId);
+
+  if (!flow) {
+    return {
+      reply:
+        `I recognised that item, but I could not find the flow file for ${flowId}.\n\nPlease check that data/flows/${flowId}.json exists.`,
+      flowState: null,
+      actions: []
+    };
+  }
+
+  return renderFlowFromStep(flow, flow.start_step || flow.start || "entry", flowId);
+}
+
+function continueDataFlow(message, flowState) {
+  const flow = loadFlow(flowState.flowId);
+
+  if (!flow) {
+    return {
+      reply:
+        `I could not reload the flow file for ${flowState.flowId}.\n\nPlease check that data/flows/${flowState.flowId}.json exists.`,
+      flowState: null,
+      actions: []
+    };
+  }
+
+  const step = getStep(flow, flowState.stepId);
+
+  if (!step) {
+    return startDataFlow(flowState.flowId);
+  }
+
+  if (step.type !== "question") {
+    const nextStepId = step.next;
+    if (!nextStepId) {
+      return {
+        reply: renderStepText(step),
+        images: step.images || [],
+        flowState: null,
+        actions: []
+      };
+    }
+
+    return renderFlowFromStep(flow, nextStepId, flowState.flowId);
+  }
+
+  const match = matchStepOption(message, step);
+
+  if (!match) {
+    return {
+      reply:
+        step.retry ||
+        `I’m not quite sure which option that matches.\n\n${renderStepText(step)}`,
+      images: step.images || [],
+      flowState,
+      actions: optionsToActions(step.options)
+    };
+  }
+
+  return renderFlowFromStep(flow, match.next, flowState.flowId);
+}
+
+function renderFlowFromStep(flow, stepId, flowId) {
+  let currentStepId = stepId;
+  const messages = [];
+  const images = [];
+
+  for (let guard = 0; guard < 8; guard++) {
+    const step = getStep(flow, currentStepId);
+
+    if (!step) {
+      return {
+        reply: "I could not find the next step in this reference flow.",
+        flowState: null,
+        actions: []
+      };
+    }
+
+    if (step.images) images.push(...step.images);
+    messages.push(renderStepText(step));
+
+    if (step.type === "question") {
+      return {
+        reply: messages.filter(Boolean).join("\n\n"),
+        images,
+        flowState: {
+          topic: "data_flow",
+          flowId,
+          stepId: currentStepId
+        },
+        actions: optionsToActions(step.options)
+      };
+    }
+
+    if (step.type === "route" && step.target) {
+      return startDataFlow(step.target);
+    }
+
+    if (step.end || !step.next) {
+      return {
+        reply: messages.filter(Boolean).join("\n\n"),
+        images,
+        flowState: null,
+        actions: []
+      };
+    }
+
+    currentStepId = step.next;
+  }
+
+  return {
+    reply: "This flow has too many automatic steps. Please check the flow file.",
+    flowState: null,
+    actions: []
+  };
+}
+
+function renderStepText(step) {
+  let text = String(step.content || "").trim();
+
+  if (step.type === "question" && Array.isArray(step.options)) {
+    const optionsAlreadyRendered = step.options.some((option, index) => {
+      const value = String(option.value || index + 1);
+      return text.includes(`${value} `) || text.includes(`${value}.`);
+    });
+
+    if (!optionsAlreadyRendered) {
+      const optionText = step.options
+        .map((option, index) => {
+          const value = String(option.value || index + 1);
+          const label = option.label || option.text || "";
+          return label ? `${value} ${label}` : value;
+        })
+        .join("\n");
+
+      text = `${text}\n\n${optionText}`;
+    }
+  }
+
+  return text;
+}
+
+function optionsToActions(options) {
+  if (!Array.isArray(options)) return [];
+
+  return options.map((option, index) => {
+    const value = String(option.value || index + 1);
+    const label = option.label || option.text || value;
+
+    return {
+      label,
+      value
+    };
+  });
+}
+
+function matchStepOption(message, step) {
+  const text = normalise(message);
+  const options = Array.isArray(step.options) ? step.options : [];
+
+  for (let i = 0; i < options.length; i++) {
+    const option = options[i];
+    const value = normalise(String(option.value || i + 1));
+    const label = normalise(option.label || option.text || "");
+    const aliases = [
+      ...(Array.isArray(option.aliases) ? option.aliases : []),
+      ...(Array.isArray(option.match) ? option.match : [])
+    ].map(normalise);
+
+    if (text === value) return option;
+    if (label && (text === label || text.includes(label))) return option;
+
+    for (const alias of aliases) {
+      if (alias && (text === alias || text.includes(alias))) {
+        return option;
+      }
+    }
+  }
+
+  return null;
+}
+
+function loadFlow(flowId) {
+  const safeFlowId = String(flowId || "").replace(/[^a-z0-9._-]/gi, "");
+  const filePath = path.join(process.cwd(), "data", "flows", `${safeFlowId}.json`);
+
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
+
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  } catch (err) {
+    console.error("Could not parse flow file:", filePath, err);
+    return null;
+  }
+}
+
+function getStep(flow, stepId) {
+  if (!flow || !flow.steps) return null;
+  return flow.steps[stepId] || null;
+}
+
+function normalise(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/[^a-z0-9\s\-']/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 function normaliseFigureKey(value) {
