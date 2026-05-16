@@ -289,8 +289,28 @@
     <div id="status" class="status"></div>
 
     <footer class="input-wrap">
-      <textarea id="input" class="input" rows="1" placeholder="Ask about figures, variants, COOs, cloaks or accessories..."></textarea>
-      <button class="send" onclick="sendMessage()">Send</button>
+      <input
+        type="file"
+        id="photoInput"
+        accept="image/*"
+        capture="environment"
+        style="display:none"
+      />
+
+      <button class="send" onclick="openPhotoPicker()" style="width:56px">
+        📷
+      </button>
+
+      <textarea
+        id="input"
+        class="input"
+        rows="1"
+        placeholder="Ask about figures, variants, COOs, cloaks or accessories..."
+      ></textarea>
+
+      <button class="send" onclick="sendMessage()">
+        Send
+      </button>
     </footer>
   </div>
 
@@ -427,6 +447,10 @@
 
     function sendPreset(text) {
       sendMessage(text);
+    }
+
+    function openPhotoPicker() {
+      document.getElementById("photoInput").click();
     }
 
     function autoSizeInput() {
