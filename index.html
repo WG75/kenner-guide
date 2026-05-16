@@ -410,17 +410,23 @@
       scrollToBottom();
     }
 
-    async function askApi(message) {
+    async function askApi(message, imageDataUrl) {
+      const payload = {
+        message,
+        history: state.history.slice(-30),
+        flowState: state.flowState
+      };
+
+      if (imageDataUrl) {
+        payload.image = imageDataUrl;
+      }
+
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-          message,
-          history: state.history.slice(-30),
-          flowState: state.flowState
-        })
+        body: JSON.stringify(payload)
       });
 
       const data = await res.json().catch(() => ({}));
@@ -502,17 +508,43 @@
       document.getElementById("photoInput").value = "";
     }
 
-    function analysePhoto() {
+    async function analysePhoto() {
       if (!pendingPhoto) return;
 
-      addMessage("user", "📷 Photo uploaded");
+      const photoToAnalyse = pendingPhoto;
 
-      addMessage(
-        "bot",
-        "Photo analysis is not connected yet. The next step is wiring this into AI figure recognition."
-      );
+      addMessage("user", "📷 Photo uploaded for analysis");
+      setStatus("VF-CB is analysing the photo...");
 
-      cancelPhotoPreview();
+      try {
+        const imageDataUrl = await fileToDataUrl(photoToAnalyse);
+        const data = await askApi("Analyse this uploaded figure photo.", imageDataUrl);
+
+        state.flowState = data.flowState || null;
+
+        if (Array.isArray(data.images)) {
+          data.images.forEach(addImageCard);
+        }
+
+        addMessage("assistant", data.reply || "I could not identify the figure from that image.");
+      } catch (err) {
+        console.error(err);
+        addMessage("assistant", "Sorry, there was a problem analysing the photo.");
+      } finally {
+        setStatus("");
+        cancelPhotoPreview();
+      }
+    }
+
+    function fileToDataUrl(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = () => reject(new Error("Could not read image file"));
+
+        reader.readAsDataURL(file);
+      });
     }
 
     function autoSizeInput() {
