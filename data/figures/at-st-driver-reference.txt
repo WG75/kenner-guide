@@ -4,24 +4,51 @@ Packaging: Return of the Jedi
 Category: Figure
 
 Overview:
-AT-ST Driver is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+AT-ST Driver is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65/77/79-back; later Trilogo/POTF-era carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-4.txt under Figure Name: AT-ST Driver. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Lili Ledy — Sorry, content not available yet.
+- Families and notes named on the page index
+  - I: Taiwan (U.M.)
+  - II: Unitoy/ Lili Ledy
+  - ENDOR BLASTER
+  - PALACE BLASTER
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
 2. Which head, paint or body trait matches a section above?
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists AT-ST Driver on the 77-back "Return of the Jedi" card, No. 71330, 1984.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtATSTDriver.asp
+- Source: ( Return of the Jedi )
+- Date Stamp: 1984
+- Release Date: 1984
+- Carded Availability: Return of the Jedi Power of the Force Tri-Logo
+- Assortment No.: 71330
+- Weapons and Accessories: Endor Blaster (all colours but black)
+- Point of Interest: This figure first appeared on the Return Of The Jedi 77 back card. An alternate image was used on the Tri-Logo card back.
+- Major variations: Though all vintage figures have minor variations, the AT-ST Driver has no known major variations. Endor Blaster This weapon was moulded in many shades of gray and blue/gray, as well as black plastic using at least three slightly different sculpts. All the gray and blue/gray versions can be found with the AT-ST Driver , Princess Leia Organa (In Combat Poncho) , and B-Wing Pilot action figures. The Black accessory was only included with the Imperial Gunner and A-Wing Pilot (both Power Of The Force and Droids versions).
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
 
 Sources:
 https://www.variantvillain.com/characters/rotj/at-st-driver/

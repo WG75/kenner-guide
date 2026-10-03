@@ -4,20 +4,55 @@ Packaging: Return of the Jedi
 Category: Figure
 
 Overview:
-Teebo is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Teebo is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65/77/79-back; later Trilogo/POTF-era carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-4.txt under Figure Name: Teebo. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- The Kader China and the French Trilogo figures came with “round tip” saber M5 . The Glasslite version came with the resident M8 saber.
+- French Trilogo (Meccano) double raised bar
+- French Trilogo (Meccano) scarred raised bar
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- FIGURE GUIDE: OVERVIEW — Above you can see a group shot of nearly all important vintage Luke Skywalker variants and bootlegs. First row is Unitoy plus POCH and PBP, second row is Kader, Kader China, French Trilogo, Poch and bootlegs, third row is Smile and Taiwan figures plus bootleg. I will go into deep
-- UNITOY / Lili Ledy — Above you can see following variants produced by Unitoy (left to right):
-- TAIWAN (U.M.) — Above you can see following variants produced by Unitoy (left to right):
+- Families and notes named on the page index
+  - I: Unitoy/ Lili Ledy
+  - II: Taiwan (U.M.)
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- FIGURE GUIDE: OVERVIEW
+  - Above you can see a group shot of nearly all important vintage Luke Skywalker variants and bootlegs. First row is Unitoy plus POCH and PBP, second row is Kader, Kader China, French Trilogo, Poch and bootlegs, third row is Smile and Taiwan figures plus bootleg. I will go into deeper detail each group below.
+- UNITOY / Lili Ledy
+  - Above you can see following variants produced by Unitoy (left to right):
+    - Unitoy with light grey furstripes and a flesh coloured hood
+    - Unitoy with grey furstripes and a flesh coloured hood
+    - Unitoy with dark grey furstripes and a white coloured hood
+  - The first 4 Kader figures can be considered as early produced and are more likely to come with “lettered” lightsaber M1 .
+  - Above you can see following variants produced by Lili Ledy (left to right):
+    - Lili Ledy with light grey furstripes and greyish brown eyes
+    - Lili Ledy with light blueish grey furstripes and brown eyes
+  - The Kader China and the French Trilogo figures came with “round tip” saber M5 . The Glasslite version came with the resident M8 saber.
+- TAIWAN (U.M.)
+  - Above you can see following variants produced by Unitoy (left to right):
+    - Taiwan (U.M.) with dark grey furstripes and a white coloured hood
+    - Taiwan (U.M.) with
+  - The first 4 Kader figures can be considered as early produced and are more likely to come with “lettered” lightsaber M1 .
+  - Above you can see following variants (left to right):
+    - Kader China: raised bar China
+    - French Trilogo (Meccano) double raised bar
+    - French Trilogo (Meccano) scarred raised bar
+    - Glasslite double raised bar
+    - POCH with Unitoy head but Kader COO legs. It is a mixed-up figure made out of parts from the blonde Kader and brown Unitoy POCH figures. Some call it “transition” figure but it’s more likely used parts from old and new production mixed in the assembling line.
+  - The Kader China and the French Trilogo figures came with “round tip” saber M5 . The Glasslite version came with the resident M8 saber.
+- Notes from the page with the photo credit name removed
+  - Teebo is again one of my favourites on Lili Ledy. It is, together with C-3PO removable limbs, the hardest figure to get complete (only counting the standard LL figures). I have pictured two totally different versions which can be both only found in Mexico.
+  - What you can notice first is the different fur colour (lighter and darker stripes) and the slightly different colour to the “feathers” on the headpiece.
+  - On the picture below you can also notice the main difference very quick: the eye colour.
+  - The Teebo on the left has grey eyes and the Teebo to the right has very brown eyes. Both eye colours, as well as both fur colours, are unique compared to all “Kenner” produced figures.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

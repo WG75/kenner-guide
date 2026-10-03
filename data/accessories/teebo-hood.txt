@@ -3,12 +3,43 @@ Aliases: Teebo Headpiece
 Category: Accessory
 
 Overview:
-Teebo Headpiece is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Teebo Headpiece is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- MOULD COMPARISON: M1 & M2 — There are 2 main mould variations: M1 used by Unitoy in Hong Kong and later on by Lili Ledy in Mexico and M2 which was used by Universal Manufacturers in Taiwan . The main differences are the plastic malleability (M2=slightly softer) and mould cavities used: M1 was stamped 1, 2,
-- UNITOY/ LILI LEDY — M1 was produced by UNITOY in Hong Kong. The metal-mould later went to LILI LEDY in Mexico. These headpieces sink when submerged under water. The mould cavities used were stamped 1, 2, 3 and 4 . All combinations of letters (mould cavities) and colours can occur.
-- TAIWAN (U.M.) — M2 was produced by UNIVERSAL MANUFACTURERS in TAIWAN . These headpieces are made out of slightly more flexible material compared to M1 and sink when submerged under water. There is mainly two plastic colours known on those: beige and greyish coloured. The mould cavities used
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Unitoy/ Lili Ledy
+  - M2: Taiwan (U.M.)
+  - The Teebo Headpiece was usually released with the following combinations of colour to figure:
+    - Beige Headpiece:
+      - Teebo
+  - There are two main mould variations. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the mould used.
+- MOULD COMPARISON: M1 & M2
+  - There are 2 main mould variations: M1 used by Unitoy in Hong Kong and later on by Lili Ledy in Mexico and M2 which was used by Universal Manufacturers in Taiwan . The main differences are the plastic malleability (M2=slightly softer) and mould cavities used: M1 was stamped 1, 2, 3 and 4  whereas M2 was stamped with 5, 6, 7 and 8 . Also M1 seems to have gate scars on both ears whereas M2 has only one gate scar on the left ear and a nub inside to create a gap between the hood and Teebo’s nose.
+- UNITOY/ LILI LEDY
+  - M1   was produced by UNITOY in Hong Kong. The metal-mould later went to LILI LEDY in Mexico. These headpieces sink when submerged under water. The mould cavities used were stamped 1, 2, 3 and 4 . All combinations of letters (mould cavities) and colours can occur.
+    - The following colours are known:
+      - white/green feathers [3] (Tri-Logo/Macau)
+      - cream/glossy brownish feathers [3] ( Lili Ledy )
+      - dark cream/glossy olive feathers [1] ( Lili Ledy )
+      - flesh/light green feathers [1]
+      - flesh/light green feathers [2]
+      - flesh/light green feathers [4]
+      - flesh/dark green feathers [3]
+      - white/green feathers [3] (POTF)
+      - cream/glossy brownish feathers [3] (Lili Ledy)
+      - dark cream/glossy olive feathers [1] (Lili Ledy)
+- TAIWAN (U.M.)
+  - M2   was produced by UNIVERSAL MANUFACTURERS in TAIWAN . These headpieces are made out of slightly more flexible material compared to M1 and sink when submerged under water. There is mainly two plastic colours known on those: beige and greyish coloured. The mould cavities used were stamped 5, 6, 7, and 8. All combinations of letters (mould cavities) and colours can occur.
+    - The following colours are known:
+      - beige/light green feathers [8]
+      - beige/green feathers [6]
+      - beige/light olive feathers [7]
+      - beige/dark olive feathers [5]
+      - greyish/light green feathers [5]
+      - greyish/green feathers [6]
+      - greyish/dark olive feathers [8]
+      - beige/ldark olive feathers [5]
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

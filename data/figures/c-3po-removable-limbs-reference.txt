@@ -4,24 +4,56 @@ Packaging: The Empire Strikes Back
 Category: Figure
 
 Overview:
-C-3PO (Removable Limbs) is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+C-3PO (Removable Limbs) is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: unknown - not established in the reference workbook
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-5.txt under Figure Name: C-3PO (Removable Limbs). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- FIXED & REMOVABLE LIMB FIGURE COMPARISON
+- Families and notes named on the page index
+  - 1.1/1.2: Unitoy
+  - 1.3: Droids (Smile)/ Glasslite
+  - 2.1: Smile
+  - 2.2: Smile/   Lili Ledy
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Notes from the page with the photo credit name removed
+  - Sometime around 2014
+  - We can find C-3PO removable limbs with HK COO and with No COO.
+  - Both LL figures are made out of the typical white plastic and both versions have “Kenner” pendants although this is pretty much unknown.
+  - Both COOs can be found with either a “fat” or a “slim” head. The slim headed ones can be called factory error, because a wrong head – the head from the fixed limbs C-3PO, was accidentally used. For more see: C-3PO
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
 2. Which head, paint or body trait matches a section above?
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists C-3PO (Removable Limbs) on the 45-back "The Empire Strikes Back" card, No. 69430 / No. 69600, 1982.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtC3POlimbs.asp
+- Source: ( The Empire Strikes Back )
+- Date Stamp: 1982
+- Release Date: 1982
+- Carded Availability: The Empire Strikes Back Return of the Jedi Power of the Force Tri-Logo
+- Assortment No.: 39300
+- Weapons and Accessories: Backpack
+- Point of Interest: This figure made its first appearance on The Empire Strikes back 45 back card, replacing altogether the original version of the character, See-Threepio (C-3PO) .
+- Major variations: Although all figures have minor variations, the C-3PO (Removable limbs) action figure has one major International variation. The figure was produced in Brazil by Glasslite , the company holding the Star Wars license in that country. Most of their figures look very similar, at first glance, to the standard Kenner release, but not so for C-3PO . Unlike the gold vac-metal finish on the domestic figure, the Glasslite version featured a slightly dull gold non-vac-metal finish. (pictures to come) The C-3PO (Removable limbs) sculpt was reused to produce the Droids version of C-3PO . This figure shows up in many different shades of gold, and sometimes what appears to be silver, but there is little indication of this being an actual factory variation. In most cases it is either the result of the materials used or fading due to unsatisfactory storage conditions.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
 
 Sources:
 https://www.variantvillain.com/characters/esb/c-3po-removable-limbs/

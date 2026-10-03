@@ -2,24 +2,66 @@ Figure Name: Han Solo (in Trench Coat)
 Aliases: Han Solo (in Trench Coat); in Trench Coat; Han Endor; Trench Coat Han
 Packaging: Return of the Jedi
 Category: Figure
+Part: 1 of 2
 
 Overview:
-Han Solo (in Trench Coat) is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Han Solo (in Trench Coat) is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65/77/79-back; later Trilogo/POTF-era carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-4.txt under Figure Name: Han Solo (in Trench Coat). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- Debuting on the Kenner 77A card and shortly followed by the 77B and 79A, the Smile produced figure appears to be the most widely distributed of the Asian factories and ended it’s run on both the POTF and Trilogo cards.
+- UK & European distribution was handled by Smile using imported Kenner cards prior to the Trilogo release. In North America however Smile shared distribution with Kader with the exception of the Canadian bi-lingual French/English cards which Smile produced. After Kader ceased production of the Han Solo in Trench Coat figure, Smile took over sole distribution in North America with the release of the POTF card.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- SMILE — Raised bump on gun holster
-- KADER — Lack of sculpt detail on the collar & belt buckle
-- Lili Ledy — Darker brown, glossy hair
-- Blaster — For years collectors always associated a solid black rebel blaster with the Han Solo in trench coat figure. However recent MOC research has proven this to be untrue for both Kader and Smile factories.
-- TRENCHCOAT — Narrow waist, compared to F2 Kader ‘Camo’
+- Families and notes named on the page index
+  - I: Smile
+  - II: Kader/ Lili Ledy
+  - ACCESSORY GUIDE
+  - REBEL BLASTER
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- SMILE
+  - F1: SMILE 1984 NO COO
+  - Debuting on the Kenner 77A card and shortly followed by the 77B and 79A, the Smile produced figure appears to be the most widely distributed of the Asian factories and ended it’s run on both the POTF and Trilogo cards.
+  - Some key sculpting details for the mould family 1 are:
+    - Raised bump on gun holster
+    - Sharper sculpted collar
+    - Sharper sculpted belt
+- KADER
+  - F2.1: KADER 1984 NO COO
+  - Also appearing on 77A, 77B and 79A cards alongside Smile, the Kader figure had the shorter production run of the two Asian factories. There are two hair colour variants to look out for (light and mid-brown) along with an alternative spray mask used for the facial features which appears on some of the later 79A cards.
+  - Some key sculpting details for the mould family 2.1 are:
+    - Softer sculpted face
+    - Lack of sculpt detail on the collar & belt buckle
+- Lili Ledy
+  - F2.2: LILI LEDY 1984 NO COO
+  - Having moved the tooling to Mexico the figure sculpt remained untouched however the paint and plastics used by Lili Ledy differ a lot when compared to their Kenner counterpart.
+  - Some key sculpting details for the mould family 2.2 are:
+    - Pinkish face
+    - Darker brown, glossy hair
+    - Darker, glossy trousers
+  - WOLFF: A very similar fabric was used for Han Endor coats compared to the Bib Fortuna coats. It looks like it is only used reversed and additionally sprayed with “camouflage” texture. But the Han cape has a fluffy lining that only was used for the burgundy coat Bib Fortuna. So the material in general differs a bit regarding the LL Bib Fortunas.
+  - Two differently coloured fabrics can be noted on Han Endor. A brownish one and a greyish one are known. These colours are not result of fading or being dirty. Both my examples are mint and I have seen a lot more of both variants in years. It can be also noted that the brownish one always has a much darker tone used for the camouflage.
+  - It is said that Han Endor also can come with a blue blaster, but to me the only correct blaster going with this figure is the black one.
+  - You can also note two different heads on those pictured above. Facial details, the colour of the hair as well as the colour of the plastic seem to be really different.
+- Blaster
+  - For years collectors always associated a solid black rebel blaster with the Han Solo in trench coat figure. However recent MOC research has proven this to be untrue for both Kader and Smile factories.
+  - F1: SMILE 1984 NOCOO
+  - M1 Rebel blaster
+  - Dark blue/black
+  - F2.1: KADER 1984 NOCOO – EARLY RELEASE (77A)
+  - M5 Rebel blaster
+  - F2.1: KADER 1984 NOCOO – LATER RELEASE (77A/B – 92A)
+    - Solid black
+  - F2.2:LILI LEDY 1984 NOCOO
+  - M2.2 Bespin blaster (wide handle)
 
+Continued in the next part.
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

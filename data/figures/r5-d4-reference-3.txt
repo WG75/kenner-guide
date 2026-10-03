@@ -1,0 +1,73 @@
+Figure Name: R5-D4
+Aliases: R5-D4
+Packaging: Star Wars
+Category: Figure
+Part: 3 of 4
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-5.txt under Figure Name: R5-D4. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- KADER/ POCH/ MECCANO
+  - KADER 1978 HONG KONG
+  - This F4 KADER family began with R2-D2 and a 1977 date stamp, and the cavity’s featured a “5” or “6”.  After a short production run, this R2 1977 torso mould was re-assigned for the soon to be produced R5-D4. To reflect the new R5-D4 patent date, the stamp was altered to 1978.
+  - You may have spotted that the cavity stamp rotates during different phases of production from HK, Macau and Mexico.  The part of the torso cavity that is stamped, is independent of the cylindrical part of the tool and was slotted into position. By placing this part of the tool forwards or backwards, the number would be facing a different direction. If you disassemble an Kader R2 or R5, you can spot cavity stamps on all the plastic parts used to create the toy.
+  - This version debuted on the 20bk and was a mainstay through the ESB, Jedi and Trilogo eras.
+  - The “Red Bar” sticker variation is a factory error produced from this factory (refer to the sticker guide below).
+  - Above you can see following variants (left to right):
+    - Kader HK COO Dark blue sticker. SW/ESB era version
+    - Kader HK COO “Red Bar” Sticker ESB era small wedge sticker
+    - Kader HK COO Light blue sticker. ROTJ era version
+    - Key details for the Kader R5-D4 are:
+      - Wider dome than Unitoy
+      - Large eye spray mask
+      - Chrome “shoulders”
+      - Mid-red for the dome and legs
+      - A leg sculpt which is shared with the Kader R2-D2.
+      - EPMs are found on both the upper leg strut and also on the battery pack on the foot
+      - Wide-domed Phillips head screw used for assembly
+      - Produced with dark/mid blue (SW/ESB era) and light blue (ROTJ/Trilogo era) stickers
+    - POCH 1978 HONG KONG
+  - Poch (early PBP) received a mix of painted and unpainted Kader HK parts to produce their figures in Spain. The well documented version with orange dome and dark red legs is joined by a newly acknowledged Poch variant with bright orange legs and a mid orange dome. Both have the 1978 HK COO torso, though I’ve heard of 1977 R2 torsos also being used.
+  - Poch orange legs SW era large wedge sticker
+  - Poch light orange dome, dark red legs SW era large wedge sticker
+  - To identify an R5 figure as Poch with any certainty requires a combination of traits – the more the better. Poch figures are often unique and feature a combination of torn plastic burrs, messy paint, excessive flashing, poorly aligned stickers, paint overspray, a dull satin chrome finish on the neck and  preferably with Euro origins.
+  - FRENCH TRILOGO (Meccano exclusive) 1978 SCAR/SMOOTH NO COO
+  - Very late era figures were shipped to France which had their COOs removed. This figure originally had the COO scarred out, before a smooth version was then produced. To be clear, this “Meccano” R5 is produced by Kader in Macau where the dome and legs are a darker red. A number of examples have been found with Kader HK orange-red domes and the darker Macau legs suggesting overstock domes were sent to the Macau factory. The sticker used is the later variation of the large wedge with the lighter blue highlights. Sculpt is the same as the common Kader HK figure.
+  - Kader “Scarred” No COO Mid-red (overstock) dome
+  - Kader “Scarred” No COO Dark-red dome
+  - Kader “Smooth” No COO Dark-red dome
+- UNITOY
+  - UNITOY 1977 MADE IN HONG KONG COO
+  - The F5 MIHK COO has smaller writing and is in a slightly different configuration to the previously documented F1 MIHK COO.  This COO also can be found with both the Unitoy R2-D2 Solid & Sensorscope figures.
+  - Above you can see following variants (left to right):
+    - Unitoy MIHK SW/ESB version
+    - Unitoy MIHK  “Red Bar” Sticker
+  - We’ve found both large and small MIHK COOs on early 21bk Unitoy cards as well as Trilogo cards. These moulds were used in various stages without any reason other than it just happened to be the mould that was picked up off the shelf by the tooling manager on the day.
+  - COO aside, the rest of the figure shares the same details with it’s Unitoy brother, the SW/ESB era F1 MIHK COO. To recap, the k ey details for the mould family 5 Unitoy R5 are:
+    - Smaller dome than Kader
+    - Large or small eye spray mask
+    - Large wedge sticker
+    - Orange-red paint for dome and legs
+    - No leg EPMs
+    - Tall or medium height platforms foot soles
+    - Unitoy used a flanged screw to assemble their Astromech figures
+- COO Family VI:
+  - Not Applicable. R2-D2 COO only.
+- COO Family VII:
+  - Not Applicable. R2-D2 COO only.
+- KADER
+  - KADER 1978 HONG KONG COO
+  - We’ve only noted an F8 R5 on a mixed up late ESB era MOC so far, and will update this info as others are documented.
+  - Above you can see following variants (left to right):
+    - Kader HK COO Light orange dome. Dark blue sticker. SW/ESB era version
+    - Kader HK COO Orange dome. Dark blue sticker. SW/ESB era version
+    - Kader HK COO “Red Bar” Sticker ESB era small wedge sticker
+    - Kader HK COO Light blue sticker. ROTJ era version
+    - The details for the F8 Kader R5-D4 are the same as the Kader family 4.
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/sw/r5-d4/

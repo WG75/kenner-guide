@@ -3,12 +3,40 @@ Aliases: Teebo Battle Horn
 Category: Accessory
 
 Overview:
-Teebo Battle Horn is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Teebo Battle Horn is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- MOULD COMPARISON: M1 & M2 — There are two main mould variations: M1 used by Unitoy in Hong Kong and later on by Lili Ledy in Mexico and M2 which was used by Universal Manufacturers in Taiwan . The main differences are the plastic malleability (M1=stiff, M2=slightly softer) and mould cavities used: M1 was
-- UNITOY/ LILI LEDY — M1 was produced by UNITOY in Hong Kong. The metal-mould later went to LILI LEDY in Mexico. These battle horns are made out of rigid material and sink when submerged under water. The mould cavities used were stamped A, B, C and D. All combinations of letters (mould cavity) and
-- TAIWAN (U.M.) — M2 was produced by UNIVERSAL MANUFACTURERS in TAIWAN . These battle horns are made out of a more flexible material compared to M1 and sink when submerged under water. The mould cavities used were stamped E, F, G and H. All combinations of letters (mould cavity) and colours can
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Unitoy/ Lili Ledy
+  - M2: Taiwan (U.M.)
+  - The Teebo Battle Horn was usually released with the following combinations of colour to figure:
+    - Beige Battle Horn:
+      - Teebo
+  - There are two main mould variations. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the mould used.
+- MOULD COMPARISON: M1 & M2
+  - There are two main mould variations: M1 used by Unitoy in Hong Kong and later on by Lili Ledy in Mexico and M2 which was used by Universal Manufacturers in Taiwan . The main differences are the plastic malleability (M1=stiff, M2=slightly softer) and mould cavities used: M1 was stamped A, B, C and D whereas M2 was stamped with E, F, G and H .
+- UNITOY/ LILI LEDY
+  - M1   was produced by UNITOY in Hong Kong. The metal-mould later went to LILI LEDY in Mexico. These battle horns are made out of rigid material and sink when submerged under water. The mould cavities used were stamped A, B, C and D. All combinations of letters (mould cavity) and colours can occur.
+    - The following colours are known:
+      - glossy cream [A] ( Lili Ledy )
+      - glossy dark cream [A] ( Lili Ledy )
+      - light beige [C]
+      - light beige [D]
+      - beige [A]
+      - beige [C]
+      - dark beige [B]
+      - glossy cream [A] (Lili Ledy)
+      - glossy dark cream [A] (Lili Ledy)
+- TAIWAN (U.M.)
+  - M2   was produced by UNIVERSAL MANUFACTURERS in TAIWAN . These battle horns are made out of a more flexible material compared to M1 and sink when submerged under water. The mould cavities used were stamped E, F, G and H. All combinations of letters (mould cavity) and colours can occur.
+    - The following colours are known:
+      - beige [G]
+      - brownish beige [G]
+      - light reddish beige [E]
+      - light reddish beige [F]
+      - light reddish beige [H]
+      - dark reddish beige [G]
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

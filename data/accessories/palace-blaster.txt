@@ -3,18 +3,83 @@ Aliases: Palace Blaster
 Category: Accessory
 
 Overview:
-Palace Blaster is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Palace Blaster is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- MOULD COMPARISON: M1, M2, M3, M4
-- SMILE — M1 was produced by SMILE in Hong Kong and can come in three main colours:
-- UNIVERSAL MANUFACTURERS — M2 was produced by UNIVERSAL MANUFACTURERS in TAIWAN and can come in two main colours:
-- UNITOY — M3 was produced by UNITOY in Hong Kong and LILI LEDY in Mexico and can come in four main colours:
-- Top Toys — M4 was produced by TOP TOYS in Argentina:
-- GW ACRYLIC PALACE BLASTER DISPLAY CASE — Easy to use, the Palace Blaster accessory holder is supplied in 2 parts – BASE and TOP PLATE – and are specifically designed to accompany the GW Acrylic LASER cases .
-- Brazil — This blaster was produced by MODEL TREM for the “AVENTURA NA GALÁXIA” line in Brazil . These are not made out of plastic but some lead-tin-alloy. The mould was only used in the mid 80s and came with their resident figures:
-- MEXICO — Besides the licensed production through the Lili Ledy company, the bootleg production in Mexico was not in hand of larger factories. These were family businesses, small establishments, that made their own molds, their own machines to inject the plastic. Therefore there is no
-- Thomas Gill — Floats. Some more than others. The grey seems to sink and then float back up or just kind float around in limbo
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Smile
+  - M2: Taiwan (U.M.)
+  - M3: Unitoy/ Lili Ledy
+  - The Palace Blaster was usually released with the following combinations of colour to figure:
+    - Grey/Brown Palace Blaster:
+      - Luke Skywalker Jedi Knight
+      - Luke Skywalker Jedi Knight (TOP TOYS)
+      - Luke Skywalker Jedi Knight (LILI LEDY)
+      - B-Wing Pilot (LILI LEDY)
+    - Blue-Black Palace Blaster:
+      - AT-ST Driver (LILI LEDY)
+    - Solid black Palace Blaster:
+      - Lando Calrissian General
+      - Luke Skywalker Battle Poncho
+      - Factory Error on some Trilogo Cards: Yak Face
+  - There are 3 main mould variations plus the Top Toys one. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the steel mould used.
+- SMILE
+  - M1 was produced by SMILE in Hong Kong and can come in three main colours:
+    - light grey-brown (Luke Jedi HK COO/No COO)
+    - dark grey-brown (Luke Jedi HK COO)
+    - solid black (Lando General, Luke Poncho)
+    - light grey-brown
+    - dark grey-brown
+    - solid black
+- UNIVERSAL MANUFACTURERS
+  - M2 was produced by UNIVERSAL MANUFACTURERS in TAIWAN and can come in two main colours:
+    - light grey (Luke Jedi TW COO)
+    - dark grey (Luke Jedi TW COO)
+    - light grey
+    - dark grey
+- UNITOY
+  - M3 was produced by UNITOY in Hong Kong and LILI LEDY in Mexico and can come in four main colours:
+    - brown (Luke Jedi MIHK COO)
+    - light greenish grey (Lili Ledy: Luke Jedi MIHK COO/B-Wing Pilot No COO)
+    - dark greenish grey (Lili Ledy: Luke Jedi MIHK COO/B-Wing Pilot No COO)
+    - blue-black with a violet hue ( Lili Ledy: AT-ST Driver No COO)
+    - brown
+    - light greenish grey
+    - dark greenish grey
+    - blue-black with a violet hue
+- Top Toys
+  - M4 was produced by TOP TOYS in Argentina:
+    - brown (Luke Jedi no copyright, no country of origin)
+    - brown
+- Brazil
+  - This blaster was produced by MODEL TREM for the “AVENTURA NA GALÁXIA” line in Brazil . These are not made out of plastic but some lead-tin-alloy. The mould was only used in the mid 80s and came with their resident figures:
+    - lead-tin-alloy unpainted
+    - lead-tin-alloy
+    - Courtesy of Martijn Emmelot.
+- MEXICO
+  - Besides the licensed production through the Lili Ledy company, the bootleg production in Mexico was not in hand of larger factories. These were family businesses, small establishments, that made their own molds, their own machines to inject the plastic. Therefore there is no specific lines or producers known.
+  - These blasters shown below were packed mainly with S/A (semi-articulated) figures in the 80s, 90s and 2000s. The colour can in some cases indicate if it is an only 80s production or if it has been produced way later. They came on sprue trees together with Vibro Axe, Biker Scout Blaster, Handheld Saber and Rebel Blaster:
+    - 90s Mexican Sprue Tree
+    - There seems to be an endless variety of colours on those. Shown below is a range of products:
+      - white: produced in 80s and 90s
+      - pink: only 90s
+      - green: only 90s
+    - white
+    - pink
+    - green
+    - The blaster shown below is often sold as vintage 80s, but was clearly made from the POTF2 BlasTech DL-18 Skiff Guard Blaster which was release 1996 (POTF2 Han Carbonite).
+- Notes from the page with the photo credit name removed
+  - Posting this one up as I’ve seen a few of these pop up in groups lately.
+  - Don’t see these often at all. An odd blaster based on the v1 mould with some obvious flaws if you take time to look.
+  - It lacks in definition all over but does carry the usual traits of original that people tend to look for.
+  - Floats. Some more than others. The grey seems to sink and then float back up or just kind float around in limbo
+  - Has circle on grip that many repro don’t
+  - Has has the small raised dot. Not very prominent but as I said above it does lack fine detail.
+  - Point of interest are:
+    - Cut off point is at the back of the blaster above the grip like only a v3 has (looks to be cut with a knife) whereas the v1 cut off point is on the butt of the gun.
+    - The hole above grip. This imperfection is on all of these and is the biggest indicator
+    - Thanks for looking.
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

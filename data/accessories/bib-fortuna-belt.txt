@@ -3,13 +3,31 @@ Aliases: Bib Fortuna Belt
 Category: Accessory
 
 Overview:
-Bib Fortuna Belt is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Bib Fortuna Belt is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- MOULD COMPARISON: M1, M2 & M3
-- SMILE — M1 was produced by SMILE in Hong Kong. The following colours are known:
-- LILI LEDY — M2 was produced by KADER in Hong Kong and LILI LEDY in Mexico. The following colours are known:
-- UNIVERSAL MANUFACTURERS — M3 was produced by UNIVERSAL MANUFACTURERS in TAIWAN . The following colours are known:
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Smile
+  - M2: Kader/Lili Ledy
+  - M3: Universal Manufacturers
+  - Bib Fortuna
+  - Bib Fortuna (Lili Ledy)
+  - There are 3 main mould variations plus subvariants on the Bib Fortuna Belt. As a result of the fact that these were shot on a sprue tree in higher numbers each shot the subvariants may vary heavily depending on the steel mould used.
+- SMILE
+  - M1 was produced by SMILE in Hong Kong. The following colours are known:
+    - yellowish grey
+    - grey
+- LILI LEDY
+  - M2 was produced by KADER in Hong Kong and LILI LEDY in Mexico. The following colours are known:
+    - light grey
+    - yellowish light grey
+    - grey
+    - dark grey (Lili Ledy)
+- UNIVERSAL MANUFACTURERS
+  - M3 was produced by UNIVERSAL MANUFACTURERS in TAIWAN . The following colours are known:
+    - grey
+    - yellowish grey
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

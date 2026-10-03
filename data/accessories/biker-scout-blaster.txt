@@ -3,17 +3,64 @@ Aliases: Biker Scout Blaster
 Category: Accessory
 
 Overview:
-Biker Scout Blaster is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Biker Scout Blaster is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- MOULD COMPARISON: M1, M2, M3 & M4
-- UNITOY — M1 was produced by UNITOY in Hong Kong. The following colours are known:
-- KADER / PBP — M2 was produced by KADER in Hong Kong. The mould was also used by PBP for ROTJ no COO scarred out Biker Scout and for the Macao Biker Scout released on French Tri-Logo cardbacks. The following colours are known:
-- UNIVERSAL MANUFACTURERS — M3 was produced by UNIVERSAL MANUFACTURERS in TAIWAN . The following colours are known:
-- M4: LILI LEDY — M4 was produced by LILI LEDY in Mexico. The cavity numbers are stamped on the hilt. Known letters are: A, B, D and E. The following colours are known:
-- GW ACRYLIC BIKER SCOUT BLASTER DISPLAY CASE — Easy to use, the Biker Scout Blaster accessory holder is supplied in 2 parts – BASE and TOP PLATE – and are specifically designed to accompany the GW Acrylic LASER cases .
-- MEXICO — Besides the licensed production through the Lili Ledy company, the bootleg production in Mexico was not in hand of larger factories. These were family businesses, small establishments, that made their own molds, their own machines to inject the plastic. Therefore there is no
-- POLAND — This blaster was produced by Elektrospółdzielnia (EVANPLAST) for an unnamed line in Poland . The mould was used in the 80s, 90s and 2000s (1985-2003). These were packed in baggies probably stapled onto cardbacks and sold as accessory sets. They are nowadays mostly paired with
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1: Unitoy
+  - M2: Kader/PBP
+  - M3: Taiwan
+  - M4: Lili Ledy
+  - The Biker Scout Blaster was usually released with the following combinations of colour to figure:
+    - Grey Blaster:
+      - Biker Scout
+    - Light-Grey Blaster:
+      - Biker Scout (PBP)
+    - Dark-Grey Blaster:
+      - Biker Scout (LILI LEDY)
+  - There are 4 main mould variations in existence. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the steel mould used.
+- UNITOY
+  - M1 was produced by UNITOY in Hong Kong. The following colours are known:
+    - light-grey (blueish)
+    - grey
+    - dark-grey
+    - light-grey
+- KADER / PBP
+  - M2 was produced by KADER in Hong Kong. The mould was also used by PBP for ROTJ no COO scarred out Biker Scout and for the Macao Biker Scout released on French Tri-Logo cardbacks. The following colours are known:
+    - light grey (Macao Biker Scout/French Tri-Logo)
+    - grey
+    - dark grey
+    - yellowish light grey with crisp detail (PBP)
+    - light grey
+    - yellowish light grey with hard plastic
+- UNIVERSAL MANUFACTURERS
+  - M3   was produced by UNIVERSAL MANUFACTURERS in TAIWAN . The following colours are known:
+    - light-grey
+    - grey
+    - yellowish grey
+- M4: LILI LEDY
+  - M4 was produced by LILI LEDY in Mexico. The cavity numbers are stamped on the hilt. Known letters are: A, B, D and E. The following colours are known:
+    - very dark grey
+- Brazil
+  - *coming soon
+- MEXICO
+  - Besides the licensed production through the Lili Ledy company, the bootleg production in Mexico was not in hand of larger factories. These were family businesses, small establishments, that made their own molds, their own machines to inject the plastic. Therefore there is no specific lines or producers known.
+  - These blasters shown below were packed mainly with S/A (semi-articulated) figures in the 80s, 90s and 2000s. The colour can in some cases indicate if it is an only 80s production or if it has been produced way later. They came on sprue trees together with Vibro Axe, Rebel Blaster, Handheld Saber and Palace Blaster:
+    - 90s Mexican Sprue Tree
+    - There seems to be an endless variety of colours on those. Shown below is a range of products:
+      - orange: unique to the 80s
+      - white: produced in 80s and 90s
+      - green: only 90s
+      - pink: only 90s
+    - orange
+    - white
+    - green
+    - pink
+- POLAND
+  - This blaster was produced by Elektrospółdzielnia (EVANPLAST) for an unnamed line in Poland . The mould was used in the 80s, 90s and 2000s (1985-2003). These were packed in baggies probably stapled onto cardbacks and sold as accessory sets. They are nowadays mostly paired with the figures that came from the same factory in the so called “Polish 1st, 2nd and 3rd Gen” lines. All those weapons came in a huge variety of colours over the years. Here is two examples:
+    - black
+    - blue
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

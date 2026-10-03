@@ -4,18 +4,42 @@ Packaging: Return of the Jedi
 Category: Figure
 
 Overview:
-Squid Head is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Squid Head is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-2.txt under Figure Name: Squid Head. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- Plastic and paint colours are key to identifying the figures as the mould variations are very difficult to spot. The moulds for the Kader produced Squid Head were later sent to the Lili Ledy factory in Mexico for their production run, some of which made their way onto the Kenner “Made in Mexico” cardbacks.
+- It’s worth noting that the cape colours shown here are irrelevant. MOCs show us that Kenner Squid Head was packaged with a dark green and brown capes. Lili Ledy produced Squid Head in a more colourful array of green, burgundy, red, dark brown and tan. The rainbow of colours we now can find with his cape are likely a result of temperature and exposure to air which has altered the pigments. Some capes have been chemically altered and in some cases the pigment from the cardback itself has leeched into the fabric creating a colour transition.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Chihuahua — The Hong Kong factories of Kader & Smile (Kenner), plus the Mexican factory of Lili Ledy produced the Squid Head figure.
+- Families and notes named on the page index
+  - Smile: #1
+  - Kader: #1
+  - Smile No COO: #2
+  - Lili Ledy (MIM): #3
+  - BESPIN BLASTER
+  - SQUID HEAD CAPE
+  - Squid Head COO V3 Sheet coming soon
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Notes from the page with the photo credit name removed
+  - The Hong Kong factories of Kader & Smile (Kenner), plus the Mexican factory of Lili Ledy produced the Squid Head figure.
+  - Plastic and paint colours are key to identifying the figures as the mould variations are very difficult to spot. The moulds for the Kader produced Squid Head were later sent to the Lili Ledy factory in Mexico for their production run, some of which made their way onto the Kenner “Made in Mexico” cardbacks.
+  - It’s worth noting that the cape colours shown here are irrelevant. MOCs show us that Kenner Squid Head was packaged with a dark green and brown capes. Lili Ledy produced Squid Head in a more colourful array of green, burgundy, red, dark brown and tan. The rainbow of colours we now can find with his cape are likely a result of temperature and exposure to air which has altered the pigments. Some capes have been chemically altered and in some cases the pigment from the cardback itself has leeched into the fabric creating a colour transition.
+  - KEY DIFFERENCES
+  - Smile: Greyish head, recessed peg hole, cold grey cuff paint, crisp moulding.
+  - Kader: Flesh coloured head, non-recessed peg hole, warm grey cuff paint, less defined moulding.
+  - Lili Ledy/MIM: Similar to Kader, but with no country of origin stamp.
+  - There can be mainly found five different LL capes on Squid Head. The burgundy ones (more brownish whilst the second one is more reddish) seem to be the earlier versions. On those the same material like on the Bib Fortuna burgundy cape was used for the collar. It seems that the lighter one is just a faded version from the darker, more brownish one, but I personally think that this is not true. The lighter one is prone to fading and is often a bit “blotchy” and tends to get more orange, whilst the dark ones seem to be very immune to fading. I have never seen a “transition” cape or a dark one with partial sunlight damage. To me the color differences between those two are too obvious on all examples I have seen in years.
+  - Next up are the non ribbed grey versions of the LL cape on Squid head. There is more brownish ones and more greenish ones. There are also different materials used on those for the collars. I have to check my examples again to be more specific.
+  - The last one has a ribbed cape and typically appeared on MIM cards sold in the USA. It’s possible that this one also appeared on LL ROTJ cards sold in Mexico in the very late period.
+  - Besides the capes the figures, accessories and coos can be the same on all. There are two slightly different coos and two different blaster moulds and colours known.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

@@ -3,20 +3,76 @@ Aliases: Lando Calrissian Cape
 Category: Accessory
 
 Overview:
-Lando Calrissian Cape is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Lando Calrissian Cape is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- CAPE OVERVIEW: M1, M2, M3, M4, M5, M6
-- SMILE — M1 was produced by SMILE in Hong Kong. You can spot them by checking the armholes where one armhole is always leaning to the middle. The following versions are known:
-- PBP — M2 was produced by PBP in Spain. The cape is very similar to the M1 version produced by SMILE. You can spot the difference by the duller surface an regarding the armholes. PBP has always one bigger armhole.
-- SMILE — M3 was produced by SMILE in Hong Kong. The cape was produced later in the line and probably only appeared with the No Coo figures from smile. It is exceptionally darker then any other cape known.
-- Lili Ledy — M4 was produced by LILI LEDY in Mexico. The cape has small, narrow and oval armholes. No crosshatch pattern is present on those. The following versions are known:
-- KADER / KADER CHINA — M5 was produced by KADER in Hong Kong or China. Kader capes have large armholes compared to all others. The armholes are leaning to the outer lines from the cape. The light grey versions from this cape ( M5c ) only appeared with the China stamped versions from Family I . The
-- Unitoy — M6 was produced by UNITOY in Hong Kong. It is very hard to distinguish this cape from the M5 version made by KADER. Unitoy capes are smaller then Kader ones. The armholes are a bit different as well and the corners to the bottom are shaped different. But the easiest spot seems
-- RETRO COLLECTION — The RETRO COLLECTION was introduced in 2019 by HASBRO . The figures are licensed reproductions made to look like the figures from the 70s and 80s. These figures look very similar to the originals at first glance, but on closer inspection you can see clear differences. The capes
-- R1: — The R1 cape is handcut. The material is more rigid then normal capes. There is no crosshatch pattern present and both sides are very glossy. The round armholes are a good telltale as well.
-- R2: — The R2 cape is handcut. It is made out of two self-adhesive foils with structured surface. The material is way more rigid then normal capes. There is no crosshatch pattern present.
-- R3: — The R3 cape is handcut. The armholes are way too small and the whole cape is almost square shaped. The glossy side is absolutey smooth and there is no crosshatch pattern present.
+- Families and notes named on the page index
+  - CAPE OVERVIEW
+  - MI:  Smile
+  - M3: Smile
+  - M4: Lili Ledy
+  - M5: Kader
+  - M6: Unitoy
+  - The Lando Calrissian Cape was usually released with the following combinations of colour to figure:
+    - Grey Vinyl Cape:
+      - Lando Calrissian
+  - There are 6 main variations plus subvariants. Subvariants do exist and may not all be documented. As a result of the fact that these were produced from a vinyl sheet bought from a third party involved, the subvariants may vary heavily depending on the supplier.
+  - Vinyl cape material (PVC) is made out of a heated mass, rolled and milled in several processes to finally get printed or not. That is important to know, because shrinkage can occur to them when heated again, also depending if they were cold milled or heated milled in the last steps and the directions they were milled. Giving exact dimensions of 35+ year old PVC capes is not very helpful for a guide. They were likely die-cut under tension which would also contribute to capes produced in varying sizes from the same source.
+  - So overlaying those to see differences isn’t helpful in most cases. What we have to do is look for overall differences in shapes, forms and die-cuts. For that reason I will refrain on measurements on all vinyl capes but have a scale on all my pictures for reference.
+  - A Lando Calrissian cape does not have a given front or back. But all of those capes have a left and right side determined by the asymmetrical shape of the cape. A front and back side was then assigned to make them comparable in the guide.
+- SMILE
+  - M1 was produced by SMILE in Hong Kong. You can spot them by checking the armholes where one armhole is always leaning to the middle. The following versions are known:
+    - crosshatch/paper pattern, grey ( M1b )
+    - crosshatch/paper pattern, bluesih grey( M1b )
+    - crosshatch/paper pattern, yellowish grey( M1b )
+    - crosshatch/stripes ( M1a )
+    - crosshatch/paper pattern, grey (M1b)
+    - crosshatch/paper pattern, bluesih grey(M1b)
+    - crosshatch/paper pattern, yellowish grey(M1b)
+    - crosshatch/stripes (M1a)
+- PBP
+  - M2 was produced by PBP in Spain. The cape is very similar to the M1 version produced by SMILE. You can spot the difference by the duller surface an regarding the armholes. PBP has always one bigger armhole.
+    - The following versions are known:
+      - crosshatch/paper structure, short cape
+      - crosshatch/paper structure, tall cape
+- SMILE
+  - M3 was produced by SMILE in Hong Kong. The cape was produced later in the line and probably only appeared with the No Coo figures from smile. It is exceptionally darker then any other cape known.
+    - The following versions are known:
+      - crosshatch/glossy smooth
+- Lili Ledy
+  - M4 was produced by LILI LEDY in Mexico. The cape has small, narrow and oval armholes. No crosshatch pattern is present on those. The following versions are known:
+    - smooth/faint, no crosshatch
+- KADER / KADER CHINA
+  - M5 was produced by KADER in Hong Kong or China. Kader capes have large armholes compared to all others. The armholes are leaning to the outer lines from the cape. The light grey versions from this cape ( M5c ) only appeared with the China stamped versions from Family I . The following versions are known:
+    - slight stripes/crosshatch, darker grey ( M5a )
+    - rough structure/crosshatch, medium grey ( M5b )
+    - faint rough structure/crosshatch, medium grey ( M5b )
+    - paper structure/crosshatch, light grey ( M5c )
+    - crosshatch/paper structure, very light grey ( M5c )
+    - slight stripes/crosshatch, darker grey (M5a)
+    - rough structure/crosshatch, medium grey (M5b)
+    - faint rough structure/crosshatch, medium grey (M5b)
+    - paper structure/crosshatch, light grey (M5c)
+    - crosshatch/paper structure, very light grey (M5c)
+- Unitoy
+  - M6 was produced by UNITOY in Hong Kong. It is very hard to distinguish this cape from the M5 version made by KADER. Unitoy capes are smaller then Kader ones. The armholes are a bit different as well and the corners to the bottom are shaped different. But the easiest spot seems to be the surface structure that is very different to the standrad grey ones produced by Kader.
+    - The following versions are known:
+      - slight horizontal lines/crosshatch, grey
+      - slight horizontal lines/crosshatch, blueish grey
+- RETRO COLLECTION
+  - The  RETRO COLLECTION  was introduced in 2019 by  HASBRO . The figures are licensed reproductions made to look like the figures from the 70s and 80s.  These figures look very similar to the originals at first glance, but on closer inspection you can see clear differences. The capes are also made like look-a-likes.
+  - The cape is very similar in shape compared to some of the vintage ones, but the armholes are smaller and uniquely shaped like drops. Both sides are smooth and therefore no crosshatch pattern is present. It mostly imitates the shape of the M1 version from SMILE.
+- Bootlegs
+  - *Coming soon
+- R1:
+  - The R1 cape is handcut. The material is more rigid then normal capes. There is no crosshatch pattern present and both sides are very glossy. The round armholes are a good telltale as well.
+  - The R1 skirt is a recut of the M3 version from SMILE.
+- R2:
+  - The R2 cape is handcut. It is made out of two self-adhesive foils with structured surface. The material is way more rigid then normal capes. There is no crosshatch pattern present.
+  - The R2 cape is a non specific recut of vintage Lando Calrissian Capes.
+- R3:
+  - The R3 cape is handcut. The armholes are way too small and the whole cape is almost square shaped. The glossy side is absolutey smooth and there is no crosshatch pattern present.
+  - The R3 cape is a non specific recut of vintage Lando Calrissian Capes.
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

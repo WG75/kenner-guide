@@ -4,21 +4,45 @@ Packaging: Return of the Jedi
 Category: Figure
 
 Overview:
-Emperor’s Royal Guard is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Emperor’s Royal Guard is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-1.txt under Figure Name: Emperor's Royal Guard. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Kader/ Lili Ledy — Kader features a darker helmet and fluffy bright red cloak
-- UNITOY — UT features a violet-red helmet and fluffy red cloak
-- TAIWAN (UNIVERSAL MANUFACTURERS) — Taiwan helmet colours are generally an orange-red or mid-red colour, and can occasionally be found in much darker shades
-- MOULDING COMPARISONS — Beyond the colour of the helmet, there’s not much to differentiate the figures, although the Kader MIHK figure can feature a more menacing concave shaped visor.
+- Families and notes named on the page index
+  - I: Kader/ Lili Ledy
+  - II: Unitoy
+  - III: Taiwan (U.M.)
+  - MOULDING COMPARISONS
+  - EMPERORS ROYAL GUARD STAFF
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Kader/ Lili Ledy
+  - Left leg: “MADE IN HONG KONG”
+  - Kader features a darker helmet and fluffy bright red cloak
+  - Shorter, and with a sharper frontal ridge to the helmet sculpt
+  - LL features a bright red helmet and a bright or darker ribbed cloak
+- UNITOY
+  - Left leg: “HONG KONG” and smoothed coo
+  - UT features a violet-red helmet and fluffy red cloak
+  - HK coo had a shorter run as the steel tooling was altered to remove the coo for the European market
+  - Two Unitoy figure sculpt variations
+- TAIWAN (UNIVERSAL MANUFACTURERS)
+  - Left leg: “MADE IN TAIWAN”
+  - Taiwan helmet colours are generally an orange-red or mid-red colour, and can occasionally be found in much darker shades
+  - This variant can be identified by it’s strongly ribbed cloak
+- MOULDING COMPARISONS
+  - Beyond the colour of the helmet, there’s not much to differentiate the figures, although the Kader MIHK figure can feature a more menacing concave shaped visor.
+  - The belt/torso section in particular deserves attention as mentioned previously. The rope belt is a completely different sculpt for each factory.
+  - Unitoy ERG has some sculpting variations noted in the graphic below. There’s been two minor cavity variations noted in the arms, legs and and torso. These parts are mixed across the ERGs produced at this factory from HK through to the NCOO figure.
+- Notes from the page with the photo credit name removed
+  - The ERG came with different slit cloaks it seemed, but after examining more closely ROG found out that the cloaks on the LL ERGs are not glued and can be rotated easily. So it can not be proven how these left the factory until a carded one turns up with the slit the other way around. But even then you can “configure” every ERG like you want it. So this needed an entry, but cannot be called variant anymore.
+  - Also difficult is the staff on that one. There is dark grey ones and light grey ones. The mold is present as Kenner produced staff also. The dark grey ones are easy to spot, but the lighter ones can be always Kenner ones too. Most carded examples that survived show the lighter staffs.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

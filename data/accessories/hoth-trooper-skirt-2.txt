@@ -1,0 +1,30 @@
+Accessory Name: Hoth Trooper Skirt
+Aliases: Hoth Trooper Skirt
+Category: Accessory
+Part: 2 of 2
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- R8:
+  - The R8 skirt is handcut and only has slits to the hangers. There is no crosshatch pattern present.
+  - The R8 skirt imitates the M4 version from KADER.
+- R9:
+  - The R9 skirt is made out of a thin and flimsy material. It is handcut and only has slits to the hangers. There is no crosshatch pattern present.
+  - The R9 skirt imitates the M1/M2 version from SMILE.
+- R10:
+  - The R10 skirt is made out of a thick and rigid material. It is handcut and only has rectangular holes to the hangers. There is no crosshatch pattern present.
+  - The R10 skirt imitates no specific version and has an overall unique shape.
+- R11:
+  - The R11 skirt is made out of a smiliar material compared to the PBP originals ones (M5a). The die-cut steps to the top are not present and the handcut curves are an identification point as well. There is a rectangular cut between the hangers which differs from the originals as well.
+  - The R11 skirt is a recut of the M6 version from PBP.
+- R12:
+  - The R12 skirt is made out of a smiliar material compared to the PBP originals ones (between M5a and M5b). The die-cut steps to the top are not present and the handcut curves are an identification point as well. The shape from the hangers is totally off, so this might be the most easiest way to spot those.
+  - The R12 skirt is a recut of the M6 version from PBP.
+- R13:
+  - The R13 skirt is made out of a smiliar material compared to the PBP originals ones but there is no real glossy side compared to originals. One of the specimen shown is wavy and was tempered with, one even shows wear age and yellowing. The outer shape from this fake is pretty accurate but if you look closely you can see that all curves were die-cut with a small tool which leaves die-cut steps before and after every curve.
+  - The R13 skirt is a recut of the M6 version from PBP.
+
+
+Sources:
+https://www.variantvillain.com/accessory-guide/hoth-trooper-skirt/

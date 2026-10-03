@@ -4,27 +4,55 @@ Packaging: Return of the Jedi
 Category: Figure
 
 Overview:
-Logray (Ewok Medicine Man) is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Logray (Ewok Medicine Man) is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-2.txt under Figure Name: Logray (Ewok Medicine Man). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- I: Unitoy/Macau II: Kader III: Lili Ledy (MIM) IV: Top Toys
-- DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
-- Logray can be found with several stripe colours to the fur. Even the colour of the torso (the colour the plastic is made of) can differ heavily. I have pictured a dark brown one and a very light brown one. The medium brown one to the right came directly out of a damaged MIM
-- Logray is in my opinion the most common Lili Ledy figure you can find and therefore was produced in the highest numbers of all LL figures. There is probably many more fur colours out there.
+- Families and notes named on the page index
+  - I: Unitoy/Macau
+  - II: Kader
+  - III: Lili Ledy (MIM)
+  - IV: Top Toys
+  - LOGRAY STAFF
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Notes from the page with the photo credit name removed
+  - Logray can be found with several stripe colours to the fur. Even the colour of the torso (the colour the plastic is made of) can differ heavily. I have pictured a dark brown one and a very light brown one. The medium brown one to the right came directly out of a damaged MIM baggie and therefore still is very tacky.
+  - Logray is in my opinion the most common Lili Ledy figure you can find and therefore was produced in the highest numbers of all LL figures. There is probably many more fur colours out there.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
 2. Which head, paint or body trait matches a section above?
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists Logray (Ewok Medicine Man) on the 65-back "Return of the Jedi" card, No. 70710, 1983.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtLogray.asp
+- Source: ( Return of the Jedi )
+- Date Stamp: 1983
+- Release Date: 1983
+- Carded Availability: Return of the Jedi Tri-Logo
+- Assortment No.: 70710
+- Weapons and Accessories: Shaman Staff Shaman Satchel Logray Headdress
+- Point of Interest: This figure first appeared on the Return Of The Jedi 65 back card. Due to Lucasfilm ’s desire to keep the Ewoks ’ appearance a secret, the Return Of The Jedi 65A card backs had both this figure and Chief Chirpa blacked out. Despite this, Logray was still released on the Return Of The Jedi 65A card.
+- Major variations: Though all vintage figures have minor variations, the Logray (Ewok Medicine Man) , for the most part, only has spray op colour variations. The figure is available with light tan, dark tan, and gray stripes.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
 
 Sources:
 https://www.variantvillain.com/characters/rotj/logray-ewok-medicine-man/

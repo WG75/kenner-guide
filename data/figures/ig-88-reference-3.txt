@@ -1,0 +1,49 @@
+Figure Name: IG-88
+Aliases: IG-88
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 3 of 3
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: IG-88. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- PBP
+  - PBP 1980 No COO
+  - Above you can see following figure and accessory combinations (left to right):
+    - Scar No COO Bright silver w/glossy orange lights.
+    - Smooth No COO Bright silver w/glossy orange lights
+    - Smooth No COO Bright silver w/light orange glossy lights
+    - Smooth No COO Bright silver w/dark orange glossy lights
+  - PBP in Spain received the moulds from the Unitoy factory in Hong Kong to produce their No COO version of IG-88. The colour is lighter, and more metallic than the Unitoy counterpart. This IG-88 isn’t shot in the same rigid, brittle plastic typically associated with PBP figures.
+  - PBP used a temporary filler to blot out the Hong Kong COO, however the initial attempt didn’t hold. This first attempt (3-2 a/b) is the traditional PBP scarring method, but in very short time, the filler broke apart exposing the letters beneath as shown in 3-3 a/b) The final and successful attempt at COO removal filled the entire recess instead of just covering the letters (refer image below).
+  - The arm EPMs are noticeably longer on the PBP version as the pins weren’t set correctly, and didn’t return to a flush position in the cavity for each new shot, resulting the longer protrusion.
+  - As with the Kader and Poch versions, there are melt marks commonly found in certain areas of the torso. However, this is not a certainty and figures without melt marks have also been noted.
+  - As with the earlier POCH -era figures from this same factory, melt marks tend to be found in the same locations, though some Spanish made IG-88 figures are found without melts altogether.
+  - PBP COO STAGES
+  - ACCESSORY COMBINATION
+  - M1 Smile , M3 Kader or M2 Unitoy IG-88 Rifle
+  - M5 Smile , M7 Kader or M2 Unitoy blue Imperial Blaster
+  - There’s not enough surviving PBP MOC examples to say with certainty about accessory pairing. Much of this is based on information from Spanish collectors who found these combinations in childhood lots over the years. Logically, Smile and Kader IG accessories were still in production during the PBP era and make the most sense. The Unitoy IG accessory would have been in Spain from the early Poch era and excess stock could very possibly have ended up packaged with the later made PBP IG-88 figures.
+- POCH
+  - POCH 1980 HONG KONG
+  - Above you can see following figure and accessory combinations (left to right):
+    - Light orange lights. Kader head, arms, legs. Unitoy torso
+    - Light orange lights. Kader head and legs. Unitoy arms and torso
+    - Red lights. Kader head. Unitoy torso, arms and legs
+  - Poch figures are sourced from a combination of Asian produced Unitoy or Kader parts which were exported to Spain in the late ESB era. The red lights IG-88 is thought to be an earlier Imperio release.
+  - The Kader IG-88 parts which Poch used have the same pitting found on other late ESB Kader moulds.
+  - There are two main colours for the lights on this figure – red and light orange. The light orange used is very similar to Kader, just a shade glossier. The orange Poch used can also be found on FX-7 and their Power Droid.
+  - Poch IG-88 is one of the more difficult figures to identify from his Kenner cousin. Common melt marks, plastic burrs, excess flashing, heavy plastic welding, mixed-up factory parts or paint overspray and bubbles are all signs that can be used to help confirm a figures origins.
+  - POCH vs Kader paint comparison
+  - POCH vs Unitoy paint comparison
+  - ACCESSORY COMBINATION
+  - M3 Kader or M2 Unitoy IG-88 Rifle
+  - M7 Kader or M2 Unitoy blue Imperial Blaster
+- Notes:
+  - As much as I’ve taken a lot of care to track down and detail these variations, there’s bound to be examples that aren’t included. If you believe you have a colour which isn’t featured, please get in touch via VV Facebook or the form on the VV homepage. Thanks.
+
+
+Sources:
+https://www.variantvillain.com/characters/esb/ig-88/

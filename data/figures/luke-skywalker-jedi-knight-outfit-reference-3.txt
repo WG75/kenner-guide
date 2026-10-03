@@ -1,0 +1,60 @@
+Figure Name: Luke Skywalker (Jedi Knight Outfit)
+Aliases: Luke Skywalker (Jedi Knight Outfit); Jedi Knight Outfit; Jedi Luke
+Packaging: Return of the Jedi
+Category: Figure
+Part: 3 of 4
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-1.txt under Figure Name: Luke Skywalker (Jedi Knight Outfit). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- UNITOY
+  - UNITOY 1983 MADE IN HONG KONG
+  - Above you can see following figure and accessory combinations (left to right):
+    - Made in Hong Kong COO w/Unitoy degraded yellow snap cloak and accessories
+    - Made in Hong Kong COO w/Unitoy mid-brown snap cloak and accessories
+    - Made in Hong Kong COO w/Unitoy degraded gold-brown stitched cloak and accessories
+    - Made in Hong Kong COO w/Unitoy degraded light brown stitched cloak and accessories
+    - Made in Hong Kong COO w/Unitoy dark brown stitched cloak and accessories
+    - Made in Hong Kong COO w/Unitoy degraded reddish brown stitched cloak and accessories
+  - Unitoy Luke Jedi debuted on the 65-a, and had a short run through to the 77-a. Afterwards, the moulds were sent to Lili Ledy hence the shortened Kenner run.
+  - The Unitoy Luke Jedi figure features brown facial details and a tanned face.
+  - The initial Unitoy cloak had a short run with a metal clasp, before changing to a stitched collar.  The fabric used for the Unitoy cloaks were highly prone to degradation and a wide variety of shades have been found (see example above). The material used is thicker and fluffier than cloaks from the other vendors and the collar stitch is positioned lower by comparison.
+  - No Unitoy blue saber production versions exist.
+  - M2 Unitoy green handheld saber
+  - M3 Unitoy brown Palace blaster
+  - Unitoy thick, fluffy fabric w/grey-brown stitching
+- LILI LEDY
+  - LILI LEDY 1983 MADE IN HONG KONG
+  - Above you can see following figure and accessory combinations (left to right):
+    - Made in Hong Kong COO w/Lili Ledy brown cloak and accessories
+    - Made in Hong Kong COO w/Lili Ledy greenish-brown cloak and accessories
+    - Made in Hong Kong COO w/Lili Ledy reddish/pink cloak and accessories
+    - Made in Hong Kong COO w/Lili Ledy degraded yellow cloak and accessories
+    - Lili Ledy Luke Jedi is found on the 30 back [30-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review] positive cardback.
+  - The Lili Ledy Luke Jedi figure features black facial details and a tanned face. Otherwise, the figure is nearly identical to the Unitoy counterpart.
+  - The fabric used for the Lili Ledy cloaks were highly prone to degradation and brighter green, pinkish and yellow-gold are examples only and can vary beyond what’s shown. The material used is much thinner, the hoods are typically smaller and the overall length is shorter than the Kenner versions. The lapel on the LL cloak is right over left which is the opposite direction to the Kenner cloak.
+  - Carded examples of LL Luke Jedi have be found with the LL white General Madine baton. This is most likely a situation where a shortage of LL sabers meant the production line improvised and opted for the Madine baton as a short term alternative. This pairing shouldn’t be considered a correct combination, as it’s a supply workaround.
+  - M1 Lili Ledy green handheld saber
+  - M3 Lili Ledy grey-brown Palace blaster
+  - Lili Ledy thin fabric w/grey or green stitching
+- UNIVERSAL MANUFACTURERS (TAIWAN)
+  - UNIVERSAL MANUFACTURERS 1983 MADE IN TAIWAN
+  - Above you can see following figure and accessory combinations (left to right):
+    - Made in Taiwan COO. Dark brown moulded head w/Taiwan snap cloak and accessories
+    - Made in Taiwan COO. Light brown moulded head w/Taiwan snap cloak and accessories
+    - Made in Taiwan COO. Painted face w/Taiwan stitched cloak and accessories
+  - The Taiwan Luke Jedi has one of the more interesting stories for this figure. The earliest 65-a release features a moulded head, where the head is shot in a lightly tanned plastic and the hair is painted on (two hair colour variations have been noted). Shortly afterwards, this process was reversed so the head was shot in the darker hair coloured plastic and the pale face painted on. This is possibly due to feedback from Kenner about paint wear to the hair, or could simply be a production decision for the sake of efficiency. Read more about other mould-colour figure alterations HERE .
+  - The most commonly found Taiwan Luke Jedi figure features the pale face which can also be found on a 65-a. There’s minor paint variations, but broadly speaking this pale painted face variation is the one that ran through the end of production on the 92 back POTF card.
+  - The date & COO stamps on the Taiwan Luke Jedi figure has signs of retooling. This has been noted on other ROTJ Taiwan era figures such as Boba Fett, where the original Hong Kong COO was removed, suggesting the LJ tool Taiwan received from Kenner originally had another COO.
+  - As with the other factories, the first Taiwan cloak was produced with a metal clasp, before shortly afterwards changing to a stitched collar. The ribbed material used is similar to the Smile version, however the hood on the Taiwan cloak is noticeably larger and the collar is stitched together with a light brown fabric.
+  - No Taiwan blue saber was produced.
+  - M4 Taiwan green handheld saber
+  - M2 Taiwan grey Palace blaster
+  - Taiwan large pointed hood, ribbed fabric w/light brown stitching
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/

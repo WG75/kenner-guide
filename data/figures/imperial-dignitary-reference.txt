@@ -4,24 +4,58 @@ Packaging: Power of the Force
 Category: Figure
 
 Overview:
-Imperial Dignitary is a vintage Kenner Star Wars figure in the Power of the Force guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Imperial Dignitary is a vintage Kenner Star Wars figure from the Power of the Force line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): POTF 92-back and/or European Trilogo 70-back. Exact micro-variant carding requires sealed evidence. [70-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-potf-3.txt under Figure Name: Imperial Dignitary. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- KADER in China/Hong Kong produced the Imperial Dignitary figure. Demand had slowed by time of the POTF line, and as a result these figures were produced in much lower numbers.
+- Imperial Dignitary was released on both Trilogo and 92bk POTF cards and was never packaged with an accessory.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Kader — Above you can see following variations (left to right):
+- Families and notes named on the page index
+  - I: Kader
+- Kader
+  - Above you can see following variations (left to right):
+    - Grey face paint
+    - Green-grey face paint
+  - KADER in China/Hong Kong produced the Imperial Dignitary figure. Demand had slowed by time of the POTF line, and as a result these figures were produced in much lower numbers.
+  - The production version is available with only a date, and no country of origin stamp. There is a minor paint variation on the facial paint.
+  - Imperial Dignitary was released on both Trilogo and 92bk POTF cards and was never packaged with an accessory.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
 2. Which head, paint or body trait matches a section above?
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists Imperial Dignitary on the 92-back "Power of the Force" card, No. 93850, 1985.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtImperialdignitary.asp
+- Source: ( Return of the Jedi )
+- Date Stamp: 1984
+- Release Date: 1985
+- Carded Availability: Power of the Force Tri-Logo
+- Assortment No.: 93850
+- Weapons and Accessories: None
+- Point of Interest: This figure debuted in the United States on The Power Of The Force card, and in Europe on the Tri-Logo card. It was never packaged on a Canadian card.
+- Major variations: Though all vintage figures have minor variations, the Imperial Dignitary action figure has no known major variations, but is easily the hardest figure to find in perfect condition. Like many other figures, the Imperial Dignitary ’s head not moulded in a flesh coloured plastic, and sports a painted face. Unlike other figures with painted faces however, this figure’s head was moulded in a dark coloured plastic (purple) that only accentuated paint wear when it would occur. Furthermore, many of the Imperial Dignitary figures suffered from paint wear on the nose while still carded, only adding to the problem. New Leg Design Kenner took a new approach with long robed figures in The Power Of The Force line.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
 
 Sources:
 https://www.variantvillain.com/characters/potf/imperial-dignitary/

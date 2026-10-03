@@ -4,22 +4,55 @@ Packaging: The Empire Strikes Back
 Category: Figure
 
 Overview:
-Lando Calrissian is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Lando Calrissian is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: Lando Calrissian. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- KADER — Above you can see following variants (left to right):
-- Lili Ledy — Sorry, content not available yet.
-- SMILE — Above you can see following variants (left to right):
-- Unitoy — Above you can see following variants (left to right):
-- PBP — Above you can see following variants (left to right):
+- Families and notes named on the page index
+  - I: Kader /
+  - Kader China / Lili Ledy
+  - II: Smile
+  - III: Unitoy / PBP
+  - POCH GUIDE
+  - BESPIN BLASTER
+  - LANDO VINYL CAPE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- KADER
+  - Above you can see following variants (left to right):
+    - MADE IN HONG KONG (No teeth)
+    - MADE IN HONG KONG (Teeth and head plastic degradation)
+    - MADE IN (RAISED BAR) CHINA
+- SMILE
+  - Above you can see following variants (left to right):
+    - HONG KONG (No teeth)
+    - HONG KONG (No teeth/ Dark cape)
+    - HONG KONG (Teeth)
+    - No COO (Teeth)
+- Unitoy
+  - Above you can see following variants (left to right):
+    - MADE IN HONG KONG (No teeth)
+    - MADE IN HONG KONG (Teeth. Early release)
+    - MADE IN HONG KONG (Teeth. Later release)
+- PBP
+  - Above you can see following variants (left to right):
+    - SCAR No COO Bright blue pants
+    - SCAR No COO Dull blue pants
+- Notes from the page with the photo credit name removed
+  - Above you can see following variants (left to right):
+    - MADE IN HONG KONG (No teeth)
+    - MADE IN HONG KONG (Teeth)
+  - The figure shown in the middle above is the so called Poch “black neck“ Lando. Next to him shown are its COO counterparts from Kenner. The carded one shown to the right confirms this variant being Poch. This figure exists with no white paint („no smile“) and with white paint applied („smile“) to the head (see picture below). Both versions have a true black neck and a blue border left on top of the neck. What you can also see is that the hands on both Poch versions are quite lighter painted compared to the Kenner pendants.
+  - This black neck Lando with “smile” has a huge ridge left from production on its right foot. This can also be seen on the MOC shown above and I saw this appear on some other examples too. It’s not a must of course but it seems to occur often on this variant.
+  - Some details from the face are shown here. The paint-scheme on the beard can quite vary, especially on the ones without “smile”. Important is the blue border on top of the black neck (see arrow). This is an easy way to spot fakes or factory errors from Kenner with missing or very less sprayed brown.
+  - On the comparison shot to the left you can see the typical marks on the Poch Lando’s “tushy”. It’s not only that the colour is rubbed of (what can also happen later), it’s more that the colour was pressed hard and formed kind of an „embossed“ circle. The COO shown here seems to be typical for the Poch Lando. Have in mind there is four nearly equal COO’s from that kind known. All four can probably appear on this one.
+  - To complete this article about the Poch Lando Bespin it should be noted that there are also “brown neck” Landos known. The consistency in production isn’t that good in the Poch/PBP factory, as already stated before.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

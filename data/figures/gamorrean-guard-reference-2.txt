@@ -1,0 +1,49 @@
+Figure Name: Gamorrean Guard
+Aliases: Gamorrean Guard
+Packaging: Return of the Jedi
+Category: Figure
+Part: 2 of 2
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-1.txt under Figure Name: Gamorrean Guard. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Smile (HK)
+  - SMILE 1983 HONG KONG COO
+  - Above you can see following variants (left to right):
+    - Dark silver armour, non-detailed face
+    - Mid-silver armour, detailed face
+    - Light silver armour (example of degraded green plastic), detailed face
+    - Light silver armour , non-detailed face
+  - The dark armour paint application seems to be the earliest version from the HK based vendor, Smile. The green plastic used for this figure was highly prone to discolour to a dark green. It’s common to find Smile-made GG figures that have individually darkened limbs and others that have been effected completely.
+  - The Smile produced figure is very similar to the Unitoy/Macau version. Refer to the Unitoy section above for some pointers to help differentiate between the GG’s from these three vendors.
+  - An interesting variation is both HK and NCOO versions share two distinct head moulds that appear throughout the run. We’ve labelled them “detailed” and “non-detailed”. As you’ll see in the detail graphic below, the wrinkles across the GG’s cheeks varies considerably. There are minor torso and left leg heel variations between the cavities (Ref. images below).
+  - In their production planning, Smile made the decision to leave the pupil unpainted exposing the moulded green plastic to represent the pupil. Read more on this production change in WOLFF’S MOULD/COLOUR VARIATION GUIDE
+  - The L1b and R1b leg cavities feature a number “2” stamped on the sole of the boot. These stamps are not present on the any of the NCOO versions.
+  - Detailed face
+  - Non-detailed face
+  - Torso comparison
+  - Heel comparison
+  - SMILE 1983 No COO
+  - Mid silver armour , detailed face
+  - Light silver armour, non-detailed face
+  - Light silver armour, detailed face, bright green skin
+  - Read above for a description of the HK/NCOO Gamorrean Guard.
+  - The L2b NCOO version doesn’t have the “2” stamp on the sole of his boot. It seems there was a decision to remove the stamp from the foot plate just prior to the NCOO figure going into production.
+  - ACCESSORY: M2 Smile Axe with large EPM.
+  - Read more about this production change in WOLFF’S MOULD/COLOUR VARIATION GUIDE
+- Lili Ledy
+  - LILI LEDY 1983 NO COO
+  - Above you can see following variants (left to right):
+    - Mid silver armour, bright yellow details, degraded green plastic
+    - Dark silver armour, light yellow details
+    - Mid-silver armour, light yellow details
+    - Light silver armour, bright yellow details, degraded green plastic
+  - Lili Ledy used a single cavity tool for their Gamorrean Guard figure. This mould wasn’t used elsewhere in Asia or Spain like many of the other figures in their line.
+  - The dark armoured version of the Gamorrean Guard has been found on the early 14bk [14-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review] RETORNO cardback. The REGRESO and 65bk Kenner “Made in Mexico” releases featured the figure with either a mid or light silver armour.
+  - ACCESSORY: M4 Lili Ledy Axe with a short handle.
+
+
+Sources:
+https://www.variantvillain.com/characters/rotj/gamorrean-guard/

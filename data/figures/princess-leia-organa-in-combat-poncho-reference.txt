@@ -4,26 +4,54 @@ Packaging: Return of the Jedi
 Category: Figure
 
 Overview:
-Princess Leia Organa (in Combat Poncho) is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Princess Leia Organa (in Combat Poncho) is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65/77/79-back; later Trilogo/POTF-era carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-3.txt under Figure Name: Princess Leia Organa (in Combat Poncho). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
-- There are also two main variants on LL Leia Endor. For a long time the paler poncho was called discoloured/faded, but lots of MOC examples show that there are simply two different colored ponchos in existence. This is also not unusual if we think of other capes and cloaks like
-- Leia Endor was also released with either a blue or a grey “Leia Pistol”.
+- Families and notes named on the page index
+  - I: Smile
+  - II: Kader/ Lili Ledy
+  - ENDOR BLASTER
+  - LEIA BLASTER
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Notes from the page with the photo credit name removed
+  - There are also two main variants on LL Leia Endor. For a long time the paler poncho was called discoloured/faded, but lots of MOC examples show that there are simply two different colored ponchos in existence. This is also not unusual if we think of other capes and cloaks like Han Endor, Bib Fortuna, Squid Head and Prune Face. I have no doubt the two ponchos pictured here are as they left the LL factory.
+  - Leia Endor was also released with either a blue or a grey “Leia Pistol”.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
 2. Which head, paint or body trait matches a section above?
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists Princess Leia Organa (in Combat Poncho) on the 77-back "Return of the Jedi" card, No. 71220, 1984.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtLeiaponcho.asp
+- Source: ( Return of the Jedi )
+- Date Stamp: 1984
+- Release Date: 1984
+- Carded Availability: Return of the Jedi Power of the Force Tri-Logo
+- Assortment No.: 71220
+- Weapons and Accessories: Endor Blaster (all colours but black) Battle Helmet Battle Poncho (Green) Poncho Belt (2 Settings)
+- Point of Interest: This figure first appeared on the Return Of The Jedi 77 back card.
+- Major variations: Though all vintage figures have minor variations, the Princess Leia Organa (in Combat Poncho) action figure was produced using at least two different sculpts and featured a couple unique spray op variations. Body Sculpt There are two different body sculpts currently known to exist, though the differences are subtle and hard to spot in most photography. The first version of the body sports a rank bar (upper right side of torso) with four shapes: (left to right) One wide vertical rectangle, a small vertical rectangle on a small square, then a skinny vertical rectangle; less detail on the breast of the shirt; and a rounded shoulder pattern on the back of the torso. The second version can be spotted by its five square (four together making a larger square, followed by a single square) rank bar, much higher detail on the shirt breast, and pointed shoulder pattern on the back of the torso.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
 
 Sources:
 https://www.variantvillain.com/characters/rotj/princess-leia-organa-in-combat-poncho/

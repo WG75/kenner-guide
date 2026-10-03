@@ -1,0 +1,48 @@
+Figure Name: Yoda
+Aliases: Yoda
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 2 of 4
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-2.txt under Figure Name: Yoda. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Kader (HK)
+  - KADER 1980 HONG KONG
+  - Above you can see following variants (left to right):
+    - Believed to be the first version of the Kader figure. This early version is where the “MADE IN HONG KONG” cloth tag was found, though I should add the figure was more commonly issued with a cloak without the tag. The cloth tag was most likely deemed an unnecessary step and dropped from production early on. Mid green head, dark brown Pacman eyes and mid green limbs.
+    - The Kader figure has been nicknamed “ Grey head ” due to Kader HK plastic’s propensity to degrade from green to grey. Dark brown Pacman eyes and mid green limbs .
+    - Not a necessary inclusion, but a minor batch variation on the standard Kader figure, which is confirmed on the Palitoy 30 & 41bk cards. Features a mid-green head, brown-grey eyes and mid green limbs . This combination features a mix of Kader accessories including a degraded greenish EPM snake, hard EPM belt, dark EPM cane and lighter brown cape.
+    - Nicknamed the “ Green head ” Yoda. This figure was previously labelled the Kader “transition” Yoda on the Kader China graphic.  The figure has been found on the 48c with Kader HK accessories including the dark brown EPM snake, hard EPM belt, dark EPM cane and lighter brown cape OR the Unitoy mould, soft plastic (K.China) accessories.
+  - Kader HK Yoda had a late start with with the first example confirmed on the 41d, and running through to the ESB 48c with revenge offer.
+  - SNAKE: M1 Kader very soft plastic, light brown w/EPM. Kader plastic pigmentation often degrades from brown to green.
+  - CANE: M1 Kader softer plastic, mid brown or reddish-brown plastic w/EPM.
+  - BELT: M1 Kader harder plastic, mid brown w/EPM on the front of the lightsaber
+  - CLOAK: Kader HK used a light brown fabric which has deep ribs and isn’t fluffy. Earliest cloak has a MIHK cloth tag. The “Palitoy” Yoda has a cloak in a lighter shade of brown.
+- LILI LEDY/ PBP (NO COO)
+  - LILI LEDY 1980 No COO
+  - Above you can see following variants (left to right):
+    - Lili Ledy “Retorno” Hong Kong COO
+  - The earliest Lili Ledy produced version of Yoda. Mid green head, orange-brown round or pacman eyes and mid green limbs.
+  - “Transition” Hong Kong COO ( not shown above)
+  - Regreso era darker-green head, on a Retorno era Hong Kong COO torso, or visa-versa.
+  - “Regreso” NO COO
+  - Vibrant, darker-green head with a matt sheen. Commonly has tacky paint on the limbs. Black eyes and darker green limbs.
+  - Vibrant, darker-green head with a glossy sheen. Commonly has tacky paint on the limbs. Black eyes and darker green limbs.
+  - “Short ears” A factory error which resulted in a short shot of plastic and ears which aren’t fully formed. Figure details are the same as a regular LL Yoda from this time period.
+  - In Mexico, Yoda was released on three different cardbacks: Imperio Contraataca, Retorno and Regreso. The Regreso Yoda was also sold to the US market on the Kenner 65 back Made in Mexico cards.
+  - The earliest Imperio cardback contained an imported Kenner figure. This detail is debated among collectors, as Mexico at the time had laws in place to encourage sales of goods made from within the country. The fact this Imperio figure and his accessories are a perfect match to the Smile factory Hong Kong made Yoda means we know these figures were brought into Mexico somehow. Aside from an interview with an elderly LL factory worker, to date there’s  been no more reliable evidence provided to support the theory this Yoda was locally produced. Poch/PBP Spain in the same period, and with a matching strategy, imported HK figures to test the market on their 31 back Imperio Poch era cards.
+  - The Retorno era variant was the first Yoda made in Mexico. He’s produced from the Family 1 HK COO Kader moulds. The colour scheme with orange-brown eyes, lighter green limbs and an orange snake is a similar look to the Smile figure which appeared previously in Mexico on the Imperio card.
+  - The Regreso-era Yoda was produced in Mexico from the No COO moulds previously seen in China at Kader. As can be seen above, there were two different sheens (matt & glossy) to the head plastic during this period of production. There is a hard to find “transition” version which features a dark green Regreso head on the torso of a Hong Kong Retorno figure and visa-versa. The short-eared version is just a factory error where the molten plastic didn’t travel to the outer extremities of the head cavity.
+  - The Regreso Yoda was also exported directly to both the US on the 65 back Kenner “Made in Mexico” cards and also to Spain and found on the 65 back PBP card.
+  - SNAKE: M1 LL soft plastic, glossy mid brown w/EPM
+  - CANE: Retorno: M1 LL harder plastic, red w/EPM / Regreso: M1 LL hard plastic, red w/EPM
+  - BELT: M1 LL harder plastic, yellow-brown w/EPM. With or without a painted silver dot on the rear buckle.
+  - CLOAK: LL Light brown fluffy fabric
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/esb/yoda/

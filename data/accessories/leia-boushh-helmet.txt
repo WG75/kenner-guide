@@ -3,10 +3,25 @@ Aliases: Leia Boushh Helmet
 Category: Accessory
 
 Overview:
-Leia Boushh Helmet is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Leia Boushh Helmet is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- Fake unpainted Lili Ledy "overstock" Helmets — There is a trend of paint stripping helmets for this figure and selling them at a much higher price labelled as unpainted Lili Ledy or Kenner overstock. Whilst it’s true that a few can be found that are legitimate, most are fakes that were paint stripped by unscrupulous sellers.
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - F1: Smile / Smile Macau
+  - F2: Unitoy / Lili Ledy
+  - F3: Universal Manufacturers
+  - The easiest way to ID the helmets for Boushh is by looking centrally inside of the helmet.
+  - Smile & Smile Macau Helmets
+  - Letters imprinted are: “A”, “B”, “C” or “D”. Then rely on paint colour to ID between these separate factories. Mid grey helmet paint is close in colour to the Smile figures body armour, whereas the Smile Macau version will be darker.
+  - There’s a few minor shades of orange I’ve noticed for the Hong Kong Smile / Smile Macau Helmet. I suspect the plastic used in this accessory varied slightly between production runs, so I can’t rely on the colour for identification. Instead, I’ve opted for the grey paint, which I’ve found 2 distinct shades of mid and dark grey.
+  - Unitoy & Lili Ledy Helmets
+  - Letters imprinted are: “E”, “F”, “G” or “H”. Then rely on paint & plastic colour to ID between these two licensees. Unitoy has a dull finish on the plastic whereas Lili Ledy Helmets are similar, but glossy.
+  - Taiwan Helmets
+  - Taiwan helmets have a 5mm circular EPM (Ejection Pin Mark) imprinted instead of a letter. The Taiwan helmet is slightly smaller than the other moulds and has a unique shape on the top. Colour is a vibrant glossy orange.
+- Fake unpainted Lili Ledy "overstock" Helmets
+  - There is a trend of paint stripping helmets for this figure and selling them at a much higher price labelled as unpainted Lili Ledy or Kenner overstock. Whilst it’s true that a few can be found that are legitimate, most are fakes that were paint stripped by unscrupulous sellers. The chemical that strips the paint has a tendency to slightly dull the plastic, sometimes leave traces of a white residue on the surface, or simply small bits of paint in corners where the chemical hasn’t completely stripped the paint off. As well as those indicators, inspecting a suspect piece under a black UV light can highlight areas of tampering that can’t be seen under normal light. I’ve included a photo to illustrate what to look for.
+  - Thanks to Thomas John for the use of his images
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

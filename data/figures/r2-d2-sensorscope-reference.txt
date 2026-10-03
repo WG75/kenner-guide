@@ -2,27 +2,59 @@ Figure Name: R2-D2 (Sensorscope)
 Aliases: R2-D2 (Sensorscope); Sensorscope; Sensorscope R2-D2
 Packaging: The Empire Strikes Back
 Category: Figure
+Part: 1 of 2
 
 Overview:
-R2-D2 (Sensorscope) is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+R2-D2 (Sensorscope) is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 41/45/47/48-back; some continued onto ROTJ/Trilogo. [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-5.txt under Figure Name: R2-D2 (Sensorscope). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- From the 45bk period, a more interactive version of R2-D2 was released with an extending Sensorscope to replicate the characters actions in the swamps of Dagobah. This figure remained in production through to the Power of the Force/Trilogo era where it was upgraded to the Pop-Up version.
+- UNITOY production continued unchanged from their solid dome figure with mould families 1 & 5 to produce their Sensorscope torsos. Unitoy reverts from mid-blue, back to the dark-blue leg paint of the original 12bk solid dome figure. The sticker in this era is reworked, most noticeably now featuring a smaller wedge design. In the 65bk Jedi era, the MIHK is removed leaving us with the No COO torso.
+- SMILE factory continued with the paint application used for their solid dome figure. The main variation in this line was the short-lived use of a hard white plastic in the 77bk era. Read up more on the KENNER HARD TORSO figures in Wolff’s detailed guide on this site.
+- There’s an additional Family 6 mould  family, nicknamed the “12 o’clock No COO” which continues to elude me on a MOC or baggie, so I can’t add any concrete information about it. I believe this is a very late POTF era torso mould, as no country of origin was ever stamped alongside the date. Torso aside, this figure has the same sticker, parts and paint style as it’s Unitoy siblings from the era.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Unitoy — UNITOY production continued unchanged from their solid dome figure with mould families 1 & 5 to produce their Sensorscope torsos. Unitoy reverts from mid-blue, back to the dark-blue leg paint of the original 12bk solid dome figure. The sticker in this era is reworked, most notice
-- Smile — SMILE factory continued with the paint application used for their solid dome figure. The main variation in this line was the short-lived use of a hard white plastic in the 77bk era. Read up more on the KENNER HARD TORSO figures in Wolff’s detailed guide on this site.
-- COO Family III: — No Kader produced R2-D2 Sensorscope
-- COO Family IV: — No Kader produced R2-D2 Sensorscope
-- Unitoy — As with the Solid Dome R2, the reason for the existence of the UNITOY Family 5 torso is a mystery. The other F1 mould worked perfectly throughout the run. F5 could just be a spare mould that was picked up by chance and ended up randomly going into production from time to time.
-- Sticker Guide: — The only relevant pictures for R2-D2 Sensorscope figure is the Unitoy & Smile examples. The sticker, screw & moulding guides are a general overview of all R2 figures.
-- SENSORSCOPE Guide: — The UNITOY Sensorscope is shot in a mid-blue and I’ve found two minor colour differences in the plastic. The same Sensorscope type features through all Unitoy mould families F1, F5 & F6.
-- SCULPT & SCREW DETAILS: — The only relevant pictures for R2-D2 Sensorscope figure is the Unitoy & Smile examples. The sticker, screw & moulding guides are a general overview of all R2 figures.
+- Families and notes named on the page index
+  - I: Unitoy
+  - II: Smile
+  - III: Not used for R2SS
+  - IV: Not used for R2SS
+  - V: Unitoy
+  - VI: Unitoy
+  - STICKER GUIDE
+  - SENSORSCOPE GUIDE
+- INTRODUCTION
+  - From the 45bk period, a more interactive version of R2-D2 was released with an extending Sensorscope to replicate the characters actions in the swamps of Dagobah. This figure remained in production through to the Power of the Force/Trilogo era where it was upgraded to the Pop-Up version.
+  - In this guide, I’ll present to you the factory correct figures as best as I have found in my research. There’s many decades of fraud and misinformation to set right with this particular figure. As the figure disassembles with no consequence, dealers and collectors have been “improving” their figures for years by obliviously mixing them up for better conditioned parts.
+  - As well as that problem, there’s the myths. In the guide below you won’t find a “golden dome” R2 – it’s degradation of the dome lacquer. The “dimple dome variant” needs to go away, as it’s simply a short shot of plastic resulting in a malformed crest to the dome. If the parts are mixed up to what you can see below, it’s a Frankenstein.
+- Unitoy
+  - UNITOY production continued unchanged from their solid dome figure with mould families 1 & 5 to produce their Sensorscope torsos. Unitoy reverts from mid-blue, back to the dark-blue leg paint of the original 12bk solid dome figure. The sticker in this era is reworked, most noticeably now featuring a smaller wedge design. In the 65bk Jedi era, the MIHK is removed leaving us with the No COO torso.
+  - Above you can see following variants (left to right):
+    - Mid-blue legs MIHK
+    - Made in Hong Kong COO
+    - Dark-blue legs MIHK
+    - Dark-blue legs No COO
+    - Same as the MIHK dark-blue legs, but the COO has been removed.
+- Smile
+  - SMILE factory continued with the paint application used for their solid dome figure. The main variation in this line was the short-lived use of a hard white plastic in the 77bk era. Read up more on the KENNER HARD TORSO figures in Wolff’s detailed guide on this site.
+  - Above you can see following variants (left to right):
+    - Smile R2-D2 Sensorscope (soft torso)
+    - Can have slightly darker or mid-blue legs with a matt finish.
+    - Smile R2-D2 Sensorscope (hard torso)
+  - Torso drum is shot in a visibly harder, more detailed plastic. Mid-blue legs with a matt finish. This colour combination can be found with either soft or hard torso plastic torso variations.
+- COO Family III:
+  - No Kader produced R2-D2 Sensorscope
+- COO Family IV:
+  - No Kader produced R2-D2 Sensorscope
 
+Continued in the next part.
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

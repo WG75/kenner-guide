@@ -4,25 +4,52 @@ Packaging: Star Wars
 Category: Figure
 
 Overview:
-Snaggletooth is a vintage Kenner Star Wars figure in the Star Wars guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Snaggletooth is a vintage Kenner Star Wars figure from the Star Wars line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-4.txt under Figure Name: Snaggletooth. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Scarred NCOO moulds are returned and production continues at Smile with the exact same COO. Look for red limbs/hard plastic for the PBP, and crimson coloured limbs/soft plastic for the Smile version. The temporary COO filler PBP applied, broke in one of the cavities during
-- DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Families and notes named on the page index
+  - I: Smile
+  - II: Smile
+  - III: Smile/ PBP
+  - REBEL BLASTER
+  - Scarred NCOO moulds are returned and production continues at Smile with the exact same COO. Look for red limbs/hard plastic for the PBP, and crimson coloured limbs/soft plastic for the Smile version. The temporary COO filler PBP applied, broke in one of the cavities during production at Smile, resulting in the “half scar” COO.
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
 2. Which head, paint or body trait matches a section above?
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists Snaggletooth on the 20-back "Star Wars" card, No. 39040, 1978.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtSnaggletooth.asp
+- Source: ( Star Wars )
+- Date Stamp: 1979
+- Release Date: unknown
+- Carded Availability: Star Wars The Empire Strikes Back Return of the Jedi
+- Assortment No.: 39040
+- Weapons and Accessories: Smuggler Blaster
+- Point of Interest: Though pictured on the back of the Star Wars 20 and 21 back cards with a Stormtrooper blaster, the figure was packed with a Han Solo Blaster. The red version of this figure first appeared on the star Wars 20 back card. The blue version was never available on a blister card, but it was originally included in the Cantina Adventure Set .
+- Major variations: Though all vintage figures have minor variations, Snaggletooth has one of the most popular major variations in the vintage line. The Snaggletooth originally packed into the Cantina Adventure Set playset was a completely unique sculpt. Though aesthetically similar in many ways, this version of the figure is 3 3/4” (apposed to the later version which is 2 3/4”), sported silver space boots and a blue jump suit. Carrying the same weapon as the small version, the blue Snaggletooth was available only in a sealed Kenner baggie and never on any blistered card back. There has been much talk of this figure being packaged on the Meccano square cards in France, but to date not a single example has ever surfaced. The only version of the Snaggletooth figure to appear on the cards is the red one pictured. Text D. Martin Myatt. Photography by D. Martin Myatt & Dan Curto.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
 
 Sources:
 https://www.variantvillain.com/characters/sw/snaggletooth/

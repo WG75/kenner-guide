@@ -4,24 +4,51 @@ Packaging: Return of the Jedi
 Category: Figure
 
 Overview:
-Admiral Ackbar is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Admiral Ackbar is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-1.txt under Figure Name: Admiral Ackbar. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Lili Ledy — Sorry, content not available yet.
+- Families and notes named on the page index
+  - I: Unitoy/ Lili Ledy
+  - II: Smile/ Meccano
+  - III: Taiwan (U.M.)
+  - ACKBAR STAFF
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
 2. Which head, paint or body trait matches a section above?
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists Admiral Ackbar on the 65-back "Return of the Jedi" card, No. 70310, 1982.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtAdmiralAckbar.asp
+- Source: ( Return of the Jedi )
+- Date Stamp: 1982
+- Release Date: 1983
+- Carded Availability: Return of the Jedi Tri-Logo
+- Assortment No.: 70310
+- Weapons and Accessories: Admiral Staff
+- Point of Interest: This figure became available as a send away on The Empire Strikes Back 48 back [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review] card, but made its first carded appearance on the Return Of The Jedi 66 back card. Interestingly, The offer on The Empire Strikes Back 48 back [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review] card was printed during the period where the sixth episode had another name, therefore the original offer read "Free! Revenge Of The Jedi".
+- Major variations: Though all vintage figures have minor variations, the Admiral Ackbar figure did have one major variation worthy of mentioning. There are two distinctly different Mould variations, and hence spray op variations. The first version had arms moulded in white plastic with red spray ops and its torso was moulded in tan plastic (the bib colour) with white and yellow spray ops. The second version, thus far appearing only on Admiral Ackbar figures produced in Taiwan, has arms moulded in red plastic with white spray ops and its torso was moulded in white plastic with light olive (bib colour) and yellow spray ops. In theory, these mould/ spray op variations could exist mixed on some figures (red arms with tan torso, white arms on white torso) including mixed arm variations. To date, however, no such examples have ever appeared.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+imperialgunnery.com (evidence: documented where the page states it; 'we believe' stays probable):
+- (documented) Admiral Ackbar Staff Admiral Ackbar Staff Original V1 Admiral Ackbar Staff Original V2 Admiral Ackbar Staff REPRO Painted REPRO. Mass Produced. Admiral Ackbar Staff Original and Repro Comparison Shot. ***Information to be completed***
+- https://imperialgunnery.com/staffs-axes.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
 
 Sources:
 https://www.variantvillain.com/characters/rotj/admiral-ackbar/

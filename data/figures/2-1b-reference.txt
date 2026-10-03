@@ -4,20 +4,59 @@ Packaging: The Empire Strikes Back
 Category: Figure
 
 Overview:
-2-1B is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+2-1B is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-4.txt under Figure Name: 2-1B. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- Making an appearance on the Palitoy ESB 45A card, the later release figure fixed the previous production problems and sported a brand new paint scheme. This release can be found on an array of Kenner cards from the ROTJ 65B through to the 79A and later appeared on European Trilogo cards.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Smile — Gloss paint for the torso, sometimes found with finger prints or rubs
-- F2: Unitoy / F3: Kader — Semi-gloss paint for the torso
-- Poch Guide — Sorry, content not available yet.
+- Families and notes named on the page index
+  - I: Smile
+  - II: Unitoy
+  - III: Kader
+  - MOULD COMPARISON
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Smile
+  - F1.1: (small) 1980 MADE IN HONG KONG COO
+  - EARLY RELEASE
+  - Appearing on the Kenner ESB 41D and Palitoy 41BN cards this early era figure had a very limited production Lifecycle. The reason for the change appears to be production related with tacky paint and plastic flow problems during the injection moulding process of the head. Overstock of this figure can be found on Kenner ROTJ 65B cards labelled “Figures made in Hong Kong or Taiwan as labelled within”.
+  - Some key sculpting details for the early era mould family 1.1 are:
+    - Gloss paint for the torso, sometimes found with finger prints or rubs
+    - Gate scar located at the top of the head resulting in a mould defect below the mouth hole
+    - LATER RELEASE
+  - Making an appearance on the Palitoy ESB 45A card, the later release figure fixed the previous production problems and sported a brand new paint scheme. This release can be found on an array of Kenner cards from the ROTJ 65B through to the 79A and later appeared on European Trilogo cards.
+  - Some key sculpting details for the later era mould family 1.1 are:
+    - Metallic paint for the torso
+    - Gate scar moved to the side of the head (either left or right) resulting in a mould defect to the lower corner of the mouth
+    - F1.2: SMILE NO COO
+    - Same details as the unaltered 1.1 later metallic version.
+- F2: Unitoy / F3: Kader
+  - F2: (large) 1980 MADE IN HONG KONG COO
+  - As we now understand, several of the Asian factories shared common toolmakers and this originally lead to the confusion with pairing all large MIHK figures into one family. This Unitoy release was only distributed during the ESB era on Kenner 41A through to the 48C cards. As mentioned in previous figure focus’s during the end of the ESB output, Kenner HQ decided to move a lot of the current production line away from the Unitoy factory with the majority of the steel moulds going to Spain for their PBP line. The Unitoy 2-1B however did not make a re-appearance so the final resting place for the tooling remains unknown.
+  - Some key sculpting details for the mould family 2 are:
+    - Semi-gloss paint for the torso
+    - No mould seams under the feet
+    - Cavity letter B or C in the centre of the torso, note B has a minor variant and can be above or below the cavity no.
+    - Light silver paint for the chest badge and neck
+    - F3: (large) 1980 MADE IN HONG KONG COO
+  - Appearing early doors in the UK on the Palitoy ESB 30B card and soon after the 41A, this factory variant dominated the UK market until Smile took over UK distribution with the ESB 41BN card. It appears to have been sparsely distributed in the US which was mainly Unitoy at the time but did appear on ESC 41D and 48 cards, before reappearing on ROTJ 65E and 77B cards.
+  - Some key sculpting details for the mould family 3 are:
+    - Matt paint for the torso
+    - Mould seams under the feet
+    - Cavity letter A or D in the centre of the torso
+    - Dark silver paint for the chest badge and neck
+    - The head and legs are prone to discoloration
+- Notes from the page with the photo credit name removed
+  - The Asian factories involved are Smile (7L MIHK & 3L NoCOO), Unitoy (7L MIHK) & Kader (7L MIHK). Poch (early PBP) imported mostly unpainted Kenner parts and accessories to construct their figures for distribution across the Spanish market.
+  - The Unitoy 2-1B was distributed solely to the North American market whilst examples from other factories can be found on Palitoy, Clipper, Kenner Canada, General Mills and Meccano cards. I’ve included an updated version of Wolff’s coo guide which separates and expands the previous F2 into two separate families for Unitoy & Kader. Please visit our Introduction to COOs page to learn more about the whole COO identification process.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

@@ -4,21 +4,27 @@ Packaging: Star Wars
 Category: Figure
 
 Overview:
-Luke Skywalker (X-Wing Pilot) is a vintage Kenner Star Wars figure in the Star Wars guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Luke Skywalker (X-Wing Pilot) is a vintage Kenner Star Wars figure from the Star Wars line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: unknown - not established in the reference workbook
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-5.txt under Figure Name: Luke Skywalker (X-Wing Pilot). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
-- The figure shown in the middle is the assumed Poch version of the Luke X-Wing Pilot. Shown next to it are its COO counter- parts from Kenner with different paint applied especially on the helmet. Typical for the Poch version seem to be the pale hands, the more “pinkish” stripe
-- I have obtained three figures from this variant till today. As you can see the pale hands, the “pinkish” stripe and red emblems seem to be a constant factor. On the other hand I know of other examples found that hadn’t that kind of “pinkish” stripe to the helmet, so this could
-- On the other pictures you can see the COO, the „dripped“ look of the paint and the melt marks on the back. Regarding those marks a certain pattern seems to form, but please decide for yourself.
+- Families and notes named on the page index
+  - I: Unitoy/ PBP
+  - II: Kader/ Kader China
+  - POCH GUIDE
+  - REBEL BLASTER GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Notes from the page with the photo credit name removed
+  - The figure shown in the middle is the assumed Poch version of the Luke X-Wing Pilot. Shown next to it are its COO counter- parts from Kenner with different paint applied especially on the helmet. Typical for the Poch version seem to be the pale hands, the more “pinkish” stripe and different colored emblems compared to that stripe. The picture of the carded one doesn’t show all these signs clearly, that’s why the variant cannot be confirmed for sure. It can be noted that a black Imperial Blaster is packed with this figure. That is very interesting, because one of my loose Poch Lukes came indeed with a true black blaster, a blaster I never had seen before. The mold from this “Imperial Blaster” is different to the known black ones from the “Droids” line or from “Lili Ledy”. So this could be indeed a Poch only release, but of course such a finding on a loose figure is very vague.
+  - I have obtained three figures from this variant till today. As you can see the pale hands, the “pinkish” stripe and red emblems seem to be a constant factor. On the other hand I know of other examples found that hadn’t that kind of “pinkish” stripe to the helmet, so this could be also a form of degradation.
+  - On the other pictures you can see the COO, the „dripped“ look of the paint and the melt marks on the back. Regarding those marks a certain pattern seems to form, but please decide for yourself.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

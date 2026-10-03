@@ -1,0 +1,31 @@
+Figure Name: Imperial Stormtrooper (Hoth Battle Gear)
+Aliases: Imperial Stormtrooper (Hoth Battle Gear); Hoth Battle Gear; Hoth Stormtrooper; Snowtrooper
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 3 of 3
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: unknown - not established in the reference workbook
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: Imperial Stormtrooper (Hoth Battle Gear). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+  - In the 90’s, a small batch of these figures was purchased by collector/trader Karl Davison at a car boot sale in the United Kingdom (Donnington or NEC Birmingham, he is uncertain). This area also happened to be nearby the Coalville factory where Palitoy operated. Palitoy was a well established toy producer who also happened to be head of the Star Wars European operations for General Mills (Kenner) and a distribution hub for the Star Wars line. As Poch/PBP in Spain were transitioning to producing and assembling their own figures, it is possible this was an early test run which went bad. Early days, this figure was antidotally known as a “Palitoy test”, though that label was unverified and no longer used. Palitoy had decades of experience at this point with plastic injection, and as head of European operations, may have also had some oversight with regards to quality control. It’s most likely this batch was flagged early on as problematic and sent to Palitoy for analysis (possibly along with that other controversial and flawed figure, the “Disco Boots” Death Star Commander). How this degraded Snowtrooper figure made it’s way into the public is unknown. It’s uncertain if the figure made it’s way out via the Palitoy staff shop as seconds, as although they seemed to originally turned up in a large batch by Karl, they have also been found loose over the years since. Another possibility is Palitoy staff taking the “seconds” figures home to give out to children.
+  - In summary, this figure is not a fake. This figure is not painted or has limbs extruded with grey over white plastic. Crucially, when these first appeared on collector discussions in the 90s, they were bought as standard figures, in car boot sales or job lots without the exceptional price tags that are now commanded. When they were resold by dealers, it was for a slight premium to the standard Snowtrooper. To date, one has never appeared in a baggie or on a cardback anywhere. This figure was NOT produced by Palitoy, as it is identical in form, plastic, paint and COO to the Spanish PBP-made Snowtrooper, but confusingly, the loose figures have only ever been found in the UK, and notably not in Spain.
+  - On top of this already charged situation, everyone seems to have a different theory as to how this all came to be, including the ex-Palitoy employees themselves. James Gurney, who has lead the public focus on the a GL Snowtrooper for many years brought up a few questions to the Palitoy ex-Chief Designer and Tooling Manager during a presentation back in 2017 which can be heard HERE . We believe Bob Brechin (Chief Designer) and Roger Morrison (Tooling Manager) likely had not seen a Grey Limb Snowtrooper figure before this presentation, but in their years of injection moulding at Palitoy would have encountered similar looking grey test shots from other toys Palitoy produced. We have confirmed a lot more about this figure since the talk, particularly how the figure was moulded at PBP in Spain prior to Palitoy, so it’s very unlikely the GL Snowtrooper is any kind of pre-production item as claimed at the end of the presentation.
+  - So along with some mixed information and some very wild sales in recent years, it’s unlikely the madness for this figure will ever truly end. This article will confirm what is known, provide the most likely scenarios how it came to be, and hopefully settle some of the outlandish discussions and negative energy surrounding the simple, old, and very grey Snowtrooper.
+  - Skirt outline
+  - Close proximity to skirt leaving the darkest degradation
+  - Grey/brown degradation
+  - Surface cuts & spots
+  - White "spots" A
+  - White "spots" B
+  - Two of these detail pics are uncredited. If they belong to you, please get in touch and I’ll amend. Thanks, Chihuahua.
+  - ACCESSORY COMBINATION
+  - The figures had PBP skirts fitted at one point, but I’m told the original 90’s find didn’t include any accessories.
+  - THANK YOU TO THE FOLLOWING: unknown (the page does not list them in text).
+  - James Gurney, Wolff Lipinski, Stefan Callear, Lee Bullöck, Jon Freeman, Jon Meade, Jason Joiner and Karl Davidson.
+  - It’s taken three decades of perseverance to get the hobby to the point where we can  going ahead finally talk about this figure with enough clarity to put the hysteria to rest. Thanks guys.
+
+
+Sources:
+https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/

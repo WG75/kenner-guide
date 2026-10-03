@@ -3,19 +3,60 @@ Aliases: Pop-Up Saber
 Category: Accessory
 
 Overview:
-Pop-Up Saber is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Pop-Up Saber is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- MOULD COMPARISON: M1 & M2
-- COLOUR COMPARISON: M1 & M2 — Above you can see a colour comparison between all colours known from M1 and M2 produced by SMILE and GLASSLITE . The colour from M1 is closest to the GLASSLITE version, but a bit darker and only semi translucent.
-- Smile — M1 was produced by SMILE in Hong Kong. It was used for R2-D2 pop-up saber figure (POTF). It floats when submerged in water
-- Smile/ Glasslite — M2 was produced by SMILE in Hong Kong. It was used for R2-D2 pop-up saber figure (POTF, Trilogo) and the DROIDS R2-D2. The molds were also used by GLASSLITE in Brazil for POTF and DROIDS R2-D2. The following colours are known:
-- GW ACRYLIC R2-D2 POP UP SABER DISPLAY CASE — Easy to use, the R2-D2 Pop-up Lightsaber accessory holder is supplied in 2 parts – BASE and TOP PLATE – and are specifically designed to accompany the GW Acrylic LASER cases .
-- UZAY — This pop-up saber was produced by SB PRODUCTS for the “UZAY Savaşçıları” line in Turkey . The mould was only used in the late 80s and came with Artoo Detoo (R2-D2):
-- R1: Painted Saber — The R1 is one of the most common reproductions out there. It has been around for decades. They are painted in different shades of green. They sink when submerged in water.
-- R2: SLC — The R2 is also a very common reproduction out there. It has been pushed into the market by SLC and is now literally everwhere. They came in two shades of green to mimic both colours from Smile and Glasslite. They sink when submerged in water.
-- R3: Waxy Saber — The R3 is a scarce reproduction out there. The surface of those feels kind of waxy. They do mostly resemble the M2 version from GLASSLITE and they actually float when submerged in water.
-- R4: Recasted Saber — The R4 is also a scarce reproduction out there. It’s a direct recast from the M2 version from SMILE and the colour compared to the POTF and DROIDS version is spot on. Those sink when submerged in water and therefore only can be identified by the rough seamlines and the
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Smile
+  - M2: Smile/ Glasslite
+  - The Pop-Up Lightsaber was usually released with the following combinations of colour to figure:
+    - Green Lightsaber:
+      - R2-D2 with Pop-Up Lightsaber
+  - There are 2 main mould variations plus subvariants. More subvariants may exist. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the metal mould used.
+- COLOUR COMPARISON: M1 & M2
+  - Above you can see a colour comparison between all colours known from M1 and M2 produced by SMILE and GLASSLITE .  The colour from M1 is closest to the GLASSLITE version, but a bit darker and only semi translucent.
+- Smile
+  - M1 was produced by SMILE in Hong Kong. It was used for R2-D2 pop-up saber figure (POTF). It floats when submerged in water
+    - The following colours are known:
+      - bright light green (semi translucent)
+  - M1 bright light green (semi translucent)
+- Smile/ Glasslite
+  - M2 was produced by SMILE in Hong Kong. It was used for R2-D2 pop-up saber figure (POTF, Trilogo) and the DROIDS R2-D2. The molds were also used by GLASSLITE in Brazil for POTF and DROIDS R2-D2. The following colours are known:
+    - bright light green translucent (GLASSLITE) ( floats when submerged in water)
+    - green ( sinks when submerged in water)
+    - blueish green ( sinks when submerged in water)
+    - M2a: unknown (the page does not list them in text).
+    - M2a bright light green (translucent)
+    - M2a green
+    - M2a blueish green
+    - M2b: unknown (the page does not list them in text).
+    - M2b bright light green (translucent)
+- UZAY
+  - This pop-up saber was produced by SB PRODUCTS for the “UZAY Savaşçıları” line in Turkey . The mould was only used in the late 80s and came with Artoo Detoo (R2-D2):
+    - white with red painted tip
+- R1: Painted Saber
+  - The R1 is one of the most common reproductions out there. It has been around for decades. They are painted in different shades of green. They sink when submerged in water.
+  - They do mostly resemble the M2 version from SMILE:
+    - The following colours are known:
+      - dull light green
+      - green
+      - shiny dark green
+- R2: SLC
+  - The R2 is also a very common reproduction out there. It has been pushed into the market by SLC and is now literally everwhere. They came in two shades of green to mimic both colours from Smile and Glasslite. They sink when submerged in water.
+  - The bright light green ones do mostly resemble the M1 version from SMILE (but also the M2 Glasslite version):
+    - The green ones do mostly resemble the M2 version from SMILE.
+    - The following colours are known:
+      - bright light green (translucent)
+      - green (semi translucent)
+- R3: Waxy Saber
+  - The R3 is a scarce reproduction out there. The surface of those feels kind of waxy. They do mostly resemble the M2 version from GLASSLITE and they actually float when submerged in water.
+  - The following colours are known:
+    - bright light green (non translucent)
+- R4: Recasted Saber
+  - The R4 is also a scarce reproduction out there. It’s a direct recast from the M2 version from SMILE and the colour compared to the POTF and DROIDS version is spot on. Those sink when submerged in water and therefore only can be identified by the rough seamlines and the airbubbles in the material.
+  - The following colours are known:
+    - green (non translucent)
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

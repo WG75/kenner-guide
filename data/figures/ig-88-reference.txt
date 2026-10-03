@@ -2,25 +2,57 @@ Figure Name: IG-88
 Aliases: IG-88
 Packaging: The Empire Strikes Back
 Category: Figure
+Part: 1 of 3
 
 Overview:
-IG-88 is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+IG-88 is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: IG-88. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- Smile IG-88 debuted in the 31 back era and was consistently released through nearly all of the Kenner cardback eras up to 77, then onto Trilogo.
+- The initial version of the Smile figure features glossy reddish-orange lights, a long antenna and hollowed out eyes. There’s an extra pipe moulded on the outer right leg which the other two moulds don’t feature. The inside right leg suffered a moulding flaw where the molten plastic often didn’t flow completely into the hydraulic detail, leaving a unfinished gap (see graphic below). The lights were altered to a glossy mid orange in the 41 back era.
+- Kader IG-88 can first be found on the 32 back and Palitoy 30bk [30-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]. The early Kader version is a surprisingly hard to find ESB release, with Kader production ramping up from the 48 back [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review] ROTJ card onwards. Also strangely, Kader didn’t remove the COO from their figure, despite producing the figure through to the 77bk, and into the Trilogo era when COOs were removed.
+- The first Kader versions had matt lighter orange lights which became more vibrant in the Trilogo era.
+- As with the other Asian producers, the Kader inside right leg suffered a moulding flaw where the molten plastic often didn’t flow completely into the hydraulic detail, leaving a unfinished gap. After a period of time, pitting to the limbs and head mould cavities began to present. This pitting has also been noted on other Kader produced figures and accessories. To remedy these issues, the IG-88 moulds had some retooling just prior to the 77bk era to correct both the plastic flow and the pitting across the surface (refer image 3 below).
+- Unitoy IG-88 debuted in the 31 back era and had a relatively short run only continuing to the 41 back. The first Unitoy IG-88 is quite eye catching with his peculiar dull grey surface. Midway into the 32bk release, I’m presuming Kenner must have instructed the factory to alter the plastic to achieve a more metallic silver finish.
+- As with other Unitoy character releases from this era, their production of IG-88 ceased mid-ESB on the 41 cardback release. The moulds resurface again in Spain in the NCOO figure from PBP.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Smile — SMILE 1980 HONG KONG or No COO
-- Kader — Above you can see following figure and accessory combinations (left to right):
-- Unitoy — Above you can see following figure and accessory combinations (left to right):
-- PBP — Above you can see following figure and accessory combinations (left to right):
-- POCH — Above you can see following figure and accessory combinations (left to right):
-- Notes: — I’d like to thank Tim Emmerson, Wolff Lipinski, Stefan Callear, Ahmed Boukarrouh, James Gurney and Pablo Martin for their help in the making of the IG-88 guide.
+- Families and notes named on the page index
+  - I: Smile
+  - II: Kader
+  - III: Unitoy / PBP
+  - POCH GUIDE
+  - IMPERIAL BLASTER GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Smile
+  - SMILE 1980 HONG KONG or No COO
+  - Above you can see following figure and accessory combinations (left to right):
+    - Hong Kong COO Single eyes w/glossy reddish-orange lights
+    - Hong Kong COO Double eyes w/glossy orange lights
+    - No COO Single eyes w/glossy orange lights
+    - The Smile IG-88 stands out thanks to the brilliant silvery sheen on the plastic Smile used to form the figure.
+  - Smile IG-88 debuted in the 31 back era and was consistently released through nearly all of the Kenner cardback eras up to 77, then onto Trilogo.
+  - The initial version of the Smile figure features glossy reddish-orange lights, a long antenna and hollowed out eyes. There’s an extra pipe moulded on the outer right leg which the other two moulds don’t feature. The inside right leg suffered a moulding flaw where the molten plastic often didn’t flow completely into the hydraulic detail, leaving a unfinished gap (see graphic below). The lights were altered to a glossy mid orange in the 41 back era.
+  - If you look closely you can see the head mould had the hollowed eyes stamped twice into one of the cavities, resulting in an odd “double-eye” effect (refer image 1 below). There was also two attempts to stamp the copyright C into one of the rear torso cavities.
+  - The COO removal is a little unusual in that it’s coarsely “scratched” out instead of the smooth method more typically used in the Smile factory. This could be down to limited accessibility within the cavity. There’s also indications of some retooling on the rear torso shoulders of the No COO figure which I’ve highlighted below.
+  - Towards the end of the HK COO era, signs of wear begins to show in the limb & head mould cavities, resulting in a rough texture on the limbs and head. To remedy the wear, the tools were replaced with a new set which feature some small mould variations including a larger foot.  Figures with mixed limbs from both mould do exist.
+  - Smile Head comparison
+  - Smile No COO torso retool
+  - Smile Left Leg Comparison
+  - Smile Right Leg Comparison
+  - Smile Foot comparison
+  - ACCESSORY COMBINATION
+  - M1 Smile IG-88 Rifle
+  - M5 Smile blue Imperial Blaster
 
+Continued in the next part.
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

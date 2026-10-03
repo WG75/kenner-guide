@@ -4,18 +4,38 @@ Packaging: Return of the Jedi
 Category: Figure
 
 Overview:
-Lando Calrissian (Skiff Guard Disguise) is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Lando Calrissian (Skiff Guard Disguise) is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65/77/79-back; later Trilogo/POTF-era carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-3.txt under Figure Name: Lando Calrissian (Skiff Guard Disguise). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Figure Guide — Dark or Light Head/Hands (Several Combos)
+- Families and notes named on the page index
+  - I: Smile
+  - II: Unitoy
+  - III: Lili Ledy (MIM)
+  - VIBRO AXE GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Figure Guide
+  - Characteristics
+  - F1 – Smile (HK and No COO)
+  - Smooth under boots
+  - Dark or Light Head/Hands (Several Combos)
+  - Short thumb (possibly only found on later NoCOO’s)
+  - F2 – Unitoys (HK)
+  - Mould line under boots
+  - Light Head & Hands
+  - F3 – Lili Ledy (No COO)
+  - Dark Head & Hands
+- Notes from the page with the photo credit name removed
+  - There are three main colour variants known to Lando Skiff Guard. I personally needed years to find all three in near pristine condition, because Lando always seems to be very played with. There are two colours to the plate on the chest and three colours to the shoulder and wrist armour known.
+  - The version in the middle is the one that can be found mostly on MIM cards. The armour is painted in a silvery, more metallic way. The same chest armour can be seen on the example to the left, but the shoulder and the wrist armour are painted in a golden tint. The third variant to the right has silver armour all over. It could be possible that there is also a golden chest armour out there, but till today I haven’t seen one. What I have seen are mixed up versions of the figure in the middle and the figure to the right. It can be said again for sure that at some point while changing the colours newer and older parts got mixed up during the assembling process.
+  - You can also note that the helmet shown to the left is much browner and darker then the other two helmets. I’m not sure if those got mixed up between those LL figures, but all three helmets are for sure real LL helmets. There are also slightly different facial details and slightly different boot colours on those. The colour of the plastic the torso is moulded of can also vary a bit.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

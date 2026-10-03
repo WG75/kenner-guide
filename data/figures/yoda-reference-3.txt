@@ -1,0 +1,52 @@
+Figure Name: Yoda
+Aliases: Yoda
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 3 of 4
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-2.txt under Figure Name: Yoda. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Unitoy (HK)
+  - UNITOY 1980 HONG KONG
+  - Above you can see following variants (left to right):
+    - The earliest Unitoy produced version of Yoda. Dark orange “cherry eyes” , light green head and yellow-green limbs. This early version is where the “MADE IN HONG KONG” paper tag was found, though I should add the cloak is more commonly issued without this tag. This paper tag was most likely deemed an unnecessary step and dropped from production early on.
+    - Orange round eyes, light green head and yellow-green limbs.
+    - Light orange round eyes, light green head and yellow-green limbs.
+    - Not a necessary inclusion, however there are a few mocs in circulation with an overstock accessory combination on the early “Apple head” Yodas. Dark green head, dark brown Pacman eyes and mid green limbs. Orange snake and a dark brown Unitoy cane. Less of a variant, this is a transition figure which was assembled from an over-supply of orange snakes before moving to browns.
+    - Dark “Apple” green head, brown or dark brown Pacman eyes and mid green limbs. Dark-brown cane and hard plastic, brown snake.
+    - Dark “Apple” green head, brown or dark brown Pacman eyes and light green limbs. Dark-brown cane and hard plastic, brown snake.
+  - The earliest Unitoy Yoda’s produced featured orange snakes. “Cherry eyes” Yoda debuted on the 32b Unitoy card. By the 41a wave, the darker eye colour was adjusted to mid-orange.
+  - Shortly thereafter on the 41d card, a cosmetic change darkening the green on Yoda’s head occurs. This has been nicknamed “Apple head”. Apple heads could be found initially with the orange snake, which made way for the hard brown snake on the 41d era, which was also their last. The canes also transitioned from light brown to dark brown at this point.
+  - ACCESSORIES (early Unitoy)
+  - SNAKE: M2 Unitoy hard plastic, orange (gate scar on mouth)
+  - CANE: M2 Unitoy hard plastic, light (gate scar on the upper hook). These come in two different widths.
+  - BELT: M2 Unitoy, hard plastic, grey-brown (deep holes on the belt interior) with or without bumps on the inside of the light part.
+  - CLOAK: Unitoy fluffy fabric
+  - ACCESSORIES (late Unitoy)
+  - SNAKE: M2 Unitoy hard plastic, brown (gate scar on mouth)
+  - CANE: M2 Unitoy hard plastic, dark brown (gate scar on the upper hook). These come in two different widths.
+- KADER CHINA (No COO)
+  - KADER CHINA 1980 No COO
+  - (The figures above show suggested accessory pairings, however they have also been legitimately confirmed with other accessory combinations detailed below)
+  - Above you can see following variants (left to right):
+    - Kader China No COO
+  - No COO figure from the earlier ROTJ period. Matt green head with dark brown Pacman shaped eyes and light green limbs.
+  - No COO figure from the earlier ROTJ period. Matt green head with dark brown Pacman shaped eyes and mid green limbs.
+  - Matt green head with dark brown Pacman shaped eyes and mid green limbs. Previously labelled the “POTF” version.
+  - “Meccano” No COO (French Trilogo exclusive)
+  - Matt green head with black, Pacman near-rounded eyes. The limb paint is also slightly darker on the Meccano batch. This Chinese made figure isn’t produced by Meccano in France, rather a batch variation with certain characteristics that happens to be found exclusively in France.
+  - With the F1 Kader Hong Kong moulds in Mexico with Lili Ledy, Kader China was sent the F2 Unitoy figure and accessory moulds, the HK COO was removed and production began for the No COO figure. This is a common journey for many of the early Unitoy moulds.
+  - The first cardback containing the No COO Kader China Yoda was 65c with Emperor offer. This figure continued through the 77 and 92 POTF cardbacks.
+  - Kader China received both the Kader HK & Unitoy moulds and produced their own line of Yoda accessories. They used a softer, more flexible plastic which is how they can be differentiated from their Kader HK & Unitoy counterparts. Kader China also paired their Yoda’s with overstock Unitoy HK accessories.
+  - SNAKE: M1 Kader China soft plastic, mid brown w/EPM. M2 Unitoy in soft plastic, mid brown.
+  - CANE: M1 Kader China soft plastic, reddish-brown w/EPM. M2 Unitoy in soft plastic, reddish-brown, or overstock dark brown Unitoy canes.
+  - BELT: M1 Kader China soft plastic, mid brown w/EPM. M2 Unitoy in soft plastic, mid brown, with or without bumps on light or overstock Unitoy HK belts. Meccano: China soft plastic, mid brown Unitoy mould with or without bumps on the inside of the light.
+  - CLOAK: Kader China thinner fabric, or overstock Unitoy fluffy cloaks.
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/esb/yoda/

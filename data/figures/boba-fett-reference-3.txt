@@ -1,0 +1,45 @@
+Figure Name: Boba Fett
+Aliases: Boba Fett
+Packaging: Star Wars
+Category: Figure
+Part: 3 of 3
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 21-back onward; extensive ESB/ROTJ/regional carding exists.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-6.txt under Figure Name: Boba Fett. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- TAIWAN
+  - TAIWAN
+  - Above you can see different Boba Fett figures from Fam IV made in Taiwan by an unknown factory. The Taiwan Boba Fett can come in six different main colours regarding the chest armour and also in six main colours regarding the belt colours. There is also an oddity here, because some came with so called “painted” helmets.
+  - There is many theories why the “pianted helmet”  is produced like it is. Please also check out the Mould-Colour Guide . In fact there is three main colours on those painted Fett helmets: light blue, blue and dark blue. The three figures have their helmets additionally sprayed blue, after the brown and the red colour was applied. One explanation would be that these are from a batch of factory errors were way too much red and brown colour was applied and with the additional blue paint this was corrected.
+  - All TW Fett figures was usually paired with the M6  Imperial Blaster.
+  - Above you can see the variety on chest and belt colours.
+  - TW Painted Helmet
+  - TW Brown Belts
+  - TW Dark Belts
+  - Above you can see following colour combinations (left to right):
+    - Lightblue Painted Helmet, Light Olive Chest, Reddish Dark Brown Belt
+    - Blue Painted Helmet, Olive Chest, Reddish Dark Brown Belt
+    - Dark Blue Painted Helmet, Dark Olive Chest, Greyish Dark Brown Belt
+    - Bright Olive Chest, Light Brown Belt
+    - Olive Chest, Brown Belt
+    - Light Olive Chest, Yellowish Dark Brown Belt
+    - Bright Light Green Chest, Reddish Dark Brown Belt
+    - Light Green Chest, Greyish Dark Brown belt
+    - Light Olive Chest, Black Belt
+- Colour comparisons
+  - Colour comparison of Family I & IV
+  - Please notice the different brown tones and the different colours on the backpacks.
+  - Colour comparison of Family II/III HK
+  - Colour comparison of Family II No COO
+- Mould family & head comparison
+  - For the mould comparison please check the detail to the side of the helmet.
+  - Besides the different helmet moulds and colours please also regard the chest armour colours side by side.
+- Droids Boba Fett
+  - The most common Droids Boba Fett is the Taiwan COO figure (including an example with a painted helmet). The punch on the cardback is Taiwan. Kader HK produced Fetts have also appeared on the TW Droids era cardback, suggesting that an addition of overstock figures were packed to clear out supplies in this late era.
+  - Refer to some carded Droids examples in our Boba Fett Cardback Guide HERE »
+
+
+Sources:
+https://www.variantvillain.com/characters/sw/boba-fett/

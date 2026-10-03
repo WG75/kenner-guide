@@ -3,10 +3,33 @@ Aliases: Emperor’s Royal Guard Pike
 Category: Accessory
 
 Overview:
-Emperor’s Royal Guard Pike is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Emperor’s Royal Guard Pike is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- GW ACRYLIC Emperor's Royal Guard PIKE DISPLAY CASE — Easy to use, the Emperor’s Royal Guard Pike holder is supplied in 2 parts – BASE and TOP PLATE – and are specifically designed to accompany the GW Acrylic LASER cases .
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Kader/Lili Ledy
+  - M2: Unitoy
+  - M3: Universal Manufacturers
+  - Family
+  - I: Kader HK (Kenner) > Lili Ledy
+  - Left leg: “MADE IN HONG KONG” (MIHK)
+  - A wider grip at the top handle of the staff
+  - EPMs (Ejector Pin Marks) There’s two along the length of every Family 1 mould staff
+  - When production finished for the MIHK figure, the F1 moulds were sent to Mexico where Lili Ledy began their ERG production cycle. The Lili Ledy version is found in shades of darker grey, and of course features the same EPMs and wider handle shape as mentioned above.
+  - TIG ref.V2
+  - Family
+  - II: Unitoy HK (Kenner)
+  - Left leg: “HONG KONG” and smoothed no coo
+  - Two variants of the UT staff exist:
+    - – A tapered grip on the top staff handle
+    - Family
+    - III: Universal Manufacturers (Kenner)
+    - Left leg: “MADE IN TAIWAN”
+    - The Taiwan staff is most identifiable by the top handle, which has an off-centred “bulge”
+    - Found in 2 shades – a light grey and a slightly darker mid-grey.
+- Bootlegs
+  - Coming soon
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

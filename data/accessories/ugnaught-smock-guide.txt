@@ -3,11 +3,15 @@ Aliases: Ugnaught Smock
 Category: Accessory
 
 Overview:
-Ugnaught Smock is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Ugnaught Smock is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- The smock cords/straps are exclusive to each factory and this is where we need to look to identify which smock goes where.
-- Ugnaught Figure Guide Ugnaught Case Guide
+- Families and notes named on the page index
+  - – Unitoy
+  - – Kader
+  - – Smile
+  - The smock cords/straps are exclusive to each factory and this is where we need to look to identify which smock goes where.
+  - The collar heights are just an approximation, and with this being assembled by hand in a busy Asian factory, I can’t say this detail will be completely reliable.
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

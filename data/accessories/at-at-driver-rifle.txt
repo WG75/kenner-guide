@@ -3,17 +3,66 @@ Aliases: AT-AT Driver Rifle
 Category: Accessory
 
 Overview:
-AT-AT Driver Rifle is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+AT-AT Driver Rifle is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- MOULD COMPARISON: M1, M2, M3 & M4
-- UNITOY — M1 was produced by UNITOY in Hong Kong. The following colours are known:
-- KADER — M2 was produced by KADER in Hong Kong. The following colours are known:
-- SMILE — M3 was produced by SMILE in Hong Kong. The following colours are known:
-- KADER — M4 was produced by KADER in Hong Kong. It was only released in the weapons pack “Survival Kit” from Kenner. The following colours are known:
-- GW ACRYLIC AT-AT DRIVER RIFLE DISPLAY CASE — Easy to use, the AT-AT Driver rifle accessory holder is supplied in 2 parts – BASE and TOP PLATE – and are specifically designed to accompany the GW Acrylic LASER cases .
-- TURKEY — This rifle was produced by SB PRODUCTS for the “UZAY Savaşçıları” line in Turkey . The mould was only used in the late 80s and came with the resident AT-AT Driver “Sürücü” and Tie Fighter Pilot “Savaş Pilotu”. In time they saved making the thin parts (strap and gun butt). These
-- R1: — The R1 is a direct reacst from the M1 UNITOY rifle. The surface differs though compared to any original. Many have irregularities like air bubbles from the casting process. They are bendy to a certain point but then snap easily. They don’t swim when submerged in water and
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1: Unitoy
+  - M2: Kader
+  - M3: Smile
+  - M4: Kader (Survival Kit)
+  - The AT-AT Driver Rifle was usually released with the following combinations of colour to figure:
+    - Black-Blue Rifle:
+      - AT-AT Driver
+    - Black Rifle: unknown (the page does not list them in text).
+  - There are 4 main mould variations. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the steel mould used.
+- UNITOY
+  - M1 was produced by UNITOY in Hong Kong. The following colours are known:
+    - light black-blue
+    - black-blue
+    - black
+    - M1a/b/c: unknown (the page does not list them in text).
+    - M1a: light black-blue
+    - M1a: black
+    - M1b: light black-blue
+    - M1c: black-blue
+- KADER
+  - M2 was produced by KADER in Hong Kong. The following colours are known:
+    - greyish black
+    - black
+    - glossy black
+    - M2a/b: unknown (the page does not list them in text).
+    - M2b: greyish black
+    - M2a: black
+    - M2b: black
+    - M2b: glossy black
+- SMILE
+  - M3 was produced by SMILE in Hong Kong. The following colours are known:
+    - greyish black
+    - black
+    - M3a/b/c: unknown (the page does not list them in text).
+    - M3a: greyish black
+    - M3a: black
+    - M3b: black
+    - M3c: black
+- KADER
+  - M4 was produced by KADER in Hong Kong. It was only released in the weapons pack “Survival Kit” from Kenner. The following colours are known:
+    - black
+    - M4a/b: unknown (the page does not list them in text).
+    - M4a: black
+    - M4b: black
+- TURKEY
+  - This rifle was produced by SB PRODUCTS for the “UZAY Savaşçıları” line in Turkey . The mould was only used in the late 80s and came with the resident AT-AT Driver “Sürücü” and Tie Fighter Pilot “Savaş Pilotu”. In time they saved making the thin parts (strap and gun butt). These look like broken, but were produced and released like this, which can be seen on many MOCs. The following colours are known:
+    - black (AT-AT Driver)
+    - blue metallic (Tie Fighter Pilot)
+    - grey metallic (Tie Fighter Pilot)
+- R1:
+  - The R1 is a direct reacst from the M1 UNITOY rifle. The surface differs though compared to any original. Many have irregularities like air bubbles from the casting process. They are bendy to a certain point but then snap easily.  They don’t swim when submerged in water and therefore are an easy tell.
+  - The following colours are known:
+    - greyish-black
+    - The 3 examples below show different imperfections.
+    - greyish black
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

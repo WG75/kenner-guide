@@ -4,24 +4,58 @@ Packaging: The Empire Strikes Back
 Category: Figure
 
 Overview:
-Ugnaught is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Ugnaught is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 41/45/47/48-back; some continued onto ROTJ/Trilogo. [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-3.txt under Figure Name: Ugnaught. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- MOULD & PAINT COMPARISON
+- Families and notes named on the page index
+  - UGNAUGHT FIGURE GUIDE
+  - I: Unitoy
+  - II: Kader
+  - III: Smile
+  - POCH GUIDE
+  - MOULD & PAINT COMPARISON
+  - SMOCK GUIDE
+  - CASE GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Notes from the page with the photo credit name removed
+  - The Asian factories involved are Unitoy (3L MIHK & 1L no COO), Kader (4L MIHK) & Smile (2L HK). Poch (early PBP) imported mostly unpainted Kenner parts and accessories to construct their figures for distribution across the Spanish market.
+  - The Kader Ugnaught was distributed solely to the international markets. I’ve found examples of Kaders on Toltoys, Palitoy, Clipper, Kenner Canada, General Mills and Meccano cards, yet none on a standard US Kenner card.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
 2. Which head, paint or body trait matches a section above?
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists Ugnaught on the 41-back "The Empire Strikes Back" card, No. 39319, 1981.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtUgnaught.asp
+- Source: ( The Empire Strikes Back )
+- Date Stamp: 1980
+- Release Date: unknown
+- Carded Availability: The Empire Strikes Back Return of the Jedi Tri-Logo
+- Assortment No.: 39319
+- Weapons and Accessories: Toolbag Apron
+- Point of Interest: This figure was included in the Cloud City Playset , but made its first appearance on The Empire Strikes Back 41 back card. This figure also appeared on a Canadian exclusive skin wrapped card*.
+- Major variations: Though all vintage figures have minor variations, The Ugnaught figure’s only perceived major variation isn’t even on the molded figure itself, but instead on its material smock. Many collectors assume the smock was manufactured using both purple or blue cloth, but evidence is proving the color change to be a result of age and storage conditions. Their is no concrete proof that Kenner ever produced a purple smock. There is rumoured to be a green smock, but there is absolutely no photographic evidence to support the rumour. *The Canadian Skin Wrapped figures were produced for Sears Canada and were included as exclusive bonus figures in multi-packs created for the holiday catalog.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
 
 Sources:
 https://www.variantvillain.com/characters/esb/ugnaught/

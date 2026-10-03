@@ -1,0 +1,41 @@
+Figure Name: Han Solo (in Trench Coat)
+Aliases: Han Solo (in Trench Coat); in Trench Coat; Han Endor; Trench Coat Han
+Packaging: Return of the Jedi
+Category: Figure
+Part: 2 of 2
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65/77/79-back; later Trilogo/POTF-era carding varies by figure.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-4.txt under Figure Name: Han Solo (in Trench Coat). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- TRENCHCOAT
+  - F1: SMILE 1984 NOCOO – EARLY RELEASE (77A)
+    - Appearing on the debut 77A card only, some early era figures came with a unique ‘camo’ coat compared to the more popular later release.
+    - Camouflaged lapels
+    - Square notch on lapels
+    - Narrow waist, compared to F2 Kader ‘Camo’
+  - F1: SMILE 1984 NOCOO –  LATER RELEASE (77A/B & 79A)
+  - During the debut 77A run Kenner instructed Smile to modify the design of the coat. A signed QC sample can be seen over on the Star Wars Collectors Archive  instructing Smile to make the following change “Brush side outward on collar per fax 11/18/83”
+  - Plain lapels
+  - Larger curved lapels with triangle notch
+  - F2.1: KADER 1984 NOCOO
+  - Two versions of the trench coat co-existed and can be found on both 77A and 79A cards. However an example of the plain lapels has yet to surface on a 77B card, but it is highly likely to exist.
+  - CAMO VARIANT
+  - Darker grey fabric
+  - Straight edged lapels with square notch
+  - Wide waist, compared to F1 Smile ‘Camo’
+  - PLAIN VARIANT
+  - Lighter grey fabric
+  - F2.2: LILI LEDY 1984 NOCOO
+  - This Lili Ledy accessory is very unique compared to any of its Kenner counterparts. The fabric used matches the Lili Ledy Bib Fortuna coat, but the material has been reversed during it’s construction to give a more rugged look.
+  - Plain weave fabric
+  - Narrow sleeves
+  - Narrow tapered lapels
+- Notes from the page with the photo credit name removed
+  - The Asian factories involved are Smile & Kader (both No COO). Later on Kader’s tooling was acquired by Lili Ledy to produce and distribute figures within the Mexican market.
+  - UK & European distribution was handled by Smile using imported Kenner cards prior to the Trilogo release. In North America however Smile shared distribution with Kader with the exception of the Canadian bi-lingual French/English cards which Smile produced. After Kader ceased production of the Han Solo in Trench Coat figure, Smile took over sole distribution in North America with the release of the POTF card.
+
+
+Sources:
+https://www.variantvillain.com/characters/rotj/han-solo-in-trench-coat/

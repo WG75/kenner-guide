@@ -1,0 +1,32 @@
+Figure Name: Imperial Stormtrooper (Hoth Battle Gear)
+Aliases: Imperial Stormtrooper (Hoth Battle Gear); Hoth Battle Gear; Hoth Stormtrooper; Snowtrooper
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 2 of 3
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: unknown - not established in the reference workbook
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: Imperial Stormtrooper (Hoth Battle Gear). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- PBP "GREY LIMB" SNOWTROOPER
+  - Front
+  - Right
+  - Back
+  - Left
+  - Above you can see the PBP Grey Limb Snowtrooper in varying states of degradation.
+  - The “Grey Limb” Snowtrooper is undoubtably one of the most controversial figures in the vintage line. From the outset, it’s important to understand this figure is not a variant by the normal definition. It is clearly in a degraded state and was not intended to appear like this after production. It is also not a fake. There are other Snowtrooper figures that can also degrade in a similar way (in particular the F1 Kader version) however, it’s a small batch of the PBP (F2.2) version of this figure which degrades with these specific traits.
+  - PBP mass-produced a white-limbed Snowtrooper figure with the unique harder plastic (ABS) torso, using the F2 mould family tooling which have the scarred out COOs. All of these details match the Grey Limb Snowtrooper precisely, with the exception of the limb colour. These shared details confirm the production origins to be Spain. The filler PBP used to blob over the COO stamp is notoriously fragile and needed a number of repairs. It’s likely there were a lot of these initially produced before the degrading became apparent and the figures were likely disposed of. With that established, let’s next look at the grey limbs specifically and see what’s going on there.
+  - As you can see in the main images above, the amount of degradation between these figures varies significantly. No two are the same. It’s also clear that the amount of degradation isn’t evenly spread across each figure. There has been a reaction in the PVC limb plastic which has occurred AFTER the figures were assembled, hence the uniformity of degradation in each figure.
+  - Wolff recently noticed a connection between the darker patches of degradation commonly found around the back & sides of the legs and realized this area was in close or direct contact with the Snowtrooper skirt. There are some examples where you can actually see the outline of the skirt in degraded dark grey patches around the legs (Ref. pictures 1, 2 & 3 below). To be clear, I don’t believe it’s the skirt that triggered the reaction, but a negative chemical reaction emitting from the PVC limb plastic itself. The proximity to the skirt or nearby figures intensified the degradation process resulting in a darker grey patch.
+  - Physicist and VSW collector friend Lee Bullöck studied a small number of these figures back in 2017. Catching back up with him recently he wrote the following text to include with this entry. “Whilst DecaBDE is present in PVC and was initially considered a possible candidate for the source of discoloration, it doesn’t further oxidise under normal circumstances. However there is some precedence for the PVC polymer to oxidise if there is an absence of stabilisers and antioxidants. This causes the oxidation of the polymer chain and additives within the PVC forming chromophoric (colour-producing) groups, causing discoloration to grey or brown (Ref. picture 3 below). I have forced this change in a Grey Limbed Snowtrooper – mechanically producing a new white surface, putting the limb in an oven at 105 deg C and forcing and oxidative/thermal degradation. A darkening of the fresh white surface was observed, as measured with a Hunterlab spectrophotometer.”
+  - Another trait of these peculiar figures are the white spots on the limbs (Ref. pictures 4, 5 & 6 below). These spots seem to coincide where there was direct contact with the skirt, the hand from the same figure, or another figure in the box. This direct contact somehow seemed to create enough of a barrier to prevent that small section of PVC from oxidizing.
+  - There has been some online discussion regarding the weight of the Grey Limb PBP figure verses the regular white PBP figure. BOTH PBP white and GL Snowtroopers can be found weighing 22gms while other standard PBP Snowtroopers can also weigh 19gms. This is unrelated to the limb degradation and is likely down to slight variations in the density of the PVC used.
+  - It’s speculation to suggest the order of events and with certainty what caused this obscurity. Looking at what we currently know, it’s very likely these figures were assembled, accessorized with the skirts, and quickly degraded prior to packaging (none have been found carded or bagged). If you have a box full of loose plastic figures that were undergoing a live chemical reaction in such close proximity, it would create a toxic environment for the chemically unstable PVC plastic limbs in this particular batch of figures. Again speculation, but the most degraded examples could have been in the centre where air circulation was poorest.
+  - Another theory to possibly explain this chemically unstable batch is the practice of recycling plastic. In the interviews conducted by Javier Ruilópez with ex-PBP employees (published in Vol.1 of his excellent “Made in Spain” PBP/Poch book), they discuss how previously shot plastic parts (runners, sprues) would be ground down and recycled back into granule form to re-use in shooting new plastic parts. This reduced the amount of waste plastic in the injection moulding process. This recycling could be repeated, but the plastic proved to became unstable and could darken in some circumstances.
+  - So if this batch of Spanish Grey Limb Snowtroopers was originally white, quickly turned an uneven grey, how did they end up in Leicestershire? To explain, we need to go back in time to the 90’s, then further back to the early 80’s.
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/

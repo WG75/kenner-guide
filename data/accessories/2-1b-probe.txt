@@ -3,10 +3,24 @@ Aliases: 2-1B Probe
 Category: Accessory
 
 Overview:
-2-1B Probe is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+2-1B Probe is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- GW ACRYLIC 2-B PROBE DISPLAY CASE — Easy to use, the 2-1b probe holder is supplied in 2 parts – BASE and TOP PLATE – and are specifically designed to accompany the GW Acrylic LASER cases .
+- Families and notes named on the page index
+  - F1: SMILE/ LILI LEDY (MIM)
+  - F2: UNITOY
+  - F3: KADER
+  - Without starting a debate on how 2-1B should hold this probe, let’s agree that this accessory often gets mixed up. Thankfully all three sculpts are easy to tell apart, so struggling to pair them to the correct figure should now be a thing of the past.
+  - F1: SMILE (SMALL) 1980 MADE IN HONG KONG COO & NOCOO
+    - Light grey
+    - Dark grey. Lili Ledy “Made in Mexico” (Droids Tig Fromme accessory)
+  - F2 UNITOY (LARGE) 1980 MADE IN HONG KONG COO
+    - Dark grey
+    - EPM central to probe
+    - Thinner then F1 & F3
+  - F3 KADER (LARGE) 1980 MADE IN HONG KONG COO
+    - Mid-grey with metallic finish
+    - Slightly rough texture
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

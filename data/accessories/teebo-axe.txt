@@ -3,13 +3,39 @@ Aliases: Teebo Axe
 Category: Accessory
 
 Overview:
-Teebo Axe is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Teebo Axe is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- MOULD COMPARISON: M1 & M2 — There are 2 main mould variations: M1 used by Unitoy in Hong Kong and later on by Lili Ledy in Mexico and M2 which was used by Universal Manufacturers in Taiwan . The main differences are the plastic malleability (M1=stiff, M2=rubbery) and the position of the gate scar to the
-- UNITOY/ LILI LEDY — M1 was produced by UNITOY in Hong Kong. The metal-mould later went to LILI LEDY in Mexico. These axes are made out of rigid material and sink when submerged under water. The following colours are known:
-- TAIWAN (U.M.) — M2 was produced by UNIVERSAL MANUFACTURERS in TAIWAN . These axes are made out of rubbery, flexible material and sink when submerged under water. The following colours are known:
-- R1: — The R1 has been around for decades. They are casted in some kind of tin-lead-alloy and painted with a tan colour. Needless to say that these sink when submerged in water. Above you can see it compared to M1 UNITOY and M2 TAIWAN (U.M.) . The rounded bottom of the axe is a dead
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Unitoy/ Lili Ledy
+  - M2: Taiwan (U.M.)
+  - The Teebo Axe was usually released with the following combinations of colour to figure:
+    - Beige Axe:
+      - Teebo
+  - There are two main mould variations. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the mould used.
+- MOULD COMPARISON: M1 & M2
+  - There are 2 main mould variations: M1 used by Unitoy in Hong Kong and later on by Lili Ledy in Mexico and M2 which was used by Universal Manufacturers in Taiwan . The main differences are the plastic malleability (M1=stiff, M2=rubbery) and the position of the gate scar to the bottom of the axe. In addition the M1 axe usually is more pointed to the bottom compared to the M2 axe.
+- UNITOY/ LILI LEDY
+  - M1   was produced by UNITOY in Hong Kong. The metal-mould later went to LILI LEDY in Mexico. These axes are made out of rigid material and sink when submerged under water. The following colours are known:
+    - glossy cream ( Lili Ledy )
+    - glossy dark cream ( Lili Ledy )
+    - light beige
+    - beige
+    - dark beige
+    - glossy cream (Lili Ledy)
+    - glossy dark cream (Lili Ledy)
+- TAIWAN (U.M.)
+  - M2   was produced by UNIVERSAL MANUFACTURERS in TAIWAN . These axes are made out of rubbery, flexible material and sink when submerged under water. The following colours are known:
+    - beige
+    - brownish beige
+    - dark reddish beige
+    - light reddish beige
+    - tan
+- R1:
+  - The R1 has been around for decades. They are casted in some kind of tin-lead-alloy and painted with a tan colour. Needless to say that these sink when submerged in water. Above you can see it compared to M1 UNITOY and M2 TAIWAN (U.M.) . The rounded bottom of the axe is a dead give away on pictures to spot those.
+  - The following colours are known:
+    - tan
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

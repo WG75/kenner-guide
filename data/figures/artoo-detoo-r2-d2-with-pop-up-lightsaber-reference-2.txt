@@ -1,0 +1,29 @@
+Figure Name: Artoo-Detoo (R2-D2) with pop-up Lightsaber
+Aliases: Artoo-Detoo (R2-D2) with pop-up Lightsaber; R2-D2
+Packaging: Power of the Force
+Category: Figure
+Part: 2 of 2
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): POTF 92-back and/or European Trilogo 70-back. Exact micro-variant carding requires sealed evidence. [70-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
+Workbook block: data/compatibility/debut-cardbacks-reference-potf-1.txt under Figure Name: Artoo-Detoo (R2-D2) with pop-up Lightsaber. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Sticker Guide:
+  - The only relevant picture for Pop-up R2-D2 is the F2 Smile “Late-era”. The sticker, screw & moulding guides are a general overview of all R2 figures.
+  - The Pop-Up Saber R2-D2 sticker is a 3 spot colour print with blue, black and grey.
+  - The SMILE R2 sticker has a darker “wedge”. The grey progressively becomes darker from their initial dark blue dome figure through to the Pop-up version. There’s a subtle revision of the sticker artwork in the Jedi era.
+  - The DROIDS era sticker is a new design to better reflect the cartoon caricature in the series. This was a 3 spot-colour process and has no variations.
+  - GLASSLITE used a sticker artwork based on the Kenner art, but is in fact unique to their factory. This applies to both their regular Pop-up R2 as well as their Droids version. Both are subtly different to the Kenner versions.
+  - REPRO stickers have been in circulation for decades now, and the most recent versions have even been designed to artificially mimic the yellowing effect of the ageing process. In the making of this guide, I saw dozens of figures sold on eBay as vintage, priced as vintage, but in actuality had reproduction stickers applied purely to dupe unsuspecting buyers.
+- SCULPT & SCREW DETAILS:
+  - The only relevant picture for Pop-up R2-D2 is the “Smile Pop-up”. The sticker, screw & moulding guides are a general overview of all R2 figures.
+  - With all figures, each part and accessory is specific to a factory. This is no different with R2-D2, as every part, screw and sticker used to produce the figure also being specific to a particular vendor.
+  - EPMs and gate scars are the most effective way of confirming the origins of R2 parts. For more information about what these terms mean, please refer to my 101 REFERENCE GUIDE .
+  - Parts can easily be swapped around and  for decades this has been done, and done incorrectly. If you have an R2 which has anything different to what’s shown here, I’d take a look at the other parts on the figure using my sculpt detail guide to see if the R2 has been tampered with. These Astromech figures have been messed around for decades by sellers/collectors looking for the cleanest example and indifferent/ignorant to the fact they’ve created a Frankenstein figure.
+- CREDITS:
+  - Thank you one and all!
+
+
+Sources:
+https://www.variantvillain.com/characters/potf/artoo-detoo-r2-d2-with-pop-up-lightsaber/

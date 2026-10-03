@@ -865,6 +865,17 @@ function tcScoreFiles(files, text) {
     idf[term] = df === 0 ? 0 : Math.max(0, Math.log(files.length / df) / Math.log(files.length));
   }
 
+  // Longest recorded name that is actually written in the question. A shorter
+  // name such as "IG-88" or "Yoda" must not take the plain-dossier boost when
+  // the question names "IG-88 Rifle" or "Yoda Cane".
+  let longestRecorded = "";
+  for (const file of files) {
+    const recorded = tcRecordedName(file);
+    if (recorded && recorded.length > longestRecorded.length && tcPhraseIn(text, recorded)) {
+      longestRecorded = recorded;
+    }
+  }
+
   return files.map(file => {
     let nameScore = 0;
     let contentScore = 0;
@@ -906,8 +917,30 @@ function tcScoreFiles(files, text) {
     // The longest name that actually appears in the question wins over a
     // shared first name (Luke Skywalker vs Luke Skywalker (Bespin Fatigues)).
     const recorded = tcRecordedName(file);
-    if (recorded && tcPhraseIn(text, recorded)) {
-      nameScore += 70 + Math.min(recorded.length, 80);
+    // "R2-D2" matches a dossier named "R2-D2 (Artoo-Detoo)". The bonus uses the
+    // phrase that is actually in the question, so a longer card name such as
+    // "Luke Skywalker (Bespin Fatigues)" still outranks the shorter one.
+    let matchedName = "";
+    if (recorded && tcPhraseIn(text, recorded)) matchedName = recorded;
+    else if (recorded) {
+      const bare = recorded.replace(/\s*\([^)]*\)\s*$/, "").trim();
+      if (bare && bare !== recorded && bare.length >= 3 && tcPhraseIn(text, bare)) matchedName = bare;
+    }
+    if (matchedName) {
+      // A dossier whose full recorded name is in the question outranks a
+      // longer card name that only matched once the parenthetical was removed.
+      const exact = matchedName === recorded;
+      nameScore += (exact ? 70 : 45) + Math.min(matchedName.length, 80);
+      // figures/r2-d2-reference-1.txt is the plain dossier for "R2-D2". A
+      // variant that only lists that short name as an alias (pop-up R2-D2)
+      // must not fill the context window ahead of it. Cardback questions keep
+      // the debut-file bonus in front, and a longer recorded name in the
+      // question (an accessory, or R2-D2 Sensorscope) keeps its own file.
+      const stem = tcSlug(matchedName);
+      const plainDossier = stem && (file.slug === `${stem}-reference` || file.slug.startsWith(`${stem}-reference-`));
+      if (!debutBoost && plainDossier && (!longestRecorded || matchedName.length >= longestRecorded.length)) {
+        nameScore += 50;
+      }
     }
     const aliasLine = file.content.match(/^(?:Aliases|Collector Names \/ Aliases):\s*(.+)$/m)?.[1] || "";
     for (const alias of aliasLine.split(/[;,]/)) {
@@ -941,6 +974,11 @@ function tcScoreFiles(files, text) {
 
 /* Rank files for a question. History is only used to resolve follow-ups, and
    only at reduced weight when the current message names nothing itself. */
+function tcPartOrder(relPath) {
+  const match = String(relPath || "").match(/-(\d+)\.[a-z0-9]+$/i);
+  return match ? Number(match[1]) : 0;
+}
+
 function tcRankFiles(message, priorUserTurns, extraHint) {
   const files = tcLoadFiles();
   let scored = tcScoreFiles(files, message);
@@ -960,7 +998,7 @@ function tcRankFiles(message, priorUserTurns, extraHint) {
 
   const ranked = scored
     .filter(s => s.score >= TC_MIN_SCORE)
-    .sort((a, b) => b.score - a.score || a.file.relPath.localeCompare(b.file.relPath));
+    .sort((a, b) => b.score - a.score || tcPartOrder(a.file.relPath) - tcPartOrder(b.file.relPath) || a.file.relPath.localeCompare(b.file.relPath));
 
   if (!ranked.length) return [];
   const cutoff = Math.max(TC_MIN_SCORE, ranked[0].score * 0.25);

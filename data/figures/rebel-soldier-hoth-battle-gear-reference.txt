@@ -4,23 +4,29 @@ Packaging: The Empire Strikes Back
 Category: Figure
 
 Overview:
-Rebel Soldier (Hoth Battle Gear) is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Rebel Soldier (Hoth Battle Gear) is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: unknown - not established in the reference workbook
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: Rebel Soldier (Hoth Battle Gear). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- I: Kader/ Kader China II: Unitoy/ Meccano III: Smile/ PBP
-- DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
-- The figure shown in the middle above is the Poch variant of the Rebel Soldier. Main characteristic is the white painted trousers. The “true” white colour was also used for the crotch, the emblem and the neck scarf. This variant is one of the confirmed ones. The used spray masks
-- The picture below (to the right) shows the COO that goes together with this Poch variant. Figures with the same COO produced by Kenner are shown next to the Poch variant in the first picture.
-- Shown on the left picture are two slightly different Poch versions from the Rebel Soldier. As you can see there are two different brown colours to the legs possible. Both colours are mixed up on the right example but they do of course both exist also with matching leg colours.
-- Some Poch Soldiers have also that kind of „dripped“ paint on it. It can only be spotted on the white painted parts of the legs.
+- Families and notes named on the page index
+  - I: Kader/ Kader China
+  - II: Unitoy/ Meccano
+  - III: Smile/ PBP
+  - POCH GUIDE
+  - BESPIN BLASTER
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Notes from the page with the photo credit name removed
+  - The figure shown in the middle above is the Poch variant of the Rebel Soldier. Main characteristic is the white painted trousers. The “true” white colour was also used for the crotch, the emblem and the neck scarf. This variant is one of the confirmed ones. The used spray masks are the same on the COO counterparts produced by Kenner. The only exception seems to be the much smaller black stripe on the emblem of the Poch variant.
+  - The picture below (to the right) shows the COO that goes together with this Poch variant. Figures with the same COO produced by Kenner are shown next to the Poch variant in the first picture.
+  - Shown on the left picture are two slightly different Poch versions from the Rebel Soldier. As you can see there are two different brown colours to the legs possible. Both colours are mixed up on the right example but they do of course both exist also with matching leg colours.
+  - Some Poch Soldiers have also that kind of „dripped“ paint on it. It can only be spotted on the white painted parts of the legs.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

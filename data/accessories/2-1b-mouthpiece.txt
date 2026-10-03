@@ -3,11 +3,33 @@ Aliases: 2-1B Mouthpiece
 Category: Accessory
 
 Overview:
-2-1B Mouthpiece is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+2-1B Mouthpiece is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- M1: SMILE — Single rib on each side of the mouth connector
-- M3: Kader — Two ribs present on both sides of the mouth connector
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Smile
+  - M2: Unitoy
+  - M3: Kader
+  - Ever wondered why your 2-1B mouthpiece doesn’t fit properly? …Or why it keeps popping out of his mouth? For those of you that had paid attention in the previous instalment, you’d have noticed that different factories have different mouth sockets! Well fear not as this simple guide will help you identify these accessories and correctly match them up.
+- M1: SMILE
+  - (small) 1980 MADE IN HONG KONG COO
+  - EARLY RELEASE
+  - Single rib on each side of the mouth connector
+  - Found with cavity no’s 1 to 8
+  - (small) 1980 MADE IN HONG KONG COO & NOCOO
+  - LATER RELEASE
+  - Mouth connector widened
+  - Ribs modified (soften and one removed)
+  - EPM added to even cavity no’s only
+- M3: Kader
+  - (large) 1980 MADE IN HONG KONG COO
+  - Two ribs present on both sides of the mouth connector
+  - Found with cavity no’s 2,4,6 or 8
+  - Large EPM on connector strap
+  - No ribs on mouth connector
+  - Found with cavity no’s 3, 5 or 7 (1 has not yet been confirmed)
+  - Small EPM on connector collar
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

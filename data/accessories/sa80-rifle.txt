@@ -3,10 +3,22 @@ Aliases: SA80 Rifle
 Category: Accessory
 
 Overview:
-SA80 Rifle is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+SA80 Rifle is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- M1: PALITOY — The SA80 was produced by PALITOY in the United Kingdom. The following colours are known:
+- Families and notes named on the page index
+  - MI: Palitoy
+  - The SA80 rifle is originally from the Kenner G.I. Joe Action Force line and was also released with the Imperial Stormtrooper in Hoth Battle Gear in the YPS comic (#510) as gimmick. It seems like they ran out of Imperial Hoth rifles and paired some of the Snowtrooper figures with the next best thing: SA80 rifles from the G.I Joe line.
+  - SA80 Rifle:
+    - Imperial Stormtrooper (Hoth Battle Gear)
+  - There are 4 main colour variations. Only the black one was released (partially) with the Imperial Stormtrooper in Hoth Battle Gear on the YPS comic.
+- M1: PALITOY
+  - The SA80 was produced by PALITOY in the United Kingdom. The following colours are known:
+    - Black (only one that appeared with Hoth Stormtrooper on the YPS comic)
+    - Silver
+    - White
+    - Red
+    - BLACK
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

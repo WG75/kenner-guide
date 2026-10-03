@@ -2,25 +2,55 @@ Figure Name: Klaatu
 Aliases: Klaatu
 Packaging: Return of the Jedi
 Category: Figure
+Part: 1 of 2
 
 Overview:
-Klaatu is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Klaatu is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-2.txt under Figure Name: Klaatu. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- Smile’s Klaatu figure was released on 65, 77 and 79 back Kenner cards. This was also the figure packaged in the UK on Palitoy cards. Production of Smile’s Klaatu figure moved from Hong Kong to Macau for the later versions.
+- Unitoy’s Klaatu figure was released on 65 and 77 back Kenner cards.
+- The initial 65bk releases came with a fluffy skirt, which was changed after a few releases to a flatter version.
+- Lili Ledy Klaatu figure was a Retorno release on the 14bk [14-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review], Regreso release on the 50bk [50-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review] and later is seen on the Kenner 65 back “Made in Mexico” (MIM) card.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Smile (Hong KONG/MACAU) — SMILE 1983 HONG KONG COO/No COO
-- Unitoy (Hong Kong) — UNITOY 1983 HONG KONG COO
-- LILI LEDY (MEXICO) — Above you can see following variants (left to right):
-- Walkie — Moulded silver helmet/Painted green face
-- Chihuahua — Mainly four different skirts can be found on Klaatu. The materials differ on the skirt itself as well as on the sewn-on belt.
-- Credits — SPECIAL THANKS: Many thanks to Stefan Callear and Wolff Lipinski for their help in the creation of this guide.
+- Families and notes named on the page index
+  - I: Smile
+  - II: Unitoy
+  - III: Lili Ledy (MIM)
+  - MOULD COMPARISON
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Smile (Hong KONG/MACAU)
+  - SMILE 1983 HONG KONG COO/No COO
+  - Above you can see following variants (left to right):
+    - Green painted face w/cream fluffy skirt
+    - Green painted face w/grey-brown flat skirt
+  - Smile’s Klaatu figure was released on 65, 77 and 79 back Kenner cards. This was also the figure packaged in the UK on Palitoy cards. Production of Smile’s Klaatu figure moved from Hong Kong to Macau for the later versions.
+  - For Klaatu’s head, Smile opted to shoot the plastic in silver and paint the face a mid-green shade. Read more about Klaatu’s variations in Wolff’s Mould/Colour Variants Guide . There aren’t any other mould variations to note and the colours in paint and plastic were consistent between the initial HK COO and the later no COO versions.
+  - The first 65a release was packaged briefly with a fluffy skirt before the direction to alter the material to a flatter, and more durable fabric. This “flatter” skirt material continued on and throughout the later No COO era.
+  - ACCESSORY: Vibro staff with a small EPM. Cream fluffy skirt (HK). Grey-brown flat skirt (No COO)
+- Unitoy (Hong Kong)
+  - UNITOY 1983 HONG KONG COO
+  - Above you can see following variants (left to right):
+    - Blue-green moulded face, mid-brown vest. Grey limbs. Cream fluffy skirt.
+    - Blue-grey moulded face, mid-brown vest. Tan arms, grey legs mix. Cream fluffy skirt.
+    - Blue-grey moulded face, dark-brown vest. Grey arms, tan legs mix. Grey-brown flat skirt.
+    - Green-blue moulded face, mid-brown vest. Grey limbs. Grey-brown flat skirt.
+    - Unitoy’s Klaatu figure was released on 65 and 77 back Kenner cards.
+  - Unitoy chose to shoot the head plastic in a blue-green and paint the helmet in silver. Read more about Klaatu’s variations in Wolff’s Mould/Colour Variants Guide . There are minor plastic colour variations in the shade of blue-green and the browns on Klaatu’s vest. Unitoy produced the limbs in both a tan or mid grey colour. Mixed colour combinations are commonly found on individual figures.
+  - The initial 65bk releases came with a fluffy skirt, which was changed after a few releases to a flatter version.
+  - Head colour comparison
+  - Limb colour comparison
+  - ACCESSORY: Vibro staff with a small EPM. Cream fluffy skirt or grey-brown flat skirt.
 
+Continued in the next part.
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

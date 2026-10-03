@@ -1,0 +1,41 @@
+Figure Name: AT-AT Driver
+Aliases: AT-AT Driver
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 3 of 3
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-4.txt under Figure Name: AT-AT Driver. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- SMILE (MIHK & NCOO)
+  - SMILE 1980 MADE IN HONG KONG/ No COO/ Mixed parts
+  - Above you can see following variants (left to right).
+  - Orange emblems with orange rear armour (MIHK COO)
+  - Darker orange emblems with light orange rear armour (MIHK COO)
+  - Orange emblems with light orange rear armour (No COO)
+  - Mixed parts. F4 right leg, F3 arms. Same details as F4 figure.
+  - Mixed parts. F3 right leg, F4 arms. Same details as F4 figure.
+  - In understanding the Smile factory variants, it is first worth noting that there are two different mould families for Smile. Family 3 was the first Smile figure produced, running throughout the ESB era. Smile only produced a MADE IN HONG KONG variant of this figure.
+  - SMILE F3 MIHK: This version of the AT-AT Driver is characterised by large black circles on the front of the helmet, either side of the mouthpiece, as well as a blunt black triangle on top of the helmet in between the emblems. This differs from Kader and Unitoy and helps to differentiate the figure from the front. This figure also has a more rounded right hand with fat thumb. In addition, the earliest iterations feature dark rectangles on the square plate on the back of the armour, although these were later superseded by a version with orange rectangles.
+  - It is worth noting that there is a Smile variant that has smaller black circles on the front and a pointy triangle on the top of the helmet. This can be found on the earlier Smile card backs from the 41A. However, on the 41E it began to transition to the more commonly found large black circle variant.
+  - SMILE F4 NCOO: For whatever reason, during the ROTJ era Smile produced a new mould which we’ve classified as family 4. There was never a Hong Kong variant of this figure, only a No COO figure. This new family can be identified by the fingernail details located on both thumbs. Additionally the left shoulder varies slightly, featuring a flat, rather than curved edging. There is a defect on the moulding on the COO that leads to a san serif “I” instead of a “1” in the date “LFL I980”.
+  - The F3 & F4 Smile AT-AT Driver were paired with the M3 Smile AT-AT Driver Rifle .
+- SMILE (F3 & F4 Mixed Parts)
+  - As mentioned there is no Smile family 3 No COO figure, or a Smile family 4 Hong Kong figure. However it is possible to find both these figures with mixed up parts from both families 3 & 4. The family 3 No COO figures have a family 3 left leg, and a family 4 right leg. Family 4 Hong Kong figures have a family 4 left leg, and a family 3 right leg. It’s a hard to find combination, but it is conceivable that a figure could be found with any combination of family 3 and 4 parts. This also applies to other characters which have multiple mould families produced within the same factory in the same time period.
+- F1 KADER & F2 UNITOY (MIHK)
+  - POCH 1980 MADE IN HONG KONG
+  - Above you can see following variants (left to right). There will be paint and plastic variations beyond what’s shown above.
+  - Crimson red emblems
+  - Orange emblems (to be added)
+  - Poch figures are made with a mix of painted and unpainted parts from both the Kader and Unitoy factories. The parts were painted (or repainted) and assembled in Spain during the early PBP era known as “Poch”.
+  - The two common Poch variations are one with orange emblems made from Kader factory parts, and another with purple-red emblems made from Unitoy factory parts. Refer to the Key Identifiers graphic below . Most examples feature parts solely from the Kader factory, or solely from the Unitoy factory. But examples have been found with mixed up limbs, though experience suggests less frequently than other Poch figures.
+  - Identifying Poch figures can be difficult. The most important element to note is the messily applied Poch paint, particularly the bright white paint on the shoulders and gloves. Poch expert Javier Ruilópez describes the emblems on the Unitoy variant as as an “Alizarin” crimson, which has a stronger purple hue than their Unitoy Kenner counterpart.  Sometimes, though not always, melt marks can be found on the gloves and elsewhere across the figure. Weak sonic welding is another possible tell for figures produced at this factory.
+  - The Poch AT-AT Driver was paired with either the M1 Unitoy AT-AT Driver Rifle or the M2 Kader AT-AT Driver Rifle .
+- Credits
+  - This guide has taken over a year to complete. We would like to thank the following people: Kenneth Baekmark, Andreas Bexelius, Robyn Bocra, Ahmed Boukarrouh, James Gurney, Wolff Lipinsky, Derek MacLeod, Pattejan, Henrik Wulff Rasmussen, Javier Ruilopez, Gary Scarbrough, James Stevens, Peter Wong, Justin Quince, Jonathan Robinson and Martin Woodgate, without whom this research would not have been possible.
+
+
+Sources:
+https://www.variantvillain.com/characters/esb/at-at-driver/

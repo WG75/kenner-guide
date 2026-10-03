@@ -1,0 +1,44 @@
+Figure Name: R5-D4
+Aliases: R5-D4
+Packaging: Star Wars
+Category: Figure
+Part: 4 of 4
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-5.txt under Figure Name: R5-D4. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- STICKER GUIDE
+  - The R5-D4 sticker is a 4 spot-colour print featuring blue, black, blue and grey.
+  - When printing in volume, a large sheet featuring many stickers would be produced. These would be imposed in such a way to obtain the maximum number of stickers per sheet in the most space efficient way. Each sheet would then be “die-cut” in a separate process which would cut the sticker out into individual panels.
+  - Early KADER R5-D4s (Fam.4 & 8) stickers featured a dark-blue and mid-grey colour palette.  The later ROTJ and Trilogo era figures (HK, Scar COO & No COO) have a noticeably lighter blue than their predecessors.
+  - R5’s sticker design is the same as the early R2-D2 solid domes. Each colour is printed in a separate pass (red/blue/grey/black). By swapping R2s blue for R5s red, you have a completely new look. The initial stickers Unitoy and Kader are identical in design, however, the Kader used stickers can very occasionally be found with a RED BAR in the top left corner. Rarer sticker/COO combos also appear in the late ESB era when the Unitoy factory stocks were being used up.
+  - The “red bar” sticker is an error. There’ve been a few theories on why this exists, but the most likely reason is it’s a remnant from the R2-D2 blue separation which wasn’t removed on one of the many copies. In short, one red bar sticker remains on a sheet of many stickers without.
+  - The other thing this suggests, is that the external printers used by each factory were different otherwise you’d more commonly find the red bar on Unitoy 1977 R5s. Either that, and less likely, is that each factory retained their print separations and a mutual printer produced stickers exclusively of each other.
+  - These mid-grey stickers were also used for the POCH R5-D4.
+  - The first UNITOY stickers featured a dark-blue and mid-grey colour palette. As the line progressed into the ROTJ era they printed the stickers in darker shades of grey and blue. Very late era Unitoy stickers transitioned to a light blue (not shown in graphic).
+  - In the mid-ESB era, Unitoy produced an R2-D2 Sensorscope figure which had a new sticker design, with the most noticeable feature being a smaller “wedge”. For cost efficiency, the same (small wedge) printing plates were used for the subsequent MIHK & No COO R5-D4 figures.
+  - The transition between the early large wedge and ESB era small wedge resulted in a mix of Unitoy sticker types and MIHK/No COOs.
+  - REPRO stickers have been in circulation for decades now, and the most recent versions have even been designed to artificially mimic the yellowing effect of the ageing process. In the making of this guide, I saw dozens of figures sold on eBay as vintage, priced as vintage, but in actuality had reproduction stickers applied purely to dupe unsuspecting buyers.
+- SCREW GUIDE
+  - This is a copy of the screw guide I made for R2-D2, so t he only relevant pictures for R5-D4 are the Unitoy & Kader examples!
+  - With all figures, each part and accessory is specific to a factory. This is no different with R5-D4, as every part, screw and sticker used to produce the figure also being specific to a particular vendor.
+  - Parts can easily be swapped around and  for decades this has been done, and done incorrectly. If you have an R5 which has anything different to what’s shown here, I’d take a look at the other parts on the figure using my sculpt detail guide to see if the R5 has been tampered with. These Astromech figures have been messed around for decades by sellers/collectors looking for the cleanest example and indifferent/ignorant to the fact they’ve created a Frankenstein figure.
+- FOOT SCULPT GUIDE
+  - Hopefully this leg sculpt guide can help confirm if your figure is factory correct or has been swapped around.
+- Notes from the page with the photo credit name removed
+  - The page shares all 9 known MOC versions of the R5-D4 Red Bar variant, including the newly discovered Canadian 20 Back!
+  - 20-A – SW Canada
+  - 20 – SW Italian Harbert (salesman sample)
+  - 21-A – SW US
+  - 21-C – SW US
+  - 47-A – ESB US
+  - 48-E [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review] – ROTJ US
+  - 65-B – ROTJ US
+  - 77-A – ROTJ US
+  - 77-A – ROTJ US QC sign off
+
+
+Sources:
+https://www.variantvillain.com/characters/sw/r5-d4/

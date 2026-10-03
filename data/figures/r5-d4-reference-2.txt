@@ -1,0 +1,44 @@
+Figure Name: R5-D4
+Aliases: R5-D4
+Packaging: Star Wars
+Category: Figure
+Part: 2 of 4
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-5.txt under Figure Name: R5-D4. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- UNITOY
+  - UNITOY 1977 MADE IN HONG KONG COO
+  - The Unitoy figure debuted on the 21bk Star Wars era MOC. This also shows up sporadically on mid-ESB era cardbacks from both Unitoy and Kader where it has been repackaged (smooth bubble seal). Unitoy were also responsible for many of the late era NO COO R5s which can be found on Trilogo cards.
+  - Above you can see following variants (left to right):
+    - Unitoy MIHK SW/ESB version
+    - Unitoy MIHK “Red Bar” Sticker (missing)
+    - Unitoy MIHK ESB era small wedge sticker
+    - Unitoy No COO SW era large wedge sticker
+    - Unitoy No COO ROTJ/Trilogo version
+    - Unitoy No COO Light blue sticker (missing)
+  - R5’s torso is shared with the Unitoy R2-D2. Given how close in design the two figures are, this is a great production shortcut Kenner used, which allowed them to create two characters with minimal need for bottom-up figure creation, as the only new sculpting and tooling required for the head and silver “neck” of R5.
+  - In the mid to late stages of ESB and early Jedi output, Kenner HQ decided to move a lot of the current production line away from the Unitoy factory for many characters. Presumably this is all related to the cost efficiency of the Chinese/Macau alternatives. This is seen in the form of shorter runs in all Unitoy produced figures, seconds/overstock parts going to Spain. The Unitoy factory wasn’t being retired, just a reshuffle in their previous lines with legacy figure and vehicle production moving to China/Macau with the the upcoming ROTJ line just around the corner.
+  - Key details for the family 1 Unitoy R5-D4 are:
+    - Smaller dome than Kader
+    - Large or small eye spray mask
+    - Large or small wedge
+    - Orange-red paint for dome and legs
+    - No leg EPMs
+    - Tall or medium height platforms foot soles
+    - Unitoy used a flanged screw to assemble their Astromech figures
+    - UNITOY 1977 NO COO
+  - Broadly the same details as the MIHK version. This figure has a sticker design alteration due to the newly released R2-D2 Sensorscope figure and now has a small “wedge”. Mixed up versions of both the MIHK & 1977 NCOO also exist as shown in the image above.
+  - Only moulding point of difference to note is we haven’t noted the 1977 No COO with short feet on a MOC. Given how easy this figure is to alter, loose examples can’t be used as evidence.
+- COO Family II:
+  - Not Applicable. R2-D2 & R2-D2 Sensorscope COOs only.
+- COO Family III:
+  - Not Applicable. R2-D2 COO only.
+  - Very occasionally, the torsos for R2 & R5 were mixed up resulting in R5s with a 1977 HK COO and R2s with a 1978 COO.
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/sw/r5-d4/

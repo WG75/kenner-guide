@@ -3,10 +3,14 @@ Aliases: Lando Skiff Helmet
 Category: Accessory
 
 Overview:
-Lando Skiff Helmet is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Lando Skiff Helmet is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- unknown. The fetched page did not yield section text.
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - F1: Smile
+  - F2: Unitoy
+  - F3: Lili Ledy/MIM
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

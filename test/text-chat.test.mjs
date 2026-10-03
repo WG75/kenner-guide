@@ -651,13 +651,20 @@ function loadCatalog() {
   return { figures, accessories };
 }
 
-await test("every data file is under the 7000 character retrieval cap", async () => {
+await test("every retrieval file is under the 7000 character cap", async () => {
+  // data/flows/*.json is loaded whole by loadFlow for the scripted chats.
+  // tcLoadFiles does not scan that folder, and TC_MAX_FILE_CHARS is not applied.
+  // data/catalog.json and data/catalog-N.json are fetched only by the dropdown
+  // in index.html (and by loadCatalog in this file). They are not injected
+  // into the model prompt, so they are outside the retrieval cap on purpose.
   const cap = 7000;
   const over = [];
   const walk = (dir) => {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name === "flows") continue;
       const full = path.join(dir, entry.name);
       if (entry.isDirectory()) walk(full);
+      else if (/^catalog(-\d+)?\.json$/.test(entry.name)) continue;
       else {
         const text = fs.readFileSync(full, "utf8");
         if (text.length > cap) over.push(`${path.relative(root, full)} (${text.length})`);
@@ -666,6 +673,67 @@ await test("every data file is under the 7000 character retrieval cap", async ()
   };
   walk(path.join(root, "data"));
   assert.equal(over.length, 0, over.join("\n"));
+});
+
+await test("no reference line ends with a colon and no following content", async () => {
+  // "Overview:" passes because the next line is the paragraph.
+  // A bullet ending in ":" fails unless the next line is indented under it,
+  // which is how a colour list or figure pairing is stored.
+  const bad = [];
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else if (entry.name.endsWith(".txt")) {
+        const lines = fs.readFileSync(full, "utf8").split(/\r?\n/);
+        lines.forEach((line, index) => {
+          if (!line.trimEnd().endsWith(":")) return;
+          let next = index + 1;
+          while (next < lines.length && !lines[next].trim()) next += 1;
+          if (next >= lines.length) {
+            bad.push(`${path.relative(root, full)}:${index + 1} ${line.trim()}`);
+            return;
+          }
+          const bullet = /^\s*(?:[-*]|\d+\.)\s/.test(line);
+          if (!bullet) return;
+          const indent = line.length - line.trimStart().length;
+          const nextIndent = lines[next].length - lines[next].trimStart().length;
+          if (nextIndent <= indent) bad.push(`${path.relative(root, full)}:${index + 1} ${line.trim()}`);
+        });
+      }
+    }
+  };
+  walk(path.join(root, "data"));
+  assert.equal(bad.length, 0, bad.slice(0, 12).join("\n"));
+});
+
+await test("accessory colour lists and probe sculpts are kept", async () => {
+  const endor = fs.readFileSync(path.join(root, "data/accessories/endor-blaster.txt"), "utf8");
+  const probe = fs.readFileSync(path.join(root, "data/accessories/2-1b-probe.txt"), "utf8");
+  assert.match(endor, /bluesih grey/);
+  assert.match(endor, /AT-ST Driver/);
+  assert.match(probe, /F1: SMILE \(SMALL\)/);
+  assert.match(probe, /F2 UNITOY \(LARGE\)/);
+  assert.match(probe, /F3 KADER \(LARGE\)/);
+  assert.match(probe, /Light grey/);
+});
+
+await test("paploo keeps page cardbacks and the workbook block", async () => {
+  const paploo = fs.readFileSync(path.join(root, "data/figures/paploo-reference.txt"), "utf8");
+  assert.match(paploo, /data\/compatibility\/debut-cardbacks-reference-rotj-4\.txt/);
+  assert.match(paploo, /50bk/);
+  assert.match(paploo, /92bk/);
+  assert.match(paploo, /Mid brown belt and dagger/);
+  assert.doesNotMatch(paploo, /Sorry, content not available/);
+});
+
+await test("r5-d4 photo credit is not stored as a variant", async () => {
+  const parts = fs.readdirSync(path.join(root, "data/figures"))
+    .filter(name => name.startsWith("r5-d4-reference"))
+    .map(name => fs.readFileSync(path.join(root, "data/figures", name), "utf8"))
+    .join("\n");
+  assert.doesNotMatch(parts, /Brian Angel/);
+  assert.match(parts, /SW Italian Harbert/);
 });
 
 await test("Early Bird R2-D2 factory question retrieves part 1 without truncation", async () => {

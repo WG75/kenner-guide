@@ -4,24 +4,50 @@ Packaging: Return of the Jedi
 Category: Figure
 
 Overview:
-8D8 is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+8D8 is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65/77/79-back; later Trilogo/POTF-era carding varies by figure.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-3.txt under Figure Name: 8D8. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- Lili Ledy — Sorry, content not available yet.
+- Families and notes named on the page index
+  - Smile: #1
+  - Lili Ledy: #2
+  - 8D8 COO V3 sheet coming soon
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
 
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
 2. Which head, paint or body trait matches a section above?
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists 8D8 on the 77-back "Return of the Jedi" card, No. 71210, 1984.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINt8D8.asp
+- Source: ( Return of the Jedi )
+- Date Stamp: 1983
+- Release Date: 1984
+- Carded Availability: Return of the Jedi Tri-Logo
+- Assortment No.: 71210
+- Weapons and Accessories: None
+- Point of Interest: Originally available in the 1983 Jabba the Hutt Dungeon playset, this figure first appeared carded on the Return Of The Jedi 77 back card in the United States, but can also be found on the Emperor offer Canadian Return Of The Jedi 65 Back card.
+- Major variations: Though all vintage figures have minor variations, the 8D8 action figure has a major sculpt variation in its legs. The legs were produced both with and without circles on the hip. Due to the way this figure was built, its legs are removable therefore making it impossible to say whether or not the legs were ever mixed. There are four possible configurations: Left and Right Legs with circles Left and Right Legs without circles Left Leg with circle and Right Legs without circle Left Leg without circle and Right Legs with circle
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
 
 Sources:
 https://www.variantvillain.com/characters/rotj/8d8/

@@ -3,20 +3,75 @@ Aliases: Pilot Blaster
 Category: Accessory
 
 Overview:
-Pilot Blaster is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+Pilot Blaster is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- MOULD COMPARISON: M1, M2.1, M2.2, M3, M4, M5 & M6
-- UNITOY / PBP — M1 was produced by a company (research in progress) in Hong Kong. The moulds were also later use by PBP in the ROTJ era. The following colours are known:
-- UNITOY — M2.1 was produced by a company (research in progress) in Hong Kong. The mould is an altered mould with thicker grip made from M2.2. The following colours are known:
-- UNITOY — M2.2 was produced by a company (research in progress) in Hong Kong. The following colours are known:
-- KADER CHINA — M3 was produced by a company (research in progress) probably Kader China. The following colours are known:
-- SMILE — M4 was produced by a company (research in progress) in Hong Kong. The following colours are known:
-- SMILE / LILI LEDY — M5 was produced by a company (research in progress) in Hong Kong. The moulds were later also used by LILI LEDY in Mexico for the release of the Cloud Car pilot. The following colours are known:
-- LILI LEDY — M6 was produced by LILI LEDY in Mexico. It was released with Jawa, Nien Nunb and TIE Fighter Pilot:
-- GW ACRYLIC PILOT BLASTER DISPLAY CASE — Easy to use, the Pilot Blaster accessory holder is supplied in 2 parts – BASE and TOP PLATE – and are specifically designed to accompany the GW Acrylic LASER cases .
-- Mexico — Besides the licensed production through the Lili Ledy company, the bootleg production in Mexico was not in hand of larger factories. These were family businesses, small establishments, that made their own molds, their own machines to inject the plastic. Therefore there is no
-- POLAND — This blaster was produced by Elektrospółdzielnia (EVANPLAST) for an unnamed line in Poland . The mould was used in the 80s, 90s and 2000s (1985-2003). These were packed in baggies probably stapled onto cardbacks and sold as accessory sets. They are nowadays mostly paired with
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1:  Unitoy/PBP
+  - M2.1: Unitoy
+  - M2.2: Unitoy
+  - M3:  Kader China
+  - M4:  Smile
+  - M5:  Smile / Lili Ledy
+  - M6:  Lili Ledy
+  - The Pilot Blaster was usually released with the following combinations of colour to figure:
+    - Grey Pilot Blaster:
+      - TIE Fighter Pilot
+      - Cloud Car Pilot
+    - Black Pilot Blaster:
+      - Nien Nunb
+      - TIE Fighter Pilot (LILI LEDY)
+      - Jawa (LILI LEDY)
+  - There are 6 main mould variations plus an altered mould (M2.2). Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the steel mould used.
+- UNITOY / PBP
+  - M1 was produced by a company (research in progress) in Hong Kong. The moulds were also later use by PBP in the ROTJ era. The following colours are known:
+    - bright light grey (PBP)
+    - glossy light grey (PBP)
+    - dark grey
+    - black
+    - M1a: unknown (the page does not list them in text).
+    - bright light grey
+    - glossy light grey
+    - M1b: unknown (the page does not list them in text).
+    - M1c: unknown (the page does not list them in text).
+- UNITOY
+  - M2.1 was produced by a company (research in progress) in Hong Kong. The mould is an altered mould with thicker grip made from M2.2. The following colours are known:
+    - metallic grey
+    - dark grey
+    - yellowish dark grey
+    - M2.1a / M2.1a / M2.1b: unknown (the page does not list them in text).
+- UNITOY
+  - M2.2 was produced by a company (research in progress) in Hong Kong. The following colours are known:
+    - yellowish dark grey
+    - dark grey
+    - M2.1a / M2.1b: unknown (the page does not list them in text).
+- KADER CHINA
+  - M3 was produced by a company (research in progress)  probably Kader China. The following colours are known:
+    - light-grey (can be confused with the PBP version, see M1)
+    - light-grey
+- SMILE
+  - M4 was produced by a company (research in progress) in Hong Kong. The following colours are known:
+    - blueish grey
+    - grey
+- SMILE / LILI LEDY
+  - M5 was produced by a company (research in progress) in Hong Kong. The moulds were later also used by LILI LEDY in Mexico for the release of the Cloud Car pilot. The following colours are known:
+    - blueish grey
+    - grey
+    - very dark grey (LILI LEDY)
+    - black
+- LILI LEDY
+  - M6 was produced by LILI LEDY in Mexico. It was released with Jawa, Nien Nunb and TIE Fighter Pilot:
+    - black (cavity letter “L”)
+    - black (no cavity letter)
+- Mexico
+  - Besides the licensed production through the Lili Ledy company, the bootleg production in Mexico was not in hand of larger factories. These were family businesses, small establishments, that made their own molds, their own machines to inject the plastic. Therefore there is no specific lines or producers known.
+  - This blaster shown below was only produced in the 80s and came in accessory sets and was also packed with various figures including a fully articulated (f/a) Tie Fighter Pilot bootleg. Here shown is one colour of maybe more in existance:
+    - black
+- POLAND
+  - This blaster was produced by Elektrospółdzielnia (EVANPLAST) for an unnamed line in Poland . The mould was used in the 80s, 90s and 2000s (1985-2003). These were packed in baggies probably stapled onto cardbacks and sold as accessory sets. They are nowadays mostly paired with the figures that came from the same factory in the so called “Polish 1st, 2nd and 3rd Gen” lines. All those accessories came in a huge variety of colours over the years. Here is two examples:
+    - greyish black
+    - black
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

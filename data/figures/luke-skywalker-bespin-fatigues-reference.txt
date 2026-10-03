@@ -2,25 +2,77 @@ Figure Name: Luke Skywalker (Bespin Fatigues)
 Aliases: Luke Skywalker (Bespin Fatigues); Bespin Fatigues; Bespin Luke
 Packaging: The Empire Strikes Back
 Category: Figure
+Part: 1 of 2
 
 Overview:
-Luke Skywalker (Bespin Fatigues) is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+Luke Skywalker (Bespin Fatigues) is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
-That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: Luke Skywalker (Bespin Fatigues). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
 
 COO / factory and body notes from the source page (evidence: documented where the page states them):
-- FIGURE GUIDE: OVERVIEW — Above you can see a group shot of nearly all important vintage Luke Skywalker (Bespin Fatigues) variants. First row is PBP (x5), POCH (x4) and LILI LEDY (x3) figures. Second row is Kader (x6) and Smile (x5) variants and in the last row we can see all Unitoy variants (x7) plus Mex
-- Smile — Above you can see following variants (left to right):
-- Unitoy/ Poch — Above you can see following variants (left to right):
-- Kader/ Poch/ PBP/ LL RETORNO/ KADER CHINA/ LL REGRESO — Above you can see following variants (left to right):
-- Poch Guide — Above you can see following POCH variants (left to right):
-- Lili Ledy Guide — Above you can see following LILI LEDY variants (left to right):
+- Families and notes named on the page index
+  - I: Smile
+  - II: Unitoy
+  - III: Kader
+  - Kader China/ LL Regreso
+  - POCH GUIDE
+  - LILI LEDY GUIDE
+  - REBEL BLASTER GUIDE
+  - HANDHELD SABER GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- FIGURE GUIDE: OVERVIEW
+  - Above you can see a group shot of nearly all important vintage Luke Skywalker (Bespin Fatigues) variants. First row is PBP (x5), POCH (x4) and LILI LEDY (x3) figures. Second row is Kader (x6) and Smile (x5) variants and in the last row we can see all Unitoy variants (x7) plus Mexican bootleg (x1) and blonde Smile figures (x2). I will go into deeper detail each group below.
+- Smile
+  - Above you can see following variants (left to right):
+    - Smile with blonde hair and ochre brown boots
+    - Smile with blonde hair and reddish brown boots
+    - The blonde Smile figures were usually paired with yellow M3 handheld lightsaber and blue M1 Rebel Blaster.
+    - Smile with yellowish brown hair
+    - Smile with brown hair
+    - Smile with orange brown hair
+    - Smile with ochre brown hair (can be found on HK and No Coo)
+    - Smile with greenish brown hair (can be found on HK and No Coo)
+  - The brown haired Smile figures were usually paired with yellow M3 handheld lightsaber and blue M1 Rebel Blaster.
+- Unitoy/ Poch
+  - Above you can see following variants (left to right):
+    - Unitoy with alternative face spraymask and light flesh hands
+    - Unitoy with alternative face spraymask and dark orange flesh hands and UNPAINTED left hip
+    - Unitoy transition figure with standard face spraymask but dark orange flesh hands and handpainted hip.
+    - Unitoy with standard face spraymask, flesh hands and bright yellow hair
+  - The blonde haired Unitoy figures were usually paired with yellow M2 handheld lightsaber and blue M2 / M3 Rebel Blaster.
+  - Unitoy with orange hair and lighter brown boots (Meccano 45 & 65 cards)
+  - Unitoy with orange hair and darker brown boots (Palitoy 45A)
+  - POCH with Unitoy Coo mixed up figure with POCH Kader head
+  - POCH with Unitoy Coo with lightbrown boots and pale hands
+  - POCH with Unitoy Coo with darkbrown boots and pink hands
+  - The orange haired Unitoy figures were usually paired with yellow M2 handheld lightsaber and blue M2 / M3 Rebel Blaster.
+- Kader/ Poch/ PBP/ LL RETORNO/ KADER CHINA/ LL REGRESO
+  - Above you can see following variants (left to right):
+    - Kader with blonde hair
+    - Kader with brown hair and unique large face spray mask (type 1)
+    - Kader with brown hair and unique small face spray mask (type 2)
+    - Kader with brown hair and standard face spray mask (type 3). Often degraded and found with pale head.
+    - POCH with Kader Coo, brown hair and UNPAINTED left hip.
+    - The Kader figures were usually paired with yellow M1 handheld lightsaber and blue M5 Rebel Blaster.
+    - PBP with Kader No Coo (smooth) caramel-brown boots
+    - PBP with Kader No Coo (smooth) reddish brown boots
+    - PBP with Kader No Coo (smooth) dark brown boots
+    - PBP with Kader No Coo (smooth) chocolate-brown boots
+    - LILI LEDY with Kader No Coo (smooth) with blonde hair and UNPAINTED left hip.
+  - All PBP variants can come with unpainted or painted hip. Please note that on the picture above one main boot colour is missing. The PBP figures were usually paired with yellow M1 handheld lightsaber and blue M5 Rebel Blaster.
+  - The LILI LEDY figure is the Retorno variant. There is a transition variant known with blonde hair but face spray mask from Regreso brown hair Luke plus boot colour already switched to light brown. Both variants were usually paired with yellow LL M1 handheld lightsaber and blue LL M5 Rebel Blaster.
+  - Kader No Coo (raised bar) with brown hair and head type 1 (China Baggie)
+  - Kader No Coo (raised bar) with brown hair and head type 2
+  - LILI LEDY with Kader No Coo (raised bar) with brown hair
+  - LILI LEDY with Kader No Coo (raised bar) with overstock head and very dark brown hair
+  - The Kader figures were usually paired with yellow M1 handheld lightsaber and blue M5 Rebel Blaster. The LILI LEDY figures are so called Regreso variants with raised bar and were usually paired with LL M2.2 Bespin Blaster and LL M1 handheld lightsaber.
 
+Continued in the next part.
 Accessories:
-- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
 
 Variant questions:
 1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?

@@ -1,0 +1,49 @@
+Figure Name: Boba Fett
+Aliases: Boba Fett
+Packaging: Star Wars
+Category: Figure
+Part: 2 of 3
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 21-back onward; extensive ESB/ROTJ/regional carding exists.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-6.txt under Figure Name: Boba Fett. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- PBP
+  - Above you can see different Boba Fett figures from Fam II with No COO made in Spain by PBP. The so called “Trilogo” Boba Fett’s can come in multiple colour combinations. I tried to show the main six different colours regarding the chest armour and also the six main colours regarding the belt colours. In addition these come in all combinations regarding the wrist dart and knee pad paint beeing left out or not. Although almost all combinations are possible, to our knowledge the warm olive green chest plate can only be found in combination with the painted knee and unpainted wrist dart. The PBP Fett was usually paired with the M7 Imperial Blaster.
+  - Above you can see the variety on chest and belt colours.
+  - PBP Painted Knee Unpainted Dart
+  - PBP Other Knee and Dart Variations
+  - Above you can see following colour combinations (left to right):
+    - PBP, P.Knee/ Unp. Dart, Warm Olive Chest, Light Brown Belt
+    - PBP, P.Knee/ Unp. Dart, Mud Green Chest, Light Brown Belt
+    - PBP, P.Knee/ Unp. Dart, Yellowish Green Chest, Medium Brown Belt
+    - PBP, P.Knee/ Unp. Dart, Blueish Green Chest, Reddish Dark Brown Belt
+    - PBP, P.Knee/ Unp. Dart, Green Chest, Blackish Belt
+    - PBP, P.Knee/ P. Dart, Green Chest, Blackish Belt
+    - PBP, Unp. Knee/ Unp. Dart, Light Mud Green Chest, Dark Brown Belt
+    - PBP, Unp. Knee/ Unp. Dart, Green Chest, Reddish Dark Brown Belt
+    - PBP, Unp. Knee/ P. Dart, Yellowish Green Chest, Brwon Belt (Bi-Coloured)
+- Lili Ledy
+  - The two main Ledy variants. The unglued and therefore removable rocket is more likely a factory error. But what you can’t deny is that there is a heavy difference in the chest armour colour on those two.
+  - See below for more information on the LILI LEDY REMOVABLE ROCKET BOBA FETT , please read Ozio’s excellent article on this figure.
+- LL REMOVABLE ROCKET BOBA FETT
+  - Made in Mexico by Lili Ledy back on the 80’s. This variant or factory mistake it’s one of the most popular figures from the Star Wars toy line made by Lili Ledy. The first information available on this figure was a technical card inside the ‘Universo Starwars’ Mexican magazine back on 2003.
+  - Since then this figure became one of the more sought after LL items on the hobby, for that same reason it became one of the most faked ones too. Some LL Boba Fetts where assembled and sonic welded without the rocket inside, (that’s why it could be called a factory mistake), after that the rocket was added and locked in with a turn, in order to take the rocket out and depending on the position of the tab inside Boba you have to turn in right or left, then pull it up, if you want to insert the rocket back you have to push it down and turn it (depending on the position of the tab), right or left, you will hear a clicking sound that indicates that the rocket is locked.
+  - After one RR Fett got a broken tab because of the ‘clicking sound test’ I wouldn’t recommend it.
+  - The big difference between a regular LL Boba Fett and a Removable Rocket Boba Fett is the rocket.
+  - On a Regular LL Boba Fett, the tab on the rocket is inserted on a hole and another tab holds firmly the rocket inside the figure, after the welding process everything merges a bit so there’s no way to take it out without damaging the figure and the rocket, that’s why an original LL RR Boba Fett has a complete, clean, undamaged rocket with complete, undamaged tab, even if the rocket was inserted and taken out several times.
+  - Rocket must be complete and have no melt marks at all, especially on the opposite side of the tab:
+    - As the rocket on a LL RR Boba Fett was inserted after the welding process, Rocket should not have any signs of melting or blue marks on it. The blue mark comes from the contact between the rocket and this inner tab on the front torso.
+    - This is the position of the rocket with the tab inserted correctly.
+  - As you can see the inner tab on the front torso holds the rocket on its place and that’s why after the welding process that inner tab leaves a melt mark on the rocket, right on the opposite side of the rocket’s tab. So a LL Rocket with a blue mark, or blue residues on the opposite side of the tab on the rocket comes from a regular LL Boba Fett.
+  - If you find this mark on the opposite side of the tab you have a Rocket that was removed from a ‘regular’ LL Boba Fett. And of course you can get the ‘cleaned’ rocket, a sanded-damaged rocket to cover the melt mark. Always pay especial attention to the oposite side of the tab on the rocket, it must be complete and clean without melt marks, damage, etc. Like this:
+    - The rocket hole on the back of Boba Fett must look clean with no melting marks inside.
+  - On a regular LL Boba Fett, mould line on rocket is horizontally aligned to the shoulders but on a LL RR Boba Fett, mould line on the rocket it’s not horizontally aligned to the shoulders.
+  - On some examples, rocket was wrongly inserted on Boba’s torso BEFORE welding process, the tab on the rocket was not inserted on the hole on the back of the torso, these LL Fett’s share the same characteristic that the RR Fett, the mold line on the rocket it’s not horizontally aligned to the shoulders but it won’t come out easily, why? Because it has merged inside on some parts, remember the tab on the rocket is not on its place so if you turn it it will eventually turn, we will discuss this variant on a different thread. AND that’s it, I hope you guys find this info helpful.
+  - The key to recognise an original RR LL Boba Fett is a clean rocket with no melt marks on the opposite side of the tab, and a clean inside on the back pack.
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/sw/boba-fett/
