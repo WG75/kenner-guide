@@ -401,6 +401,23 @@ for (const message of accessoryMenuReplies) {
   });
 }
 
+await test("debut cardback question for Darth Vader retrieves the new reference file", async () => {
+  const { json } = await call({ message: "What was the debut cardback for Darth Vader?" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.some(s => s.includes("debut-cardbacks-reference")), `got ${json.sources}`);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /REFERENCE: compatibility\/debut-cardbacks-reference/);
+  assert.match(prompt, /Figure Name: Darth Vader/);
+});
+
+await test("cardback question for Yoda retrieves the new reference file", async () => {
+  const { json } = await call({ message: "Which cardback for Yoda?" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.some(s => s.includes("debut-cardbacks-reference")), `got ${json.sources}`);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /Figure Name: Yoda/);
+});
+
 await test("A / identify variant stays scripted and does not call the model", async () => {
   const a = await call({ message: "A", flowState: { ...vaderFlow, step: "choose_help" } });
   const variant = await call({ message: "identify variant", flowState: { ...vaderFlow, step: "choose_help" } });

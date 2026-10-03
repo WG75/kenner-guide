@@ -1,0 +1,71 @@
+Debut Kenner Cardback reference
+Source: Variant Villain reference workbook, Figure -> Cardback Matrix and Cardback Summary legend. Cardback research date 14 September 2026 (Method & Scope).
+Debut Kenner Cardback means the workbook column Earliest / exact cardback. It is not a confirmed debut for most figures, and it is not Warren's own Debut Card Back list. Do not silently overwrite one with the other.
+Debut Kenner Cardback, compatible cardbacks (Other documented cardbacks / range) and factory matching are different. A figure on a card does not prove every variant belongs with that card. Factory matching is not established in this workbook (no card-manufacturing source or run). A rationale line below is repeated only when the workbook states that factory-to-card link, with its evidence label.
+Evidence: Exact / explicitly documented -> documented. Confirmed production range -> documented (range only, not an exact card). Regional family / broad match -> probable. Unconfirmed exact micro-variant -> unknown.
+Warren's valid Kenner families: 12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92. 48-back is in the Cardback Summary (ESB 48A1, 48A2, 48B1, 48B2, 48C; ROTJ 48A1, 48A2, 48A3) but is not on that list. 14, 17, 18, 30, 37, 50 and 70 are not on it either. Flagged where they appear.
+96 figure pages. Variant lines are only Exact or Confirmed production range. Aliases are only names already written in the figure title. Packaging is the workbook Era field.
+Figure Name: Jawa
+Aliases: Jawa
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 12-back; many continued onto SW 20/21 and later cards.
+Factory matching: not established in this workbook.
+Variant lines (Exact or Confirmed production range only):
+- Kader HK vinyl-cape rectangular very-dark-brown bandolier/transparent oval eyes. Factory / origin: Kader. Earliest / exact cardback: Star Wars 12A. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: SW 12A–12C vinyl-cape era. Rationale: Kader vinyl-cape Jawa belongs to the early 12-back VC run; exact paint/bandolier micro-variant is not forced to one sub-back. Cardback source: https://www.thevariantvillains.com/cardbacks/jawa-cardbacks/.
+- Toltoys vinyl cape rounded bandolier. Factory / origin: Toltoys. Earliest / exact cardback: ESB 41E. Evidence: documented. Other documented cardbacks / range: ESB 41E Toltoys. Rationale: The mixed Toltoys vinyl-cape variant is traced by Variant Villain to an ESB 41E cardback. Cardback source: https://www.thevariantvillains.com/cardbacks/jawa-cardbacks/.
+- Unitoy F3 rectangular bandolier/small-dot eyes; Unitoy F4 rounded bandolier with small-dot or almond eyes. Factory / origin: Unitoy. Earliest / exact cardback: Star Wars 12-back. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: SW 12-back through ESB 47-back documented. Rationale: Unitoy cloth-cape Jawa debuted in the SW 12-back period and is documented through ESB 47-back. Cardback source: https://www.thevariantvillains.com/cardbacks/jawa-cardbacks/.
+- Lili Ledy rounded grey-brown/purple-brown/dark-brown bandoliers; Lili Ledy removable hood light stitching; Lili Ledy removable hood dark stitching; Lili Ledy attached hood. Factory / origin: Lili Ledy. Earliest / exact cardback: Lili Ledy 50-back Regreso [50-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]. Evidence: documented. Other documented cardbacks / range: 50-back Regreso [50-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]. Rationale: Lili Ledy Jawa is documented on the 50-back Regreso card [50-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]. Cardback source: https://www.thevariantvillains.com/cardbacks/lili-ledy-cardbacks/.
+Figure source: https://www.variantvillain.com/characters/sw/jawa/
+
+
+Figure Name: Sand People
+Aliases: Sand People
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 12-back; many continued onto SW 20/21 and later cards.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/sw/sand-people/
+
+
+Figure Name: Death Squad Commander
+Aliases: Death Squad Commander
+Packaging: Star Wars
+Debut Kenner Cardback: unknown - not established in the reference workbook
+Factory matching: not established in this workbook.
+Figure source: https://www.variantvillain.com/characters/sw/death-squad-commander/
+
+
+Figure Name: Greedo
+Aliases: Greedo
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/sw/greedo/
+
+
+Figure Name: Hammerhead
+Aliases: Hammerhead
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/sw/hammerhead/
+
+
+Figure Name: Snaggletooth
+Aliases: Snaggletooth
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/sw/snaggletooth/
+
+
+Figure Name: Walrus Man
+Aliases: Walrus Man
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/sw/walrus-man/
