@@ -1,0 +1,189 @@
+{
+  "name": "VF-CB catalog",
+  "aliases": [
+    "catalog"
+  ],
+  "part": "2 of 6",
+  "sources": [
+    "https://www.variantvillain.com/characters/sw/",
+    "https://www.variantvillain.com/accessory-guide/"
+  ],
+  "figures": [
+    {
+      "name": "Han Solo (Hoth Outfit)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/han-solo-hoth-outfit-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/han-solo-hoth-outfit/",
+      "status": "existing"
+    },
+    {
+      "name": "Lando Calrissian",
+      "era": "The Empire Strikes Back",
+      "file": "figures/lando-calrissian-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/lando-calrissian/",
+      "status": "existing"
+    },
+    {
+      "name": "Bespin Security Guard (White)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/bespin-security-guard-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/bespin-security-guard/",
+      "status": "existing"
+    },
+    {
+      "name": "Yoda",
+      "era": "The Empire Strikes Back",
+      "file": "figures/yoda-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/yoda/",
+      "status": "existing"
+    },
+    {
+      "name": "Ugnaught",
+      "era": "The Empire Strikes Back",
+      "file": "figures/ugnaught-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/ugnaught/",
+      "status": "existing"
+    },
+    {
+      "name": "Dengar",
+      "era": "The Empire Strikes Back",
+      "file": "figures/dengar-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/dengar/",
+      "status": "existing"
+    },
+    {
+      "name": "Han Solo (Bespin Outfit)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/han-solo-bespin-outfit-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/han-solo-bespin-outfit/",
+      "status": "existing"
+    },
+    {
+      "name": "Lobot",
+      "era": "The Empire Strikes Back",
+      "file": "figures/lobot-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/lobot/",
+      "status": "existing"
+    },
+    {
+      "name": "Leia (Hoth Outfit)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/leia-hoth-outfit-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/leia-hoth-outfit/",
+      "status": "existing"
+    },
+    {
+      "name": "Rebel Commander",
+      "era": "The Empire Strikes Back",
+      "file": "figures/rebel-commander-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/rebel-commander/",
+      "status": "existing"
+    },
+    {
+      "name": "AT-AT Driver",
+      "era": "The Empire Strikes Back",
+      "file": "figures/at-at-driver-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/at-at-driver/",
+      "status": "existing"
+    },
+    {
+      "name": "Imperial Commander",
+      "era": "The Empire Strikes Back",
+      "file": "figures/imperial-commander-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/imperial-commander/",
+      "status": "existing"
+    },
+    {
+      "name": "2-1B",
+      "era": "The Empire Strikes Back",
+      "file": "figures/2-1b-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/2-1b/",
+      "status": "existing"
+    },
+    {
+      "name": "R2-D2 (Sensorscope)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/r2-d2-sensorscope-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/r2-d2-sensorscope/",
+      "status": "existing"
+    },
+    {
+      "name": "C-3PO (Removable Limbs)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/c-3po-removable-limbs-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/c-3po-removable-limbs/",
+      "status": "existing"
+    },
+    {
+      "name": "Luke Skywalker (Hoth Battle Gear)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/luke-skywalker-hoth-battle-gear-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/luke-skywalker-hoth-battle-gear/",
+      "status": "existing"
+    },
+    {
+      "name": "At-At Commander",
+      "era": "The Empire Strikes Back",
+      "file": "figures/at-at-commander-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/at-at-commander/",
+      "status": "existing"
+    },
+    {
+      "name": "(Twin-Pod) Cloud Car Pilot",
+      "era": "The Empire Strikes Back",
+      "file": "figures/cloud-car-pilot-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/cloud-car-pilot/",
+      "status": "existing"
+    },
+    {
+      "name": "Bespin Security Guard (Black)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/bespin-security-guard-2-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/bespin-security-guard-2/",
+      "status": "existing"
+    },
+    {
+      "name": "Zuckuss",
+      "era": "The Empire Strikes Back",
+      "file": "figures/zuckuss-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/zuckuss/",
+      "status": "existing"
+    },
+    {
+      "name": "Imperial Tie Fighter Pilot",
+      "era": "The Empire Strikes Back",
+      "file": "figures/imperial-tie-fighter-pilot-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/imperial-tie-fighter-pilot/",
+      "status": "existing"
+    },
+    {
+      "name": "4-LOM",
+      "era": "The Empire Strikes Back",
+      "file": "figures/4-lom-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/4-lom/",
+      "status": "existing"
+    },
+    {
+      "name": "Admiral Ackbar",
+      "era": "Return of the Jedi",
+      "file": "figures/admiral-ackbar-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/admiral-ackbar/",
+      "status": "existing"
+    },
+    {
+      "name": "Luke Skywalker (Jedi Knight Outfit)",
+      "era": "Return of the Jedi",
+      "file": "figures/luke-skywalker-jedi-knight-outfit-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/",
+      "status": "existing"
+    },
+    {
+      "name": "Princess Leia Organa (Boushh Disguise)",
+      "era": "Return of the Jedi",
+      "file": "figures/princess-leia-organa-boussh-disguise-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-boussh-disguise/",
+      "status": "existing"
+    }
+  ],
+  "accessories": []
+}

@@ -558,6 +558,14 @@
       fetch("data/catalog.json")
         .then((response) => response.json())
         .then((catalog) => {
+          if (!Array.isArray(catalog.parts)) return catalog;
+          return Promise.all(catalog.parts.map((name) => fetch(`data/${name}`).then((response) => response.json())))
+            .then((parts) => ({
+              figures: parts.flatMap((part) => part.figures || []),
+              accessories: parts.flatMap((part) => part.accessories || [])
+            }));
+        })
+        .then((catalog) => {
           const addGroup = (label, items, kind) => {
             if (!Array.isArray(items) || !items.length) return;
             const group = document.createElement("optgroup");

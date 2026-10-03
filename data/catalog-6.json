@@ -1,0 +1,194 @@
+{
+  "name": "VF-CB catalog",
+  "aliases": [
+    "catalog"
+  ],
+  "part": "6 of 6",
+  "sources": [
+    "https://www.variantvillain.com/characters/sw/",
+    "https://www.variantvillain.com/accessory-guide/"
+  ],
+  "figures": [],
+  "accessories": [
+    {
+      "name": "Bib Fortuna Staff",
+      "file": "accessories/bib-fortuna-staff.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/bib-fortuna-staff/",
+      "status": "created"
+    },
+    {
+      "name": "2-1B Probe",
+      "file": "accessories/2-1b-probe.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/2-1b-probe/",
+      "status": "created"
+    },
+    {
+      "name": "Squid Head Belt",
+      "file": "accessories/squid-head-belt.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/squid-head-belt/",
+      "status": "created"
+    },
+    {
+      "name": "Bib Fortuna Belt",
+      "file": "accessories/bib-fortuna-belt.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/bib-fortuna-belt/",
+      "status": "created"
+    },
+    {
+      "name": "Yoda Belt",
+      "file": "accessories/yoda-belt.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/yoda-belt/",
+      "status": "created"
+    },
+    {
+      "name": "Leia Boushh Helmet",
+      "file": "accessories/leia-boushh-helmet.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/leia-boushh-helmet/",
+      "status": "created"
+    },
+    {
+      "name": "Lando Skiff Helmet",
+      "file": "accessories/lando-skiff-helmet.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/lando-skiff-helmet/",
+      "status": "created"
+    },
+    {
+      "name": "Teebo Headpiece",
+      "file": "accessories/teebo-hood.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/teebo-hood/",
+      "status": "created"
+    },
+    {
+      "name": "Ugnaught Smock",
+      "file": "accessories/ugnaught-smock-guide.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/ugnaught-smock-guide/",
+      "status": "created"
+    },
+    {
+      "name": "Squid Head Skirt",
+      "file": "accessories/squid-head-skirt.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/squid-head-skirt/",
+      "status": "created"
+    },
+    {
+      "name": "Bib Fortuna Cloak",
+      "file": "accessories/bib-fortuna-cloak.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/bib-fortuna-cloak/",
+      "status": "created"
+    },
+    {
+      "name": "Luke Jedi Cloak",
+      "file": "accessories/luke-jedi-cloak.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/luke-jedi-cloak/",
+      "status": "created"
+    },
+    {
+      "name": "Trench Coat (Han Endor)",
+      "file": "accessories/han-endor-trench-coat.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/han-endor-trench-coat/",
+      "status": "created"
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi Cape",
+      "file": "accessories/ben-obi-wan-kenobi-cape.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
+      "status": "existing"
+    },
+    {
+      "name": "Tusken Raider Cape",
+      "file": "accessories/tusken-raider-cape.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
+      "status": "existing"
+    },
+    {
+      "name": "Darth Vader Cape",
+      "file": "accessories/darth-vader-cape.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/darth-vader-cape/",
+      "status": "existing"
+    },
+    {
+      "name": "Jawa Cloak",
+      "file": "accessories/jawa-cloak.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/jawa-cloak/",
+      "status": "existing"
+    },
+    {
+      "name": "Jawa Vinyl Cape",
+      "file": "accessories/jawa-vinyl-cape.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/jawa-vinyl-cape/",
+      "status": "existing"
+    },
+    {
+      "name": "Klaatu Skirt",
+      "file": "accessories/klaatu-skirt-2.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/klaatu-skirt-2/",
+      "status": "created"
+    },
+    {
+      "name": "Princess Leia Organa Cape",
+      "file": "accessories/princess-leia-organa-cape.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
+      "status": "existing"
+    },
+    {
+      "name": "Leia Bespin Cape",
+      "file": "accessories/leia-bespin-cape.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/leia-bespin-cape/",
+      "status": "created"
+    },
+    {
+      "name": "Hoth Trooper Skirt",
+      "file": "accessories/hoth-trooper-skirt.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/hoth-trooper-skirt/",
+      "status": "created"
+    },
+    {
+      "name": "Lando Calrissian Cape",
+      "file": "accessories/lando-calrissian-cape.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/lando-calrissian-cape/",
+      "status": "created"
+    },
+    {
+      "name": "Ugnaught Case",
+      "file": "accessories/ugnaught-case.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/ugnaught-case/",
+      "status": "created"
+    },
+    {
+      "name": "C-3PO (Removable Limbs) Net",
+      "file": "accessories/c-3po-removable-limbs-net.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/c-3po-removable-limbs-net/",
+      "status": "created"
+    },
+    {
+      "name": "Commlink Guide",
+      "file": "accessories/commlink-guide.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/commlink-guide/",
+      "status": "created"
+    },
+    {
+      "name": "2-1B Mouthpiece",
+      "file": "accessories/2-1b-mouthpiece.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/2-1b-mouthpiece/",
+      "status": "created"
+    },
+    {
+      "name": "Yoda Snake",
+      "file": "accessories/yoda-snake.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/yoda-snake/",
+      "status": "created"
+    },
+    {
+      "name": "Teebo Battle Horn",
+      "file": "accessories/teebo-horn.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/teebo-horn/",
+      "status": "created"
+    },
+    {
+      "name": "Carbonite Chamber",
+      "file": "accessories/carbonite-chamber.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/carbonite-chamber/",
+      "status": "created"
+    }
+  ]
+}

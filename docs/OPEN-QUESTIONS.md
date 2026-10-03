@@ -12,7 +12,7 @@ The "M2 Unitoy Version" lines on Early Bird Luke and Leia were removed. They now
 
 ## Chewbacca bowcaster colour
 
-Still unresolved, both wordings kept in `data/figures/chewbacca-reference.txt`:
+Still unresolved, both wordings kept in `data/figures/chewbacca-reference-1.txt`:
 
 - Rebelscum: a green bowcaster is primarily associated with Early Bird sets, and has never been proven exclusive to them.
 - Variant Villain: a black-blue Kader M1 bowcaster from Early Bird onward.

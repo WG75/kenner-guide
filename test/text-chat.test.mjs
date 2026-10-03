@@ -91,7 +91,7 @@ const aliasCases = [
   ["Smile", "Is Smile a later factory?", "references/vendor-codes.txt"],
   ["Kader", "Tell me about Kader", "references/vendor-codes.txt"],
   ["debut cardback", "What is a debut cardback?", "references/collector_glossary.txt"],
-  ["Chewie", "What came with Chewie?", "figures/chewbacca-reference.txt"],
+  ["Chewie", "What came with Chewie?", "figures/chewbacca-reference-1.txt"],
   ["Vader", "Vader cape?", "accessories/darth-vader-cape.txt"],
   ["Tusken", "Tell me about the Tusken Raider", "figures/sand-people-reference.txt"],
   ["Ben", "Ben Kenobi accessories", "figures/ben-obi-wan-kenobi-reference.txt"],
@@ -575,6 +575,7 @@ await test("Early Bird R2-D2 factory question retrieves the probable Unitoy and 
   assert.match(prompt, /Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only/);
   assert.match(prompt, /No Taiwan Early Bird/);
   assert.doesNotMatch(prompt, /M3 Kader/);
+  assert.doesNotMatch(prompt, /\[truncated\]/);
 });
 
 await test("early Vader lightsaber question retrieves the documented DT wording", async () => {
@@ -637,8 +638,66 @@ await test("photo-menu identify variant stays scripted and does not call the mod
   assert.equal(variant.json.flowState, null);
 });
 
+function loadCatalog() {
+  const index = JSON.parse(fs.readFileSync(path.join(root, "data/catalog.json"), "utf8"));
+  if (!Array.isArray(index.parts)) return index;
+  const figures = [];
+  const accessories = [];
+  for (const name of index.parts) {
+    const part = JSON.parse(fs.readFileSync(path.join(root, "data", name), "utf8"));
+    figures.push(...(part.figures || []));
+    accessories.push(...(part.accessories || []));
+  }
+  return { figures, accessories };
+}
+
+await test("every data file is under the 7000 character retrieval cap", async () => {
+  const cap = 7000;
+  const over = [];
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else {
+        const text = fs.readFileSync(full, "utf8");
+        if (text.length > cap) over.push(`${path.relative(root, full)} (${text.length})`);
+      }
+    }
+  };
+  walk(path.join(root, "data"));
+  assert.equal(over.length, 0, over.join("\n"));
+});
+
+await test("Early Bird R2-D2 factory question retrieves part 1 without truncation", async () => {
+  const { json } = await call({ message: "which factory made Early Bird R2-D2?" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.includes("figures/r2-d2-reference-1.txt"), `got ${json.sources}`);
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only/);
+  assert.match(prompt, /No Taiwan Early Bird/);
+  assert.doesNotMatch(prompt, /\[truncated\]/);
+});
+
+await test("R2-D2 part 2 is retrieved for the Takara wind-up question", async () => {
+  const { json } = await call({ message: "tell me about the Takara wind-up R2" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.includes("figures/r2-d2-reference-2.txt"), `got ${json.sources}`);
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /TAKARA WIND-UP R2/);
+  assert.doesNotMatch(prompt, /\[truncated\]/);
+});
+
+await test("Chewbacca part 2 is retrieved for the Smile F5 question", async () => {
+  const { json } = await call({ message: "tell me about the Chewbacca Smile F5" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.includes("figures/chewbacca-reference-2.txt"), `got ${json.sources}`);
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /Large almond eyes/);
+  assert.doesNotMatch(prompt, /\[truncated\]/);
+});
+
 await test("every catalog figure and accessory name retrieves its own file", async () => {
-  const catalog = JSON.parse(fs.readFileSync(path.join(root, "data/catalog.json"), "utf8"));
+  const catalog = loadCatalog();
   const jobs = [];
   for (const fig of catalog.figures) {
     jobs.push({ q: `tell me about ${fig.name}`, file: fig.file, needles: [fig.name] });

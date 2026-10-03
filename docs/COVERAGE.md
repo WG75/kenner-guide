@@ -50,9 +50,12 @@ Other new files are extracts. A mould photo with no sentence is not transcribed.
 
 ## Retrieval cap
 
-Chat injects at most 7,000 characters of a file. New files were written under that cap. Two existing dossiers remain over it, so the end of each file is truncated in an answer:
+Chat injects a whole reference file only when it is at most 7,000 characters. Every file under `data/` is under that cap.
 
-- `data/figures/r2-d2-reference.txt`
-- `data/figures/chewbacca-reference.txt`
+These were split so an answer is not cut off mid-file. Each part repeats the figure name, aliases, and source. The Early Bird factory sentence stays in part 1.
 
-The Early Bird factory sentences in those files are near the top, so they are inside the injected text. The Jawa flow JSON files are also over 7,000 characters. They are not part of text-chat retrieval.
+- `data/figures/r2-d2-reference-1.txt` and `r2-d2-reference-2.txt`
+- `data/figures/chewbacca-reference-1.txt` and `chewbacca-reference-2.txt`
+- `data/flows/jawa.figure.json` and `jawa.figure-2.json` (the guided flow loads both)
+- `data/flows/jawa.blaster.json` and `jawa.blaster-2.json`
+- `data/catalog.json` plus `data/catalog-1.json` through `data/catalog-6.json` (the lookup menu loads every part)

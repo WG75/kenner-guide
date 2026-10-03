@@ -1,0 +1,210 @@
+{
+  "name": "VF-CB catalog",
+  "aliases": [
+    "catalog"
+  ],
+  "part": "1 of 6",
+  "sources": [
+    "https://www.variantvillain.com/characters/sw/",
+    "https://www.variantvillain.com/accessory-guide/"
+  ],
+  "figures": [
+    {
+      "name": "Luke Skywalker",
+      "era": "Star Wars",
+      "file": "figures/luke-skywalker-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+      "status": "existing"
+    },
+    {
+      "name": "Princess Leia Organa",
+      "era": "Star Wars",
+      "file": "figures/princess-leia-organa-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/princess-leia-organa/",
+      "status": "existing"
+    },
+    {
+      "name": "R2-D2",
+      "era": "Star Wars",
+      "file": "figures/r2-d2-reference-1.txt",
+      "url": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "status": "existing"
+    },
+    {
+      "name": "Chewbacca",
+      "era": "Star Wars",
+      "file": "figures/chewbacca-reference-1.txt",
+      "url": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "status": "existing"
+    },
+    {
+      "name": "C-3PO",
+      "era": "Star Wars",
+      "file": "figures/c-3po-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/c-3po/",
+      "status": "existing"
+    },
+    {
+      "name": "Darth Vader",
+      "era": "Star Wars",
+      "file": "figures/darth-vader-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "status": "existing"
+    },
+    {
+      "name": "Stormtrooper",
+      "era": "Star Wars",
+      "file": "figures/stormtrooper-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "status": "existing"
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi",
+      "era": "Star Wars",
+      "file": "figures/ben-obi-wan-kenobi-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "status": "existing"
+    },
+    {
+      "name": "Han Solo",
+      "era": "Star Wars",
+      "file": "figures/han-solo-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/han-solo/",
+      "status": "existing"
+    },
+    {
+      "name": "Jawa",
+      "era": "Star Wars",
+      "file": "figures/jawa-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/jawa/",
+      "status": "existing"
+    },
+    {
+      "name": "Sand People",
+      "era": "Star Wars",
+      "file": "figures/sand-people-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "status": "existing"
+    },
+    {
+      "name": "Death Squad Commander",
+      "era": "Star Wars",
+      "file": "figures/death-squad-commander-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/death-squad-commander/",
+      "status": "existing"
+    },
+    {
+      "name": "Greedo",
+      "era": "Star Wars",
+      "file": "figures/greedo-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/greedo/",
+      "status": "existing"
+    },
+    {
+      "name": "Hammerhead",
+      "era": "Star Wars",
+      "file": "figures/hammerhead-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/hammerhead/",
+      "status": "existing"
+    },
+    {
+      "name": "Snaggletooth",
+      "era": "Star Wars",
+      "file": "figures/snaggletooth-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/snaggletooth/",
+      "status": "existing"
+    },
+    {
+      "name": "Walrus Man",
+      "era": "Star Wars",
+      "file": "figures/walrusman-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/walrusman/",
+      "status": "existing"
+    },
+    {
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "era": "Star Wars",
+      "file": "figures/luke-skywalker-x-wing-pilot-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/luke-skywalker-x-wing-pilot/",
+      "status": "existing"
+    },
+    {
+      "name": "R5-D4",
+      "era": "Star Wars",
+      "file": "figures/r5-d4-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/r5-d4/",
+      "status": "existing"
+    },
+    {
+      "name": "Death Star Droid",
+      "era": "Star Wars",
+      "file": "figures/death-star-droid-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/death-star-droid/",
+      "status": "existing"
+    },
+    {
+      "name": "Power Droid",
+      "era": "Star Wars",
+      "file": "figures/power-droid-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/power-droid/",
+      "status": "existing"
+    },
+    {
+      "name": "Boba Fett",
+      "era": "Star Wars",
+      "file": "figures/boba-fett-reference.txt",
+      "url": "https://www.variantvillain.com/characters/sw/boba-fett/",
+      "status": "existing"
+    },
+    {
+      "name": "Leia Organa (Bespin Gown)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/leia-organa-bespin-gown-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/leia-organa-bespin-gown/",
+      "status": "existing"
+    },
+    {
+      "name": "FX-7",
+      "era": "The Empire Strikes Back",
+      "file": "figures/fx-7-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/fx-7/",
+      "status": "existing"
+    },
+    {
+      "name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/imperial-stormtrooper-hoth-battle-gear-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/",
+      "status": "existing"
+    },
+    {
+      "name": "Rebel Soldier (Hoth Battle Gear)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/rebel-soldier-hoth-battle-gear-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/rebel-soldier-hoth-battle-gear/",
+      "status": "existing"
+    },
+    {
+      "name": "Bossk",
+      "era": "The Empire Strikes Back",
+      "file": "figures/bossk-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/bossk/",
+      "status": "existing"
+    },
+    {
+      "name": "IG-88",
+      "era": "The Empire Strikes Back",
+      "file": "figures/ig-88-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/ig-88/",
+      "status": "existing"
+    },
+    {
+      "name": "Luke Skywalker (Bespin Fatigues)",
+      "era": "The Empire Strikes Back",
+      "file": "figures/luke-skywalker-bespin-fatigues-reference.txt",
+      "url": "https://www.variantvillain.com/characters/esb/luke-skywalker-bespin-fatigues/",
+      "status": "existing"
+    }
+  ],
+  "accessories": []
+}

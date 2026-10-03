@@ -1,0 +1,203 @@
+{
+  "name": "VF-CB catalog",
+  "aliases": [
+    "catalog"
+  ],
+  "part": "3 of 6",
+  "sources": [
+    "https://www.variantvillain.com/characters/sw/",
+    "https://www.variantvillain.com/accessory-guide/"
+  ],
+  "figures": [
+    {
+      "name": "Gamorrean Guard",
+      "era": "Return of the Jedi",
+      "file": "figures/gamorrean-guard-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/gamorrean-guard/",
+      "status": "existing"
+    },
+    {
+      "name": "Emperor’s Royal Guard",
+      "era": "Return of the Jedi",
+      "file": "figures/emperors-royal-guard-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/emperors-royal-guard/",
+      "status": "existing"
+    },
+    {
+      "name": "Chief Chirpa",
+      "era": "Return of the Jedi",
+      "file": "figures/chief-chirpa-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/chief-chirpa/",
+      "status": "existing"
+    },
+    {
+      "name": "Logray (Ewok Medicine Man)",
+      "era": "Return of the Jedi",
+      "file": "figures/logray-ewok-medicine-man-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/logray-ewok-medicine-man/",
+      "status": "existing"
+    },
+    {
+      "name": "Klaatu",
+      "era": "Return of the Jedi",
+      "file": "figures/klaatu-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/klaatu/",
+      "status": "existing"
+    },
+    {
+      "name": "Rebel Commando",
+      "era": "Return of the Jedi",
+      "file": "figures/rebel-commando-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/rebel-commando/",
+      "status": "existing"
+    },
+    {
+      "name": "Weequay",
+      "era": "Return of the Jedi",
+      "file": "figures/weequay-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/weequay/",
+      "status": "existing"
+    },
+    {
+      "name": "Squid Head",
+      "era": "Return of the Jedi",
+      "file": "figures/squid-head-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/squid-head/",
+      "status": "existing"
+    },
+    {
+      "name": "General Madine",
+      "era": "Return of the Jedi",
+      "file": "figures/general-madine-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/general-madine/",
+      "status": "existing"
+    },
+    {
+      "name": "Bib Fortuna",
+      "era": "Return of the Jedi",
+      "file": "figures/bib-fortuna-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/bib-fortuna/",
+      "status": "existing"
+    },
+    {
+      "name": "Ree Yees",
+      "era": "Return of the Jedi",
+      "file": "figures/ree-yees-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/ree-yees/",
+      "status": "existing"
+    },
+    {
+      "name": "Biker Scout",
+      "era": "Return of the Jedi",
+      "file": "figures/biker-scout-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/biker-scout/",
+      "status": "existing"
+    },
+    {
+      "name": "Lando Calrissian (Skiff Guard Disguise)",
+      "era": "Return of the Jedi",
+      "file": "figures/lando-calrissian-skiff-guard-disguise-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/lando-calrissian-skiff-guard-disguise/",
+      "status": "existing"
+    },
+    {
+      "name": "Nien Nunb",
+      "era": "Return of the Jedi",
+      "file": "figures/nien-nunb-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/nien-nunb/",
+      "status": "existing"
+    },
+    {
+      "name": "Nikto",
+      "era": "Return of the Jedi",
+      "file": "figures/nikto-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/nikto/",
+      "status": "existing"
+    },
+    {
+      "name": "8D8",
+      "era": "Return of the Jedi",
+      "file": "figures/8d8-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/8d8/",
+      "status": "existing"
+    },
+    {
+      "name": "Princess Leia Organa (in Combat Poncho)",
+      "era": "Return of the Jedi",
+      "file": "figures/princess-leia-organa-in-combat-poncho-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-in-combat-poncho/",
+      "status": "existing"
+    },
+    {
+      "name": "Wicket W. Warrick",
+      "era": "Return of the Jedi",
+      "file": "figures/wicket-w-warrick-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/wicket-w-warrick/",
+      "status": "existing"
+    },
+    {
+      "name": "The Emperor",
+      "era": "Return of the Jedi",
+      "file": "figures/the-emperor-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/the-emperor/",
+      "status": "existing"
+    },
+    {
+      "name": "B-Wing Pilot",
+      "era": "Return of the Jedi",
+      "file": "figures/b-wing-pilot-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/b-wing-pilot/",
+      "status": "existing"
+    },
+    {
+      "name": "Klaatu (in Skiff Guard Outfit)",
+      "era": "Return of the Jedi",
+      "file": "figures/klaatu-in-skiff-guard-outfit-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/klaatu-in-skiff-guard-outfit/",
+      "status": "existing"
+    },
+    {
+      "name": "Han Solo (in Trench Coat)",
+      "era": "Return of the Jedi",
+      "file": "figures/han-solo-in-trench-coat-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/han-solo-in-trench-coat/",
+      "status": "existing"
+    },
+    {
+      "name": "Teebo",
+      "era": "Return of the Jedi",
+      "file": "figures/teebo-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/teebo/",
+      "status": "existing"
+    },
+    {
+      "name": "Prune Face",
+      "era": "Return of the Jedi",
+      "file": "figures/prune-face-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/prune-face/",
+      "status": "existing"
+    },
+    {
+      "name": "AT-ST Driver",
+      "era": "Return of the Jedi",
+      "file": "figures/at-st-driver-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/at-st-driver/",
+      "status": "existing"
+    },
+    {
+      "name": "Rancor Keeper",
+      "era": "Return of the Jedi",
+      "file": "figures/rancor-keeper-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/rancor-keeper/",
+      "status": "existing"
+    },
+    {
+      "name": "Lumat",
+      "era": "Return of the Jedi",
+      "file": "figures/lumat-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/lumat/",
+      "status": "existing"
+    }
+  ],
+  "accessories": []
+}

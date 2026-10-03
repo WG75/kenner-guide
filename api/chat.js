@@ -434,14 +434,24 @@ function matchStepOption(message, step) {
 
 function loadFlow(flowId) {
   const safeFlowId = String(flowId || "").replace(/[^a-z0-9._-]/gi, "");
-  const filePath = path.join(process.cwd(), "data", "flows", `${safeFlowId}.json`);
+  const dir = path.join(process.cwd(), "data", "flows");
+  const filePath = path.join(dir, `${safeFlowId}.json`);
 
   if (!fs.existsSync(filePath)) {
     return null;
   }
 
   try {
-    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const flow = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    const extraRe = new RegExp(`^${safeFlowId.replace(/\./g, "\\.")}-(\\d+)\\.json$`);
+    const extras = fs.readdirSync(dir)
+      .filter(name => extraRe.test(name))
+      .sort((a, b) => Number(a.match(extraRe)[1]) - Number(b.match(extraRe)[1]));
+    for (const name of extras) {
+      const part = JSON.parse(fs.readFileSync(path.join(dir, name), "utf8"));
+      if (part && part.steps) flow.steps = { ...(flow.steps || {}), ...part.steps };
+    }
+    return flow;
   } catch (err) {
     console.error("Could not parse flow file:", filePath, err);
     return null;
