@@ -2,6 +2,7 @@
 // Run from the repo root:  node test/text-chat.test.mjs
 // fetch is mocked: the real OpenAI API is never called.
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -400,6 +401,164 @@ for (const message of accessoryMenuReplies) {
     assert.equal(json.flowState.step, "choose_help");
   });
 }
+
+await test("debut cardback question for Darth Vader retrieves the new reference file", async () => {
+  const { json } = await call({ message: "What was the debut cardback for Darth Vader?" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.some(s => s.includes("debut-cardbacks-reference")), `got ${json.sources}`);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /REFERENCE: compatibility\/debut-cardbacks-reference/);
+  assert.match(prompt, /Figure Name: Darth Vader/);
+});
+
+await test("cardback question for Yoda retrieves the new reference file", async () => {
+  const { json } = await call({ message: "Which cardback for Yoda?" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.some(s => s.includes("debut-cardbacks-reference")), `got ${json.sources}`);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /Figure Name: Yoda/);
+});
+
+function assertDebutFileFirst(json, figure) {
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.match(json.sources[0], /compatibility\/debut-cardbacks-reference/, `got ${json.sources}`);
+  const prompt = calls[0].body.messages.at(-1).content;
+  const first = prompt.split("--- REFERENCE:")[1] || "";
+  assert.match(first, new RegExp(`Figure Name: ${figure}`));
+}
+
+for (const [message, figure] of [
+  ["which card did Vader come on?", "Darth Vader"],
+  ["what backs did Vader come on?", "Darth Vader"],
+  ["what cardback did Yoda debut on", "Yoda"],
+  ["what card is my Boba Fett on", "Boba Fett"]
+]) {
+  await test(`card phrasing ranks that figure's debut file first: "${message}"`, async () => {
+    const { json } = await call({ message });
+    assertDebutFileFirst(json, figure);
+  });
+}
+
+for (const message of ["what card back", "carded on", "which backs"]) {
+  await test(`card phrasing retrieves a debut-cardbacks file: "${message}"`, async () => {
+    const { json } = await call({ message });
+    assert.equal(json.reply, "MOCK ANSWER");
+    assert.match(json.sources[0], /compatibility\/debut-cardbacks-reference/, `got ${json.sources}`);
+  });
+}
+
+await test("bare 'which card?' with no figure stays an honest unknown", async () => {
+  const { json } = await call({ message: "which card?" });
+  assert.equal(calls.length, 0, "model was called");
+  assert.notEqual(json.offTopic, true);
+  assert.match(json.reply, /unknown|can't establish|doesn't cover/i);
+});
+
+await test("'what card games' stays off-topic", async () => {
+  const { json } = await call({ message: "what card games should I play tonight?" });
+  assert.equal(calls.length, 0, "model was called");
+  assert.equal(json.offTopic, true);
+});
+
+await test("photo-identified Vader then 'which card did this come on?' ranks Vader's debut file first", async () => {
+  const { json } = await call({
+    message: "which card did this come on?",
+    history: [
+      { role: "assistant", content: vaderPhotoReply },
+      { role: "user", content: "which card did this come on?" }
+    ],
+    flowState: vaderFlow
+  });
+  assertDebutFileFirst(json, "Darth Vader");
+  assert.match(calls[0].body.messages.at(-1).content, /figure in play is Darth Vader/);
+});
+
+await test("photo-identified Vader then bare 'which card?' ranks Vader's debut file first", async () => {
+  const { json } = await call({ message: "which card?", flowState: vaderFlow });
+  assertDebutFileFirst(json, "Darth Vader");
+});
+
+function debutFigureRecords() {
+  const dir = path.join(root, "data", "compatibility");
+  const records = [];
+  for (const name of fs.readdirSync(dir)) {
+    if (!name.startsWith("debut-cardbacks-reference")) continue;
+    const text = fs.readFileSync(path.join(dir, name), "utf8");
+    for (const part of text.split(/\n(?=Figure Name: )/)) {
+      const figure = part.match(/^Figure Name: (.+)$/m)?.[1]?.trim();
+      if (!figure) continue;
+      const aliases = (part.match(/^Aliases: (.+)$/m)?.[1] || "")
+        .split(";")
+        .map(label => label.trim())
+        .filter(Boolean);
+      records.push({ figure, aliases });
+    }
+  }
+  return records;
+}
+
+function figureBlock(prompt, figure) {
+  const start = prompt.indexOf(`Figure Name: ${figure}`);
+  if (start < 0) return "";
+  const rest = prompt.slice(start);
+  const next = rest.indexOf("\nFigure Name: ", 1);
+  return next < 0 ? rest : rest.slice(0, next);
+}
+
+await test("every debut-cardbacks figure name and alias retrieves that block", async () => {
+  const records = debutFigureRecords();
+  assert.equal(records.length, 96);
+  const lookups = [];
+  for (const record of records) {
+    lookups.push([record.figure, record.figure]);
+    for (const alias of record.aliases) {
+      if (alias.toLowerCase() === record.figure.toLowerCase()) continue;
+      lookups.push([alias, record.figure]);
+    }
+  }
+  for (const [asked, figure] of lookups) {
+    const before = calls.length;
+    const { json } = await call({ message: `what cardback did ${asked} come on?` });
+    assert.equal(json.reply, "MOCK ANSWER", `${asked} reply: ${json.reply}`);
+    assert.notEqual(json.offTopic, true, asked);
+    assert.equal(calls.length, before + 1, `${asked} took the unknown path`);
+    const prompt = calls.at(-1).body.messages.at(-1).content;
+    const block = figureBlock(prompt, figure);
+    assert.ok(block, `no block for ${figure} when asked '${asked}'. sources: ${json.sources}`);
+    assert.match(block, /Debut Kenner Cardback:/, figure);
+  }
+});
+
+await test("typed name then 'this' cardback question retrieves that debut block", async () => {
+  const cases = [
+    ["jawa", "Jawa"],
+    ["Vader", "Darth Vader"],
+    ["Yoda", "Yoda"],
+    ["Boba Fett", "Boba Fett"]
+  ];
+  for (const [typed, figure] of cases) {
+    for (const follow of ["what cardback did this come on?", "what cardback did it come on?", "what cardback did mine come on?"]) {
+      const before = calls.length;
+      const { json } = await call({
+        message: follow,
+        history: [
+          { role: "user", content: typed },
+          { role: "assistant", content: `Here is an overview of ${figure}.` },
+          { role: "user", content: follow }
+        ]
+      });
+      assert.equal(json.reply, "MOCK ANSWER", `${typed} / ${follow}: ${json.reply}`);
+      assert.equal(calls.length, before + 1, `${typed} / ${follow} took the unknown path`);
+      const sent = calls.at(-1).body;
+      const prompt = sent.messages.at(-1).content;
+      const block = figureBlock(prompt, figure);
+      assert.ok(block, `${typed} -> ${figure} missing for '${follow}'. sources: ${json.sources}`);
+      assert.match(prompt, new RegExp(`figure in play is ${figure.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`));
+      assert.match(sent.messages[0].content, /Do not say there is no cardback data/);
+      if (figure === "Jawa") assert.match(block, /Evidence: documented/);
+    }
+  }
+});
 
 await test("A / identify variant stays scripted and does not call the model", async () => {
   const a = await call({ message: "A", flowState: { ...vaderFlow, step: "choose_help" } });

@@ -1,0 +1,62 @@
+Debut Kenner Cardback reference
+Source: Variant Villain reference workbook, Figure -> Cardback Matrix and Cardback Summary legend. Cardback research date 14 September 2026 (Method & Scope).
+Debut Kenner Cardback means the workbook column Earliest / exact cardback. It is not a confirmed debut for most figures, and it is not Warren's own Debut Card Back list. Do not silently overwrite one with the other.
+Debut Kenner Cardback, compatible cardbacks (Other documented cardbacks / range) and factory matching are different. A figure on a card does not prove every variant belongs with that card. Factory matching is not established in this workbook (no card-manufacturing source or run). A rationale line below is repeated only when the workbook states that factory-to-card link, with its evidence label.
+Evidence: Exact / explicitly documented -> documented. Confirmed production range -> documented (range only, not an exact card). Regional family / broad match -> probable. Unconfirmed exact micro-variant -> unknown.
+Warren's valid Kenner families: 12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92. 48-back is in the Cardback Summary (ESB 48A1, 48A2, 48B1, 48B2, 48C; ROTJ 48A1, 48A2, 48A3) but is not on that list. 14, 17, 18, 30, 37, 50 and 70 are not on it either. Flagged where they appear.
+96 figure pages. Variant lines are only Exact or Confirmed production range. Aliases are only names already written in the figure title. Packaging is the workbook Era field.
+Figure Name: Admiral Ackbar
+Aliases: Admiral Ackbar
+Packaging: Return of the Jedi
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/rotj/admiral-ackbar/
+
+
+Figure Name: Luke Skywalker (Jedi Knight Outfit)
+Aliases: Luke Skywalker (Jedi Knight Outfit); Jedi Knight Outfit
+Packaging: Return of the Jedi
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Factory matching: not established in this workbook.
+Variant lines (Exact or Confirmed production range only):
+- Smile HK pinkish face/snap cloak/blue saber; Smile HK pinkish face/stitched cloak/blue saber; Smile HK stitched cloak/blue-green saber; Smile HK pale face/green saber; Smile No COO tanned face/light-green saber. Factory / origin: Smile. Earliest / exact cardback: ROTJ 65-back. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: ROTJ 65-back through late Trilogo. Rationale: Smile Luke Jedi debuted in the 65-back era and continues through late Trilogo production. Cardback source: https://www.thevariantvillains.com/cardbacks/luke-jedi-cardbacks/.
+- Taiwan dark-brown moulded head/snap cloak; Taiwan light-brown moulded head/snap cloak; Taiwan painted face/stitched cloak. Factory / origin: Taiwan / Universal Manufacturers. Earliest / exact cardback: ROTJ-era. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: ROTJ / Trilogo carding documented. Rationale: Taiwan Luke Jedi examples are documented across ROTJ/Trilogo carding; exact head/cloak micro-variant requires sealed evidence. Cardback source: https://www.thevariantvillains.com/cardbacks/luke-jedi-cardbacks/.
+- Top Toys green cloak/brown stitching; Top Toys brown cloak/green stitching; Top Toys green cloak/brown stitching/vertical ribbing. Factory / origin: Top Toys. Earliest / exact cardback: Top Toys 17A [17-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]. Evidence: documented. Other documented cardbacks / range: Top Toys 17A / 17B [17-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]. Rationale: Top Toys Luke Jedi is documented on 17A and 17B cards [17-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]. Cardback source: https://www.thevariantvillains.com/cardbacks/top-toys-cardbacks/.
+Figure source: https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/
+
+
+Figure Name: Princess Leia Organa (Boushh Disguise)
+Aliases: Princess Leia Organa (Boushh Disguise); Boushh Disguise
+Packaging: Return of the Jedi
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/rotj/princess-leia-organa-boussh-disguise/
+
+
+Figure Name: Gamorrean Guard
+Aliases: Gamorrean Guard
+Packaging: Return of the Jedi
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/rotj/gamorrean-guard/
+
+
+Figure Name: Emperor's Royal Guard
+Aliases: Emperor's Royal Guard
+Packaging: Return of the Jedi
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/rotj/emperors-royal-guard/
+
+
+Figure Name: Chief Chirpa
+Aliases: Chief Chirpa
+Packaging: Return of the Jedi
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/rotj/chief-chirpa/

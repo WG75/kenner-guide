@@ -1,0 +1,47 @@
+Debut Kenner Cardback reference
+Source: Variant Villain reference workbook, Figure -> Cardback Matrix and Cardback Summary legend. Cardback research date 14 September 2026 (Method & Scope).
+Debut Kenner Cardback means the workbook column Earliest / exact cardback. It is not a confirmed debut for most figures, and it is not Warren's own Debut Card Back list. Do not silently overwrite one with the other.
+Debut Kenner Cardback, compatible cardbacks (Other documented cardbacks / range) and factory matching are different. A figure on a card does not prove every variant belongs with that card. Factory matching is not established in this workbook (no card-manufacturing source or run). A rationale line below is repeated only when the workbook states that factory-to-card link, with its evidence label.
+Evidence: Exact / explicitly documented -> documented. Confirmed production range -> documented (range only, not an exact card). Regional family / broad match -> probable. Unconfirmed exact micro-variant -> unknown.
+Warren's valid Kenner families: 12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92. 48-back is in the Cardback Summary (ESB 48A1, 48A2, 48B1, 48B2, 48C; ROTJ 48A1, 48A2, 48A3) but is not on that list. 14, 17, 18, 30, 37, 50 and 70 are not on it either. Flagged where they appear.
+96 figure pages. Variant lines are only Exact or Confirmed production range. Aliases are only names already written in the figure title. Packaging is the workbook Era field.
+Figure Name: Darth Vader
+Aliases: Darth Vader
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 12-back; many continued onto SW 20/21 and later cards.
+Factory matching: not established in this workbook.
+Variant lines (Exact or Confirmed production range only):
+- Kader HK M1/M2/M3a/M3b with light-orange, dark-orange, red and dark-red heads; later Kader HK M1/M2/M3a/M3b. Factory / origin: Kader. Earliest / exact cardback: Star Wars 12-back. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: Dedicated Vader guide documents SW 12-back through ESB/ROTJ/POTF depending factory and tooling phase. Rationale: The dedicated Vader cardback guide documents these factory families across multiple card revisions; the loose paint/mould row is not forced to one exact sub-back. Cardback source: https://www.thevariantvillains.com/cardbacks/darth-vader-cardbacks/.
+- Unitoy M5/M6/M7 with dark-orange/red/raspberry heads. Factory / origin: Unitoy. Earliest / exact cardback: Star Wars 12-back. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: Dedicated Vader guide documents SW 12-back through ESB/ROTJ/POTF depending factory and tooling phase. Rationale: The dedicated Vader cardback guide documents these factory families across multiple card revisions; the loose paint/mould row is not forced to one exact sub-back. Cardback source: https://www.thevariantvillains.com/cardbacks/darth-vader-cardbacks/.
+- Taiwan MITW M9 raspberry; Taiwan TW M10 red. Factory / origin: Taiwan / Universal Manufacturers. Earliest / exact cardback: Star Wars 12-back. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: Dedicated Vader guide documents SW 12-back through ESB/ROTJ/POTF depending factory and tooling phase. Rationale: The dedicated Vader cardback guide documents these factory families across multiple card revisions; the loose paint/mould row is not forced to one exact sub-back. Cardback source: https://www.thevariantvillains.com/cardbacks/darth-vader-cardbacks/.
+Figure source: https://www.variantvillain.com/characters/sw/darth-vader/
+
+
+Figure Name: Stormtrooper
+Aliases: Stormtrooper
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 12-back; many continued onto SW 20/21 and later cards.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/sw/stormtrooper/
+
+
+Figure Name: Ben (Obi-Wan) Kenobi
+Aliases: Ben (Obi-Wan) Kenobi; Obi-Wan
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+Factory matching: not established in this workbook.
+Variant lines (Exact or Confirmed production range only):
+- Unitoy white-hair and grey-hair combinations with differing eye/hand paint. Factory / origin: Unitoy. Earliest / exact cardback: Star Wars 12-back. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: SW 12-back onward; saber mould transition documented around 12C. Rationale: Early Unitoy/Kader Ben production is documented in the 12-back era; exact hair shade is not assigned to a single sub-back. Cardback source: https://www.thevariantvillains.com/cardbacks/sw-cardbacks/.
+- Kader white hair/pale-brown eyes; Kader white hair/black eyes; Kader 'Lincoln beard'; Kader grey-hair shades. Factory / origin: Kader. Earliest / exact cardback: Star Wars 12-back. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: SW 12-back onward; saber mould transition documented around 12C. Rationale: Early Unitoy/Kader Ben production is documented in the 12-back era; exact hair shade is not assigned to a single sub-back. Cardback source: https://www.thevariantvillains.com/cardbacks/sw-cardbacks/.
+- Kader No COO yellowish/blueish-grey hair; Kader No COO white-hair dull-black collar; Kader No COO white-hair glossy-black collar. Factory / origin: Kader. Earliest / exact cardback: Late Kenner / Trilogo. Evidence: documented (range only, not an exact card). Other documented cardbacks / range: Trilogo cards documented for late Kader No-COO Ben. Rationale: Late Kader No-COO Ben variants are documented on Trilogo cards. Cardback source: https://www.thevariantvillains.com/cardbacks/trilogo-cardback-guide/.
+Figure source: https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/
+
+
+Figure Name: Han Solo
+Aliases: Han Solo
+Packaging: Star Wars
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 12-back; many continued onto SW 20/21 and later cards.
+Factory matching: not established in this workbook.
+Variant lines: none. No Exact or Confirmed production range row in the workbook.
+Figure source: https://www.variantvillain.com/characters/sw/han-solo/
