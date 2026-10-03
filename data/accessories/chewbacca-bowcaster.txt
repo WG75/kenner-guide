@@ -1,4 +1,5 @@
 Accessory Name: Bowcaster (Chewbacca)
+Aliases: Chewbacca Bowcaster; Bowcaster
 
 Category:
 Primary Weapon – Unique Character Weapon

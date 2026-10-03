@@ -1,0 +1,42 @@
+Figure Name: Imperial Tie Fighter Pilot
+Aliases: Imperial Tie Fighter Pilot; TIE Pilot
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+Imperial Tie Fighter Pilot is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- SMILE — Above you can see following figure and accessory combinations (left to right):
+- Unitoy/ PBP/ MECCANO/ LILI LEDY
+- Unitoy/ PBP/ MECCANO/ LILI LEDY — Above you can see following figure and accessory combinations (left to right):
+- PBP/ MECCANO — PBP/MECCANO SCARRED NO COO
+- LILI LEDY — Above you can see following figure and accessory combination:
+- KADER CHINA — Left leg: “MADE IN (raised bar) CHINA”
+- EMBLEM & PAINT COMPARISONS
+- APPRECIATION — Many thanks to Stefan Callear, Thomas Gill, Javier Ruilópez, Horacio Narvaez, Wolff Wbobafett, Jonathan Robinson, Jamie Acott, Ahmed Boukarrouh, Jaime Rodriguez & Stefan Faucourt for their help in putting this guide together.
+- CHIHUAHUA — Left to Right: Smile MIHK/ Smile NCOO/ Unitoy MIHK/ Meccano/ PBP AT-AT Driver emblems/ PBP/ Lili Ledy/ Kader China
+- SMILE — Right leg: “MADE IN HONG KONG” or smoothed over No COO
+- Unitoy/ PBP/ MECCANO/ LILI LEDY
+- Unitoy/ PBP/ MECCANO/ LILI LEDY — Right leg: Unitoy “MADE IN HONG KONG” > PBP/ Meccan o/ Lili Ledy: Scarred and filled in COO
+- KADER CHINA — Left leg: “MADE IN (raised bar) CHINA”
+- EMBLEM & PAINT COMPARISONS
+
+Accessories:
+- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/imperial-tie-fighter-pilot/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

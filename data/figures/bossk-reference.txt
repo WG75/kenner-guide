@@ -1,0 +1,34 @@
+Figure Name: Bossk
+Aliases: Bossk
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+Bossk is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Kader/poch — Please note the vest colours. As you can see both Poch figures do have a clearly bright white vest. This is important for the harder to detect Poch version 2.
+- SMILE — There is mainly two colour combos on both the HK and the No COO. Both can be found in a lighter and darker green as well. Also the vest colour can be bright white or more greyish.
+- UNITOY/POCH — The two HK versions differ mainly in the used plastic and their way to degrade. One variants tends to get more reddish limbs the other one tends to get more lighter limbs. Both can be only found this way nowadays. The green colour used to limbs also differs.
+- PBP — This COO still only exists in the PBP scared out version. Typically the figure has fat lips, very hard limbs (see the details) and overall a very unique colour combo.
+- Colour comparison — Colour comparison of all figures shown and sorted via COO family.
+- Mould & head comparison — As you can see specific head colours are related to COO families.
+
+Accessories:
+- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/bossk/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

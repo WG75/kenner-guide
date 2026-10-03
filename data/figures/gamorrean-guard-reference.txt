@@ -1,0 +1,33 @@
+Figure Name: Gamorrean Guard
+Aliases: Gamorrean Guard
+Packaging: Return of the Jedi
+Category: Figure
+
+Overview:
+Gamorrean Guard is a vintage Kenner Star Wars figure in the Return of the Jedi guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Kader (HK) — Above you can see following variants (left to right):
+- Unitoy/ Kader Macau — UNITOY 1983 HONG KONG COO
+- Smile (HK) — Above you can see following variants (left to right):
+- Lili Ledy — Above you can see following variants (left to right):
+- Credits — SPECIAL THANKS: Many thanks to Jamie Acott, Stefan Callear, Jonathan Freeman, Thomas John, Mark Baker, James Stevens, Rob Cuttle, Garth Jones and Wolff Lipinski for their help in the creation of this guide.
+
+Accessories:
+- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/rotj/gamorrean-guard/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

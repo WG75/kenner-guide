@@ -144,7 +144,7 @@ await test("greeting and thanks handled without model call", async () => {
   assert.ok(a.json.reply && b.json.reply);
 });
 
-for (const q of ["Tell me about the Hammerhead figure", "Which Hammerhead variant came out in 1982?"]) {
+for (const q of ["What creature is the vintage 1977 Dianoga?", "Which 1977 creature variant was the Dianoga?"]) {
   await test(`on-topic question with no reference match: honest 'unknown', no model call ("${q}")`, async () => {
     const { json } = await call({ message: q });
     assert.equal(calls.length, 0, `model called; sources: ${json.sources}`);
@@ -370,8 +370,12 @@ await test("no identified figure: 'what accessories should this have?' stays an 
 
 await test("identified figure is not applied to a different named question", async () => {
   const { json } = await call({ message: "Tell me about the Hammerhead figure", flowState: vaderFlow });
-  assert.equal(calls.length, 0, `model called; sources: ${json.sources}`);
-  assert.match(json.reply, /unknown|reference files|doesn't cover/i);
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.equal(calls.length, 1);
+  assert.ok(json.sources.includes("figures/hammerhead-reference.txt"), `got ${json.sources}`);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /Figure Name: Hammerhead/);
+  assert.doesNotMatch(prompt, /figure in play is Darth Vader/);
 });
 
 // Updated: this used to expect the dead-end "Accessory lookup for this figure
@@ -568,6 +572,8 @@ await test("Early Bird R2-D2 factory question retrieves the probable Unitoy and 
   assert.match(prompt, /Unitoy and Kader versions are both probable in Early Bird sets/);
   assert.match(prompt, /no single Early Bird factory is established/);
   assert.match(prompt, /Factory codes on cards only start at the 32B backs/);
+  assert.match(prompt, /Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only/);
+  assert.match(prompt, /No Taiwan Early Bird/);
   assert.doesNotMatch(prompt, /M3 Kader/);
 });
 
@@ -582,7 +588,46 @@ await test("early Vader lightsaber question retrieves the documented DT wording"
   assert.match(prompt, /most, but not all, Early Bird Lukes had it/);
 });
 
-await test("A / identify variant stays scripted and does not call the model", async () => {
+await test("Jawa and Luke Bespin accessory menu replies use reference chat", async () => {
+  for (const [figure, message] of [
+    ["jawa", "show accessories"],
+    ["luke_bespin", "B"]
+  ]) {
+    const before = calls.length;
+    const { json } = await call({
+      message,
+      flowState: { topic: "image_identified", figure, displayName: figure === "jawa" ? "Jawa" : "Luke Skywalker (Bespin Fatigues)", step: "choose_help" }
+    });
+    assert.equal(json.reply, "MOCK ANSWER");
+    assert.equal(calls.length, before + 1, `${figure} stayed on a script`);
+    assert.doesNotMatch(json.reply, /Jawa may have|commonly associated/);
+  }
+});
+
+await test("typed variant identifier asks discriminating questions then retrieves the figure", async () => {
+  const start = await call({ message: "identify the variant of Bossk" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.flowState.topic, "variant_identify");
+  assert.equal(start.json.flowState.displayName, "Bossk");
+  assert.match(start.json.reply, /COO stamp/);
+  let state = start.json.flowState;
+  const answers = ["Hong Kong", "dark green", "rifle", "41 back"];
+  for (let i = 0; i < answers.length - 1; i++) {
+    const next = await call({ message: answers[i], flowState: state });
+    assert.equal(calls.length, 0, `model called on question ${i + 1}`);
+    assert.equal(next.json.flowState.topic, "variant_identify");
+    state = next.json.flowState;
+  }
+  const done = await call({ message: answers.at(-1), flowState: state });
+  assert.equal(calls.length, 1);
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /REFERENCE: figures\/bossk-reference\.txt/);
+  assert.match(prompt, /Figure Name: Bossk/);
+  assert.match(prompt, /say unknown/);
+  assert.match(prompt, /Hong Kong/);
+});
+
+await test("photo-menu identify variant stays scripted and does not call the model", async () => {
   const a = await call({ message: "A", flowState: { ...vaderFlow, step: "choose_help" } });
   const variant = await call({ message: "identify variant", flowState: { ...vaderFlow, step: "choose_help" } });
   assert.equal(calls.length, 0);
@@ -590,6 +635,32 @@ await test("A / identify variant stays scripted and does not call the model", as
   assert.match(variant.json.reply, /Variant identification for this figure type is not fully built yet/);
   assert.equal(a.json.flowState, null);
   assert.equal(variant.json.flowState, null);
+});
+
+await test("every catalog figure and accessory name retrieves its own file", async () => {
+  const catalog = JSON.parse(fs.readFileSync(path.join(root, "data/catalog.json"), "utf8"));
+  const jobs = [];
+  for (const fig of catalog.figures) {
+    jobs.push({ q: `tell me about ${fig.name}`, file: fig.file, needles: [fig.name] });
+    jobs.push({ q: `what accessories did ${fig.name} come with`, file: fig.file, needles: [fig.name] });
+    jobs.push({ q: `what cardback did ${fig.name} come on`, file: fig.file, needles: [fig.name, "Debut Kenner Cardback"], cardback: true });
+  }
+  for (const acc of catalog.accessories) {
+    jobs.push({ q: `what is ${acc.name}`, file: acc.file, needles: [acc.name] });
+    jobs.push({ q: `which figures had ${acc.name}`, file: acc.file, needles: [acc.name] });
+  }
+  const misses = [];
+  for (const job of jobs) {
+    const before = calls.length;
+    const { json } = await call({ message: job.q });
+    const prompt = calls.at(-1)?.body?.messages?.at(-1)?.content || "";
+    const gotFile = prompt.includes(`REFERENCE: ${job.file}`) || (job.cardback && prompt.includes("debut-cardbacks-reference"));
+    const gotNeedles = job.needles.every(needle => prompt.includes(needle));
+    if (json.reply !== "MOCK ANSWER" || calls.length !== before + 1 || !gotFile || !gotNeedles) {
+      misses.push(`${job.q} => reply ${json.reply}; sources ${(json.sources || []).join(", ")}`);
+    }
+  }
+  assert.equal(misses.length, 0, `\n${misses.slice(0, 15).join("\n")}`);
 });
 
 console.error = quietErrors;

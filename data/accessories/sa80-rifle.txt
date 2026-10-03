@@ -1,0 +1,17 @@
+Accessory Name: SA80 Rifle
+Aliases: SA80 Rifle
+Category: Accessory
+
+Overview:
+SA80 Rifle is documented in the Variant Villain accessory guide. Notes below are only what that page states. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- M1: PALITOY — The SA80 was produced by PALITOY in the United Kingdom. The following colours are known:
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/sa80-rifle/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

@@ -1,0 +1,36 @@
+Figure Name: AT-AT Driver
+Aliases: AT-AT Driver
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+AT-AT Driver is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Foreword: — The reclassification of the COO sheet for the AT-AT Driver has been a challenging task. This is first and foremost because the differences between all four families are so minute. Secondly, the previous COO sheet and the mould classification on “The Mould Family Guide & Discussio
+- F1.1 KADER (MIHK) — KADER 1980 MADE IN HONG KONG
+- F1.2 PBP (MI__) — Above you can see following variants (left to right):
+- F2.1 UNITOY (MIHK) — UNITOY 1980 MADE IN HONG KONG
+- F2.2 Kader China (MI__ / NCOO) — KADER CHINA 1980 MADE IN ____ / No COO
+- SMILE (MIHK & NCOO) — SMILE 1980 MADE IN HONG KONG/ No COO/ Mixed parts
+- SMILE (F3 & F4 Mixed Parts) — As mentioned there is no Smile family 3 No COO figure, or a Smile family 4 Hong Kong figure. However it is possible to find both these figures with mixed up parts from both families 3 & 4. The family 3 No COO figures have a family 3 left leg, and a family 4 right leg. Family 4 Ho
+- F1 KADER & F2 UNITOY (MIHK) — POCH 1980 MADE IN HONG KONG
+
+Accessories:
+- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/at-at-driver/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

@@ -9,7 +9,7 @@ Leia, White Leia, The Princess, Organa, OG, O.G., Original, First 12, 12 Back Le
 Release Information:
 - Released: 1978–1984
 - Appears on: Star Wars, Empire Strikes Back, Return of the Jedi cardbacks
-- Early Bird Certificate Package figure (see references/early-bird-certificate-package.txt) M2 Unitoy Version
+- Early Bird Certificate Package figure (see references/early-bird-certificate-package.txt). Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only. No Taiwan Early Bird.
 - Part of original Wave A 12 Back figures
 
 --------------------------------------------------
@@ -90,7 +90,6 @@ COO Family 5: Taiwan
 --------------------------------------------------
 
 Sources:
-:contentReference[oaicite:0]{index=0}
 https://www.variantvillain.com/characters/sw/princess-leia-organa/
 https://www.variantvillain.com/accessory-guide/leia-blaster/
 https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/

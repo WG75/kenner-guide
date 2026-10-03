@@ -1,0 +1,40 @@
+Figure Name: R5-D4
+Aliases: R5-D4
+Packaging: Star Wars
+Category: Figure
+
+Overview:
+R5-D4 is a vintage Kenner Star Wars figure in the Star Wars guide on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Changelog: — On the COO sheet, the mould family 4.1/b has be reclassified. The newly discovered F4 R2-D2 1977 Hong Kong COO figure becomes 4.1a/b, and previous R5-D4 F4.1a/b is moved to F4.2a/b.
+- UNITOY — UNITOY 1977 MADE IN HONG KONG COO
+- COO Family II: — Not Applicable. R2-D2 & R2-D2 Sensorscope COOs only.
+- COO Family III: — Not Applicable. R2-D2 COO only.
+- KADER/ POCH/ MECCANO — This F4 KADER family began with R2-D2 and a 1977 date stamp, and the cavity’s featured a “5” or “6”. After a short production run, this R2 1977 torso mould was re-assigned for the soon to be produced R5-D4. To reflect the new R5-D4 patent date, the stamp was altered to 1978.
+- UNITOY — UNITOY 1977 MADE IN HONG KONG COO
+- COO Family VI: — Not Applicable. R2-D2 COO only.
+- COO Family VII: — Not Applicable. R2-D2 COO only.
+- KADER — Above you can see following variants (left to right):
+- STICKER GUIDE — REPRO stickers have been in circulation for decades now, and the most recent versions have even been designed to artificially mimic the yellowing effect of the ageing process. In the making of this guide, I saw dozens of figures sold on eBay as vintage, priced as vintage, but in 
+- SCREW GUIDE — Parts can easily be swapped around and for decades this has been done, and done incorrectly. If you have an R5 which has anything different to what’s shown here, I’d take a look at the other parts on the figure using my sculpt detail guide to see if the R5 has been tampered with.
+- Brian Angel — 20 – SW Italian Harbert (salesman sample)
+
+Accessories:
+- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/sw/r5-d4/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

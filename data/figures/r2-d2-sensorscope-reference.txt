@@ -1,0 +1,36 @@
+Figure Name: R2-D2 (Sensorscope)
+Aliases: R2-D2 (Sensorscope); Sensorscope; Sensorscope R2-D2
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+R2-D2 (Sensorscope) is a vintage Kenner Star Wars figure from the Empire Strikes Back line, as covered on Variant Villain. The notes below are only what that page states. Anything the page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 41/45/47/48-back; some continued onto ROTJ/Trilogo. [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
+That debut line is the workbook figure entry already in the debut-cardbacks reference, not a new claim. Compatible cardbacks are separate from factory matching. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Unitoy — UNITOY production continued unchanged from their solid dome figure with mould families 1 & 5 to produce their Sensorscope torsos. Unitoy reverts from mid-blue, back to the dark-blue leg paint of the original 12bk solid dome figure. The sticker in this era is reworked, most notice
+- Smile — SMILE factory continued with the paint application used for their solid dome figure. The main variation in this line was the short-lived use of a hard white plastic in the 77bk era. Read up more on the KENNER HARD TORSO figures in Wolff’s detailed guide on this site.
+- COO Family III: — No Kader produced R2-D2 Sensorscope
+- COO Family IV: — No Kader produced R2-D2 Sensorscope
+- Unitoy — As with the Solid Dome R2, the reason for the existence of the UNITOY Family 5 torso is a mystery. The other F1 mould worked perfectly throughout the run. F5 could just be a spare mould that was picked up by chance and ended up randomly going into production from time to time.
+- Sticker Guide: — The only relevant pictures for R2-D2 Sensorscope figure is the Unitoy & Smile examples. The sticker, screw & moulding guides are a general overview of all R2 figures.
+- SENSORSCOPE Guide: — The UNITOY Sensorscope is shot in a mid-blue and I’ve found two minor colour differences in the plastic. The same Sensorscope type features through all Unitoy mould families F1, F5 & F6.
+- SCULPT & SCREW DETAILS: — The only relevant pictures for R2-D2 Sensorscope figure is the Unitoy & Smile examples. The sticker, screw & moulding guides are a general overview of all R2 figures.
+
+Accessories:
+- See the accessory notes in the sections above. If no accessory is named there, what it came with is unknown from this file.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/r2-d2-sensorscope/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/
