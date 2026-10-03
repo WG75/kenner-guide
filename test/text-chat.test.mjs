@@ -418,6 +418,65 @@ await test("cardback question for Yoda retrieves the new reference file", async 
   assert.match(prompt, /Figure Name: Yoda/);
 });
 
+function assertDebutFileFirst(json, figure) {
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.match(json.sources[0], /compatibility\/debut-cardbacks-reference/, `got ${json.sources}`);
+  const prompt = calls[0].body.messages.at(-1).content;
+  const first = prompt.split("--- REFERENCE:")[1] || "";
+  assert.match(first, new RegExp(`Figure Name: ${figure}`));
+}
+
+for (const [message, figure] of [
+  ["which card did Vader come on?", "Darth Vader"],
+  ["what backs did Vader come on?", "Darth Vader"],
+  ["what cardback did Yoda debut on", "Yoda"],
+  ["what card is my Boba Fett on", "Boba Fett"]
+]) {
+  await test(`card phrasing ranks that figure's debut file first: "${message}"`, async () => {
+    const { json } = await call({ message });
+    assertDebutFileFirst(json, figure);
+  });
+}
+
+for (const message of ["what card back", "carded on", "which backs"]) {
+  await test(`card phrasing retrieves a debut-cardbacks file: "${message}"`, async () => {
+    const { json } = await call({ message });
+    assert.equal(json.reply, "MOCK ANSWER");
+    assert.match(json.sources[0], /compatibility\/debut-cardbacks-reference/, `got ${json.sources}`);
+  });
+}
+
+await test("bare 'which card?' with no figure stays an honest unknown", async () => {
+  const { json } = await call({ message: "which card?" });
+  assert.equal(calls.length, 0, "model was called");
+  assert.notEqual(json.offTopic, true);
+  assert.match(json.reply, /unknown|can't establish|doesn't cover/i);
+});
+
+await test("'what card games' stays off-topic", async () => {
+  const { json } = await call({ message: "what card games should I play tonight?" });
+  assert.equal(calls.length, 0, "model was called");
+  assert.equal(json.offTopic, true);
+});
+
+await test("photo-identified Vader then 'which card did this come on?' ranks Vader's debut file first", async () => {
+  const { json } = await call({
+    message: "which card did this come on?",
+    history: [
+      { role: "assistant", content: vaderPhotoReply },
+      { role: "user", content: "which card did this come on?" }
+    ],
+    flowState: vaderFlow
+  });
+  assertDebutFileFirst(json, "Darth Vader");
+  assert.match(calls[0].body.messages.at(-1).content, /figure in play is Darth Vader/);
+});
+
+await test("photo-identified Vader then bare 'which card?' ranks Vader's debut file first", async () => {
+  const { json } = await call({ message: "which card?", flowState: vaderFlow });
+  assertDebutFileFirst(json, "Darth Vader");
+});
+
 await test("A / identify variant stays scripted and does not call the model", async () => {
   const a = await call({ message: "A", flowState: { ...vaderFlow, step: "choose_help" } });
   const variant = await call({ message: "identify variant", flowState: { ...vaderFlow, step: "choose_help" } });

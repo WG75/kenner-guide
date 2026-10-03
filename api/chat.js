@@ -723,12 +723,47 @@ function tcAliasHits(text) {
   return TC_ALIASES.filter(a => a.re.test(lower));
 }
 
+// Stemmed tokens that mean "cardback" rather than a figure. A definition
+// question ("what is a debut cardback?") has only these, so it stays on the
+// glossary alias above. A named figure, or "card back" / "carded" / "backs",
+// is a lookup and should rank debut-cardbacks files first.
+const TC_CARDBACK_GENERIC = new Set(["card", "cardback", "back", "debut", "kenner", "carded", "moc", "packaging"]);
+
+function tcCardQuestion(text) {
+  const lower = String(text || "").toLowerCase().replace(/[’‘]/g, "'");
+  if (/\bcard games?\b/.test(lower)) return false;
+  return /\b(?:card ?backs?|debut cards?|carded|backs|(?:which|what) cards?)\b/.test(lower);
+}
+
+function tcDebutCardbackBoost(text) {
+  const lower = String(text || "").toLowerCase().replace(/[’‘]/g, "'");
+  if (!tcCardQuestion(lower)) return false;
+  // Clear cardback wording, even with no figure name.
+  if (/\b(?:card backs?|carded|backs)\b/.test(lower)) return true;
+  // "which/what card" and "cardback" only once a figure (or other real word) is named.
+  return tcTokens(text).some(token => !TC_CARDBACK_GENERIC.has(token));
+}
+
+function tcBareCardQuestion(text) {
+  return /^(?:which|what) cards?$/.test(normalise(text));
+}
+
 function tcScoreFiles(files, text) {
   const lower = String(text || "").toLowerCase();
   const tokens = tcTokens(text);
   const aliasHits = tcAliasHits(text);
   const aliasTerms = aliasHits.flatMap(a => a.terms);
   const contentTerms = [...new Set([...tokens, ...aliasTerms.map(t => t.toLowerCase())])].filter(t => t.length >= 2);
+  const debutBoost = tcDebutCardbackBoost(text);
+  const debutNameTokens = new Set(tokens.filter(token => !TC_CARDBACK_GENERIC.has(token)));
+  if (debutBoost) {
+    for (const alias of aliasHits) {
+      if (alias.kind !== "figure") continue;
+      for (const term of [...alias.terms, ...alias.slugs]) {
+        for (const token of tcTokens(String(term).replace(/-/g, " "))) debutNameTokens.add(token);
+      }
+    }
+  }
 
   const countIn = (file, needle) => {
     let count = 0;
@@ -767,6 +802,18 @@ function tcScoreFiles(files, text) {
           if (alias.kind === "figure" && file.folder === "figures") nameScore += 10;
           break;
         }
+      }
+    }
+
+    // Cardback lookups rank the debut-cardbacks file that names the figure
+    // ahead of the figure dossier. The name bonus beats a content-only mention.
+    if (debutBoost && file.slug.includes("debut-cardbacks")) {
+      nameScore += 200;
+      if ([...debutNameTokens].some(token => {
+        const word = new RegExp(`\\b${token}\\b`);
+        return (file.lower.match(/^figure name: .+$/gm) || []).some(line => word.test(line));
+      })) {
+        nameScore += 40;
       }
     }
 
@@ -858,7 +905,7 @@ function tcClassify(message, priorTurns) {
   if (TC_THANKS_RE.test(message.trim())) return "thanks";
 
   const aliasHit = tcAliasHits(message).length > 0;
-  const vocabHit = TC_TOPIC_RE.test(lower);
+  const vocabHit = TC_TOPIC_RE.test(lower) || tcCardQuestion(lower);
   const offTopicHit = TC_OFFTOPIC_RE.test(lower);
 
   if (aliasHit || vocabHit) {
@@ -988,7 +1035,8 @@ async function handleTextChat(res, { message, history, flowState }) {
     : null;
   let kind = tcClassify(question, turns);
   const accessoryChoice = Boolean(identified) && tcIsAccessoryMenuChoice(question);
-  const refersToFigure = Boolean(identified) && (tcRefersToFigureInPlay(question) || accessoryChoice);
+  const bareCard = tcBareCardQuestion(question);
+  const refersToFigure = Boolean(identified) && (tcRefersToFigureInPlay(question) || accessoryChoice || bareCard);
   const plainlyOffTopic = TC_OFFTOPIC_RE.test(question.toLowerCase().replace(/[’‘]/g, "'"));
   // "b" / "show accessories", and "what weapon should mine have?", have no topic
   // word of their own. With a figure already identified they are about that figure,
@@ -1001,6 +1049,12 @@ async function handleTextChat(res, { message, history, flowState }) {
     return tcReply(res, tcPick(TC_REDIRECTS, lastAssistant && lastAssistant.content), { offTopic: true, flowState: carriedFlow });
   }
 
+  // "which card?" / "what card?" names no figure. With no photo-identified
+  // figure either, say so instead of guessing a cardback file.
+  if (bareCard && !identified) {
+    return tcReply(res, tcPick(TC_NO_REFERENCE_REPLIES, lastAssistant && lastAssistant.content), { sources: [], flowState: carriedFlow });
+  }
+
   // Bind only when the question points at the figure in play and does not name
   // a different figure. Other questions keep the previous retrieval behaviour.
   const questionNamesFigure = tcAliasHits(question).some(a => a.kind === "figure");
@@ -1011,7 +1065,8 @@ async function handleTextChat(res, { message, history, flowState }) {
     if (bindFigure) {
       ranked = tcRankFiles(`${identified.label}\n${question}`, [], "");
       const needles = tcAliasHits(identified.label).flatMap(a => a.kind === "figure" ? a.slugs : []);
-      if (needles.length) {
+      const wantDebut = tcDebutCardbackBoost(`${identified.label}\n${question}`);
+      if (needles.length && !wantDebut) {
         const ownFiles = ranked.filter(item => needles.some(needle => item.file.slug.includes(needle)));
         if (ownFiles.length) ranked = ownFiles;
       }
