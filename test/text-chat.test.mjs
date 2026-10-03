@@ -373,13 +373,42 @@ await test("identified figure is not applied to a different named question", asy
   assert.match(json.reply, /unknown|reference files|doesn't cover/i);
 });
 
-await test("scripted accessories button is unchanged and does not call the model", async () => {
-  const { json } = await call({
-    message: "show accessories",
-    flowState: { ...vaderFlow, step: "choose_help" }
+// Updated: this used to expect the dead-end "Accessory lookup for this figure
+// type is not fully built yet" for "show accessories" and did not call the model.
+const accessoryMenuReplies = [
+  "show accessories",
+  "B",
+  "b.",
+  "accessories",
+  "tell me what accessories came with this figure"
+];
+for (const message of accessoryMenuReplies) {
+  await test(`photo menu '${message}' retrieves Vader reference files instead of the scripted dead-end`, async () => {
+    const { json } = await call({
+      message,
+      history: [
+        { role: "assistant", content: vaderPhotoReply },
+        { role: "user", content: "yes" },
+        { role: "assistant", content: "What would you like help with?\n\nA Identify the figure variant\nB Tell me what accessories came with this figure\n\nOr type your question below." },
+        { role: "user", content: message }
+      ],
+      flowState: { ...vaderFlow, step: "choose_help" }
+    });
+    assert.doesNotMatch(json.reply, /not fully built yet/);
+    assert.equal(calls.length, 1, "text chat did not call the model");
+    assertVaderAccessoryRetrieval(json);
+    assert.equal(json.flowState.step, "choose_help");
   });
+}
+
+await test("A / identify variant stays scripted and does not call the model", async () => {
+  const a = await call({ message: "A", flowState: { ...vaderFlow, step: "choose_help" } });
+  const variant = await call({ message: "identify variant", flowState: { ...vaderFlow, step: "choose_help" } });
   assert.equal(calls.length, 0);
-  assert.match(json.reply, /not fully built yet/);
+  assert.match(a.json.reply, /Variant identification for this figure type is not fully built yet/);
+  assert.match(variant.json.reply, /Variant identification for this figure type is not fully built yet/);
+  assert.equal(a.json.flowState, null);
+  assert.equal(variant.json.flowState, null);
 });
 
 console.error = quietErrors;

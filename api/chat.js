@@ -87,9 +87,10 @@ export default async function handler(req, res) {
         });
       }
 
-      // Short menu replies stay on the scripted accessory path. A typed question
-      // ("what accessories should this have?") falls through to text chat so it
-      // can use the identified figure. "identify variant" is unchanged above.
+      // Jawa and Luke Bespin still have their own short accessory scripts.
+      // Every other identified figure used to hit a dead-end here ("not fully
+      // built yet"). Those replies, including "show accessories" and "B", now
+      // fall through to text chat. "identify variant" / "A" is unchanged above.
       const menuWordCount = normalisedMessage.split(" ").filter(Boolean).length;
       if (
         flowState.step === "choose_help" &&
@@ -125,13 +126,6 @@ export default async function handler(req, res) {
             actions: []
           });
         }
-
-        return res.status(200).json({
-          reply:
-            "Accessory lookup for this figure type is not fully built yet.\n\nIf you describe the weapon or accessory, I’ll help as best I can.",
-          flowState: null,
-          actions: []
-        });
       }
 
       if (flowState.step === "jawa_accessory_choice") {
@@ -908,6 +902,18 @@ function tcRefersToFigureInPlay(message) {
   return TC_ANAPHORA_RE.test(String(message || "").toLowerCase().replace(/[’‘]/g, "'"));
 }
 
+/* Menu B, once a figure is already identified. "b." normalises to "b". */
+function tcIsAccessoryMenuChoice(message) {
+  const text = normalise(message);
+  if (!text) return false;
+  if (/^(?:b|accessories|accessory|weapons|weapon)$/.test(text)) return true;
+  if (/^show(?: me)?(?: the)? (?:accessories|accessory)$/.test(text)) return true;
+  if (text === "tell me what accessories came with this figure") return true;
+  if (text === "what accessories came with this figure") return true;
+  if (text === "b tell me what accessories came with this figure") return true;
+  return false;
+}
+
 function tcFigureFromFlowState(flowState) {
   if (!flowState || flowState.topic !== "image_identified" || typeof flowState.figure !== "string") return null;
   const key = flowState.figure.trim();
@@ -981,10 +987,12 @@ async function handleTextChat(res, { message, history, flowState }) {
     ? [...history].reverse().find(m => m && m.role === "assistant" && typeof m.content === "string")
     : null;
   let kind = tcClassify(question, turns);
-  const refersToFigure = Boolean(identified) && tcRefersToFigureInPlay(question);
+  const accessoryChoice = Boolean(identified) && tcIsAccessoryMenuChoice(question);
+  const refersToFigure = Boolean(identified) && (tcRefersToFigureInPlay(question) || accessoryChoice);
   const plainlyOffTopic = TC_OFFTOPIC_RE.test(question.toLowerCase().replace(/[’‘]/g, "'"));
-  // "what weapon should mine have?" has no topic word of its own. With a figure
-  // already identified it is about that figure, unless the message is plainly off-topic.
+  // "b" / "show accessories", and "what weapon should mine have?", have no topic
+  // word of their own. With a figure already identified they are about that figure,
+  // unless the message is plainly off-topic.
   if (refersToFigure && kind === "offtopic" && !plainlyOffTopic) kind = "followup";
 
   if (kind === "greeting") return tcReply(res, tcPick(TC_GREETINGS, lastAssistant && lastAssistant.content), { flowState: carriedFlow });
@@ -1028,7 +1036,7 @@ async function handleTextChat(res, { message, history, flowState }) {
   const sources = ranked.map(r => r.file.relPath);
   const context = tcBuildContext(ranked);
   const figureNote = bindFigure
-    ? `Context only, not evidence: the figure in play is ${identified.label}. In this question, "this", "it", "my figure" and "mine" refer to that figure. This sentence is not a source of collector facts.\n\n`
+    ? `Context only, not evidence: the figure in play is ${identified.label}. In this question, "this", "it", "my figure", "mine", and a short accessories choice such as "show accessories" or "B" refer to that figure. This sentence is not a source of collector facts.\n\n`
     : "";
 
   const messages = [
