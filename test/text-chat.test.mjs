@@ -298,6 +298,90 @@ await test("UNCHANGED: scripted flow start and continue still work with no model
   assert.equal(calls.length, 0);
 });
 
+const vaderPhotoReply = "This figure appears to be Darth Vader.\n\nConfidence: high\n\nDid you have any questions about this figure or would you like to look up another?";
+const vaderFlow = { topic: "image_identified", figure: "darth_vader", displayName: "Darth Vader", step: "post_identification" };
+
+function assertVaderAccessoryRetrieval(json) {
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(Array.isArray(json.sources), json.reply);
+  assert.ok(json.sources.includes("figures/darth-vader-reference.txt"), `got ${json.sources}`);
+  assert.ok(json.sources.includes("accessories/darth-vader-cape.txt"), `got ${json.sources}`);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /Context only, not evidence: the figure in play is Darth Vader/);
+  assert.ok(prompt.indexOf("not evidence") < prompt.indexOf("Reference data (your only source of facts)"));
+  assert.match(prompt, /This sentence is not a source of collector facts/);
+  assert.equal(json.flowState.topic, "image_identified");
+  assert.equal(json.flowState.figure, "darth_vader");
+  assert.equal(json.flowState.displayName, "Darth Vader");
+}
+
+await test("photo-identified Vader then 'what accessories should this have?' retrieves Vader files", async () => {
+  const history = [
+    { role: "user", content: "📷 Photo uploaded for analysis" },
+    { role: "assistant", content: vaderPhotoReply },
+    { role: "user", content: "what accessories should this have?" }
+  ];
+  const { json } = await call({ message: "what accessories should this have?", history, flowState: vaderFlow });
+  assertVaderAccessoryRetrieval(json);
+  console.log("      sources:", json.sources.join(", "));
+});
+
+await test("after Yes, typed accessories question still retrieves Vader files", async () => {
+  const { json } = await call({
+    message: "what accessories should this have?",
+    history: [
+      { role: "assistant", content: vaderPhotoReply },
+      { role: "user", content: "yes" },
+      { role: "assistant", content: "What would you like help with?\n\nA Identify the figure variant\nB Tell me what accessories came with this figure\n\nOr type your question below." },
+      { role: "user", content: "what accessories should this have?" }
+    ],
+    flowState: { ...vaderFlow, step: "choose_help" }
+  });
+  assert.doesNotMatch(json.reply, /not fully built yet/);
+  assertVaderAccessoryRetrieval(json);
+  assert.equal(json.flowState.step, "choose_help");
+});
+
+await test("'mine' after a Vader photo retrieves Vader files with no earlier user topic", async () => {
+  const { json } = await call({ message: "what weapon should mine have?", flowState: vaderFlow });
+  assert.ok(json.sources.includes("figures/darth-vader-reference.txt"), `got ${json.sources}`);
+  assert.match(calls[0].body.messages.at(-1).content, /figure in play is Darth Vader/);
+});
+
+await test("photo reply alone still identifies Vader when flowState was cleared", async () => {
+  const { json } = await call({
+    message: "what accessories should this have?",
+    history: [
+      { role: "user", content: "📷 Photo uploaded for analysis" },
+      { role: "assistant", content: vaderPhotoReply },
+      { role: "user", content: "what accessories should this have?" }
+    ]
+  });
+  assertVaderAccessoryRetrieval(json);
+});
+
+await test("no identified figure: 'what accessories should this have?' stays an honest unknown", async () => {
+  const { json } = await call({ message: "what accessories should this have?" });
+  assert.equal(calls.length, 0, "model was called");
+  assert.match(json.reply, /unknown|reference files|doesn't cover/i);
+  assert.equal(json.flowState, null);
+});
+
+await test("identified figure is not applied to a different named question", async () => {
+  const { json } = await call({ message: "Tell me about the Hammerhead figure", flowState: vaderFlow });
+  assert.equal(calls.length, 0, `model called; sources: ${json.sources}`);
+  assert.match(json.reply, /unknown|reference files|doesn't cover/i);
+});
+
+await test("scripted accessories button is unchanged and does not call the model", async () => {
+  const { json } = await call({
+    message: "show accessories",
+    flowState: { ...vaderFlow, step: "choose_help" }
+  });
+  assert.equal(calls.length, 0);
+  assert.match(json.reply, /not fully built yet/);
+});
+
 console.error = quietErrors;
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

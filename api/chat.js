@@ -42,6 +42,9 @@ export default async function handler(req, res) {
           flowState: {
             topic: "image_identified",
             figure,
+            ...(typeof flowState.displayName === "string" && flowState.displayName.trim()
+              ? { displayName: flowState.displayName.trim() }
+              : {}),
             step: "choose_help"
           },
           actions: [
@@ -84,8 +87,14 @@ export default async function handler(req, res) {
         });
       }
 
+      // Short menu replies stay on the scripted accessory path. A typed question
+      // ("what accessories should this have?") falls through to text chat so it
+      // can use the identified figure. "identify variant" is unchanged above.
+      const menuWordCount = normalisedMessage.split(" ").filter(Boolean).length;
       if (
         flowState.step === "choose_help" &&
+        menuWordCount > 0 &&
+        menuWordCount <= 3 &&
         (
           normalisedMessage.includes("accessor") ||
           normalisedMessage.includes("weapon") ||
@@ -257,6 +266,7 @@ confidence: "low"
         flowState: {
           topic: "image_identified",
           figure: figureKey,
+          displayName,
           step: "post_identification"
         },
         actions: [
@@ -883,55 +893,143 @@ function tcReply(res, reply, extra = {}) {
   });
 }
 
-function tcErrorReply(res, code, reply) {
+function tcErrorReply(res, code, reply, flowState) {
   // Returned with HTTP 200 so the existing frontend (which shows a generic
   // message for any non-OK status) displays the clear explanation.
-  return tcReply(res, reply, { error: code });
+  return tcReply(res, reply, { error: code, flowState: flowState || null });
+}
+
+/* "this", "it", "my figure", "mine" and the close forms "its" / "my one".
+   Only applied once a photo or guided lookup has identified a figure. */
+const TC_ANAPHORA_RE = /\b(?:this|it|its|mine)\b|\bmy (?:figure|one)\b/i;
+const TC_PHOTO_FIGURE_RE = /this figure appears to be ([^\n.]+)\./i;
+
+function tcRefersToFigureInPlay(message) {
+  return TC_ANAPHORA_RE.test(String(message || "").toLowerCase().replace(/[’‘]/g, "'"));
+}
+
+function tcFigureFromFlowState(flowState) {
+  if (!flowState || flowState.topic !== "image_identified" || typeof flowState.figure !== "string") return null;
+  const key = flowState.figure.trim();
+  if (!key || key === "unknown" || key === "uncertain") return null;
+  const named = typeof flowState.displayName === "string" && flowState.displayName.trim();
+  return {
+    key,
+    label: named ? flowState.displayName.trim() : key.replace(/_/g, " "),
+    named: Boolean(named)
+  };
+}
+
+function tcFigureFromHistory(turns) {
+  for (let i = turns.length - 1; i >= 0; i--) {
+    const turn = turns[i];
+    if (!turn || turn.role !== "assistant") continue;
+    const match = String(turn.content || "").match(TC_PHOTO_FIGURE_RE);
+    if (!match) continue;
+    const label = match[1].trim();
+    if (!label || /uncertain/i.test(label)) return null;
+    const key = normaliseFigureKey(label);
+    if (!key || key === "unknown" || key === "uncertain") return null;
+    return { key, label, named: true };
+  }
+  return null;
+}
+
+/* Photo identification stores the figure on flowState (index.html sends it
+   back on the next request) and also in the assistant reply. Text replies
+   used to clear flowState, so the reply text is the fallback. */
+function tcResolveIdentifiedFigure(flowState, turns) {
+  const fromState = tcFigureFromFlowState(flowState);
+  const fromHistory = tcFigureFromHistory(turns);
+  if (fromState) {
+    if (!fromState.named && fromHistory && fromHistory.key === fromState.key) {
+      return { key: fromState.key, label: fromHistory.label };
+    }
+    return { key: fromState.key, label: fromState.label };
+  }
+  if (!fromHistory) return null;
+  return { key: fromHistory.key, label: fromHistory.label };
+}
+
+function tcCarriedFlow(flowState, identified) {
+  if (!identified) return null;
+  const step = flowState?.topic === "image_identified" && typeof flowState.step === "string" && flowState.step
+    ? flowState.step
+    : "post_identification";
+  return {
+    topic: "image_identified",
+    figure: identified.key,
+    displayName: identified.label,
+    step
+  };
 }
 
 async function handleTextChat(res, { message, history, flowState }) {
   const text = typeof message === "string" ? message.trim() : "";
+  const turns = text ? tcCleanHistory(history, text) : [];
+  const identified = tcResolveIdentifiedFigure(flowState, turns);
+  const carriedFlow = tcCarriedFlow(flowState, identified);
 
   if (!text) {
-    return tcReply(res, "Type a question about vintage Kenner Star Wars figures, accessories, variants, cardbacks or factories and I'll check my reference data.");
+    return tcReply(res, "Type a question about vintage Kenner Star Wars figures, accessories, variants, cardbacks or factories and I'll check my reference data.", { flowState: carriedFlow });
   }
 
   const question = text.slice(0, TC_MAX_MESSAGE_CHARS);
-  const turns = tcCleanHistory(history, text);
   const priorUserTurns = turns.filter(t => t.role === "user").map(t => t.content);
   // Raw last assistant message (even our own canned replies) so wording isn't repeated back-to-back.
   const lastAssistant = Array.isArray(history)
     ? [...history].reverse().find(m => m && m.role === "assistant" && typeof m.content === "string")
     : null;
-  const kind = tcClassify(question, turns);
+  let kind = tcClassify(question, turns);
+  const refersToFigure = Boolean(identified) && tcRefersToFigureInPlay(question);
+  const plainlyOffTopic = TC_OFFTOPIC_RE.test(question.toLowerCase().replace(/[’‘]/g, "'"));
+  // "what weapon should mine have?" has no topic word of its own. With a figure
+  // already identified it is about that figure, unless the message is plainly off-topic.
+  if (refersToFigure && kind === "offtopic" && !plainlyOffTopic) kind = "followup";
 
-  if (kind === "greeting") return tcReply(res, tcPick(TC_GREETINGS, lastAssistant && lastAssistant.content));
-  if (kind === "thanks") return tcReply(res, tcPick(TC_THANKS, lastAssistant && lastAssistant.content));
+  if (kind === "greeting") return tcReply(res, tcPick(TC_GREETINGS, lastAssistant && lastAssistant.content), { flowState: carriedFlow });
+  if (kind === "thanks") return tcReply(res, tcPick(TC_THANKS, lastAssistant && lastAssistant.content), { flowState: carriedFlow });
   if (kind === "offtopic") {
-    return tcReply(res, tcPick(TC_REDIRECTS, lastAssistant && lastAssistant.content), { offTopic: true });
+    return tcReply(res, tcPick(TC_REDIRECTS, lastAssistant && lastAssistant.content), { offTopic: true, flowState: carriedFlow });
   }
+
+  // Bind only when the question points at the figure in play and does not name
+  // a different figure. Other questions keep the previous retrieval behaviour.
+  const questionNamesFigure = tcAliasHits(question).some(a => a.kind === "figure");
+  const bindFigure = refersToFigure && !questionNamesFigure;
 
   let ranked = [];
   try {
-    const figureHint = typeof flowState?.figure === "string" ? flowState.figure.replace(/_/g, " ") : "";
-    ranked = tcRankFiles(question, priorUserTurns, figureHint);
+    if (bindFigure) {
+      ranked = tcRankFiles(`${identified.label}\n${question}`, [], "");
+      const needles = tcAliasHits(identified.label).flatMap(a => a.kind === "figure" ? a.slugs : []);
+      if (needles.length) {
+        const ownFiles = ranked.filter(item => needles.some(needle => item.file.slug.includes(needle)));
+        if (ownFiles.length) ranked = ownFiles;
+      }
+    } else {
+      ranked = tcRankFiles(question, priorUserTurns, "");
+    }
   } catch (err) {
     console.error("Reference search failed:", err);
-    return tcErrorReply(res, "reference_unavailable", "I couldn't read my reference data just now, so I can't answer reliably. Please try again shortly.");
+    return tcErrorReply(res, "reference_unavailable", "I couldn't read my reference data just now, so I can't answer reliably. Please try again shortly.", carriedFlow);
   }
 
   if (!ranked.length) {
-    return tcReply(res, tcPick(TC_NO_REFERENCE_REPLIES, lastAssistant && lastAssistant.content), { sources: [] });
+    return tcReply(res, tcPick(TC_NO_REFERENCE_REPLIES, lastAssistant && lastAssistant.content), { sources: [], flowState: carriedFlow });
   }
 
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     console.error("Text chat: OPENAI_API_KEY is not set");
-    return tcErrorReply(res, "missing_api_key", "My text chat isn't connected at the moment: the server has no OpenAI API key configured. Photo and guided lookups may be affected too. The site owner needs to add OPENAI_API_KEY.");
+    return tcErrorReply(res, "missing_api_key", "My text chat isn't connected at the moment: the server has no OpenAI API key configured. Photo and guided lookups may be affected too. The site owner needs to add OPENAI_API_KEY.", carriedFlow);
   }
 
   const sources = ranked.map(r => r.file.relPath);
   const context = tcBuildContext(ranked);
+  const figureNote = bindFigure
+    ? `Context only, not evidence: the figure in play is ${identified.label}. In this question, "this", "it", "my figure" and "mine" refer to that figure. This sentence is not a source of collector facts.\n\n`
+    : "";
 
   const messages = [
     { role: "system", content: TC_SYSTEM_PROMPT },
@@ -939,6 +1037,7 @@ async function handleTextChat(res, { message, history, flowState }) {
     {
       role: "user",
       content:
+        figureNote +
         `Reference data (your only source of facts):\n\n${context}\n\n` +
         `=== END OF REFERENCE DATA ===\n\nCollector's question:\n${question}`
     }
@@ -975,32 +1074,32 @@ async function handleTextChat(res, { message, history, flowState }) {
       console.error(`OpenAI text chat error ${response.status}:`, detail);
 
       if (response.status === 401 || response.status === 403) {
-        return tcErrorReply(res, "api_auth", "My text chat couldn't authenticate with OpenAI, so the API key on the server looks invalid or lacks access. The site owner needs to check OPENAI_API_KEY.");
+        return tcErrorReply(res, "api_auth", "My text chat couldn't authenticate with OpenAI, so the API key on the server looks invalid or lacks access. The site owner needs to check OPENAI_API_KEY.", carriedFlow);
       }
       if (response.status === 429) {
-        return tcErrorReply(res, "api_rate_limited", "My text chat is being rate-limited or has run out of OpenAI quota. Please try again in a minute; if it persists, the site owner should check the OpenAI account.");
+        return tcErrorReply(res, "api_rate_limited", "My text chat is being rate-limited or has run out of OpenAI quota. Please try again in a minute; if it persists, the site owner should check the OpenAI account.", carriedFlow);
       }
       if (response.status >= 500) {
-        return tcErrorReply(res, "api_unavailable", "OpenAI is having trouble at the moment. Please try again shortly.");
+        return tcErrorReply(res, "api_unavailable", "OpenAI is having trouble at the moment. Please try again shortly.", carriedFlow);
       }
-      return tcErrorReply(res, "api_error", `OpenAI rejected the request (status ${response.status}). Please try again, and let the site owner know if it keeps happening.`);
+      return tcErrorReply(res, "api_error", `OpenAI rejected the request (status ${response.status}). Please try again, and let the site owner know if it keeps happening.`, carriedFlow);
     }
 
     const answer = String(data?.choices?.[0]?.message?.content || "").trim();
 
     if (!answer) {
       console.error("OpenAI text chat returned an empty answer");
-      return tcErrorReply(res, "empty_answer", "I didn't get a usable answer back from the model. Please try rephrasing or ask again.");
+      return tcErrorReply(res, "empty_answer", "I didn't get a usable answer back from the model. Please try rephrasing or ask again.", carriedFlow);
     }
 
-    return tcReply(res, answer, { sources });
+    return tcReply(res, answer, { sources, flowState: carriedFlow });
   } catch (err) {
     if (err && err.name === "AbortError") {
       console.error("OpenAI text chat timed out");
-      return tcErrorReply(res, "api_timeout", "That took too long to answer. Please try again, perhaps with a narrower question.");
+      return tcErrorReply(res, "api_timeout", "That took too long to answer. Please try again, perhaps with a narrower question.", carriedFlow);
     }
     console.error("OpenAI text chat failed:", err && err.message);
-    return tcErrorReply(res, "network_error", "I couldn't reach the AI service just now. Please try again shortly.");
+    return tcErrorReply(res, "network_error", "I couldn't reach the AI service just now. Please try again shortly.", carriedFlow);
   } finally {
     clearTimeout(timer);
   }
