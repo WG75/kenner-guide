@@ -1,0 +1,60 @@
+Figure Name: Bossk
+Aliases: Bossk
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+Bossk is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: Bossk. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Kader
+  - II: Smile
+  - III: Unitoy
+  - IV: PBP
+  - POCH GUIDE
+  - MOULD & HEAD COMPARISON
+  - BOSSK RIFLE GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Kader/poch
+  - Please note the vest colours. As you can see both Poch figures do have a clearly bright white vest. This is important for the harder to detect Poch version 2.
+  - You can also spot the deeper red to the collar on both.
+  - The No COO to the right has a very grey colour to the vest which makes him very unique among all other Bossks.
+- SMILE
+  - There is mainly two colour combos on both the HK and the No COO. Both can be found in a lighter and darker green as well. Also the vest colour can be bright white or more greyish.
+- UNITOY/POCH
+  - The two HK versions differ mainly in the used plastic and their way to degrade. One variants tends to get more reddish limbs the other one tends to get more lighter limbs. Both can be only found this way nowadays. The green colour used to limbs also differs.
+  - The Poch Version 3 shown here is hard to tell in pictures. Next to his Kenner brothers it’s far more easy to detect: Large pupils and usually wider lips. The green tint to the arms and feet is very unique.
+- PBP
+  - This COO still only exists in the PBP scared out version. Typically the figure has fat lips, very hard limbs (see the details) and overall a very unique colour combo.
+  - This COO still only exists in the PBP scared out version. On this picture you can see both known Coos compared to a Euro No Coo. Please also note the slight different versions on the PBP Bossk itself. Thanks for the picture to my friend Javier Ruilópez.
+- Colour comparison
+  - Colour comparison of all figures shown and sorted via COO family.
+- Mould & head comparison
+  - As you can see specific head colours are related to COO families.
+  - Also spray masks go with each COO family, besides the Spanish produced ones which can differ.
+- Notes from the page with the photo credit name removed
+  - The figure shown in the middle above is the Poch variant of the Bossk. It is compared to its Kenner COO counterpart (left) and its PBP brother (right). This figure was found 5 or 6 times till today. Thanks to J.C. we could finally confirm him to be a real Poch variant. The green colour on the arms and feet is very freaky. Although there are parts that look more reddish, I personally don’t think this is the result of discoloration. No matter if it’s “real” or discoloured, regarding the carded example it seems to be at least typical for the Poch variant.
+  - Please also note that the black “cross” on the chest seems to be much thinner compared to other produced Bossk figures.
+  - Shown above is the COO from the Poch variant. As always a Kenner counterpart is existing.
+  - The two marks on the back seem to be typical for this variant. With the help of Kenneth_B this could be confirmed on four examples by now.
+  - Shown to the right are some examples that popped up in Spanish auctions. To me with all the evidence given here this one is a confirmed Poch variant.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/bossk/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

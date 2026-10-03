@@ -1,0 +1,56 @@
+Figure Name: Weequay
+Aliases: Weequay
+Packaging: Return of the Jedi
+Category: Figure
+
+Overview:
+Weequay is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-2.txt under Figure Name: Weequay. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Unitoy
+  - II: Smile/ Lili Ledy
+  - III: Unitoy
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Unitoy
+  - Left: “© LFL 83” (no gap) Right “H.K.” or smooth NCOO
+  - Light blue-green arms & torso
+  - Dark brown hands / NCOO Dark or light brown hands
+  - Light brown trouser plastic
+  - Dark brown boots / NCOO Lighter brown boots
+- Smile
+  - Left: “© LFL 83” (wide gap) Right “H.K.” or smooth NCOO
+  - Light blue or turquoise arms & torso
+  - Tan coloured trouser plastic
+- Lili Ledy
+  - Left: “© LFL 83” (wide gap) Right smooth NCOO
+  - Turquoise arm & torso
+  - Glossy darker grey braids
+  - Darker tan coloured trouser plastic
+- UNITOY
+  - Left: “© LFL 83” (lower C, no gap) Right “H.K.” or smooth NCOO
+  - Turquoise arm & torso
+  - Light or dark brown hands / NCOO Dark brown hands
+  - Tan trouser plastic
+  - Dark brown boots / NCOO Lighter brown boots
+- APPRECIATION
+  - Sincere thanks to Stefan Callear, Wolff, Horacio Narvaez & Ahmed Boukarrouh Álvarez for their help in putting this guide together.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/rotj/weequay/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

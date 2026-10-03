@@ -1,0 +1,44 @@
+Accessory Name: General Madine Staff
+Aliases: General Madine Staff
+Category: Accessory
+
+Overview:
+General Madine Staff is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Smile
+  - M2: Taiwan UM
+  - M3: Unitoy/ Lili Ledy
+  - The General Madine Staff was usually released with the following combinations of colour to figure:
+    - White General Madine Staff:
+      - General Madine
+  - There are 3 main mould variations. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the steel mould used.
+- SMILE
+  - M1 was produced by SMILE in HONG KONG . The following colours are known:
+    - white
+    - yellowish white
+    - YELLOWISH-WHITE
+- UNIVERSAL MANUFACTURERS (TAIWAN)
+  - M2 was produced by UNIVERSAL MANUFACTURERS in TAIWAN . The following colours are known:
+    - blueish white (sharp)
+    - blueish white (soft)
+    - opaque white (soft)
+- UNITOY/ LILI LEDY
+  - M3 was produced by UNITOY in HONG KONG . The moulds were also used by LILI LEDY in Mexico for General Madine. They even got mispacked with Luke Jedi on some Ledy cardbacks which can be categorized as factory error, not as a variant. The following colours are known:
+    - white (sharp)
+    - yellowish white (soft)
+    - opaque white (soft) LILI LEDY
+- R1:
+  - The R1 is a more recent reproduction out there. They do swim when submerged in water and the mould is pretty close so this is not an easy spot. A dead give away is the tiny hole to the bottom of the staff.
+  - The following colours are known:
+    - white
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/general-madine-staff/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

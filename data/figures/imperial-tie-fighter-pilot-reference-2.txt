@@ -1,0 +1,63 @@
+Figure Name: Imperial Tie Fighter Pilot
+Aliases: Imperial Tie Fighter Pilot; TIE Pilot
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 2 of 3
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-6.txt under Figure Name: Imperial TIE Fighter Pilot. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Unitoy/ PBP/ MECCANO/ LILI LEDY
+  - UNITOY MADE IN HONG KONG
+  - Above you can see following figure and accessory combinations (left to right):
+    - Made in Hong Kong COO Glossy orange buttons. Blue-grey gloves/boots.
+    - Made in Hong Kong COO Matt light orange chest buttons. Blue-grey gloves/boots.
+    - Unitoy debuted on the Palitoy 45 and Kenner 47 cardbacks and went through to Kenner 65A cardbacks.
+  - As noted above, there’s very little to differentiate the TIE Fighter Pilot mould families. The main difference is the colour, with Unitoy figures having blueish-grey gloves and boots, whereas Smile figures have a warmer grey.
+  - A minor variation can be found between the two leg cavities for the Unitoy figure. Looking closely, the heel height is noticeably taller in the L1b leg cavity, and subsequent L2b and L3b derivatives . Both tall and mid heel variations can be found in equal numbers.
+  - ACCESSORY: M1/M2 Grey Pilot Blaster
+- PBP/ MECCANO
+  - PBP/MECCANO SCARRED NO COO
+  - Above you can see following figure and accessory combinations (left to right):
+    - PBP AT-AT Driver Helmet Emblems. Orange chest buttons. Grey gloves & boots.
+    - PBP Reddish-orange chest buttons. Grey gloves & boots.
+    - PBP (Meccano exclusive) Orange chest buttons. Blue-grey gloves & boots.
+    - PBP (Meccano exclusive) Orange chest buttons. Grey gloves & boots.
+  - After a shorter run with Unitoy in Hong Kong, Kenner leased this mould to Spain for their production run of the TIE Fighter Pilot.
+  - Numbers of intact PBP TFP MOCs are low, however from what’s survived we know the earliest release known is a 65 back offerless card. It’s not known why PBP chose to use the alternate stamp, however possible theories could be a factory error (inadvertently mixing up the stamps), or some kind of detrimental damage to the original TFP stamp.
+  - Each helmet and shoulder emblem is applied separately, so it’s not unusual to find asymmetrical emblem positions. The PBP figure has larger helmet emblems compared to the Kenner counterpart.
+  - The chest buttons also varied in batches between orange and a reddish-orange, plus the gloves and boots can be found in either a grey or blue-grey colour.
+  - French Meccano Trilogo:  A later PBP release of the TFP was exported to Meccano in France and released on their French Trilogo cardbacks. The  large emblems on this later batch were always positioned closer to the centre spine of the helmet. An interesting point to note is that all of the PBP COO iterations have been also found on the Meccano figure. This suggests the Meccano figure parts are exactly the same as the parts used throughout the PBP production run, with the paint application occurring at a later stage when the Meccano order was placed.
+  - ACCESSORY: M1 PBP Light Grey Pilot Blaster
+- LILI LEDY
+  - LILI LEDY SCARRED NO COO
+  - Above you can see following figure and accessory combination:
+    - Scarred no COO Orange chest buttons. Purple-grey gloves & boots.
+  - After PBP’s production run in Spain, Kenner then leased this mould to Lili Ledy in Mexico for their production run of the TIE Fighter Pilot.
+  - Lili Ledy continued TFP production where the Spanish had stopped. There wasn’t any attempt to alter or remove the temporary filler over the COO. This was the end of the line for this mould family.
+  - ACCESSORY: M6 Lili Ledy Black Jawa Blaster
+- KADER CHINA
+  - Left leg: “MADE IN (raised bar) CHINA”
+  - The mould which was used in the Kader China factory was brand new and hadn’t featured in the production run till this point. Kader China debuted on Kenner 65C cardbacks and continued through to at least the 79A cardback.
+  - Originally stamped with a unique “MADE IN HONG KONG” COO, the HONG KONG section of text was milled out to form a blank raised bar, which was stamped with “CHINA”.
+  - The torso is virtually identical to both of the other mould families, however the limbs feature some minor differences. Most notably a fold in the fabric on the rear of the right leg which can be seen in the comparison detail below.
+  - Trouser mould comparison
+  - ACCESSORY: M3 Kader China Light Grey Pilot Blaster
+- Families and notes named on the page index
+  - I: Smile
+  - II: Unitoy/ PBP/
+  - Meccano/ Lili Ledy
+  - III: Kader China
+  - PILOT BLASTER
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- SMILE
+  - Right leg: “MADE IN HONG KONG” or smoothed over No COO
+  - Strap indent to upper right hand of aspirator tube. This is found on only 1 of the 2 cavities in the steel mould. Both mould variations are found in even numbers.
+  - Coos were accidentally stamped into the FRONT of the leg moulds. Due to the expense in creating new moulds, the incorrect stamps were filled in. There is a partial outline of the existing “MADE IN HONG KONG” and on the opposite leg, some dotting and remnants from the removed date stamp.
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/esb/imperial-tie-fighter-pilot/

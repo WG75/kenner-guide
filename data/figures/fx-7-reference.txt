@@ -1,0 +1,55 @@
+Figure Name: FX-7
+Aliases: FX-7
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+FX-7 is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: FX-7. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Kader
+  - II: Smile
+  - III: Unitoy
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists FX-7 on the 31-back "The Empire Strikes Back" card, No. 39730, 1980.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtFX7.asp
+- Source: ( The Empire Strikes Back )
+- Date Stamp: 1980
+- Release Date: unknown
+- Carded Availability: The Empire Strikes Back Return of the Jedi Tri-Logo
+- Assortment No.: 39730
+- Weapons and Accessories: None
+- Point of Interest: This figure fist appeared on The Empire Strikes Back 31 back card. This figure was referred to as FX-7 (Medical Droid) only on The Empire Strikes Back cards. It was simply called FX-7 on Return of The Jedi and Tri-Logo cards.
+- Major variations: Though all vintage figures have minor variations, FX-7 (Medical Droid) had one variation worth noting. The figure was produced with two similar yet different head moulds. Both featured the same style of detailing, but the order of the details does not match in their placement on the figure’s head. Mistaken as a variation is a shorter version of FX-7 , which is actually a broken figure. In production, the base of this figure was simply glued on to the bottom and has been known to break loose.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
+
+Sources:
+https://www.variantvillain.com/characters/esb/fx-7/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

@@ -1,0 +1,39 @@
+Accessory Name: Yoda Snake
+Aliases: Yoda Snake
+Category: Accessory
+
+Overview:
+Yoda Snake is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI:  Kader
+  - M2: Unitoy
+  - M3: Smile
+  - Yoda’s Snake was released with the following combinations of colour to figure:
+    - Orange and Brown Snake:
+      - Yoda
+  - There are 4 main mould variations plus subvariants. More subvariants may exist. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the mould used.
+- KADER HK/ KADER CHINA/ LILI LEDY
+  - M1 Kader very soft plastic, light brown w/EPM (prone to degradation)
+  - M1 Kader China soft plastic, mid brown w/EPM
+    - Kader / Lili Ledy comparison
+- UNITOY / KADER CHINA
+  - M2 Unitoy hard plastic, orange
+  - M2 Unitoy hard plastic, brown
+  - M2 Kader China soft plastic, mid brown
+  - Unitoy / Smile comparison
+- SMILE
+  - M3 Smile hard plastic, orange
+  - M3 Smile soft plastic, brown
+- TOP TOYS
+  - Coming soon
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/yoda-snake/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

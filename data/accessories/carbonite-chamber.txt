@@ -1,0 +1,23 @@
+Accessory Name: Carbonite Chamber
+Aliases: Carbonite Chamber
+Category: Accessory
+
+Overview:
+Carbonite Chamber is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Smile
+  - The Carbonite Chamber was released with the following figure:
+    - A detailed mould guide for the original Carbonite Chamber will be made eventually.
+- R1:
+  - The R1 is one of the recently made reproductions by Stan Solo. They are shot in a grey transparent colour.
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/carbonite-chamber/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

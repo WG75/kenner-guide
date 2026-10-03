@@ -1,0 +1,57 @@
+Figure Name: Luke Skywalker (Jedi Knight Outfit)
+Aliases: Luke Skywalker (Jedi Knight Outfit); Jedi Knight Outfit; Jedi Luke
+Packaging: Return of the Jedi
+Category: Figure
+Part: 2 of 4
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-1.txt under Figure Name: Luke Skywalker (Jedi Knight Outfit). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Smile
+  - SMILE HONG KONG
+  - Above you can see following figure and accessory combinations (left to right):
+    - Hong Kong COO Pinkish face w/Smile snap cloak, dark grey-brown Palace blaster and blue saber
+    - Hong Kong COO Pinkish face w/Smile stitched cloak, dark grey-brown Palace blaster and blue saber
+    - Hong Kong COO Pinkish face w/Smile stitched cloak, light grey-brown Palace blaster and blue-green saber
+    - Hong Kong COO Pale face w/Smile stitched cloak, light grey-brown Palace blaster and green saber
+    - No COO Tanned face w/Smile stitched cloak, light grey-brown Palace blaster and light green saber
+    - SMILE MACAU
+    - No COO Tanned face w/Smile stitched cloak, brown Palace blaster and light grey-light green saber. Commonly found in France, so considered to be exclusively a Meccano release.
+  - Smile Luke Jedi debuted in the 65 back era, and as a major character was produced in high volumes and exported globally well into the late Trilogo era.
+  - The initial version of the figure features a pinkish hue and dark detailing to Luke’s face, before softening the detailing and face colour to a lightly tanned/pale paint application.
+  - The earlier 65-a Smile releases were paired with the blue saber before the changeover to green on the 65-b. The reason for the early blue saber relates to the Return of the Jedi film featuring Luke Skywalker’s saber with a blue colour prior to Lucasfilms decision to alter the saber to green for greater visual contrast against the blue skies of Tatooine. By the time this directive was passed along to the Hong Kong vendor Smile, a significant number of blue sabers had already been produced.
+  - Another notable running change was the production decision to remove the metal clasp that comes with the earliest 65-a releases of this figure. The altered version was instead simply stitched together at the collar. It’s likely this was done purely as a safety or cost-reduction exercise. The fabric used for the cloaks over time was prone to degradation, and green-ish or yellow shades can also been found (see example above). The ribbing on the fabric is generally horizontal, but can also be found running vertically most likely where offcuts could be used in order to be efficient with offcut materials.
+  - Smile was a prolific manufacturer of the Luke Jedi figure. We have noted three different mould families used for the Luke Jedi character. In the graphics below you can clearly see significant upgrades on the stem used to mount the head to the torso, plus improvements in the moulding of the characters feet.
+  - Comparison images below courtesy of Thomas Gill.
+  - Luke Jedi F1/2/3 Stem comparison
+  - Luke Jedi F1/2/3 foot comparison
+  - DEBUT HONG KONG ACCESSORY COMBINATIONS
+  - M3 Smile blue handheld saber
+  - M1 Smile dark grey-brown Palace blaster
+  - Smile small hood, ribbed fabric w/metal snap clasp (green-brown thread) OR Smile small hood, ribbed fabric w/green-brown stitching
+  - HONG KONG ACCESSORY COMBINATIONS
+  - M3 Smile blue-green handheld saber OR M3 Smile green handheld saber
+  - M1 Smile light grey-brown Palace blaster
+  - Smile small hood, ribbed fabric w/green-brown stitching
+  - HONG KONG/MACAU NO COO ACCESSORY COMBINATIONS
+  - M3 light green handheld saber
+  - Mixed combinations exist between these eras as the early accessory stocks were depleted.
+- (MECCANO EXCLUSIVE)
+  - The family 3 No COO is a late era figure produced from Smile’s Macau based operation. This figure has been found on Meccano 65 back and early French Trilogo cardbacks. Smile Macau Luke’s were carded in France, sourced from the Macau stamped baggies. Meccano was the only license which went to the trouble of applying the “Made in Macau” sticker to their cards, however they also stickered Hong Kong Luke Jedi cardbacks in the process.
+  - This figure features minor alterations primarily to the torso and feet from his Hong Kong produced predecessors. Even further down the rabbit hole still, there’s some very minor moulding variations to the torso. I don’t know if these are a running change made during production or permanent variations between the cavities.
+  - A production moved from Hong Kong to Macau, overstock HK parts were included in that move. It’s therefore possible to find F3 Luke Jedi’s mixed with Hong Kong parts.
+  - Comparison images below courtesy of Thomas Gill, James Gurney and Mark Andrews.
+  - Macau Torso front
+  - Macau Torso rear
+  - Macau Neck rear
+  - Macau Torso A
+  - Macau Torso B
+  - Macau Flow Line Detail
+  - The accessories for this variant are analogue with the No COO figure.
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/

@@ -1,0 +1,93 @@
+Accessory Name: Bespin Blaster
+Aliases: Bespin Blaster
+Category: Accessory
+
+Overview:
+Bespin Blaster is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Smile/ PBP/ Lili Ledy MIM
+  - M2.1: Kader
+  - M2.2: Kader/ Lili Ledy
+  - M3: Kader (Survival Kit)
+  - M4: Unitoy
+  - The Bespin Blaster was usually released with the following combinations of colour to figure:
+    - Blue Bespin Blaster:
+      - AT-AT Commander
+      - Bespin Security Guard White
+      - Bespin Security Guard Black
+      - Han Solo Bespin
+      - Han Solo Bespin (Lili Ledy)
+      - Lando Calrissian
+      - Lobot
+      - Luke Bespin (Lili Ledy)
+      - Rebel Soldier Hoth
+      - Snaggletooth (PBP)
+    - Grey Bespin Blaster:
+      - Lando Bespin (Lili Ledy)
+      - Kea Moll (from Droids/Kenner)
+      - Squidhead ( Kenner and Lili Ledy )
+    - Solid black Bespin Blaster:
+      - Han Solo Trench Coat (Lili Ledy)
+    - Metallic Blue Bespin Blaster:
+      - Rebel Solider Hoth w/pale face (PBP)
+      - Lando Calrissian (PBP)
+  - There are 4-5 main mould variations plus subvariants. More subvariants may exist. As a result of the fact that these were shot on a sprue tree in numbers of 4-10 each shot the subvariants may vary heavily depending on the steel mould used (see overview for detailed information).
+- SMILE / PBP / LILI LEDY
+  - M1 was produced by SMILE in Hong Kong. The moulds were also used by LILI LEDY in Mexico and PBP in Spain. The following colours are known:
+    - metallic arctic blue (PBP)
+    - dark blue
+    - blue
+    - blue-green
+    - translucent blue-green
+    - very translucent blue-green
+    - yellowish grey
+    - blueish grey (Lili Ledy)
+- KADER
+  - M2.1 was produced by Kader in Hong Kong. The following colours are known:
+    - black-blue
+    - blue
+    - blue-green
+- KADER / K.CHINA / LILI LEDY
+  - M2.2 was produced by Kader in Hong Kong as well. It is an altered mould, modified from M2.1. The grip was made wider to fit Squidhead. The moulds were also used by LILI LEDY in Mexico for several figures. The following colours are known:
+    - blue
+    - blue-green with pimples (Lili Ledy)
+    - dull black with pimples (Lili Ledy)
+    - shiny black with pimples (Lili Ledy)
+    - yellowish grey
+    - blueish grey (Lili Ledy)
+    - blueish grey with pimples (Lili Ledy)
+    - blue-green with pimples
+    - dull black with pimples
+    - shiny black with pimples
+    - blueish grey
+    - blueish grey with pimples
+- KADER
+  - M3 was produced by Kader in Hong Kong . It only appeared in the weapon packs from Kenner (Survival Kit). The following colours are known:
+    - blue
+- UNITOY
+  - M4a/b was produced by UNITOY in Hong Kong. They come from the same sprue tree and visible difference is the different position of the gate scar. The following colours are known:
+    - blue
+    - translucent blue-green
+    - very translucent blue-green
+  - All colours from M4a should also be present on the M4b and M4c as well as the other way around (–> unproven theory)
+  - M4c was produced by UNITOY in Hong Kong. They come from the same sprue tree then M4a and M4b. The following colours are known.
+- HUNGARY
+  - This blaster was produced by an unknown factory for the “CSILLAGOK HÁBORÚJA” line in Hungary . The mould was only used in the 80s and came with their resident Luke Skywalker, Biker Scout and sometimes Han Solo figures:
+    - black
+- POLAND
+  - This blaster is one out of two moulds that was produced by Elektrospółdzielnia (EVANPLAST) for an unnamed line in Poland . The mould was used in the 80s, 90s and 2000s (1985-2003). These were packed in baggies probably stapled onto cardbacks and sold as accessory sets. They are nowadays mostly paired with the figures that came from the same factory in the so called “Polish 1st, 2nd and 3rd Gen” lines. All those weapons came in a huge variety of colours over the years. Here are two examples:
+    - black
+    - turquoise
+    - This blaster is the second mould produced by Elektrospółdzielnia (EVANPLAST) for an unnamed line in Poland . The mould was used in the 80s, 90s and 2000s (1985-2003). These were packed in baggies probably stapled onto cardbacks and sold as accessory sets. They are nowadays mostly paired with the figures that came from the same factory in the so called “Polish 1st, 2nd and 3rd Gen” lines. All those weapons came in a huge variety of colours over the years. Here are two examples:
+      - greyish black
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/bespin-blaster/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

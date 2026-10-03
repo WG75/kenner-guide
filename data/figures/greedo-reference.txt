@@ -1,0 +1,56 @@
+Figure Name: Greedo
+Aliases: Greedo
+Packaging: Star Wars
+Category: Figure
+
+Overview:
+Greedo is a vintage Kenner Star Wars figure from the Star Wars line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-4.txt under Figure Name: Greedo. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Smile/ PBP
+  - II: Smile
+  - REBEL BLASTER GUIDE
+  - All the scarred NCOOs are PBP, and smooth NCOOs are Smile. We haven’t found scarred COO figures with Kenner paint or plastic yet. The COOs are enough to identify one from the other.
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists Greedo on the 20-back "Star Wars" card, No. 39020, 1978.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtGreedo.asp
+- Source: ( Star Wars )
+- Date Stamp: 1978
+- Release Date: unknown
+- Carded Availability: Star Wars The Empire Strikes Back Return of the Jedi Tri-Logo
+- Assortment No.: 39320
+- Weapons and Accessories: Smuggler Blaster
+- Point of Interest: Though pictured on the back of the Star Wars 20 and 21 back cards with a Stormtrooper blaster, the figure was packed with a Han Solo Blaster. Though this figure was originally included in the Cantina Adventure Set , it made its first appearance on the Star Wars 20 back card.
+- Major variations: Though all vintage figures have minor variations, the Greedo figure has only one major variations. What is commonly referred to as the Tri-logo version, available in many parts of Europe, was molded in a richer green plastic. This figure, though hard to spot with the untrained eye, can easily be picked out by it's lack of COO * stamp. There is one documented example of a Greedo with blue spray opts, as opposed to the regular aqua green, but it is too early in this variation's discovery to state its scarcity. * COO is the commonly used term for ' Country Of Origin ', which refers to the stamp usually spotted on a figure's leg that states which country it was manufactured in.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
+
+Sources:
+https://www.variantvillain.com/characters/sw/greedo/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

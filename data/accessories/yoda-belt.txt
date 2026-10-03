@@ -1,0 +1,40 @@
+Accessory Name: Yoda Belt
+Aliases: Yoda Belt
+Category: Accessory
+
+Overview:
+Yoda Belt is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI:  Kader
+  - M2: Unitoy
+  - M3: Smile
+  - Yoda’s Belt was released with the following combinations of colour to figure:
+    - Brown Belt:
+      - Yoda
+  - There are 4 main mould variations plus subvariants. More subvariants may exist. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the mould used.
+- KADER / POCH / KADER CHINA / LILI LEDY
+  - M1 Kader hard plastic, mid brown w/EPM
+  - Poch paint: M1 Kader hard plastic, mid brown w/EPM
+  - M1 Kader China soft plastic, mid brown w/EPM
+  - M1 LL hard plastic, yellow-brown w/EPM
+- UNITOY / POCH / KADER CHINA
+  - M2 Unitoy hard plastic, grey-brown
+  - Poch paint: M2 Unitoy hard plastic, grey-brown
+  - M2 Kader China soft plastic, mid brown
+  - Kader China M2.2 soft plastic, mid brown Unitoy (w/bumps)
+- SMILE
+  - Front: M3 Smile, soft plastic, yellow brown w/double pin clasp
+  - Back: M3 Smile, soft plastic, yellow brown w/double pin clasp
+- TOP TOYS
+  - Coming soon
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/yoda-belt/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

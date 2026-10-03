@@ -1,0 +1,43 @@
+Accessory Name: Commlink Guide
+Aliases: Commlink Guide
+Category: Accessory
+
+Overview:
+Commlink Guide is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M2: Unitoy
+  - M3: Smile/ Lili Ledy
+  - The Commlink was released with the following combinations of color to figure:
+    - Cloud Car Pilot
+  - There are 3 main mould variations plus subvariants. More subvariants may exist. As a result of the fact that these were shot on a sprue tree in higher numbers each shot the subvariants may vary heavily depending on the steel mould used.
+- M1, M2 & M3
+  - Shown above is a colour comparison between PBP, SMILE, UNITOY and LILI LEDY produced comlinks.
+- PBP
+  - M1 was produced by PBP in Spain. The following colours are known:
+    - light-grey
+- UNITOY
+  - M2 was produced by UNITOY in Hong Kong. The following colours are known:
+    - brownish dark-grey
+    - yellowish dark-grey
+    - dark-grey
+    - M2a/ M2b/ M2c: unknown (the page does not list them in text).
+- SMILE / LILI LEDY
+  - M3 was produced by SMILE  in Hong Kong. The moulds were also used later by LILI LEDY in Mexico. The following colours are known:
+    - blueish grey
+    - grey
+    - very dark grey (LILI LEDY)
+    - M3a / M3b: unknown (the page does not list them in text).
+- POLAND
+  - This commlink was produced by Elektrospółdzielnia (EVANPLAST) for an unnamed line in Poland . The mould was used in the 80s, 90s and 2000s (1985-2003). These were packed in baggies probably stapled onto cardbacks and sold as accessory sets. They are nowadays mostly paired with the figures that came from the same factory in the so called “Polish 1st, 2nd and 3rd Gen” lines. All those accessories came in a huge variety of colours over the years. The commlink itself is only known in one colour so far:
+    - black
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/commlink-guide/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

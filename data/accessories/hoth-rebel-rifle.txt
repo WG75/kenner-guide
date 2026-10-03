@@ -1,0 +1,62 @@
+Accessory Name: Hoth Rebel Rifle
+Aliases: Hoth Rebel Rifle
+Category: Accessory
+
+Overview:
+Hoth Rebel Rifle is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1: Unitoy
+  - M2: Kader
+  - M3: Smile
+  - M4: Kader (Survival Kit)
+  - The Hoth Rebel Rifle was usually released with the following combinations of colour to figure:
+    - Black-Blue Rifle:
+      - Luke Skywalker (Hoth Battle Gear)
+      - Rebel Commander
+    - Black Rifle: unknown (the page does not list them in text).
+  - There are 4 main mould variations. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the steel mould used.
+- UNITOY
+  - M1 was produced by UNITOY in Hong Kong. The following colours are known:
+    - light black-blue
+    - black-blue
+    - black
+    - M1a/b/c/d: unknown (the page does not list them in text).
+    - M1a: light black-blue
+    - M1B: black-blue
+    - M1c: black
+    - M1d: black-blue
+- KADER
+  - M2 was produced by KADER in Hong Kong. The following colours are known:
+    - greyish black
+    - black
+    - glossy black
+    - M2a/b: unknown (the page does not list them in text).
+    - M2a: greyish black
+    - M2b: black
+    - M2a: glossy black
+- SMILE
+  - M3 was produced by SMILE in Hong Kong. The following colours are known:
+    - greyish black
+    - black
+    - M3a/b/c: unknown (the page does not list them in text).
+    - M3a: greyish black
+    - M3b: greyish black
+    - M3b: black
+    - M3cs: black
+- KADER
+  - M4 was produced by KADER in Hong Kong. It was only released in the weapons pack “Survival Kit” from Kenner. The following colours are known:
+    - black
+    - M4a/b: unknown (the page does not list them in text).
+    - M4a: black
+    - M4b: black
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/hoth-rebel-rilfe/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

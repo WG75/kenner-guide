@@ -1,0 +1,59 @@
+Accessory Name: Klaatu Skirt
+Aliases: Klaatu Skirt
+Category: Accessory
+
+Overview:
+Klaatu Skirt is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Smile
+  - M2: Unitoy
+  - M3: Lili Ledy
+  - The Klaatu Skirt was usually released with the following combinations of colour to figure:
+    - Creme Skirt:
+      - Klaatu
+    - Brown Skirt: unknown (the page does not list them in text).
+  - There are three main skirt variations. Each of those came in a fluffy and a flat version. Subvariants do exist and may not all be documented. As a result of the fact that these were produced from a fabric bought from a third party involved, the subvariants may vary heavily depending on the supplier.
+- MOULD COMPARISON: M1, M2 & M3
+  - There are three main skirt variations: M1 used by SMILE  in Hong Kong, M2 which was used by UNITOY in Hong Kong and M3 which was used by  Lili Ledy in Mexico. The main differences are in the shape and the materials used. All three versions came as fluffy or flat skirt. M1 used a pointed cut belt with the rounded skirt tip. Both fabrics (belt and skirt) were used horizontally. M2 used a pointed cut belt with an also pointed skirt tip. Both fabrics (belt and skirt) were used vertically. In addition their inner belt material being yellow or green stands really out. M3 skirts have a rounded belt with the skirt tip also being rounded. The fluffy skirts are made out of a very thick linen-like material in stockinette stitch. Both, the fluffy and the flat version, came also with a “non leathery” belt. Those so called fabric belts (M3.1b and M3.2b) originally had a paint or vinyl layer with a fabric backing which over the years turned brittle and delaminated, exposing the fabric backing.
+- SMILE
+  - M1   was produced by SMILE in Hong Kong . These skirts have a pointed cut belt with the rounded skirt tip. The inner lining on both fabrics (belt and skirt) is orientated horizontally. Both, the M1.1 (fluffy) and the M1.2 (flat), can come with creme or white inner lining to the belts.
+    - The following colours are known on M1.1 (fluffy) :
+      - light creme fluffy skirt, leather belt (white lining)
+      - dark creme fluffy skirt, leather belt (creme lining)
+      - The following colours are known on M1.2 (flat) :
+        - light brown flat skirt, leather belt (white lining)
+        - brown flat skirt, leather belt (creme lining)
+        - darkgrey (degraded) flat skirt, leather belt (creme lining)
+- UNITOY
+  - M2   was produced by UNITOY  in Hong Kong . These skirts have a pointed cut belt with an also pointed skirt tip. The inner lining on both fabrics (belt and skirt) is orientated vertically. The fluffy skirts (M1.1) come with yellow and the flat skirts (flat) with green inner lining to the belts.
+    - The following colours are known M2.1 (fluffy) :
+      - light creme fluffy skirt, leather belt (yellow lining)
+      - dark creme fluffy skirt, leather belt (yellow lining)
+      - The following colours are known on M2 .2 (flat) :
+        - light brown flat skirt, leather belt (green lining)
+        - brown flat skirt, leather belt (green lining)
+- LILI LEDY
+  - M3   was produced by LILI LEDY  in Mexico . These skirts have a rounded belt with the skirt tip also being rounded. The fluffy (M3.1) skirts are made out of a very thick linen-like material in stockinette stitch. The initial Retorno releases came with a fluffy skirt, while the later versions for the MIM cards were accessorized with the flatter version of the skirt. Both, the fluffy and the flat version, came also with a “non leathery” belt. Those so called fabric belts (M3.1b and M3.2b) originally had a paint or vinyl layer with a fabric backing which over the years turned brittle and delaminated, exposing the fabric backing.
+    - The following colours are known M3.1 (fluffy) :
+      - creme fluffy skirt, leather belt ( M3.1a )
+      - creme fluffy skirt, fabric belt ( M3.1b , coating lost)
+      - creme fluffy skirt, leather belt (M3.1a)
+      - creme fluffy skirt, fabric belt (M3.1b, coating lost)
+      - The following colours are known on M3.2 (flat) :
+        - brown flat skirt, leather belt ( M3.2a )
+        - brown flat skirt, coated fabric belt ( M3.2b )
+        - brown flat skirt, fabric belt ( M3.2b , coating lost)
+      - brown flat skirt, leather belt (M3.2a)
+      - brown flat skirt, coated fabric belt  (M3.2b)
+      - brown flat skirt, fabric belt (M3.2b, coating lost)
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/klaatu-skirt-2/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

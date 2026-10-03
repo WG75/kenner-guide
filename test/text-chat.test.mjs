@@ -91,7 +91,7 @@ const aliasCases = [
   ["Smile", "Is Smile a later factory?", "references/vendor-codes.txt"],
   ["Kader", "Tell me about Kader", "references/vendor-codes.txt"],
   ["debut cardback", "What is a debut cardback?", "references/collector_glossary.txt"],
-  ["Chewie", "What came with Chewie?", "figures/chewbacca-reference.txt"],
+  ["Chewie", "What came with Chewie?", "figures/chewbacca-reference-1.txt"],
   ["Vader", "Vader cape?", "accessories/darth-vader-cape.txt"],
   ["Tusken", "Tell me about the Tusken Raider", "figures/sand-people-reference.txt"],
   ["Ben", "Ben Kenobi accessories", "figures/ben-obi-wan-kenobi-reference.txt"],
@@ -144,7 +144,7 @@ await test("greeting and thanks handled without model call", async () => {
   assert.ok(a.json.reply && b.json.reply);
 });
 
-for (const q of ["Tell me about the Hammerhead figure", "Which Hammerhead variant came out in 1982?"]) {
+for (const q of ["What creature is the vintage 1977 Dianoga?", "Which 1977 creature variant was the Dianoga?"]) {
   await test(`on-topic question with no reference match: honest 'unknown', no model call ("${q}")`, async () => {
     const { json } = await call({ message: q });
     assert.equal(calls.length, 0, `model called; sources: ${json.sources}`);
@@ -370,8 +370,12 @@ await test("no identified figure: 'what accessories should this have?' stays an 
 
 await test("identified figure is not applied to a different named question", async () => {
   const { json } = await call({ message: "Tell me about the Hammerhead figure", flowState: vaderFlow });
-  assert.equal(calls.length, 0, `model called; sources: ${json.sources}`);
-  assert.match(json.reply, /unknown|reference files|doesn't cover/i);
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.equal(calls.length, 1);
+  assert.ok(json.sources.includes("figures/hammerhead-reference.txt"), `got ${json.sources}`);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /Figure Name: Hammerhead/);
+  assert.doesNotMatch(prompt, /figure in play is Darth Vader/);
 });
 
 // Updated: this used to expect the dead-end "Accessory lookup for this figure
@@ -568,7 +572,10 @@ await test("Early Bird R2-D2 factory question retrieves the probable Unitoy and 
   assert.match(prompt, /Unitoy and Kader versions are both probable in Early Bird sets/);
   assert.match(prompt, /no single Early Bird factory is established/);
   assert.match(prompt, /Factory codes on cards only start at the 32B backs/);
+  assert.match(prompt, /Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only/);
+  assert.match(prompt, /No Taiwan Early Bird/);
   assert.doesNotMatch(prompt, /M3 Kader/);
+  assert.doesNotMatch(prompt, /\[truncated\]/);
 });
 
 await test("early Vader lightsaber question retrieves the documented DT wording", async () => {
@@ -582,7 +589,46 @@ await test("early Vader lightsaber question retrieves the documented DT wording"
   assert.match(prompt, /most, but not all, Early Bird Lukes had it/);
 });
 
-await test("A / identify variant stays scripted and does not call the model", async () => {
+await test("Jawa and Luke Bespin accessory menu replies use reference chat", async () => {
+  for (const [figure, message] of [
+    ["jawa", "show accessories"],
+    ["luke_bespin", "B"]
+  ]) {
+    const before = calls.length;
+    const { json } = await call({
+      message,
+      flowState: { topic: "image_identified", figure, displayName: figure === "jawa" ? "Jawa" : "Luke Skywalker (Bespin Fatigues)", step: "choose_help" }
+    });
+    assert.equal(json.reply, "MOCK ANSWER");
+    assert.equal(calls.length, before + 1, `${figure} stayed on a script`);
+    assert.doesNotMatch(json.reply, /Jawa may have|commonly associated/);
+  }
+});
+
+await test("typed variant identifier asks discriminating questions then retrieves the figure", async () => {
+  const start = await call({ message: "identify the variant of Bossk" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.flowState.topic, "variant_identify");
+  assert.equal(start.json.flowState.displayName, "Bossk");
+  assert.match(start.json.reply, /COO stamp/);
+  let state = start.json.flowState;
+  const answers = ["Hong Kong", "dark green", "rifle", "41 back"];
+  for (let i = 0; i < answers.length - 1; i++) {
+    const next = await call({ message: answers[i], flowState: state });
+    assert.equal(calls.length, 0, `model called on question ${i + 1}`);
+    assert.equal(next.json.flowState.topic, "variant_identify");
+    state = next.json.flowState;
+  }
+  const done = await call({ message: answers.at(-1), flowState: state });
+  assert.equal(calls.length, 1);
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /REFERENCE: figures\/bossk-reference\.txt/);
+  assert.match(prompt, /Figure Name: Bossk/);
+  assert.match(prompt, /say unknown/);
+  assert.match(prompt, /Hong Kong/);
+});
+
+await test("photo-menu identify variant stays scripted and does not call the model", async () => {
   const a = await call({ message: "A", flowState: { ...vaderFlow, step: "choose_help" } });
   const variant = await call({ message: "identify variant", flowState: { ...vaderFlow, step: "choose_help" } });
   assert.equal(calls.length, 0);
@@ -590,6 +636,158 @@ await test("A / identify variant stays scripted and does not call the model", as
   assert.match(variant.json.reply, /Variant identification for this figure type is not fully built yet/);
   assert.equal(a.json.flowState, null);
   assert.equal(variant.json.flowState, null);
+});
+
+function loadCatalog() {
+  const index = JSON.parse(fs.readFileSync(path.join(root, "data/catalog.json"), "utf8"));
+  if (!Array.isArray(index.parts)) return index;
+  const figures = [];
+  const accessories = [];
+  for (const name of index.parts) {
+    const part = JSON.parse(fs.readFileSync(path.join(root, "data", name), "utf8"));
+    figures.push(...(part.figures || []));
+    accessories.push(...(part.accessories || []));
+  }
+  return { figures, accessories };
+}
+
+await test("every retrieval file is under the 7000 character cap", async () => {
+  // data/flows/*.json is loaded whole by loadFlow for the scripted chats.
+  // tcLoadFiles does not scan that folder, and TC_MAX_FILE_CHARS is not applied.
+  // data/catalog.json and data/catalog-N.json are fetched only by the dropdown
+  // in index.html (and by loadCatalog in this file). They are not injected
+  // into the model prompt, so they are outside the retrieval cap on purpose.
+  const cap = 7000;
+  const over = [];
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name === "flows") continue;
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else if (/^catalog(-\d+)?\.json$/.test(entry.name)) continue;
+      else {
+        const text = fs.readFileSync(full, "utf8");
+        if (text.length > cap) over.push(`${path.relative(root, full)} (${text.length})`);
+      }
+    }
+  };
+  walk(path.join(root, "data"));
+  assert.equal(over.length, 0, over.join("\n"));
+});
+
+await test("no reference line ends with a colon and no following content", async () => {
+  // "Overview:" passes because the next line is the paragraph.
+  // A bullet ending in ":" fails unless the next line is indented under it,
+  // which is how a colour list or figure pairing is stored.
+  const bad = [];
+  const walk = (dir) => {
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else if (entry.name.endsWith(".txt")) {
+        const lines = fs.readFileSync(full, "utf8").split(/\r?\n/);
+        lines.forEach((line, index) => {
+          if (!line.trimEnd().endsWith(":")) return;
+          let next = index + 1;
+          while (next < lines.length && !lines[next].trim()) next += 1;
+          if (next >= lines.length) {
+            bad.push(`${path.relative(root, full)}:${index + 1} ${line.trim()}`);
+            return;
+          }
+          const bullet = /^\s*(?:[-*]|\d+\.)\s/.test(line);
+          if (!bullet) return;
+          const indent = line.length - line.trimStart().length;
+          const nextIndent = lines[next].length - lines[next].trimStart().length;
+          if (nextIndent <= indent) bad.push(`${path.relative(root, full)}:${index + 1} ${line.trim()}`);
+        });
+      }
+    }
+  };
+  walk(path.join(root, "data"));
+  assert.equal(bad.length, 0, bad.slice(0, 12).join("\n"));
+});
+
+await test("accessory colour lists and probe sculpts are kept", async () => {
+  const endor = fs.readFileSync(path.join(root, "data/accessories/endor-blaster.txt"), "utf8");
+  const probe = fs.readFileSync(path.join(root, "data/accessories/2-1b-probe.txt"), "utf8");
+  assert.match(endor, /bluesih grey/);
+  assert.match(endor, /AT-ST Driver/);
+  assert.match(probe, /F1: SMILE \(SMALL\)/);
+  assert.match(probe, /F2 UNITOY \(LARGE\)/);
+  assert.match(probe, /F3 KADER \(LARGE\)/);
+  assert.match(probe, /Light grey/);
+});
+
+await test("paploo keeps page cardbacks and the workbook block", async () => {
+  const paploo = fs.readFileSync(path.join(root, "data/figures/paploo-reference.txt"), "utf8");
+  assert.match(paploo, /data\/compatibility\/debut-cardbacks-reference-rotj-4\.txt/);
+  assert.match(paploo, /50bk/);
+  assert.match(paploo, /92bk/);
+  assert.match(paploo, /Mid brown belt and dagger/);
+  assert.doesNotMatch(paploo, /Sorry, content not available/);
+});
+
+await test("r5-d4 photo credit is not stored as a variant", async () => {
+  const parts = fs.readdirSync(path.join(root, "data/figures"))
+    .filter(name => name.startsWith("r5-d4-reference"))
+    .map(name => fs.readFileSync(path.join(root, "data/figures", name), "utf8"))
+    .join("\n");
+  assert.doesNotMatch(parts, /Brian Angel/);
+  assert.match(parts, /SW Italian Harbert/);
+});
+
+await test("Early Bird R2-D2 factory question retrieves part 1 without truncation", async () => {
+  const { json } = await call({ message: "which factory made Early Bird R2-D2?" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.includes("figures/r2-d2-reference-1.txt"), `got ${json.sources}`);
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only/);
+  assert.match(prompt, /No Taiwan Early Bird/);
+  assert.doesNotMatch(prompt, /\[truncated\]/);
+});
+
+await test("R2-D2 part 2 is retrieved for the Takara wind-up question", async () => {
+  const { json } = await call({ message: "tell me about the Takara wind-up R2" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.includes("figures/r2-d2-reference-2.txt"), `got ${json.sources}`);
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /TAKARA WIND-UP R2/);
+  assert.doesNotMatch(prompt, /\[truncated\]/);
+});
+
+await test("Chewbacca part 2 is retrieved for the Smile F5 question", async () => {
+  const { json } = await call({ message: "tell me about the Chewbacca Smile F5" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.ok(json.sources.includes("figures/chewbacca-reference-2.txt"), `got ${json.sources}`);
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /Large almond eyes/);
+  assert.doesNotMatch(prompt, /\[truncated\]/);
+});
+
+await test("every catalog figure and accessory name retrieves its own file", async () => {
+  const catalog = loadCatalog();
+  const jobs = [];
+  for (const fig of catalog.figures) {
+    jobs.push({ q: `tell me about ${fig.name}`, file: fig.file, needles: [fig.name] });
+    jobs.push({ q: `what accessories did ${fig.name} come with`, file: fig.file, needles: [fig.name] });
+    jobs.push({ q: `what cardback did ${fig.name} come on`, file: fig.file, needles: [fig.name, "Debut Kenner Cardback"], cardback: true });
+  }
+  for (const acc of catalog.accessories) {
+    jobs.push({ q: `what is ${acc.name}`, file: acc.file, needles: [acc.name] });
+    jobs.push({ q: `which figures had ${acc.name}`, file: acc.file, needles: [acc.name] });
+  }
+  const misses = [];
+  for (const job of jobs) {
+    const before = calls.length;
+    const { json } = await call({ message: job.q });
+    const prompt = calls.at(-1)?.body?.messages?.at(-1)?.content || "";
+    const gotFile = prompt.includes(`REFERENCE: ${job.file}`) || (job.cardback && prompt.includes("debut-cardbacks-reference"));
+    const gotNeedles = job.needles.every(needle => prompt.includes(needle));
+    if (json.reply !== "MOCK ANSWER" || calls.length !== before + 1 || !gotFile || !gotNeedles) {
+      misses.push(`${job.q} => reply ${json.reply}; sources ${(json.sources || []).join(", ")}`);
+    }
+  }
+  assert.equal(misses.length, 0, `\n${misses.slice(0, 15).join("\n")}`);
 });
 
 console.error = quietErrors;

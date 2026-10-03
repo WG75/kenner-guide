@@ -1,0 +1,70 @@
+Figure Name: Gamorrean Guard
+Aliases: Gamorrean Guard
+Packaging: Return of the Jedi
+Category: Figure
+Part: 1 of 2
+
+Overview:
+Gamorrean Guard is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-1.txt under Figure Name: Gamorrean Guard. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- Kader HK’s Gamorrean Guard is found on 65 & 77bk Kenner cards. Different combinations of dark/mid/light silver and painted/unpainted eyes will be available beyond what’s shown above.
+- The Unitoy figure had a short release on the HT 65a/b cardbacks.
+- Later, the moulds were moved from Unitoy in Hong Kong to Kader’s Macau factory. The H.K. COO was removed and stamped with a new “MACAU” COO where production continued and the figures were released on 65 and 77bk cards with the ME vendor code.
+- The dark armoured version of the Gamorrean Guard has been found on the early 14bk [14-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review] RETORNO cardback. The REGRESO and 65bk Kenner “Made in Mexico” releases featured the figure with either a mid or light silver armour.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Kader
+  - II: Unitoy/ Macau
+  - III: Smile
+  - IV:Lili Ledy
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Kader (HK)
+  - KADER 1983 HONG KONG COO
+  - Above you can see following variants (left to right):
+    - Dark silver armour, dark green painted eyes, bright yellow details
+    - Mid-silver armour, green painted eyes, bright yellow details
+    - Light silver armour, green painted eyes, soft yellow details
+  - Kader HK’s Gamorrean Guard is found on 65 & 77bk Kenner cards. Different combinations of dark/mid/light silver and painted/unpainted eyes will be available beyond what’s shown above.
+  - Kader used large ejector pins to push the legs from the cavity, so look for the large circular imprints on the top front of the figures legs.
+  - Eye comparison
+  - ACCESSORY: M1 Kader Axe with a small EPM.
+- Unitoy/ Kader Macau
+  - UNITOY 1983 HONG KONG COO
+  - Above you can see following variants (left and centre):
+    - Dark silver armour , soft yellow details
+    - Light silver armour , soft yellow details
+    - KADER (MACAU) 1983 MACAU COO
+    - Above you can see following variants (right):
+      - Light silver armour, light yellow details
+      - Bright silver armour, light yellow details
+    - The Unitoy figure had a short release on the HT 65a/b cardbacks.
+  - It is very difficult to differentiate the Unitoy version from the Smile HK version of this figure. If you compare the spray masks you’ll notice the Unitoy/Macau version has longer outer teeth. Checking for a parting line on the sole of the feet will help as the Smile figure has a smooth foot. The hips on the Unitoy version are also slightly darker.
+  - Later, the moulds were moved from Unitoy in Hong Kong to Kader’s Macau factory. The H.K. COO was removed and stamped with a new “MACAU” COO where production continued and the figures were released on 65 and 77bk cards with the ME vendor code.
+  - Unitoy foot seam
+  - Smile foot seam
+  - ACCESSORY:
+    - M3 Unitoy Axe with silver painted blade and a moulded brown handle.
+    - M3 Macau Axe with moulded silver blade and painted brown handle.
+    - Read more about this production change in WOLFF’S MOULD/COLOUR VARIATION GUIDE
+
+Continued in the next part.
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/rotj/gamorrean-guard/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

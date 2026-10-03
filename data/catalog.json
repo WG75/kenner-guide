@@ -1,0 +1,18 @@
+{
+  "name": "VF-CB catalog",
+  "aliases": [
+    "catalog"
+  ],
+  "part": "index",
+  "sources": [
+    "https://www.variantvillain.com/"
+  ],
+  "parts": [
+    "catalog-1.json",
+    "catalog-2.json",
+    "catalog-3.json",
+    "catalog-4.json",
+    "catalog-5.json",
+    "catalog-6.json"
+  ]
+}

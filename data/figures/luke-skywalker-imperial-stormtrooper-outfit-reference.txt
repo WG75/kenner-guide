@@ -1,0 +1,65 @@
+Figure Name: Luke Skywalker (Imperial Stormtrooper Outfit)
+Aliases: Luke Skywalker (Imperial Stormtrooper Outfit); Imperial Stormtrooper Outfit; Stormtrooper Luke; Luke Stormtrooper
+Packaging: Power of the Force
+Category: Figure
+
+Overview:
+Luke Skywalker (Imperial Stormtrooper Outfit) is a vintage Kenner Star Wars figure from the Power of the Force line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): POTF 92-back and/or European Trilogo 70-back. Exact micro-variant carding requires sealed evidence. [70-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
+Workbook block: data/compatibility/debut-cardbacks-reference-potf-2.txt under Figure Name: Luke Skywalker (Imperial Stormtrooper Outfit). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- KADER in China/Hong Kong produced the Luke Skywalker (Imperial Stormtrooper Outfit) figure and accessories. Demand had slowed by time of the POTF line, and as a result these figures were produced in much lower numbers.
+- On Trilogo cards, the figure was paired with the M4 Imperial blaster in either black or dark blue-black.
+- Luke Skywalker (Imperial Stormtrooper Outfit) was released on both Trilogo and 92bk POTF cards.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Kader
+  - IMPERIAL BLASTER GUIDE
+  - LUKE ST. HELMET GUIDE
+- Kader
+  - KADER in China/Hong Kong produced the Luke Skywalker (Imperial Stormtrooper Outfit) figure and accessories. Demand had slowed by time of the POTF line, and as a result these figures were produced in much lower numbers.
+  - The production version is available with only a date, and no country of origin stamp. There are no known paint or plastic variations for this figure.
+  - On Trilogo cards, the figure was paired with the M4 Imperial blaster in either black or dark blue-black.
+  - Luke Skywalker (Imperial Stormtrooper Outfit) was released on both Trilogo and 92bk POTF cards.
+  - Luke Skywalker (Imperial Stormtrooper Outfit) was packaged with the M4 black or dark blue-black Imperial blaster . The helmet accessory is yet to be documented on Variant Villain.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists Luke Skywalker (Imperial Stormtrooper Outfit) on the 92-back "Power of the Force" card, No. 93780, 1985.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtLukestormtrooper.asp
+- Source: ( Star Wars )
+- Date Stamp: 1984
+- Release Date: 1985
+- Carded Availability: Power of the Force Tri-Logo
+- Assortment No.: 93780
+- Weapons and Accessories: Imperial Blaster (black) Stormtrooper Helmet
+- Point of Interest: This figure debuted in the United States on The Power Of The Force card, and in Europe on the Tri-Logo card. It was never packaged on a Canadian card.
+- Major variations: Though all vintage figures have minor variations, the Luke Skywalker (Imperial Stormtrooper Outfit) action figure has no known variations.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
+
+Sources:
+https://www.variantvillain.com/characters/potf/luke-skywalker-imperial-stormtrooper-outfit/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

@@ -235,6 +235,27 @@
       background: rgba(10, 11, 16, 0.94);
     }
 
+    .catalog-pick {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 16px 10px;
+      background: rgba(10, 11, 16, 0.94);
+      color: var(--muted, #9aa0a6);
+      font-size: 12px;
+    }
+
+    .catalog-pick select {
+      flex: 1 1 auto;
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: var(--panel2);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 7px 10px;
+      font-size: 12px;
+    }
+
     .chip {
       border: 1px solid var(--line);
       background: var(--panel2);
@@ -307,6 +328,12 @@
       <button class="chip" onclick="sendPreset('blaster')">Identify a blaster</button>
       <button class="chip" onclick="sendPreset('what does COO mean?')">What does COO mean?</button>
     </div>
+    <label class="catalog-pick">
+      <span>Look up</span>
+      <select id="catalogSelect" aria-label="Look up a figure or accessory">
+        <option value="">Every figure and accessory</option>
+      </select>
+    </label>
 
     <main id="chat" class="chat"></main>
 
@@ -525,7 +552,47 @@
       document.getElementById("photoInput").click();
     }
 
+    function loadCatalog() {
+      const select = document.getElementById("catalogSelect");
+      if (!select) return;
+      fetch("data/catalog.json")
+        .then((response) => response.json())
+        .then((catalog) => {
+          if (!Array.isArray(catalog.parts)) return catalog;
+          return Promise.all(catalog.parts.map((name) => fetch(`data/${name}`).then((response) => response.json())))
+            .then((parts) => ({
+              figures: parts.flatMap((part) => part.figures || []),
+              accessories: parts.flatMap((part) => part.accessories || [])
+            }));
+        })
+        .then((catalog) => {
+          const addGroup = (label, items, kind) => {
+            if (!Array.isArray(items) || !items.length) return;
+            const group = document.createElement("optgroup");
+            group.label = label;
+            items.forEach((item) => {
+              if (!item || !item.name) return;
+              const option = document.createElement("option");
+              option.value = kind === "accessory" ? `what is ${item.name}` : `tell me about ${item.name}`;
+              option.textContent = item.name;
+              group.appendChild(option);
+            });
+            select.appendChild(group);
+          };
+          addGroup("Figures", catalog.figures, "figure");
+          addGroup("Accessories", catalog.accessories, "accessory");
+          select.addEventListener("change", () => {
+            if (!select.value) return;
+            const text = select.value;
+            select.value = "";
+            sendPreset(text);
+          });
+        })
+        .catch(() => {});
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
+      loadCatalog();
       const input = document.getElementById("photoInput");
 
       input.addEventListener("change", (event) => {

@@ -1,0 +1,49 @@
+Figure Name: Princess Leia Organa (Boushh Disguise)
+Aliases: Princess Leia Organa (Boushh Disguise); Boushh Disguise; Boushh; Boushh Leia
+Packaging: Return of the Jedi
+Category: Figure
+
+Overview:
+Princess Leia Organa (Boushh Disguise) is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-1.txt under Figure Name: Princess Leia Organa (Boushh Disguise). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Smile / Smile Macau
+  - II: Unitoy / Lili Ledy
+  - III: Taiwan (U.M.)
+  - MOULD & PAINT COMPARISON
+- SMILE / MACAU
+  - (Small C HONG KONG coo, No Coo)
+  - HONG KONG: Dark brown eye detail.
+  - Blobbed over HK: Dark brown eye detail with a sharper hair sculpt.
+  - No Coo: Reddish brown eye detail with a very detailed hair sculpt.
+- UNITOY / LILI LEDY
+  - Large C HONG KONG COO
+  - Flesh coloured face. Short neck.
+  - White face. Long neck.
+  - Unaltered moulds were sent from Unitoy to Lili Ledy in Mexico
+  - LL Light Brown. Torso & limbs painted in a medium brown colour.
+  - LL Dark Brown. Torso & limbs painted in a dark brown colour.
+- TAIWAN (UNIVERSAL MANUFACTURERS)
+  - Made in Taiwan COO
+  - Painted torso, with tan paint applied to a brown coloured torso. Head shot in a tanned flesh coloured plastic.
+  - Moulded torso, with brown paint applied to a tan coloured torso. Head shot in a pink & flesh coloured plastic.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/rotj/princess-leia-organa-boussh-disguise/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

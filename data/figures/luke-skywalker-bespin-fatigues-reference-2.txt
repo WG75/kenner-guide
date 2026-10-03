@@ -1,0 +1,40 @@
+Figure Name: Luke Skywalker (Bespin Fatigues)
+Aliases: Luke Skywalker (Bespin Fatigues); Bespin Fatigues; Bespin Luke
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 2 of 2
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: Luke Skywalker (Bespin Fatigues). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Poch Guide
+  - Above you can see following POCH variants (left to right):
+    - POCH with Kader Coo, brown hair and UNPAINTED left hip.
+    - POCH with Unitoy Coo mixed up figure with POCH Kader head
+    - POCH with Unitoy Coo with lightbrown boots and pale hands
+    - POCH with Unitoy Coo with darkbrown boots and pink hands
+  - The figure shown in the middle above is one of the known Poch Luke Bespin variants. Next to him shown are his COO counterparts from Kenner. I don’t have a brown haired Kenner one with this specific COO nor have I heard from one existing. The picture from J.C.‘s carded one shows exactly all the significant characteristics, so to me this one is confirmed. You can see the true black fat eyes and the very pale hands which are most significant. Indeed this is the only known Luke Bespin with brown hair and true black eyes (besides the Ledy one). If you look really close on the carded one you can even see the same irregularities on the boots from the sloppy executed spray-job.
+  - On the right you can see the COO belonging to this Poch version.
+  - The way the boots are sprayed is very significant. The colour can look totally different in certain areas depending on how thick or thin the paint was applied. This phenomenon can be seen on other Poch variants too (see for example Luke Farmboy).
+  - Below you can see the COO belonging to this Poch version.
+  - Here you can see the melt marks on the torso’s back and on the hip from the left leg. A second example was found recently by Kenneth_B and I hope to provide pictures soon.
+  - In this next picture you can see two details of the “dripped“ paint. We can see that all Poch identification points are given here: melt marks, sloppy spray job, pale hands and “dripped” paint.
+  - The figure shown in the middle is the other POCH version known to Luke Bespin. It was originally discovered by JaviSWSpain: Poch Luke Bespin . Why there is another version with different COO and totally different characteristics is unclear. Hopefully a carded one will show up soon and confirm the existence of both versions.
+  - The pale hands, the unpainted hip on the right, the paler limbs and the very light sprayed eyes and brows seem to be typical for this variant. If you follow the link above you will also see some good shots of the melt marks made by JaviSWSpain. It’s a real pity mine doesn’t have such clear marks, but it’s the same figure overall.
+  - On the picture to the right you can see the pale hands and the unpainted hip. The unpainted hip isn’t unique to the Poch variant. Indeed there are three more variants known: The so called PBP dark boots, PBP caramel boots, and the Lili Ledy blonde hair version (assumed to be LL ESB release). What is unique to this Poch variant is the combination of the COO (MIHK) and the unpainted hip.
+  - On the picture below you can see the pale hands and the unpainted hip. The unpainted hip isn’t unique to the Poch variant. Indeed there are three more variants known: The so called PBP dark boots, PBP caramel boots, and the Lili Ledy blonde hair version (assumed to be LL ESB release). What is unique to this Poch variant is the combination of the COO (MIHK) and the unpainted hip.
+  - Here you can see the COO from this Poch variant. It’s indeed another COO compared to the Poch Luke Bespin variant mentioned on top of that page. You can also see some tiny melt marks on this picture but I think the one from JaviSWSpain shows this much better.
+  - To the right the “dripped“ paint is pictured. Although there is another Luke Bespin version confirmed to Poch, I have no doubt this one is Poch too.
+- Lili Ledy Guide
+  - Above you can see following LILI LEDY variants (left to right):
+    - LILI LEDY with Kader No Coo (smooth) with blonde hair and UNPAINTED left hip.
+    - LILI LEDY with Kader No Coo (raised bar) with brown hair
+    - LILI LEDY with Kader No Coo (raised bar) with overstock head and very dark brown hair
+  - The Luke Bespin was released in two different versions. The early version has smoothed no Coo and very light blonde hair whilst the later version has mustard brown hair and raised bar No coo. The third version pictured here is made out of an original overstock head from the LL factory and a regular raised bar no Coo torso. These very dark brown heads were never released but survived as bigger overstock find and were “puzzled” together with regular LL figures many times. There is no proof of one figure originally put together by the LL factory with the dark brown coloured hair. Nevertheless it became a standard “variant” in LL collecting and I must admit it looks just great.
+  - The early version not only has a different mold and hair color it has many other unique features. The blonde hair color is unique among all produced Luke Bespins as well as the unpainted hip (see picture to the right) combined with sabre hilt “attached” to the belt. Of course the so called PBP Luke Bespins can have unpainted hips too, but none of them has the hilt “attached” to the belt. It can only guessed if the Luke Bespin with blonde hair came with the same weapons as the mustard one, but it is assumed that the blonde version came with a unique “Rebel Blaster” pictured above.
+
+
+Sources:
+https://www.variantvillain.com/characters/esb/luke-skywalker-bespin-fatigues/

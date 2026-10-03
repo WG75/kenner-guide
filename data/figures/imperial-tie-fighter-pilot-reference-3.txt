@@ -1,0 +1,27 @@
+Figure Name: Imperial Tie Fighter Pilot
+Aliases: Imperial Tie Fighter Pilot; TIE Pilot
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 3 of 3
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-6.txt under Figure Name: Imperial TIE Fighter Pilot. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Unitoy/ PBP/ MECCANO/ LILI LEDY
+  - Right leg: Unitoy “MADE IN HONG KONG” > PBP/ Meccan o/ Lili Ledy: Scarred and filled in COO
+  - Raised boot TFP. Here there were also 2 cavities for the legs within the Fam.2 steel mould, and it turns out the heel height differs slightly between them. Both mould variations are found in even numbers.
+  - PBP:  After a shorter HK run, this was the mould that was distributed around the world to Spain and Mexico. PBP were producing TFP figures prior to Lili Ledy. PBP TFP can be found with RED & ORANGE button variations
+  - French Meccano Trilogo: The torso & limb plastic is consistent with PBP produced parts. This figure is found with ORANGE chest buttons and larger emblems on the helmet..
+  - Lili Ledy:  I believe this was the end of the line for this mould family. There are Lili Ledy TFP examples with signs of raised pitting in the plastic, suggesting the beryllium had begun to degrade and would have been due for replacement had the SW line not ended anyway.
+- KADER CHINA
+  - Left leg: “MADE IN (raised bar) CHINA”
+  - Odd COO stamp. This Kader “MADE IN HONG KONG” coo was never used in production before being milled out then stamped CHINA. Why did Kader HK have unused expensive moulds on hand, but never put them to use? Suggestions welcomed here too.
+  - The torso is virtually identical to both of the other mould families, however the limbs feature some minor differences. Most notably a fold in the fabric on the rear of the right leg.
+- Notes from the page with the photo credit name removed
+  - Left to Right: Smile MIHK/ Smile NCOO/ Unitoy MIHK/ Meccano/ PBP AT-AT Driver emblems/ PBP/ Lili Ledy/ Kader China
+
+
+Sources:
+https://www.variantvillain.com/characters/esb/imperial-tie-fighter-pilot/

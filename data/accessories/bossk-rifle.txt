@@ -1,0 +1,41 @@
+Accessory Name: Bossk Rifle
+Aliases: Bossk Rifle
+Category: Accessory
+
+Overview:
+Bossk Rifle is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Kader
+  - M2: Smile
+  - M3: Unitoy
+  - The Bossk Rilfe was usually released with the following combinations of color to figure:
+    - Blue Bossk Rifle:
+      - Bossk
+  - There are 3 main mould variations. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the steelmold used.
+- KADER
+  - M1 was produced by KADER in Hong Kong. The following colours are known:
+    - blue
+    - dark blue
+    - greenish blue
+- SMILE
+  - M2 was produced by SMILE in Hong Kong. The following colours are known:
+    - blue
+    - greenish blue (semi-translucent)
+    - greenish blue (translucent)
+    - M2a/b: unknown (the page does not list them in text).
+- UNITOY
+  - M3 was produced by UNITOY in Hong Kong. The following colours are known:
+    - blue
+    - greenish blue
+    - M3a/b: unknown (the page does not list them in text).
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/bossk-rifle/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

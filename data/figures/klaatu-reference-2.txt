@@ -1,0 +1,42 @@
+Figure Name: Klaatu
+Aliases: Klaatu
+Packaging: Return of the Jedi
+Category: Figure
+Part: 2 of 2
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-2.txt under Figure Name: Klaatu. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- LILI LEDY (MEXICO)
+  - LILI LEDY 1983 No COO
+  - Above you can see following variants (left to right):
+    - Dark green painted face, dark brown shoulders. Fluffy skirt w/leather belt.
+    - Mid green painted face, dark brown shoulders. Fluffy skirt w/fabric belt.
+    - Dark green painted face, mid brown shoulders. Flat skirt w/leather belt.
+    - Mid green painted face, mid brown shoulders. Flat skirt w/fabric belt.
+  - Lili Ledy Klaatu figure was a Retorno release on the 14bk [14-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review], Regreso release on the 50bk [50-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review] and later is seen on the Kenner 65 back “Made in Mexico” (MIM) card.
+  - Lili Ledy, as with nearly all the other MIM releases produced their Klaatu tooling in-house, which bore a slightly different COO to the Hong Kong/Macau versions. There aren’t any mould variations to note between the LL and the Kenner released figures.
+  - There are some minor paint colour variations in the shade of green on Klaatu’s face and the browns on his shoulders and torso.
+  - The initial Retorno releases came with a fluffy skirt, while the latter versions for the MIM cards were accessorized with the flatter version of the skirt. The fabric belts originally had a paint or vinyl layer with a fabric backing which over the years turned brittle and delaminated, exposing the fabric backing.
+  - ACCESSORY: Lili Ledy dark grey Vibro axe with either “A”, “B”, or no stamp.
+- Notes from the page with the photo credit name removed
+  - F1 – Smile (HK and No COO)
+  - Solid grey limbs
+  - Moulded silver helmet/Painted green face
+  - Smooth under boots
+  - F2 – Unitoy (HK)
+  - Grey/Tan limbs (Degraded??)
+  - Moulded Green Face/Painted silver helmet
+  - Mould line under boots
+  - F3 – Lili Ledy/MIM (No COO)
+  - Mould line under boots (Black gloss paint)
+  - Mainly four different skirts can be found on Klaatu. The materials differ on the skirt itself as well as on the sewn-on belt.
+  - On the left we have two version of the “fluffy” skirt. One comes with a leathery belt and the other one has a simple fabric sewn on. Both of these should be the earlier versions, because none of them can be found on MIM cards. In general most MIM cards contain LL Klaatus combined with Kenner skirts.
+  - Next up are the two versions with the “flat fur”. These can be also found with a fabric sewn on or with kind of leathery material “added”. This “material” is often very tacky and seems to shrink in time. I really could bet that the belt on my example was once completely covered with that tacky stuff and now you can see the fabric through at some points. Interestingly exactly this version can be found on some PBP and some MIM cards, but is at the same time the most rare skirt variant. It’s extremely hard to find one with that leathery tacky stuff still on. That’s why we could assume that the other version is just a damaged version where the leathery layer has totally gone. In my case the two examples are also very different in color regarding the flat fur skirt itself what makes it difficult to say for sure if they were once the same or if LL really produced those with and without leathery layer.
+  - It can be noted that there is also fluffy skirts (version 2) with that kind of leathery belt known. It’s all very confusing, but I think future investigations will show if there is five, four or only three versions existing.
+
+
+Sources:
+https://www.variantvillain.com/characters/rotj/klaatu/

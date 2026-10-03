@@ -1,0 +1,49 @@
+Accessory Name: Endor Blaster
+Aliases: Endor Blaster
+Category: Accessory
+
+Overview:
+Endor Blaster is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1: Unitoy
+  - M2: Universal Manufacturers
+  - M3: Smile
+  - M4: Kader
+  - The Endor Blaster was usually released with the following combinations of colour to figure:
+    - Grey/Grey-Blue Endor Blaster:
+      - AT-ST Driver
+      - Princess Leia Organa (Combat Poncho)
+      - B-Wing Pilot
+    - Black Endor Blaster:
+      - A-Wing Pilot
+      - Imperial Gunner
+  - There are 4 main mould variations. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the steel mould used.
+- UNITOY
+  - M1 was produced by UNITOY in Hong Kong and can come in two main colors:
+    - bluesih grey
+    - grey
+- UNIVERSAL MANUFACTURERS
+  - M2 was produced by UNIVERSAL MANUFACTURERS in TAIWAN and can come in three main colors:
+    - dark grey
+    - very dark grey
+    - very dark bluesih grey
+- SMILE
+  - M3 was produced by SMILE in Hong Kong and can come in two main colors:
+    - blue
+    - black
+- KADER
+  - M4 was produced by KADER in Hong Kong and can come in three main colors:
+    - grey-blue
+    - blue-grey
+    - black
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/endor-blaster/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

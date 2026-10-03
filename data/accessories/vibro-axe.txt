@@ -1,0 +1,32 @@
+Accessory Name: Vibro Axe
+Aliases: Vibro Axe
+Category: Accessory
+
+Overview:
+Vibro Axe is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1:  Unitoy
+  - M2: Smile
+  - M3: Lili Ledy
+  - M1: Unitoy
+  - Lighter grey plastic
+  - Deep EPM on the grip halfway up the handle
+  - Mid grey plastic
+  - There’s two alternating versions of this axe, with the EPMs found mirrored on either side of the axe. These were shot in different cavities of the same steel tooling.
+  - A unique mould, roughly based on the Smile HK factory sculpt.
+  - Found commonly lettered “A” or “B”, but can also be found with a blank area instead of a letter.
+  - Notably thicker axe blade than the Kenner version.
+  - Found commonly in a range of darker grey colours. A distinctly lighter grey version was also produced.
+- Bootlegs
+  - Coming soon
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/vibro-axe/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

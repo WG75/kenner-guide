@@ -1,0 +1,64 @@
+Figure Name: Yoda
+Aliases: Yoda
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 4 of 4
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-2.txt under Figure Name: Yoda. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- F1 & F2 HK/ F1 NCOO
+  - POCH 1980 HONG KONG
+  - Above you can see following variants (left to right):
+    - Poch “Green head” Hong Kong COO
+  - Assembled from parts sent from the Kader and Unitoy factories in Hong Kong and sent to PBP in Spain during their early “Poch” era. The paint in this example is Spanish, but the parts used can sometimes be pre-painted by Kenner.
+  - Poch “Apple head” Hong Kong COO
+  - Assembled from parts sent from the Unitoy factory in Hong Kong and sent to PBP in Spain during their early “Poch” era. The paint in this example is Spanish, but the parts used can sometimes be pre-painted by Kenner.
+  - Poch “Grey head” Hong Kong COO
+  - Assembled from parts sent from the Kader factory in Hong Kong and sent to PBP in Spain during their early “Poch” era. The paint in this example is Spanish, but parts used can sometimes be pre-painted by Kenner.
+  - Lili Ledy (PBP) “Regreso” NO COO
+  - This figure was produced in Mexico by Lili Ledy and exported to Spain for PBP to distribute on their 65bk cards. Vibrant, darker-green head with a glossy sheen. Commonly has tacky paint on the limbs.
+  - The Poch Yoda figure has been confirmed on the Imperio 37/41, 45/47, PBP 65 and Trilogo cardbacks.
+  - Poch figures are a combination of Asian produced Unitoy or Kader parts which were exported to Spain in the late ESB era. Most parts were painted in Spain, but occasionally figures can be found with HK paint on some of the parts, which must have been applied prior to export. In many cases, Poch figures are homogeneous to their source, but mixed up figures do exist.
+  - To identify if a Yoda is Poch or Kenner. As with all Poch figures, the best way to confirm what you have is be familiar enough with the Kenner figure beforehand. The unique light-green hands and feet are the first tell, but looking at the naked figure, there is often common melt marks, heavy plastic welding,  mixed-up factory parts, different paint across the limbs, plastic spotting, poor articulation or paint overspray are all signs that can be used to help confirm a figures origins.
+  - SNAKE: M1 Kader soft plastic, light brown w/EPM or M2 Unitoy hard plastic, brown
+  - CANE: M1 Kader soft plastic, mid brown w/EPM or M2 Unitoy hard plastic, dark brown
+  - BELT: M1 Kader hard plastic, mid brown w/EPM or M2 Unitoy hard plastic, grey brown
+  - CLOAK: Kader light brown ribbed fabric or Unitoy fluffy fabric
+- Smile (HK)
+  - SMILE 1980 HONG KONG/MACAU
+  - Above you can see following variants (left to right):
+    - “Disco Foot” Hong Kong COO
+  - One of the first Smile produced Yoda’s features legs with elevated soles to the feet. The “Disco Foot” has been confirmed on a 32bk MOC and was phased out for the simpler (in terms of the tool setup) flat foot variation (See below for more info). Early Smile Yoda’s can also have the regular flat foot leg mixed with the Disco foot mould. Darker round eyes and light green limbs.
+  - “Light green” Hong Kong COO
+  - The standard early Smile release with light or darker orange eyes, with a light green head and limbs.
+  - “Dark green” Hong Kong COO
+  - The standard later Smile figure with slightly lighter green limbs, black Pacman eyes and a dark green head.
+  - The standard later Smile figure with mid green limbs, black/dark brown Pacman eyes and a dark green head.
+  - The standard later Smile figure with slightly lighter green limbs, dark brown Pacman eyes and a dark green head. The shrunken, rigid green snake is believed to have turned up in a batch of Palitoy overstock. There has been some debate whether this true green version was intentionally green from the factory, degraded brown plastic or altogether a fake. Moulding detailing points to a genuine accessory, though we can’t offer any more about the colour without cutting into the plastic (which won’t happen here). The later Smile Yoda’s had cloaks with a pinker hue to them as shown on this figure.
+  - Smile Yoda debuted on a 32b cardback. The earliest Smile Yoda’s featured orange snakes. The early figures had a tooling adjustment to the sole of the foot. This may have been to help the figure stand a little better or there may have even been a problem with the tool itself.
+  - "Disco" vs regular mould
+  - Tooling comparison cross-section
+  - O n the 41d card, the darker green cosmetic change to Yoda’s head, darker cane and the brown snake appears. Smile Yoda continued to the 79bk, Trilogo and has also been found in the “Made in Macau” baggie.
+  - ACCESSORIES (early  Smile)
+  - SNAKE: M3 Smile hard plastic, orange (gate scar midway on body)
+  - CANE: M3 Smile hard plastic, light brown (gate scar on base of cane)
+  - BELT: M3 Smile thin, soft plastic, yellow brown w/double pin clasp (multiple pin types)
+  - CLOAK: Smile light brown
+  - ACCESSORIES (late Smile)
+  - SNAKE: M3 Smile soft plastic, brown (gate scar midway on body)
+  - CANE: M3 Smile hard plastic, dark brown (gate scar on base of cane)
+  - CLOAK: Smile light brown or pinkish semi-ribbed fabric
+- Top Toys (NO COO)
+  - TOP TOYS No COO
+  - This licensed figure from Argentina was cast from the Kenner production figure and doesn’t feature a COO. The overall size is 10% smaller and the quality is very poor, akin to bootlegs of the time. These feature excess flashing on the components, uneven paint application, poor joint articulation and are produced in sub-standard plastics. This all helps to account for the rarity of the figure.
+  - SNAKE: M4 Top Toys soft orange brown
+  - CANE: M4 Top Toys rigid dark brown
+  - BELT: M4 Top Toys rigid dark brown. Fragile and extremely prone to fracturing
+  - CLOAK: Top Toys fluffy off-white or light brown fabric
+
+
+Sources:
+https://www.variantvillain.com/characters/esb/yoda/

@@ -1,0 +1,22 @@
+Accessory Name: Leia Boushh Rifle
+Aliases: Leia Boushh Rifle
+Category: Accessory
+
+Overview:
+Leia Boushh Rifle is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1a: Smile
+  - M1b: Smile Macau
+  - M2: Unitoy / Lili Ledy
+  - M3: Universal Manufacturers
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/leia-boushh-rifle/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

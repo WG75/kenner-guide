@@ -1,0 +1,30 @@
+Accessory Name: Squid Head Belt
+Aliases: Squid Head Belt
+Category: Accessory
+
+Overview:
+Squid Head Belt is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - Kader
+  - Smile
+  - Lili Ledy/MIM
+  - Belts are the one section where I had to make some assumptions. The moulds between Smile and Kader figures seem identical when looking through MOCs, so there’s no way I can be certain this part of the guide is 100% correct.
+  - I did notice a pattern however in my own loose collection and from studying them elsewhere over time. More often than not, Kader Squid Heads were paired with belts that had an EPM on the rear tabs.
+  - Smile belts are cast in a slightly lighter plastic compared to the Kader counterpart.*. Having said that, there is one Kader EPM version that is also shot in a lighter silver, so this isn’t a sure-fire method of identification either.
+  - Belts on Kader & Smile produced MOCSs are all orientated with the horizontal stripes to the bottom and the “dots” at the top. Lili Ledy packed Squid figures onto cards with the belts “upside down” on the MIM figures and in both directions on their standard line.
+  - Smile: Rough moulded texture on the front. Cast in a more rigid plastic.
+  - Kader: Rough moulded texture on the front. Cast in a more rigid plastic. Darker “warm” coloured plastic*. EPM on interlocking tab.
+  - Lili Ledy/MIM: Smooth surface. Soft flexible plastic. Small “LL” stamped on back of interlocking tab.
+- Bootlegs
+  - Coming soon
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/squid-head-belt/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

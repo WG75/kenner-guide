@@ -1,0 +1,39 @@
+Figure Name: Luke Skywalker (Jedi Knight Outfit)
+Aliases: Luke Skywalker (Jedi Knight Outfit); Jedi Knight Outfit; Jedi Luke
+Packaging: Return of the Jedi
+Category: Figure
+Part: 4 of 4
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-1.txt under Figure Name: Luke Skywalker (Jedi Knight Outfit). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- TOP TOYS
+  - TOP TOYS No date or COO
+  - No COO. Green cloak w/brown stitching
+  - No COO. Brown cloak w/green stitching
+  - No COO. Green cloak w/brown stitching and vertical ribbing
+  - Instead of using Kenner tooling, Top Toys made a cast from the Kenner figure to create their tooling. Top Toys figures were a licensed product, however the result is a poor quality figure with many imperfections including bad articulation, excess flashing and low quality control in every department. Due to the near bootleg quality of the Top Toys figure, it is impossible to identify which Kenner figure was cast to create the new tooling.
+  - The Top Toys Luke Jedi figure is moulded in a highly glossy plastic. The paint application most closely resembles the later Taiwan version with the pale face, but with the final coat of a darker tanned “wash” that easily wears off. The figure is shorter in height as a result of being cast from a production Kenner figure. EPMs are found on the limbs which Kenner went to the trouble of avoiding visibly (in most cases). There are no peg holes on the soles of the feet.
+  - Top Toys created their accessory moulds in house and they only passingly resemble the Kenner versions. The direction of the cloak ribbing changes as edge of roll sections would be used to avoid wasting fabric. I personally don’t see the shorter capes or ribbing directions as a variation, however that’s down to each collector to decide for themselves.
+  - M5 Top Toys green handheld saber
+  - M4 Top Toys brown Palace blaster
+  - Top Toys small hood, ribbed fabric w/green or brown stitching
+- Credits
+  - I’d like to thank the following wonderful people. Bob Martinazzi, Craig G.Thomas, Thomas Gill, Thomas John, Uli, James Gurney, Jonathan Freeman, Ozio and Wolff Lipinsky, whose research going back to the early 2000s has made this guide possible.
+- Notes from the page with the photo credit name removed
+  - You could assume there should be the same colour variants on the Luke Jedi cape, because of the same fabric used like for the Squid Head capes, but besides the greenish one the colours are totally different.
+  - On Luke Jedi we have mainly three colours used for the cape. The greenish one seems to be the exact same material used also for the Squid Head (see above). The reddish or more pinkish one, is the one most people associate with a LL Luke Jedi figure. On those I often noticed a very obvious greyish stitch to connect the cape on the throat. Last one is a greyish, more brownish cape.
+  - The reddish one seems to be the only one that is cut a bit longer. In fact all three are much shorter then Kenner capes, but it also seems like the cut is always a bit different to the reddish ones.
+  - I pictured mine with dark-blue and greenish-grey blasters, which is in fact wrong (as I know now). There is not one carded example known with the dark-blue blaster. These belong only to the AT-ST Driver.
+  - Besides two slightly different coos there can only be one more difference noted: The facial details can be thin or thick sprayed. It looks like an accidental mistake while using the spray mask, but I have to say they are all fat or thin and they are all equal fat or equal thin. I tend to believe that something was changed (spray mask?) at some point while producing.
+  - You could assume there should be the same colour variants on the Luke Jedi cape, because of the same fabric used like for the Squid Head capes, but besides the greenish one the colours are totally different.
+  - On Luke Jedi we have mainly three colours used for the cape. The greenish one seems to be the exact same material used also for the Squid Head (see above). The reddish or more pinkish one, is the one most people associate with a LL Luke Jedi figure. On those I often noticed a very obvious greyish stitch to connect the cape on the throat. Last one is a greyish, more brownish cape.
+  - The reddish one seems to be the only one that is cut a bit longer. In fact all three are much shorter then Kenner capes, but it also seems like the cut is always a bit different to the reddish ones.
+  - I pictured mine with dark-blue and greenish-grey blasters, which is in fact wrong (as I know now). There is not one carded example known with the dark-blue blaster. These belong only to the AT-ST Driver.
+  - Besides two slightly different coos there can only be one more difference noted: The facial details can be thin or thick sprayed. It looks like an accidental mistake while using the spray mask, but I have to say they are all fat or thin and they are all equal fat or equal thin. I tend to believe that something was changed (spray mask?) at some point while producing.
+
+
+Sources:
+https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/

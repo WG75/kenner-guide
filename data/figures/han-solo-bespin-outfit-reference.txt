@@ -1,0 +1,46 @@
+Figure Name: Han Solo (Bespin Outfit)
+Aliases: Han Solo (Bespin Outfit); Bespin Outfit
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+Han Solo (Bespin Outfit) is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: unknown - not established in the reference workbook
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-3.txt under Figure Name: Han Solo (Bespin Outfit). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Unitoy/ Lili Ledy Retorno
+  - II: Kader/ Lili Ledy Regreso
+  - III: Smile
+  - POCH GUIDE
+  - LILI LEDY GUIDE
+  - BESPIN BLASTER
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- LILI LEDY
+  - The variants on Han Bespin I nearly like most. This is not the first time the Lili Ledy factory has done even better then other factories in the world.
+  - Pictured above are the two main variants. There are two different Coos known: No Coo and MIHK. Whilst the No Coo version with dark brown pants, over painted ears and black hair is very well known, the MIHK version is pretty much unknown. The legs are made out of a lighter brown plastic and sometimes the belt buckle at the back is also painted. This is really an improvement compared to other produced Han Bespin figures. The spray mask used for the belt buckle at the back differs totally to the one used for the front torso. So this one is unique and was made exactly for that belt buckle at the back.
+  - This was sadly changed very soon, so that most MIHK LL Han Bespins lack this wonderful feature. The MIHK version must have been a very early version and is especially with both painted belt buckles extremely rare.
+  - I accidentally didn’t use the correct weapons these came with. The MIHK one came with a black Bespin Blaster which could of course be mixed up. I’m not sure if any of these Han Bespins ever were released with a black blaster, but on the other hand there were even heads mixed up in LL factory (see C-3PO ).
+- Notes from the page with the photo credit name removed
+  - Shown in middle is the assumed variant of the Poch Han Bespin. It is compared to its COO counterpart from Kenner (left) and Lili Ledy (right). The main characteristics of this figure are the pale hands and the slightly reddish hair. The picture from the carded one is not clear enough to confirm this figure, but it I think it looks very similar so far.
+  - To the right you can see a comparison from the hair colours on Kenner and Poch. The thinner sprayed areas on the Poch can look quite different and more reddish. (also see i.e.: Lobot)
+  - The melt marks on the back are typical signs of figures made in Spain in this early period. A second one was found recently and I’m waiting for pictures now. To the left you can already see an auction picture of that Han Bespin.
+  - Shown above is the widely sprayed belt buckle of this variant. The shirt is sprayed in a similar way. The carded example sadly doesn’t show that characteristics. On the other hand the second Han Bespin pictured here also has this typical sprayed belt-buckle.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/han-solo-bespin-outfit/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

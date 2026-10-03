@@ -1,0 +1,53 @@
+Accessory Name: Trench Coat (Han Endor)
+Aliases: Trench Coat (Han Endor); Han Endor
+Category: Accessory
+
+Overview:
+Trench Coat (Han Endor) is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MI:  Smile
+  - M2: Kader
+  - M3: Smile
+  - M4: Kader
+  - M5: Lili Ledy
+  - The Trench Coat was usually released with the following combinations of colour to figure:
+    - Trench Coat:
+      - Han Solo (in Trench Coat)
+  - There are 5 main variations. Subvariants do exist and may not all be documented. As a result of the fact that these were produced from a fabric bought from a third party involved, the subvariants may vary heavily depending on the supplier.
+  - On the example above you can see a mounted pic of 13 capes with overlaying camouflage print. It shows that no matter if Kader or Smile did produce them, they all had the same print coming from a third party supplier. The repeating pattern from the print can’t be much bigger then the pic and is therefore limited.
+- SMILE
+  - M1 was produced by SMILE in Hong Kong. The following colours are known:
+    - yellowish grey (M1b)
+    - light grey with dark brown (M1a)
+    - light grey with lighter brown (M1b)
+    - blueish grey (M1b)
+- KADER
+  - M2 was produced by KADER in Hong Kong. The following colours are known:
+    - brownish grey
+    - yellowish light grey
+    - light grey
+- SMILE
+  - M3 was produced by Smile in Hong Kong. The following colours are known:
+    - grey-brown (M3a) dark print
+    - grey-brown (M3c) light print
+    - yellowish light grey (M3b)
+    - light grey (M3b)
+    - grey (M3b)
+- KADER
+  - M4 was produced by KADER in Hong Kong. The following colours are known:
+    - brownish grey
+    - blueish grey
+- LILI LEDY
+  - M5 was produced by LILI LEDY in Mexico. The following colours are known:
+    - grey-brown
+    - grey
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/han-endor-trench-coat/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

@@ -1,0 +1,52 @@
+Figure Name: Yoda
+Aliases: Yoda
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 1 of 4
+
+Overview:
+Yoda is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-2.txt under Figure Name: Yoda. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- Not a necessary inclusion, but a minor batch variation on the standard Kader figure, which is confirmed on the Palitoy 30 & 41bk cards. Features a mid-green head, brown-grey eyes and mid green limbs . This combination features a mix of Kader accessories including a degraded greenish EPM snake, hard EPM belt, dark EPM cane and lighter brown cape.
+- In Mexico, Yoda was released on three different cardbacks: Imperio Contraataca, Retorno and Regreso. The Regreso Yoda was also sold to the US market on the Kenner 65 back Made in Mexico cards.
+- The earliest Imperio cardback contained an imported Kenner figure. This detail is debated among collectors, as Mexico at the time had laws in place to encourage sales of goods made from within the country. The fact this Imperio figure and his accessories are a perfect match to the Smile factory Hong Kong made Yoda means we know these figures were brought into Mexico somehow. Aside from an interview with an elderly LL factory worker, to date there’s  been no more reliable evidence provided to support the theory this Yoda was locally produced. Poch/PBP Spain in the same period, and with a matching strategy, imported HK figures to test the market on their 31 back Imperio Poch era cards.
+- The Regreso Yoda was also exported directly to both the US on the 65 back Kenner “Made in Mexico” cards and also to Spain and found on the 65 back PBP card.
+- Matt green head with dark brown Pacman shaped eyes and mid green limbs. Previously labelled the “POTF” version.
+- “Meccano” No COO (French Trilogo exclusive)
+- The first cardback containing the No COO Kader China Yoda was 65c with Emperor offer. This figure continued through the 77 and 92 POTF cardbacks.
+- This figure was produced in Mexico by Lili Ledy and exported to Spain for PBP to distribute on their 65bk cards. Vibrant, darker-green head with a glossy sheen. Commonly has tacky paint on the limbs.
+- The Poch Yoda figure has been confirmed on the Imperio 37/41, 45/47, PBP 65 and Trilogo cardbacks.
+- One of the first Smile produced Yoda’s features legs with elevated soles to the feet. The “Disco Foot” has been confirmed on a 32bk MOC and was phased out for the simpler (in terms of the tool setup) flat foot variation (See below for more info). Early Smile Yoda’s can also have the regular flat foot leg mixed with the Disco foot mould. Darker round eyes and light green limbs.
+- Smile Yoda debuted on a 32b cardback. The earliest Smile Yoda’s featured orange snakes. The early figures had a tooling adjustment to the sole of the foot. This may have been to help the figure stand a little better or there may have even been a problem with the tool itself.
+- O n the 41d card, the darker green cosmetic change to Yoda’s head, darker cane and the brown snake appears. Smile Yoda continued to the 79bk, Trilogo and has also been found in the “Made in Macau” baggie.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Kader HK / Lili Ledy
+  - II: Unitoy / Kader China /
+  - Poch/ PBP
+  - III: Smile
+  - IV:Top Toys
+  - YODA CARDBACK GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+
+Continued in the next part.
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/yoda/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

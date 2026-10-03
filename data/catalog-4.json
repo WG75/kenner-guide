@@ -1,0 +1,195 @@
+{
+  "name": "VF-CB catalog",
+  "aliases": [
+    "catalog"
+  ],
+  "part": "4 of 6",
+  "sources": [
+    "https://www.variantvillain.com/characters/sw/",
+    "https://www.variantvillain.com/accessory-guide/"
+  ],
+  "figures": [
+    {
+      "name": "Paploo",
+      "era": "Return of the Jedi",
+      "file": "figures/paploo-reference.txt",
+      "url": "https://www.variantvillain.com/characters/rotj/paploo/",
+      "status": "existing"
+    },
+    {
+      "name": "Luke Skywalker (in Battle Poncho)",
+      "era": "Power of the Force",
+      "file": "figures/luke-skywalker-in-battle-poncho-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/luke-skywalker-in-battle-poncho/",
+      "status": "existing"
+    },
+    {
+      "name": "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+      "era": "Power of the Force",
+      "file": "figures/artoo-detoo-r2-d2-with-pop-up-lightsaber-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/artoo-detoo-r2-d2-with-pop-up-lightsaber/",
+      "status": "existing"
+    },
+    {
+      "name": "Romba",
+      "era": "Power of the Force",
+      "file": "figures/romba-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/romba/",
+      "status": "existing"
+    },
+    {
+      "name": "Amanaman",
+      "era": "Power of the Force",
+      "file": "figures/amanaman-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/amanaman/",
+      "status": "existing"
+    },
+    {
+      "name": "Barada",
+      "era": "Power of the Force",
+      "file": "figures/barada-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/barada/",
+      "status": "existing"
+    },
+    {
+      "name": "Imperial Gunner",
+      "era": "Power of the Force",
+      "file": "figures/imperial-gunner-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/imperial-gunner/",
+      "status": "existing"
+    },
+    {
+      "name": "Han Solo (in Carbonite Chamber)",
+      "era": "Power of the Force",
+      "file": "figures/han-solo-in-carbonite-chamber-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/han-solo-in-carbonite-chamber/",
+      "status": "existing"
+    },
+    {
+      "name": "Luke Skywalker (Imperial Stormtrooper Outfit)",
+      "era": "Power of the Force",
+      "file": "figures/luke-skywalker-imperial-stormtrooper-outfit-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/luke-skywalker-imperial-stormtrooper-outfit/",
+      "status": "existing"
+    },
+    {
+      "name": "Anakin Skywalker",
+      "era": "Power of the Force",
+      "file": "figures/anakin-skywalker-2-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/anakin-skywalker-2/",
+      "status": "existing"
+    },
+    {
+      "name": "EV-9D9",
+      "era": "Power of the Force",
+      "file": "figures/ev-9d9-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/ev-9d9/",
+      "status": "existing"
+    },
+    {
+      "name": "Warok",
+      "era": "Power of the Force",
+      "file": "figures/warok-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/warok/",
+      "status": "existing"
+    },
+    {
+      "name": "Lando Calrissian (General Pilot)",
+      "era": "Power of the Force",
+      "file": "figures/lando-calrissian-general-pilot-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/lando-calrissian-general-pilot/",
+      "status": "existing"
+    },
+    {
+      "name": "A-Wing Pilot",
+      "era": "Power of the Force",
+      "file": "figures/a-wing-pilot-2-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/a-wing-pilot-2/",
+      "status": "existing"
+    },
+    {
+      "name": "Imperial Dignitary",
+      "era": "Power of the Force",
+      "file": "figures/imperial-dignitary-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/imperial-dignitary/",
+      "status": "existing"
+    },
+    {
+      "name": "Yak Face",
+      "era": "Power of the Force",
+      "file": "figures/yak-face-reference.txt",
+      "url": "https://www.variantvillain.com/characters/potf/yak-face/",
+      "status": "existing"
+    },
+    {
+      "name": "Droids C-3PO",
+      "era": "Droids and Ewoks",
+      "file": "figures/droids-c-3po-reference.txt",
+      "url": "https://www.variantvillain.com/characters/droids/droids-c-3po/",
+      "status": "existing"
+    },
+    {
+      "name": "Droids R2-D2",
+      "era": "Droids and Ewoks",
+      "file": "figures/droids-r2-d2-reference.txt",
+      "url": "https://www.variantvillain.com/characters/droids/droids-r2-d2/",
+      "status": "existing"
+    },
+    {
+      "name": "Wicket W.Warrick (Ewoks)",
+      "era": "Droids and Ewoks",
+      "file": "figures/wicket-w-warrick-reference.txt",
+      "url": "https://www.variantvillain.com/characters/droids/wicket-w-warrick/",
+      "status": "existing"
+    },
+    {
+      "name": "Logray (Ewoks)",
+      "era": "Droids and Ewoks",
+      "file": "figures/logray-ewoks-reference.txt",
+      "url": "https://www.variantvillain.com/characters/droids/logray-ewoks/",
+      "status": "existing"
+    },
+    {
+      "name": "King Gorneesh",
+      "era": "Droids and Ewoks",
+      "file": "figures/king-gorneesh-reference.txt",
+      "url": "https://www.variantvillain.com/characters/droids/king-gorneesh/",
+      "status": "existing"
+    },
+    {
+      "name": "Urgah Lady Gorneesh",
+      "era": "Droids and Ewoks",
+      "file": "figures/urgah-lady-gorneesh-reference.txt",
+      "url": "https://www.variantvillain.com/characters/droids/urgah-lady-gorneesh/",
+      "status": "existing"
+    },
+    {
+      "name": "Dulok Scout",
+      "era": "Droids and Ewoks",
+      "file": "figures/dulok-scout-reference.txt",
+      "url": "https://www.variantvillain.com/characters/droids/dulok-scout/",
+      "status": "existing"
+    },
+    {
+      "name": "Dulok Shaman",
+      "era": "Droids and Ewoks",
+      "file": "figures/dulok-shaman-reference.txt",
+      "url": "https://www.variantvillain.com/characters/droids/dulok-shaman/",
+      "status": "existing"
+    }
+  ],
+  "accessories": [
+    {
+      "name": "Pop-Up Saber",
+      "file": "accessories/pop-up-saber.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/pop-up-saber/",
+      "status": "created"
+    },
+    {
+      "name": "Double-Telescoping Lightsaber",
+      "file": "accessories/double-telescoping-lightsaber.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
+      "status": "existing"
+    }
+  ]
+}

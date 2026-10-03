@@ -1,0 +1,136 @@
+{
+  "id": "jawa.figure",
+  "type": "figure",
+  "entity": "jawa",
+  "name": "Jawa Figure Identification",
+  "start_step": "intro",
+  "part": "2 of 2",
+  "aliases": [
+    "Jawa"
+  ],
+  "sources": [
+    "https://www.variantvillain.com/characters/sw/jawa/"
+  ],
+  "steps": {
+    "hong_kong_result": {
+      "type": "question",
+      "content": "Hong Kong marked Jawa. Good.\n\nCompare the COO alignment against the main Variant Villain Jawa guide.\n\nFull Jawa guide:\nhttps://www.variantvillain.com/characters/jawa/\n\nIf you can match your figure to one of the reference images, please reply with:",
+      "images": [
+        {
+          "title": "Jawa Kader M1",
+          "url": "/images/jawa_figure_kader_M1.png",
+          "caption": "Kader M1 reference."
+        },
+        {
+          "title": "Jawa Kader M2",
+          "url": "/images/jawa_figure_kader_M2.png",
+          "caption": "Kader M2 reference."
+        },
+        {
+          "title": "Jawa Unitoy M3",
+          "url": "/images/jawa_figure_unitoy_M3.png",
+          "caption": "Unitoy M3 reference."
+        },
+        {
+          "title": "Jawa Unitoy / Lili Ledy M4",
+          "url": "/images/jawa_figure_unitoy_lili-ledy_M4.png",
+          "caption": "Unitoy / Lili Ledy M4 reference."
+        }
+      ],
+      "options": [
+        {
+          "value": "1",
+          "label": "Kader M1",
+          "aliases": [
+            "m1",
+            "kader m1"
+          ],
+          "next": "offer_blaster"
+        },
+        {
+          "value": "2",
+          "label": "Kader M2",
+          "aliases": [
+            "m2",
+            "kader m2"
+          ],
+          "next": "offer_blaster"
+        },
+        {
+          "value": "3",
+          "label": "Unitoy M3",
+          "aliases": [
+            "m3",
+            "unitoy m3"
+          ],
+          "next": "offer_blaster"
+        },
+        {
+          "value": "4",
+          "label": "Unitoy / Lili Ledy M4",
+          "aliases": [
+            "m4",
+            "unitoy",
+            "lili ledy",
+            "unitoy lili ledy"
+          ],
+          "next": "offer_blaster"
+        }
+      ]
+    },
+    "non_hong_kong_result": {
+      "type": "message",
+      "content": "If it does not show Hong Kong, you may be looking at a no COO or altered COO Jawa variant.\n\nCompare carefully against the full Variant Villain Jawa guide:\nhttps://www.variantvillain.com/characters/jawa/\n\nFor now, treat this as needing visual reference comparison rather than a confirmed ID.",
+      "next": "offer_blaster"
+    },
+    "unclear_coo_result": {
+      "type": "message",
+      "content": "No problem. COO marks can be difficult to read, especially on worn figures.\n\nBest next step: use strong light and compare both legs against the Variant Villain reference images:\nhttps://www.variantvillain.com/characters/jawa/",
+      "next": "offer_blaster"
+    },
+    "offer_blaster": {
+      "type": "question",
+      "content": "Do you also want help checking the Jawa blaster?\n\nReply with:",
+      "options": [
+        {
+          "value": "1",
+          "label": "Yes, help me identify the blaster",
+          "aliases": [
+            "yes",
+            "y",
+            "blaster",
+            "check blaster"
+          ],
+          "next": "route_blaster"
+        },
+        {
+          "value": "2",
+          "label": "No, I'm done for now",
+          "aliases": [
+            "no",
+            "n",
+            "done"
+          ],
+          "next": "done"
+        }
+      ]
+    },
+    "route_blaster": {
+      "type": "route",
+      "target": "jawa.blaster"
+    },
+    "route_vinyl_cape": {
+      "type": "route",
+      "target": "jawa.vinyl-cape"
+    },
+    "route_cloth_cloak": {
+      "type": "route",
+      "target": "jawa.cloth-cloak"
+    },
+    "done": {
+      "type": "message",
+      "content": "No problem. Let me know if you want help checking another vintage Star Wars figure or accessory.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,53 @@
+Accessory Name: Bib Fortuna Cloak
+Aliases: Bib Fortuna Cloak
+Category: Accessory
+
+Overview:
+Bib Fortuna Cloak is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MI: Smile
+  - M2: Kader
+  - M3: Lili Ledy
+  - M4: Universal Manufacturers
+  - The Bib Fortuna Cloak was released with the following combinations of colour to figure:
+    - Grey Cloak:
+      - Bib Fortuna
+      - Bib Fortuna (Lili Ledy)
+    - Burgundy Cloak: unknown (the page does not list them in text).
+  - There are 4 main fabrics used in different shades to it or to the lining on the Bib Fortuna Cloak. Mainly 2 weave techniques were used: twill and plain weave.
+- SMILE
+  - M1 was produced by SMILE in Hong Kong. The following lining colours are known:
+    - reddish olive
+    - olive
+    - yellowish olive
+- KADER
+  - M2 was produced by KADER in Hong Kong. The following lining colours are known:
+    - brownish grey
+- LILI LEDY
+  - M3 was produced by LILI LEDY in Mexico.
+  - The following lining colours are known:
+    - burgundy (not pictured)
+    - dark white
+    - bright white
+    - The following fabric colours are known:
+      - grey
+      - greenish grey
+      - brown (probably discoloured)
+- UNIVERSAL MANUFACTURERS
+  - M4 was produced by UNIVERSAL MANUFACTURERS  in TAIWAN .
+    - The following combinations of lining to fabric colours are known:
+      - blueish green / dark grey
+      - green / grey
+      - olive / brown
+- Reproductions
+  - More info to come
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/bib-fortuna-cloak/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

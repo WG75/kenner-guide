@@ -1,0 +1,40 @@
+Figure Name: R2-D2 (Sensorscope)
+Aliases: R2-D2 (Sensorscope); Sensorscope; Sensorscope R2-D2
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 2 of 2
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 41/45/47/48-back; some continued onto ROTJ/Trilogo. [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-5.txt under Figure Name: R2-D2 (Sensorscope). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Unitoy
+  - As with the Solid Dome R2, the reason for the existence of the UNITOY Family 5 torso is a mystery. The other F1 mould worked perfectly throughout the run. F5 could just be a spare mould that was picked up by chance and ended up randomly going into production from time to time.
+  - There’s an additional Family 6 mould  family, nicknamed the “12 o’clock No COO” which continues to elude me on a MOC or baggie, so I can’t add any concrete information about it. I believe this is a very late POTF era torso mould, as no country of origin was ever stamped alongside the date. Torso aside, this figure has the same sticker, parts and paint style as it’s Unitoy siblings from the era.
+  - Above you can see following variants (left to right):
+    - F5 Unitoy R2-D2 Sensorscope MIHK
+    - Made in Hong Kong COO. Dark legs, small eye, dull dome.
+    - F6 Unitoy R2-D2 Sensorscope “12 o’clock” No COO
+    - Dark legs, small eye, dull dome.
+- Sticker Guide:
+  - The only relevant pictures for R2-D2 Sensorscope figure is the Unitoy & Smile examples. The sticker, screw & moulding guides are a general overview of all R2 figures.
+  - The standard Sensorscope R2-D2 sticker is a 3 spot-colour print with blue, black and grey.
+  - For the UNITOY Sensorscope figure, the black separation on the sticker is altered to feature a smaller “wedge” design. Similar to R5-D4, some solid dome R2’s were also shipped with this small wedge sticker in the transition period between the two versions of R2.
+  - The SMILE R2-D2 sticker has a darker “wedge”. The grey progressively becomes darker from their initial dark blue dome figure through to the Pop-up version. There’s a subtle revision of the sticker artwork in the Jedi era.
+  - REPRO stickers have been in circulation for decades now, and the most recent versions have even been designed to artificially mimic the yellowing effect of the ageing process. In the making of this guide, I saw dozens of figures sold on eBay as vintage, priced as vintage, but in actuality had reproduction stickers applied purely to dupe unsuspecting buyers.
+- SENSORSCOPE Guide:
+  - The UNITOY Sensorscope is shot in a mid-blue and I’ve found two minor colour differences in the plastic. The same Sensorscope type features through all Unitoy mould families F1, F5 & F6.
+  - The SMILE Sensorscope features an EPM on the side and is also found with two minor blue colour variations.
+- SCULPT & SCREW DETAILS:
+  - The only relevant pictures for R2-D2 Sensorscope figure is the Unitoy & Smile examples. The sticker, screw & moulding guides are a general overview of all R2 figures.
+  - With all figures, each part and accessory is specific to a factory. This is no different with R2-D2, as every part, screw and sticker used to produce the figure also being specific to a particular vendor.
+  - EPMs and gate scars are the most effective way of confirming the origins of R2 parts. For more information about what these terms mean, please refer to my 101 REFERENCE GUIDE .
+  - Parts can easily be swapped around and  for decades this has been done, and done incorrectly. If you have an R2 which has anything different to what’s shown here, I’d take a look at the other parts on the figure using my sculpt detail guide to see if the R2 has been tampered with. These Astromech figures have been messed around for decades by sellers/collectors looking for the cleanest example and indifferent/ignorant to the fact they’ve created a Frankenstein figure.
+  - There will be an additional section on the Sensorscope coming soon.
+- CREDITS:
+  - Thank you one and all!
+
+
+Sources:
+https://www.variantvillain.com/characters/esb/r2-d2-sensorscope/

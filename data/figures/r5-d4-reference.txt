@@ -1,0 +1,66 @@
+Figure Name: R5-D4
+Aliases: R5-D4
+Packaging: Star Wars
+Category: Figure
+Part: 1 of 4
+
+Overview:
+R5-D4 is a vintage Kenner Star Wars figure from the Star Wars line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 20/21-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-5.txt under Figure Name: R5-D4. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- As with the majority of the early characters, R5 was produced at both Kader and Unitoy factories in Hong Kong. The figure debuted on a 20bk card with Kader and Unitoy following soon behind on the 21bk. Kader is responsible for most of the ESB and Jedi output, before Unitoy returns to production with the F1 No COO figure on the Trilogo cards. Kader, presumably the Macau factory (known as Qualidux), also has a late batch of 78 HK & No COO figures produced which found their way to French Trilogo cards and baggies.
+- The Unitoy figure debuted on the 21bk Star Wars era MOC. This also shows up sporadically on mid-ESB era cardbacks from both Unitoy and Kader where it has been repackaged (smooth bubble seal). Unitoy were also responsible for many of the late era NO COO R5s which can be found on Trilogo cards.
+- Unitoy No COO ROTJ/Trilogo version
+- This version debuted on the 20bk and was a mainstay through the ESB, Jedi and Trilogo eras.
+- Produced with dark/mid blue (SW/ESB era) and light blue (ROTJ/Trilogo era) stickers
+- FRENCH TRILOGO (Meccano exclusive) 1978 SCAR/SMOOTH NO COO
+- We’ve found both large and small MIHK COOs on early 21bk Unitoy cards as well as Trilogo cards. These moulds were used in various stages without any reason other than it just happened to be the mould that was picked up off the shelf by the tooling manager on the day.
+- Early KADER R5-D4s (Fam.4 & 8) stickers featured a dark-blue and mid-grey colour palette.  The later ROTJ and Trilogo era figures (HK, Scar COO & No COO) have a noticeably lighter blue than their predecessors.
+- The page shares all 9 known MOC versions of the R5-D4 Red Bar variant, including the newly discovered Canadian 20 Back!
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - FIGURE GUIDE CHANGELOG
+  - I: Unitoy
+  - II: Not an R5 COO
+  - III: Not an R5 COO
+  - IV.1: Kader/ Poch/ Meccano
+  - V: Unitoy
+  - VI: Not an R5 COO
+  - VII: Not an R5 COO
+  - VIII: Kader
+  - STICKER GUIDE
+  - SCREW GUIDE
+  - FOOT SCULPT GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Figure Guide
+  - As with the majority of the early characters, R5 was produced at both Kader and Unitoy factories in Hong Kong. The figure debuted on a 20bk card with Kader and Unitoy following soon behind on the 21bk. Kader is responsible for most of the ESB and Jedi output, before Unitoy returns to production with the F1 No COO figure on the Trilogo cards. Kader, presumably the Macau factory (known as Qualidux), also has a late batch of 78 HK & No COO figures produced which found their way to French Trilogo cards and baggies.
+  - Let’s now break the variations down into their respective mould families…
+- Changelog:
+  - Updated 29/03/2026:
+    - On the COO sheet, the mould family 4.1/b has be reclassified. The newly discovered F4 R2-D2 1977 Hong Kong COO figure becomes 4.1a/b, and previous R5-D4 F4.1a/b is moved to F4.2a/b.
+    - R5-D4 F4.2a/b becomes F4.3a/b.
+    - R5-D4 F4.3a/b becomes F4.4a/b.
+    - Addition of “Red Bar” figures in F1, F4, F5 and F8 graphics – or noted where missing.
+    - Addition of the Poch variation with orange legs.
+    - F8 Kader light orange paint dome figure included alongside the orange dome figure.
+
+Continued in the next part.
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/sw/r5-d4/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

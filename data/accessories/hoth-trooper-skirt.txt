@@ -1,0 +1,104 @@
+Accessory Name: Hoth Trooper Skirt
+Aliases: Hoth Trooper Skirt
+Category: Accessory
+Part: 1 of 2
+
+Overview:
+Hoth Trooper Skirt is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - CAPE OVERVIEW
+  - MI:  Smile
+  - M2: Smile
+  - M3: Poch
+  - M4: Kader
+  - M5: Unitoy
+  - The Imperial Hoth Trooper Skirt was usually released with the following combinations of colour to figure:
+    - White Vinyl Skirt:
+      - Imperial Stormtrooper (Hoth Battle Gear)
+  - There are 6 main variations plus subvariants. Subvariants do exist and may not all be documented. As a result of the fact that these were produced from a vinyl sheet bought from a third party involved, the subvariants may vary heavily depending on the supplier.
+  - Vinyl cape material (PVC) is made out of a heated mass, rolled and milled in several processes to finally get printed or not. That is important to know, because shrinkage can occur to them when heated again, also depending if they were cold milled or heated milled in the last steps and the directions they were milled. Giving exact dimensions of 35+ year old PVC capes is not very helpful for a guide. They were likely die-cut under tension which would also contribute to capes produced in varying sizes from the same source.
+  - So overlaying those to see differences isn’t helpful in most cases. What we have to do is look for overall differences in shapes, forms and die-cuts. For that reason I will refrain on measurements on all vinyl capes but have a scale on all my pictures for reference.
+  - An Imperial Stormtrooper (Hoth Battle Gear) skirt does not have a given front or back. But all of those skirts have a left and right side determined by the asymmetrical shape of the skirt. A front and back side was then assigned to make them comparable in the guide.
+- SMILE
+  - M1 was produced by SMILE in Hong Kong. The following versions are known:
+    - Crosshatch/Zebra pattern
+- SMILE
+  - M2 was produced by SMILE in Hong Kong. The following versions are known:
+    - Crosshatch/rough (horizontal lines, long version ( M2a )
+    - Crosshatch/rough (vertical lines), medium lenght ( M2a )
+    - Crosshatch/soft (horizontal lines), medium lenght ( M2b )
+    - Crosshatch/soft (vertical lines), short version ( M2b )
+    - Crosshatch/rough (horizontal lines, long version (M2a)
+    - Crosshatch/soft (vertical lines), short version (M2b)
+- POCH
+  - M3 was produced by POCH in Spain. The following versions are known:
+    - Faint/rough, no crosshatch
+    - faint/rough
+- Kader
+  - M4 was produced by KADER in Hong Kong. The following versions are known:
+    - Semi-rough/crosshatch ( M4a )
+    - Faint/crosshatch ( M4b )
+    - Crosshatch/faint ( M4b )
+    - Semi-rough/crosshatch (M4a)
+    - Faint/crosshatch (M4b)
+    - Crosshatch/faint (M4b)
+- Unitoy
+  - M5 was produced by UNITOY in Hong Kong. The following versions are known:
+    - Faint stripes/crosshatch
+    - Crosshatch/faint stripes
+- PBP
+  - M6 was produced by PBP in Spain. The following versions are known:
+    - Glossy/rough ( M6a )
+    - Ladder/glossy ( M6b )
+    - Craters/glossy ( M6c )
+    - Glossy/Soft lines ( M6d )
+    - Glossy/rough (M6a)
+    - Ladder/glossy (M6b)
+    - Craters/glossy (M6c)
+    - Glossy/Soft lines (M6d)
+- BRAZIL
+  - *Coming soon
+- Hungary
+  - This skirt was produced by an unknown factory for the “CSILLAGOK HÁBORÚJA” line in Hungary . The material was only used in the 80s and came with Hungarian Imperial Stromtrooper (Hoth Battle Gear). The following versions are known:
+    - white
+- TURKEY
+  - This skirt was produced by SB PRODUCTS  for the  “UZAY Savaşçıları”   line in  Turkey . There is two different colours in existance. Both  were only used in the late 80s and came with Imperial Snowtrooper “Imparatorlungun Askeri” (white) and the “Blue Stars” (blue). The following versions are known:
+    - white
+    - blue ( no picture )
+    - Uzay White
+- R1:
+  - The R1 skirt is die-cut and has die-cut steps left and right on the sides (bottom). The outer shape to the top is very unique and therefore an esay spot. The material is way more rigid then normal capes. There is no crosshatch pattern present.
+  - The R1 skirt is a recut of the M2 version from SMILE.
+- R2:
+  - The R2 skirt is die-cut and has edged curves to the bottom. The asymmetrical holes are always in the same place. There is no crosshatch pattern present.
+  - The R2 skirt is a recut of the M2 version from SMILE:
+    - normal material thickness #1
+    - normal material thickness #2
+    - flimsy material thickness
+- R3:
+  - The R3 skirt is another one which needs further investigation. It has die-cut steps left and right and a perfect cut to the top. Yet the bottom corners have steps to it that seems suspicious. The shape is unique and therfore could be an unknown variant, yet there is no crosshatch present which adds to it beeing fake.
+  - Please keep this reproduction classification with a grain of salt. It needs further investigation.
+  - The R3 skirt is a recut of the M2/M1 version from SMILE.
+- R4:
+  - The R4 skirt is mainly a reproduction made for the Turkish bootleg Blue Star figure. It is die-cut professionally and probably existing in white as well.
+  - The R4 skirt is a recut of the M4 version from KADER.
+- R5:
+  - The R5 skirt is made of a thin flimsy material which is more translucent compared to production capes. The edges are handcut (edged curves) and therefore it is an easy spot. There is no crosshatch pattern present.
+  - The R5 skirt imitates the shape of the M4 version from KADER.
+- R6:
+  - The R6 skirt is made of a thin flimsy material which is more translucent compared to production capes. A crosshatch pattern is present on those but it is different compared to original skirts.
+  - The R6 skirt is a recut of the M5 version from UNITOY.
+- R7:
+  - The R7 skirt is made out of a rubbery material which is also kind of elastic. A crosshatch pattern is not present on those.
+  - The R7 skirt is no exact recut from any known vintage skirt. The bulges left and right to the sides at the bottom are unique.
+
+Continued in the next part.
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/hoth-trooper-skirt/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

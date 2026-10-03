@@ -1,0 +1,64 @@
+Figure Name: AT-AT Driver
+Aliases: AT-AT Driver
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 1 of 3
+
+Overview:
+AT-AT Driver is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-4.txt under Figure Name: AT-AT Driver. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Kader/ PBP
+  - II: Unitoy/ Kader China
+  - III: Smile MIHK
+  - IV: Smile NCOO
+  - – Smile Mixed Parts
+  - POCH GUIDE
+  - AT-AT DRIVER RIFLE GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE. Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Foreword:
+  - The reclassification of the COO sheet for the AT-AT Driver has been a challenging task. This is first and foremost because the differences between all four families are so minute. Secondly, the previous COO sheet and the mould classification on “The Mould Family Guide & Discussion Thread” was missing an entry, as two of the factories (Kader and Unitoy) had been grouped together in one mould family, and in addition there were actually two Smile families hiding in plain sight. Having collected a comprehensive catalogue of MOC examples over the last couple of years it has been finally possible to update the COO sheet with a degree of certainty. As with all Variant Villains’ undertakings there is a constant work in progress and the information here will be revised if new any evidence points to another conclusion.
+- F1.1 KADER (MIHK)
+  - KADER 1980 MADE IN HONG KONG
+  - Above you can see following variants (left to right). Paint variations beyond what’s shown above are very likely.
+  - Orange emblems with blueish-white shoulders & gloves
+  - Dark orange emblems with creamy-white shoulders & gloves
+  - Red/Pinkish-red emblems. Kader/Unitoy mixed parts
+  - Pinkish-red (faded?) Unitoy emblems with a Kader MIHK COO on the leg. Following the KEY IDENTIFIERS guide below, you can see this figure has the Unitoy shaped hands. The front and rear torsos are shot in different plastics. Figure has the Kader style bluish-white shoulders and gloves.
+  - F1 KADER The Kader and Unitoy figures are extremely similar in appearance. Kader AT-AT Driver is characterised by orange emblems, small black circles either side of the mouthpiece, as well as a pointed black triangle on top of the helmet in-between the emblems.
+  - Kader are moulded in a mid grey plastic when compared to Unitoy. However, it is worth mentioning that this plastic is prone to fading to a yellow grey, and can be confused with the lighter Unitoy plastic colour. Kader also has a thin pointed right fingers and thumb, whereas Unitoy have more rounded thumb and fingers. Ultimately, the safest way to differentiate between Kader and Unitoy is to look at the Country of Origin. There is no gap between HONG and KONG in the COO and this will categorically help you to distinguish between the two factories.
+  - The earliest Kader examples are found on the 41E and are a dark orange, with a translucent bluish-white paint on the shoulders/gloves moving later to a thicker, creamy-white paint. This figure ran throughout the ESB line up to and including the 48C Revenge Offer Card.
+  - During the late ESB era, painted and unpainted overstock Unitoy parts were moved to both Spanish Poch/PBP and the Kader China factories. This resulted in figures from this short window were produced with a mix of Kader China and Unitoy factories, resulting in AT-AT Driver figures with Kader orange or Unitoy red emblems. (See also Kader China F2.2).
+  - ACCESSORIES: The F1 Kader AT-AT Driver was paired with the M2 Kader AT-AT Driver Rifle .
+- F1.2 PBP (MI__)
+  - PBP 1980 MADE IN ____
+  - Above you can see following variants (left to right):
+    - Orange emblems and white shoulders/gloves
+    - Dark orange emblems and creamy-white shoulders/gloves
+    - Dark orange emblems and white shoulders/gloves
+  - Kader half-altered the country of origin to create the “MADE IN __” COO prior to sending the tools to PBP in Spain.
+  - PBP’s version has the typical hard plastic with a higher level of surface detail on the torso. The limbs can be hard, soft plastic or even a combination of both on the same figure. PBP AT-AT Drivers have a tendency to feature messy paint and are found with  either orange or dark-orange emblems.
+  - The PBP figure should not be confused with the F2-R2a  COO “MADE IN __” Kader China figure, which is shot in soft plastic and features a different paint application.
+  - As an aside, the paint stamp for the AT-AT Driver’s emblems was also used for PBP’s late era Tie-Fighter Pilot figure.
+  - ACCESSORIES: PBP AT-AT Driver have been found with the HK produced M1 Unitoy  or M3 Smile AT-AT Driver Rifles .
+
+Continued in the next part.
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/at-at-driver/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

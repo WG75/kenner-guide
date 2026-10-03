@@ -1,0 +1,88 @@
+Accessory Name: Handheld Lightsaber
+Aliases: Handheld Lightsaber
+Category: Accessory
+
+Overview:
+Handheld Lightsaber is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Kader/ Lili Ledy
+  - M2: Unitoy
+  - M3: Smile
+  - M4: Taiwan (U.M.)
+  - The Handheld Lightsaber was usually released with the following combinations of colour to figure:
+    - Yellow Lightsaber:
+      - Luke Skywalker (Bespin Fatigues)
+      - Luke Skywalker (Bespin Fatigues) LILI LEDY
+    - Green Lightsaber:
+      - Luke Skywalker (Jedi Knight Outfit)
+      - Luke Skywalker (Jedi Knight Outfit) LILI LEDY
+      - Luke Skywalker (Jedi Knight Outfit) TOP TOYS
+    - Blue Lightsaber: unknown (the page does not list them in text).
+  - There are 5 main mould variations plus subvariants. More subvariants may exist. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the steel mould used.
+- KADER / LILI LEDY
+  - M1 was produced by KADER   in Hong Kong, and later China.  The moulds were also used by LILI LEDY in Mexico. The following colours are known:
+    - pale yellow (Lili Ledy)
+    - pale yellow reddish hue (Lili Ledy)
+    - yellow
+    - mid yellow
+    - dark yellow
+    - pale green blueish (Lili Ledy)
+    - pale green (Lili Ledy)
+- UNITOY
+  - M2 was produced by UNITOY in Hong Kong. Cutting the gate to the top of the hilt from this specific saber often lead to cutting parts of the hilt by accident in this factory. As example see the saber to the far right. The following colours are known:
+    - yellow
+    - dark yellow
+    - bright yellow
+    - neon yellow
+    - blueish green
+    - green
+- SMILE
+  - M3 was produced by SMILE in Hong Kong. The following colours are known:
+    - dark yellow
+    - yellow
+    - light yellow
+    - blueish green
+    - light blueish green
+    - green
+    - reddish blue
+    - blue
+- UNIVERSAL MANUFACTURERS
+  - M4 was produced by UNIVERSAL MANUFACTURERS in TAIWAN . The following colours are known:
+    - blueish green
+    - green
+- TOP TOYS
+  - M5 was produced by TOP TOYS in Argentina. The following colors are known:
+    - green
+- REISSUE “Retro Collection” 2019
+  - Coming soon…
+- Brazil
+  - *coming soon
+- Hungary
+  - This saber was produced by an unknown factory for the “CSILLAGOK HÁBORÚJA” line in Hungary . The mould was only used in the 80s and came with their resident Darth Vader (red) and Luke Skywalker (green). There is also a black saber in existance which might be from a later period of production.
+  - red
+  - green
+- MEXICO
+  - Besides the licensed production through the Lili Ledy company, the bootleg production in Mexico was not in hand of larger factories. These were family businesses, small establishments, that made their own molds, their own machines to inject the plastic. Therefore there is no specific lines or producers known.
+  - These sabers shown above were packed mainly with S/A (semi-articulated) figures in the 80s, 90s and 2000s. The colour can in some cases indicate if it is an only 80s production or if it has been produced way later. They came on sprue trees together with Vibro Axe, Biker Scout Blaster, Rebel Blaster and Palace Blaster:
+    - 90s Mexican Sprue Tree
+    - There seems to be an endless variety of colours on those. Here are the most common ones:
+      - orange: colour unique to the 80s (picture coming soon)
+      - pink: only 90s
+      - green: only 90s
+      - white: produced in 80s and 90s
+- R1: Rough Saber EPM
+  - R1 was eventually produced  in Germany. It has a rough and textured surface and an EPM that made many of us think its real back in the day. They do float and is tapered in where the handle meets the hilt. It must have been around at least for over a decade.
+  - blueish green
+  - yellow
+  - blue (no picture)
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/handheld-lightsaber/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

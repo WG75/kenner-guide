@@ -1,0 +1,40 @@
+Figure Name: Imperial Stormtrooper (Hoth Battle Gear)
+Aliases: Imperial Stormtrooper (Hoth Battle Gear); Hoth Battle Gear; Hoth Stormtrooper; Snowtrooper
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 1 of 3
+
+Overview:
+Imperial Stormtrooper (Hoth Battle Gear) is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: unknown - not established in the reference workbook
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: Imperial Stormtrooper (Hoth Battle Gear). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- In summary, this figure is not a fake. This figure is not painted or has limbs extruded with grey over white plastic. Crucially, when these first appeared on collector discussions in the 90s, they were bought as standard figures, in car boot sales or job lots without the exceptional price tags that are now commanded. When they were resold by dealers, it was for a slight premium to the standard Snowtrooper. To date, one has never appeared in a baggie or on a cardback anywhere. This figure was NOT produced by Palitoy, as it is identical in form, plastic, paint and COO to the Spanish PBP-made Snowtrooper, but confusingly, the loose figures have only ever been found in the UK, and notably not in Spain.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Kader/ Kader China/ Glasslite
+  - II: Unitoy/ PBP
+  - III: Smile
+  - IMPERIAL HOTH RIFLE GUIDE
+  - SNOWTROOPER SKIRT GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+
+Continued in the next part.
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

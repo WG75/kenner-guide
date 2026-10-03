@@ -1,0 +1,21 @@
+Accessory Name: C-3PO (Removable Limbs) Net
+Aliases: C-3PO (Removable Limbs) Net; Removable Limbs
+Category: Accessory
+
+Overview:
+C-3PO (Removable Limbs) Net is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1: Unitoy
+  - M2: Smile
+  - M3: Lili Ledy
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/c-3po-removable-limbs-net/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

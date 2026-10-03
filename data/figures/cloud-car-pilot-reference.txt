@@ -1,0 +1,63 @@
+Figure Name: (Twin-Pod) Cloud Car Pilot
+Aliases: (Twin-Pod) Cloud Car Pilot; Twin-Pod; Cloud Car Pilot
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+(Twin-Pod) Cloud Car Pilot is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 41/45/47/48-back; some continued onto ROTJ/Trilogo. [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-5.txt under Figure Name: (Twin-Pod) Cloud Car Pilot. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Smile/ Lili Ledy
+  - II: Unitoy/ PBP
+  - PILOT BLASTER GUIDE
+  - COMMLINK GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- SMILE/ LILI LEDY
+  - Smile HK (Kenner)
+  - Left leg: “MADE IN HONG KONG” or smoothed over No Coo
+  - Octagonal belt buckle
+  - Dark grey holster and belt
+  - Torso shot in both a “soft” and “hard” plastic
+  - Shorter “fat” neck mould
+  - Lili Ledy Mexico
+  - Left Leg: Smoothed over NCoo
+  - Figure moulds sent from Smile Hong Kong to Lili Ledy in Mexico
+  - Uniquely bright yellow boot & gloves
+  - Varying shades of grey and metallic silver on the belt and holster. LL CCPs can be found with mixed up limb and torso parts, so the belt colour combinations aren’t always consistent
+  - Varying tan and pink colours used for the facial paint
+- Unitoy/ PBP
+  - Unitoy HK (Kenner)
+  - Right leg: “MADE IN HONG KONG”
+  - Circular belt buckle
+  - Dark grey-brown holster and belt
+  - Varying tan and pink colours used for the facial paint
+  - Long neck mould
+  - PBP Spain
+  - Right leg: Rough, scarred out coo
+  - Figure moulds sent from Unitoy Hong Kong to PBP in Spain
+  - Uniquely features 0, 1, 2 or 3 dots moulded under the chin to identify head mould cavities
+  - Varying shades of white, cream, and pink used for the facial paint
+  - Varying shades of orange and red used for the Helmet
+- Notes from the page with the photo credit name removed
+  - Pictured above are the two main variants on the LL Cloud Car Pilot. He came with a grey or silvery painted belt and holster. There are figures known that were produced while changing the colour and got mixed up parts i.e. silvery hips and grey painted torso.
+  - Please note that only the left figure was pictured with original LL accessories. The right figure was completed with the “dark” Kenner accessories and you can see that the difference still is huge.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/cloud-car-pilot/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

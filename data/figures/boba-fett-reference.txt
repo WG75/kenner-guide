@@ -1,0 +1,60 @@
+Figure Name: Boba Fett
+Aliases: Boba Fett
+Packaging: Star Wars
+Category: Figure
+Part: 1 of 3
+
+Overview:
+Boba Fett is a vintage Kenner Star Wars figure from the Star Wars line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): Star Wars 21-back onward; extensive ESB/ROTJ/regional carding exists.
+Workbook block: data/compatibility/debut-cardbacks-reference-sw-6.txt under Figure Name: Boba Fett. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- BOBA FETT CARDBACK GUIDE
+- To the right we can see the No COO French Trilogo (so called “Meccano”) Fett. He only was released on French Trilogo cards. The green chest armour and the used brown for the belt and visor differ regarding the HK Fett next to it.
+- Besides the different chest armour colours please also notice the very different belt colours. The Poch one i.e. has a colour that is very close, if not identical to some of the later produced PBP/Trilogo ones!
+- Above you can see different Boba Fett figures from Fam II with No COO made in Spain by PBP. The so called “Trilogo” Boba Fett’s can come in multiple colour combinations. I tried to show the main six different colours regarding the chest armour and also the six main colours regarding the belt colours. In addition these come in all combinations regarding the wrist dart and knee pad paint beeing left out or not. Although almost all combinations are possible, to our knowledge the warm olive green chest plate can only be found in combination with the painted knee and unpainted wrist dart. The PBP Fett was usually paired with the M7 Imperial Blaster.
+- The most common Droids Boba Fett is the Taiwan COO figure (including an example with a painted helmet). The punch on the cardback is Taiwan. Kader HK produced Fetts have also appeared on the TW Droids era cardback, suggesting that an addition of overstock figures were packed to clear out supplies in this late era.
+- Refer to some carded Droids examples in our Boba Fett Cardback Guide HERE »
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Kader/ Meccano
+  - II: Kader / PBP/ Lili Ledy
+  - III: Kader
+  - IV: Taiwan
+  - MOULD & HEAD COMPARISON
+  - IMPERIAL BLASTER GUIDE
+  - BOBA FETT CARDBACK GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- KADER / MECCANO
+  - The yellow pads variant is surely a result of degradation. But the grass-green chest armour isn’t. I never saw that armour with orange pads so the degradation and the chest colour go together. The backpack also has a very unique bright blue colour (which can also differ. I have two very different ones)
+  - Next up is the standard large copyright HK Boba Fett
+  - To the right we can see the No COO French Trilogo (so called “Meccano”) Fett. He only was released on French Trilogo cards. The green chest armour and the used brown for the belt and visor differ regarding the HK Fett next to it.
+- F3 POCH
+  - In the first picture regarding the COO family II/III, we can find all HK II/III Fett variants that share the same limb colour regarding the torso.
+  - Mostly the chest armour colours can differ a lot. That is important regarding the POCH one. Because mostly he is compared to one of those, but to be sure you need a comparison to all existing colour variants.
+  - Besides the different chest armour colours please also notice the very different belt colours. The Poch one i.e. has a colour that is very close, if not identical to some of the later produced PBP/Trilogo ones!
+  - The last one is IMO most interesting. He is the only figure in family II/III sharing light limbs, head and torso! The colours are very freakish and unique.
+  - In the second picture regarding the COO family II/III, we can find all HK II Fett variants that share lighter limbs regarding the torso.
+  - The first one clearly has a unique dark brown colour used for belt and visor.
+  - The two in the middle differ mainly in the way the limbs degraded. Like on Bossk and Luke Pilot i.e. there seems to be very often two main colours in the way those degrade……so i am guessing its two different batches/ producers? Anyway…these can’t be found with unfaded limbs to my knowledge.
+  - Last one is the infamous main POCH variant. Again: Check for the chest armour colour and also the belt colour that are very unique and a true tell-tale.
+
+Continued in the next part.
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/sw/boba-fett/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

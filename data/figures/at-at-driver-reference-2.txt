@@ -1,0 +1,43 @@
+Figure Name: AT-AT Driver
+Aliases: AT-AT Driver
+Packaging: The Empire Strikes Back
+Category: Figure
+Part: 2 of 3
+
+Continued reference. The lines below repeat the debut record so this part can answer a cardback question.
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-4.txt under Figure Name: AT-AT Driver. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- F2.1 UNITOY (MIHK)
+  - UNITOY 1980 MADE IN HONG KONG
+  - Above you can see following variants (left to right). There will be paint and plastic variations beyond what’s shown above.
+  - Dark orange emblems with white shoulders & gloves
+  - Orange emblems with white shoulders & gloves
+  - Dark red emblems, cream shoulders/gloves and light yellow-grey limbs
+  - Dark red emblems, cream shoulders/gloves and grey limbs
+  - Red emblems, cream shoulders/gloves and light blue-grey limbs
+  - POCH: Crimson red emblems and blue-white shoulders/gloves (included for comparison)
+  - Unitoy AT-AT Drivers are also characterised by small black circles on front of the helmet either side of the mouthpiece, as well as a pointed black triangle on top of the helmet in between the emblems. Unitoy are moulded in a lighter grey plastic compared to Kader. Unitoy have a thick, creamy-white paint on the gloves.
+  - The right hand on the Unitoy figure has a more rounded thumb and fingers. The Kader figure on the other hand has a thin pointed right hand. The best way to differentiate between the Unitoy figure and their Kader counterpart is to look at the Country of Origin. There is a gap between HONG and KONG in the COOs.
+  - The Unitoy AT-AT Driver debuted on the 41A card and carried through to the 41C card with orange emblems. By the time the figure appeared on the 41E, the emblems had transitioned to red/dark red/crimson red, and this continued throughout the ESB line up to, and including the 48C.
+  - Over time, the legs cavity developed some minor pitting, with gradually increasing “bumps” appearing on rear of the legs. The same type of pitting can also be found on the Boba Fett F3 leg tooling and the Kader wide handle Bespin blaster. There was no attempt to repair the leg cavities and the tool continued to be used until the very end of the production run.
+  - ACCESSORIES: Unitoy AT-AT Driver was paired with the M1 Unitoy AT-AT Driver Rifle .
+- F2.2 Kader China (MI__ / NCOO)
+  - KADER CHINA 1980 MADE IN ____ / No COO
+  - Above you can see following variants (left to right). There will be paint and plastic variations beyond what’s shown above.
+  - Orange emblems (MI__ COO)
+  - Orange emblems (MIHK COO)
+  - Red emblems – Kader/Unitoy mixed parts
+  - Red Unitoy emblem front torso with a Kader MIHK COO on the leg. Following the KEY IDENTIFIERS guide below, you can see this figure has the Unitoy shaped hands, but paint matches the Kader colour and application.
+  - The F2 Unitoy tooling was sent to Kader China after the Unitoy ESB 48C around the same time the original F1 Kader moulds were sent to PBP. This AT-AT Driver type first appears on the ROTJ 48a2 cards.
+  - Kader altered the first F2 leg cavity into a “MADE IN__” COO and the second cavity to remove the MIHK stamp altogether. The presence of the raised bumps on back of the legs help us to match these late Kader produced figures back to the earlier F2 Unitoy moulds.
+  - At first glance the MI__ figure is often mistaken for the PBP figure but of course this Kader made figure is shot in softer plastic, instead of the harder plastic composition used by PBP. The fact the mould cavity (F2-R2aa) was half altered must have been in error, as the “MADE IN” text was also removed shortly thereafter (F2-R2ab).
+  - We should note that during the late ESB era, painted Unitoy parts were distributed between Kader HK and the Poch/PBP factories in Spain. This meant that figures in the early period of China production were assembled from a mix of parts from Kader HK, Unitoy or Kader China factories. Once the stockpile of overstock HK parts was used up, the Kader China figure became more homogeneous.
+  - The No COO AT-AT Driver with orange emblems becomes the typical Kader China produced figure going forward.
+  - ACCESSORIES: The F2.2 Kader China AT-AT Driver was paired with the M2 Kader AT-AT Driver Rifle .
+
+Continued in the next part.
+
+Sources:
+https://www.variantvillain.com/characters/esb/at-at-driver/

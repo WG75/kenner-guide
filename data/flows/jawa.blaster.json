@@ -4,6 +4,13 @@
   "entity": "jawa",
   "name": "Jawa Blaster Identification",
   "start_step": "reference_check",
+  "part": "1 of 2",
+  "aliases": [
+    "Jawa"
+  ],
+  "sources": [
+    "https://www.variantvillain.com/accessory-guide/jawa-blaster/"
+  ],
   "steps": {
     "reference_check": {
       "type": "question",
@@ -202,30 +209,6 @@
           "next": "black_edges_unsure_result"
         }
       ]
-    },
-    "black_edges_blue_result": {
-      "type": "message",
-      "content": "That suggests it may actually be a very dark blue or black-blue blaster rather than a true black one.\n\nThat is more in line with common original Jawa blaster colours, but you still need to confirm the mould.\n\nNext compare the rear bump:\n• long bump = M1\n• short bump = M2\n• no bump = M3\n\nUse the full guide here:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/\n\nIf you want, tell me whether the rear bump is long, short or missing and I’ll help narrow it down."
-    },
-    "black_edges_not_blue_result": {
-      "type": "message",
-      "content": "If it stays black under strong light, be cautious.\n\nA legitimate black Jawa blaster is most likely the Brazilian Glasslite version, which belongs to the M2 mould family.\n\nSo the key question is whether it matches M2 traits:\n• short rear bump\n• clean, sharper mould detail\n• scar to the top right of the bump\n\nIf it does not match M2, treat it as suspicious rather than original.\n\nCompare carefully here:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/#m2"
-    },
-    "black_edges_unsure_result": {
-      "type": "message",
-      "content": "No problem. Black and very dark blue can be hard to judge.\n\nBest next step:\n• check it in daylight\n• place it against a strong light\n• look for blue on the edges\n• then compare the mould against M2 if it still appears black\n\nM2 reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/#m2\n\nIf you want, tell me the rear bump shape: long, short or none."
-    },
-    "grey_result": {
-      "type": "message",
-      "content": "Grey pieces need extra caution.\n\nGrey is a very common reproduction colour for Jawa blasters.\n\nThere are rare silver Glasslite versions, but they are extremely uncommon and should not be assumed.\n\nBest next step: compare it closely with the full Variant Villain guide:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
-    },
-    "silver_result": {
-      "type": "message",
-      "content": "Silver is unusual.\n\nThere is a rare silver Jawa blaster associated with Brazilian Glasslite production, but it is extremely uncommon.\n\nDo not assume it is Glasslite without matching the mould and provenance carefully.\n\nUse the full reference here:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
-    },
-    "not_sure_colour_result": {
-      "type": "message",
-      "content": "If you are not sure on colour, compare it in daylight and against a strong light.\n\nMost originals fall into dark blue / black-blue tones, plus rare Glasslite black and silver versions.\n\nFull reference:\nhttps://www.variantvillain.com/accessory-guide/jawa-blaster/"
     }
   }
 }

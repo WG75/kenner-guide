@@ -1,0 +1,52 @@
+Accessory Name: Prune Face Rifle
+Aliases: Prune Face Rifle
+Category: Accessory
+
+Overview:
+Prune Face Rifle is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Kader/Lili Ledy
+  - M2: Smiley
+  - The Prune Face Rifle was usually released with the following combinations of colour to figure:
+    - Brown Prune Face Rifle:
+      - Prune Face
+  - There are 2 main mould variations. Subvariants do exist and may not all be documented. As a result of the fact that these were shot on a sprue tree in higher numbers the subvariants may vary heavily depending on the metal mould used.
+- Kader / Lili Ledy
+  - M1 was produced by KADER in Hong Kong. The tools then went to LILI LEDY in Mexico for production.
+    - The following colours are known:
+      - light brown
+      - dark brown
+      - reddish brown (Lili Ledy)
+      - reddish dark brown (Lili Ledy)
+      - M1a: unknown (the page does not list them in text).
+      - M1a light brown
+      - M1a dark brown
+      - M1a LL reddish dark brown
+      - M1b: unknown (the page does not list them in text).
+      - M2a light brown
+      - M2a LL reddish brown
+- SMILE
+  - M2 was produced by SMILE in Hong Kong.
+  - The following colours are known:
+    - light brown
+    - dark brown
+    - M2a/b/c/d: unknown (the page does not list them in text).
+    - m2a light brown
+    - M2b dark brown
+    - m2c light brown
+    - m2d light brown
+- R1:
+  - The R1 is the only known reproduction of the “Prune Face” rifle. As shown above, the rifle lacks the EPMs (ejector pin marks) found on the originals. Additionally, the end of the barrel is slightly thicker, but the most distinct identifying feature is the absence of the front sight (see above). This reproduction floats when submerged, so it may go unnoticed in many collections.
+  - The following colours are known:
+    - dark brown
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/prune-face-rifle/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

@@ -1,0 +1,46 @@
+Figure Name: Yak Face
+Aliases: Yak Face; Saelt-Marae
+Packaging: Power of the Force
+Category: Figure
+
+Overview:
+Yak Face is a vintage Kenner Star Wars figure from the Power of the Force line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. No figure-level family range is stated. Variant lines below are the workbook's Earliest / exact cardback values, not a single debut for every variant.
+Workbook block: data/compatibility/debut-cardbacks-reference-potf-3.txt under Figure Name: Yak Face. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- SMILE in Hong Kong produced the Yak Face figure and accessories. Demand had slowed by time of the POTF line, and as a result these figures were produced in much lower numbers.  The production version is only available with a date, but no country of origin stamp.
+- Yak Face was released on Trilogo and 92bk POTF cards.
+- Yak Face was packaged with the Skiff Vibro staff. Occasionally the Trilogo Yak Face was packaged with a black M1 Palace blaster , and often the Trilogo Yak Face did not include an accessory at all. The Skiff Vibro staff is yet to be documented on Variant Villain.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Smile
+  - SKIFF VIBRO STAFF
+  - PALACE BLASTER
+- Smile
+  - Above you can see following variations (left to right):
+    - Tanned head plastic
+    - Lighter head plastic (degradation?)
+  - SMILE in Hong Kong produced the Yak Face figure and accessories. Demand had slowed by time of the POTF line, and as a result these figures were produced in much lower numbers.  The production version is only available with a date, but no country of origin stamp.
+  - The date stamps are very similar, however l ooking at the cavity details around the hip joint and soles of the feet has helped confirm four cavities.
+  - It’s difficult to know if the lighter head I’ve documented here is a genuine plastic colour variation or equally possible a result of plastic degradation. I’ve included both for now until a consensus is reached.
+  - Yak Face was released on Trilogo and 92bk POTF cards.
+  - Yak Face was packaged with the Skiff Vibro staff. Occasionally the Trilogo Yak Face was packaged with a black M1 Palace blaster , and often the Trilogo Yak Face did not include an accessory at all. The Skiff Vibro staff is yet to be documented on Variant Villain.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/potf/yak-face/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

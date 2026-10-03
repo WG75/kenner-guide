@@ -1,0 +1,75 @@
+Figure Name: Chief Chirpa
+Aliases: Chief Chirpa
+Packaging: Return of the Jedi
+Category: Figure
+
+Overview:
+Chief Chirpa is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ROTJ 65-back onward; later 77/79/Trilogo carding varies by figure.
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-1.txt under Figure Name: Chief Chirpa. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Smile
+  - II: Kader
+  - III: Kader
+  - IV: Lili Ledy
+  - V: Top Toys
+  - CHIEF CHIRPA STAFF
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Figure Overview
+  - Left > Right
+  - – F1 Smile (standard staff, brown hood)
+  - – F1 Smile (staff variation, brown hood)
+  - – F1 Smile NC (w/reddish hood)
+  - – F2 Kader Grey
+  - – F2 Kader White (caramel hood/staff)
+  - – F2/3 Kader White mixed legs (caramel hood/staff)
+  - – F2/3 Kader Grey mixed legs
+  - – F3 Kader NC White (caramel hood/staff)
+  - – F3 Kader NC Grey
+  - – F3/2 Kader White mixed legs (caramel hood/staff)
+  - – F3/2 Kader Grey mixed legs
+  - – F4 Lili Ledy (also released on Kenner MIM card)
+  - – (missing F5 Top Toys)
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists Chief Chirpa on the 65-back "Return of the Jedi" card, No. 70690, 1983.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtChiefchirpa.asp
+- Source: ( Return of the Jedi )
+- Date Stamp: 1983
+- Release Date: 1983
+- Carded Availability: Return of the Jedi Tri-Logo
+- Assortment No.: 70690
+- Weapons and Accessories: Ewok Chief Staff Chief Chirpa Hood
+- Point of Interest: This figure first appeared on the Return Of The Jedi 65 back card. Due to Lucasfilm ’s desire to keep the Ewoks ’ appearance a secret, the Return Of The Jedi 65A card backs had both this figure and Logray blacked out. Despite this, Chief Chirpa was still released on the Return Of The Jedi 65A card.
+- Major variations: Though all vintage figures have minor variations, the Chief Chirpa did have one major production variation. Where the vast majority of Chief Chirpa figures are moulded in a light gray plastic, a small amount were produced in off white plastic. For the most part the white versions had turned up in early 1983 as prizes for a UK national newspaper’s contest. The contest winners received the figures in sealed Made In Hong Kong Kenner baggies and were accompanied with a light brown pointed-bottom staff. This wasn’t the only way to find this colour however, as it has been found on both Hong Kong produced Palitoy cards and Macau** produced Meccano cards. Thus far all examples found of the carded Honk Kong version sport a different COO* stamp than the bagged prize figure, and was packed with a dark brown round-bottom staff.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+imperialgunnery.com (evidence: documented where the page states it; 'we believe' stays probable):
+- (documented) Chief Chirpa Staff Chief Chirpa Staff V1 - V5 Comparison Shot. Chief Chirpa Staff Original V1 Brown. Chief Chirpa Staff Original V2 Brown . Chief Chirpa Staff Original V2 Lighter Brown.
+- https://imperialgunnery.com/staffs-axes.htm
+- (documented) Chief Chirpa Hood Chief Chirpa Hood Original The moulding inside of a Chief Chirpa hoods can have EPMs or numbers present. Comparison picture below showing an EPM placed in two slightly different locations inside the hood. Letter "C" version. Letter "D" version. Letter "E" version.
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
+
+Sources:
+https://www.variantvillain.com/characters/rotj/chief-chirpa/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

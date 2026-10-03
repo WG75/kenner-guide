@@ -1,0 +1,90 @@
+Accessory Name: Gamorrean Axe
+Aliases: Gamorrean Axe
+Category: Accessory
+
+Overview:
+Gamorrean Axe is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - MI: Kader
+  - M2: Smile
+  - M3: Unitoy / Macau
+  - M4: Lili Ledy
+  - The Gamorrean Battle-Axe was released with following figures:
+    - Gamorrean Guard
+    - Gamorrean Guard (Lili Ledy)
+  - There are 4 main mould variations plus subvariants on the Gamorrean Battle-Axe. More subvariants may exist. As a result of the fact that these were shot on a sprue tree in higher numbers each shot the subvariants may vary heavily depending on the steel mould used.
+- KADER
+  - M1 was produced by KADER in Hong Kong and can come in two main colours:
+    - dark brown handle
+    - light brown handle
+    - Both colours can appear on M1a and b. These also can come in rigid or soft plastic versions.
+    - M1a / M1b: unknown (the page does not list them in text).
+    - M1a: dark brown handle
+    - M1b: light brown handle
+- SMILE
+  - M2 was produced by SMILE in Hong Kong and can come in two main colours:
+    - brown handle
+    - light brown handle
+    - M2a / M2b: unknown (the page does not list them in text).
+    - M2a: brown handle
+    - M2a: light brown handle
+    - M2b: light brown handle
+- UNITOY / KADER MACAU
+  - M3 was produced by UNITOY in Hong Kong in brown plastic with silver paint to the blade. Later on the moulds went to KADER   in MACAU and the axes were produced in silver plastic with brown paint to the handle.
+    - The following colours are known to all four subvariants:
+      - moulded in brown plastic with light silver paint
+      - moulded in brown plastic with dark silver paint (not shown above but below)
+      - moulded in silver plastic with dark brown paint
+      - moulded in silver plastic with light brown paint
+      - UNITOY (moulded brown) M3a / M3b / M3c / M3d /M3e.
+      - M3a: moulded brown
+      - M3e: moulded brown
+      - KADER MACAU (moulded silver) M3a / M3b / M3c / M3d /M3e.
+      - M3a: dark brown paint
+      - M3b: dark brown paint
+      - M3c: dark brown paint
+      - M3d: light brown paint
+- LILI LEDY
+  - M4 was produced by LILI LEDY in Mexico and can come in two main colours:
+    - reddish dark brown
+    - yellowish dark brown
+    - M4a / M4b: unknown (the page does not list them in text).
+    - M4a: reddish dark brown
+    - M4b: yellowish dark brown
+- Brazil
+  - This axe was produced by MODEL TREM for the “AVENTURA NA GALÁXIA” line in Brazil . These are not made out of plastic but some lead-tin-alloy. The mould was only used in the mid 80s and came with their resident Gamorrean Guard figure:
+    - lead-tin-alloy painted brown
+    - lead-tin alloy painted brown
+- Mexico
+  - Bootleg production in Mexico was not carried out by larger factories, but rather small family businesses that made their own molds and had their own machines to inject the plastic. Therefore there is no specific lines or producers known.
+  - These axes shown below were only produced in the 80s and came in accessory sets and were also packed with various figures including a fully articulated (f/a) Gamorrean Guard. Here shown is two colours known:
+    - dark brown (silver paint left)
+    - light brown (unpainted)
+- Poland
+  - This axe was produced by Spółdzielnia Rzemieślnicza “Wytwórczość Różna” for the so called “ DELUXE ” line in Poland . The mould was only used in the 80s (1986-89) and came with the resident Gamorrean Guard figure. The axe is known in the following colours:
+    - yellow
+    - red
+    - light green
+    - dark green
+    - brown
+    - Colour comparison
+- R1:
+  - The R1 axe is a newer reproduction out there. They do swim when submerged in water and therefore are an easy spot, because in this case originals don’t. The material has a minor flexibility.
+  - They do mostly resemble the M3 version from UNITOY and are made out of brown plastic with silver painted blade.
+- R2:
+  - The R2 axe is one of the newest reproductions out there. They don’t swim when submerged in water and the material they are made of is only slightly flexible. They are otherwise as close as possible to the original. A good tell-tale here is that the blade doesn’t mimic two different surface structures like the original: rough metal and sharpened/smoothed to the front of the blade.
+  - They do mostly resemble the M3 version from KADER MACAU moulded in silver and painted brown.
+- R2:
+  - The R3 staff is a simple recast and does exist in many colours, painted and unpainted. They don’t swim when submerged in water and the material they are made from is flexible to a point and then will snap immediately. Like all recasts, these can have more or less air entrapments.
+  - They are cast from the M4 version made by LILI LEDY. They often get used by getting added to bootlegs (mainly Mexican) to “complete” them.
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/gamorrean-axe/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

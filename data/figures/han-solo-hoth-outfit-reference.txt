@@ -1,0 +1,74 @@
+Figure Name: Han Solo (Hoth Outfit)
+Aliases: Han Solo (Hoth Outfit); Hoth Outfit
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+Han Solo (Hoth Outfit) is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 31/32-back onward.
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-1.txt under Figure Name: Han Solo (Hoth Outfit). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Unitoy/ Kader China
+  - II: Smile
+  - III: Kader/ PBP
+  - POCH GUIDE
+  - MOULD & HEAD COMPARISON
+  - REBEL BLASTER
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- FIGURE GUIDE: OVERVIEW
+  - Above you can see a group shot of nearly all important vintage Han Solo (Hoth Outfit) variants. First row is PBP figures, second row Kader plus POCH and third row Unitoy and Smile. I will go into deeper detail each group below.
+- Unitoy/ Poch/ Kader China
+  - Above you can see following variants (left to right):
+    - Unitoy with very light brown pants/boots
+    - Unitoy with light brown pants/boots (No Coo)
+    - Unitoy with greenish brown pants/boots
+    - Unitoy with grey-brown pants/boots
+    - Unitoy with dark grey-brown pants/boots
+  - Whilst the Unitoy figures came with blue M2 or M3 Rebel Blaster, the No Coo was usually paired with a black-blue M5 Rebel Blaster. Jamie Acott wrote: “ Family I 1b/2b the moulds travelled from Unitoy to Kader to produce the Made in China MOCS (65B onwards) and Made in China Baggies. It is interesting to note that they were almost exclusively paired with a blue/black Kader blaster rather than the usual blue.”
+- Smile
+  - Above you can see following variants (left to right):
+    - Smile
+    - Smile No Coo, different spray mask for the eyes
+    - All Smile figures came with blue M1 Rebel Blaster.
+- Kader/ POCH/ PBP
+  - Above you can see following variants (left to right):
+    - Kader moulded brown legs with blue paint on it (also see Mould-Color Variants )
+    - Kader with light brown painted pants/boots
+    - Kader with brown painted pants/boots and pink face
+    - POCH with Kader Coo and greenish brown pants/boots
+    - POCH with Kader Coo and chocolate brown pants/boots
+    - They usually were paired with blue M5 Rebel Blaster.
+    - POCH with Kader Coo and chocolate brown pants/boots pinkish face
+    - POCH with Kader Coo and chocolate brown pants/boots face variant in colour and eye spray mask.
+  - POCH figures are often poorly sonic welded. As you can see above the example to the left can be completely disassembled. The right example is only poorley welded to the upper torso half. Please be carefull on those when trying to disassemble: The torso halves are often very brittle and can break very easily.
+  - Refer to the POCH GUIDE below for more information on this variant.
+  - PBP (Kader No Coo) so called violet/lilac torso with pale creme face.
+  - PBP (Kader No Coo) white face
+  - PBP (Kader No Coo) white face with little pink sprayed over it
+  - PBP (Kader No Coo) white face with much pink sprayed over it
+  - PBP (Kader No Coo) pure pink face (no white underneath)
+  - Those PBP Han Hoth figures mainly appeared with black-blue M7 Imperial Blasters.
+  - Similar to POCH (early PBP) the PBP produced figures can be also poorley welded. Above and below you can see two PBP so called violet/lilac torso variants with pale creme face. Left one is poorly welded whilst the figure to the right is firmly sonic welded.
+- Notes from the page with the photo credit name removed
+  - The figure shown to the second from the left is the so called Poch “chocolate-brown” Han Hoth. Compared to its COO counterparts from Kenner you can see that the boot colour is very significant. Kenner released quite a few different figures with the same COO: The “normal” coloured one, a lighter booted one and the so called “melded” legs variant. The Poch variant was confirmed by now on the only carded example known shown below.
+  - Mike_Skywalker came across two slightly different versions of this figure shown on the picture above. Especially the colour from the face, from the white parts and the colour of the torso, differ quite a bit. You can also see that both belt buckle variants do exist on those too. I myself (thanks to Kenneth_B) was also able to find those two variants by now, but hadn’t the time yet to picture them myself.
+  - This figure can also have melt-marks on the back. Both my examples have none, but melt marks are not a must on those figures, as already mentioned.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/han-solo-hoth-outfit/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

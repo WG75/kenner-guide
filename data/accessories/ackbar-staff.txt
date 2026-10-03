@@ -1,0 +1,57 @@
+Accessory Name: Ackbar Staff
+Aliases: Ackbar Staff
+Category: Accessory
+
+Overview:
+Ackbar Staff is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1: Smile
+  - M2: Unitoy/ Lili Ledy
+  - M3: Taiwan UM
+  - M4: Taiwan UM
+  - The Ackbar Staff was released with the following combinations of colour to figure:
+    - Black Ackbar Staff:
+      - Admiral Ackbar
+      - Admiral Ackbar (Lili Ledy)
+  - There are 4 main mould variations on the Ackbar Staff.  Taiwan (M3) retooled the mould twice (M3_1 to M3_2 to M3_3) and came with a new mould M4 after all. Subvariants do exist on M4 and there may be more on all moulds not documented. As a result of the fact that these were shot on a sprue tree in higher numbers each shot the subvariants may vary heavily depending on the steel mould used.
+- SMILE
+  - M1 was produced by SMILE in Hong Kong. The following colours are known:
+    - deep black
+  - The SMILE version is longer then the UNITOY version. It also has sharped edges whereas the UNITOY is much more smooth and rounded at some deatils.
+- UNITOY / LILI LEDY
+  - M2 was produced by UNITOY in Hong Kong and LILI LEDY in Mexico and can come in two main colours:
+    - greyish (Lili Ledy)
+    - glossy black
+- Taiwan (UM)
+  - M3 was produced by UNIVERSAL MANUFACTURERS in TAIWAN (TJ) . The steel mould was retooled twice at the Taiwan factory probably due to problems while producing. The thin staff (M3_1) was thickened (M3_2) and at a later point the ejector pins were adequate enlarged (M3_3). The following colours are known:
+    - glossy black
+    - dull black (greyish)
+    - dull black
+    - M3_1/2/3: unknown (the page does not list them in text).
+    - M2a glossy black
+    - M2b glossy black
+    - M2c dull black
+- Taiwan (UM)
+  - M4 was produced by UNIVERSAL MANUFACTURERS in TAIWAN (TJ) . After the retools of M3 the factory decided to make a new mould all over. The following colours are known:
+    - – dull blueish black
+    - – dull black
+    - M4a/b: unknown (the page does not list them in text).
+    - M4b: dull blueish black
+    - M4a: dull black
+- R1:
+  - The R1 is one of the most common reproductions out there. It has been around for decades. They are casted in black plastic. Above you can see the mould differences between Unitoy M2 and R1 .
+  - As you can see above they exist in different shades. They don’t swim when submerged in water and therefore are an easy spot. The following colours are known:
+    - black (glossy)
+    - black (semi glossy)
+    - black (dull)
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/ackbar-staff/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

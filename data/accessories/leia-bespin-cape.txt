@@ -1,0 +1,65 @@
+Accessory Name: Leia Bespin Cape
+Aliases: Leia Bespin Cape
+Category: Accessory
+
+Overview:
+Leia Bespin Cape is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - CAPE OVERVIEW
+  - MI:  Kader
+  - M2: Unitoy
+  - M3: Lili Ledy
+  - M4: Smile
+  - M5: Unitoy
+  - The Leia Bespin Cape was usually released with the following combinations of colour to figure:
+    - Pink Vinyl/Orange Printed Cape:
+      - Princess Leia (Bespin)
+  - There are 6 main variations plus subvariants. Subvariants do exist and may not all be documented. As a result of the fact that these were produced from a vinyl sheet bought from a third party involved, the subvariants may vary heavily depending on the supplier.
+  - Vinyl cape material (PVC) is made out of a heated mass, rolled and milled in several processes to finally get printed or not. That is important to know, because shrinkage can occur to them when heated again, also depending if they were cold milled or heated milled in the last steps and the directions they were milled. Giving exact dimensions of 35+ year old PVC capes is not very helpful for a guide. They were likely die-cut under tension which would also contribute to capes produced in varying sizes from the same source.
+  - So overlaying those to see differences isn’t helpful in most cases. What we have to do is look for overall differences in shapes, forms and die-cuts. For that reason I will refrain on measurements on all vinyl capes but have a scale on all my pictures for reference.
+  - The Leia Bespin cape is unique within the vintage Star Wars line as it’s the only cape featuring a print.
+- KADER
+  - M1 was produced by KADER in Hong Kong. The following colours are known:
+    - Beige(faded)/red print
+    - Pink/reddish-orange print
+    - Pink/orange print
+    - Beige faded print
+    - Pink/reddish orange print
+- UNITOY
+  - M2 was produced by UNITOY in Hong Kong. The cape was also used by POCH/PBP for their releases. The following colours are known:
+    - Light-pink/brown-orange print
+    - Light-pink/brown orange print
+- LILI LEDY
+  - M3 was produced by LILI LEDY in Mexico. The following colours are known:
+    - Pink/orange print
+- SMILE
+  - M4 was produced by SMILE in Hong Kong. The following colours are known:
+    - Light-pink/orange print ( M4a )
+    - Light-pink/crimson print ( M4b )
+    - Pink/reddish-orange print ( M4a )
+    - Pink/reddish-orange print (crosshatch back) ( M4b)
+    - Light-pink/orange print (M4a)
+    - Light-pink/crimson print (M4b)
+    - Pink/reddish-orange print (M4a)
+    - Pink/reddish-orange print (crosshatch back) (M4b)
+- UNITOY
+  - M5 was produced by UNITOY in Hong Kong. The following colours are known:
+    - Pink/dark reddish-orange print (crosshatch back)
+    - Pink/reddish-orange print (crosshatch front)
+    - Pink/reddish-orange print (stripe pattern)
+- UNDER INVESTIGATION
+  - M6 was probably produced by UNITOY but also used for KADER in Hong Kong. This cape is currently under investigation. The following colours are known:
+    - Pink/dark reddish-orange print ( M6a )
+    - Pink/reddish-orange print ( M6b )
+    - Pink/dark reddish-orange print (M6a)
+    - Pink/reddish-orange print (M6b)
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/leia-bespin-cape/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

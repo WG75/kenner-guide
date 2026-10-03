@@ -1,0 +1,34 @@
+Accessory Name: Emperor Cane
+Aliases: Emperor Cane
+Category: Accessory
+
+Overview:
+Emperor Cane is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1: Smile
+  - M2: Unitoy
+  - The Emperor Cane was released with the following combinations of color to figure:
+    - Black Emperor Cane:
+      - Emperor
+  - There are 2 main mould variations on the Emperor Cane.  As a result of the fact that these were shot on a sprue tree in higher numbers there might be subvariants in existence.
+- SMILE
+  - M1 was produced by SMILE  in Hong Kong and can come in two main colors:
+    - greyish black
+    - true black
+- Unitoy
+  - M2 was produced by UNITOY in Hong Kong and can come in two main colors:
+    - greyish black
+    - true black
+- Bootlegs
+  - Coming soon
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/emperor-cane/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

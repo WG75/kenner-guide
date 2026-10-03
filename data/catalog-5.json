@@ -1,0 +1,206 @@
+{
+  "name": "VF-CB catalog",
+  "aliases": [
+    "catalog"
+  ],
+  "part": "5 of 6",
+  "sources": [
+    "https://www.variantvillain.com/characters/sw/",
+    "https://www.variantvillain.com/accessory-guide/"
+  ],
+  "figures": [],
+  "accessories": [
+    {
+      "name": "Telescoping Lightsaber",
+      "file": "accessories/telescoping-lightsaber.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
+      "status": "existing"
+    },
+    {
+      "name": "Handheld Lightsaber",
+      "file": "accessories/handheld-lightsaber.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/handheld-lightsaber/",
+      "status": "created"
+    },
+    {
+      "name": "Leia Blaster",
+      "file": "accessories/leia-blaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/leia-blaster/",
+      "status": "existing"
+    },
+    {
+      "name": "Imperial Blaster",
+      "file": "accessories/imperial-blaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/imperial-blaster/",
+      "status": "existing"
+    },
+    {
+      "name": "Rebel Blaster",
+      "file": "accessories/rebel-blaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/rebel-blaster/",
+      "status": "existing"
+    },
+    {
+      "name": "Jawa Blaster",
+      "file": "accessories/jawa-blaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/jawa-blaster/",
+      "status": "existing"
+    },
+    {
+      "name": "Bespin Blaster",
+      "file": "accessories/bespin-blaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/bespin-blaster/",
+      "status": "created"
+    },
+    {
+      "name": "Pilot Blaster",
+      "file": "accessories/pilot-blaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/pilot-blaster/",
+      "status": "created"
+    },
+    {
+      "name": "Palace Blaster",
+      "file": "accessories/palace-blaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/palace-blaster/",
+      "status": "created"
+    },
+    {
+      "name": "Biker Scout Blaster",
+      "file": "accessories/biker-scout-blaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/biker-scout-blaster/",
+      "status": "created"
+    },
+    {
+      "name": "Endor Blaster",
+      "file": "accessories/endor-blaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/endor-blaster/",
+      "status": "created"
+    },
+    {
+      "name": "Chewbacca Bowcaster",
+      "file": "accessories/chewbacca-bowcaster.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/chewbacca-bowcaster/",
+      "status": "existing"
+    },
+    {
+      "name": "Imperial Hoth Rifle",
+      "file": "accessories/imperial-hoth-rifle.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/imperial-hoth-rifle/",
+      "status": "created"
+    },
+    {
+      "name": "Bossk Rifle",
+      "file": "accessories/bossk-rifle.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/bossk-rifle/",
+      "status": "created"
+    },
+    {
+      "name": "IG-88 Rifle",
+      "file": "accessories/ig-88-rifle.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/ig-88-rifle/",
+      "status": "created"
+    },
+    {
+      "name": "Hoth Rebel Rifle",
+      "file": "accessories/hoth-rebel-rifle.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/hoth-rebel-rilfe/",
+      "status": "created"
+    },
+    {
+      "name": "AT-AT Driver Rifle",
+      "file": "accessories/at-at-driver-rifle.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/at-at-driver-rifle/",
+      "status": "created"
+    },
+    {
+      "name": "Leia Boushh Rifle",
+      "file": "accessories/leia-boushh-rifle.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/leia-boushh-rifle/",
+      "status": "created"
+    },
+    {
+      "name": "Ree Yees Rifle",
+      "file": "accessories/ree-yees-rifle.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/ree-yees-rifle/",
+      "status": "created"
+    },
+    {
+      "name": "Prune Face Rifle",
+      "file": "accessories/prune-face-rifle.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/prune-face-rifle/",
+      "status": "created"
+    },
+    {
+      "name": "SA80 Rifle",
+      "file": "accessories/sa80-rifle.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/sa80-rifle/",
+      "status": "created"
+    },
+    {
+      "name": "Gamorrean Axe",
+      "file": "accessories/gamorrean-axe.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/gamorrean-axe/",
+      "status": "created"
+    },
+    {
+      "name": "Amanaman Staff",
+      "file": "accessories/amanaman-staff.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/amanaman-staff/",
+      "status": "created"
+    },
+    {
+      "name": "Gaderffii Stick",
+      "file": "accessories/gaderffii-stick.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/gaderffii-stick/",
+      "status": "existing"
+    },
+    {
+      "name": "Teebo Axe",
+      "file": "accessories/teebo-axe.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/teebo-axe/",
+      "status": "created"
+    },
+    {
+      "name": "Ackbar Staff",
+      "file": "accessories/ackbar-staff.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/ackbar-staff/",
+      "status": "created"
+    },
+    {
+      "name": "Emperor Cane",
+      "file": "accessories/emperor-cane.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/emperor-cane/",
+      "status": "created"
+    },
+    {
+      "name": "Ewok Spear",
+      "file": "accessories/ewok-spear.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/ewok-spear/",
+      "status": "created"
+    },
+    {
+      "name": "Emperor’s Royal Guard Pike",
+      "file": "accessories/erg-pike.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/erg-pike/",
+      "status": "created"
+    },
+    {
+      "name": "Yoda Cane",
+      "file": "accessories/yoda-cane.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/yoda-cane/",
+      "status": "created"
+    },
+    {
+      "name": "General Madine Staff",
+      "file": "accessories/general-madine-staff.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/general-madine-staff/",
+      "status": "created"
+    },
+    {
+      "name": "Vibro Axe",
+      "file": "accessories/vibro-axe.txt",
+      "url": "https://www.variantvillain.com/accessory-guide/vibro-axe/",
+      "status": "created"
+    }
+  ]
+}

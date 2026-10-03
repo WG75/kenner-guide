@@ -1,0 +1,42 @@
+Figure Name: Rebel Commander
+Aliases: Rebel Commander
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+Rebel Commander is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 41/45/47/48-back; some continued onto ROTJ/Trilogo. [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-3.txt under Figure Name: Rebel Commander. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- To me the „black“ boots PBP Rebel commander (shown in the middle) is kind of a transition figure from the “Poch” to the “PBP” period (see introduction). That’s why I also want to show him here. As you can see it has “Hong Kong” COO, has melt marks on its back and is not made out of the typical harder PBP material. Nevertheless it only appeared on PBP ROTJ cards and some Trilogos.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Unitoy
+  - II: Smile
+  - III: Kader/ Lili Ledy
+  - POCH GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Notes from the page with the photo credit name removed
+  - To me the „black“ boots PBP Rebel commander (shown in the middle) is kind of a transition figure from the “Poch” to the “PBP” period (see introduction). That’s why I also want to show him here. As you can see it has “Hong Kong” COO, has melt marks on its back and is not made out of the typical harder PBP material. Nevertheless it only appeared on PBP ROTJ cards and some Trilogos.
+  - The counterparts from Kenner can have regular light brown boots or darker brown boots (see first picture), but these are still much lighter painted compared to the PBP version.
+  - You can see that all PBP Rebel Commanders have certain characteristics in common. The most obvious one is the very dark painted boots. Further more the beard seems always to be kind of “longer” on the right side. The way the the “dots” on chest are painted can differ. Normally it’s painted with less color (right example), but there is also the so called “connected” ones existing (see left example).
+  - The COO is shown here. The melt marks on that variant are very well documented. As you can see above the marks follow a certain pattern, even though some are more and some are less significant. This is the best example to show that these marks should be imprints from a tool during assembly.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/rebel-commander/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

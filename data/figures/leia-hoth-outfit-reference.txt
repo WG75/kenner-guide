@@ -1,0 +1,39 @@
+Figure Name: Leia (Hoth Outfit)
+Aliases: Leia (Hoth Outfit); Hoth Outfit; Hoth Leia
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+Leia (Hoth Outfit) is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 41/45/47/48-back; some continued onto ROTJ/Trilogo. [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-3.txt under Figure Name: Leia (Hoth Outfit). That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Kader/ Kader China
+  - II: Smile
+  - III: Unitoy/ Meccano
+  - POCH GUIDE
+  - LEIA BLASTER GUIDE
+  - DON’T RELY ON JUST THE COO TO IDENTIFY A FIGURE.  Mould, paint colour, plastic colour and figure assembly traits are also needed to confirm your figure’s origins.
+- Notes from the page with the photo credit name removed
+  - The second figure from the left in the picture above is assumed to be the Poch version of Leia Hoth. Shown next to this variant are the Kenner counterparts with all different kind of hair colours known to exist. The carded one shown belongs to J.C. and I hope to get a clearer picture soon to confirm this Poch variant. The main characteristics are the greenish eyebrows, the smaller painted emblem and the darker boots (although the picture doesn’t show that very well). The boot colour is similar to the one applied on the Poch Luke Farmboy. On both figures this colour can differ heavily in its shades.
+  - Shown here is  the facial details. They differ slightly from all Kenner versions in its colour. Most significant seem to be the greenish eyebrows. Very strange indeed, but I have seen this on two examples now (on the third the eyebrows were gone). To the right you can see a typical PBP looking spray-job on the hip. The colour seems to be the same as used for painting the pale hands and some pale faces.
+  - Shown here is the COO belonging to this variant. To the right you can see that this Poch variant also has the typical melt marks from kind of a tool during assembly. Some are more significant, some are less. Of course this area is kind of extended and is often damaged, but if you have a look on mainly the third picture I think you can see this is rather from a tool then a playwear. If you compare the location of the dents with the first picture you will also recognize that these marks follow some kind of pattern.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/esb/leia-hoth-outfit/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

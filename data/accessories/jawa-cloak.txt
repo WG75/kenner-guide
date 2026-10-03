@@ -1,4 +1,5 @@
 Accessory Name: Jawa Cloth Cloak
+Aliases: Jawa Cloak; Cloth Cloak
 
 Category:
 Clothing / Soft Goods

@@ -1,0 +1,47 @@
+Accessory Name: Bib Fortuna Staff
+Aliases: Bib Fortuna Staff
+Category: Accessory
+
+Overview:
+Bib Fortuna Staff is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
+
+Which figures / mould and colour notes (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - MOULD COMPARISON
+  - M1: Smile
+  - M2: Kader / Lili Ledy
+  - M3: Universal Manufacturers
+  - The Bib Fortuna Staff was released with the following combinations of colour to figure:
+    - Grey Bib Fortuna Staff:
+      - Bib Fortuna
+      - Bib Fortuna (Lili Ledy)
+  - There are 3 main mould variations on the Bib Fortuna Staff. Subvariants on M3 do exist. As a result of the fact that these were shot on a sprue tree in higher numbers each shot the subvariants may vary heavily depending on the steel mould used.
+- SMILE
+  - M1 was produced by SMILE in Hong Kong. The following colours are known:
+    - light grey
+    - grey
+- KADER / LILI LEDY
+  - M2 was produced by KADER in Hong Kong and LILI LEDY in Mexico. The following colours are known:
+    - yellowish light grey
+    - light grey
+    - dark grey (Lili Ledy)
+- UNIVERSAL MANUFACTURERS
+  - M3 was produced by an unknown factory in TAIWAN . The following colours are known:
+    - grey
+    - yellowish dark grey
+    - dark grey
+    - metallic (not pictured)
+    - M3a/b: unknown (the page does not list them in text).
+    - m3a: grey
+    - m3a: yellowish dark grey
+    - m3a: dark grey
+- Bootlegs
+  - Coming soon
+
+Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
+Rarity: unknown unless a section above states it.
+
+Sources:
+https://www.variantvillain.com/accessory-guide/bib-fortuna-staff/
+https://www.variantvillain.com/accessory-guide/
+https://www.variantvillain.com/knowledge/factory-codes/

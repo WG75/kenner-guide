@@ -1,0 +1,44 @@
+Figure Name: Lumat
+Aliases: Lumat
+Packaging: Return of the Jedi
+Category: Figure
+
+Overview:
+Lumat is a vintage Kenner Star Wars figure from the Return of the Jedi line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: unknown - not established in the reference workbook
+Workbook block: data/compatibility/debut-cardbacks-reference-rotj-4.txt under Figure Name: Lumat. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+Cardbacks named on the Variant Villain page (documented cardings, not a confirmed debut):
+- Lumat was released on Lili Ledy 50bk [50-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review], ROTJ 79, Trilogo and 92bk POTF cardbacks.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Lili Ledy (MIM)
+  - LUMAT BOW GUIDE
+  - LUMAT QUIVER GUIDE
+  - LUMAT HOOD GUIDE
+- Lili Ledy
+  - Above you can see following variations (left to right):
+    - Dark brown eyes, mid grey-brown hood
+    - Very dark brown eyes, light grey-brown hood
+  - LILI LEDY in Mexico produced the Lumat figure and accessories. In a continual search for cheaper bases of production, Kenner added Lili Ledy to their rota of vendors in Asia, to include their factory over the US border in Tijuana, Mexico. With greater Kenner oversight, the quality control in this Tijuana plant was higher than the previous output from Lili Ledy’s Mexico City operation.
+  - The tooling for Lumat was only used in Mexico, so only minor paint variations exist on this figure. No country of origin or date stamps were ever applied.
+  - Lumat was released on Lili Ledy 50bk [50-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review], ROTJ 79, Trilogo and 92bk POTF cardbacks.
+  - Lumat was packaged with his own unique hood, quiver and light brown bow. These accessories are yet to be documented on Variant Villain.
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+Sources:
+https://www.variantvillain.com/characters/rotj/lumat/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/

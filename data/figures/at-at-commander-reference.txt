@@ -1,0 +1,54 @@
+Figure Name: At-At Commander
+Aliases: At-At Commander; AT-AT Commander; General Veers
+Packaging: The Empire Strikes Back
+Category: Figure
+
+Overview:
+At-At Commander is a vintage Kenner Star Wars figure from the Empire Strikes Back line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
+
+Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+
+Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): ESB 41/45/47/48-back; some continued onto ROTJ/Trilogo. [48-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
+Workbook block: data/compatibility/debut-cardbacks-reference-esb-5.txt under Figure Name: AT-AT Commander. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
+
+COO / factory and body notes from the source page (evidence: documented where the page states them):
+- Families and notes named on the page index
+  - I: Smile
+  - II: Unitoy / PBP
+  - BESPIN BLASTER
+
+Accessories:
+- Named in the notes above when the page states them. If none are named, what it came with is unknown from the Variant Villain page.
+
+Variant questions:
+1. What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)?
+2. Which head, paint or body trait matches a section above?
+3. Which accessory mould or colour is with it?
+4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
+
+
+Other sources (these do not replace the Variant Villain notes or the workbook Debut Kenner Cardback line):
+Wikipedia list of Kenner Star Wars action figures (evidence: documented):
+- Lists AT-AT Commander on the 45-back "The Empire Strikes Back" card, No. 69620, 1982.
+- https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures
+- That list entry is not the Debut Kenner Cardback. The workbook line is the debut record.
+Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtATATCommander.asp
+- Source: ( The Empire Strikes Back )
+- Date Stamp: 1980
+- Release Date: 1981
+- Carded Availability: The Empire Strikes Back Return of the Jedi Tri-Logo
+- Assortment No.: 69620
+- Weapons and Accessories: Blue Bespin blaster
+- Point of Interest: This figure was included in the Rebel Command Center Adventure Set , but made it's first carded appearance on The Empire Strikes Back 41 back card. This figure also appeared as General Veers on a Canadian exclusive skin wrapped card*.
+- Major variations: Though all vintage figures have minor variations, the AT AT Commander has on sculpting variation of interest. The figure was available with two slightly different chest sculpts. The easiest way to spot them is to look on the figure's back. On one version, which also has more defined folds in the tunic under the belt, sports two short rectangles under the three lines on the upper back, while the other version has two larger rectangles that, together, are the same width as the three lines above it. There is no indication of either version being any more rare than the other. *The Canadian Skin Wrapped figures were produced for Sears Canada and were included as exclusive bonus figures in multi-packs created for the holiday catalog.
+- Comment paragraphs on that page are not copied. Where the point of interest names a debut and the workbook debut line does not, the debut is conflicting sources, unresolved. The workbook line stays the debut record.
+- imperialgunnery.com: unknown for this figure. No section on the staff/axe or helmet/hood guides named it.
+- https://imperialgunnery.com/staffs-axes.htm
+- https://imperialgunnery.com/helmets-hoods.htm
+- theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
+- https://theswca.com/
+
+Sources:
+https://www.variantvillain.com/characters/esb/at-at-commander/
+https://www.variantvillain.com/knowledge/introduction-to-coos/
+https://www.variantvillain.com/knowledge/factory-codes/
