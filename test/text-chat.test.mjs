@@ -2,6 +2,7 @@
 // Run from the repo root:  node test/text-chat.test.mjs
 // fetch is mocked: the real OpenAI API is never called.
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
@@ -475,6 +476,88 @@ await test("photo-identified Vader then 'which card did this come on?' ranks Vad
 await test("photo-identified Vader then bare 'which card?' ranks Vader's debut file first", async () => {
   const { json } = await call({ message: "which card?", flowState: vaderFlow });
   assertDebutFileFirst(json, "Darth Vader");
+});
+
+function debutFigureRecords() {
+  const dir = path.join(root, "data", "compatibility");
+  const records = [];
+  for (const name of fs.readdirSync(dir)) {
+    if (!name.startsWith("debut-cardbacks-reference")) continue;
+    const text = fs.readFileSync(path.join(dir, name), "utf8");
+    for (const part of text.split(/\n(?=Figure Name: )/)) {
+      const figure = part.match(/^Figure Name: (.+)$/m)?.[1]?.trim();
+      if (!figure) continue;
+      const aliases = (part.match(/^Aliases: (.+)$/m)?.[1] || "")
+        .split(";")
+        .map(label => label.trim())
+        .filter(Boolean);
+      records.push({ figure, aliases });
+    }
+  }
+  return records;
+}
+
+function figureBlock(prompt, figure) {
+  const start = prompt.indexOf(`Figure Name: ${figure}`);
+  if (start < 0) return "";
+  const rest = prompt.slice(start);
+  const next = rest.indexOf("\nFigure Name: ", 1);
+  return next < 0 ? rest : rest.slice(0, next);
+}
+
+await test("every debut-cardbacks figure name and alias retrieves that block", async () => {
+  const records = debutFigureRecords();
+  assert.equal(records.length, 96);
+  const lookups = [];
+  for (const record of records) {
+    lookups.push([record.figure, record.figure]);
+    for (const alias of record.aliases) {
+      if (alias.toLowerCase() === record.figure.toLowerCase()) continue;
+      lookups.push([alias, record.figure]);
+    }
+  }
+  for (const [asked, figure] of lookups) {
+    const before = calls.length;
+    const { json } = await call({ message: `what cardback did ${asked} come on?` });
+    assert.equal(json.reply, "MOCK ANSWER", `${asked} reply: ${json.reply}`);
+    assert.notEqual(json.offTopic, true, asked);
+    assert.equal(calls.length, before + 1, `${asked} took the unknown path`);
+    const prompt = calls.at(-1).body.messages.at(-1).content;
+    const block = figureBlock(prompt, figure);
+    assert.ok(block, `no block for ${figure} when asked '${asked}'. sources: ${json.sources}`);
+    assert.match(block, /Debut Kenner Cardback:/, figure);
+  }
+});
+
+await test("typed name then 'this' cardback question retrieves that debut block", async () => {
+  const cases = [
+    ["jawa", "Jawa"],
+    ["Vader", "Darth Vader"],
+    ["Yoda", "Yoda"],
+    ["Boba Fett", "Boba Fett"]
+  ];
+  for (const [typed, figure] of cases) {
+    for (const follow of ["what cardback did this come on?", "what cardback did it come on?", "what cardback did mine come on?"]) {
+      const before = calls.length;
+      const { json } = await call({
+        message: follow,
+        history: [
+          { role: "user", content: typed },
+          { role: "assistant", content: `Here is an overview of ${figure}.` },
+          { role: "user", content: follow }
+        ]
+      });
+      assert.equal(json.reply, "MOCK ANSWER", `${typed} / ${follow}: ${json.reply}`);
+      assert.equal(calls.length, before + 1, `${typed} / ${follow} took the unknown path`);
+      const sent = calls.at(-1).body;
+      const prompt = sent.messages.at(-1).content;
+      const block = figureBlock(prompt, figure);
+      assert.ok(block, `${typed} -> ${figure} missing for '${follow}'. sources: ${json.sources}`);
+      assert.match(prompt, new RegExp(`figure in play is ${figure.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`));
+      assert.match(sent.messages[0].content, /Do not say there is no cardback data/);
+      if (figure === "Jawa") assert.match(block, /Evidence: documented/);
+    }
+  }
 });
 
 await test("A / identify variant stays scripted and does not call the model", async () => {
