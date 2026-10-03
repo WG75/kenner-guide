@@ -4,9 +4,12 @@ Category:
 Accessory
 
 Used With:
-- Luke Skywalker (Early Bird and earliest production)
-- Darth Vader (very early release)
-- Obi-Wan Kenobi (very early release)
+- Luke Skywalker (yellow) on the earliest releases. Most, but not all, Early Bird Lukes had it. Luke is the common DT.
+- Ben Kenobi (blue) on the earliest releases. Extremely rare.
+- Darth Vader (red) on the earliest releases. Extremely rare.
+
+Documented figures (only these three):
+Double-telescoping (DT) lightsabers are documented for Luke Skywalker (yellow), Ben Kenobi (blue) and Darth Vader (red) only, on the earliest releases, before the standard telescoping lightsaber replaced them. Ben and Vader DT lightsabers are extremely rare. Luke is the common one, and most, but not all, Early Bird Lukes had it. Evidence: documented. They are not documented for any other figure.
 
 ---
 
@@ -62,7 +65,7 @@ Key features:
 Notes:
 - Often considered the earliest DT type
 - Found on early Luke Skywalker figures
-- Typically yellow in colour
+- Luke examples are yellow. Ben Kenobi DT lightsabers are blue and Darth Vader DT lightsabers are red. Evidence: documented.
 
 ---
 
@@ -77,7 +80,7 @@ Key features:
 Notes:
 - Found across early production runs
 - Can be associated with multiple factories
-- Colour ranges from pale yellow to deeper yellow
+- Luke examples range from pale yellow to deeper yellow. This is not the Ben (blue) or Vader (red) colour.
 
 ---
 

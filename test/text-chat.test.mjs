@@ -560,6 +560,28 @@ await test("typed name then 'this' cardback question retrieves that debut block"
   }
 });
 
+await test("Early Bird R2-D2 factory question retrieves the probable Unitoy and Kader wording", async () => {
+  const { json } = await call({ message: "which factory made Early Bird R2-D2?" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.equal(calls.length, 1);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /Unitoy and Kader versions are both probable in Early Bird sets/);
+  assert.match(prompt, /no single Early Bird factory is established/);
+  assert.match(prompt, /Factory codes on cards only start at the 32B backs/);
+  assert.doesNotMatch(prompt, /M3 Kader/);
+});
+
+await test("early Vader lightsaber question retrieves the documented DT wording", async () => {
+  const { json } = await call({ message: "what lightsaber came with early Vader?" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  assert.equal(calls.length, 1);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /documented for Luke Skywalker \(yellow\), Ben Kenobi \(blue\) and Darth Vader \(red\) only/);
+  assert.match(prompt, /before the standard telescoping lightsaber replaced them/);
+  assert.match(prompt, /extremely rare/);
+  assert.match(prompt, /most, but not all, Early Bird Lukes had it/);
+});
+
 await test("A / identify variant stays scripted and does not call the model", async () => {
   const a = await call({ message: "A", flowState: { ...vaderFlow, step: "choose_help" } });
   const variant = await call({ message: "identify variant", flowState: { ...vaderFlow, step: "choose_help" } });
