@@ -9,7 +9,7 @@ Chewbacca, Chewy, Chewie, OG, O.G., Original
 Release Information:
 - Released: 1978–1984
 - Appears on: Star Wars, Empire Strikes Back, Return of the Jedi cardbacks
-- Early Bird Certificate Package figure (1978; see references/early-bird-certificate-package.txt) M2 Kader Version
+- Early Bird Certificate Package figure (1978; see references/early-bird-certificate-package.txt). Evidence: probable. Unitoy and Kader versions are both probable in Early Bird sets (Variant Villain: Early Bird sets were sourced from several factories); no single Early Bird factory is established. Factory codes on cards only start at the 32B backs, so a loose figure's factory is judged from sculpt and paint.
 - Part of original 12 Back figures
 
 --------------------------------------------------
@@ -34,6 +34,11 @@ Black-Blue:
 Solid Black:
 - Chewbacca (Lili Ledy)
 - Rebel Commander (Lili Ledy)
+
+Early Bird bowcaster colour (conflicting sources, unresolved):
+- Rebelscum: a green bowcaster is primarily associated with Early Bird sets, and has never been proven exclusive to them
+- Variant Villain: a black-blue Kader M1 bowcaster from Early Bird onward
+- Evidence: unknown. Do not treat either colour as the only Early Bird bowcaster.
 
 Bowcaster Mould Variants:
 - M1: Kader
@@ -69,7 +74,7 @@ Variants:
 - Black (hard pouch paint, dot missing)
 
 Notes:
-- Early Bird release
+- Early Bird release is probable for this Unitoy family, not established as the only Early Bird factory (see Release Information). Evidence: probable.
 - Produced through SW era into ESB (up to ~41 back)
 - Wide pouch colour variation
 - Early pouch paint sprayed (soft edges), later brushed (hard edges)
@@ -151,7 +156,8 @@ Variants:
 - Grey-brown pouch (painted dot)
 
 Notes:
-- Early Bird and 12 back release
+- Early Bird release is probable for this Kader family, not established as the only Early Bird factory (see Release Information). Evidence: probable.
+- 12 back release
 - Sporadic ESB production, later returns in ROTJ/POTF
 - Plastic prone to green discolouration
 - Toe defect present

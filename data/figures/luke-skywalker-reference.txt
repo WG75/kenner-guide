@@ -4,7 +4,7 @@ Category:
 Figure
 
 First Release:
-1978 (Early Bird Certificate Package) M2 Unitoy Version with a Double Telescoping Saber
+1978 (Early Bird Certificate Package) M2 Unitoy Version. Most, but not all, Early Bird Lukes had a yellow double-telescoping lightsaber. Evidence: documented.
 
 ---
 
@@ -65,7 +65,8 @@ Accessory Pairing Rules:
 
 VERY IMPORTANT:
 
-- DT sabers ONLY belong with the earliest Luke figures
+- DT sabers are documented for the earliest Luke Skywalker (yellow), Ben Kenobi (blue) and Darth Vader (red) only, before the standard telescoping lightsaber replaced them. Evidence: documented.
+- Ben and Vader DT lightsabers are extremely rare. Luke is the common one, and most, but not all, Early Bird Lukes had it.
 - ST sabers belong with later production Lukes
 
 Incorrect pairing is one of the most common collector mistakes.
@@ -139,7 +140,7 @@ Collector Notes:
 Pairing Logic:
 
 Early Luke:
-- May have DT saber (rare)
+- Most, but not all, Early Bird Lukes had the yellow DT saber. Luke is the common DT. Evidence: documented.
 
 Mid / Late Luke:
 - Should have ST saber
