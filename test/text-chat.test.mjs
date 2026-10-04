@@ -241,6 +241,8 @@ await test("system prompt carries the brief's rules", async () => {
   assert.match(sys, /71 versions across 12 families/);
   assert.match(sys, /versions unverified/);
   assert.match(sys, /Do not count the versions yourself/);
+  assert.match(sys, /debut-cardbacks block for that figure/);
+  assert.match(sys, /double-telescoping sabre question only for Luke Skywalker, Ben \(Obi-Wan\) Kenobi or Darth Vader/);
   assert.doesNotMatch(sys, /label claims/i);
   assert.doesNotMatch(sys, /Evidence: documented/);
 });
@@ -1045,9 +1047,47 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   const yodaBlock = yodaPrompt.slice(yodaAt).split(/\n\d+\. /)[0];
   assert.match(yodaBlock, /Years: not recorded/);
   assert.match(yodaBlock, /Factories: 4 different factories: Kader, Unitoy, Smile, Top Toys/);
+  assert.equal(yoda.json.actions.some(action => /double-telescoping|telescop/i.test(action.label)), false);
+  assert.ok(yoda.json.actions.some(action => /cardbacks did Yoda come on/i.test(action.label)));
   for (const [label, versions] of [["I Kader HK", 9], ["II Unitoy", 14], ["III Smile", 5], ["IV Top Toys", 1]]) {
     const versionWord = versions === 1 ? "version" : "versions";
     assert.match(yodaBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} — ${versions} ${versionWord}$`, "m"), label);
+  }
+});
+
+await test("Vader count follow-ups are questions the reference data can answer", async () => {
+  const vader = await call({ message: "how many variants does Darth Vader have?" });
+  const labels = vader.json.actions.map(action => action.label);
+  assert.deepEqual(labels, [
+    "How do I tell the Kader versions of Darth Vader apart?",
+    "Which cardbacks did Darth Vader come on?",
+    "Which Darth Vader has the double-telescoping sabre?"
+  ]);
+  assert.ok(labels.every(label => label.length <= 120));
+  const most = await call({ message: "Which figure has the most variants?" });
+  assert.deepEqual(most.json.actions.map(action => action.label), labels);
+
+  const droids = await call({ message: "how many variants does Droids C-3PO have?" });
+  assert.equal(droids.json.actions.some(action => /cardback/i.test(action.label)), false);
+  assert.equal(droids.json.actions.some(action => /double-telescoping|telescop/i.test(action.label)), false);
+
+  for (const label of labels) {
+    const next = await call({ message: label });
+    assert.notEqual(next.json.offTopic, true, label);
+    assert.ok(next.json.sources.length > 0, `${label} -> ${next.json.sources}`);
+    const prompt = calls.at(-1).body.messages.at(-1).content;
+    assert.match(prompt, /Darth Vader/, label);
+    if (/cardbacks/i.test(label)) {
+      assert.ok(next.json.sources.some(source => source.includes("debut-cardbacks")), next.json.sources.join(", "));
+      assert.match(prompt, /Figure Name: Darth Vader/);
+    } else if (/double-telescoping/i.test(label)) {
+      assert.ok(
+        next.json.sources.some(source => /double-telescoping|darth-vader-reference/.test(source)),
+        next.json.sources.join(", ")
+      );
+    } else {
+      assert.ok(next.json.sources.some(source => source.includes("darth-vader")), next.json.sources.join(", "));
+    }
   }
 });
 
