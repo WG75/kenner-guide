@@ -123,7 +123,7 @@ def render(figures, snapshot, by_url):
         "Name: Variant and outfit counts",
         "Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions",
         "",
-        "Counting basis (evidence: documented):",
+        "Counting basis:",
         f"These variant counts were taken from the live Variant Villain figure guides on {fetched} (https://www.variantvillain.com/characters/sw/, /esb/, /rotj/, /potf/ and /droids/). The snapshot is data-source/vv-variant-counts.json. It records each page URL. Power of the Force and Droids and Ewoks use the same roman-numeral figure guide, so they are included.",
         "A figure's variant count is the number of documented manufacturer/region families on that page: lines such as \"I: Kader\" and \"VII: Takara\". A blank label still counts when the numeral is printed (\"II:\"). A label that starts with \"not\" is skipped. A sub-point such as \"IV.1\" is not another family. Paint shades, cape moulds and lightsaber moulds are not part of this count. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families.",
         "Each count was checked against that page's COO sheet or figure-guide image. Where the image and the text disagree, the image is used. A column the sheet marks as not this figure is left out. Stormtrooper's text index lists I-VI. The COO sheet image adds VII: PBP/Lili Ledy, so Stormtrooper is 7. Wicket W. Warrick's Return of the Jedi sheet shows two families, I Smile (HK) and II Taiwan.",
@@ -161,7 +161,7 @@ def split_text(text):
     header = "\n".join([
         "Name: Variant and outfit counts",
         "Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions",
-        "Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Evidence: documented. Do not guess a count that is not in this summary. An unverified figure has no number.",
+        "Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Do not guess a count that is not in this summary. An unverified figure has no number.",
         "",
     ])
     body = text.splitlines(keepends=True)

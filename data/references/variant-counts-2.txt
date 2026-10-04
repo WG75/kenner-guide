@@ -1,6 +1,6 @@
 Name: Variant and outfit counts
 Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
-Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Evidence: documented. Do not guess a count that is not in this summary. An unverified figure has no number.
+Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Do not guess a count that is not in this summary. An unverified figure has no number.
 34. Imperial Tie Fighter Pilot — 3 — I Smile; II Unitoy/ PBP/; III Kader China
 35. Klaatu — 3 — I Smile; II Unitoy; III Lili Ledy (MIM)
 36. Lando Calrissian (Skiff Guard Disguise) — 3 — I Smile; II Unitoy; III Lili Ledy (MIM)

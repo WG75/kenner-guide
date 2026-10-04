@@ -226,9 +226,12 @@ await test("history roles/injection: only user/assistant strings accepted; refer
 await test("system prompt carries the brief's rules", async () => {
   await call({ message: "What was the Early Bird?" });
   const sys = calls[0].body.messages[0].content;
-  for (const re of [/VF-CB/, /British English/, /1977 to 1985/, /Documented/, /Probable/, /Possible/, /Unknown/, /Never invent variants/i, /first four figures \(Luke, Leia, Chewbacca and R2-D2\)/, /Do not call it a "mail-away"/]) {
+  for (const re of [/VF-CB/, /British English/, /1977 to 1985/, /I'm not sure/, /the sources disagree/, /Never invent variants/i, /first four figures \(Luke, Leia, Chewbacca and R2-D2\)/, /Do not call it a "mail-away"/]) {
     assert.match(sys, re);
   }
+  assert.match(sys, /Do not print an "Evidence:" line/);
+  assert.doesNotMatch(sys, /label claims/i);
+  assert.doesNotMatch(sys, /Evidence: documented/);
 });
 
 await test("missing OPENAI_API_KEY: clear message, no fetch", async () => {
@@ -560,7 +563,10 @@ await test("typed name then 'this' cardback question retrieves that debut block"
       assert.ok(block, `${typed} -> ${figure} missing for '${follow}'. sources: ${json.sources}`);
       assert.match(prompt, new RegExp(`figure in play is ${figure.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`));
       assert.match(sent.messages[0].content, /Do not say there is no cardback data/);
-      if (figure === "Jawa") assert.match(block, /Evidence: documented/);
+      if (figure === "Jawa") {
+        assert.match(block, /Star Wars 12A/);
+        assert.doesNotMatch(block, /Evidence:/i);
+      }
     }
   }
 });
@@ -573,8 +579,9 @@ await test("Early Bird R2-D2 factory question retrieves the probable Unitoy and 
   assert.match(prompt, /Unitoy and Kader versions are both probable in Early Bird sets/);
   assert.match(prompt, /no single Early Bird factory is established/);
   assert.match(prompt, /Factory codes on cards only start at the 32B backs/);
-  assert.match(prompt, /Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only/);
+  assert.match(prompt, /Working assumption: Early Bird figures are Unitoy or Kader only/);
   assert.match(prompt, /No Taiwan Early Bird/);
+  assert.doesNotMatch(prompt, /Evidence:/i);
   assert.doesNotMatch(prompt, /M3 Kader/);
   assert.doesNotMatch(prompt, /\[truncated\]/);
 });
@@ -625,7 +632,8 @@ await test("typed variant identifier asks discriminating questions then retrieve
   const prompt = calls.at(-1).body.messages.at(-1).content;
   assert.match(prompt, /REFERENCE: figures\/bossk-reference\.txt/);
   assert.match(prompt, /Figure Name: Bossk/);
-  assert.match(prompt, /say unknown/);
+  assert.match(prompt, /not sure/);
+  assert.doesNotMatch(prompt, /Evidence:/i);
   assert.match(prompt, /Hong Kong/);
 });
 
@@ -742,7 +750,8 @@ await test("Early Bird R2-D2 factory question retrieves part 1 without truncatio
   assert.equal(json.reply, "MOCK ANSWER");
   assert.ok(json.sources.includes("figures/r2-d2-reference-1.txt"), `got ${json.sources}`);
   const prompt = calls.at(-1).body.messages.at(-1).content;
-  assert.match(prompt, /Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only/);
+  assert.match(prompt, /Working assumption: Early Bird figures are Unitoy or Kader only/);
+  assert.doesNotMatch(prompt, /Evidence:/i);
   assert.match(prompt, /No Taiwan Early Bird/);
   assert.doesNotMatch(prompt, /\[truncated\]/);
 });
@@ -1022,7 +1031,8 @@ await test("identify a figure and identify accessories start guided questions", 
   assert.equal(calls.length, 1);
   const prompt = calls.at(-1).body.messages.at(-1).content;
   assert.match(prompt, /Jawa blaster/);
-  assert.match(prompt, /say unknown/i);
+  assert.match(prompt, /not sure/i);
+  assert.doesNotMatch(prompt, /Evidence:/i);
   assert.match(done.json.reply, /MOCK ANSWER/);
   assert.ok(done.json.actions.length >= 2);
   assert.doesNotMatch(done.json.reply, /<<<|FOLLOWUPS/);
