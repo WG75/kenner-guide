@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Fetch Variant Villain character pages and snapshot manufacturer/region counts.
 
-The live page is the source. A count is the figure-guide list of roman
-numerals (I: Kader, II: Unitoy, ...) when that list is in the page text.
-If the page has no figure-guide list, labelled COO Family headings are
-used instead. Paint, cape and sabre sections are recorded and not counted.
-A page with neither list is unverified.
+The live page is the source. This script reads the figure-guide text.
+The committed snapshot also records a later pass over the COO sheet and
+figure-guide images. Re-running this script replaces that image audit.
+Paint, cape and sabre sections are recorded and not counted. A page with
+neither a text list nor a readable image is unverified.
 """
 
 import html

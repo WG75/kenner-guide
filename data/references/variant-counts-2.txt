@@ -1,76 +1,78 @@
 Name: Variant and outfit counts
 Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
 Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Evidence: documented. Do not guess a count that is not in this summary. An unverified figure has no number.
-36. Imperial Tie Fighter Pilot — 3 — I Smile; II Unitoy/ PBP/; III Kader China
-37. Klaatu — 3 — I Smile; II Unitoy; III Lili Ledy (MIM)
-38. Lando Calrissian — 3 — I Kader; II Smile; III Unitoy
-39. Lando Calrissian (Skiff Guard Disguise) — 3 — I Smile; II Unitoy; III Lili Ledy (MIM)
-40. Leia (Hoth Outfit) — 3 — I Kader/ Kader China; II Smile; III Unitoy/ Meccano
-41. Leia Organa (Bespin Gown) — 3 — I Kader/; II Unitoy; III Smile
-42. Lobot — 3 — I Smile; II Unitoy; III Kader
-43. Luke Skywalker (Bespin Fatigues) — 3 — I Smile; II Unitoy; III Kader
-44. Nien Nunb — 3 — I Unitoy; II Smile; III Lili Ledy (MIM)
-45. Princess Leia Organa (Boushh Disguise) — 3 — I Smile / Smile Macau; II Unitoy / Lili Ledy; III Taiwan (U.M.)
-46. R5-D4 — 3 — I Unitoy; V Unitoy; VIII Kader
-47. Rebel Commander — 3 — I Unitoy; II Smile; III Kader/
-48. Rebel Soldier (Hoth Battle Gear) — 3 — I Kader/ Kader China; II Unitoy/ Meccano; III Smile/ PBP
-49. Ree Yees — 3 — I Smile; II Taiwan (U.M.); III Lili Ledy (MIM)
-50. Snaggletooth — 3 — I Smile; II Smile; III Smile/ PBP
-51. The Emperor — 3 — I Smile/; II Unitoy; III Unitoy
-52. Ugnaught — 3 — I Unitoy; II Kader; III Smile
-53. Weequay — 3 — I Unitoy; II Smile/ Lili Ledy; III Unitoy
-54. (Twin-Pod) Cloud Car Pilot — 2 — I Smile/ Lili Ledy; II Unitoy/ PBP
-55. 4-LOM — 2 — I Smile; II Unitoy / PBP
-56. At-At Commander — 2 — I Smile; II Unitoy / PBP
-57. AT-ST Driver — 2 — I Taiwan (U.M.); II Unitoy/ Lili Ledy
-58. B-Wing Pilot — 2 — I Unitoy; II Kader/
-59. Bespin Security Guard (Black) — 2 — I Unitoy / PBP; II Smile
-60. Death Star Droid — 2 — I Kader/ Meccano; II Unitoy
-61. Greedo — 2 — I Smile/ PBP; II Smile
-62. Hammerhead — 2 — I Smile/ PBP; II Smile
-63. Han Solo (in Trench Coat) — 2 — I Smile; II Kader/
-64. Luke Skywalker (Hoth Battle Gear) — 2 — I Unitoy / PBP / Meccano; II Smile
-65. Luke Skywalker (X-Wing Pilot) — 2 — I Unitoy/ PBP; II Kader/ Kader China
-66. Power Droid — 2 — I Kader; II Kader
-67. Princess Leia Organa (in Combat Poncho) — 2 — I Smile; II Kader/
-68. Prune Face — 2 — I Smile; II Kader/
-69. Rancor Keeper — 2 — I Smile/; II Taiwan (U.M.)
-70. Teebo — 2 — I Unitoy/; II Taiwan (U.M.)
-71. Walrus Man — 2 — I Smile/ PBP; II Smile
-72. Wicket W. Warrick — 2 — I Smile/; II Taiwan (U.M.)
-73. Zuckuss — 2 — I Smile; II Unitoy/
-74. A-Wing Pilot — 1 — I Smile
-75. Amanaman — 1 — I Smile
-76. Anakin Skywalker — 1 — I Smile
-77. Artoo-Detoo (R2-D2) with pop-up Lightsaber — 1 — I Smile/ Glasslite
-78. Barada — 1 — I Smile
-79. Droids R2-D2 — 1 — I Smile/ Glasslite
-80. Dulok Scout — 1 — I Unitoy HK
-81. Dulok Shaman — 1 — I Smile HK
-82. EV-9D9 — 1 — I Kader
-83. Han Solo (in Carbonite Chamber) — 1 — I Smile
-84. Imperial Dignitary — 1 — I Kader
-85. Imperial Gunner — 1 — I Kader
-86. King Gorneesh — 1 — I Smile HK
-87. Klaatu (in Skiff Guard Outfit) — 1 — I Smile/
-88. Lando Calrissian (General Pilot) — 1 — I Smile
-89. Logray (Ewoks) — 1 — I Lili Ledy Made in Mexico
-90. Luke Skywalker (Imperial Stormtrooper Outfit) — 1 — I Kader
-91. Luke Skywalker (in Battle Poncho) — 1 — I Smile
-92. Lumat — 1 — I Lili Ledy (MIM)
-93. Nikto — 1 — I Smile/
-94. Paploo — 1 — I Lili Ledy (MIM)
-95. Romba — 1 — I Smile
-96. Urgah Lady Gorneesh — 1 — I Lili Ledy Made in Mexico
-97. Warok — 1 — I Smile
-98. Wicket W.Warrick (Ewoks) — 1 — I Lili Ledy (Made in Mexico)
-99. Yak Face — 1 — I Smile
+34. Imperial Tie Fighter Pilot — 3 — I Smile; II Unitoy/ PBP/; III Kader China
+35. Klaatu — 3 — I Smile; II Unitoy; III Lili Ledy (MIM)
+36. Lando Calrissian (Skiff Guard Disguise) — 3 — I Smile; II Unitoy; III Lili Ledy (MIM)
+37. Leia (Hoth Outfit) — 3 — I Kader/ Kader China; II Smile; III Unitoy/ Meccano
+38. Leia Organa (Bespin Gown) — 3 — I Kader/; II Unitoy; III Smile
+39. Lobot — 3 — I Smile; II Unitoy; III Kader
+40. Luke Skywalker (Bespin Fatigues) — 3 — I Smile; II Unitoy; III Kader
+41. Nien Nunb — 3 — I Unitoy; II Smile; III Lili Ledy (MIM)
+42. Princess Leia Organa (Boushh Disguise) — 3 — I Smile / Smile Macau; II Unitoy / Lili Ledy; III Taiwan (U.M.)
+43. R5-D4 — 3 — I Unitoy; V Unitoy; VIII Kader
+44. Rebel Commander — 3 — I Unitoy; II Smile; III Kader/
+45. Rebel Soldier (Hoth Battle Gear) — 3 — I Kader/ Kader China; II Unitoy/ Meccano; III Smile/ PBP
+46. Ree Yees — 3 — I Smile; II Taiwan (U.M.); III Lili Ledy (MIM)
+47. Snaggletooth — 3 — I Smile; II Smile; III Smile/ PBP
+48. The Emperor — 3 — I Smile/; II Unitoy; III Unitoy
+49. Ugnaught — 3 — I Unitoy; II Kader; III Smile
+50. Weequay — 3 — I Unitoy; II Smile/ Lili Ledy; III Unitoy
+51. (Twin-Pod) Cloud Car Pilot — 2 — I Smile/ Lili Ledy; II Unitoy/ PBP
+52. At-At Commander — 2 — I Smile; II Unitoy / PBP
+53. AT-ST Driver — 2 — I Taiwan (U.M.); II Unitoy/ Lili Ledy
+54. B-Wing Pilot — 2 — I Unitoy; II Kader/
+55. Bespin Security Guard (Black) — 2 — I Unitoy / PBP; II Smile
+56. C-3PO (Removable Limbs) — 2 — I Unitoy; II Smile
+57. Greedo — 2 — I Smile/ PBP; II Smile
+58. Hammerhead — 2 — I Smile/ PBP; II Smile
+59. Han Solo (in Trench Coat) — 2 — I Smile; II Kader/
+60. Luke Skywalker (Hoth Battle Gear) — 2 — I Unitoy / PBP / Meccano; II Smile
+61. Luke Skywalker (X-Wing Pilot) — 2 — I Unitoy/ PBP; II Kader/ Kader China
+62. Power Droid — 2 — I Kader; II Kader
+63. Princess Leia Organa (in Combat Poncho) — 2 — I Smile; II Kader/
+64. Prune Face — 2 — I Smile; II Kader/
+65. Rancor Keeper — 2 — I Smile/; II Taiwan (U.M.)
+66. Teebo — 2 — I Unitoy/; II Taiwan (U.M.)
+67. Walrus Man — 2 — I Smile/ PBP; II Smile
+68. Wicket W. Warrick — 2 — I Smile/; II Taiwan (U.M.)
+69. Zuckuss — 2 — I Smile; II Unitoy/
+70. A-Wing Pilot — 1 — I Smile
+71. Amanaman — 1 — I Smile
+72. Anakin Skywalker — 1 — I Smile
+73. Artoo-Detoo (R2-D2) with pop-up Lightsaber — 1 — I Smile/ Glasslite
+74. Barada — 1 — I Smile
+75. Droids R2-D2 — 1 — I Smile/ Glasslite
+76. EV-9D9 — 1 — I Kader
+77. Han Solo (in Carbonite Chamber) — 1 — I Smile
+78. Imperial Dignitary — 1 — I Kader
+79. Imperial Gunner — 1 — I Kader
+80. Klaatu (in Skiff Guard Outfit) — 1 — I Smile/
+81. Lando Calrissian (General Pilot) — 1 — I Smile
+82. Luke Skywalker (Imperial Stormtrooper Outfit) — 1 — I Kader
+83. Luke Skywalker (in Battle Poncho) — 1 — I Smile
+84. Lumat — 1 — I Lili Ledy (MIM)
+85. Nikto — 1 — I Smile/
+86. Paploo — 1 — I Lili Ledy (MIM)
+87. Romba — 1 — I Smile
+88. Warok — 1 — I Smile
+89. Yak Face — 1 — I Smile
 
-Unverified (the live page text had no roman figure-guide list and no COO Family headings, so no count is given):
-- 8D8 — https://www.variantvillain.com/characters/rotj/8d8/
-- C-3PO (Removable Limbs) — https://www.variantvillain.com/characters/esb/c-3po-removable-limbs/
-- Droids C-3PO — https://www.variantvillain.com/characters/droids/droids-c-3po/
-- Rebel Commando — https://www.variantvillain.com/characters/rotj/rebel-commando/
-- Squid Head — https://www.variantvillain.com/characters/rotj/squid-head/
+Unverified (no readable roman family grid on the COO sheet or figure-guide images, so no count is given):
+- 4-LOM — https://www.variantvillain.com/characters/esb/4-lom/ — Overview photo has no roman family headers.
+- 8D8 — https://www.variantvillain.com/characters/rotj/8d8/ — Close-up photos are numbered 1-2 and are not a roman family grid.
+- Death Star Droid — https://www.variantvillain.com/characters/sw/death-star-droid/ — Overview photo has no roman family headers.
+- Droids C-3PO — https://www.variantvillain.com/characters/droids/droids-c-3po/ — Loose-figure photos have no roman family headers.
+- Dulok Scout — https://www.variantvillain.com/characters/droids/dulok-scout/ — No COO sheet image on the page.
+- Dulok Shaman — https://www.variantvillain.com/characters/droids/dulok-shaman/ — No COO sheet image on the page.
+- General Madine — https://www.variantvillain.com/characters/rotj/general-madine/ — The only image is a loose-figure photo with no roman grid.
+- King Gorneesh — https://www.variantvillain.com/characters/droids/king-gorneesh/ — No COO sheet image on the page.
+- Lando Calrissian — https://www.variantvillain.com/characters/esb/lando-calrissian/ — Family photos are not printed with roman numerals.
+- Logray (Ewoks) — https://www.variantvillain.com/characters/droids/logray-ewoks/ — No COO sheet image on the page.
+- Luke Skywalker — https://www.variantvillain.com/characters/sw/luke-skywalker/ — Lineup photos have no printed roman family headers.
+- Rebel Commando — https://www.variantvillain.com/characters/rotj/rebel-commando/ — Close-up photos are numbered 1-3 and are not a roman family grid.
+- Squid Head — https://www.variantvillain.com/characters/rotj/squid-head/ — Close-up photos are numbered 1-3 and are not a roman family grid.
+- Urgah Lady Gorneesh — https://www.variantvillain.com/characters/droids/urgah-lady-gorneesh/ — No COO sheet image on the page.
+- Wicket W.Warrick (Ewoks) — https://www.variantvillain.com/characters/droids/wicket-w-warrick/ — No COO sheet image. The page says a later sheet is coming soon. The Return of the Jedi Wicket sheet is a different figure and shows two families.
 
 Sources: live Variant Villain character pages fetched 2026-10-04, stored in data-source/vv-variant-counts.json. Outfit totals use the catalog names in data/catalog-1.json through data/catalog-6.json. Regenerated by tools/build-variant-counts.py.

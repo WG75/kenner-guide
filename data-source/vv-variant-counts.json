@@ -1,7 +1,7 @@
 {
   "fetched": "2026-10-04",
   "source": "https://www.variantvillain.com/",
-  "rule": "Count roman-numeral manufacturer/region families from the page's figure-guide text (I: Kader). A blank label takes the manufacturer on the next line (II: then Smile). Jawa's guide has no colons (I Kader). A repeated guide that starts again at I is one list; keep the longer labels. If that list is absent, count COO Family headings. Skip a label that starts with 'not'. IV.1 is a sub-point, not a family. Do not count paint, cape, sabre or mould-comparison sections. Stormtrooper's text index is I-VI; the COO sheet image adds VII: PBP/Lili Ledy. No list means unverified.",
+  "rule": "Count roman-numeral manufacturer/region families from the COO sheet or figure-guide image. Where the image and the page text disagree, the image wins. A column marked not this figure is not counted. A second factory under the same numeral is not a new family. Paint, cape and sabre sections are not counted. If the images show no readable roman grid, the figure is unverified.",
   "indexes": [
     {
       "era": "Star Wars",
@@ -36,27 +36,10 @@
       "era": "Star Wars",
       "url": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 4,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Kader/ Kader China/"
-        },
-        {
-          "numeral": "II",
-          "label": "Unitoy/ PBP"
-        },
-        {
-          "numeral": "III",
-          "label": "Taiwan"
-        },
-        {
-          "numeral": "IV",
-          "label": "Smile"
-        }
-      ],
+      "status": "unverified",
+      "basis": "Lineup photos have no printed roman family headers.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [
         {
           "numeral": "I",
@@ -76,7 +59,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "Lineup photos have no printed roman family headers."
     },
     {
       "name": "Princess Leia Organa",
@@ -111,7 +96,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "Figure-guide image shows columns I-V."
     },
     {
       "name": "R2-D2",
@@ -183,7 +170,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2-D2-COO-sheet-3.7-2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2-D2-COO-sheet-3.7-2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "R2-D2 COO sheet shows I-VII. The Takara wind-up sheet is a separate product, not an eighth family."
     },
     {
       "name": "Chewbacca",
@@ -247,7 +236,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Chewbacca-COO-Sheet-3.2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Chewbacca-COO-Sheet-3.2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "Chewbacca COO sheet shows I-VI."
     },
     {
       "name": "C-3PO",
@@ -290,7 +281,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/C3PO-COO-sheet-3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/C3PO-COO-sheet-3.1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "C-3PO COO sheet shows I-VII."
     },
     {
       "name": "Darth Vader",
@@ -402,7 +395,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "Family images are printed Family I: Kader through Family XII: Takara."
     },
     {
       "name": "Stormtrooper",
@@ -472,7 +467,9 @@
       "accessory_sections": [
         "Poon blaster"
       ],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/11/Stormtrooper-COO-Sheet_3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/11/Stormtrooper-COO-Sheet_3.1.jpg",
+      "confidence": "image-confirmed",
+      "image_note": "Text index lists I-VI. Stormtrooper-COO-Sheet_3.1.jpg shows I-VII, including VII PBP/Lili Ledy."
     },
     {
       "name": "Ben (Obi-Wan) Kenobi",
@@ -512,7 +509,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "Figure-guide image shows columns I-III."
     },
     {
       "name": "Han Solo",
@@ -539,7 +538,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "Figure-guide image shows columns I-III."
     },
     {
       "name": "Jawa",
@@ -589,7 +590,9 @@
       "accessory_sections": [
         "F1/F2 Kader parts: Toltoys Vinyl Cape"
       ],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/10/Jawa-COO-Sheet-3.3.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/10/Jawa-COO-Sheet-3.3.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Sand People",
@@ -645,7 +648,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Death Squad Commander",
@@ -672,7 +677,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Greedo",
@@ -695,7 +702,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Greedo-COO-sheet-3.2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Greedo-COO-sheet-3.2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Hammerhead",
@@ -718,7 +727,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/07/Hammerhead-COO-sheet-3.2-2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/07/Hammerhead-COO-sheet-3.2-2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Snaggletooth",
@@ -745,7 +756,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Snaggletooth-COO-sheet-3.2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Snaggletooth-COO-sheet-3.2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Walrus Man",
@@ -768,7 +781,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Walrus-Man-COO-sheet-3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Walrus-Man-COO-sheet-3.1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Luke Skywalker (X-Wing Pilot)",
@@ -791,7 +806,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "R5-D4",
@@ -851,7 +868,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R5D4-COO-Sheet-3.4-3.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R5D4-COO-Sheet-3.4-3.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "Sheet shows columns I-VIII. II, III, IV, VI and VII are marked not an R5-D4 COO, so the count stays I, V and VIII."
     },
     {
       "name": "Death Star Droid",
@@ -859,22 +878,15 @@
       "era": "Star Wars",
       "url": "https://www.variantvillain.com/characters/sw/death-star-droid/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 2,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Kader/ Meccano"
-        },
-        {
-          "numeral": "II",
-          "label": "Unitoy"
-        }
-      ],
+      "status": "unverified",
+      "basis": "Overview photo has no roman family headers.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "Overview photo has no roman family headers."
     },
     {
       "name": "Power Droid",
@@ -897,7 +909,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "DROIDS GUIDE",
@@ -945,7 +959,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/01/Boba-Fett-COO-Sheet-3.3.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/01/Boba-Fett-COO-Sheet-3.3.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Leia Organa (Bespin Gown)",
@@ -972,7 +988,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "FX-7",
@@ -999,7 +1017,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "IMPERIAL STORMTROOPER",
@@ -1026,7 +1046,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "REBEL SOLDIER",
@@ -1053,7 +1075,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Bossk",
@@ -1101,7 +1125,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Bossk-coo-guide.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Bossk-coo-guide.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "IG-88",
@@ -1141,7 +1167,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/04/IG88-COO-Sheet-3.2-1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/04/IG88-COO-Sheet-3.2-1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Luke Skywalker (Bespin Fatigues)",
@@ -1181,7 +1209,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/12/Luke-Bespin-COO-sheet-3.3.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/12/Luke-Bespin-COO-sheet-3.3.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Han Solo (Hoth Outfit)",
@@ -1221,7 +1251,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/05/Han-Hoth-COO-3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/05/Han-Hoth-COO-3.1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Lando Calrissian",
@@ -1229,23 +1261,10 @@
       "era": "The Empire Strikes Back",
       "url": "https://www.variantvillain.com/characters/esb/lando-calrissian/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 3,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Kader"
-        },
-        {
-          "numeral": "II",
-          "label": "Smile"
-        },
-        {
-          "numeral": "III",
-          "label": "Unitoy"
-        }
-      ],
+      "status": "unverified",
+      "basis": "Family photos are not printed with roman numerals.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [
         {
           "numeral": "I",
@@ -1261,7 +1280,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "Family photos are not printed with roman numerals."
     },
     {
       "name": "Bespin Security Guard (White)",
@@ -1288,7 +1309,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Yoda",
@@ -1336,7 +1359,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/02/Yoda-COO-Guide-3.2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/02/Yoda-COO-Guide-3.2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "Yoda-COO-Guide-3.2.jpg shows I Kader HK, II Unitoy, III Smile, IV Top Toys."
     },
     {
       "name": "Ugnaught",
@@ -1363,7 +1388,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ugnaught-COO-guide-3.2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ugnaught-COO-guide-3.2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Dengar",
@@ -1390,7 +1417,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Dengar-COO-3.3.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Dengar-COO-3.3.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Han Solo (Bespin Outfit)",
@@ -1417,7 +1446,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/07/Han-Solo-Bespin-COO-3.4.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/07/Han-Solo-Bespin-COO-3.4.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Lobot",
@@ -1444,7 +1475,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/11/Lobot-COO-3.2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/11/Lobot-COO-3.2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Leia (Hoth Outfit)",
@@ -1471,7 +1504,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Rebel Commander",
@@ -1498,7 +1533,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "AT-AT Driver",
@@ -1546,7 +1583,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/03/ATAT-Driver-COO-Sheet-3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/03/ATAT-Driver-COO-Sheet-3.1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Imperial Commander",
@@ -1573,7 +1612,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "2-1B",
@@ -1611,7 +1652,9 @@
       "accessory_sections": [
         "MOULD COMPARISON"
       ],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/03/2-1b-COO-Sheet-3.3.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/03/2-1b-COO-Sheet-3.3.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "R2-D2 (Sensorscope)",
@@ -1667,7 +1710,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2SS-COO-sheet-3.3.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2SS-COO-sheet-3.3.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "Sheet shows I, II, V and VI. Rows III and IV say Kader did not produce an R2-D2 Sensorscope."
     },
     {
       "name": "C-3PO (Removable Limbs)",
@@ -1675,13 +1720,24 @@
       "era": "The Empire Strikes Back",
       "url": "https://www.variantvillain.com/characters/esb/c-3po-removable-limbs/",
       "fetched": "2026-10-04",
-      "status": "unverified",
-      "basis": "no roman figure-guide list or COO Family headings in the page text",
-      "count": null,
-      "families": [],
+      "status": "documented",
+      "basis": "COO sheet image shows I-II",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        }
+      ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/01/C3PO-COO-3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/C3PO-COO-3.1.jpg",
+      "confidence": "image-confirmed",
+      "image_note": "C3PO-COO-3.1.jpg shows I Unitoy and II Smile. Droids/Glasslite shares I. Smile and Lili Ledy share II."
     },
     {
       "name": "LUKE SKYWALKER",
@@ -1704,7 +1760,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "At-At Commander",
@@ -1727,7 +1785,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "Figure-guide image shows columns I and II."
     },
     {
       "name": "(Twin-Pod) Cloud Car Pilot",
@@ -1750,7 +1810,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/CCP-COO-Sheet-3.2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/CCP-COO-Sheet-3.2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Bespin Security Guard (Black)",
@@ -1773,7 +1835,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Zuckuss",
@@ -1796,7 +1860,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "Imperial Tie Fighter Pilot",
@@ -1823,7 +1889,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/05/TFP-COO-Sheet-3.2-1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/05/TFP-COO-Sheet-3.2-1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "4-LOM",
@@ -1831,22 +1899,15 @@
       "era": "The Empire Strikes Back",
       "url": "https://www.variantvillain.com/characters/esb/4-lom/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 2,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Smile"
-        },
-        {
-          "numeral": "II",
-          "label": "Unitoy / PBP"
-        }
-      ],
+      "status": "unverified",
+      "basis": "Overview photo has no roman family headers.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "Overview photo has no roman family headers."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -1873,7 +1934,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Admiral-Ackbar-COO-Sheet.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Admiral-Ackbar-COO-Sheet.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -1906,7 +1969,7 @@
           "label": "Universal Manufacturers (Taiwan)"
         },
         {
-          "numeral": "IV",
+          "numeral": "VI",
           "label": "Top Toys"
         }
       ],
@@ -1937,7 +2000,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/04/Luke-Jedi-COO-Sheet-3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/04/Luke-Jedi-COO-Sheet-3.1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "COO sheet shows I-VI. The page text repeats IV for Top Toys; the image prints VI."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -1964,7 +2029,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2012,7 +2079,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/04/GG-COO-Sheet-3.2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/04/GG-COO-Sheet-3.2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2039,7 +2108,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2074,7 +2145,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Chirpa-COO-Sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Chirpa-COO-Sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2105,7 +2178,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/06/Logray-COO-Sheet.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/06/Logray-COO-Sheet.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2145,7 +2220,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu-COO-3.1-1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu-COO-3.1-1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2154,12 +2231,14 @@
       "url": "https://www.variantvillain.com/characters/rotj/rebel-commando/",
       "fetched": "2026-10-04",
       "status": "unverified",
-      "basis": "no roman figure-guide list or COO Family headings in the page text",
+      "basis": "Close-up photos are numbered 1-3 and are not a roman family grid.",
       "count": null,
       "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "Close-up photos are numbered 1-3 and are not a roman family grid."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2186,7 +2265,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2195,12 +2276,14 @@
       "url": "https://www.variantvillain.com/characters/rotj/squid-head/",
       "fetched": "2026-10-04",
       "status": "unverified",
-      "basis": "no roman figure-guide list or COO Family headings in the page text",
+      "basis": "Close-up photos are numbered 1-3 and are not a roman family grid.",
       "count": null,
       "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "Close-up photos are numbered 1-3 and are not a roman family grid."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2208,26 +2291,15 @@
       "era": "Return of the Jedi",
       "url": "https://www.variantvillain.com/characters/rotj/general-madine/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 3,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Taiwan (U.M.)"
-        },
-        {
-          "numeral": "II",
-          "label": "Smile"
-        },
-        {
-          "numeral": "III",
-          "label": "Unitoy"
-        }
-      ],
+      "status": "unverified",
+      "basis": "The only image is a loose-figure photo with no roman grid.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "The only image is a loose-figure photo with no roman grid."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2258,7 +2330,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/01/Bib-Fortuna-COO-Sheet-1-1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/01/Bib-Fortuna-COO-Sheet-1-1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2285,7 +2359,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ree-Yees-COO-Sheet-3.3.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ree-Yees-COO-Sheet-3.3.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2316,7 +2392,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/08/Biker-Scout-COO-sheet-2.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/08/Biker-Scout-COO-sheet-2.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2343,7 +2421,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/05/Lando-Skiff-COO-Sheet.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/05/Lando-Skiff-COO-Sheet.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2383,7 +2463,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Nien-Nunb-coo-guide.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Nien-Nunb-coo-guide.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "COO guide image shows I Unitoy, II Smile, III Lili Ledy (MIM)."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2402,7 +2484,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Nikto-COO-Sheet.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Nikto-COO-Sheet.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2411,12 +2495,14 @@
       "url": "https://www.variantvillain.com/characters/rotj/8d8/",
       "fetched": "2026-10-04",
       "status": "unverified",
-      "basis": "no roman figure-guide list or COO Family headings in the page text",
+      "basis": "Close-up photos are numbered 1-2 and are not a roman family grid.",
       "count": null,
       "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "Close-up photos are numbered 1-2 and are not a roman family grid."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2439,7 +2525,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/01/Leia-Endor-COO-Sheet.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/01/Leia-Endor-COO-Sheet.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2462,7 +2550,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/09/Wicket-COO-Sheet.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/09/Wicket-COO-Sheet.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "Wicket-COO-Sheet.jpg shows I Smile (HK) and II Taiwan (U.M.)."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2489,7 +2579,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/03/Emperor-COO-Sheet-3.3.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/03/Emperor-COO-Sheet-3.3.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2512,7 +2604,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/03/B-Wing-Pilot-COO-Sheet.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/03/B-Wing-Pilot-COO-Sheet.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2531,7 +2625,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Klaatu-Skiff-COO-Sheet.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Klaatu-Skiff-COO-Sheet.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2556,7 +2652,9 @@
       "accessory_sections": [
         "Blaster"
       ],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/11/Han-Endor-COO-Sheet-3.2-1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/11/Han-Endor-COO-Sheet-3.2-1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2588,7 +2686,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/03/Teebo-COO-Sheet-3.4-1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/03/Teebo-COO-Sheet-3.4-1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2611,7 +2711,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/03/Prune-Face-COO-v3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/03/Prune-Face-COO-v3.1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2634,7 +2736,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/ATST-COO-Sheet.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/ATST-COO-Sheet.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2657,7 +2761,9 @@
       ],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Rancor-Keeper-COO-Sheet-1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Rancor-Keeper-COO-Sheet-1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2681,7 +2787,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lumat-COO-Sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lumat-COO-Sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2705,7 +2813,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Paploo-COO-Sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Paploo-COO-Sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2729,7 +2839,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Endor-COO-Sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Endor-COO-Sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2756,7 +2868,9 @@
         "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
         "with pop-up Lightsaber"
       ],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2780,7 +2894,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Romba-COO-Sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Romba-COO-Sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2804,7 +2920,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/Amanaman-COO-Sheet-3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/Amanaman-COO-Sheet-3.1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2828,7 +2946,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/Barada-COO-Sheet-3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/Barada-COO-Sheet-3.1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2852,7 +2972,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Gunner-COO-sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Gunner-COO-sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2876,7 +2998,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Han-Carbonite-COO-Sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Han-Carbonite-COO-Sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2900,7 +3024,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Stormtrooper-COO-sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Stormtrooper-COO-sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2924,7 +3050,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Anakin-COO-sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Anakin-COO-sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2948,7 +3076,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/EV-9D9-COO-Sheet-3.1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/EV-9D9-COO-Sheet-3.1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2972,7 +3102,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Warok-COO-Sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Warok-COO-Sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2996,7 +3128,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lando-General-COO-Sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lando-General-COO-Sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3020,7 +3154,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/A-Wing-Pilot-COO-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/A-Wing-Pilot-COO-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3044,7 +3180,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Dignitary-COO-sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Dignitary-COO-sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3068,7 +3206,9 @@
         }
       ],
       "accessory_sections": [],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Yak-Face-COO-Sheet-3.0.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Yak-Face-COO-Sheet-3.0.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "DROIDS GUIDE",
@@ -3077,12 +3217,14 @@
       "url": "https://www.variantvillain.com/characters/droids/droids-c-3po/",
       "fetched": "2026-10-04",
       "status": "unverified",
-      "basis": "no roman figure-guide list or COO Family headings in the page text",
+      "basis": "Loose-figure photos have no roman family headers.",
       "count": null,
       "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "Loose-figure photos have no roman family headers."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3109,7 +3251,9 @@
         "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
         "with pop-up Lightsaber"
       ],
-      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg"
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg",
+      "confidence": "text-confirmed",
+      "image_note": "figure-guide text"
     },
     {
       "name": "EWOKS Guide",
@@ -3117,18 +3261,15 @@
       "era": "Droids and Ewoks",
       "url": "https://www.variantvillain.com/characters/droids/wicket-w-warrick/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 1,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Lili Ledy (Made in Mexico)"
-        }
-      ],
+      "status": "unverified",
+      "basis": "No COO sheet image. The page says a later sheet is coming soon. The Return of the Jedi Wicket sheet is a different figure and shows two families.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "No COO sheet image. The page says a later sheet is coming soon. The Return of the Jedi Wicket sheet is a different figure and shows two families."
     },
     {
       "name": "EWOKS Guide",
@@ -3136,18 +3277,15 @@
       "era": "Droids and Ewoks",
       "url": "https://www.variantvillain.com/characters/droids/logray-ewoks/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 1,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Lili Ledy Made in Mexico"
-        }
-      ],
+      "status": "unverified",
+      "basis": "No COO sheet image on the page.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "No COO sheet image on the page."
     },
     {
       "name": "EWOKS Guide",
@@ -3155,18 +3293,15 @@
       "era": "Droids and Ewoks",
       "url": "https://www.variantvillain.com/characters/droids/king-gorneesh/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 1,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Smile HK"
-        }
-      ],
+      "status": "unverified",
+      "basis": "No COO sheet image on the page.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "No COO sheet image on the page."
     },
     {
       "name": "EWOKS Guide",
@@ -3174,18 +3309,15 @@
       "era": "Droids and Ewoks",
       "url": "https://www.variantvillain.com/characters/droids/urgah-lady-gorneesh/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 1,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Lili Ledy Made in Mexico"
-        }
-      ],
+      "status": "unverified",
+      "basis": "No COO sheet image on the page.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "No COO sheet image on the page."
     },
     {
       "name": "EWOKS Guide",
@@ -3193,18 +3325,15 @@
       "era": "Droids and Ewoks",
       "url": "https://www.variantvillain.com/characters/droids/dulok-scout/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 1,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Unitoy HK"
-        }
-      ],
+      "status": "unverified",
+      "basis": "No COO sheet image on the page.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "No COO sheet image on the page."
     },
     {
       "name": "EWOKS Guide",
@@ -3212,18 +3341,16 @@
       "era": "Droids and Ewoks",
       "url": "https://www.variantvillain.com/characters/droids/dulok-shaman/",
       "fetched": "2026-10-04",
-      "status": "documented",
-      "basis": "figure-guide text",
-      "count": 1,
-      "families": [
-        {
-          "numeral": "I",
-          "label": "Smile HK"
-        }
-      ],
+      "status": "unverified",
+      "basis": "No COO sheet image on the page.",
+      "count": null,
+      "families": [],
       "coo_family_headings": [],
       "accessory_sections": [],
-      "coo_sheet_image": ""
+      "coo_sheet_image": "",
+      "confidence": "unverified",
+      "image_note": "No COO sheet image on the page."
     }
-  ]
+  ],
+  "image_audit": "2026-10-04"
 }

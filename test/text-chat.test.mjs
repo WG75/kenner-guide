@@ -986,13 +986,17 @@ await test("variant count summary matches the generator and stays under the cap"
   assert.match(before, /Chewbacca — 6/);
   assert.match(before, /R2-D2 — 7/);
   assert.match(before, /Luke Skywalker — 7 versions/);
-  assert.match(beforeTwo, /Unverified/);
-  assert.match(beforeTwo, /^- 8D8 —/m);
-  assert.match(beforeTwo, /^- Rebel Commando —/m);
-  assert.match(beforeTwo, /^- Squid Head —/m);
-  assert.match(beforeTwo, /c-3po-removable-limbs/);
-  assert.match(beforeTwo, /droids-c-3po/);
-  assert.doesNotMatch(before + beforeTwo, /not counted/i);
+  const summary = before + beforeTwo;
+  assert.match(summary, /Unverified/);
+  assert.match(summary, /^- 8D8 —/m);
+  assert.match(summary, /^- Rebel Commando —/m);
+  assert.match(summary, /^- Squid Head —/m);
+  assert.match(summary, /droids-c-3po/);
+  assert.match(summary, /C-3PO \(Removable Limbs\) — 2/);
+  assert.doesNotMatch(summary, /c-3po-removable-limbs/);
+  assert.match(summary, /Wicket W\. Warrick — 2/);
+  assert.match(summary, /VI Top Toys/);
+  assert.doesNotMatch(summary, /not counted/i);
   assert.ok(before.length <= 7000 && beforeTwo.length <= 7000);
 });
 
