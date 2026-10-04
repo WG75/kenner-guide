@@ -101,9 +101,9 @@
       scroll-behavior: smooth;
     }
 
-    /* Empty chat: greeting, starters, Identify buttons, hint and input sit
-       together under the search box. After the first user message, .chatting
-       lets the transcript fill the space and keeps the composer docked. */
+    /* Empty chat: greeting, Identify buttons, hint and input sit together
+       under the search box. After the first user message, .chatting lets the
+       transcript fill the space and keeps the composer docked. */
     .app.welcome {
       overflow-y: auto;
     }
@@ -510,7 +510,7 @@
   </div>
 
   <script type="module">
-    import { previewSearch, openSearchResult, parseFollowUps, fallbackFollowUps, followTopicFor, welcomeStarters, syncLayoutClass } from "./vfcb-chat-ui.js";
+    import { previewSearch, openSearchResult, parseFollowUps, fallbackFollowUps, followTopicFor, syncLayoutClass } from "./vfcb-chat-ui.js";
 
     const appEl = document.querySelector(".app");
     const chatEl = document.getElementById("chat");
@@ -893,7 +893,6 @@
       "assistant",
       "Hello, I'm VF-CB. I can talk through a figure or an accessory with the buttons below, or you can ask a question."
     );
-    addActionButtons(welcomeStarters().map((label) => ({ label, value: label })));
 
     window.sendMessage = sendMessage;
     window.openPhotoPicker = openPhotoPicker;
