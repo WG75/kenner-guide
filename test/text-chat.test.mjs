@@ -958,6 +958,8 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   assert.equal(variants.json.sources[0], "references/variant-counts.txt");
   const variantPrompt = calls.at(-1).body.messages.at(-1).content;
   assert.match(variantPrompt, /Darth Vader — 12/);
+  assert.match(variantPrompt, /Stormtrooper — 7/);
+  assert.match(variantPrompt, /Yoda — 4/);
   assert.match(variantPrompt, /Han Solo \(Hoth Outfit\) — 3/);
   assert.ok(variantPrompt.indexOf("Darth Vader — 12") < variantPrompt.indexOf("Han Solo (Hoth Outfit) — 3"));
 
@@ -979,10 +981,18 @@ await test("variant count summary matches the generator and stays under the cap"
   assert.equal(fs.readFileSync(path.join(dir, "variant-counts.txt"), "utf8"), before);
   assert.equal(fs.readFileSync(path.join(dir, "variant-counts-2.txt"), "utf8"), beforeTwo);
   assert.match(before, /Darth Vader — 12/);
+  assert.match(before, /Stormtrooper — 7/);
+  assert.match(before, /Yoda — 4/);
+  assert.match(before, /Chewbacca — 6/);
+  assert.match(before, /R2-D2 — 7/);
   assert.match(before, /Luke Skywalker — 7 versions/);
-  assert.match(beforeTwo, /not counted/i);
-  assert.match(beforeTwo, /^- Luke Skywalker$/m);
-  assert.match(beforeTwo, /^- Chewbacca$/m);
+  assert.match(beforeTwo, /Unverified/);
+  assert.match(beforeTwo, /^- 8D8 —/m);
+  assert.match(beforeTwo, /^- Rebel Commando —/m);
+  assert.match(beforeTwo, /^- Squid Head —/m);
+  assert.match(beforeTwo, /c-3po-removable-limbs/);
+  assert.match(beforeTwo, /droids-c-3po/);
+  assert.doesNotMatch(before + beforeTwo, /not counted/i);
   assert.ok(before.length <= 7000 && beforeTwo.length <= 7000);
 });
 

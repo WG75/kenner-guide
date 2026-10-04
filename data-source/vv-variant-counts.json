@@ -1,0 +1,3229 @@
+{
+  "fetched": "2026-10-04",
+  "source": "https://www.variantvillain.com/",
+  "rule": "Count roman-numeral manufacturer/region families from the page's figure-guide text (I: Kader). A blank label takes the manufacturer on the next line (II: then Smile). Jawa's guide has no colons (I Kader). A repeated guide that starts again at I is one list; keep the longer labels. If that list is absent, count COO Family headings. Skip a label that starts with 'not'. IV.1 is a sub-point, not a family. Do not count paint, cape, sabre or mould-comparison sections. Stormtrooper's text index is I-VI; the COO sheet image adds VII: PBP/Lili Ledy. No list means unverified.",
+  "indexes": [
+    {
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/",
+      "figures": 21
+    },
+    {
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/",
+      "figures": 29
+    },
+    {
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/",
+      "figures": 31
+    },
+    {
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/",
+      "figures": 15
+    },
+    {
+      "era": "Droids and Ewoks",
+      "url": "https://www.variantvillain.com/characters/droids/",
+      "figures": 8
+    }
+  ],
+  "figures": [
+    {
+      "name": "Luke Skywalker",
+      "index_name": "Luke Skywalker",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ Kader China/"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/ PBP"
+        },
+        {
+          "numeral": "III",
+          "label": "Taiwan"
+        },
+        {
+          "numeral": "IV",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Princess Leia Organa",
+      "index_name": "Princess Leia Organa",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/princess-leia-organa/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 5,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "IV",
+          "label": "Smile"
+        },
+        {
+          "numeral": "V",
+          "label": "Taiwan"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "R2-D2",
+      "index_name": "R2-D2",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 7,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy/"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "IV",
+          "label": "Kader/ Lili Ledy Retorno"
+        },
+        {
+          "numeral": "V",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "VI",
+          "label": "Taiwan"
+        },
+        {
+          "numeral": "VII",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        },
+        {
+          "numeral": "V",
+          "label": ""
+        },
+        {
+          "numeral": "VI",
+          "label": ""
+        },
+        {
+          "numeral": "VII",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2-D2-COO-sheet-3.7-2.jpg"
+    },
+    {
+      "name": "Chewbacca",
+      "index_name": "Chewbacca",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 6,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy/"
+        },
+        {
+          "numeral": "II",
+          "label": "F2.1 Kader/"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile"
+        },
+        {
+          "numeral": "IV",
+          "label": "Taiwan"
+        },
+        {
+          "numeral": "V",
+          "label": "Smile/ Lili Ledy"
+        },
+        {
+          "numeral": "VI",
+          "label": "Top Toys"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        },
+        {
+          "numeral": "V",
+          "label": ""
+        },
+        {
+          "numeral": "VI",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Chewbacca-COO-Sheet-3.2.jpg"
+    },
+    {
+      "name": "C-3PO",
+      "index_name": "C-3PO",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/c-3po/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 7,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "IV",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "V",
+          "label": "Kader"
+        },
+        {
+          "numeral": "VI",
+          "label": "Takara"
+        },
+        {
+          "numeral": "VII",
+          "label": "Unitoy"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/C3PO-COO-sheet-3.1.jpg"
+    },
+    {
+      "name": "Darth Vader",
+      "index_name": "Darth Vader",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 12,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ Kader China"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader/ Glasslite"
+        },
+        {
+          "numeral": "IV",
+          "label": "Smile/ LL Retorno & Regreso"
+        },
+        {
+          "numeral": "V",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "VI",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "VII",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "VIII",
+          "label": "Unitoy/ PBP"
+        },
+        {
+          "numeral": "IX",
+          "label": "Top Toys"
+        },
+        {
+          "numeral": "X",
+          "label": "Made In Taiwan"
+        },
+        {
+          "numeral": "XI",
+          "label": "Taiwan"
+        },
+        {
+          "numeral": "XII",
+          "label": "Takara"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        },
+        {
+          "numeral": "V",
+          "label": ""
+        },
+        {
+          "numeral": "VI",
+          "label": ""
+        },
+        {
+          "numeral": "VII",
+          "label": ""
+        },
+        {
+          "numeral": "VIII",
+          "label": ""
+        },
+        {
+          "numeral": "IX",
+          "label": ""
+        },
+        {
+          "numeral": "X",
+          "label": ""
+        },
+        {
+          "numeral": "XI",
+          "label": ""
+        },
+        {
+          "numeral": "XII",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Stormtrooper",
+      "index_name": "Stormtrooper",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text lists I-VI; the COO sheet image adds VII: PBP/Lili Ledy, which that text index omits",
+      "count": 7,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ China"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy/ PBP/ Lili Ledy"
+        },
+        {
+          "numeral": "IV",
+          "label": "Smile"
+        },
+        {
+          "numeral": "V",
+          "label": "Takara"
+        },
+        {
+          "numeral": "VI",
+          "label": "Top Toys"
+        },
+        {
+          "numeral": "VII",
+          "label": "PBP/Lili Ledy"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        },
+        {
+          "numeral": "V",
+          "label": ""
+        },
+        {
+          "numeral": "VI",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [
+        "Poon blaster"
+      ],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/11/Stormtrooper-COO-Sheet_3.1.jpg"
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi",
+      "index_name": "Ben (Obi-Wan) Kenobi",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/ Lili Ledy"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Han Solo",
+      "index_name": "Han Solo",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/han-solo/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "III",
+          "label": "PBP"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Jawa",
+      "index_name": "Jawa",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/jawa/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/ Kader China"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "IV",
+          "label": "Unitoy/"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [
+        "F1/F2 Kader parts: Toltoys Vinyl Cape"
+      ],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/10/Jawa-COO-Sheet-3.3.jpg"
+    },
+    {
+      "name": "Sand People",
+      "index_name": "Sand People",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 5,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader"
+        },
+        {
+          "numeral": "IV",
+          "label": "Kader/ Meccano"
+        },
+        {
+          "numeral": "V",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        },
+        {
+          "numeral": "V",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Death Squad Commander",
+      "index_name": "Death Squad Commander",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/death-squad-commander/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "III",
+          "label": "PBP"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Greedo",
+      "index_name": "Greedo",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/greedo/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/ PBP"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Greedo-COO-sheet-3.2.jpg"
+    },
+    {
+      "name": "Hammerhead",
+      "index_name": "Hammerhead",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/hammerhead/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/ PBP"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/07/Hammerhead-COO-sheet-3.2-2.jpg"
+    },
+    {
+      "name": "Snaggletooth",
+      "index_name": "Snaggletooth",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/snaggletooth/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile/ PBP"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Snaggletooth-COO-sheet-3.2.jpg"
+    },
+    {
+      "name": "Walrus Man",
+      "index_name": "Walrus Man",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/walrusman/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/ PBP"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Walrus-Man-COO-sheet-3.1.jpg"
+    },
+    {
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "index_name": "Luke Skywalker (X-Wing Pilot)",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/luke-skywalker-x-wing-pilot/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy/ PBP"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/ Kader China"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "R5-D4",
+      "index_name": "R5-D4",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/r5-d4/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "V",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "VIII",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        },
+        {
+          "numeral": "V",
+          "label": ""
+        },
+        {
+          "numeral": "VI",
+          "label": ""
+        },
+        {
+          "numeral": "VII",
+          "label": ""
+        },
+        {
+          "numeral": "VIII",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R5D4-COO-Sheet-3.4-3.jpg"
+    },
+    {
+      "name": "Death Star Droid",
+      "index_name": "Death Star Droid",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/death-star-droid/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ Meccano"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Power Droid",
+      "index_name": "Power Droid",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/power-droid/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "DROIDS GUIDE",
+      "index_name": "Boba Fett",
+      "era": "Star Wars",
+      "url": "https://www.variantvillain.com/characters/sw/boba-fett/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ Meccano"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader"
+        },
+        {
+          "numeral": "IV",
+          "label": "Taiwan"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": "/ III"
+        },
+        {
+          "numeral": "II",
+          "label": "No Coo"
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/01/Boba-Fett-COO-Sheet-3.3.jpg"
+    },
+    {
+      "name": "Leia Organa (Bespin Gown)",
+      "index_name": "Leia Organa (Bespin Gown)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/leia-organa-bespin-gown/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "FX-7",
+      "index_name": "FX-7",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/fx-7/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "IMPERIAL STORMTROOPER",
+      "index_name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ Kader China/"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "REBEL SOLDIER",
+      "index_name": "Rebel Soldier (Hoth Battle Gear)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/rebel-soldier-hoth-battle-gear/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ Kader China"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/ Meccano"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile/ PBP"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Bossk",
+      "index_name": "Bossk",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/bossk/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "IV",
+          "label": "PBP"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Bossk-coo-guide.jpg"
+    },
+    {
+      "name": "IG-88",
+      "index_name": "IG-88",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/ig-88/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/04/IG88-COO-Sheet-3.2-1.jpg"
+    },
+    {
+      "name": "Luke Skywalker (Bespin Fatigues)",
+      "index_name": "Luke Skywalker (Bespin Fatigues)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/luke-skywalker-bespin-fatigues/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/12/Luke-Bespin-COO-sheet-3.3.jpg"
+    },
+    {
+      "name": "Han Solo (Hoth Outfit)",
+      "index_name": "Han Solo (Hoth Outfit)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/han-solo-hoth-outfit/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy/ Kader China"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader/ PBP"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/05/Han-Hoth-COO-3.1.jpg"
+    },
+    {
+      "name": "Lando Calrissian",
+      "index_name": "Lando Calrissian",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/lando-calrissian/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Bespin Security Guard (White)",
+      "index_name": "Bespin Security Guard (White)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/bespin-security-guard/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Yoda",
+      "index_name": "Yoda",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/yoda/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader HK"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile"
+        },
+        {
+          "numeral": "IV",
+          "label": "Top Toys"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/02/Yoda-COO-Guide-3.2.jpg"
+    },
+    {
+      "name": "Ugnaught",
+      "index_name": "Ugnaught",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/ugnaught/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ugnaught-COO-guide-3.2.jpg"
+    },
+    {
+      "name": "Dengar",
+      "index_name": "Dengar",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/dengar/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/ PBP"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Dengar-COO-3.3.jpg"
+    },
+    {
+      "name": "Han Solo (Bespin Outfit)",
+      "index_name": "Han Solo (Bespin Outfit)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/han-solo-bespin-outfit/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy/"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/07/Han-Solo-Bespin-COO-3.4.jpg"
+    },
+    {
+      "name": "Lobot",
+      "index_name": "Lobot",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/lobot/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/11/Lobot-COO-3.2.jpg"
+    },
+    {
+      "name": "Leia (Hoth Outfit)",
+      "index_name": "Leia (Hoth Outfit)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/leia-hoth-outfit/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ Kader China"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy/ Meccano"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Rebel Commander",
+      "index_name": "Rebel Commander",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/rebel-commander/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader/"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "AT-AT Driver",
+      "index_name": "AT-AT Driver",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/at-at-driver/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile MIHK"
+        },
+        {
+          "numeral": "IV",
+          "label": "Smile NCOO"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/03/ATAT-Driver-COO-Sheet-3.1.jpg"
+    },
+    {
+      "name": "Imperial Commander",
+      "index_name": "Imperial Commander",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/imperial-commander/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/ PBP/ Lili Ledy"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader/ Kader China"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "2-1B",
+      "index_name": "2-1B",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/2-1b/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": "/ III"
+        }
+      ],
+      "accessory_sections": [
+        "MOULD COMPARISON"
+      ],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/03/2-1b-COO-Sheet-3.3.jpg"
+    },
+    {
+      "name": "R2-D2 (Sensorscope)",
+      "index_name": "R2-D2 (Sensorscope)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/r2-d2-sensorscope/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "V",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "VI",
+          "label": "Unitoy"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        },
+        {
+          "numeral": "V",
+          "label": ""
+        },
+        {
+          "numeral": "VI",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2SS-COO-sheet-3.3.jpg"
+    },
+    {
+      "name": "C-3PO (Removable Limbs)",
+      "index_name": "C-3PO (Removable Limbs)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/c-3po-removable-limbs/",
+      "fetched": "2026-10-04",
+      "status": "unverified",
+      "basis": "no roman figure-guide list or COO Family headings in the page text",
+      "count": null,
+      "families": [],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/01/C3PO-COO-3.1.jpg"
+    },
+    {
+      "name": "LUKE SKYWALKER",
+      "index_name": "Luke Skywalker (Hoth Battle Gear)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/luke-skywalker-hoth-battle-gear/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy / PBP / Meccano"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "At-At Commander",
+      "index_name": "At-At Commander",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/at-at-commander/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy / PBP"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "(Twin-Pod) Cloud Car Pilot",
+      "index_name": "(Twin-Pod) Cloud Car Pilot",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/cloud-car-pilot/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/ Lili Ledy"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/ PBP"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/CCP-COO-Sheet-3.2.jpg"
+    },
+    {
+      "name": "Bespin Security Guard (Black)",
+      "index_name": "Bespin Security Guard (Black)",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/bespin-security-guard-2/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy / PBP"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Zuckuss",
+      "index_name": "Zuckuss",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/zuckuss/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "Imperial Tie Fighter Pilot",
+      "index_name": "Imperial Tie Fighter Pilot",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/imperial-tie-fighter-pilot/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/ PBP/"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader China"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/05/TFP-COO-Sheet-3.2-1.jpg"
+    },
+    {
+      "name": "4-LOM",
+      "index_name": "4-LOM",
+      "era": "The Empire Strikes Back",
+      "url": "https://www.variantvillain.com/characters/esb/4-lom/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy / PBP"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Admiral Ackbar",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/admiral-ackbar/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy/"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile/ Meccano"
+        },
+        {
+          "numeral": "III",
+          "label": "Taiwan (U.M.)"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Admiral-Ackbar-COO-Sheet.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Luke Skywalker (Jedi Knight Outfit)",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 6,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile NCOO"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile Macau NCOO"
+        },
+        {
+          "numeral": "IV",
+          "label": "Unitoy/"
+        },
+        {
+          "numeral": "V",
+          "label": "Universal Manufacturers (Taiwan)"
+        },
+        {
+          "numeral": "IV",
+          "label": "Top Toys"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        },
+        {
+          "numeral": "V",
+          "label": ""
+        },
+        {
+          "numeral": "VI",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/04/Luke-Jedi-COO-Sheet-3.1.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Princess Leia Organa (Boushh Disguise)",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-boussh-disguise/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile / Smile Macau"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy / Lili Ledy"
+        },
+        {
+          "numeral": "III",
+          "label": "Taiwan (U.M.)"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Gamorrean Guard",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/gamorrean-guard/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/ Macau"
+        },
+        {
+          "numeral": "III",
+          "label": "Smile"
+        },
+        {
+          "numeral": "IV",
+          "label": "Lili Ledy"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        },
+        {
+          "numeral": "IV",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/04/GG-COO-Sheet-3.2.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Emperor's Royal Guard",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/emperors-royal-guard/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ Lili Ledy"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Taiwan (U.M.)"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Chief Chirpa",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/chief-chirpa/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 5,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader"
+        },
+        {
+          "numeral": "III",
+          "label": "Kader"
+        },
+        {
+          "numeral": "IV",
+          "label": "Lili Ledy"
+        },
+        {
+          "numeral": "V",
+          "label": "Top Toys"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Chirpa-COO-Sheet-3.0.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Logray (Ewok Medicine Man)",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/logray-ewok-medicine-man/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy/Macau"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader"
+        },
+        {
+          "numeral": "III",
+          "label": "Lili Ledy (MIM)"
+        },
+        {
+          "numeral": "IV",
+          "label": "Top Toys"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/06/Logray-COO-Sheet.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Klaatu",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/klaatu/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Lili Ledy (MIM)"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu-COO-3.1-1.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Rebel Commando",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/rebel-commando/",
+      "fetched": "2026-10-04",
+      "status": "unverified",
+      "basis": "no roman figure-guide list or COO Family headings in the page text",
+      "count": null,
+      "families": [],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Weequay",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/weequay/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile/ Lili Ledy"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Squid Head",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/squid-head/",
+      "fetched": "2026-10-04",
+      "status": "unverified",
+      "basis": "no roman figure-guide list or COO Family headings in the page text",
+      "count": null,
+      "families": [],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "General Madine",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/general-madine/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Taiwan (U.M.)"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Bib Fortuna",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/bib-fortuna/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/"
+        },
+        {
+          "numeral": "III",
+          "label": "Taiwan (U.M.)"
+        },
+        {
+          "numeral": "IV",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/01/Bib-Fortuna-COO-Sheet-1-1.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Ree Yees",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/ree-yees/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Taiwan (U.M.)"
+        },
+        {
+          "numeral": "III",
+          "label": "Lili Ledy (MIM)"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ree-Yees-COO-Sheet-3.3.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Biker Scout",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/biker-scout/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 4,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader/ PBP/ Meccano"
+        },
+        {
+          "numeral": "II",
+          "label": "Taiwan (U.M.)"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "IV",
+          "label": "Lili Ledy (MIM)"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/08/Biker-Scout-COO-sheet-2.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Lando Calrissian (Skiff Guard Disguise)",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/lando-calrissian-skiff-guard-disguise/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Lili Ledy (MIM)"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/05/Lando-Skiff-COO-Sheet.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Nien Nunb",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/nien-nunb/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Smile"
+        },
+        {
+          "numeral": "III",
+          "label": "Lili Ledy (MIM)"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        },
+        {
+          "numeral": "III",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Nien-Nunb-coo-guide.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Nikto",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/nikto/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Nikto-COO-Sheet.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "8D8",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/8d8/",
+      "fetched": "2026-10-04",
+      "status": "unverified",
+      "basis": "no roman figure-guide list or COO Family headings in the page text",
+      "count": null,
+      "families": [],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Princess Leia Organa (in Combat Poncho)",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-in-combat-poncho/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/01/Leia-Endor-COO-Sheet.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Wicket W. Warrick",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/wicket-w-warrick/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/"
+        },
+        {
+          "numeral": "II",
+          "label": "Taiwan (U.M.)"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/09/Wicket-COO-Sheet.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "The Emperor",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/the-emperor/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 3,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/03/Emperor-COO-Sheet-3.3.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "B-Wing Pilot",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/b-wing-pilot/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/03/B-Wing-Pilot-COO-Sheet.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Klaatu (in Skiff Guard Outfit)",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/klaatu-in-skiff-guard-outfit/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Klaatu-Skiff-COO-Sheet.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Han Solo (in Trench Coat)",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/han-solo-in-trench-coat/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [
+        "Blaster"
+      ],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/11/Han-Endor-COO-Sheet-3.2-1.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Teebo",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/teebo/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy/"
+        },
+        {
+          "numeral": "II",
+          "label": "Taiwan (U.M.)"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        },
+        {
+          "numeral": "II",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/03/Teebo-COO-Sheet-3.4-1.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Prune Face",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/prune-face/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        },
+        {
+          "numeral": "II",
+          "label": "Kader/"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/03/Prune-Face-COO-v3.1.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "AT-ST Driver",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/at-st-driver/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Taiwan (U.M.)"
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy/ Lili Ledy"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/ATST-COO-Sheet.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Rancor Keeper",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/rancor-keeper/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 2,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/"
+        },
+        {
+          "numeral": "II",
+          "label": "Taiwan (U.M.)"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Rancor-Keeper-COO-Sheet-1.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Lumat",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/lumat/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Lili Ledy (MIM)"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lumat-COO-Sheet-3.0.jpg"
+    },
+    {
+      "name": "THE RETURN OF THE JEDI",
+      "index_name": "Paploo",
+      "era": "Return of the Jedi",
+      "url": "https://www.variantvillain.com/characters/rotj/paploo/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Lili Ledy (MIM)"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Paploo-COO-Sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Luke Skywalker (in Battle Poncho)",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/luke-skywalker-in-battle-poncho/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Endor-COO-Sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/artoo-detoo-r2-d2-with-pop-up-lightsaber/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/ Glasslite"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [
+        "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+        "with pop-up Lightsaber"
+      ],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Romba",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/romba/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Romba-COO-Sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Amanaman",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/amanaman/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/Amanaman-COO-Sheet-3.1.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Barada",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/barada/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/Barada-COO-Sheet-3.1.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Imperial Gunner",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/imperial-gunner/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Gunner-COO-sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Han Solo (in Carbonite Chamber)",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/han-solo-in-carbonite-chamber/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Han-Carbonite-COO-Sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Luke Skywalker (Imperial Stormtrooper Outfit)",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/luke-skywalker-imperial-stormtrooper-outfit/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Stormtrooper-COO-sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Anakin Skywalker",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/anakin-skywalker-2/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Anakin-COO-sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "EV-9D9",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/ev-9d9/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/EV-9D9-COO-Sheet-3.1.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Warok",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/warok/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Warok-COO-Sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Lando Calrissian (General Pilot)",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/lando-calrissian-general-pilot/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lando-General-COO-Sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "A-Wing Pilot",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/a-wing-pilot-2/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/A-Wing-Pilot-COO-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Imperial Dignitary",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/imperial-dignitary/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Kader"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Dignitary-COO-sheet-3.0.jpg"
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Yak Face",
+      "era": "Power of the Force",
+      "url": "https://www.variantvillain.com/characters/potf/yak-face/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Yak-Face-COO-Sheet-3.0.jpg"
+    },
+    {
+      "name": "DROIDS GUIDE",
+      "index_name": "Droids C-3PO",
+      "era": "Droids and Ewoks",
+      "url": "https://www.variantvillain.com/characters/droids/droids-c-3po/",
+      "fetched": "2026-10-04",
+      "status": "unverified",
+      "basis": "no roman figure-guide list or COO Family headings in the page text",
+      "count": null,
+      "families": [],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "THE POWER OF THE FORCE",
+      "index_name": "Droids R2-D2",
+      "era": "Droids and Ewoks",
+      "url": "https://www.variantvillain.com/characters/droids/droids-r2-d2/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile/ Glasslite"
+        }
+      ],
+      "coo_family_headings": [
+        {
+          "numeral": "I",
+          "label": ""
+        }
+      ],
+      "accessory_sections": [
+        "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+        "with pop-up Lightsaber"
+      ],
+      "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg"
+    },
+    {
+      "name": "EWOKS Guide",
+      "index_name": "Wicket W.Warrick (Ewoks)",
+      "era": "Droids and Ewoks",
+      "url": "https://www.variantvillain.com/characters/droids/wicket-w-warrick/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Lili Ledy (Made in Mexico)"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "EWOKS Guide",
+      "index_name": "Logray (Ewoks)",
+      "era": "Droids and Ewoks",
+      "url": "https://www.variantvillain.com/characters/droids/logray-ewoks/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Lili Ledy Made in Mexico"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "EWOKS Guide",
+      "index_name": "King Gorneesh",
+      "era": "Droids and Ewoks",
+      "url": "https://www.variantvillain.com/characters/droids/king-gorneesh/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile HK"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "EWOKS Guide",
+      "index_name": "Urgah Lady Gorneesh",
+      "era": "Droids and Ewoks",
+      "url": "https://www.variantvillain.com/characters/droids/urgah-lady-gorneesh/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Lili Ledy Made in Mexico"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "EWOKS Guide",
+      "index_name": "Dulok Scout",
+      "era": "Droids and Ewoks",
+      "url": "https://www.variantvillain.com/characters/droids/dulok-scout/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Unitoy HK"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    },
+    {
+      "name": "EWOKS Guide",
+      "index_name": "Dulok Shaman",
+      "era": "Droids and Ewoks",
+      "url": "https://www.variantvillain.com/characters/droids/dulok-shaman/",
+      "fetched": "2026-10-04",
+      "status": "documented",
+      "basis": "figure-guide text",
+      "count": 1,
+      "families": [
+        {
+          "numeral": "I",
+          "label": "Smile HK"
+        }
+      ],
+      "coo_family_headings": [],
+      "accessory_sections": [],
+      "coo_sheet_image": ""
+    }
+  ]
+}
