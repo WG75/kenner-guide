@@ -5,7 +5,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { searchCatalog, previewSearch, openSearchResult, parseFollowUps, fallbackFollowUps, welcomeStarters, layoutMode, syncLayoutClass } from "../vfcb-chat-ui.js";
+import { searchCatalog, previewSearch, openSearchResult, parseFollowUps, fallbackFollowUps, layoutMode, syncLayoutClass } from "../vfcb-chat-ui.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 process.chdir(root);
@@ -876,7 +876,7 @@ await test("follow-up block is parsed and a broken block uses the topic fallback
   const { json } = await call({ message: "Hello" });
   assert.equal(calls.length, 0);
   assert.doesNotMatch(json.reply, /Identify a figure|Identify Accessories/i);
-  assert.deepEqual(json.actions.map(action => action.label), welcomeStarters());
+  assert.deepEqual(json.actions.map(action => action.label), fallbackFollowUps("greeting"));
   assert.ok(json.actions.every(action => action.label && action.value === action.label));
   assert.equal(json.actions.some(action => /identify/i.test(action.label)), false);
   assert.doesNotMatch(json.reply, /<<<|FOLLOWUPS/);
@@ -893,6 +893,10 @@ await test("identify buttons replace the old chips and the lookup dropdown", asy
   assert.doesNotMatch(page, /Jawa blaster/);
   assert.doesNotMatch(page, /Identify a blaster/);
   assert.doesNotMatch(page, /What does COO mean\?/);
+  assert.doesNotMatch(page, /What are the Last 17\?/);
+  assert.doesNotMatch(page, /Which figures are Early Bird\?/);
+  assert.doesNotMatch(page, /What is a debut cardback\?/);
+  assert.doesNotMatch(page, /welcomeStarters/);
   assert.doesNotMatch(page, /Tap Identify a figure/);
   assert.doesNotMatch(page, /catalogSelect/);
   assert.doesNotMatch(page, /Look up/);
@@ -905,16 +909,7 @@ await test("identify buttons replace the old chips and the lookup dropdown", asy
   assert.ok(headerAt < searchAt && searchAt < buttonsAt && buttonsAt < hintAt && hintAt < inputAt);
 });
 
-await test("greeting chips are answerable starters and the welcome class toggles", async () => {
-  const starters = welcomeStarters();
-  assert.deepEqual(starters, fallbackFollowUps("greeting"));
-  assert.deepEqual(starters, [
-    "What does COO mean?",
-    "What are the Last 17?",
-    "Which figures are Early Bird?",
-    "What is a debut cardback?"
-  ]);
-  assert.equal(starters.some(label => /identify/i.test(label)), false);
+await test("welcome state has no starter chips and the welcome class toggles", async () => {
   assert.equal(layoutMode(0), "welcome");
   assert.equal(layoutMode(1), "chatting");
   assert.equal(layoutMode(4), "chatting");
@@ -933,19 +928,14 @@ await test("greeting chips are answerable starters and the welcome class toggles
   assert.equal(classList.names.has("chatting"), true);
   const page = fs.readFileSync(path.join(root, "index.html"), "utf8");
   assert.match(page, /class="app welcome"/);
-  assert.match(page, /welcomeStarters\(\)/);
+  assert.match(page, /Hello, I'm VF-CB/);
+  assert.doesNotMatch(page, /welcomeStarters/);
+  assert.doesNotMatch(page, /addActionButtons\(welcomeStarters/);
   assert.match(page, /syncLayoutClass\(/);
   assert.match(page, /\.app\.welcome \.chat/);
-  const expected = {
-    "What does COO mean?": "references/coo-guide.txt",
-    "What are the Last 17?": "terms/collector_terms.json",
-    "Which figures are Early Bird?": "references/early-bird-certificate-package.txt",
-    "What is a debut cardback?": "references/collector_glossary.txt"
-  };
-  for (const [question, file] of Object.entries(expected)) {
-    const { json } = await call({ message: question });
-    assert.ok(json.sources.includes(file), `${question} -> ${(json.sources || []).join(", ")}`);
-  }
+  const greetingAt = page.lastIndexOf("Hello, I'm VF-CB");
+  const afterGreeting = page.slice(greetingAt);
+  assert.doesNotMatch(afterGreeting, /addActionButtons/);
 });
 
 await test("identify a figure and identify accessories start guided questions", async () => {

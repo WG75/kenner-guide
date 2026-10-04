@@ -168,14 +168,6 @@ export function followTopicFor(text) {
   return "figure";
 }
 
-/* Starter questions on an empty chat. Identify stays on the two buttons
-   above the input, so these chips never repeat those labels. Each one is a
-   question the retriever answers from the COO guide, the Last 17 term, the
-   Early Bird package file, or the debut-cardback glossary entry. */
-export function welcomeStarters() {
-  return FOLLOW_SETS.greeting.slice();
-}
-
 /* Empty chat is a compact welcome block. The first user message switches
    the page to a scrolling transcript with the composer docked at the bottom. */
 export function layoutMode(userMessageCount) {

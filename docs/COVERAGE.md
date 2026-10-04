@@ -23,7 +23,7 @@ Cross-check: https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figur
 
 Every index URL is represented. `data/catalog.json` lists each name, era, file and source URL. The chat page searches that list from the box under the header. It does not put the typed search text into the conversation.
 
-An empty chat keeps the greeting, four starter questions, the two Identify buttons, and the input together under that search box. The first user message switches the page to a scrolling transcript with those buttons docked at the bottom. The starters are questions the retriever answers: "What does COO mean?" (COO guide), "What are the Last 17?" (collector terms), "Which figures are Early Bird?" (Early Bird package file), and "What is a debut cardback?" (glossary). Identify a figure and Identify Accessories are only the buttons above the input.
+An empty chat keeps the greeting, the two Identify buttons, and the input together under that search box. It does not offer pre-set starter questions. The first user message switches the page to a scrolling transcript with those buttons docked at the bottom. Suggested follow-ups still appear under later replies. Identify a figure and Identify Accessories are only the buttons above the input.
 
 ## What already existed
 
