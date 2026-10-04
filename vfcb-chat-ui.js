@@ -31,6 +31,11 @@ const FOLLOW_SETS = {
     "Which factory is linked, if any?",
     "How do I tell the variants apart?"
   ],
+  ranking: [
+    "Which figure has the most variants?",
+    "Which character has the most outfits?",
+    "How many versions of Han Solo are there?"
+  ],
   greeting: [
     "What does COO mean?",
     "What are the Last 17?",
@@ -163,6 +168,7 @@ export function parseFollowUps(text) {
 export function followTopicFor(text) {
   const lower = String(text || "").toLowerCase();
   if (/^(?:hi|hello|hey|thanks|thank you|thank)\b/.test(lower.trim())) return "greeting";
+  if (/\b(?:most|fewest|how many|number of)\b/.test(lower) && /\b(?:variants?|outfits?|versions?|looks?|characters?)\b/.test(lower)) return "ranking";
   if (/\b(?:card ?backs?|which cards?|what cards?)\b/.test(lower)) return "cardback";
   if (/\b(?:accessor(?:y|ies)|moulds?|molds?|blaster|cape|cloak|rifle|bowcaster|lightsaber)\b/.test(lower)) return "accessory";
   return "figure";
