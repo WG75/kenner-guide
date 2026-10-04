@@ -1,3 +1,6 @@
+Collector glossary
+Part: 1 of 2
+
 ==============================
 CORE COLLECTOR TERMS
 ==============================
@@ -78,128 +81,12 @@ POP (Proof of Purchase) = Logos printed on cardbacks/boxes
 Used for promotions where collectors cut them out and mailed them to Kenner or Palitoy.  
 Items were typically returned in plain packaging (box with sealed bag), not retail packaging.
 
-==============================
-RESTORATION / CONDITION TERMS
-==============================
 
-Touch Ups = Repainting or restoration  
-Can be:
-- Childhood repair  
-- Collector restoration  
-- Dealer enhancement  
+Early Bird accessories: the four figures came bagged in a plain white mailer box with a tray. Luke had a yellow lightsaber, usually double-telescoping (most, not all). Leia had a Leia blaster, plus a vinyl cape per several sources. Chewbacca had a bowcaster, primarily green (bowcaster colour conflict stays unresolved). R2-D2 is the only Early Bird figure with no accessory. The plain white mailer is the package, not evidence of no accessories. See references/early-bird-certificate-package.txt.
 
-May affect value depending on quality and disclosure.
+Last 17 = the final 17 Kenner Power of the Force figures, 1985.
+Members, collector-standard list: 1 A-Wing Pilot; 2 Amanaman; 3 Anakin Skywalker; 4 Barada; 5 EV-9D9; 6 Han Solo (Carbonite); 7 Imperial Dignitary; 8 Imperial Gunner; 9 Lando Calrissian (General Pilot); 10 Luke Skywalker (Battle Poncho); 11 Luke Skywalker (Imperial Stormtrooper outfit); 12 Lumat; 13 Paploo; 14 R2-D2 (with pop-up lightsaber); 15 Romba; 16 Warok; 17 Yak Face.
+Not members of the Last 17: Ewok Warrior, Teebo, Nien Nunb, Luke Skywalker (Jedi Knight), and Leia Organa (Boushh Disguise). B-Wing Pilot and General Madine are not Last 17 figures either.
+Lumat and Paploo were originally 1984 Return of the Jedi releases (79-back), re-released in the POTF line. Yak Face is on the list and is not a US Kenner release, per Mr Vintage Star Wars. Naming differences are cosmetic (conflicting sources on the name only): Endor Outfit or Endor Poncho vs Battle Poncho; General vs General Pilot.
+Sources: https://disneynews.us/star-wars-the-last-17/ https://toyzinger.com/en/blog/the-last-17/ https://lexistoyloft.com/star-wars-potf/ https://mrvintagestarwars.com
 
-Paint Errors = Factory paint mistakes  
-Usually caused by misaligned masks or missing paint layers. Fairly common.
-
-==============================
-GRADING TERMS
-==============================
-
-Graded = Figure professionally assessed and sealed in a protective case  
-- Usually encased in acrylic (“slabbed”)  
-- Given a condition score  
-- Can increase buyer confidence and resale value  
-
-Common grading companies:
-- AFA (Action Figure Authority) – strongest resale recognition  
-- CAS (Collector Archive Services) – high quality display cases  
-- UKG (UK Graders) – main UK option  
-- TGS (Toy Graders) – UK-based alternative  
-
-Collector notes:
-- AFA is generally seen as the resale benchmark  
-- UKG preferred in the UK to avoid shipping risk  
-- CAS often praised for presentation  
-
-Slabbed = Graded and sealed in a protective case  
-Some collectors dislike slabbed figures as they cannot be handled.
-
-Non-Graded / Raw = Not professionally graded  
-- Can be loose or carded  
-- Preferred by collectors who want to handle and inspect figures  
-- Usually cheaper than graded examples  
-
-==============================
-COO COLLECTING (ADVANCED)
-==============================
-
-COO = Country of Origin stamp on a figure
-
-Deleted COO Types:
-
-Smooth Deleted COO  
-COO fully removed and surface appears flat and smooth. Letters were filled and polished in the mould.
-
-Melted Down COO  
-COO partially visible and appears melted. Usually caused by scraping and smoothing, not actual melting.
-
-Scarred Out COO  
-Deep rough scar where COO was. Caused by filling the mould area (often with a tin/lead mixture).  
-Often shows bubbles or rough texture.
-
-Blank Raised Bar COO  
-COO drilled out, leaving a flat blank area. Sometimes used to apply a new COO.
-
-COO Behaviour Notes:
-- Fill material can degrade or break over time  
-- Variations can occur due to mould wear or repair  
-- Example: half-scarred Snaggletooth likely caused by mould damage  
-
-Unique Example:
-Macao Biker Scout  
-COO stamped over scar, later removed again (“scarred out the scar”)
-
-==============================
-COO FAMILIES
-==============================
-
-COO Family = Group of figures made from the same mould  
-- Even if COO markings are altered  
-- Even if stamps differ  
-
-Key principles:
-- Same mould = same family  
-- Visual differences often caused by plastic type or cooling  
-
-Mould behaviour:
-- Often produced in pairs  
-- New moulds introduce slight variations  
-- COO changes usually applied across paired moulds  
-
-==============================
-COO ERRORS
-==============================
-
-Common types:
-- Short shots  
-- Poor shots  
-- Cooling errors  
-
-Causes:
-- Not enough plastic injected  
-- Remnants from previous mould shots  
-- Figure removed too early during cooling  
-
-How to identify:
-
-Common Sense Rule  
-Removing only part of a COO usually makes no logical sense.  
-True no-COO figures:
-- Either fully removed  
-- Or no markings at all  
-
-Quantity Rule  
-- One-off examples = likely production error  
-- Multiple examples = more likely legitimate variation  
-
-==============================
-FAKED COOS
-==============================
-
-Fake COO marks are becoming more common as demand increases.
-
-Scammers may alter COO stamps to mimic rare variants.
-
-Collectors should be cautious, especially with rare or unusual COO examples.

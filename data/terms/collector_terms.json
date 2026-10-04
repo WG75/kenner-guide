@@ -48,10 +48,30 @@
     "meaning": "The original certificate promotion for Luke, Leia, Chewbacca and R2-D2.",
     "notes": [
       "Full detail is in references/early-bird-certificate-package.txt.",
-      "Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only. No Taiwan Early Bird."
+      "Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only. No Taiwan Early Bird.",
+      "Early Bird figures came with accessories, except R2-D2. Luke had a yellow lightsaber, usually double-telescoping (most, not all). Leia had a Leia blaster, plus a vinyl cape per several sources. Chewbacca had a bowcaster, primarily green (bowcaster colour conflict stays unresolved). R2-D2 is the only Early Bird figure with no accessory. They came bagged in a plain white mailer box with a tray. The plain white mailer is the package. Do not read it as no accessories."
     ],
     "related_terms": [
       "Early Bird Certificate Package"
+    ]
+  },
+  {
+    "id": "term_last_17",
+    "term": "Last 17",
+    "term_type": "collector_term",
+    "meaning": "The final 17 Kenner Power of the Force figures, released in 1985.",
+    "notes": [
+      "Members, collector-standard list: 1 A-Wing Pilot; 2 Amanaman; 3 Anakin Skywalker; 4 Barada; 5 EV-9D9; 6 Han Solo (Carbonite); 7 Imperial Dignitary; 8 Imperial Gunner; 9 Lando Calrissian (General Pilot); 10 Luke Skywalker (Battle Poncho); 11 Luke Skywalker (Imperial Stormtrooper outfit); 12 Lumat; 13 Paploo; 14 R2-D2 (with pop-up lightsaber); 15 Romba; 16 Warok; 17 Yak Face.",
+      "Not members of the Last 17: Ewok Warrior, Teebo, Nien Nunb, Luke Skywalker (Jedi Knight), and Leia Organa (Boushh Disguise). B-Wing Pilot and General Madine are not Last 17 figures either.",
+      "Lumat and Paploo were originally 1984 Return of the Jedi releases (79-back) and were re-released in the Power of the Force line.",
+      "Yak Face is on the Last 17 list. He is not a US Kenner release, per Mr Vintage Star Wars.",
+      "Naming differences are cosmetic (conflicting sources on the name only, not on membership): Endor Outfit or Endor Poncho vs Battle Poncho for the same Luke; General vs General Pilot for the same Lando. Han Solo (Carbonite) is the same figure as Han Solo (in Carbonite Chamber). Record both names. Do not drop one to hide the conflict.",
+      "Sources: https://disneynews.us/star-wars-the-last-17/ ; https://toyzinger.com/en/blog/the-last-17/ ; https://lexistoyloft.com/star-wars-potf/ ; https://mrvintagestarwars.com/"
+    ],
+    "related_terms": [
+      "Power of the Force",
+      "POTF",
+      "92-back"
     ]
   }
 ]

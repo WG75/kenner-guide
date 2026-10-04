@@ -764,6 +764,65 @@ await test("Chewbacca part 2 is retrieved for the Smile F5 question", async () =
   assert.doesNotMatch(prompt, /\[truncated\]/);
 });
 
+await test("early bird figures came with accessories except R2-D2", async () => {
+  const { json } = await call({ message: "what accessories came with the early bird figures" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /REFERENCE: references\/early-bird-certificate-package\.txt/);
+  const start = prompt.indexOf("REFERENCE: references/early-bird-certificate-package.txt");
+  const next = prompt.indexOf("\n--- REFERENCE:", start + 10);
+  const block = prompt.slice(start, next < 0 ? undefined : next);
+  assert.match(block, /Luke Skywalker had a yellow lightsaber/);
+  assert.match(block, /Princess Leia Organa had a Leia blaster/);
+  assert.match(block, /vinyl cape/);
+  assert.match(block, /Chewbacca had a bowcaster/);
+  assert.match(block, /R2-D2 is the only Early Bird figure with no accessory/);
+  assert.match(block, /plain white mailer box with a tray/);
+});
+
+await test("last 17 term lists the seventeen POTF figures and excludes the five", async () => {
+  const members = [
+    "A-Wing Pilot",
+    "Amanaman",
+    "Anakin Skywalker",
+    "Barada",
+    "EV-9D9",
+    "Han Solo (Carbonite)",
+    "Imperial Dignitary",
+    "Imperial Gunner",
+    "Lando Calrissian (General Pilot)",
+    "Luke Skywalker (Battle Poncho)",
+    "Luke Skywalker (Imperial Stormtrooper outfit)",
+    "Lumat",
+    "Paploo",
+    "R2-D2 (with pop-up lightsaber)",
+    "Romba",
+    "Warok",
+    "Yak Face"
+  ];
+  const excluded = [
+    "Ewok Warrior",
+    "Teebo",
+    "Nien Nunb",
+    "Luke Skywalker (Jedi Knight)",
+    "Leia Organa (Boushh Disguise)"
+  ];
+  const { json } = await call({ message: "which figures are the last 17" });
+  assert.equal(json.reply, "MOCK ANSWER");
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /REFERENCE: terms\/collector_terms\.json/);
+  const start = prompt.indexOf("REFERENCE: terms/collector_terms.json");
+  const next = prompt.indexOf("\n--- REFERENCE:", start + 10);
+  const block = prompt.slice(start, next < 0 ? undefined : next);
+  const memberLine = block.split("\n").find(line => line.includes("Members, collector-standard list"));
+  assert.ok(memberLine, "missing Last 17 member list");
+  for (const name of members) assert.match(memberLine, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  for (const name of excluded) assert.doesNotMatch(memberLine, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  assert.match(block, /Not members of the Last 17: Ewok Warrior, Teebo, Nien Nunb, Luke Skywalker \(Jedi Knight\), and Leia Organa \(Boushh Disguise\)/);
+  assert.match(block, /B-Wing Pilot and General Madine are not Last 17 figures either/);
+  assert.ok(json.sources.includes("terms/collector_terms.json"), json.sources.join(", "));
+});
+
 await test("every catalog figure and accessory name retrieves its own file", async () => {
   const catalog = loadCatalog();
   const jobs = [];
