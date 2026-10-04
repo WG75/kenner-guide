@@ -1,168 +1,142 @@
 Name: Variant and outfit counts
 Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
 Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Do not guess a count that is not in this summary. An unverified figure has no number.
-11. Bib Fortuna — 4 — Years: not recorded — Factories: 3 different factories: Smile, Kader, Taiwan
+6. Sand People — 25 versions across 5 families — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, Meccano
+- I Unitoy — 5 versions
+- II Unitoy — 5 versions
+- III Kader — 3 versions
+- IV Kader/ Meccano — 5 versions
+- V Kader — 7 versions
+7. Han Solo (Hoth Outfit) — 20 versions across 3 families — Years: not recorded — Factories: 4 different factories: Unitoy, Kader, Smile, PBP
+- I Unitoy/ Kader China — 5 versions
+- II Smile — 2 versions
+- III Kader/ PBP — 13 versions
+8. IG-88 — 17 versions across 3 families — Years: not recorded — Factories: 3 different factories: Smile, Kader, Unitoy
+- I Smile — 3 versions
+- II Kader — 3 versions
+- III Unitoy — 11 versions
+9. Lando Calrissian — 14 versions — family count unverified — Years: not recorded — Factories: 3 different factories: Kader, Smile, Unitoy
+- I KADER — 3 versions
+- II SMILE — 4 versions
+- III Unitoy — 7 versions
+10. R5-D4 — 12 versions across 3 families — Years: not recorded — Factories: 2 different factories: Unitoy, Kader
+- I Unitoy — 6 versions
+- V Unitoy — 2 versions
+- VIII Kader — 4 versions
+11. Teebo — 12 versions across 2 families — Years: not recorded — Factories: 2 different factories: Unitoy, Taiwan
+- I Unitoy/ — 5 versions
+- II Taiwan (U.M.) — 7 versions
+12. Klaatu — 10 versions across 3 families — Years: not recorded — Factories: 2 different factories: Smile/Lili Ledy, Unitoy
+- I Smile — 2 versions
+- II Unitoy — 4 versions
+- III Lili Ledy (MIM) — 4 versions
+13. Amanaman — 4 versions across 1 family — Years: not recorded — Factories: 1 factory: Smile
+- I Smile — 4 versions
+14. Artoo-Detoo (R2-D2) with pop-up Lightsaber — 4 versions across 1 family — Years: not recorded — Factories: 2 different factories: Smile, Glasslite
+- I Smile/ Glasslite — 4 versions
+15. Droids R2-D2 — 4 versions across 1 family — Years: not recorded — Factories: 2 different factories: Smile, Glasslite
+- I Smile/ Glasslite — 4 versions
+16. Barada — 2 versions across 1 family — Years: not recorded — Factories: 1 factory: Smile
+- I Smile — 2 versions
+17. EV-9D9 — 2 versions across 1 family — Years: 1985 — Factories: 1 factory: Kader
+- I Kader — 2 versions
+18. Imperial Dignitary — 2 versions across 1 family — Years: 1985 — Factories: 1 factory: Kader
+- I Kader — 2 versions
+19. Lumat — 2 versions across 1 family — Years: not recorded — Factories: 1 factory: Lili Ledy
+- I Lili Ledy (MIM) — 2 versions
+20. Paploo — 2 versions across 1 family — Years: 1984 — Factories: 1 factory: Lili Ledy
+- I Lili Ledy (MIM) — 2 versions
+21. Yak Face — 2 versions across 1 family — Years: not recorded — Factories: 1 factory: Smile
+- I Smile — 2 versions
+
+Families documented, versions unverified (the pictured lists or the sheet labels do not cover every family, so no version total is given):
+1. C-3PO — 7 families — versions unverified — Years: 1978 to 1985 — Factories: 3 different factories: Kader, Unitoy, Takara
+- I Kader
+- II Unitoy/
+- III Kader/
+- IV Unitoy
+- V Kader
+- VI Takara
+- VII Unitoy
+2. R2-D2 — 7 families — versions unverified — Years: 1978 to 1981 — Factories: 4 different factories: Unitoy, Smile/Lili Ledy, Kader, Taiwan
+- I Unitoy/
+- II Smile
+- III Kader/
+- IV Kader/ Lili Ledy Retorno
+- V Unitoy
+- VI Taiwan
+- VII Kader
+3. Stormtrooper — 7 families (text index I-VI; COO sheet image shows I-VII) — versions unverified — Years: 1978 to 1985 — Factories: 6 different factories: Kader, Unitoy, PBP, Smile/Lili Ledy, Takara, Top Toys
+- I Kader/ China
+- II Unitoy
+- III Unitoy/ PBP/ Lili Ledy
+- IV Smile
+- V Takara
+- VI Top Toys
+- VII PBP/Lili Ledy
+4. Chewbacca — 6 families — versions unverified — Years: 1978 to 1984 — Factories: 5 different factories: Unitoy, Kader, Smile/Lili Ledy, Taiwan, Top Toys
+- I Unitoy/
+- II F2.1 Kader/
+- III Smile
+- IV Taiwan
+- V Smile/ Lili Ledy
+- VI Top Toys
+5. Luke Skywalker (Jedi Knight Outfit) — 6 families — versions unverified — Years: not recorded — Factories: 4 different factories: Smile, Unitoy, Taiwan, Top Toys
+- I Smile
+- II Smile NCOO
+- III Smile Macau NCOO
+- IV Unitoy/
+- V Universal Manufacturers (Taiwan)
+- VI Top Toys
+6. Chief Chirpa — 5 families — versions unverified — Years: 1983 — Factories: 3 different factories: Smile/Lili Ledy, Kader, Top Toys
+- I Smile
+- II Kader
+- III Kader
+- IV Lili Ledy
+- V Top Toys
+7. Princess Leia Organa — 5 families — versions unverified — Years: 1978 to 1984 — Factories: 4 different factories: Kader, Unitoy, Smile, Taiwan
+- I Kader/
+- II Unitoy
+- III Kader/
+- IV Smile
+- V Taiwan
+8. AT-AT Driver — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
+- I Kader/
+- II Unitoy/
+- III Smile MIHK
+- IV Smile NCOO
+9. Bib Fortuna — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Kader, Taiwan
 - I Smile
 - II Kader/
 - III Taiwan (U.M.)
 - IV Smile
-12. Biker Scout — 4 — Years: 1983 — Factories: 6 different factories: Kader, PBP, Meccano, Taiwan, Unitoy, Lili Ledy
+10. Biker Scout — 4 families — versions unverified — Years: 1983 — Factories: 6 different factories: Kader, PBP, Meccano, Taiwan, Unitoy, Lili Ledy
 - I Kader/ PBP/ Meccano
 - II Taiwan (U.M.)
 - III Unitoy
 - IV Lili Ledy (MIM)
-13. Boba Fett — 4 — Years: not recorded — Factories: 3 different factories: Kader, Meccano, Taiwan
+11. Boba Fett — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Meccano, Taiwan
 - I Kader/ Meccano
 - II Kader
 - III Kader
 - IV Taiwan
-14. Bossk — 4 — Years: not recorded — Factories: 4 different factories: Kader, Smile, Unitoy, PBP
+12. Bossk — 4 families — versions unverified — Years: not recorded — Factories: 4 different factories: Kader, Smile, Unitoy, PBP
 - I Kader
 - II Smile
 - III Unitoy
 - IV PBP
-15. Gamorrean Guard — 4 — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile/Lili Ledy
+13. Gamorrean Guard — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile/Lili Ledy
 - I Kader
 - II Unitoy/ Macau
 - III Smile
 - IV Lili Ledy
-16. Jawa — 4 — Years: not recorded — Factories: 2 different factories: Kader, Unitoy
+14. Jawa — 4 families — versions unverified — Years: not recorded — Factories: 2 different factories: Kader, Unitoy
 - I Kader
 - II Kader/ Kader China
 - III Unitoy
 - IV Unitoy/
-17. Logray (Ewok Medicine Man) — 4 — Years: 1983 — Factories: 4 different factories: Unitoy, Kader, Lili Ledy, Top Toys
+15. Logray (Ewok Medicine Man) — 4 families — versions unverified — Years: 1983 — Factories: 4 different factories: Unitoy, Kader, Lili Ledy, Top Toys
 - I Unitoy/Macau
 - II Kader
 - III Lili Ledy (MIM)
 - IV Top Toys
-18. R2-D2 (Sensorscope) — 4 — Years: not recorded — Factories: 2 different factories: Unitoy, Smile
-- I Unitoy
-- II Smile
-- V Unitoy
-- VI Unitoy
-19. Yoda — 4 — Years: not recorded — Factories: 4 different factories: Kader, Unitoy, Smile, Top Toys
-- I Kader HK
-- II Unitoy
-- III Smile
-- IV Top Toys
-20. 2-1B — 3 — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
-- I Smile
-- II Unitoy
-- III Kader
-21. Admiral Ackbar — 3 — Years: 1983 — Factories: 4 different factories: Unitoy, Smile, Meccano, Taiwan
-- I Unitoy/
-- II Smile/ Meccano
-- III Taiwan (U.M.)
-22. Ben (Obi-Wan) Kenobi — 3 — Years: from 1978 — Factories: 3 different factories: Unitoy, Lili Ledy, Kader
-- I Unitoy
-- II Unitoy/ Lili Ledy
-- III Kader
-23. Bespin Security Guard (White) — 3 — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
-- I Smile
-- II Unitoy
-- III Kader
-24. Death Squad Commander — 3 — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, PBP
-- I Unitoy
-- II Kader/
-- III PBP
-25. Dengar — 3 — Years: 1981 — Factories: 4 different factories: Smile, Unitoy, PBP, Kader
-- I Smile
-- II Unitoy/ PBP
-- III Kader
-26. Emperor’s Royal Guard — 3 — Years: not recorded — Factories: 4 different factories: Kader, Lili Ledy, Unitoy, Taiwan
-- I Kader/ Lili Ledy
-- II Unitoy
-- III Taiwan (U.M.)
-27. FX-7 — 3 — Years: not recorded — Factories: 3 different factories: Kader, Smile, Unitoy
-- I Kader
-- II Smile
-- III Unitoy
-28. Han Solo — 3 — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, PBP
-- I Unitoy
-- II Kader/
-- III PBP
-29. Han Solo (Bespin Outfit) — 3 — Years: not recorded — Factories: 3 different factories: Unitoy, Kader, Smile
-- I Unitoy/
-- II Kader/
-- III Smile
-30. Han Solo (Hoth Outfit) — 3 — Years: not recorded — Factories: 4 different factories: Unitoy, Kader, Smile, PBP
-- I Unitoy/ Kader China
-- II Smile
-- III Kader/ PBP
-31. IG-88 — 3 — Years: not recorded — Factories: 3 different factories: Smile, Kader, Unitoy
-- I Smile
-- II Kader
-- III Unitoy
-32. Imperial Commander — 3 — Years: not recorded — Factories: 4 different factories: Smile/Lili Ledy, Unitoy, PBP, Kader
-- I Smile
-- II Unitoy/ PBP/ Lili Ledy
-- III Kader/ Kader China
-33. Imperial Stormtrooper (Hoth Battle Gear) — 3 — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
-- I Kader/ Kader China/
-- II Unitoy/
-- III Smile
-34. Imperial Tie Fighter Pilot — 3 — Years: not recorded — Factories: 4 different factories: Smile, Unitoy, PBP, Kader
-- I Smile
-- II Unitoy/ PBP/
-- III Kader China
-35. Klaatu — 3 — Years: not recorded — Factories: 2 different factories: Smile/Lili Ledy, Unitoy
-- I Smile
-- II Unitoy
-- III Lili Ledy (MIM)
-36. Lando Calrissian (Skiff Guard Disguise) — 3 — Years: not recorded — Factories: 2 different factories: Smile/Lili Ledy, Unitoy
-- I Smile
-- II Unitoy
-- III Lili Ledy (MIM)
-37. Leia (Hoth Outfit) — 3 — Years: not recorded — Factories: 4 different factories: Kader, Smile, Unitoy, Meccano
-- I Kader/ Kader China
-- II Smile
-- III Unitoy/ Meccano
-38. Leia Organa (Bespin Gown) — 3 — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
-- I Kader/
-- II Unitoy
-- III Smile
-39. Lobot — 3 — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
-- I Smile
-- II Unitoy
-- III Kader
-40. Luke Skywalker (Bespin Fatigues) — 3 — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
-- I Smile
-- II Unitoy
-- III Kader
-41. Nien Nunb — 3 — Years: 1983 — Factories: 2 different factories: Unitoy, Smile/Lili Ledy
-- I Unitoy
-- II Smile
-- III Lili Ledy (MIM)
-42. Princess Leia Organa (Boushh Disguise) — 3 — Years: not recorded — Factories: 3 different factories: Smile/Lili Ledy, Unitoy, Taiwan
-- I Smile / Smile Macau
-- II Unitoy / Lili Ledy
-- III Taiwan (U.M.)
-43. R5-D4 — 3 — Years: not recorded — Factories: 2 different factories: Unitoy, Kader
-- I Unitoy
-- V Unitoy
-- VIII Kader
-44. Rebel Commander — 3 — Years: not recorded — Factories: 3 different factories: Unitoy, Smile, Kader
-- I Unitoy
-- II Smile
-- III Kader/
-45. Rebel Soldier (Hoth Battle Gear) — 3 — Years: not recorded — Factories: 5 different factories: Kader, Unitoy, Meccano, Smile, PBP
-- I Kader/ Kader China
-- II Unitoy/ Meccano
-- III Smile/ PBP
-46. Ree Yees — 3 — Years: 1983 — Factories: 2 different factories: Smile/Lili Ledy, Taiwan
-- I Smile
-- II Taiwan (U.M.)
-- III Lili Ledy (MIM)
-47. Snaggletooth — 3 — Years: not recorded — Factories: 2 different factories: Smile, PBP
-- I Smile
-- II Smile
-- III Smile/ PBP
-48. The Emperor — 3 — Years: 1983 — Factories: 2 different factories: Smile, Unitoy
-- I Smile/
-- II Unitoy
-- III Unitoy
-49. Ugnaught — 3 — Years: not recorded — Factories: 3 different factories: Unitoy, Kader, Smile
-- I Unitoy
-- II Kader
-- III Smile

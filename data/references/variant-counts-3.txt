@@ -1,119 +1,132 @@
 Name: Variant and outfit counts
 Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
 Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Do not guess a count that is not in this summary. An unverified figure has no number.
-50. Weequay — 3 — Years: not recorded — Factories: 2 different factories: Unitoy, Smile/Lili Ledy
+16. R2-D2 (Sensorscope) — 4 families — versions unverified — Years: not recorded — Factories: 2 different factories: Unitoy, Smile
+- I Unitoy
+- II Smile
+- V Unitoy
+- VI Unitoy
+17. 2-1B — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
+- I Smile
+- II Unitoy
+- III Kader
+18. Admiral Ackbar — 3 families — versions unverified — Years: 1983 — Factories: 4 different factories: Unitoy, Smile, Meccano, Taiwan
+- I Unitoy/
+- II Smile/ Meccano
+- III Taiwan (U.M.)
+19. Bespin Security Guard (White) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
+- I Smile
+- II Unitoy
+- III Kader
+20. Death Squad Commander — 3 families — versions unverified — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, PBP
+- I Unitoy
+- II Kader/
+- III PBP
+21. Dengar — 3 families — versions unverified — Years: 1981 — Factories: 4 different factories: Smile, Unitoy, PBP, Kader
+- I Smile
+- II Unitoy/ PBP
+- III Kader
+22. Emperor’s Royal Guard — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Kader, Lili Ledy, Unitoy, Taiwan
+- I Kader/ Lili Ledy
+- II Unitoy
+- III Taiwan (U.M.)
+23. FX-7 — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Smile, Unitoy
+- I Kader
+- II Smile
+- III Unitoy
+24. Han Solo — 3 families — versions unverified — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, PBP
+- I Unitoy
+- II Kader/
+- III PBP
+25. Han Solo (Bespin Outfit) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, Kader, Smile
+- I Unitoy/
+- II Kader/
+- III Smile
+26. Imperial Commander — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Smile/Lili Ledy, Unitoy, PBP, Kader
+- I Smile
+- II Unitoy/ PBP/ Lili Ledy
+- III Kader/ Kader China
+27. Imperial Stormtrooper (Hoth Battle Gear) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
+- I Kader/ Kader China/
+- II Unitoy/
+- III Smile
+28. Imperial Tie Fighter Pilot — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Smile, Unitoy, PBP, Kader
+- I Smile
+- II Unitoy/ PBP/
+- III Kader China
+29. Lando Calrissian (Skiff Guard Disguise) — 3 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile/Lili Ledy, Unitoy
+- I Smile
+- II Unitoy
+- III Lili Ledy (MIM)
+30. Leia (Hoth Outfit) — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Kader, Smile, Unitoy, Meccano
+- I Kader/ Kader China
+- II Smile
+- III Unitoy/ Meccano
+31. Leia Organa (Bespin Gown) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
+- I Kader/
+- II Unitoy
+- III Smile
+32. Lobot — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
+- I Smile
+- II Unitoy
+- III Kader
+33. Nien Nunb — 3 families — versions unverified — Years: 1983 — Factories: 2 different factories: Unitoy, Smile/Lili Ledy
+- I Unitoy
+- II Smile
+- III Lili Ledy (MIM)
+34. Princess Leia Organa (Boushh Disguise) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile/Lili Ledy, Unitoy, Taiwan
+- I Smile / Smile Macau
+- II Unitoy / Lili Ledy
+- III Taiwan (U.M.)
+35. Rebel Commander — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, Smile, Kader
+- I Unitoy
+- II Smile
+- III Kader/
+36. Rebel Soldier (Hoth Battle Gear) — 3 families — versions unverified — Years: not recorded — Factories: 5 different factories: Kader, Unitoy, Meccano, Smile, PBP
+- I Kader/ Kader China
+- II Unitoy/ Meccano
+- III Smile/ PBP
+37. Ree Yees — 3 families — versions unverified — Years: 1983 — Factories: 2 different factories: Smile/Lili Ledy, Taiwan
+- I Smile
+- II Taiwan (U.M.)
+- III Lili Ledy (MIM)
+38. Snaggletooth — 3 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
+- I Smile
+- II Smile
+- III Smile/ PBP
+39. The Emperor — 3 families — versions unverified — Years: 1983 — Factories: 2 different factories: Smile, Unitoy
+- I Smile/
+- II Unitoy
+- III Unitoy
+40. Ugnaught — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, Kader, Smile
+- I Unitoy
+- II Kader
+- III Smile
+41. Weequay — 3 families — versions unverified — Years: not recorded — Factories: 2 different factories: Unitoy, Smile/Lili Ledy
 - I Unitoy
 - II Smile/ Lili Ledy
 - III Unitoy
-51. (Twin-Pod) Cloud Car Pilot — 2 — Years: not recorded — Factories: 3 different factories: Smile/Lili Ledy, Unitoy, PBP
+42. (Twin-Pod) Cloud Car Pilot — 2 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile/Lili Ledy, Unitoy, PBP
 - I Smile/ Lili Ledy
 - II Unitoy/ PBP
-52. At-At Commander — 2 — Years: 1981 — Factories: 3 different factories: Smile, Unitoy, PBP
+43. At-At Commander — 2 families — versions unverified — Years: 1981 — Factories: 3 different factories: Smile, Unitoy, PBP
 - I Smile
 - II Unitoy / PBP
-53. AT-ST Driver — 2 — Years: 1984 — Factories: 3 different factories: Taiwan, Unitoy, Lili Ledy
+44. AT-ST Driver — 2 families — versions unverified — Years: 1984 — Factories: 3 different factories: Taiwan, Unitoy, Lili Ledy
 - I Taiwan (U.M.)
 - II Unitoy/ Lili Ledy
-54. B-Wing Pilot — 2 — Years: 1984 — Factories: 2 different factories: Unitoy, Kader
+45. B-Wing Pilot — 2 families — versions unverified — Years: 1984 — Factories: 2 different factories: Unitoy, Kader
 - I Unitoy
 - II Kader/
-55. Bespin Security Guard (Black) — 2 — Years: not recorded — Factories: 3 different factories: Unitoy, PBP, Smile
+46. Bespin Security Guard (Black) — 2 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, PBP, Smile
 - I Unitoy / PBP
 - II Smile
-56. C-3PO (Removable Limbs) — 2 — Years: 1982 — Factories: 2 different factories: Unitoy, Smile
+47. C-3PO (Removable Limbs) — 2 families — versions unverified — Years: 1982 — Factories: 2 different factories: Unitoy, Smile
 - I Unitoy
 - II Smile
-57. Greedo — 2 — Years: not recorded — Factories: 2 different factories: Smile, PBP
+48. Greedo — 2 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
 - I Smile/ PBP
 - II Smile
-58. Hammerhead — 2 — Years: not recorded — Factories: 2 different factories: Smile, PBP
+49. Hammerhead — 2 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
 - I Smile/ PBP
 - II Smile
-59. Han Solo (in Trench Coat) — 2 — Years: not recorded — Factories: 2 different factories: Smile, Kader
-- I Smile
-- II Kader/
-60. Luke Skywalker (Hoth Battle Gear) — 2 — Years: 1981 — Factories: 4 different factories: Unitoy, PBP, Meccano, Smile
-- I Unitoy / PBP / Meccano
-- II Smile
-61. Luke Skywalker (X-Wing Pilot) — 2 — Years: not recorded — Factories: 3 different factories: Unitoy, PBP, Kader
-- I Unitoy/ PBP
-- II Kader/ Kader China
-62. Power Droid — 2 — Years: not recorded — Factories: 1 factory: Kader
-- I Kader
-- II Kader
-63. Princess Leia Organa (in Combat Poncho) — 2 — Years: 1984 — Factories: 2 different factories: Smile, Kader
-- I Smile
-- II Kader/
-64. Prune Face — 2 — Years: 1984 — Factories: 2 different factories: Smile, Kader
-- I Smile
-- II Kader/
-65. Rancor Keeper — 2 — Years: 1984 — Factories: 2 different factories: Smile, Taiwan
-- I Smile/
-- II Taiwan (U.M.)
-66. Teebo — 2 — Years: not recorded — Factories: 2 different factories: Unitoy, Taiwan
-- I Unitoy/
-- II Taiwan (U.M.)
-67. Walrus Man — 2 — Years: not recorded — Factories: 2 different factories: Smile, PBP
-- I Smile/ PBP
-- II Smile
-68. Wicket W. Warrick — 2 — Years: 1984 — Factories: 2 different factories: Smile, Taiwan
-- I Smile/
-- II Taiwan (U.M.)
-69. Zuckuss — 2 — Years: 1982 — Factories: 2 different factories: Smile, Unitoy
-- I Smile
-- II Unitoy/
-70. A-Wing Pilot — 1 — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-71. Amanaman — 1 — Years: not recorded — Factories: 1 factory: Smile
-- I Smile
-72. Anakin Skywalker — 1 — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-73. Artoo-Detoo (R2-D2) with pop-up Lightsaber — 1 — Years: not recorded — Factories: 2 different factories: Smile, Glasslite
-- I Smile/ Glasslite
-74. Barada — 1 — Years: not recorded — Factories: 1 factory: Smile
-- I Smile
-75. Droids R2-D2 — 1 — Years: not recorded — Factories: 2 different factories: Smile, Glasslite
-- I Smile/ Glasslite
-76. EV-9D9 — 1 — Years: 1985 — Factories: 1 factory: Kader
-- I Kader
-77. Han Solo (in Carbonite Chamber) — 1 — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-78. Imperial Dignitary — 1 — Years: 1985 — Factories: 1 factory: Kader
-- I Kader
-79. Imperial Gunner — 1 — Years: 1985 — Factories: 1 factory: Kader
-- I Kader
-80. Klaatu (in Skiff Guard Outfit) — 1 — Years: 1984 — Factories: 1 factory: Smile
-- I Smile/
-81. Lando Calrissian (General Pilot) — 1 — Years: not recorded — Factories: 1 factory: Smile
-- I Smile
-82. Luke Skywalker (Imperial Stormtrooper Outfit) — 1 — Years: 1985 — Factories: 1 factory: Kader
-- I Kader
-83. Luke Skywalker (in Battle Poncho) — 1 — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-84. Lumat — 1 — Years: not recorded — Factories: 1 factory: Lili Ledy
-- I Lili Ledy (MIM)
-85. Nikto — 1 — Years: 1984 — Factories: 1 factory: Smile
-- I Smile/
-86. Paploo — 1 — Years: 1984 — Factories: 1 factory: Lili Ledy
-- I Lili Ledy (MIM)
-87. Romba — 1 — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-88. Warok — 1 — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-89. Yak Face — 1 — Years: not recorded — Factories: 1 factory: Smile
-- I Smile
-
-Unverified (no readable roman family grid on the COO sheet or figure-guide images, so no count is given):
-- 4-LOM — https://www.variantvillain.com/characters/esb/4-lom/ — Overview photo has no roman family headers.
-- 8D8 — https://www.variantvillain.com/characters/rotj/8d8/ — Close-up photos are numbered 1-2 and are not a roman family grid.
-- Death Star Droid — https://www.variantvillain.com/characters/sw/death-star-droid/ — Overview photo has no roman family headers.
-- Droids C-3PO — https://www.variantvillain.com/characters/droids/droids-c-3po/ — Loose-figure photos have no roman family headers.
-- Dulok Scout — https://www.variantvillain.com/characters/droids/dulok-scout/ — No COO sheet image on the page.
-- Dulok Shaman — https://www.variantvillain.com/characters/droids/dulok-shaman/ — No COO sheet image on the page.
-- General Madine — https://www.variantvillain.com/characters/rotj/general-madine/ — The only image is a loose-figure photo with no roman grid.
-- King Gorneesh — https://www.variantvillain.com/characters/droids/king-gorneesh/ — No COO sheet image on the page.
-- Lando Calrissian — https://www.variantvillain.com/characters/esb/lando-calrissian/ — Family photos are not printed with roman numerals.
-- Logray (Ewoks) — https://www.variantvillain.com/characters/droids/logray-ewoks/ — No COO sheet image on the page.
-- Luke Skywalker — https://www.variantvillain.com/characters/sw/luke-skywalker/ — Lineup photos have no printed roman family headers.
-- Rebel Commando — https://www.variantvillain.com/characters/rotj/rebel-commando/ — Close-up photos are numbered 1-3 and are not a roman family grid.
-- Squid Head — https://www.variantvillain.com/characters/rotj/squid-head/ — Close-up photos are numbered 1-3 and are not a roman family grid.

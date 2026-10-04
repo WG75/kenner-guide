@@ -61,7 +61,72 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "Lineup photos have no printed roman family headers."
+      "image_note": "Lineup photos have no printed roman family headers.",
+      "micro_status": "text",
+      "micro_count": 32,
+      "micro_note": "Page text lists pictured variants under COO Family headings. The roman family grid was not confirmed on the sheet image, so the family count stays unverified.",
+      "micro_families": [
+        {
+          "numeral": "I",
+          "label": "Kader / Poch / Kader China / Meccano / Glasslite",
+          "micro_count": 10,
+          "micros": [
+            "Kader with DT (lettered) saber, brown eyes (which is assumed to be the earliest Kader figure)",
+            "Kader with reddish eyes",
+            "Kader with black eyes",
+            "Kader with dull light yellow hair, transition face spray-mask to china, and light flesh hands",
+            "POCH with Kader-COO, blonde hair pale creme hands and dark trousers/boots",
+            "Kader China: raised bar China",
+            "French Trilogo (Meccano) double raised bar",
+            "French Trilogo (Meccano) scarred raised bar",
+            "Glasslite double raised bar",
+            "POCH with Unitoy head but Kader COO legs. It is a mixed-up figure made out of parts from the blonde Kader and brown Unitoy POCH figures. Some call it \"transi..."
+          ]
+        },
+        {
+          "numeral": "II",
+          "label": "Unitoy / Poch / PBP",
+          "micro_count": 12,
+          "micros": [
+            "Unitoy with DT (circled) saber, brown eyes and opaque body which is the earliest Unitoy figure. Sadly the opaque material tends to yellow quite easily.",
+            "Unitoy black eyes",
+            "Unitoy large black eyes",
+            "Unitoy orange hair (dull, US version from 41E-back)",
+            "Unitoy orange hair (AU version)",
+            "Unitoy with yellowish dark brown hair",
+            "Unitoy with reddish dark brown hair",
+            "Unitoy with greenish dark brown hair",
+            "Unitoy with very dark brown hair",
+            "POCH with Unitoy Coo, brown hair, dark trousers/boots and pale creme hands and neck",
+            "POCH with Unitoy Coo, brown hair, dark trousers/boots and pinkish hands and neck",
+            "PBP scarred out Unitoy Coo with bright blonde hair and pinkish hands and neck"
+          ]
+        },
+        {
+          "numeral": "III",
+          "label": "TAIWAN",
+          "micro_count": 5,
+          "micros": [
+            "Taiwan with brown eyes and light brown trousers/boots",
+            "Taiwan with dark brown eyes and brown trousers/boots",
+            "Taiwan with dark brown eyes and reddish brown trousers/boots",
+            "Taiwan with dark brown eyes and dark brown trousers/boots",
+            "Taiwan with black eyes and dark grey trousers/boots"
+          ]
+        },
+        {
+          "numeral": "IV",
+          "label": "Smile",
+          "micro_count": 5,
+          "micros": [
+            "Smile, early figure with pale yellow hair",
+            "Smile with bright yellow hair",
+            "Smile with bright yellow hair and tan boots",
+            "Smile HK with reddish light brown hair (appeared on HK and No Coo)",
+            "Smile No Coo with greenish light brown hair (appeared on HK and No Coo)"
+          ]
+        }
+      ]
     },
     {
       "name": "Princess Leia Organa",
@@ -98,7 +163,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "Figure-guide image shows columns I-V."
+      "image_note": "Figure-guide image shows columns I-V.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "R2-D2",
@@ -112,15 +180,41 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Unitoy/"
+          "label": "Unitoy/",
+          "micro_count": 8,
+          "micros": [
+            "Unitoy very dark-blue w/halftone sticker (Early bird era) 2-part sticker variant, which has a halftone pattern in the wedge area. This very early Unitoy figu...",
+            "Unitoy d ark-blue dome (SW era)",
+            "Unitoy mid-blue dome (ESB era) A last proper Unitoy release is the solid dome ESB era 41bk figure, with mid blue domes and mid-blue legs. This is where I've...",
+            "Unitoy small wedge sticker (Transition from solid dome to Sensorscope) The \"small wedge\" figure features the updated Unitoy Sensorscope sticker on a standard...",
+            "Typical Poch R2-D2 This figure is characterised by a bright blue, but dull chrome dome, a crimson-red eye (not necessarily small) which can appear purple if...",
+            "Mixed-up Poch w/Unitoy leg paint Same features as example (A), but with dark blue-green (Kenner?) legs which is close to what can be found on the early Unito...",
+            "Mixed-up Poch & Unitoy/Kader parts & paint This figure is an odd one. It has a typical Poch dome, typical Kader painted legs (commonly found on Poch R2s), ho...",
+            "Poch. Very light blue dome In the late Jedi era , solid dome R2's re-appear on MECCANO 65bk and French Trilogo cardbacks. These MIHK COO figures have similar..."
+          ]
         },
         {
           "numeral": "II",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 3,
+          "micros": [
+            "Smile dark blue dome (early SW era) The first version has a dark blue dome and glossy darker-blue legs.",
+            "Smile mid-blue dome (SW era) This SW-era figure transitions to a lighter \"electric\" blue dome. The legs are a slightly lighter shade. The sticker grey become...",
+            "Smile mid-blue dome (ESB era) Same as mid-blue SW era, but the legs return to a darker shade. The sticker evolves again and the wedge is very nearly gone."
+          ]
         },
         {
           "numeral": "III",
-          "label": "Kader/"
+          "label": "Kader/",
+          "micro_count": 6,
+          "micros": [
+            "Kader dark blue dome (early SW era) The early version has a dark blue dome, large crimson-red eye and matt, mid-blue legs.",
+            "Kader mid-blue dome (SW & ESB era) This figure transitions to a lighter mid-blue dome. The legs remain the same matt, mid-blue throughout the Kader line.",
+            "REGRESO 1977 HK Vibrant dark-blue dome An eye-catching vibrant darker-blue dome. A or C type LL sticker.",
+            "REGRESO 1977 HK Dull dark-blue dome I've seen this called a transition figure, however the dome colour has a purple-ish hue to the blue compared to the Retor...",
+            "REGRESO 1977 HK Light-blue dome Light blue dome, with a greenish hue. A or C type LL sticker.",
+            "REGRESO 1977 HK Mid-blue dome ( PBP exclusive?) Same as previous, except features the B-type LL sticker. The PBP released R2 is a Lili Ledy made figure which..."
+          ]
         },
         {
           "numeral": "IV",
@@ -128,15 +222,35 @@
         },
         {
           "numeral": "V",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 2,
+          "micros": [
+            "Unitoy mid-blue dome Dull dome. Very small red eye. Gaps around the underside of the dome. Mid-blue ESB era legs.",
+            "Unitoy light-blue/green dome (ESB era) Dull dome. Larger crimson eye. Double blue paint application on the eye. Gaps around the underside of the dome. Mid-bl..."
+          ]
         },
         {
           "numeral": "VI",
-          "label": "Taiwan"
+          "label": "Taiwan",
+          "micro_count": 3,
+          "micros": [
+            "Taiwan dark-blue dome Large orange-red eye. Light-blue legs.",
+            "Taiwan mid-blue dome Large orange-red eye. Light-blue legs.",
+            "Taiwan green-blue dome Large orange-red eye. Light-blue legs."
+          ]
         },
         {
           "numeral": "VII",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 6,
+          "micros": [
+            "Kenner: Wavy Line Sticker The top, central blue rectangle has a wavy top.",
+            "Kenner: Straight Line Sticker The top, central blue rectangle has a straight top.",
+            "Palitoy: Wavy Line Sticker Unique sticker. The top central blue rectangle has a very wavy top.",
+            "Family 1-1: Japan COO without Takara stamp Smaller dome rim. Larger chrome buttons. Mid-blue sticker.",
+            "Family 1-2: Japan COO with Takara stamp Smaller dome rim. Larger chrome buttons. Dark-blue sticker.",
+            "Family 2: No COO, and no Takara stamp Larger dome rim. Smaller chrome buttons. Dark-blue sticker."
+          ]
         }
       ],
       "coo_family_headings": [
@@ -172,7 +286,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2-D2-COO-sheet-3.7-2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "R2-D2 COO sheet shows I-VII. The Takara wind-up sheet is a separate product, not an eighth family."
+      "image_note": "R2-D2 COO sheet shows I-VII. The Takara wind-up sheet is a separate product, not an eighth family.",
+      "micro_status": "partial",
+      "micro_count": null,
+      "micro_note": "Pictured lists do not cover every documented family, so there is no version total."
     },
     {
       "name": "Chewbacca",
@@ -186,11 +303,42 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Unitoy/"
+          "label": "Unitoy/",
+          "micro_count": 18,
+          "micros": [
+            "Light yellow-brown, hard pouch paint",
+            "Mid yellow-brown , hard pouch paint",
+            "Mid brown , soft pouch paint. Dark blue pupils",
+            "Mid red-brown , soft pouch paint",
+            "Dark brown , soft pouch paint",
+            "Dark green-brown , hard pouch paint",
+            "Matt black , hard pouch paint",
+            "Black , hard pouch paint, with dot (missing)",
+            "Poch light brown, soft pouch paint",
+            "Poch m id brown , soft pouch paint",
+            "Poch d ark brown , hard pouch paint",
+            "Poch very dark brown , hard pouch paint",
+            "Poch m att black , hard pouch paint, with dot",
+            "Poch satin black , hard pouch paint, with dot",
+            "PBP Mid grey-brown pouch. Light blue pupils",
+            "PBP Mid red-brown pouch. Mid blue pupils",
+            "PBP Dark brown pouch. Mid blue pupils",
+            "PBP Very dark brown pouch. Mid blue pupils (missing)"
+          ]
         },
         {
           "numeral": "II",
-          "label": "F2.1 Kader/"
+          "label": "F2.1 Kader/",
+          "micro_count": 7,
+          "micros": [
+            "Light yellow-brown pouch. Red-brown torso",
+            "Mid brown pouch. Yellow-brown torso",
+            "Mid yellow-brown pouch. Red-brown torso",
+            "Degraded greenish limbs",
+            "Grey-brown pouch with painted dot. Red-brown torso",
+            "Poch \"purple\" pouch",
+            "Poch \"purple\" pouch, mixed parts"
+          ]
         },
         {
           "numeral": "III",
@@ -198,7 +346,13 @@
         },
         {
           "numeral": "IV",
-          "label": "Taiwan"
+          "label": "Taiwan",
+          "micro_count": 3,
+          "micros": [
+            "Light brown glossy pouch",
+            "Mid brown glossy pouch",
+            "Dark brown glossy pouch"
+          ]
         },
         {
           "numeral": "V",
@@ -238,7 +392,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Chewbacca-COO-Sheet-3.2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "Chewbacca COO sheet shows I-VI."
+      "image_note": "Chewbacca COO sheet shows I-VI.",
+      "micro_status": "partial",
+      "micro_count": null,
+      "micro_note": "Pictured lists do not cover every documented family, so there is no version total."
     },
     {
       "name": "C-3PO",
@@ -283,7 +440,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/C3PO-COO-sheet-3.1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "C-3PO COO sheet shows I-VII."
+      "image_note": "C-3PO COO sheet shows I-VII.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Darth Vader",
@@ -297,51 +457,158 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Kader/ Kader China"
+          "label": "Kader/ Kader China",
+          "micro_count": 14,
+          "micros": [
+            "Torso M1, Light Orange, Head M1",
+            "Torso M1, Dark Red, Head M3",
+            "Torso M2, Light Orange, Head M1",
+            "Torso M2, Red, Head M1 ( POCH )",
+            "Torso M2, Dark Red, Head M2",
+            "Torso M3a, Dark Orange, Head M1",
+            "Torso M3b, Dark Red, Head M2",
+            "Torso M1, Red, Head M3",
+            "Torso M1, Dark Red, Head M3",
+            "Torso M2, Dark Red, Head M3",
+            "Torso M2, Dark Orange, Head M3",
+            "Torso M2, Red, Head M3",
+            "Torso M3b, Dark Orange, Head M3",
+            "Torso M3b, Very Dark Red, Head M3"
+          ]
         },
         {
           "numeral": "II",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 5,
+          "micros": [
+            "Torso M1, Light Orange, Head M1",
+            "Torso M1, Dark Orange, Head M1",
+            "Torso M1, Light Orange, Head M1 (POCH)",
+            "Torso M2, Dark Red, Head M7 (POCH?)",
+            "Torso M3a, Red, Head M1"
+          ]
         },
         {
           "numeral": "III",
-          "label": "Kader/ Glasslite"
+          "label": "Kader/ Glasslite",
+          "micro_count": 15,
+          "micros": [
+            "Torso M1, Light Orange, Head M1",
+            "Torso M1, Dark Orange, Head M1",
+            "Torso M1, Red, Head M3",
+            "Torso M1, Red, Head M1",
+            "Torso M2, Red, Head M3",
+            "Torso M2, Dark Red, Head M3",
+            "Torso M3a, Light Orange, Head M1",
+            "Torso M3b, Red, Head M3",
+            "Torso M1, Dark Orange Head M3",
+            "Torso M1, Red, Head M3",
+            "Torso M2, Dark Red, Head M3",
+            "Torso M2, Red, Head M3 (GLASSLITE)",
+            "Torso M2, Bright Red, Head M3 (GLASSLITE)",
+            "Torso M3b, Red, Head M3",
+            "Torso M3b, Red, Head M3 (greyish torso)"
+          ]
         },
         {
           "numeral": "IV",
-          "label": "Smile/ LL Retorno & Regreso"
+          "label": "Smile/ LL Retorno & Regreso",
+          "micro_count": 7,
+          "micros": [
+            "Torso M4, Light Orange, Head M4 (SMILE)",
+            "Torso M4, Coral, Head M6a (LILI LEDY \"Retorno\")",
+            "Torso M4, Dark Red, Head M6b (LILI LEDY)",
+            "Torso M4, Dark Red, Head M6a (LILI LEDY)",
+            "Torso M4, Red, Head M5 (LILI LEDY)",
+            "Torso M4, Red, Head M5 (LILI LEDY, faded saber)",
+            "Torso M4, Dark Red, Head M5 (LILI LEDY)"
+          ]
         },
         {
           "numeral": "V",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 4,
+          "micros": [
+            "Torso M5, Dark Orange, Head M11",
+            "Torso M5, Red, Head M10",
+            "Torso M5, Raspberry, Head M10",
+            "Torso M5, Raspberry, Head M11 (deformed)"
+          ]
         },
         {
           "numeral": "VI",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 3,
+          "micros": [
+            "Torso M5, Red, Head M11",
+            "Torso M5, Raspberry, Head M11",
+            "Torso M6, Dark Raspberry, Head M7"
+          ]
         },
         {
           "numeral": "VII",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 4,
+          "micros": [
+            "Torso M5, Dark Orange, Head M11",
+            "Torso M5, Red, Head M11",
+            "Torso M5, Raspberry, Head M10",
+            "Torso M6, Dark Orange, Head M7 (mixed legs)"
+          ]
         },
         {
           "numeral": "VIII",
-          "label": "Unitoy/ PBP"
+          "label": "Unitoy/ PBP",
+          "micro_count": 13,
+          "micros": [
+            "Torso M6, Red, Head M9",
+            "Torso M6, Raspberry, Head M7",
+            "Torso M7, Dark Orange, Head M7",
+            "Torso M7, Red, Head M7",
+            "Torso M7, Red, Head M8",
+            "Torso M7, Raspberry, Head M7",
+            "Torso M6, Raspberry, Head M9",
+            "Torso M6, Red, Head M8 (spray error, \"blobbed out\" 3b)",
+            "Torso M7, Dark Orange, Head M9",
+            "Torso M7, Coral, Head M9",
+            "Torso M7, Red, Head M8",
+            "Torso M7, Raspberry, Head M8 (\"blobbed out\" 3b)",
+            "Torso M7, Coral, Head M9 (spray error)"
+          ]
         },
         {
           "numeral": "IX",
-          "label": "Top Toys"
+          "label": "Top Toys",
+          "micro_count": 1,
+          "micros": [
+            "Torso M8, Dull Dark Orange, Head M12"
+          ]
         },
         {
           "numeral": "X",
-          "label": "Made In Taiwan"
+          "label": "Made In Taiwan",
+          "micro_count": 2,
+          "micros": [
+            "Torso M9, Raspberry, Head M14",
+            "Torso M9, Raspberry, Head M13"
+          ]
         },
         {
           "numeral": "XI",
-          "label": "Taiwan"
+          "label": "Taiwan",
+          "micro_count": 2,
+          "micros": [
+            "Torso M10, Red, Head M16",
+            "Torso M10, Red, Head M15"
+          ]
         },
         {
           "numeral": "XII",
-          "label": "Takara"
+          "label": "Takara",
+          "micro_count": 1,
+          "micros": [
+            "Torso M11, Bright Orange, Head M12"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -397,7 +664,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "Family images are printed Family I: Kader through Family XII: Takara."
+      "image_note": "Family images are printed Family I: Kader through Family XII: Takara.",
+      "micro_status": "text",
+      "micro_count": 71,
+      "micro_note": "71 pictured mould and colour lines. A mould-only reading of the Hong Kong block is lower: Family I Hong Kong is M1 x2, M2 x3 including one POCH, M3 x2. Glasslite is two lines under Family III, not one."
     },
     {
       "name": "Stormtrooper",
@@ -469,7 +739,10 @@
       ],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/11/Stormtrooper-COO-Sheet_3.1.jpg",
       "confidence": "image-confirmed",
-      "image_note": "Text index lists I-VI. Stormtrooper-COO-Sheet_3.1.jpg shows I-VII, including VII PBP/Lili Ledy."
+      "image_note": "Text index lists I-VI. Stormtrooper-COO-Sheet_3.1.jpg shows I-VII, including VII PBP/Lili Ledy.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Ben (Obi-Wan) Kenobi",
@@ -483,15 +756,51 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 6,
+          "micros": [
+            "UNIITOY with pale brown eyes and light greyish hair, which is assumed to be the earliest UNITOY figure.",
+            "UNITOY with brown eyes and white hair is also one of the early figures produced.",
+            "UNITOY with black eyes, white hair and pinkish hands is produced midterm and is the latest white hair with Fam I COO (compare to grey hair below).",
+            "UNITOY with black eyes, dark white hair and pinkish hand. He seems to be produced after the first two Bens in that row.",
+            "UNIITOY with black eyes and light grey hair, which is assumed to be also one of the earliest UNITOY figures.",
+            "UNITOY with large black eyes and dark grey is the latest of all Fam.I produced figures."
+          ]
         },
         {
           "numeral": "II",
-          "label": "Unitoy/ Lili Ledy"
+          "label": "Unitoy/ Lili Ledy",
+          "micro_count": 8,
+          "micros": [
+            "UNITOY with black eyes, light grey hair and pale hands",
+            "UNITOY with dark brown eyes, grey hair and pink hands",
+            "UNITOY with black eyes, dark grey hair and yellowish hands. The pale face present occurs from degradation of the plastic.",
+            "UNITOY with black eyes, dark grey hair and flesh hands. The face is lighter produced.",
+            "UNITOY with black eyes, grey hair and pinkish hands. The face has a more fleshier tone.",
+            "LILY LEDY with brown eyes, dark grey hair, pink hands and large head sculpt. There is three different head moulds present to the LILI LEDY version (see also:...",
+            "LILY LEDY with pale brown eyes, dark grey hair, pink hands and medium head sculpt.",
+            "LILY LEDY with pale brown eyes, dark grey hair, pink hands and small head sculpt."
+          ]
         },
         {
           "numeral": "III",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 13,
+          "micros": [
+            "KADER with pale brown eyes, bright white hair and beige hands. He is assumed to be the earliest KADER figure that came with a smooth cape (untextured) and so...",
+            "KADER with black eyes, bright white hair and pink hands. An early figure but came clearly after the figure mentioned above.",
+            "KADER with dull black eyes, bright white hair and beige hands. The so called \"Lincoln Beard\" versions are factory errors. The beard from Ben Kenobi was made...",
+            "POCH with dull black eyes, bright white hair and pale hands. The POCH version stands out through his unique UV fluorescence and black paint: It's more glossy...",
+            "POCH with black eyes, light grey hair and pale hands. It is a mixed figure obviously regarding the UV fluorescence.",
+            "KADER with dull black eyes, medium grey hair and pale flesh hands. An early figure but probably came after the white hair figures mentioned the picture before.",
+            "KADER with dull black eyes, blueish grey hair and flesh hands. A later KADER figure with changed spray mask to the eyes. It appeared shortly before the chang...",
+            "KADER with dull black eyes, yellowish grey hair and flesh hands. A later KADER figure with changed spray mask to the eyes. It appeared shortly before the cha...",
+            "KADER with dull black eyes, blueish grey hair and flesh hands. The so called \"Lincoln Beard\" versions are factory errors. The beard from Ben Kenobi was made...",
+            "KADER with dull black eyes, yellowish grey hair and flesh hands.",
+            "KADER with dull black eyes, blueish grey hair and flesh hands.",
+            "KADER with black eyes, bright white hair and light flesh hands plus dull black collar.",
+            "KADER with black eyes, bright white hair and pinkishhands plus glossy black collar."
+          ]
         }
       ],
       "coo_family_headings": [
@@ -511,7 +820,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "Figure-guide image shows columns I-III."
+      "image_note": "Figure-guide image shows columns I-III.",
+      "micro_status": "text",
+      "micro_count": 27,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "Han Solo",
@@ -540,7 +852,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "Figure-guide image shows columns I-III."
+      "image_note": "Figure-guide image shows columns I-III.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Jawa",
@@ -554,15 +869,50 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 6,
+          "micros": [
+            "Vinyl Cape. Rectangular, very dark brown bandolier. Transparent oval yellow eyes.",
+            "Rectangular, dark brown bandolier. Transparent yellow oval eyes. Cloth Cloak",
+            "Rectangular, mid-brown bandolier. Solid yellow oval eyes. Cloth Cloak",
+            "Rectangular, caramel bandolier. Solid yellow oval eyes. Cloth Cloak",
+            "Rectangular, very dark brown bandolier. Solid yellow oval eyes. Cloth Cloak",
+            "Rectangular, light brown bandolier. Solid yellow oval eyes. Cloth Cloak"
+          ]
         },
         {
           "numeral": "II",
-          "label": "Kader/ Kader China"
+          "label": "Kader/ Kader China",
+          "micro_count": 7,
+          "micros": [
+            "Rounded, very dark brown bandolier Solid oval yellow eyes. Cloth cloak.",
+            "Rounded, mid-brown bandolier Solid oval yellow eyes. Cloth cloak.",
+            "Rounded, caramel brown bandolier Solid oval yellow eyes. Cloth cloak.",
+            "(F1/F2 mixed parts) Rectangular, dark brown bandolier Solid oval yellow eyes. Cloth cloak.",
+            "Rectangular dark brown bandolier Round yellow eyes. Smooth cloth cloak .",
+            "Rectangular, very dark brown bandolier Round yellow eyes. Smooth cloth cloak.",
+            "Toltoys Vinyl Cape. Rounded, light or mid-brown bandolier. Solid oval yellow eyes. Degraded limbs"
+          ]
         },
         {
           "numeral": "III",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 13,
+          "micros": [
+            "F3 Rectangular, mid-brown bandolier. Small dot yellow eyes. Cloth cloak,",
+            "F3 Rectangular, dark brown bandolier. Small dot yellow eyes. Cloth cloak",
+            "F4 Rounded, caramel bandolier. Small dot yellow eyes. Cloth cloak",
+            "F4 Rounded, dark brown bandolier. Small dot yellow eyes. Cloth cloak",
+            "F4 Rounded, dark brown bandolier. Almond shaped, yellow eyes. Cloth cloak",
+            "Grey brown, rounded bandolier",
+            "Purple brown, rounded bandolier",
+            "Dark brown, rounded bandolier",
+            "Removable hood cloak",
+            "Stitched hood cloak",
+            "Dark brown bandolier",
+            "Purple-brown bandolier",
+            "Light grey-brown bandolier"
+          ]
         },
         {
           "numeral": "IV",
@@ -592,7 +942,10 @@
       ],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/10/Jawa-COO-Sheet-3.3.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "partial",
+      "micro_count": null,
+      "micro_note": "Pictured lists do not cover every documented family, so there is no version total."
     },
     {
       "name": "Sand People",
@@ -606,23 +959,63 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 5,
+          "micros": [
+            "UNIITOY very light brown bandolier and very light brown gloves.",
+            "UNITOY reddish light brown bandolier and dark brown gloves.",
+            "UNITOY brown bandolier and brown gloves.",
+            "UNITOY mud brown bandolier and dark brown gloves.",
+            "UNITOY dark brown bandolier and dark brown gloves."
+          ]
         },
         {
           "numeral": "II",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 5,
+          "micros": [
+            "UNITOY brown bandolier and dark brown gloves.",
+            "UNITOY mud brown bandolier and dark brown gloves.",
+            "UNITOY dark brown brown bandolier and dark brown gloves.",
+            "UNITOY very dark brown bandolier and very dark brown gloves.",
+            "UNITOY No COO blackish brown bandolier and blackish brown gloves."
+          ]
         },
         {
           "numeral": "III",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 3,
+          "micros": [
+            "KADER mud brown bandolier and dark brown gloves.",
+            "KADER dark brown bandolier and dark brown gloves.",
+            "KADER Hollow Tubes with very dark brown bandolier and very dark brown gloves (65, 77bk)."
+          ]
         },
         {
           "numeral": "IV",
-          "label": "Kader/ Meccano"
+          "label": "Kader/ Meccano",
+          "micro_count": 5,
+          "micros": [
+            "KADER brown bandolier and brown gloves.",
+            "KADER mud brown bandolier and mud brown gloves.",
+            "KADER dark brown bandolier and dark brown gloves.",
+            "KADER Hollow Tubes with very dark brown bandolier and very dark brown gloves (65, 77bk).",
+            "KADER Hollow Tubes with very dark brown bandolier and very dark brown gloves. This one only appeared on French Trilogo cardbacks and therefore is called \"Mec..."
+          ]
         },
         {
           "numeral": "V",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 7,
+          "micros": [
+            "KADER brown bandolier and dark brown gloves.",
+            "KADER mud brown bandolier and mud brown gloves.",
+            "KADER dark brown bandolier and dark brown gloves.",
+            "KADER Hollow Tubes with very dark brown bandolier and very dark brown gloves (65, 77bk).",
+            "POCH Fam.II with light purple brown bandolier and dark brown gloves.",
+            "POCH Fam.II with dark purple brown bandolier and dark brown gloves.",
+            "POCH Fam.IV with dark purple brown bandolier and brown gloves."
+          ]
         }
       ],
       "coo_family_headings": [
@@ -650,7 +1043,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 25,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "Death Squad Commander",
@@ -679,7 +1075,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Greedo",
@@ -704,7 +1103,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Greedo-COO-sheet-3.2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Hammerhead",
@@ -729,7 +1131,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/07/Hammerhead-COO-sheet-3.2-2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Snaggletooth",
@@ -758,7 +1163,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Snaggletooth-COO-sheet-3.2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Walrus Man",
@@ -783,7 +1191,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/Walrus-Man-COO-sheet-3.1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Luke Skywalker (X-Wing Pilot)",
@@ -808,7 +1219,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "R5-D4",
@@ -822,15 +1236,36 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 6,
+          "micros": [
+            "Unitoy MIHK SW/ESB version",
+            "Unitoy MIHK \"Red Bar\" Sticker (missing)",
+            "Unitoy MIHK ESB era small wedge sticker",
+            "Unitoy No COO SW era large wedge sticker",
+            "Unitoy No COO ROTJ/Trilogo version",
+            "Unitoy No COO Light blue sticker (missing)"
+          ]
         },
         {
           "numeral": "V",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 2,
+          "micros": [
+            "Unitoy MIHK SW/ESB version",
+            "Unitoy MIHK \"Red Bar\" Sticker"
+          ]
         },
         {
           "numeral": "VIII",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 4,
+          "micros": [
+            "Kader HK COO Light orange dome. Dark blue sticker. SW/ESB era version",
+            "Kader HK COO Orange dome. Dark blue sticker. SW/ESB era version",
+            "Kader HK COO \"Red Bar\" Sticker ESB era small wedge sticker",
+            "Kader HK COO Light blue sticker. ROTJ era version"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -870,7 +1305,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R5D4-COO-Sheet-3.4-3.jpg",
       "confidence": "text-confirmed",
-      "image_note": "Sheet shows columns I-VIII. II, III, IV, VI and VII are marked not an R5-D4 COO, so the count stays I, V and VIII."
+      "image_note": "Sheet shows columns I-VIII. II, III, IV, VI and VII are marked not an R5-D4 COO, so the count stays I, V and VIII.",
+      "micro_status": "text",
+      "micro_count": 12,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "Death Star Droid",
@@ -886,7 +1324,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "Overview photo has no roman family headers."
+      "image_note": "Overview photo has no roman family headers.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Power Droid",
@@ -911,7 +1352,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "DROIDS GUIDE",
@@ -929,7 +1373,19 @@
         },
         {
           "numeral": "II",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 9,
+          "micros": [
+            "PBP, P.Knee/ Unp. Dart, Warm Olive Chest, Light Brown Belt",
+            "PBP, P.Knee/ Unp. Dart, Mud Green Chest, Light Brown Belt",
+            "PBP, P.Knee/ Unp. Dart, Yellowish Green Chest, Medium Brown Belt",
+            "PBP, P.Knee/ Unp. Dart, Blueish Green Chest, Reddish Dark Brown Belt",
+            "PBP, P.Knee/ Unp. Dart, Green Chest, Blackish Belt",
+            "PBP, P.Knee/ P. Dart, Green Chest, Blackish Belt",
+            "PBP, Unp. Knee/ Unp. Dart, Light Mud Green Chest, Dark Brown Belt",
+            "PBP, Unp. Knee/ Unp. Dart, Green Chest, Reddish Dark Brown Belt",
+            "PBP, Unp. Knee/ P. Dart, Yellowish Green Chest, Brwon Belt (Bi-Coloured)"
+          ]
         },
         {
           "numeral": "III",
@@ -937,7 +1393,19 @@
         },
         {
           "numeral": "IV",
-          "label": "Taiwan"
+          "label": "Taiwan",
+          "micro_count": 9,
+          "micros": [
+            "Lightblue Painted Helmet, Light Olive Chest, Reddish Dark Brown Belt",
+            "Blue Painted Helmet, Olive Chest, Reddish Dark Brown Belt",
+            "Dark Blue Painted Helmet, Dark Olive Chest, Greyish Dark Brown Belt",
+            "Bright Olive Chest, Light Brown Belt",
+            "Olive Chest, Brown Belt",
+            "Light Olive Chest, Yellowish Dark Brown Belt",
+            "Bright Light Green Chest, Reddish Dark Brown Belt",
+            "Light Green Chest, Greyish Dark Brown belt",
+            "Light Olive Chest, Black Belt"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -961,7 +1429,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/01/Boba-Fett-COO-Sheet-3.3.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "partial",
+      "micro_count": null,
+      "micro_note": "Pictured lists do not cover every documented family, so there is no version total."
     },
     {
       "name": "Leia Organa (Bespin Gown)",
@@ -990,7 +1461,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "FX-7",
@@ -1019,7 +1493,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "IMPERIAL STORMTROOPER",
@@ -1048,7 +1525,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "REBEL SOLDIER",
@@ -1077,7 +1557,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Bossk",
@@ -1127,7 +1610,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Bossk-coo-guide.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "IG-88",
@@ -1141,15 +1627,41 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 3,
+          "micros": [
+            "Hong Kong COO Single eyes w/glossy reddish-orange lights",
+            "Hong Kong COO Double eyes w/glossy orange lights",
+            "No COO Single eyes w/glossy orange lights"
+          ]
         },
         {
           "numeral": "II",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 3,
+          "micros": [
+            "Hong Kong COO Large, matt light orange lights. Yellow-silver torso & limbs. Hydraulic detail fully formed",
+            "Hong Kong COO Small, matt mid-orange lights. Yellow-silver torso, silver limbs",
+            "Hong Kong COO Small, matt darker orange lights. Yellow-silver torso & head, silver limbs"
+          ]
         },
         {
           "numeral": "III",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 11,
+          "micros": [
+            "Hong Kong COO Dull grey body with glossy orange lights. No EPMs",
+            "Hong Kong COO Dull grey body with glossy orange lights",
+            "Hong Kong COO Silver body with glossy orange lights",
+            "Hong Kong COO Yellow-silver body with glossy orange lights. Enlarged EPMs",
+            "Scar No COO Bright silver w/glossy orange lights.",
+            "Smooth No COO Bright silver w/glossy orange lights",
+            "Smooth No COO Bright silver w/light orange glossy lights",
+            "Smooth No COO Bright silver w/dark orange glossy lights",
+            "Light orange lights. Kader head, arms, legs. Unitoy torso",
+            "Light orange lights. Kader head and legs. Unitoy arms and torso",
+            "Red lights. Kader head. Unitoy torso, arms and legs"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -1169,7 +1681,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/04/IG88-COO-Sheet-3.2-1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 17,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "Luke Skywalker (Bespin Fatigues)",
@@ -1183,15 +1698,54 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 7,
+          "micros": [
+            "Smile with blonde hair and ochre brown boots",
+            "Smile with blonde hair and reddish brown boots",
+            "Smile with yellowish brown hair",
+            "Smile with brown hair",
+            "Smile with orange brown hair",
+            "Smile with ochre brown hair (can be found on HK and No Coo)",
+            "Smile with greenish brown hair (can be found on HK and No Coo)"
+          ]
         },
         {
           "numeral": "II",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 9,
+          "micros": [
+            "Unitoy with alternative face spraymask and light flesh hands",
+            "Unitoy with alternative face spraymask and dark orange flesh hands and UNPAINTED left hip",
+            "Unitoy transition figure with standard face spraymask but dark orange flesh hands and handpainted hip.",
+            "Unitoy with standard face spraymask, flesh hands and bright yellow hair",
+            "Unitoy with orange hair and lighter brown boots (Meccano 45 & 65 cards)",
+            "Unitoy with orange hair and darker brown boots (Palitoy 45A)",
+            "POCH with Unitoy Coo mixed up figure with POCH Kader head",
+            "POCH with Unitoy Coo with lightbrown boots and pale hands",
+            "POCH with Unitoy Coo with darkbrown boots and pink hands"
+          ]
         },
         {
           "numeral": "III",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 14,
+          "micros": [
+            "Kader with blonde hair",
+            "Kader with brown hair and unique large face spray mask (type 1)",
+            "Kader with brown hair and unique small face spray mask (type 2)",
+            "Kader with brown hair and standard face spray mask (type 3). Often degraded and found with pale head.",
+            "POCH with Kader Coo, brown hair and UNPAINTED left hip.",
+            "PBP with Kader No Coo (smooth) caramel-brown boots",
+            "PBP with Kader No Coo (smooth) reddish brown boots",
+            "PBP with Kader No Coo (smooth) dark brown boots",
+            "PBP with Kader No Coo (smooth) chocolate-brown boots",
+            "LILI LEDY with Kader No Coo (smooth) with blonde hair and UNPAINTED left hip.",
+            "Kader No Coo (raised bar) with brown hair and head type 1 (China Baggie)",
+            "Kader No Coo (raised bar) with brown hair and head type 2",
+            "LILI LEDY with Kader No Coo (raised bar) with brown hair",
+            "LILI LEDY with Kader No Coo (raised bar) with overstock head and very dark brown hair"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -1211,7 +1765,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/12/Luke-Bespin-COO-sheet-3.3.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 30,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "Han Solo (Hoth Outfit)",
@@ -1225,15 +1782,44 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Unitoy/ Kader China"
+          "label": "Unitoy/ Kader China",
+          "micro_count": 5,
+          "micros": [
+            "Unitoy with very light brown pants/boots",
+            "Unitoy with light brown pants/boots (No Coo)",
+            "Unitoy with greenish brown pants/boots",
+            "Unitoy with grey-brown pants/boots",
+            "Unitoy with dark grey-brown pants/boots"
+          ]
         },
         {
           "numeral": "II",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 2,
+          "micros": [
+            "Smile",
+            "Smile No Coo, different spray mask for the eyes"
+          ]
         },
         {
           "numeral": "III",
-          "label": "Kader/ PBP"
+          "label": "Kader/ PBP",
+          "micro_count": 13,
+          "micros": [
+            "Kader moulded brown legs with blue paint on it (also see Mould-Color Variants )",
+            "Kader with light brown painted pants/boots",
+            "Kader with brown painted pants/boots and pink face",
+            "POCH with Kader Coo and greenish brown pants/boots",
+            "POCH with Kader Coo and chocolate brown pants/boots",
+            "POCH with Kader Coo and greenish brown pants/boots",
+            "POCH with Kader Coo and chocolate brown pants/boots pinkish face",
+            "POCH with Kader Coo and chocolate brown pants/boots face variant in colour and eye spray mask.",
+            "PBP (Kader No Coo) so called violet/lilac torso with pale creme face.",
+            "PBP (Kader No Coo) white face",
+            "PBP (Kader No Coo) white face with little pink sprayed over it",
+            "PBP (Kader No Coo) white face with much pink sprayed over it",
+            "PBP (Kader No Coo) pure pink face (no white underneath)"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -1253,7 +1839,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/05/Han-Hoth-COO-3.1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 20,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "Lando Calrissian",
@@ -1282,7 +1871,47 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "Family photos are not printed with roman numerals."
+      "image_note": "Family photos are not printed with roman numerals.",
+      "micro_status": "text",
+      "micro_count": 14,
+      "micro_note": "Page text lists pictured variants under COO Family headings. The roman family grid was not confirmed on the sheet image, so the family count stays unverified.",
+      "micro_families": [
+        {
+          "numeral": "I",
+          "label": "KADER",
+          "micro_count": 3,
+          "micros": [
+            "MADE IN HONG KONG (No teeth)",
+            "MADE IN HONG KONG (Teeth and head plastic degradation)",
+            "MADE IN (RAISED BAR) CHINA"
+          ]
+        },
+        {
+          "numeral": "II",
+          "label": "SMILE",
+          "micro_count": 4,
+          "micros": [
+            "HONG KONG (No teeth)",
+            "HONG KONG (No teeth/ Dark cape)",
+            "HONG KONG (Teeth)",
+            "No COO (Teeth)"
+          ]
+        },
+        {
+          "numeral": "III",
+          "label": "Unitoy",
+          "micro_count": 7,
+          "micros": [
+            "MADE IN HONG KONG (No teeth)",
+            "MADE IN HONG KONG (Teeth. Early release)",
+            "MADE IN HONG KONG (Teeth. Later release)",
+            "SCAR No COO Bright blue pants",
+            "SCAR No COO Dull blue pants",
+            "MADE IN HONG KONG (No teeth)",
+            "MADE IN HONG KONG (Teeth)"
+          ]
+        }
+      ]
     },
     {
       "name": "Bespin Security Guard (White)",
@@ -1311,7 +1940,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Yoda",
@@ -1325,19 +1957,60 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Kader HK"
+          "label": "Kader HK",
+          "micro_count": 9,
+          "micros": [
+            "Believed to be the first version of the Kader figure. This early version is where the \"MADE IN HONG KONG\" cloth tag was found, though I should add the figure...",
+            "The Kader figure has been nicknamed \" Grey head \" due to Kader HK plastic's propensity to degrade from green to grey. Dark brown Pacman eyes and mid green li...",
+            "Not a necessary inclusion, but a minor batch variation on the standard Kader figure, which is confirmed on the Palitoy 30 & 41bk cards. Features a mid-green...",
+            "Nicknamed the \" Green head \" Yoda. This figure was previously labelled the Kader \"transition\" Yoda on the Kader China graphic. The figure has been found on t...",
+            "Lili Ledy \"Retorno\" Hong Kong COO The earliest Lili Ledy produced version of Yoda. Mid green head, orange-brown round or pacman eyes and mid green limbs.",
+            "\"Transition\" Hong Kong COO ( not shown above) Regreso era darker-green head, on a Retorno era Hong Kong COO torso, or visa-versa.",
+            "\"Regreso\" NO COO Vibrant, darker-green head with a matt sheen. Commonly has tacky paint on the limbs. Black eyes and darker green limbs.",
+            "Vibrant, darker-green head with a glossy sheen. Commonly has tacky paint on the limbs. Black eyes and darker green limbs.",
+            "\"Short ears\" A factory error which resulted in a short shot of plastic and ears which aren't fully formed. Figure details are the same as a regular LL Yoda f..."
+          ]
         },
         {
           "numeral": "II",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 14,
+          "micros": [
+            "The earliest Unitoy produced version of Yoda. Dark orange \"cherry eyes\" , light green head and yellow-green limbs. This early version is where the \"MADE IN H...",
+            "Orange round eyes, light green head and yellow-green limbs.",
+            "Light orange round eyes, light green head and yellow-green limbs.",
+            "Not a necessary inclusion, however there are a few mocs in circulation with an overstock accessory combination on the early \"Apple head\" Yodas. Dark green he...",
+            "Dark \"Apple\" green head, brown or dark brown Pacman eyes and mid green limbs. Dark-brown cane and hard plastic, brown snake.",
+            "Dark \"Apple\" green head, brown or dark brown Pacman eyes and light green limbs. Dark-brown cane and hard plastic, brown snake.",
+            "Kader China No COO No COO figure from the earlier ROTJ period. Matt green head with dark brown Pacman shaped eyes and light green limbs.",
+            "No COO figure from the earlier ROTJ period. Matt green head with dark brown Pacman shaped eyes and mid green limbs.",
+            "Matt green head with dark brown Pacman shaped eyes and mid green limbs. Previously labelled the \"POTF\" version.",
+            "\"Meccano\" No COO (French Trilogo exclusive) Matt green head with black, Pacman near-rounded eyes. The limb paint is also slightly darker on the Meccano batch...",
+            "Poch \"Green head\" Hong Kong COO Assembled from parts sent from the Kader and Unitoy factories in Hong Kong and sent to PBP in Spain during their early \"Poch\"...",
+            "Poch \"Apple head\" Hong Kong COO Assembled from parts sent from the Unitoy factory in Hong Kong and sent to PBP in Spain during their early \"Poch\" era. The pa...",
+            "Poch \"Grey head\" Hong Kong COO Assembled from parts sent from the Kader factory in Hong Kong and sent to PBP in Spain during their early \"Poch\" era. The pain...",
+            "Lili Ledy (PBP) \"Regreso\" NO COO This figure was produced in Mexico by Lili Ledy and exported to Spain for PBP to distribute on their 65bk cards. Vibrant, da..."
+          ]
         },
         {
           "numeral": "III",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 5,
+          "micros": [
+            "\"Disco Foot\" Hong Kong COO One of the first Smile produced Yoda's features legs with elevated soles to the feet. The \"Disco Foot\" has been confirmed on a 32b...",
+            "\"Light green\" Hong Kong COO The standard early Smile release with light or darker orange eyes, with a light green head and limbs.",
+            "\"Dark green\" Hong Kong COO The standard later Smile figure with slightly lighter green limbs, black Pacman eyes and a dark green head.",
+            "The standard later Smile figure with mid green limbs, black/dark brown Pacman eyes and a dark green head.",
+            "The standard later Smile figure with slightly lighter green limbs, dark brown Pacman eyes and a dark green head. The shrunken, rigid green snake is believed..."
+          ]
         },
         {
           "numeral": "IV",
-          "label": "Top Toys"
+          "label": "Top Toys",
+          "micro_count": 1,
+          "micros": [
+            "Top Toys No COO licensed figure"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -1361,7 +2034,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/02/Yoda-COO-Guide-3.2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "Yoda-COO-Guide-3.2.jpg shows I Kader HK, II Unitoy, III Smile, IV Top Toys."
+      "image_note": "Yoda-COO-Guide-3.2.jpg shows I Kader HK, II Unitoy, III Smile, IV Top Toys.",
+      "micro_status": "text",
+      "micro_count": 29,
+      "micro_note": "29 pictured lines inside the four families. Lili Ledy and Poch sit under families I and II. Two lines are marked on the page as minor batches and are included. Family IV is the single Top Toys figure. Snake, cane, belt and cloak stay accessories."
     },
     {
       "name": "Ugnaught",
@@ -1390,7 +2066,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ugnaught-COO-guide-3.2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Dengar",
@@ -1419,7 +2098,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Dengar-COO-3.3.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Han Solo (Bespin Outfit)",
@@ -1448,7 +2130,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/07/Han-Solo-Bespin-COO-3.4.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Lobot",
@@ -1477,7 +2162,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/11/Lobot-COO-3.2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Leia (Hoth Outfit)",
@@ -1506,7 +2194,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Rebel Commander",
@@ -1535,7 +2226,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "AT-AT Driver",
@@ -1549,15 +2243,42 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Kader/"
+          "label": "Kader/",
+          "micro_count": 6,
+          "micros": [
+            "Orange emblems with blueish-white shoulders & gloves",
+            "Dark orange emblems with creamy-white shoulders & gloves",
+            "Red/Pinkish-red emblems. Kader/Unitoy mixed parts Pinkish-red (faded?) Unitoy emblems with a Kader MIHK COO on the leg. Following the KEY IDENTIFIERS guide b...",
+            "Orange emblems and white shoulders/gloves",
+            "Dark orange emblems and creamy-white shoulders/gloves",
+            "Dark orange emblems and white shoulders/gloves"
+          ]
         },
         {
           "numeral": "II",
-          "label": "Unitoy/"
+          "label": "Unitoy/",
+          "micro_count": 9,
+          "micros": [
+            "Dark orange emblems with white shoulders & gloves",
+            "Orange emblems with white shoulders & gloves",
+            "Dark red emblems, cream shoulders/gloves and light yellow-grey limbs",
+            "Dark red emblems, cream shoulders/gloves and grey limbs",
+            "Red emblems, cream shoulders/gloves and light blue-grey limbs",
+            "POCH: Crimson red emblems and blue-white shoulders/gloves (included for comparison)",
+            "Orange emblems (MI__ COO)",
+            "Orange emblems (MIHK COO)",
+            "Red emblems - Kader/Unitoy mixed parts Red Unitoy emblem front torso with a Kader MIHK COO on the leg. Following the KEY IDENTIFIERS guide below, you can see..."
+          ]
         },
         {
           "numeral": "III",
-          "label": "Smile MIHK"
+          "label": "Smile MIHK",
+          "micro_count": 3,
+          "micros": [
+            "Orange emblems with orange rear armour (MIHK COO)",
+            "Crimson red emblems",
+            "Orange emblems (to be added)"
+          ]
         },
         {
           "numeral": "IV",
@@ -1585,7 +2306,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/03/ATAT-Driver-COO-Sheet-3.1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "partial",
+      "micro_count": null,
+      "micro_note": "Pictured lists do not cover every documented family, so there is no version total."
     },
     {
       "name": "Imperial Commander",
@@ -1614,7 +2338,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "2-1B",
@@ -1654,7 +2381,10 @@
       ],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/03/2-1b-COO-Sheet-3.3.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "R2-D2 (Sensorscope)",
@@ -1668,15 +2398,31 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 3,
+          "micros": [
+            "Mid-blue legs MIHK Made in Hong Kong COO",
+            "Dark-blue legs MIHK Made in Hong Kong COO",
+            "Dark-blue legs No COO Same as the MIHK dark-blue legs, but the COO has been removed."
+          ]
         },
         {
           "numeral": "II",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 2,
+          "micros": [
+            "Smile R2-D2 Sensorscope (soft torso) Can have slightly darker or mid-blue legs with a matt finish.",
+            "Smile R2-D2 Sensorscope (hard torso) Torso drum is shot in a visibly harder, more detailed plastic. Mid-blue legs with a matt finish. This colour combination..."
+          ]
         },
         {
           "numeral": "V",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 2,
+          "micros": [
+            "F5 Unitoy R2-D2 Sensorscope MIHK Made in Hong Kong COO. Dark legs, small eye, dull dome.",
+            "F6 Unitoy R2-D2 Sensorscope \"12 o'clock\" No COO Dark legs, small eye, dull dome."
+          ]
         },
         {
           "numeral": "VI",
@@ -1712,7 +2458,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2SS-COO-sheet-3.3.jpg",
       "confidence": "text-confirmed",
-      "image_note": "Sheet shows I, II, V and VI. Rows III and IV say Kader did not produce an R2-D2 Sensorscope."
+      "image_note": "Sheet shows I, II, V and VI. Rows III and IV say Kader did not produce an R2-D2 Sensorscope.",
+      "micro_status": "partial",
+      "micro_count": null,
+      "micro_note": "Pictured lists do not cover every documented family, so there is no version total."
     },
     {
       "name": "C-3PO (Removable Limbs)",
@@ -1737,7 +2486,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/C3PO-COO-3.1.jpg",
       "confidence": "image-confirmed",
-      "image_note": "C3PO-COO-3.1.jpg shows I Unitoy and II Smile. Droids/Glasslite shares I. Smile and Lili Ledy share II."
+      "image_note": "C3PO-COO-3.1.jpg shows I Unitoy and II Smile. Droids/Glasslite shares I. Smile and Lili Ledy share II.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "LUKE SKYWALKER",
@@ -1762,7 +2514,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "At-At Commander",
@@ -1787,7 +2542,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "Figure-guide image shows columns I and II."
+      "image_note": "Figure-guide image shows columns I and II.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "(Twin-Pod) Cloud Car Pilot",
@@ -1812,7 +2570,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/06/CCP-COO-Sheet-3.2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Bespin Security Guard (Black)",
@@ -1837,7 +2598,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Zuckuss",
@@ -1862,7 +2626,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "Imperial Tie Fighter Pilot",
@@ -1891,7 +2658,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2026/05/TFP-COO-Sheet-3.2-1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "4-LOM",
@@ -1907,7 +2677,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "Overview photo has no roman family headers."
+      "image_note": "Overview photo has no roman family headers.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -1936,7 +2709,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Admiral-Ackbar-COO-Sheet.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -1950,7 +2726,15 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 5,
+          "micros": [
+            "Hong Kong COO Pinkish face w/Smile snap cloak, dark grey-brown Palace blaster and blue saber",
+            "Hong Kong COO Pinkish face w/Smile stitched cloak, dark grey-brown Palace blaster and blue saber",
+            "Hong Kong COO Pinkish face w/Smile stitched cloak, light grey-brown Palace blaster and blue-green saber",
+            "Hong Kong COO Pale face w/Smile stitched cloak, light grey-brown Palace blaster and green saber",
+            "No COO Tanned face w/Smile stitched cloak, light grey-brown Palace blaster and light green saber"
+          ]
         },
         {
           "numeral": "II",
@@ -1962,11 +2746,30 @@
         },
         {
           "numeral": "IV",
-          "label": "Unitoy/"
+          "label": "Unitoy/",
+          "micro_count": 10,
+          "micros": [
+            "Made in Hong Kong COO w/Unitoy degraded yellow snap cloak and accessories",
+            "Made in Hong Kong COO w/Unitoy mid-brown snap cloak and accessories",
+            "Made in Hong Kong COO w/Unitoy degraded gold-brown stitched cloak and accessories",
+            "Made in Hong Kong COO w/Unitoy degraded light brown stitched cloak and accessories",
+            "Made in Hong Kong COO w/Unitoy dark brown stitched cloak and accessories",
+            "Made in Hong Kong COO w/Unitoy degraded reddish brown stitched cloak and accessories",
+            "Made in Hong Kong COO w/Lili Ledy brown cloak and accessories",
+            "Made in Hong Kong COO w/Lili Ledy greenish-brown cloak and accessories",
+            "Made in Hong Kong COO w/Lili Ledy reddish/pink cloak and accessories",
+            "Made in Hong Kong COO w/Lili Ledy degraded yellow cloak and accessories"
+          ]
         },
         {
           "numeral": "V",
-          "label": "Universal Manufacturers (Taiwan)"
+          "label": "Universal Manufacturers (Taiwan)",
+          "micro_count": 3,
+          "micros": [
+            "Made in Taiwan COO. Dark brown moulded head w/Taiwan snap cloak and accessories",
+            "Made in Taiwan COO. Light brown moulded head w/Taiwan snap cloak and accessories",
+            "Made in Taiwan COO. Painted face w/Taiwan stitched cloak and accessories"
+          ]
         },
         {
           "numeral": "VI",
@@ -2002,7 +2805,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/04/Luke-Jedi-COO-Sheet-3.1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "COO sheet shows I-VI. The page text repeats IV for Top Toys; the image prints VI."
+      "image_note": "COO sheet shows I-VI. The page text repeats IV for Top Toys; the image prints VI.",
+      "micro_status": "partial",
+      "micro_count": null,
+      "micro_note": "Pictured lists do not cover every documented family, so there is no version total."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2031,7 +2837,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2045,7 +2854,13 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 3,
+          "micros": [
+            "Dark silver armour, dark green painted eyes, bright yellow details",
+            "Mid-silver armour, green painted eyes, bright yellow details",
+            "Light silver armour, green painted eyes, soft yellow details"
+          ]
         },
         {
           "numeral": "II",
@@ -2053,11 +2868,28 @@
         },
         {
           "numeral": "III",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 7,
+          "micros": [
+            "Dark silver armour, non-detailed face",
+            "Mid-silver armour, detailed face",
+            "Light silver armour (example of degraded green plastic), detailed face",
+            "Light silver armour , non-detailed face",
+            "Mid silver armour , detailed face",
+            "Light silver armour, non-detailed face",
+            "Light silver armour, detailed face, bright green skin"
+          ]
         },
         {
           "numeral": "IV",
-          "label": "Lili Ledy"
+          "label": "Lili Ledy",
+          "micro_count": 4,
+          "micros": [
+            "Mid silver armour, bright yellow details, degraded green plastic",
+            "Dark silver armour, light yellow details",
+            "Mid-silver armour, light yellow details",
+            "Light silver armour, bright yellow details, degraded green plastic"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -2081,7 +2913,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/04/GG-COO-Sheet-3.2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "partial",
+      "micro_count": null,
+      "micro_note": "Pictured lists do not cover every documented family, so there is no version total."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2110,7 +2945,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2147,7 +2985,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Chirpa-COO-Sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2180,7 +3021,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/06/Logray-COO-Sheet.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2194,15 +3038,34 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 2,
+          "micros": [
+            "Green painted face w/cream fluffy skirt",
+            "Green painted face w/grey-brown flat skirt"
+          ]
         },
         {
           "numeral": "II",
-          "label": "Unitoy"
+          "label": "Unitoy",
+          "micro_count": 4,
+          "micros": [
+            "Blue-green moulded face, mid-brown vest. Grey limbs. Cream fluffy skirt.",
+            "Blue-grey moulded face, mid-brown vest. Tan arms, grey legs mix. Cream fluffy skirt.",
+            "Blue-grey moulded face, dark-brown vest. Grey arms, tan legs mix. Grey-brown flat skirt.",
+            "Green-blue moulded face, mid-brown vest. Grey limbs. Grey-brown flat skirt."
+          ]
         },
         {
           "numeral": "III",
-          "label": "Lili Ledy (MIM)"
+          "label": "Lili Ledy (MIM)",
+          "micro_count": 4,
+          "micros": [
+            "Dark green painted face, dark brown shoulders. Fluffy skirt w/leather belt.",
+            "Mid green painted face, dark brown shoulders. Fluffy skirt w/fabric belt.",
+            "Dark green painted face, mid brown shoulders. Flat skirt w/leather belt.",
+            "Mid green painted face, mid brown shoulders. Flat skirt w/fabric belt."
+          ]
         }
       ],
       "coo_family_headings": [
@@ -2222,7 +3085,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu-COO-3.1-1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 10,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2238,7 +3104,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "Close-up photos are numbered 1-3 and are not a roman family grid."
+      "image_note": "Close-up photos are numbered 1-3 and are not a roman family grid.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2267,7 +3136,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2283,7 +3155,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "Close-up photos are numbered 1-3 and are not a roman family grid."
+      "image_note": "Close-up photos are numbered 1-3 and are not a roman family grid.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2299,7 +3174,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "The only image is a loose-figure photo with no roman grid."
+      "image_note": "The only image is a loose-figure photo with no roman grid.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2332,7 +3210,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/01/Bib-Fortuna-COO-Sheet-1-1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2361,7 +3242,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ree-Yees-COO-Sheet-3.3.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2394,7 +3278,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/08/Biker-Scout-COO-sheet-2.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2423,7 +3310,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/05/Lando-Skiff-COO-Sheet.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2465,7 +3355,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Nien-Nunb-coo-guide.jpg",
       "confidence": "text-confirmed",
-      "image_note": "COO guide image shows I Unitoy, II Smile, III Lili Ledy (MIM)."
+      "image_note": "COO guide image shows I Unitoy, II Smile, III Lili Ledy (MIM).",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2486,7 +3379,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Nikto-COO-Sheet.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2502,7 +3398,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "Close-up photos are numbered 1-2 and are not a roman family grid."
+      "image_note": "Close-up photos are numbered 1-2 and are not a roman family grid.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2527,7 +3426,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/01/Leia-Endor-COO-Sheet.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2552,7 +3454,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/09/Wicket-COO-Sheet.jpg",
       "confidence": "text-confirmed",
-      "image_note": "Wicket-COO-Sheet.jpg shows I Smile (HK) and II Taiwan (U.M.)."
+      "image_note": "Wicket-COO-Sheet.jpg shows I Smile (HK) and II Taiwan (U.M.).",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2581,7 +3486,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2025/03/Emperor-COO-Sheet-3.3.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2606,7 +3514,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/03/B-Wing-Pilot-COO-Sheet.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2627,7 +3538,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/Klaatu-Skiff-COO-Sheet.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2654,7 +3568,10 @@
       ],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/11/Han-Endor-COO-Sheet-3.2-1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2668,11 +3585,29 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Unitoy/"
+          "label": "Unitoy/",
+          "micro_count": 5,
+          "micros": [
+            "Unitoy with light grey furstripes and a flesh coloured hood",
+            "Unitoy with grey furstripes and a flesh coloured hood",
+            "Unitoy with dark grey furstripes and a white coloured hood",
+            "Lili Ledy with light grey furstripes and greyish brown eyes",
+            "Lili Ledy with light blueish grey furstripes and brown eyes"
+          ]
         },
         {
           "numeral": "II",
-          "label": "Taiwan (U.M.)"
+          "label": "Taiwan (U.M.)",
+          "micro_count": 7,
+          "micros": [
+            "Taiwan (U.M.) with dark grey furstripes and a white coloured hood",
+            "Taiwan (U.M.) with",
+            "Kader China: raised bar China",
+            "French Trilogo (Meccano) double raised bar",
+            "French Trilogo (Meccano) scarred raised bar",
+            "Glasslite double raised bar",
+            "POCH with Unitoy head but Kader COO legs. It is a mixed-up figure made out of parts from the blonde Kader and brown Unitoy POCH figures. Some call it \"transi..."
+          ]
         }
       ],
       "coo_family_headings": [
@@ -2688,7 +3623,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/03/Teebo-COO-Sheet-3.4-1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 12,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2713,7 +3651,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2023/03/Prune-Face-COO-v3.1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2738,7 +3679,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2021/12/ATST-COO-Sheet.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2763,7 +3707,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2022/12/Rancor-Keeper-COO-Sheet-1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2777,7 +3724,12 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Lili Ledy (MIM)"
+          "label": "Lili Ledy (MIM)",
+          "micro_count": 2,
+          "micros": [
+            "Dark brown eyes, mid grey-brown hood",
+            "Very dark brown eyes, light grey-brown hood"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -2789,7 +3741,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lumat-COO-Sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 2,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "THE RETURN OF THE JEDI",
@@ -2803,7 +3758,12 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Lili Ledy (MIM)"
+          "label": "Lili Ledy (MIM)",
+          "micro_count": 2,
+          "micros": [
+            "Mid brown belt and dagger, mid pink feathered hood and mid brown staff",
+            "Light brown belt and dagger, light pink feathered hood and dark brown staff"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -2815,7 +3775,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Paploo-COO-Sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 2,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2841,7 +3804,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Endor-COO-Sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2855,7 +3821,14 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Smile/ Glasslite"
+          "label": "Smile/ Glasslite",
+          "micro_count": 4,
+          "micros": [
+            "Kenner 1977 No COO No wedge sticker. Bright chrome dome. Mid-blue legs. Kenner mid-green EPM sabre or light-green no-EPM sabre.",
+            "Kenner Droids 1985 No COO Kenner Droids sticker. Light grey plastic dome. Blue-purple legs. Kenner mid-green EPM sabre.",
+            "Glasslite 1985 No COO Glasslite sticker. Silver painted dome. Dark-blue legs. Glasslite EPM sabre.",
+            "Glasslite Droids 1985 No COO Glasslite Droids sticker. Light grey plastic dome. Dark-blue legs. Glasslite EPM sabre."
+          ]
         }
       ],
       "coo_family_headings": [
@@ -2870,7 +3843,10 @@
       ],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 4,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2896,7 +3872,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Romba-COO-Sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2910,7 +3889,14 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 4,
+          "micros": [
+            "Spray mask A (No \"Ears\") with orange eyes",
+            "Spray mask B (Small \"Ears\") with red eyes",
+            "Spray mask C (Large \"Ears\") with red eyes",
+            "Spray mask D (Three Spikes) with red eyes"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -2922,7 +3908,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/Amanaman-COO-Sheet-3.1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 4,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2936,7 +3925,12 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 2,
+          "micros": [
+            "1984 date stamp. Dark red head scarf, dull red trousers",
+            "1985 date stamp. Bright red head scarf, brighter red trousers"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -2948,7 +3942,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/Barada-COO-Sheet-3.1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 2,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -2974,7 +3971,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Gunner-COO-sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3000,7 +4000,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Han-Carbonite-COO-Sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3026,7 +4029,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Stormtrooper-COO-sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3052,7 +4058,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Anakin-COO-sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3066,7 +4075,12 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 2,
+          "micros": [
+            "Metallic brown torso, small eyes and a grey torso",
+            "Brown torso, large eyes and a darker grey torso"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -3078,7 +4092,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/06/EV-9D9-COO-Sheet-3.1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 2,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3104,7 +4121,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Warok-COO-Sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3130,7 +4150,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lando-General-COO-Sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3156,7 +4179,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/A-Wing-Pilot-COO-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3170,7 +4196,12 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Kader"
+          "label": "Kader",
+          "micro_count": 2,
+          "micros": [
+            "Grey face paint",
+            "Green-grey face paint"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -3182,7 +4213,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Dignitary-COO-sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 2,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3196,7 +4230,12 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Smile"
+          "label": "Smile",
+          "micro_count": 2,
+          "micros": [
+            "Tanned head plastic",
+            "Lighter head plastic (degradation?)"
+          ]
         }
       ],
       "coo_family_headings": [
@@ -3208,7 +4247,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/04/Yak-Face-COO-Sheet-3.0.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 2,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "DROIDS GUIDE",
@@ -3224,7 +4266,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "Loose-figure photos have no roman family headers."
+      "image_note": "Loose-figure photos have no roman family headers.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "THE POWER OF THE FORCE",
@@ -3238,7 +4283,14 @@
       "families": [
         {
           "numeral": "I",
-          "label": "Smile/ Glasslite"
+          "label": "Smile/ Glasslite",
+          "micro_count": 4,
+          "micros": [
+            "Kenner 1977 No COO No wedge sticker. Bright chrome dome. Mid-blue legs. Kenner mid-green EPM sabre or light-green no-EPM sabre.",
+            "Kenner Droids 1985 No COO Kenner Droids sticker. Light grey plastic dome. Blue-purple legs. Kenner mid-green EPM sabre.",
+            "Glasslite 1985 No COO Glasslite sticker. Silver painted dome. Dark-blue legs. Glasslite EPM sabre.",
+            "Glasslite Droids 1985 No COO Glasslite Droids sticker. Light grey plastic dome. Dark-blue legs. Glasslite EPM sabre."
+          ]
         }
       ],
       "coo_family_headings": [
@@ -3253,7 +4305,10 @@
       ],
       "coo_sheet_image": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg",
       "confidence": "text-confirmed",
-      "image_note": "figure-guide text"
+      "image_note": "figure-guide text",
+      "micro_status": "text",
+      "micro_count": 4,
+      "micro_note": "Pictured combination lists cover every documented family."
     },
     {
       "name": "EWOKS Guide",
@@ -3269,7 +4324,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "No COO sheet image. The page says a later sheet is coming soon. The Return of the Jedi Wicket sheet is a different figure and shows two families."
+      "image_note": "No COO sheet image. The page says a later sheet is coming soon. The Return of the Jedi Wicket sheet is a different figure and shows two families.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "EWOKS Guide",
@@ -3285,7 +4343,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "No COO sheet image on the page."
+      "image_note": "No COO sheet image on the page.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "EWOKS Guide",
@@ -3301,7 +4362,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "No COO sheet image on the page."
+      "image_note": "No COO sheet image on the page.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "EWOKS Guide",
@@ -3317,7 +4381,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "No COO sheet image on the page."
+      "image_note": "No COO sheet image on the page.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "EWOKS Guide",
@@ -3333,7 +4400,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "No COO sheet image on the page."
+      "image_note": "No COO sheet image on the page.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     },
     {
       "name": "EWOKS Guide",
@@ -3349,7 +4419,10 @@
       "accessory_sections": [],
       "coo_sheet_image": "",
       "confidence": "unverified",
-      "image_note": "No COO sheet image on the page."
+      "image_note": "No COO sheet image on the page.",
+      "micro_status": "unverified",
+      "micro_count": null,
+      "micro_note": "No readable pictured-combination list. Sheet labels were not read as a version count."
     }
   ],
   "image_audit": "2026-10-04"

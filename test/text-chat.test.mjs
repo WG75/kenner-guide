@@ -238,6 +238,9 @@ await test("system prompt carries the brief's rules", async () => {
   assert.match(sys, /Do not count the factories yourself/);
   assert.match(sys, /Years says not recorded/);
   assert.match(sys, /8 different factories/);
+  assert.match(sys, /71 versions across 12 families/);
+  assert.match(sys, /versions unverified/);
+  assert.match(sys, /Do not count the versions yourself/);
   assert.doesNotMatch(sys, /label claims/i);
   assert.doesNotMatch(sys, /Evidence: documented/);
 });
@@ -974,13 +977,13 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   assert.notEqual(variants.json.offTopic, true);
   assert.equal(variants.json.sources[0], "references/variant-counts.txt");
   const variantPrompt = calls.at(-1).body.messages.at(-1).content;
-  assert.match(variantPrompt, /Darth Vader — 12/);
+  assert.match(variantPrompt, /Darth Vader — 71 versions across 12 families/);
   assert.match(variantPrompt, /Years: 1978 to 1985/);
   assert.match(variantPrompt, /Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
   assert.match(variantPrompt, /Stormtrooper — 7/);
-  assert.match(variantPrompt, /Yoda — 4/);
-  assert.match(variantPrompt, /Han Solo \(Hoth Outfit\) — 3/);
-  assert.ok(variantPrompt.indexOf("Darth Vader — 12") < variantPrompt.indexOf("Han Solo (Hoth Outfit) — 3"));
+  assert.match(variantPrompt, /Yoda — 29 versions across 4 families/);
+  assert.match(variantPrompt, /Han Solo \(Hoth Outfit\) — 20 versions across 3 families/);
+  assert.ok(variantPrompt.indexOf("Darth Vader — 71") < variantPrompt.indexOf("Han Solo (Hoth Outfit) — 20"));
 
   const han = await call({ message: "how many versions of Han Solo are there?" });
   assert.ok(han.json.sources.includes("references/variant-counts.txt"), han.json.sources.join(", "));
@@ -990,25 +993,26 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   assert.ok(vader.json.sources.includes("references/variant-counts.txt"), vader.json.sources.join(", "));
   assert.ok(vader.json.sources.includes("figures/darth-vader-reference.txt"), vader.json.sources.join(", "));
   const vaderPrompt = calls.at(-1).body.messages.at(-1).content;
-  const vaderAt = vaderPrompt.indexOf("Darth Vader — 12");
+  const vaderAt = vaderPrompt.indexOf("Darth Vader — 71 versions across 12 families");
   assert.ok(vaderAt >= 0);
   const vaderBlock = vaderPrompt.slice(vaderAt).split(/\n\d+\. /)[0];
   const vaderFamilies = [
-    "I Kader/ Kader China",
-    "II Kader",
-    "III Kader/ Glasslite",
-    "IV Smile/ LL Retorno & Regreso",
-    "V Unitoy",
-    "VI Unitoy",
-    "VII Unitoy",
-    "VIII Unitoy/ PBP",
-    "IX Top Toys",
-    "X Made In Taiwan",
-    "XI Taiwan",
-    "XII Takara"
+    ["I Kader/ Kader China", 14],
+    ["II Kader", 5],
+    ["III Kader/ Glasslite", 15],
+    ["IV Smile/ LL Retorno & Regreso", 7],
+    ["V Unitoy", 4],
+    ["VI Unitoy", 3],
+    ["VII Unitoy", 4],
+    ["VIII Unitoy/ PBP", 13],
+    ["IX Top Toys", 1],
+    ["X Made In Taiwan", 2],
+    ["XI Taiwan", 2],
+    ["XII Takara", 1]
   ];
-  for (const label of vaderFamilies) {
-    assert.match(vaderBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"), label);
+  for (const [label, versions] of vaderFamilies) {
+    const versionWord = versions === 1 ? "version" : "versions";
+    assert.match(vaderBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} — ${versions} ${versionWord}$`, "m"), label);
   }
   assert.equal(vaderBlock.split("\n").filter(line => line.startsWith("- ")).length, 12);
   assert.match(vaderBlock, /Years: 1978 to 1985/);
@@ -1020,7 +1024,7 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   }
 
   const nien = await call({ message: "how many variants does Nien Nunb have?" });
-  assert.ok(nien.json.sources.includes("references/variant-counts-2.txt"), nien.json.sources.join(", "));
+  assert.ok(nien.json.sources.some(source => source.includes("variant-counts")), nien.json.sources.join(", "));
   assert.ok(nien.json.sources.includes("figures/nien-nunb-reference.txt"), nien.json.sources.join(", "));
   const nienPrompt = calls.at(-1).body.messages.at(-1).content;
   const nienAt = nienPrompt.indexOf("Nien Nunb — 3");
@@ -1036,11 +1040,15 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   assert.ok(yoda.json.sources.some(source => source.includes("variant-counts")), yoda.json.sources.join(", "));
   assert.ok(yoda.json.sources.some(source => source.startsWith("figures/yoda")), yoda.json.sources.join(", "));
   const yodaPrompt = calls.at(-1).body.messages.at(-1).content;
-  const yodaAt = yodaPrompt.indexOf("Yoda — 4");
+  const yodaAt = yodaPrompt.indexOf("Yoda — 29 versions across 4 families");
   assert.ok(yodaAt >= 0);
   const yodaBlock = yodaPrompt.slice(yodaAt).split(/\n\d+\. /)[0];
   assert.match(yodaBlock, /Years: not recorded/);
   assert.match(yodaBlock, /Factories: 4 different factories: Kader, Unitoy, Smile, Top Toys/);
+  for (const [label, versions] of [["I Kader HK", 9], ["II Unitoy", 14], ["III Smile", 5], ["IV Top Toys", 1]]) {
+    const versionWord = versions === 1 ? "version" : "versions";
+    assert.match(yodaBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} — ${versions} ${versionWord}$`, "m"), label);
+  }
 });
 
 await test("variant count summary matches the generator and stays under the cap", async () => {
@@ -1058,12 +1066,12 @@ await test("variant count summary matches the generator and stays under the cap"
   }
   const before = beforeParts["variant-counts.txt"];
   const summary = Object.values(beforeParts).join("\n");
-  assert.match(before, /Darth Vader — 12 — Years: 1978 to 1985 — Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
-  assert.match(summary, /Yoda — 4 — Years: not recorded/);
-  assert.match(before, /Stormtrooper — 7/);
-  assert.match(summary, /Yoda — 4/);
-  assert.match(before, /Chewbacca — 6/);
-  assert.match(before, /R2-D2 — 7/);
+  assert.match(before, /Darth Vader — 71 versions across 12 families — Years: 1978 to 1985 — Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
+  assert.match(summary, /Yoda — 29 versions across 4 families — Years: not recorded/);
+  assert.match(summary, /Stormtrooper — 7 families/);
+  assert.match(summary, /Yoda — 29 versions across 4 families/);
+  assert.match(summary, /Chewbacca — 6/);
+  assert.match(summary, /R2-D2 — 7/);
   assert.match(before, /Luke Skywalker — 7 versions/);
   assert.match(summary, /Unverified/);
   assert.match(summary, /^- 8D8 —/m);
@@ -1074,7 +1082,8 @@ await test("variant count summary matches the generator and stays under the cap"
   assert.doesNotMatch(summary, /c-3po-removable-limbs/);
   assert.match(summary, /Wicket W\. Warrick — 2/);
   assert.match(summary, /VI Top Toys/);
-  assert.match(summary, /^- XII Takara$/m);
+  assert.match(summary, /^- XII Takara — 1 version$/m);
+  assert.match(summary, /^- I Kader\/ Kader China — 14 versions$/m);
   assert.doesNotMatch(summary, /not counted/i);
 });
 
