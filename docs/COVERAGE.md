@@ -21,7 +21,7 @@ Cross-check: https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figur
 | Droids & Ewoks | 8 URLs | 7 unique files plus the shared Wicket file | Not in the debut-cardback workbook. Debut line is unknown. |
 | Accessories | 64 | 64 | 14 existing files kept. 50 new files added. |
 
-Every index URL is represented. `data/catalog.json` lists each name, era, file and source URL so the chat page can offer every figure and accessory.
+Every index URL is represented. `data/catalog.json` lists each name, era, file and source URL. The chat page searches that list from the box under the header. It does not put the typed search text into the conversation.
 
 ## What already existed
 
@@ -56,7 +56,7 @@ After the re-parse:
 
 Chat injects a reference file only when `tcLoadFiles` reads it and it is at most 7,000 characters. That scan is `data/figures`, `data/accessories`, `data/references`, `data/terms`, `data/variants`, `data/compatibility`, and `data/factories.json`.
 
-`data/flows` is not in that scan. `loadFlow` reads a scripted flow and its numbered part files whole. `data/catalog.json` and `data/catalog-1.json` through `data/catalog-6.json` are fetched only by the dropdown in `index.html`. The cap test skips `data/flows` and the catalog JSON files for that reason. Every file the retriever can inject is under 7,000 characters.
+`data/flows` is not in that scan. `loadFlow` reads a scripted flow and its numbered part files whole. `data/catalog.json` and `data/catalog-1.json` through `data/catalog-6.json` are fetched only by the search box in `index.html`. The cap test skips `data/flows` and the catalog JSON files for that reason. Every file the retriever can inject is under 7,000 characters.
 
 These were split so a long guide is not cut off mid-file. Each part repeats the name, aliases, and source. The Early Bird factory sentence stays in part 1 of R2-D2 and Chewbacca.
 
@@ -65,4 +65,4 @@ These were split so a long guide is not cut off mid-file. Each part repeats the 
 - Longer generated guides such as R5-D4, Yoda, and Boba Fett are split the same way (`-2`, `-3`, …).
 - `data/flows/jawa.figure.json` and `jawa.figure-2.json` (the guided flow loads both; not retrieval-capped)
 - `data/flows/jawa.blaster.json` and `jawa.blaster-2.json`
-- `data/catalog.json` plus `data/catalog-1.json` through `data/catalog-6.json` (the lookup menu loads every part; not retrieval-capped)
+- `data/catalog.json` plus `data/catalog-1.json` through `data/catalog-6.json` (the search box loads every part; not retrieval-capped)

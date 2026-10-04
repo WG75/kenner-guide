@@ -5,6 +5,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { searchCatalog, previewSearch, openSearchResult, parseFollowUps, fallbackFollowUps } from "../vfcb-chat-ui.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 process.chdir(root);
@@ -654,8 +655,8 @@ function loadCatalog() {
 await test("every retrieval file is under the 7000 character cap", async () => {
   // data/flows/*.json is loaded whole by loadFlow for the scripted chats.
   // tcLoadFiles does not scan that folder, and TC_MAX_FILE_CHARS is not applied.
-  // data/catalog.json and data/catalog-N.json are fetched only by the dropdown
-  // in index.html (and by loadCatalog in this file). They are not injected
+  // data/catalog.json and data/catalog-N.json are fetched only by the search
+  // box in index.html (and by loadCatalog in this file). They are not injected
   // into the model prompt, so they are outside the retrieval cap on purpose.
   const cap = 7000;
   const over = [];
@@ -821,6 +822,113 @@ await test("last 17 term lists the seventeen POTF figures and excludes the five"
   assert.match(block, /Not members of the Last 17: Ewok Warrior, Teebo, Nien Nunb, Luke Skywalker \(Jedi Knight\), and Leia Organa \(Boushh Disguise\)/);
   assert.match(block, /B-Wing Pilot and General Madine are not Last 17 figures either/);
   assert.ok(json.sources.includes("terms/collector_terms.json"), json.sources.join(", "));
+});
+
+await test("catalog search matches names and aliases and does not send the typed text", async () => {
+  const catalog = loadCatalog();
+  const items = [
+    ...catalog.figures.map(item => ({ ...item, type: "figure" })),
+    ...catalog.accessories.map(item => ({ ...item, type: "accessory" }))
+  ];
+  const jawa = searchCatalog(items, "jawa");
+  assert.equal(jawa[0].name, "Jawa");
+  assert.equal(jawa[0].type, "figure");
+  assert.ok(jawa[0].era);
+  const luke = searchCatalog(items, "LUKE sky");
+  assert.equal(luke[0].name, "Luke Skywalker");
+  const chewie = searchCatalog(items, "chewie");
+  assert.equal(chewie[0].name, "Chewbacca");
+  const scope = searchCatalog(items, "sensorscope");
+  assert.ok(scope.some(item => item.name.includes("Sensorscope")));
+  const blaster = searchCatalog(items, "jawa blast");
+  assert.ok(blaster.some(item => item.type === "accessory" && /blaster/i.test(item.name)));
+  const aliasItem = searchCatalog([{ name: "Bossk", type: "figure", era: "Empire", aliases: ["the bounty hunter"] }], "bounty");
+  assert.equal(aliasItem[0].name, "Bossk");
+  const preview = previewSearch("not a chat message", items);
+  assert.equal(preview.chatMessage, null);
+  const opened = openSearchResult(jawa[0]);
+  assert.equal(opened.chatMessage, "Tell me about Jawa");
+  assert.equal(opened.typedQuerySent, false);
+  assert.doesNotMatch(opened.chatMessage, /not a chat message/);
+});
+
+await test("follow-up block is parsed and a broken block uses the topic fallback", async () => {
+  const parsed = parseFollowUps("Bossk came with a rifle.\n\n<<<FOLLOWUPS>>>\n- Which cardbacks did Bossk come on?\n- What moulds of rifle are documented?\n<<<END>>>");
+  assert.equal(parsed.reply, "Bossk came with a rifle.");
+  assert.deepEqual(parsed.followUps, [
+    "Which cardbacks did Bossk come on?",
+    "What moulds of rifle are documented?"
+  ]);
+  assert.doesNotMatch(parsed.reply, /FOLLOWUPS|<<<END>>>/);
+  const jsonReply = parseFollowUps(JSON.stringify({
+    reply: "The cape colour is not settled.",
+    followUps: ["Which figures used this cape?", "What colours are documented?"]
+  }));
+  assert.equal(jsonReply.reply, "The cape colour is not settled.");
+  assert.equal(jsonReply.followUps.length, 2);
+  const broken = parseFollowUps("Just the answer. <<<FOLLOWUPS>>> only one line <<<END>>>");
+  assert.equal(broken.reply, "Just the answer.");
+  assert.equal(broken.followUps, null);
+  assert.doesNotMatch(broken.reply, /<<<|FOLLOWUPS/);
+  const accessoryFallback = fallbackFollowUps("accessory");
+  assert.equal(accessoryFallback.length, 3);
+  assert.match(accessoryFallback[0], /figures came with it/i);
+  const { json } = await call({ message: "Hello" });
+  assert.equal(calls.length, 0);
+  assert.match(json.reply, /Identify a figure/);
+  assert.ok(Array.isArray(json.actions) && json.actions.length >= 2 && json.actions.length <= 3);
+  assert.ok(json.actions.every(action => action.label && action.value === action.label));
+  assert.doesNotMatch(json.reply, /<<<|FOLLOWUPS/);
+});
+
+await test("identify buttons replace the old chips and the lookup dropdown", async () => {
+  const page = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  assert.match(page, /Identify a figure/);
+  assert.match(page, /Identify Accessories/);
+  assert.match(page, /or ask me a question\.\.\./);
+  assert.match(page, /id="catalogSearch"/);
+  assert.match(page, /aria-label="Search figures and accessories"/);
+  assert.doesNotMatch(page, /Jawa figure/);
+  assert.doesNotMatch(page, /Jawa blaster/);
+  assert.doesNotMatch(page, /Identify a blaster/);
+  assert.doesNotMatch(page, /What does COO mean\?/);
+  assert.doesNotMatch(page, /catalogSelect/);
+  assert.doesNotMatch(page, /Look up/);
+  assert.doesNotMatch(page, /class="chips"/);
+  const buttonsAt = page.indexOf('id="identifyFigure"');
+  const hintAt = page.indexOf("or ask me a question...");
+  const inputAt = page.indexOf('id="input"');
+  const searchAt = page.indexOf('id="catalogSearch"');
+  const headerAt = page.indexOf('class="header"');
+  assert.ok(headerAt < searchAt && searchAt < buttonsAt && buttonsAt < hintAt && hintAt < inputAt);
+});
+
+await test("identify a figure and identify accessories start guided questions", async () => {
+  const figure = await call({ message: "identify a figure" });
+  assert.equal(calls.length, 0);
+  assert.equal(figure.json.flowState.topic, "variant_identify");
+  assert.match(figure.json.reply, /camera button/);
+  assert.match(figure.json.reply, /COO stamp/);
+  assert.equal(figure.json.actions.length, 0);
+  const accessory = await call({ message: "identify accessories" });
+  assert.equal(calls.length, 0);
+  assert.equal(accessory.json.flowState.topic, "accessory_identify");
+  assert.match(accessory.json.reply, /accessory|figure/i);
+  let state = accessory.json.flowState;
+  for (const answer of ["Jawa blaster", "Unitoy", "black"]) {
+    const next = await call({ message: answer, flowState: state });
+    assert.equal(calls.length, 0);
+    state = next.json.flowState;
+  }
+  assert.equal(state.topic, "accessory_identify");
+  const done = await call({ message: "no markings", flowState: state });
+  assert.equal(calls.length, 1);
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /Jawa blaster/);
+  assert.match(prompt, /say unknown/i);
+  assert.match(done.json.reply, /MOCK ANSWER/);
+  assert.ok(done.json.actions.length >= 2);
+  assert.doesNotMatch(done.json.reply, /<<<|FOLLOWUPS/);
 });
 
 await test("every catalog figure and accessory name retrieves its own file", async () => {
