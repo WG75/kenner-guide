@@ -9,13 +9,20 @@ The Early Bird Certificate Package was Kenner’s Christmas 1977 solution to not
 Star Wars took everyone by surprise, and because Kenner started late on production, they still wanted to get something into the hands of buyers for Christmas 1977. The result was the Early Bird Certificate Package, which promised the first Star Wars figures would be sent later.
 
 How it worked:
-Consumers bought the Early Bird Certificate Package in late 1977. It did not contain the figures themselves at the time of purchase. Instead, buyers later received the first four figures by mail in early 1978 in a plain white mailer.
+Consumers bought the Early Bird Certificate Package in late 1977. It did not contain the figures themselves at the time of purchase. Buyers later received the first four figures, with their accessories, by mail in early 1978. The figures came bagged in a plain white mailer box with a tray. The mailer is the outer package. It is not evidence that the figures had no accessories.
 
 The first four Early Bird figures were:
 - Luke Skywalker
 - Princess Leia Organa
 - Chewbacca
 - R2-D2
+
+Contents by figure:
+The plain white mailer box with a tray held these figures and the accessories named here. Evidence: documented.
+- Luke Skywalker had a yellow lightsaber, usually double-telescoping (most, not all)
+- Princess Leia Organa had a Leia blaster, plus a vinyl cape per several sources
+- Chewbacca had a bowcaster, primarily green (bowcaster colour conflict stays flagged unresolved)
+- R2-D2 had no accessory. R2-D2 is the only Early Bird figure with no accessory
 
 Important collector note:
 These were the first four Star Wars action figures ever released by Kenner.
@@ -30,7 +37,7 @@ Why it matters:
 Kenner quickly realised the extra telescoping tip was too fragile and easily broken, so it was removed from later production. That makes the Early Bird Luke one of the most notable and desirable early variants in the vintage Kenner line.
 
 Packaging note:
-The figures were mailed out in early 1978 in a plain white package rather than standard retail carded packaging.
+The figures and their accessories were mailed in early 1978, bagged in a plain white mailer box with a tray, rather than on standard retail cardbacks. The plain white mailer is the package. It does not mean the set had no accessories.
 
 Collector summary:
 The Early Bird Certificate Package was a brilliant promotional solution born out of necessity and is one of the most important early pieces in the vintage Star Wars toy line.
@@ -40,3 +47,10 @@ Related figure files:
 - princess-leia-organa-reference.txt
 - chewbacca-reference-1.txt
 - r2-d2-reference-1.txt
+
+Sources for Early Bird contents:
+https://www.rebelscum.com/Kenner-EarlyBird.asp
+https://thevariantvillains.com/baggie-guide/early-bird-4-packs/
+https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/
+https://swspaceclub.com/mailaways/early-bird-kit
+https://mrvintagestarwars.com

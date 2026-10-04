@@ -7,6 +7,7 @@ Overview:
 EV-9D9 is a vintage Kenner Star Wars figure from the Power of the Force line. Lists under a heading or a colon are kept in full from the Variant Villain page. Anything that page does not establish is unknown. Do not invent a variant.
 
 Early Bird: not an Early Bird figure. Early Bird is Luke Skywalker, Princess Leia Organa, Chewbacca and R2-D2 only.
+Last 17: yes (Last 17). One of the final Kenner Power of the Force figures, 1985. See term_last_17 in data/terms/collector_terms.json.
 
 Debut Kenner Cardback: not confirmed for the figure as a whole. Workbook figure-level family range (not a confirmed debut): POTF 92-back and/or European Trilogo 70-back. Exact micro-variant carding requires sealed evidence. [70-back: not on Warren's list of valid Kenner families (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92); regional/other family, flagged for his review]
 Workbook block: data/compatibility/debut-cardbacks-reference-potf-2.txt under Figure Name: EV-9D9. That block is the debut record. Compatible cardbacks on the Variant Villain page are not a substitute for it. Factory matching is not established unless a source states the link.
