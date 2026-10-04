@@ -6377,11 +6377,11 @@
         "outfit counts",
         "character versions",
         "how many versions",
+        "Luke Skywalker",
         "Luke Skywalker (Bespin Fatigues)",
         "Yoda",
         "Ben (Obi-Wan) Kenobi",
-        "Sand People",
-        "Han Solo (Hoth Outfit)"
+        "Sand People"
       ],
       "keywords": [
         "most variants",
@@ -6391,6 +6391,7 @@
         "outfit counts",
         "character versions",
         "how many versions",
+        "Luke Skywalker",
         "Luke Skywalker (Bespin Fatigues)",
         "Yoda",
         "Ben (Obi-Wan) Kenobi",
@@ -6412,13 +6413,11 @@
         "Yak Face",
         "C-3PO",
         "R2-D2",
-        "Stormtrooper",
-        "Chewbacca",
         "variant",
         "counts"
       ],
       "years": [],
-      "chars": 6529
+      "chars": 6872
     },
     {
       "relPath": "references/variant-counts-3.txt",
@@ -6433,11 +6432,11 @@
         "outfit counts",
         "character versions",
         "how many versions",
+        "Stormtrooper",
+        "Chewbacca",
         "Luke Skywalker (Jedi Knight Outfit)",
         "Chief Chirpa",
-        "Princess Leia Organa",
-        "AT-AT Driver",
-        "Bib Fortuna"
+        "Princess Leia Organa"
       ],
       "keywords": [
         "most variants",
@@ -6447,6 +6446,8 @@
         "outfit counts",
         "character versions",
         "how many versions",
+        "Stormtrooper",
+        "Chewbacca",
         "Luke Skywalker (Jedi Knight Outfit)",
         "Chief Chirpa",
         "Princess Leia Organa",
@@ -6466,14 +6467,11 @@
         "Dengar",
         "Emperor’s Royal Guard",
         "FX-7",
-        "Han Solo",
-        "Han Solo (Bespin Outfit)",
-        "Imperial Commander",
         "variant",
         "counts"
       ],
       "years": [],
-      "chars": 6415
+      "chars": 6936
     },
     {
       "relPath": "references/variant-counts-4.txt",
@@ -6488,11 +6486,11 @@
         "outfit counts",
         "character versions",
         "how many versions",
+        "Han Solo",
+        "Han Solo (Bespin Outfit)",
+        "Imperial Commander",
         "Imperial Stormtrooper (Hoth Battle Gear)",
-        "Imperial Tie Fighter Pilot",
-        "Lando Calrissian (Skiff Guard Disguise)",
-        "Leia (Hoth Outfit)",
-        "Leia Organa (Bespin Gown)"
+        "Imperial Tie Fighter Pilot"
       ],
       "keywords": [
         "most variants",
@@ -6502,6 +6500,9 @@
         "outfit counts",
         "character versions",
         "how many versions",
+        "Han Solo",
+        "Han Solo (Bespin Outfit)",
+        "Imperial Commander",
         "Imperial Stormtrooper (Hoth Battle Gear)",
         "Imperial Tie Fighter Pilot",
         "Lando Calrissian (Skiff Guard Disguise)",
@@ -6524,14 +6525,11 @@
         "Bespin Security Guard (Black)",
         "C-3PO (Removable Limbs)",
         "Greedo",
-        "Hammerhead",
-        "Han Solo (in Trench Coat)",
-        "Luke Skywalker (Hoth Battle Gear)",
         "variant",
         "counts"
       ],
       "years": [],
-      "chars": 6396
+      "chars": 6946
     },
     {
       "relPath": "references/variant-counts-5.txt",
@@ -6546,11 +6544,11 @@
         "outfit counts",
         "character versions",
         "how many versions",
+        "Hammerhead",
+        "Han Solo (in Trench Coat)",
+        "Luke Skywalker (Hoth Battle Gear)",
         "Luke Skywalker (X-Wing Pilot)",
-        "Power Droid",
-        "Princess Leia Organa (in Combat Poncho)",
-        "Prune Face",
-        "Rancor Keeper"
+        "Power Droid"
       ],
       "keywords": [
         "most variants",
@@ -6560,6 +6558,9 @@
         "outfit counts",
         "character versions",
         "how many versions",
+        "Hammerhead",
+        "Han Solo (in Trench Coat)",
+        "Luke Skywalker (Hoth Battle Gear)",
         "Luke Skywalker (X-Wing Pilot)",
         "Power Droid",
         "Princess Leia Organa (in Combat Poncho)",
@@ -6596,7 +6597,7 @@
         "counts"
       ],
       "years": [],
-      "chars": 5713
+      "chars": 6748
     },
     {
       "relPath": "references/variant-counts.txt",
@@ -6641,7 +6642,7 @@
         "counts"
       ],
       "years": [],
-      "chars": 6377
+      "chars": 6739
     },
     {
       "relPath": "references/vendor-codes.txt",

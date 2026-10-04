@@ -1,6 +1,14 @@
 Name: Variant and outfit counts
 Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
-Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. A family is a production batch identified by the Country of Origin stamp and the mould. Each factory is named once, with its Variant Villain family numbers in brackets. Do not guess a count that is not in this summary. An unverified figure has no number.
+Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Variant Villain's COO family is the moulds of one character that are the same mould, including an exact duplicate and a changed country stamp. Its terminology page treats a new steel mould as slightly different, and so as another family; that is the author's view. The numbers are not the order the moulds were used. Source: https://www.variantvillain.com/knowledge/coo-terminology/ and https://www.variantvillain.com/knowledge/how-to-use-the-coo-guides/ Reliability: high. Recorded: 2026-10-04. Each factory is named once, with its Variant Villain family numbers in brackets. Do not guess a count that is not in this summary. An unverified figure has no number.
+49. Hammerhead — 2 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
+- Smile (Variant Villain families I and II): I with PBP
+50. Han Solo (in Trench Coat) — 2 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, Kader
+- Smile (Variant Villain family I)
+- Kader (Variant Villain family II)
+51. Luke Skywalker (Hoth Battle Gear) — 2 families — versions unverified — Years: 1981 — Factories: 4 different factories: Unitoy, PBP, Meccano, Smile
+- Unitoy, with PBP and Meccano (Variant Villain family I)
+- Smile (Variant Villain family II)
 52. Luke Skywalker (X-Wing Pilot) — 2 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, PBP, Kader
 - Unitoy, with PBP (Variant Villain family I)
 - Kader (Variant Villain family II)

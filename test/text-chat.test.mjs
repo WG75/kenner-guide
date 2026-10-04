@@ -231,7 +231,12 @@ await test("system prompt carries the brief's rules", async () => {
   }
   assert.match(sys, /Do not print an "Evidence:" line/);
   assert.match(sys, /one factory per line/);
-  assert.match(sys, /A family is a production batch identified by the Country of Origin stamp and the mould/);
+  assert.match(sys, /COO family/);
+  assert.match(sys, /same mould/);
+  assert.match(sys, /not the order the moulds were used/);
+  assert.match(sys, /knowledge\/coo-terminology/);
+  assert.match(sys, /how-to-use-the-coo-guides/);
+  assert.doesNotMatch(sys, /production batch identified by the Country of Origin stamp/);
   assert.match(sys, /Variant Villain family numbers in brackets/);
   assert.match(sys, /one name per line/);
   assert.match(sys, /Do not stop at the number/);
@@ -988,7 +993,7 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   assert.match(variantPrompt, /Darth Vader — 71 versions across 12 families/);
   assert.match(variantPrompt, /Years: 1978 to 1985/);
   assert.match(variantPrompt, /Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
-  assert.match(variantPrompt, /Stormtrooper — 7/);
+  assert.match(variantPrompt, /Stormtrooper is 7 families/);
   assert.match(variantPrompt, /Yoda — 29 versions across 4 families/);
   assert.match(variantPrompt, /Han Solo \(Hoth Outfit\) — 20 versions across 3 families/);
   assert.ok(variantPrompt.indexOf("Darth Vader — 71") < variantPrompt.indexOf("Han Solo (Hoth Outfit) — 20"));
@@ -1012,15 +1017,21 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   const vaderAt = vaderPrompt.indexOf("Darth Vader — 71 versions across 12 families");
   assert.ok(vaderAt >= 0);
   const vaderBlock = vaderPrompt.slice(vaderAt).split(/\n\d+\. /)[0];
-  assert.match(vaderPrompt, /A family is a production batch identified by the Country of Origin stamp and the mould/);
-  assert.ok(vaderPrompt.indexOf("A family is a production batch") < vaderAt);
+  assert.match(vaderPrompt, /COO family is the moulds of one character that are the same mould/);
+  assert.match(vaderPrompt, /https:\/\/www\.variantvillain\.com\/knowledge\/coo-terminology\//);
+  assert.match(vaderPrompt, /Recorded: 2026-10-04/);
+  assert.ok(vaderPrompt.indexOf("COO family is the moulds") < vaderAt);
+  assert.doesNotMatch(vaderPrompt, /production batch identified by the Country of Origin stamp/);
   assert.match(vaderBlock, /^- Kader \(Variant Villain families I, II and III\): I, 14 versions; II, 5 versions; III with Glasslite, 15 versions$/m);
   assert.match(vaderBlock, /^- Smile\/Lili Ledy \(Variant Villain family IV\): 7 versions$/m);
   assert.match(vaderBlock, /^- Unitoy \(Variant Villain families V, VI, VII and VIII\): V, 4 versions; VI, 3 versions; VII, 4 versions; VIII with PBP, 13 versions$/m);
   assert.match(vaderBlock, /^- Top Toys \(Variant Villain family IX\): 1 version$/m);
-  assert.match(vaderBlock, /^- Taiwan \(Variant Villain families X and XI\): X, 2 versions, torso mould M9; XI, 2 versions, torso mould M10$/m);
+  assert.match(vaderBlock, /^- Taiwan \(Variant Villain families X and XI\): X, 2 versions; XI, 2 versions$/m);
+  assert.match(vaderBlock, /told apart by the foot mould/);
+  assert.match(vaderBlock, /may be wear or different plastic/);
+  assert.match(vaderBlock, /https:\/\/www\.variantvillain\.com\/characters\/sw\/darth-vader\//);
   assert.match(vaderBlock, /^- Takara \(Variant Villain family XII\): 1 version$/m);
-  const vaderFactoryLines = vaderBlock.split("\n").filter(line => line.startsWith("- ") && !line.includes("production batch"));
+  const vaderFactoryLines = vaderBlock.split("\n").filter(line => line.includes("(Variant Villain famil"));
   assert.equal(vaderFactoryLines.length, 6);
   assert.equal(vaderFactoryLines.filter(line => line.startsWith("- Unitoy")).length, 1);
   assert.equal(vaderFactoryLines.filter(line => line.startsWith("- Taiwan")).length, 1);
@@ -1130,7 +1141,9 @@ await test("variant count summary matches the generator and stays under the cap"
   assert.match(summary, /Top Toys \(Variant Villain family VI\)/);
   assert.match(summary, /^- Takara \(Variant Villain family XII\): 1 version$/m);
   assert.match(summary, /^- Kader \(Variant Villain families I, II and III\): I, 14 versions; II, 5 versions; III with Glasslite, 15 versions$/m);
-  assert.match(summary, /A family is a production batch identified by the Country of Origin stamp and the mould/);
+  assert.match(summary, /COO family is the moulds of one character that are the same mould/);
+  assert.match(summary, /https:\/\/www\.variantvillain\.com\/knowledge\/coo-terminology\//);
+  assert.doesNotMatch(summary, /production batch identified by the Country of Origin stamp/);
   assert.doesNotMatch(summary, /not counted/i);
 });
 
