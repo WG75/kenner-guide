@@ -1,0 +1,4613 @@
+{
+  "source": {
+    "name": "Warren's Palitoy UK release list",
+    "reliability": "primary",
+    "recorded": "2026-10-04",
+    "url": null,
+    "note": "Warren wrote \"1978 to 1975\", meaning 1978 to 1983. His own UK list. No public URL. Not a Variant Villain page."
+  },
+  "span": "1978-1983",
+  "wording_note": "Warren wrote \"1978 to 1975\", meaning 1978 to 1983.",
+  "count": 366,
+  "items": [
+    {
+      "name": "Darth Vader",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Palitoy display box."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Stormtrooper",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Palitoy display box."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "C-3PO",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Palitoy display box."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Sand People",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Palitoy display box. Warren wrote Sandpeople."
+      ],
+      "aliases": [
+        "Sandpeople"
+      ]
+    },
+    {
+      "name": "Chewbacca",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Palitoy display box."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Dip Dots painting set",
+      "kind": "craft",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Dip Dots"
+      ]
+    },
+    {
+      "name": "Keel kite",
+      "kind": "other",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "kite",
+        "Keel"
+      ]
+    },
+    {
+      "name": "Poster art set",
+      "kind": "craft",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren wrote Playnts. That spelling is kept as his wording."
+      ],
+      "aliases": [
+        "Playnts",
+        "Poster art"
+      ]
+    },
+    {
+      "name": "Play-Doh set",
+      "kind": "craft",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Play-Doh",
+        "Play Doh"
+      ]
+    },
+    {
+      "name": "Escape the Death Star game",
+      "kind": "game",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Escape the Death Star"
+      ]
+    },
+    {
+      "name": "The Adventures of R2-D2 game",
+      "kind": "game",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "The Adventures of R2-D2"
+      ]
+    },
+    {
+      "name": "Destroy the Death Star game",
+      "kind": "game",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Destroy the Death Star"
+      ]
+    },
+    {
+      "name": "Light Saber",
+      "kind": "weapon",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren's spelling of this early saber."
+      ],
+      "aliases": [
+        "Lightsaber",
+        "Light Saber"
+      ]
+    },
+    {
+      "name": "Han Solo",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Artoo-Detoo (R2-D2)",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Card name kept."
+      ],
+      "aliases": [
+        "R2-D2",
+        "Artoo-Detoo",
+        "Artoo Detoo"
+      ]
+    },
+    {
+      "name": "See-Threepio (C-3PO)",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Card name kept."
+      ],
+      "aliases": [
+        "C-3PO",
+        "See-Threepio",
+        "See Threepio"
+      ]
+    },
+    {
+      "name": "Darth Vader",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Death Squad Commander",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Jawa",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Stormtrooper",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Sand People",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Land Speeder",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Landspeeder"
+      ]
+    },
+    {
+      "name": "X-Wing Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "X-Wing",
+        "X Wing"
+      ]
+    },
+    {
+      "name": "Death Star",
+      "kind": "playset",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "TIE Fighter",
+      "kind": "vehicle",
+      "line": "Kenner with Palitoy sticker",
+      "year": 1978,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Kenner box with a Palitoy sticker."
+      ],
+      "aliases": [
+        "TIE",
+        "Tie Fighter"
+      ]
+    },
+    {
+      "name": "Luke Skywalker",
+      "kind": "large-figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Large size action figure."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia",
+      "kind": "large-figure",
+      "line": "Palitoy SW",
+      "year": 1978,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Large size action figure."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Darth Vader",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Same five masks as 1978."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Stormtrooper",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Same five masks as 1978."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "C-3PO",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Same five masks as 1978."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Sand People",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Same five masks as 1978.",
+        "Palitoy display box. Warren wrote Sandpeople."
+      ],
+      "aliases": [
+        "Sandpeople"
+      ]
+    },
+    {
+      "name": "Chewbacca",
+      "kind": "mask",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Same five masks as 1978."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "3D Poster Art",
+      "kind": "craft",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "3D poster"
+      ]
+    },
+    {
+      "name": "Dip Dots painting set",
+      "kind": "craft",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Dip Dots"
+      ]
+    },
+    {
+      "name": "Light Saber",
+      "kind": "weapon",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren's spelling of this early saber."
+      ],
+      "aliases": [
+        "Lightsaber",
+        "Light Saber"
+      ]
+    },
+    {
+      "name": "Han Solo",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Artoo-Detoo (R2-D2)",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave.",
+        "Card name kept."
+      ],
+      "aliases": [
+        "R2-D2",
+        "Artoo-Detoo",
+        "Artoo Detoo"
+      ]
+    },
+    {
+      "name": "See-Threepio (C-3PO)",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave.",
+        "Card name kept."
+      ],
+      "aliases": [
+        "C-3PO",
+        "See-Threepio",
+        "See Threepio"
+      ]
+    },
+    {
+      "name": "Darth Vader",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Death Squad Commander",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Jawa",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Stormtrooper",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Sand People",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Carried as the first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Hammerhead",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Snaggletooth",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Walrus Man",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Greedo",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Power Droid",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Death Star Droid",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "R5-D4",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren wrote Luke Skywalker X-Wing Pilot."
+      ],
+      "aliases": [
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot"
+      ]
+    },
+    {
+      "name": "Land Speeder",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Landspeeder"
+      ]
+    },
+    {
+      "name": "X-Wing Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "X-Wing",
+        "X Wing"
+      ]
+    },
+    {
+      "name": "Death Star",
+      "kind": "playset",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "TIE Fighter",
+      "kind": "vehicle",
+      "line": "Kenner with Palitoy sticker",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Kenner box with a Palitoy sticker. Warren wrote Kenner w/ Palitoy sticker."
+      ],
+      "aliases": [
+        "TIE",
+        "Tie Fighter"
+      ]
+    },
+    {
+      "name": "Luke Skywalker",
+      "kind": "large-figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Large size action figure. Carried first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia",
+      "kind": "large-figure",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Large size action figure. Carried first wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "X-Wing Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "X-Wing",
+        "X Wing"
+      ]
+    },
+    {
+      "name": "TIE Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "TIE"
+      ]
+    },
+    {
+      "name": "Darth Vader TIE Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Vader TIE",
+        "Darth Vader TIE"
+      ]
+    },
+    {
+      "name": "Landspeeder",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast. Warren wrote Landspeeder."
+      ],
+      "aliases": [
+        "Land Speeder"
+      ]
+    },
+    {
+      "name": "Imperial Cruiser",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Millennium Falcon",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Falcon",
+        "Millenium Falcon"
+      ]
+    },
+    {
+      "name": "Y-Wing",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Y Wing",
+        "Y-Wing Fighter"
+      ]
+    },
+    {
+      "name": "Blaster Pistol",
+      "kind": "weapon",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Blaster"
+      ]
+    },
+    {
+      "name": "Three Position Laser Rifle",
+      "kind": "weapon",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Laser Rifle",
+        "Three Position Rifle"
+      ]
+    },
+    {
+      "name": "Radio Controlled R2-D2",
+      "kind": "other",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "RC R2-D2",
+        "Radio Controlled R2"
+      ]
+    },
+    {
+      "name": "Talking R2-D2",
+      "kind": "other",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Talking R2"
+      ]
+    },
+    {
+      "name": "Darth Vader TIE Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Vader TIE Fighter",
+        "Darth Vader TIE"
+      ]
+    },
+    {
+      "name": "Cantina",
+      "kind": "playset",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Land of the Jawas",
+      "kind": "playset",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Droid Factory",
+      "kind": "playset",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Imperial Troop Transporter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1979,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "ITT",
+        "Troop Transporter"
+      ]
+    },
+    {
+      "name": "Han Solo",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Artoo-Detoo (R2-D2)",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW.",
+        "Card name kept."
+      ],
+      "aliases": [
+        "R2-D2",
+        "Artoo-Detoo",
+        "Artoo Detoo"
+      ]
+    },
+    {
+      "name": "See-Threepio (C-3PO)",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW.",
+        "Card name kept."
+      ],
+      "aliases": [
+        "C-3PO",
+        "See-Threepio",
+        "See Threepio"
+      ]
+    },
+    {
+      "name": "Darth Vader",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Death Squad Commander",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Jawa",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Stormtrooper",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Sand People",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Hammerhead",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Snaggletooth",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Walrus Man",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Greedo",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Power Droid",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Death Star Droid",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "R5-D4",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "kind": "figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy SW.",
+        "Warren wrote Luke Skywalker X-Wing Pilot."
+      ],
+      "aliases": [
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot"
+      ]
+    },
+    {
+      "name": "Han Solo (Hoth Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker (Bespin Fatigues)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa (Bespin Gown)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB.",
+        "Warren wrote Leia Organa (Bespin Gown)."
+      ],
+      "aliases": [
+        "Leia Organa (Bespin Gown)",
+        "Leia Bespin",
+        "Bespin Leia"
+      ]
+    },
+    {
+      "name": "Lando Calrissian",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Soldier (Hoth Battle Gear)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "FX-7 (Medical Droid)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "IG-88 (Bounty Hunter)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": [
+        "IG-88"
+      ]
+    },
+    {
+      "name": "Bespin Security Guard",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Bossk (Bounty Hunter)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Boba Fett",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren marked this wave Palitoy ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Land Speeder",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Landspeeder"
+      ]
+    },
+    {
+      "name": "TIE Fighter",
+      "kind": "vehicle",
+      "line": "Kenner with Palitoy sticker",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Kenner SW box with a Palitoy sticker."
+      ],
+      "aliases": [
+        "TIE",
+        "Tie Fighter"
+      ]
+    },
+    {
+      "name": "Death Star",
+      "kind": "playset",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker",
+      "kind": "large-figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Large size. Warren marked this wave SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia",
+      "kind": "large-figure",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Large size. Warren marked this wave SW."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Boba Fett",
+      "kind": "large-figure",
+      "line": "Kenner ESB",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Large size. Second wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "IG-88",
+      "kind": "large-figure",
+      "line": "Kenner ESB",
+      "year": 1980,
+      "wave": "second",
+      "status": "not released",
+      "notes": [
+        "Large size. Warren marked IG-88 not released."
+      ],
+      "aliases": [
+        "IG88"
+      ]
+    },
+    {
+      "name": "X-Wing Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "X-Wing",
+        "X Wing"
+      ]
+    },
+    {
+      "name": "TIE Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "TIE"
+      ]
+    },
+    {
+      "name": "Darth Vader TIE Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Vader TIE",
+        "Darth Vader TIE"
+      ]
+    },
+    {
+      "name": "Landspeeder",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast. Warren wrote Landspeeder."
+      ],
+      "aliases": [
+        "Land Speeder"
+      ]
+    },
+    {
+      "name": "Imperial Cruiser",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Millennium Falcon",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Falcon",
+        "Millenium Falcon"
+      ]
+    },
+    {
+      "name": "Y-Wing",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Y Wing",
+        "Y-Wing Fighter"
+      ]
+    },
+    {
+      "name": "Blaster Pistol",
+      "kind": "weapon",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Blaster"
+      ]
+    },
+    {
+      "name": "Three Position Laser Rifle",
+      "kind": "weapon",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Laser Rifle"
+      ]
+    },
+    {
+      "name": "Radio Controlled R2-D2",
+      "kind": "other",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "RC R2-D2"
+      ]
+    },
+    {
+      "name": "Talking R2-D2",
+      "kind": "other",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Talking R2"
+      ]
+    },
+    {
+      "name": "Darth Vader TIE Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Vader TIE Fighter"
+      ]
+    },
+    {
+      "name": "Cantina",
+      "kind": "playset",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Land of the Jawas",
+      "kind": "playset",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Droid Factory",
+      "kind": "playset",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Imperial Troop Transporter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "ITT",
+        "Troop Transporter"
+      ]
+    },
+    {
+      "name": "Yoda Hand Puppet",
+      "kind": "other",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Yoda puppet"
+      ]
+    },
+    {
+      "name": "Millennium Falcon",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Falcon",
+        "Millenium Falcon"
+      ]
+    },
+    {
+      "name": "Tauntaun",
+      "kind": "creature",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Armoured Snowspeeder",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Snowspeeder",
+        "Rebel Armored Snowspeeder"
+      ]
+    },
+    {
+      "name": "Twin-Pod Cloud Car",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren wrote Twin Pod Cloud Car."
+      ],
+      "aliases": [
+        "Twin Pod Cloud Car",
+        "Cloud Car"
+      ]
+    },
+    {
+      "name": "X-Wing Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "X-Wing"
+      ]
+    },
+    {
+      "name": "The Force Lightsaber",
+      "kind": "weapon",
+      "line": "loose",
+      "year": 1980,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Red and yellow. Sold loose. Sold loose is a sales note, not an unreleased item."
+      ],
+      "aliases": [
+        "Force Lightsaber",
+        "Force Lightsabre"
+      ]
+    },
+    {
+      "name": "Han Solo",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Artoo-Detoo (R2-D2)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB.",
+        "Card name kept."
+      ],
+      "aliases": [
+        "R2-D2",
+        "Artoo-Detoo",
+        "Artoo Detoo"
+      ]
+    },
+    {
+      "name": "See-Threepio (C-3PO)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB.",
+        "Card name kept."
+      ],
+      "aliases": [
+        "C-3PO",
+        "See-Threepio",
+        "See Threepio"
+      ]
+    },
+    {
+      "name": "Darth Vader",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Star Destroyer Commander",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB.",
+        "Death Squad Commander on the earlier first wave. Warren said the name changed."
+      ],
+      "aliases": [
+        "Death Squad Commander"
+      ]
+    },
+    {
+      "name": "Jawa",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Stormtrooper",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Sand People",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Warren marked the first wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Hammerhead",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked the second wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Snaggletooth",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked the second wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Walrus Man",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked the second wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Greedo",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked the second wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Power Droid",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked the second wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Death Star Droid",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked the second wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "R5-D4",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked the second wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Warren marked the second wave ESB.",
+        "Warren wrote Luke Skywalker X-Wing Pilot."
+      ],
+      "aliases": [
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot"
+      ]
+    },
+    {
+      "name": "Dengar",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Lobot",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Yoda",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Han Solo (Bespin Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Ugnaught",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "2-1B",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "AT-AT Driver",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Imperial Commander",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Commander",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa (Hoth Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Warren wrote Leia (Hoth Outfit)."
+      ],
+      "aliases": [
+        "Leia (Hoth Outfit)",
+        "Leia Hoth",
+        "Hoth Leia"
+      ]
+    },
+    {
+      "name": "Bespin Security Guard",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "TIE Fighter",
+      "kind": "vehicle",
+      "line": "Kenner with Palitoy sticker",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Kenner SW box with a Palitoy sticker."
+      ],
+      "aliases": [
+        "TIE",
+        "Tie Fighter"
+      ]
+    },
+    {
+      "name": "X-Wing Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "X-Wing"
+      ]
+    },
+    {
+      "name": "Boba Fett",
+      "kind": "large-figure",
+      "line": "Kenner ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Large size. Second wave."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "IG-88",
+      "kind": "large-figure",
+      "line": "Kenner ESB",
+      "year": 1981,
+      "wave": "second",
+      "status": "not released",
+      "notes": [
+        "Large size. Warren marked IG-88 not released."
+      ],
+      "aliases": [
+        "IG88"
+      ]
+    },
+    {
+      "name": "X-Wing Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "X-Wing",
+        "X Wing"
+      ]
+    },
+    {
+      "name": "TIE Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "TIE"
+      ]
+    },
+    {
+      "name": "Darth Vader TIE Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Vader TIE",
+        "Darth Vader TIE"
+      ]
+    },
+    {
+      "name": "Landspeeder",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast. Warren wrote Landspeeder."
+      ],
+      "aliases": [
+        "Land Speeder"
+      ]
+    },
+    {
+      "name": "Imperial Cruiser",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Millennium Falcon",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Falcon",
+        "Millenium Falcon"
+      ]
+    },
+    {
+      "name": "Y-Wing",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Y Wing",
+        "Y-Wing Fighter"
+      ]
+    },
+    {
+      "name": "Twin-Pod Cloud Car",
+      "kind": "die-cast",
+      "line": "Kenner ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Die-cast. Warren wrote Twin-Pod."
+      ],
+      "aliases": [
+        "Twin-Pod",
+        "Twin Pod"
+      ]
+    },
+    {
+      "name": "Slave I",
+      "kind": "die-cast",
+      "line": "Kenner ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Die-cast. Warren wrote Slave One."
+      ],
+      "aliases": [
+        "Slave One",
+        "Slave 1"
+      ]
+    },
+    {
+      "name": "Snowspeeder",
+      "kind": "die-cast",
+      "line": "Kenner ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Rebel Armoured Snowspeeder"
+      ]
+    },
+    {
+      "name": "TIE Bomber",
+      "kind": "die-cast",
+      "line": "Kenner ESB",
+      "year": 1981,
+      "wave": "third",
+      "status": "not released",
+      "notes": [
+        "Die-cast.",
+        "Warren marked the TIE Bomber not released."
+      ],
+      "aliases": [
+        "Tie Bomber"
+      ]
+    },
+    {
+      "name": "Blaster Pistol",
+      "kind": "weapon",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Blaster"
+      ]
+    },
+    {
+      "name": "Three Position Laser Rifle",
+      "kind": "weapon",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Laser Rifle"
+      ]
+    },
+    {
+      "name": "Darth Vader TIE Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "SW with a Bounty Hunter offer."
+      ],
+      "aliases": [
+        "Vader TIE Fighter"
+      ]
+    },
+    {
+      "name": "Imperial Troop Transporter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "SW with a Bounty Hunter offer."
+      ],
+      "aliases": [
+        "ITT"
+      ]
+    },
+    {
+      "name": "Yoda Hand Puppet",
+      "kind": "other",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Yoda puppet"
+      ]
+    },
+    {
+      "name": "Tauntaun",
+      "kind": "creature",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Armoured Snowspeeder",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Snowspeeder"
+      ]
+    },
+    {
+      "name": "Twin-Pod Cloud Car",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Twin Pod Cloud Car",
+        "Cloud Car"
+      ]
+    },
+    {
+      "name": "Turret and Probot playset",
+      "kind": "playset",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Turret & Probot",
+        "Probot playset"
+      ]
+    },
+    {
+      "name": "Imperial Attack Base",
+      "kind": "playset",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Attack Base"
+      ]
+    },
+    {
+      "name": "The Force Lightsaber",
+      "kind": "weapon",
+      "line": "loose",
+      "year": 1981,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Red and yellow. Loose. Sold loose is a sales note, not an unreleased item."
+      ],
+      "aliases": [
+        "Force Lightsaber",
+        "Force Lightsabre"
+      ]
+    },
+    {
+      "name": "Yoda",
+      "kind": "craft",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "unconfirmed",
+      "notes": [
+        "Craft Master figurine. Warren marked this ESB unconfirmed."
+      ],
+      "aliases": [
+        "Craft Master Yoda"
+      ]
+    },
+    {
+      "name": "Luke Skywalker on Tauntaun",
+      "kind": "craft",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "unconfirmed",
+      "notes": [
+        "Craft Master figurine. Warren marked this ESB unconfirmed."
+      ],
+      "aliases": [
+        "Craft Master Luke",
+        "Luke on Tauntaun"
+      ]
+    },
+    {
+      "name": "Glow Paint by Numbers Craft Master",
+      "kind": "craft",
+      "line": "Palitoy ESB",
+      "year": 1981,
+      "wave": "",
+      "status": "unconfirmed",
+      "notes": [
+        "Subjects Warren named: Luke, Vader, Han, Leia. He marked this ESB unconfirmed."
+      ],
+      "aliases": [
+        "Glow Paint by Numbers",
+        "Paint by Numbers"
+      ]
+    },
+    {
+      "name": "Han Solo",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Darth Vader",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Star Destroyer Commander",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ESB.",
+        "Death Squad Commander on the earlier first wave. Warren said the name changed."
+      ],
+      "aliases": [
+        "Death Squad Commander"
+      ]
+    },
+    {
+      "name": "Jawa",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Stormtrooper",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Sand People",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Hammerhead",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Snaggletooth",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Walrus Man",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Greedo",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Power Droid",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Death Star Droid",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "R5-D4",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ESB.",
+        "Warren wrote Luke Skywalker X-Wing Pilot."
+      ],
+      "aliases": [
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot"
+      ]
+    },
+    {
+      "name": "Han Solo (Hoth Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker (Bespin Fatigues)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa (Bespin Gown)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB.",
+        "Warren wrote Leia Organa (Bespin Gown)."
+      ],
+      "aliases": [
+        "Leia Organa (Bespin Gown)",
+        "Leia Bespin",
+        "Bespin Leia"
+      ]
+    },
+    {
+      "name": "Lando Calrissian",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Soldier (Hoth Battle Gear)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "FX-7 (Medical Droid)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "IG-88 (Bounty Hunter)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": [
+        "IG-88"
+      ]
+    },
+    {
+      "name": "Bespin Security Guard",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Bossk (Bounty Hunter)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Boba Fett",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Dengar",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Lobot",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Yoda",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Han Solo (Bespin Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Ugnaught",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "2-1B",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "AT-AT Driver",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Imperial Commander",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Commander",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa (Hoth Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave: 1980 names plus 1981 names. Warren marked it ESB.",
+        "Warren wrote Leia (Hoth Outfit)."
+      ],
+      "aliases": [
+        "Leia (Hoth Outfit)",
+        "Leia Hoth",
+        "Hoth Leia"
+      ]
+    },
+    {
+      "name": "Luke Skywalker (Hoth Battle Gear)",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "AT-AT Commander",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Cloud Car Pilot",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Warren wrote (Twin-Pod) Cloud Car Pilot."
+      ],
+      "aliases": [
+        "Twin-Pod Cloud Car Pilot",
+        "Twin Pod Cloud Car Pilot"
+      ]
+    },
+    {
+      "name": "Bespin Security Guard",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Imperial TIE Fighter Pilot",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Artoo-Detoo (R2-D2) with Sensorscope",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Card name kept."
+      ],
+      "aliases": [
+        "R2-D2 with Sensorscope",
+        "R2-D2 Sensorscope",
+        "Sensorscope"
+      ]
+    },
+    {
+      "name": "C-3PO with Removable Limbs",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "C-3PO Removable Limbs"
+      ]
+    },
+    {
+      "name": "4-LOM",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Warren wrote 4-Lom."
+      ],
+      "aliases": [
+        "4-Lom",
+        "4LOM",
+        "4 Lom"
+      ]
+    },
+    {
+      "name": "Zuckuss",
+      "kind": "figure",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "TIE Fighter",
+      "kind": "vehicle",
+      "line": "Kenner with Palitoy sticker",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Kenner SW box with a Palitoy sticker."
+      ],
+      "aliases": [
+        "TIE",
+        "Tie Fighter"
+      ]
+    },
+    {
+      "name": "Battle Damaged X-Wing Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "White. Warren wrote Battle Damaged X-Wing Fighter white."
+      ],
+      "aliases": [
+        "Battle Damaged X-Wing",
+        "X-Wing white"
+      ]
+    },
+    {
+      "name": "Boba Fett",
+      "kind": "large-figure",
+      "line": "Kenner ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Large size. Carried second wave. Warren marked the line Kenner ESB."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "IG-88",
+      "kind": "large-figure",
+      "line": "Kenner ESB",
+      "year": 1982,
+      "wave": "second",
+      "status": "not stated",
+      "notes": [
+        "Large size. Warren carried the second-wave large-size line and did not repeat 'not released' for IG-88. This list does not turn that into a release."
+      ],
+      "aliases": [
+        "IG88"
+      ]
+    },
+    {
+      "name": "X-Wing Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "X-Wing",
+        "X Wing"
+      ]
+    },
+    {
+      "name": "TIE Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "TIE"
+      ]
+    },
+    {
+      "name": "Darth Vader TIE Fighter",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Vader TIE",
+        "Darth Vader TIE"
+      ]
+    },
+    {
+      "name": "Landspeeder",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "Die-cast. Warren wrote Landspeeder."
+      ],
+      "aliases": [
+        "Land Speeder"
+      ]
+    },
+    {
+      "name": "Imperial Cruiser",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Millennium Falcon",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Falcon",
+        "Millenium Falcon"
+      ]
+    },
+    {
+      "name": "Y-Wing",
+      "kind": "die-cast",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Y Wing",
+        "Y-Wing Fighter"
+      ]
+    },
+    {
+      "name": "Twin-Pod Cloud Car",
+      "kind": "die-cast",
+      "line": "Kenner ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Die-cast. Warren wrote Twin-Pod."
+      ],
+      "aliases": [
+        "Twin-Pod",
+        "Twin Pod"
+      ]
+    },
+    {
+      "name": "Slave I",
+      "kind": "die-cast",
+      "line": "Kenner ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Die-cast. Warren wrote Slave One."
+      ],
+      "aliases": [
+        "Slave One",
+        "Slave 1"
+      ]
+    },
+    {
+      "name": "Snowspeeder",
+      "kind": "die-cast",
+      "line": "Kenner ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Die-cast."
+      ],
+      "aliases": [
+        "Rebel Armoured Snowspeeder"
+      ]
+    },
+    {
+      "name": "TIE Bomber",
+      "kind": "die-cast",
+      "line": "Kenner ESB",
+      "year": 1982,
+      "wave": "third",
+      "status": "not stated",
+      "notes": [
+        "Die-cast.",
+        "Warren carried the third-wave die-cast line and did not repeat 'not released' for the TIE Bomber. This list does not turn that into a release."
+      ],
+      "aliases": [
+        "Tie Bomber"
+      ]
+    },
+    {
+      "name": "Blaster Pistol",
+      "kind": "weapon",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Blaster"
+      ]
+    },
+    {
+      "name": "Three Position Laser Rifle",
+      "kind": "weapon",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren wrote Laser Rifle."
+      ],
+      "aliases": [
+        "Laser Rifle"
+      ]
+    },
+    {
+      "name": "Darth Vader TIE Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "SW, Bounty Hunter offer. Warren wrote Vader TIE Fighter."
+      ],
+      "aliases": [
+        "Vader TIE Fighter"
+      ]
+    },
+    {
+      "name": "Imperial Troop Transporter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "SW, Bounty Hunter offer."
+      ],
+      "aliases": [
+        "ITT"
+      ]
+    },
+    {
+      "name": "Yoda Hand Puppet",
+      "kind": "other",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Yoda puppet"
+      ]
+    },
+    {
+      "name": "Tauntaun",
+      "kind": "creature",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Armoured Snowspeeder",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Snowspeeder"
+      ]
+    },
+    {
+      "name": "Twin-Pod Cloud Car",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Twin Pod Cloud Car",
+        "Cloud Car"
+      ]
+    },
+    {
+      "name": "The Force Lightsaber",
+      "kind": "weapon",
+      "line": "loose",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Red and yellow. Loose. Sold loose is a sales note, not an unreleased item."
+      ],
+      "aliases": [
+        "Force Lightsaber",
+        "Force Lightsabre"
+      ]
+    },
+    {
+      "name": "INT-4 Interceptor",
+      "kind": "mini-rig",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "INT-4"
+      ]
+    },
+    {
+      "name": "CAP-2 Captivator",
+      "kind": "mini-rig",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "CAP-2"
+      ]
+    },
+    {
+      "name": "MTV-7 Multi-Terrain Vehicle",
+      "kind": "mini-rig",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "MTV-7"
+      ]
+    },
+    {
+      "name": "MLC-3 Mobile Laser Cannon",
+      "kind": "mini-rig",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren wrote MLC Mobile Laser Cannon."
+      ],
+      "aliases": [
+        "MLC-3",
+        "MLC"
+      ]
+    },
+    {
+      "name": "PDT-8 Personnel Deployment Transport",
+      "kind": "mini-rig",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "PDT-8"
+      ]
+    },
+    {
+      "name": "Tauntaun with Open Belly Rescue Feature",
+      "kind": "creature",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Open Belly Tauntaun",
+        "Tauntaun open belly"
+      ]
+    },
+    {
+      "name": "Slave I",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Boba Fett's spaceship. Warren wrote Slave 1."
+      ],
+      "aliases": [
+        "Slave 1",
+        "Slave One",
+        "Boba Fett's Spaceship"
+      ]
+    },
+    {
+      "name": "Wampa",
+      "kind": "creature",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Dagobah Action Playset",
+      "kind": "playset",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Dagobah"
+      ]
+    },
+    {
+      "name": "AT-AT",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren wrote AT-AT All Terrain Armoured Transport."
+      ],
+      "aliases": [
+        "AT-AT All Terrain Armoured Transport",
+        "All Terrain Armoured Transport"
+      ]
+    },
+    {
+      "name": "Millennium Falcon",
+      "kind": "vehicle",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Falcon"
+      ]
+    },
+    {
+      "name": "Darth Vader's Star Destroyer Action Playset",
+      "kind": "playset",
+      "line": "Palitoy ESB",
+      "year": 1982,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Darth Vader's Star Destroyer",
+        "Star Destroyer Action Playset"
+      ]
+    },
+    {
+      "name": "Han Solo",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Darth Vader",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Star Destroyer Commander",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ROTJ.",
+        "Death Squad Commander on the earlier first wave. Warren said the name changed."
+      ],
+      "aliases": [
+        "Death Squad Commander"
+      ]
+    },
+    {
+      "name": "Jawa",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Stormtrooper",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Sand People",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "first",
+      "status": "released",
+      "notes": [
+        "First wave minus Artoo-Detoo and See-Threepio. Warren marked this wave ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Hammerhead",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Snaggletooth",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Walrus Man",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Greedo",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Power Droid",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Death Star Droid",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "R5-D4",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "second",
+      "status": "released",
+      "notes": [
+        "Carried second wave. Warren marked it ROTJ.",
+        "Warren wrote Luke Skywalker X-Wing Pilot."
+      ],
+      "aliases": [
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot"
+      ]
+    },
+    {
+      "name": "Han Solo (Hoth Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker (Bespin Fatigues)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa (Bespin Gown)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ.",
+        "Warren wrote Leia Organa (Bespin Gown)."
+      ],
+      "aliases": [
+        "Leia Organa (Bespin Gown)",
+        "Leia Bespin",
+        "Bespin Leia"
+      ]
+    },
+    {
+      "name": "Lando Calrissian",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Soldier (Hoth Battle Gear)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "FX-7 (Medical Droid)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "IG-88 (Bounty Hunter)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": [
+        "IG-88"
+      ]
+    },
+    {
+      "name": "Bespin Security Guard",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Bossk (Bounty Hunter)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Boba Fett",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Dengar",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Lobot",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Yoda",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Han Solo (Bespin Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Ugnaught",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "2-1B",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "AT-AT Driver",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Imperial Commander",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Commander",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa (Hoth Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "third",
+      "status": "released",
+      "notes": [
+        "Carried third wave. Warren marked it ROTJ.",
+        "Warren wrote Leia (Hoth Outfit)."
+      ],
+      "aliases": [
+        "Leia (Hoth Outfit)",
+        "Leia Hoth",
+        "Hoth Leia"
+      ]
+    },
+    {
+      "name": "Luke Skywalker (Hoth Battle Gear)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Carried fourth wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "AT-AT Commander",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Carried fourth wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Cloud Car Pilot",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Carried fourth wave. Warren marked it ROTJ.",
+        "Warren wrote (Twin-Pod) Cloud Car Pilot."
+      ],
+      "aliases": [
+        "Twin-Pod Cloud Car Pilot",
+        "Twin Pod Cloud Car Pilot"
+      ]
+    },
+    {
+      "name": "Bespin Security Guard",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Carried fourth wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Imperial TIE Fighter Pilot",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Carried fourth wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Artoo-Detoo (R2-D2) with Sensorscope",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Carried fourth wave. Warren marked it ROTJ.",
+        "Card name kept."
+      ],
+      "aliases": [
+        "R2-D2 with Sensorscope",
+        "R2-D2 Sensorscope",
+        "Sensorscope"
+      ]
+    },
+    {
+      "name": "C-3PO with Removable Limbs",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Carried fourth wave. Warren marked it ROTJ."
+      ],
+      "aliases": [
+        "C-3PO Removable Limbs"
+      ]
+    },
+    {
+      "name": "4-LOM",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Carried fourth wave. Warren marked it ROTJ.",
+        "Warren wrote 4-Lom."
+      ],
+      "aliases": [
+        "4-Lom",
+        "4LOM",
+        "4 Lom"
+      ]
+    },
+    {
+      "name": "Zuckuss",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fourth",
+      "status": "released",
+      "notes": [
+        "Carried fourth wave. Warren marked it ROTJ."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Gamorrean Guard",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Bib Fortuna",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Emperor's Royal Guard",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Admiral Ackbar",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Chief Chirpa",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Logray (Ewok Medicine Man)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Klaatu",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Princess Leia Organa (Boushh Disguise)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Commando",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [
+        "Listed twice on Warren's 1983 fifth wave. Stored once."
+      ],
+      "aliases": []
+    },
+    {
+      "name": "Weequay",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "General Madine",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Ree Yees",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [
+        "Warren wrote Ree-Yees."
+      ],
+      "aliases": [
+        "Ree-Yees",
+        "ReeYees"
+      ]
+    },
+    {
+      "name": "Biker Scout",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Nien Nunb",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [
+        "Warren wrote Nien Numb."
+      ],
+      "aliases": [
+        "Nien Numb",
+        "Nien Nunb"
+      ]
+    },
+    {
+      "name": "Lando Calrissian (Skiff Guard Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Luke Skywalker (Jedi Knight Outfit)",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Squid Head",
+      "kind": "figure",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "fifth",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Rebel Armoured Snowspeeder",
+      "kind": "vehicle",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Snowspeeder"
+      ]
+    },
+    {
+      "name": "Tauntaun with Open Belly Rescue Feature",
+      "kind": "creature",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Open Belly Tauntaun"
+      ]
+    },
+    {
+      "name": "Wampa",
+      "kind": "creature",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "Slave I",
+      "kind": "vehicle",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren wrote Slave 1."
+      ],
+      "aliases": [
+        "Slave 1",
+        "Slave One"
+      ]
+    },
+    {
+      "name": "AT-AT",
+      "kind": "vehicle",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "AT-AT All Terrain Armoured Transport"
+      ]
+    },
+    {
+      "name": "Battle Damaged X-Wing Fighter",
+      "kind": "vehicle",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "White and grey. Warren wrote Battle Damaged X-Wing white and grey."
+      ],
+      "aliases": [
+        "Battle Damaged X-Wing"
+      ]
+    },
+    {
+      "name": "Radar Laser Cannon",
+      "kind": "mini-rig",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Radar Laser"
+      ]
+    },
+    {
+      "name": "Tri-pod Laser Cannon",
+      "kind": "mini-rig",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren wrote Tri-pod Laser Cannon."
+      ],
+      "aliases": [
+        "Tripod Laser Cannon",
+        "Tri-pod"
+      ]
+    },
+    {
+      "name": "Vehicle Maintenance Energizer",
+      "kind": "mini-rig",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "VME"
+      ]
+    },
+    {
+      "name": "INT-4 Interceptor",
+      "kind": "mini-rig",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "INT-4"
+      ]
+    },
+    {
+      "name": "CAP-2 Captivator",
+      "kind": "mini-rig",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "CAP-2"
+      ]
+    },
+    {
+      "name": "MTV-7 Multi-Terrain Vehicle",
+      "kind": "mini-rig",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "MTV-7"
+      ]
+    },
+    {
+      "name": "MLC-3 Mobile Laser Cannon",
+      "kind": "mini-rig",
+      "line": "Bilogo",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "Warren wrote MLC-3."
+      ],
+      "aliases": [
+        "MLC-3"
+      ]
+    },
+    {
+      "name": "Darth Vader TIE Fighter",
+      "kind": "vehicle",
+      "line": "Palitoy SW",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [
+        "SW with a Bounty Hunter offer."
+      ],
+      "aliases": [
+        "Vader TIE Fighter"
+      ]
+    },
+    {
+      "name": "Darth Vader's Star Destroyer Action Playset",
+      "kind": "playset",
+      "line": "Palitoy ESB",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Darth Vader's Star Destroyer"
+      ]
+    },
+    {
+      "name": "Rebel Transport",
+      "kind": "vehicle",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Rebel Transport vehicle"
+      ]
+    },
+    {
+      "name": "Scout Walker",
+      "kind": "vehicle",
+      "line": "Palitoy ROTJ",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Scout Walker vehicle"
+      ]
+    },
+    {
+      "name": "Jabba the Hutt Action Playset",
+      "kind": "playset",
+      "line": "Kenner ROTJ",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "Jabba the Hutt",
+        "Jabba playset"
+      ]
+    },
+    {
+      "name": "Speeder Bike",
+      "kind": "vehicle",
+      "line": "Kenner ROTJ",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": []
+    },
+    {
+      "name": "AST-5 Armoured Sentinel Transport",
+      "kind": "mini-rig",
+      "line": "Kenner ROTJ",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "AST-5"
+      ]
+    },
+    {
+      "name": "ISP-6 Imperial Shuttle Pod",
+      "kind": "mini-rig",
+      "line": "Kenner ROTJ",
+      "year": 1983,
+      "wave": "",
+      "status": "released",
+      "notes": [],
+      "aliases": [
+        "ISP-6"
+      ]
+    }
+  ]
+}

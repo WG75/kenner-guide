@@ -1,0 +1,6725 @@
+{
+  "generated": "2026-10-04",
+  "generator": "tools/build-retrieval-index.py",
+  "note": "Not injected into chat. Topic routing reads this file. Palitoy roles: year, when, not-figures, overview, history. Variant-count role: summary.",
+  "files": [
+    {
+      "relPath": "accessories/2-1b-mouthpiece.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "2-1B Mouthpiece",
+      "aliases": [
+        "1b",
+        "mouthpiece"
+      ],
+      "keywords": [
+        "2-1B Mouthpiece",
+        "1b",
+        "mouthpiece"
+      ],
+      "years": [],
+      "chars": 1848
+    },
+    {
+      "relPath": "accessories/2-1b-probe.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "2-1B Probe",
+      "aliases": [
+        "1b",
+        "probe"
+      ],
+      "keywords": [
+        "2-1B Probe",
+        "1b",
+        "probe"
+      ],
+      "years": [],
+      "chars": 1462
+    },
+    {
+      "relPath": "accessories/accessory_lightsaber.json",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "accessory_lightsaber",
+      "aliases": [],
+      "keywords": [
+        "accessory_lightsaber"
+      ],
+      "years": [],
+      "chars": 707
+    },
+    {
+      "relPath": "accessories/ackbar-staff.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Ackbar Staff",
+      "aliases": [
+        "ackbar",
+        "staff"
+      ],
+      "keywords": [
+        "Ackbar Staff",
+        "ackbar",
+        "staff"
+      ],
+      "years": [],
+      "chars": 3144
+    },
+    {
+      "relPath": "accessories/amanaman-staff.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Amanaman Staff",
+      "aliases": [
+        "amanaman",
+        "staff"
+      ],
+      "keywords": [
+        "Amanaman Staff",
+        "amanaman",
+        "staff"
+      ],
+      "years": [],
+      "chars": 2204
+    },
+    {
+      "relPath": "accessories/at-at-driver-rifle.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "AT-AT Driver Rifle",
+      "aliases": [
+        "at",
+        "driver",
+        "rifle"
+      ],
+      "keywords": [
+        "AT-AT Driver Rifle",
+        "at",
+        "driver",
+        "rifle"
+      ],
+      "years": [],
+      "chars": 3397
+    },
+    {
+      "relPath": "accessories/ben-obi-wan-kenobi-cape.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Ben (Obi-Wan) Kenobi Cape",
+      "aliases": [
+        "ben",
+        "obi",
+        "wan",
+        "kenobi",
+        "cape"
+      ],
+      "keywords": [
+        "Ben (Obi-Wan) Kenobi Cape",
+        "ben",
+        "obi",
+        "wan",
+        "kenobi",
+        "cape"
+      ],
+      "years": [],
+      "chars": 5072
+    },
+    {
+      "relPath": "accessories/bespin-blaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Bespin Blaster",
+      "aliases": [
+        "bespin",
+        "blaster"
+      ],
+      "keywords": [
+        "Bespin Blaster",
+        "bespin",
+        "blaster"
+      ],
+      "years": [],
+      "chars": 5050
+    },
+    {
+      "relPath": "accessories/bib-fortuna-belt.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Bib Fortuna Belt",
+      "aliases": [
+        "bib",
+        "fortuna",
+        "belt"
+      ],
+      "keywords": [
+        "Bib Fortuna Belt",
+        "bib",
+        "fortuna",
+        "belt"
+      ],
+      "years": [],
+      "chars": 1623
+    },
+    {
+      "relPath": "accessories/bib-fortuna-cloak.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Bib Fortuna Cloak",
+      "aliases": [
+        "bib",
+        "fortuna",
+        "cloak"
+      ],
+      "keywords": [
+        "Bib Fortuna Cloak",
+        "bib",
+        "fortuna",
+        "cloak"
+      ],
+      "years": [],
+      "chars": 2079
+    },
+    {
+      "relPath": "accessories/bib-fortuna-staff.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Bib Fortuna Staff",
+      "aliases": [
+        "bib",
+        "fortuna",
+        "staff"
+      ],
+      "keywords": [
+        "Bib Fortuna Staff",
+        "bib",
+        "fortuna",
+        "staff"
+      ],
+      "years": [],
+      "chars": 1965
+    },
+    {
+      "relPath": "accessories/biker-scout-blaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Biker Scout Blaster",
+      "aliases": [
+        "biker",
+        "scout",
+        "blaster"
+      ],
+      "keywords": [
+        "Biker Scout Blaster",
+        "biker",
+        "scout",
+        "blaster"
+      ],
+      "years": [],
+      "chars": 3801
+    },
+    {
+      "relPath": "accessories/bossk-rifle.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Bossk Rifle",
+      "aliases": [
+        "bossk",
+        "rifle"
+      ],
+      "keywords": [
+        "Bossk Rifle",
+        "bossk",
+        "rifle"
+      ],
+      "years": [],
+      "chars": 1737
+    },
+    {
+      "relPath": "accessories/c-3po-removable-limbs-net.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "C-3PO (Removable Limbs) Net",
+      "aliases": [
+        "Removable Limbs",
+        "3po",
+        "removable",
+        "limbs",
+        "net"
+      ],
+      "keywords": [
+        "C-3PO (Removable Limbs) Net",
+        "Removable Limbs",
+        "3po",
+        "removable",
+        "limbs",
+        "net"
+      ],
+      "years": [],
+      "chars": 917
+    },
+    {
+      "relPath": "accessories/carbonite-chamber.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Carbonite Chamber",
+      "aliases": [
+        "carbonite",
+        "chamber"
+      ],
+      "keywords": [
+        "Carbonite Chamber",
+        "carbonite",
+        "chamber"
+      ],
+      "years": [],
+      "chars": 1101
+    },
+    {
+      "relPath": "accessories/chewbacca-bowcaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Bowcaster (Chewbacca)",
+      "aliases": [
+        "Chewbacca Bowcaster",
+        "Bowcaster",
+        "chewbacca"
+      ],
+      "keywords": [
+        "Bowcaster (Chewbacca)",
+        "Chewbacca Bowcaster",
+        "Bowcaster",
+        "chewbacca"
+      ],
+      "years": [],
+      "chars": 3830
+    },
+    {
+      "relPath": "accessories/commlink-guide.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Commlink Guide",
+      "aliases": [
+        "commlink",
+        "guide"
+      ],
+      "keywords": [
+        "Commlink Guide",
+        "commlink",
+        "guide"
+      ],
+      "years": [],
+      "chars": 2424
+    },
+    {
+      "relPath": "accessories/darth-vader-cape.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Darth Vader Cape",
+      "aliases": [
+        "darth",
+        "vader",
+        "cape"
+      ],
+      "keywords": [
+        "Darth Vader Cape",
+        "darth",
+        "vader",
+        "cape"
+      ],
+      "years": [],
+      "chars": 4573
+    },
+    {
+      "relPath": "accessories/double-telescoping-lightsaber.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Double Telescoping Lightsaber (DT)",
+      "aliases": [
+        "Double-Telescoping Lightsaber",
+        "DT",
+        "Double Telescoping Lightsaber",
+        "double",
+        "telescoping",
+        "lightsaber"
+      ],
+      "keywords": [
+        "Double Telescoping Lightsaber (DT)",
+        "Double-Telescoping Lightsaber",
+        "DT",
+        "Double Telescoping Lightsaber",
+        "double",
+        "telescoping",
+        "lightsaber"
+      ],
+      "years": [],
+      "chars": 3536
+    },
+    {
+      "relPath": "accessories/emperor-cane.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Emperor Cane",
+      "aliases": [
+        "emperor",
+        "cane"
+      ],
+      "keywords": [
+        "Emperor Cane",
+        "emperor",
+        "cane"
+      ],
+      "years": [],
+      "chars": 1402
+    },
+    {
+      "relPath": "accessories/endor-blaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Endor Blaster",
+      "aliases": [
+        "endor",
+        "blaster"
+      ],
+      "keywords": [
+        "Endor Blaster",
+        "endor",
+        "blaster"
+      ],
+      "years": [],
+      "chars": 1937
+    },
+    {
+      "relPath": "accessories/erg-pike.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Emperor’s Royal Guard Pike",
+      "aliases": [
+        "erg",
+        "pike"
+      ],
+      "keywords": [
+        "Emperor’s Royal Guard Pike",
+        "erg",
+        "pike"
+      ],
+      "years": [],
+      "chars": 1870
+    },
+    {
+      "relPath": "accessories/ewok-spear.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Ewok Spear",
+      "aliases": [
+        "ewok",
+        "spear"
+      ],
+      "keywords": [
+        "Ewok Spear",
+        "ewok",
+        "spear"
+      ],
+      "years": [],
+      "chars": 833
+    },
+    {
+      "relPath": "accessories/gaderffii-stick.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Gaffi Stick (Tusken Raider)",
+      "aliases": [
+        "Gaderffii Stick",
+        "Gaffi Stick",
+        "Gaderffii",
+        "stick"
+      ],
+      "keywords": [
+        "Gaffi Stick (Tusken Raider)",
+        "Gaderffii Stick",
+        "Gaffi Stick",
+        "Gaderffii",
+        "stick"
+      ],
+      "years": [],
+      "chars": 3868
+    },
+    {
+      "relPath": "accessories/gamorrean-axe.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Gamorrean Axe",
+      "aliases": [
+        "gamorrean",
+        "axe"
+      ],
+      "keywords": [
+        "Gamorrean Axe",
+        "gamorrean",
+        "axe"
+      ],
+      "years": [],
+      "chars": 5462
+    },
+    {
+      "relPath": "accessories/general-madine-staff.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "General Madine Staff",
+      "aliases": [
+        "general",
+        "madine",
+        "staff"
+      ],
+      "keywords": [
+        "General Madine Staff",
+        "general",
+        "madine",
+        "staff"
+      ],
+      "years": [],
+      "chars": 2272
+    },
+    {
+      "relPath": "accessories/han-endor-trench-coat.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Trench Coat (Han Endor)",
+      "aliases": [
+        "Han Endor",
+        "han",
+        "endor",
+        "trench",
+        "coat"
+      ],
+      "keywords": [
+        "Trench Coat (Han Endor)",
+        "Han Endor",
+        "han",
+        "endor",
+        "trench",
+        "coat"
+      ],
+      "years": [],
+      "chars": 2442
+    },
+    {
+      "relPath": "accessories/handheld-lightsaber.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Handheld Lightsaber",
+      "aliases": [
+        "handheld",
+        "lightsaber"
+      ],
+      "keywords": [
+        "Handheld Lightsaber",
+        "handheld",
+        "lightsaber"
+      ],
+      "years": [],
+      "chars": 4442
+    },
+    {
+      "relPath": "accessories/hoth-rebel-rifle.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Hoth Rebel Rifle",
+      "aliases": [
+        "hoth",
+        "rebel",
+        "rifle"
+      ],
+      "keywords": [
+        "Hoth Rebel Rifle",
+        "hoth",
+        "rebel",
+        "rifle"
+      ],
+      "years": [],
+      "chars": 2450
+    },
+    {
+      "relPath": "accessories/hoth-trooper-skirt-2.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Hoth Trooper Skirt",
+      "aliases": [
+        "hoth",
+        "trooper",
+        "skirt"
+      ],
+      "keywords": [
+        "Hoth Trooper Skirt",
+        "hoth",
+        "trooper",
+        "skirt"
+      ],
+      "years": [],
+      "chars": 2214
+    },
+    {
+      "relPath": "accessories/hoth-trooper-skirt.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Hoth Trooper Skirt",
+      "aliases": [
+        "hoth",
+        "trooper",
+        "skirt"
+      ],
+      "keywords": [
+        "Hoth Trooper Skirt",
+        "hoth",
+        "trooper",
+        "skirt"
+      ],
+      "years": [],
+      "chars": 6698
+    },
+    {
+      "relPath": "accessories/ig-88-rifle.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "IG-88 Rifle",
+      "aliases": [
+        "ig",
+        "88",
+        "rifle"
+      ],
+      "keywords": [
+        "IG-88 Rifle",
+        "ig",
+        "88",
+        "rifle"
+      ],
+      "years": [],
+      "chars": 3058
+    },
+    {
+      "relPath": "accessories/imperial-blaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Imperial Blaster (E-11)",
+      "aliases": [
+        "imperial",
+        "blaster"
+      ],
+      "keywords": [
+        "Imperial Blaster (E-11)",
+        "imperial",
+        "blaster"
+      ],
+      "years": [],
+      "chars": 4057
+    },
+    {
+      "relPath": "accessories/imperial-hoth-rifle.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Imperial Hoth Rifle",
+      "aliases": [
+        "imperial",
+        "hoth",
+        "rifle"
+      ],
+      "keywords": [
+        "Imperial Hoth Rifle",
+        "imperial",
+        "hoth",
+        "rifle"
+      ],
+      "years": [],
+      "chars": 4015
+    },
+    {
+      "relPath": "accessories/jawa-blaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Jawa Blaster",
+      "aliases": [
+        "jawa",
+        "blaster"
+      ],
+      "keywords": [
+        "Jawa Blaster",
+        "jawa",
+        "blaster"
+      ],
+      "years": [],
+      "chars": 3671
+    },
+    {
+      "relPath": "accessories/jawa-cloak.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Jawa Cloth Cloak",
+      "aliases": [
+        "Jawa Cloak",
+        "Cloth Cloak",
+        "jawa",
+        "cloak"
+      ],
+      "keywords": [
+        "Jawa Cloth Cloak",
+        "Jawa Cloak",
+        "Cloth Cloak",
+        "jawa",
+        "cloak"
+      ],
+      "years": [],
+      "chars": 1645
+    },
+    {
+      "relPath": "accessories/jawa-vinyl-cape.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Jawa Vinyl Cape",
+      "aliases": [
+        "jawa",
+        "vinyl",
+        "cape"
+      ],
+      "keywords": [
+        "Jawa Vinyl Cape",
+        "jawa",
+        "vinyl",
+        "cape"
+      ],
+      "years": [],
+      "chars": 758
+    },
+    {
+      "relPath": "accessories/klaatu-skirt-2.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Klaatu Skirt",
+      "aliases": [
+        "klaatu",
+        "skirt"
+      ],
+      "keywords": [
+        "Klaatu Skirt",
+        "klaatu",
+        "skirt"
+      ],
+      "years": [],
+      "chars": 5081
+    },
+    {
+      "relPath": "accessories/lando-calrissian-cape.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Lando Calrissian Cape",
+      "aliases": [
+        "lando",
+        "calrissian",
+        "cape"
+      ],
+      "keywords": [
+        "Lando Calrissian Cape",
+        "lando",
+        "calrissian",
+        "cape"
+      ],
+      "years": [],
+      "chars": 6581
+    },
+    {
+      "relPath": "accessories/lando-skiff-helmet.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Lando Skiff Helmet",
+      "aliases": [
+        "lando",
+        "skiff",
+        "helmet"
+      ],
+      "keywords": [
+        "Lando Skiff Helmet",
+        "lando",
+        "skiff",
+        "helmet"
+      ],
+      "years": [],
+      "chars": 870
+    },
+    {
+      "relPath": "accessories/leia-bespin-cape.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Leia Bespin Cape",
+      "aliases": [
+        "leia",
+        "bespin",
+        "cape"
+      ],
+      "keywords": [
+        "Leia Bespin Cape",
+        "leia",
+        "bespin",
+        "cape"
+      ],
+      "years": [],
+      "chars": 3790
+    },
+    {
+      "relPath": "accessories/leia-blaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Princess Leia Blaster",
+      "aliases": [
+        "leia",
+        "blaster"
+      ],
+      "keywords": [
+        "Princess Leia Blaster",
+        "leia",
+        "blaster"
+      ],
+      "years": [],
+      "chars": 2906
+    },
+    {
+      "relPath": "accessories/leia-boushh-helmet.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Leia Boushh Helmet",
+      "aliases": [
+        "leia",
+        "boushh",
+        "helmet"
+      ],
+      "keywords": [
+        "Leia Boushh Helmet",
+        "leia",
+        "boushh",
+        "helmet"
+      ],
+      "years": [],
+      "chars": 2917
+    },
+    {
+      "relPath": "accessories/leia-boushh-rifle.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Leia Boushh Rifle",
+      "aliases": [
+        "leia",
+        "boushh",
+        "rifle"
+      ],
+      "keywords": [
+        "Leia Boushh Rifle",
+        "leia",
+        "boushh",
+        "rifle"
+      ],
+      "years": [],
+      "chars": 910
+    },
+    {
+      "relPath": "accessories/luke-jedi-cloak.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Luke Jedi Cloak",
+      "aliases": [
+        "luke",
+        "jedi",
+        "cloak"
+      ],
+      "keywords": [
+        "Luke Jedi Cloak",
+        "luke",
+        "jedi",
+        "cloak"
+      ],
+      "years": [],
+      "chars": 1555
+    },
+    {
+      "relPath": "accessories/palace-blaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Palace Blaster",
+      "aliases": [
+        "palace",
+        "blaster"
+      ],
+      "keywords": [
+        "Palace Blaster",
+        "palace",
+        "blaster"
+      ],
+      "years": [],
+      "chars": 5083
+    },
+    {
+      "relPath": "accessories/pilot-blaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Pilot Blaster",
+      "aliases": [
+        "pilot",
+        "blaster"
+      ],
+      "keywords": [
+        "Pilot Blaster",
+        "pilot",
+        "blaster"
+      ],
+      "years": [],
+      "chars": 4417
+    },
+    {
+      "relPath": "accessories/pop-up-saber.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Pop-Up Saber",
+      "aliases": [
+        "pop",
+        "up",
+        "saber"
+      ],
+      "keywords": [
+        "Pop-Up Saber",
+        "pop",
+        "up",
+        "saber"
+      ],
+      "years": [],
+      "chars": 4203
+    },
+    {
+      "relPath": "accessories/princess-leia-organa-cape.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Princess Leia Organa Cape",
+      "aliases": [
+        "princess",
+        "leia",
+        "organa",
+        "cape"
+      ],
+      "keywords": [
+        "Princess Leia Organa Cape",
+        "princess",
+        "leia",
+        "organa",
+        "cape"
+      ],
+      "years": [],
+      "chars": 4475
+    },
+    {
+      "relPath": "accessories/prune-face-rifle.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Prune Face Rifle",
+      "aliases": [
+        "prune",
+        "face",
+        "rifle"
+      ],
+      "keywords": [
+        "Prune Face Rifle",
+        "prune",
+        "face",
+        "rifle"
+      ],
+      "years": [],
+      "chars": 2482
+    },
+    {
+      "relPath": "accessories/rebel-blaster.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Rebel Blaster (DL-44)",
+      "aliases": [
+        "rebel",
+        "blaster"
+      ],
+      "keywords": [
+        "Rebel Blaster (DL-44)",
+        "rebel",
+        "blaster"
+      ],
+      "years": [],
+      "chars": 4688
+    },
+    {
+      "relPath": "accessories/ree-yees-rifle.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Ree Yees Rifle",
+      "aliases": [
+        "ree",
+        "yees",
+        "rifle"
+      ],
+      "keywords": [
+        "Ree Yees Rifle",
+        "ree",
+        "yees",
+        "rifle"
+      ],
+      "years": [],
+      "chars": 3509
+    },
+    {
+      "relPath": "accessories/sa80-rifle.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "SA80 Rifle",
+      "aliases": [
+        "sa80",
+        "rifle"
+      ],
+      "keywords": [
+        "SA80 Rifle",
+        "sa80",
+        "rifle"
+      ],
+      "years": [],
+      "chars": 1569
+    },
+    {
+      "relPath": "accessories/squid-head-belt.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Squid Head Belt",
+      "aliases": [
+        "squid",
+        "head",
+        "belt"
+      ],
+      "keywords": [
+        "Squid Head Belt",
+        "squid",
+        "head",
+        "belt"
+      ],
+      "years": [],
+      "chars": 2126
+    },
+    {
+      "relPath": "accessories/squid-head-skirt.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Squid Head Skirt",
+      "aliases": [
+        "squid",
+        "head",
+        "skirt"
+      ],
+      "keywords": [
+        "Squid Head Skirt",
+        "squid",
+        "head",
+        "skirt"
+      ],
+      "years": [],
+      "chars": 1447
+    },
+    {
+      "relPath": "accessories/teebo-axe.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Teebo Axe",
+      "aliases": [
+        "teebo",
+        "axe"
+      ],
+      "keywords": [
+        "Teebo Axe",
+        "teebo",
+        "axe"
+      ],
+      "years": [],
+      "chars": 2681
+    },
+    {
+      "relPath": "accessories/teebo-hood.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Teebo Headpiece",
+      "aliases": [
+        "teebo",
+        "hood"
+      ],
+      "keywords": [
+        "Teebo Headpiece",
+        "teebo",
+        "hood"
+      ],
+      "years": [],
+      "chars": 3286
+    },
+    {
+      "relPath": "accessories/teebo-horn.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Teebo Battle Horn",
+      "aliases": [
+        "teebo",
+        "horn"
+      ],
+      "keywords": [
+        "Teebo Battle Horn",
+        "teebo",
+        "horn"
+      ],
+      "years": [],
+      "chars": 2753
+    },
+    {
+      "relPath": "accessories/telescoping-lightsaber.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Telescoping Lightsaber (Single Telescoping / ST)",
+      "aliases": [
+        "telescoping",
+        "lightsaber"
+      ],
+      "keywords": [
+        "Telescoping Lightsaber (Single Telescoping / ST)",
+        "telescoping",
+        "lightsaber"
+      ],
+      "years": [],
+      "chars": 2882
+    },
+    {
+      "relPath": "accessories/tusken-raider-cape.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Tusken Raider Cape",
+      "aliases": [
+        "tusken",
+        "raider",
+        "cape"
+      ],
+      "keywords": [
+        "Tusken Raider Cape",
+        "tusken",
+        "raider",
+        "cape"
+      ],
+      "years": [],
+      "chars": 4227
+    },
+    {
+      "relPath": "accessories/ugnaught-case.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Ugnaught Case",
+      "aliases": [
+        "ugnaught",
+        "case"
+      ],
+      "keywords": [
+        "Ugnaught Case",
+        "ugnaught",
+        "case"
+      ],
+      "years": [],
+      "chars": 2029
+    },
+    {
+      "relPath": "accessories/ugnaught-smock-guide.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Ugnaught Smock",
+      "aliases": [
+        "ugnaught",
+        "smock",
+        "guide"
+      ],
+      "keywords": [
+        "Ugnaught Smock",
+        "ugnaught",
+        "smock",
+        "guide"
+      ],
+      "years": [],
+      "chars": 1118
+    },
+    {
+      "relPath": "accessories/vibro-axe.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Vibro Axe",
+      "aliases": [
+        "vibro",
+        "axe"
+      ],
+      "keywords": [
+        "Vibro Axe",
+        "vibro",
+        "axe"
+      ],
+      "years": [],
+      "chars": 1466
+    },
+    {
+      "relPath": "accessories/yoda-belt.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Yoda Belt",
+      "aliases": [
+        "yoda",
+        "belt"
+      ],
+      "keywords": [
+        "Yoda Belt",
+        "yoda",
+        "belt"
+      ],
+      "years": [],
+      "chars": 1789
+    },
+    {
+      "relPath": "accessories/yoda-cane.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Yoda Cane",
+      "aliases": [
+        "yoda",
+        "cane"
+      ],
+      "keywords": [
+        "Yoda Cane",
+        "yoda",
+        "cane"
+      ],
+      "years": [],
+      "chars": 2495
+    },
+    {
+      "relPath": "accessories/yoda-snake.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Yoda Snake",
+      "aliases": [
+        "yoda",
+        "snake"
+      ],
+      "keywords": [
+        "Yoda Snake",
+        "yoda",
+        "snake"
+      ],
+      "years": [],
+      "chars": 1641
+    },
+    {
+      "relPath": "compatibility/compat_luke_dt_m2_yellow.json",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "compat_luke_dt_m2_yellow",
+      "aliases": [],
+      "keywords": [
+        "compat_luke_dt_m2_yellow"
+      ],
+      "years": [],
+      "chars": 439
+    },
+    {
+      "relPath": "compatibility/compat_luke_handheld_m3_yellow.json",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "compat_luke_handheld_m3_yellow",
+      "aliases": [],
+      "keywords": [
+        "compat_luke_handheld_m3_yellow"
+      ],
+      "years": [],
+      "chars": 494
+    },
+    {
+      "relPath": "compatibility/compat_luke_st_m1_yellow.json",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "compat_luke_st_m1_yellow",
+      "aliases": [],
+      "keywords": [
+        "compat_luke_st_m1_yellow"
+      ],
+      "years": [],
+      "chars": 464
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-esb-1.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Princess Leia Organa (Bespin Gown)",
+      "aliases": [
+        "Bespin Gown",
+        "FX-7",
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "Rebel Soldier (Hoth Battle Gear)",
+        "Bossk",
+        "IG-88",
+        "Luke Skywalker (Bespin Fatigues)",
+        "Han Solo (Hoth Outfit)",
+        "Lando Calrissian",
+        "Bespin Security Guard (White)",
+        "debut"
+      ],
+      "keywords": [
+        "Princess Leia Organa (Bespin Gown)",
+        "Bespin Gown",
+        "FX-7",
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "Rebel Soldier (Hoth Battle Gear)",
+        "Bossk",
+        "IG-88",
+        "Luke Skywalker (Bespin Fatigues)",
+        "Han Solo (Hoth Outfit)",
+        "Lando Calrissian",
+        "Bespin Security Guard (White)",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "years": [],
+      "chars": 6531
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-esb-2.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Yoda",
+      "aliases": [
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "keywords": [
+        "Yoda",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "years": [],
+      "chars": 6535
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-esb-3.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Ugnaught",
+      "aliases": [
+        "Dengar",
+        "Han Solo (Bespin Outfit)",
+        "Lobot",
+        "Leia (Hoth Outfit)",
+        "Rebel Commander",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "keywords": [
+        "Ugnaught",
+        "Dengar",
+        "Han Solo (Bespin Outfit)",
+        "Lobot",
+        "Leia (Hoth Outfit)",
+        "Rebel Commander",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "years": [],
+      "chars": 5089
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-esb-4.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "AT-AT Driver",
+      "aliases": [
+        "Imperial Commander",
+        "2-1B",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "keywords": [
+        "AT-AT Driver",
+        "Imperial Commander",
+        "2-1B",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "years": [],
+      "chars": 6301
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-esb-5.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "R2-D2 (Sensorscope)",
+      "aliases": [
+        "Sensorscope",
+        "C-3PO (Removable Limbs)",
+        "Luke Skywalker (Hoth Battle Gear)",
+        "AT-AT Commander",
+        "(Twin-Pod) Cloud Car Pilot",
+        "Bespin Security Guard (Black)",
+        "Zuckuss",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "keywords": [
+        "R2-D2 (Sensorscope)",
+        "Sensorscope",
+        "C-3PO (Removable Limbs)",
+        "Luke Skywalker (Hoth Battle Gear)",
+        "AT-AT Commander",
+        "(Twin-Pod) Cloud Car Pilot",
+        "Bespin Security Guard (Black)",
+        "Zuckuss",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "years": [],
+      "chars": 5757
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-esb-6.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Imperial TIE Fighter Pilot",
+      "aliases": [
+        "4-LOM",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "keywords": [
+        "Imperial TIE Fighter Pilot",
+        "4-LOM",
+        "debut",
+        "cardbacks",
+        "reference",
+        "esb"
+      ],
+      "years": [],
+      "chars": 4452
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-potf-1.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Luke Skywalker (in Battle Poncho)",
+      "aliases": [
+        "in Battle Poncho",
+        "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+        "Romba",
+        "Amanaman",
+        "Barada",
+        "Imperial Gunner",
+        "debut",
+        "cardbacks",
+        "reference",
+        "potf"
+      ],
+      "keywords": [
+        "Luke Skywalker (in Battle Poncho)",
+        "in Battle Poncho",
+        "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+        "Romba",
+        "Amanaman",
+        "Barada",
+        "Imperial Gunner",
+        "debut",
+        "cardbacks",
+        "reference",
+        "potf"
+      ],
+      "years": [],
+      "chars": 6733
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-potf-2.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Han Solo (in Carbonite Chamber)",
+      "aliases": [
+        "in Carbonite Chamber",
+        "Luke Skywalker (Imperial Stormtrooper Outfit)",
+        "Anakin Skywalker",
+        "EV-9D9",
+        "Warok",
+        "Lando Calrissian (General Pilot)",
+        "A-Wing Pilot",
+        "debut",
+        "cardbacks",
+        "reference",
+        "potf"
+      ],
+      "keywords": [
+        "Han Solo (in Carbonite Chamber)",
+        "in Carbonite Chamber",
+        "Luke Skywalker (Imperial Stormtrooper Outfit)",
+        "Anakin Skywalker",
+        "EV-9D9",
+        "Warok",
+        "Lando Calrissian (General Pilot)",
+        "A-Wing Pilot",
+        "debut",
+        "cardbacks",
+        "reference",
+        "potf"
+      ],
+      "years": [],
+      "chars": 6384
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-potf-3.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Imperial Dignitary",
+      "aliases": [
+        "Yak Face",
+        "debut",
+        "cardbacks",
+        "reference",
+        "potf"
+      ],
+      "keywords": [
+        "Imperial Dignitary",
+        "Yak Face",
+        "debut",
+        "cardbacks",
+        "reference",
+        "potf"
+      ],
+      "years": [],
+      "chars": 3325
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-rotj-1.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Admiral Ackbar",
+      "aliases": [
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Princess Leia Organa (Boushh Disguise)",
+        "Gamorrean Guard",
+        "Emperor's Royal Guard",
+        "Chief Chirpa",
+        "debut",
+        "cardbacks",
+        "reference",
+        "rotj"
+      ],
+      "keywords": [
+        "Admiral Ackbar",
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Princess Leia Organa (Boushh Disguise)",
+        "Gamorrean Guard",
+        "Emperor's Royal Guard",
+        "Chief Chirpa",
+        "debut",
+        "cardbacks",
+        "reference",
+        "rotj"
+      ],
+      "years": [],
+      "chars": 6585
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-rotj-2.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Logray (Ewok Medicine Man)",
+      "aliases": [
+        "Ewok Medicine Man",
+        "Klaatu",
+        "Rebel Commando",
+        "Weequay",
+        "Squid Head",
+        "General Madine",
+        "debut",
+        "cardbacks",
+        "reference",
+        "rotj"
+      ],
+      "keywords": [
+        "Logray (Ewok Medicine Man)",
+        "Ewok Medicine Man",
+        "Klaatu",
+        "Rebel Commando",
+        "Weequay",
+        "Squid Head",
+        "General Madine",
+        "debut",
+        "cardbacks",
+        "reference",
+        "rotj"
+      ],
+      "years": [],
+      "chars": 6373
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-rotj-3.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Bib Fortuna",
+      "aliases": [
+        "Ree Yees",
+        "Biker Scout",
+        "Lando Calrissian (Skiff Guard Disguise)",
+        "Nien Nunb",
+        "Nikto",
+        "8D8",
+        "Princess Leia Organa (in Combat Poncho)",
+        "Wicket W. Warrick",
+        "debut",
+        "cardbacks",
+        "reference"
+      ],
+      "keywords": [
+        "Bib Fortuna",
+        "Ree Yees",
+        "Biker Scout",
+        "Lando Calrissian (Skiff Guard Disguise)",
+        "Nien Nunb",
+        "Nikto",
+        "8D8",
+        "Princess Leia Organa (in Combat Poncho)",
+        "Wicket W. Warrick",
+        "debut",
+        "cardbacks",
+        "reference",
+        "rotj"
+      ],
+      "years": [],
+      "chars": 6384
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-rotj-4.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "The Emperor",
+      "aliases": [
+        "B-Wing Pilot",
+        "Klaatu (in Skiff Guard Outfit)",
+        "Han Solo (in Trench Coat)",
+        "Teebo",
+        "Prune Face",
+        "AT-ST Driver",
+        "Rancor Keeper",
+        "Lumat",
+        "Paploo",
+        "debut",
+        "cardbacks"
+      ],
+      "keywords": [
+        "The Emperor",
+        "B-Wing Pilot",
+        "Klaatu (in Skiff Guard Outfit)",
+        "Han Solo (in Trench Coat)",
+        "Teebo",
+        "Prune Face",
+        "AT-ST Driver",
+        "Rancor Keeper",
+        "Lumat",
+        "Paploo",
+        "debut",
+        "cardbacks",
+        "reference",
+        "rotj"
+      ],
+      "years": [],
+      "chars": 5952
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-sw-1.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Luke Skywalker",
+      "aliases": [
+        "Princess Leia Organa",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "keywords": [
+        "Luke Skywalker",
+        "Princess Leia Organa",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "years": [],
+      "chars": 5306
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-sw-2.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "R2-D2 (Solid Dome)",
+      "aliases": [
+        "Solid Dome",
+        "Chewbacca",
+        "C-3PO",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "keywords": [
+        "R2-D2 (Solid Dome)",
+        "Solid Dome",
+        "Chewbacca",
+        "C-3PO",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "years": [],
+      "chars": 6383
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-sw-3.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Darth Vader",
+      "aliases": [
+        "Stormtrooper",
+        "Ben (Obi-Wan) Kenobi",
+        "Han Solo",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "keywords": [
+        "Darth Vader",
+        "Stormtrooper",
+        "Ben (Obi-Wan) Kenobi",
+        "Han Solo",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "years": [],
+      "chars": 6719
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-sw-4.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Jawa",
+      "aliases": [
+        "Sand People",
+        "Death Squad Commander",
+        "Greedo",
+        "Hammerhead",
+        "Snaggletooth",
+        "Walrus Man",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "keywords": [
+        "Jawa",
+        "Sand People",
+        "Death Squad Commander",
+        "Greedo",
+        "Hammerhead",
+        "Snaggletooth",
+        "Walrus Man",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "years": [],
+      "chars": 6630
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-sw-5.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "aliases": [
+        "X-Wing Pilot",
+        "R5-D4",
+        "Death Star Droid",
+        "Power Droid",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "keywords": [
+        "Luke Skywalker (X-Wing Pilot)",
+        "X-Wing Pilot",
+        "R5-D4",
+        "Death Star Droid",
+        "Power Droid",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "years": [],
+      "chars": 5540
+    },
+    {
+      "relPath": "compatibility/debut-cardbacks-reference-sw-6.txt",
+      "folder": "compatibility",
+      "topic": "cardback",
+      "role": "",
+      "name": "Boba Fett",
+      "aliases": [
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "keywords": [
+        "Boba Fett",
+        "debut",
+        "cardbacks",
+        "reference",
+        "sw"
+      ],
+      "years": [],
+      "chars": 4450
+    },
+    {
+      "relPath": "factories.json",
+      "folder": "",
+      "topic": "factory",
+      "role": "",
+      "name": "factories",
+      "aliases": [],
+      "keywords": [
+        "factories"
+      ],
+      "years": [],
+      "chars": 339
+    },
+    {
+      "relPath": "figures/2-1b-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "2-1B",
+      "aliases": [
+        "1b",
+        "reference"
+      ],
+      "keywords": [
+        "2-1B",
+        "1b",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6215
+    },
+    {
+      "relPath": "figures/4-lom-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "4-LOM",
+      "aliases": [
+        "lom",
+        "reference"
+      ],
+      "keywords": [
+        "4-LOM",
+        "lom",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3854
+    },
+    {
+      "relPath": "figures/8d8-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "8D8",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "8D8",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4072
+    },
+    {
+      "relPath": "figures/a-wing-pilot-2-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "A-Wing Pilot",
+      "aliases": [
+        "wing",
+        "pilot",
+        "reference"
+      ],
+      "keywords": [
+        "A-Wing Pilot",
+        "wing",
+        "pilot",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5406
+    },
+    {
+      "relPath": "figures/admiral-ackbar-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Admiral Ackbar",
+      "aliases": [
+        "Ackbar",
+        "admiral",
+        "reference"
+      ],
+      "keywords": [
+        "Admiral Ackbar",
+        "Ackbar",
+        "admiral",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5100
+    },
+    {
+      "relPath": "figures/amanaman-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Amanaman",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Amanaman",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3418
+    },
+    {
+      "relPath": "figures/anakin-skywalker-2-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Anakin Skywalker",
+      "aliases": [
+        "anakin",
+        "skywalker",
+        "reference"
+      ],
+      "keywords": [
+        "Anakin Skywalker",
+        "anakin",
+        "skywalker",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5596
+    },
+    {
+      "relPath": "figures/artoo-detoo-r2-d2-with-pop-up-lightsaber-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+      "aliases": [
+        "R2-D2",
+        "artoo",
+        "detoo",
+        "r2",
+        "d2",
+        "with",
+        "pop",
+        "up",
+        "lightsaber",
+        "reference"
+      ],
+      "keywords": [
+        "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+        "R2-D2",
+        "artoo",
+        "detoo",
+        "r2",
+        "d2",
+        "with",
+        "pop",
+        "up",
+        "lightsaber",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3485
+    },
+    {
+      "relPath": "figures/artoo-detoo-r2-d2-with-pop-up-lightsaber-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+      "aliases": [
+        "R2-D2",
+        "artoo",
+        "detoo",
+        "r2",
+        "d2",
+        "with",
+        "pop",
+        "up",
+        "lightsaber",
+        "reference"
+      ],
+      "keywords": [
+        "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+        "R2-D2",
+        "artoo",
+        "detoo",
+        "r2",
+        "d2",
+        "with",
+        "pop",
+        "up",
+        "lightsaber",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6107
+    },
+    {
+      "relPath": "figures/at-at-commander-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "At-At Commander",
+      "aliases": [
+        "General Veers",
+        "at",
+        "commander",
+        "reference"
+      ],
+      "keywords": [
+        "At-At Commander",
+        "General Veers",
+        "at",
+        "commander",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4398
+    },
+    {
+      "relPath": "figures/at-at-driver-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "AT-AT Driver",
+      "aliases": [
+        "at",
+        "driver",
+        "reference"
+      ],
+      "keywords": [
+        "AT-AT Driver",
+        "at",
+        "driver",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4805
+    },
+    {
+      "relPath": "figures/at-at-driver-reference-3.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "AT-AT Driver",
+      "aliases": [
+        "at",
+        "driver",
+        "reference"
+      ],
+      "keywords": [
+        "AT-AT Driver",
+        "at",
+        "driver",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5657
+    },
+    {
+      "relPath": "figures/at-at-driver-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "AT-AT Driver",
+      "aliases": [
+        "at",
+        "driver",
+        "reference"
+      ],
+      "keywords": [
+        "AT-AT Driver",
+        "at",
+        "driver",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6309
+    },
+    {
+      "relPath": "figures/at-st-driver-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "AT-ST Driver",
+      "aliases": [
+        "at",
+        "st",
+        "driver",
+        "reference"
+      ],
+      "keywords": [
+        "AT-ST Driver",
+        "at",
+        "st",
+        "driver",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4074
+    },
+    {
+      "relPath": "figures/b-wing-pilot-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "B-Wing Pilot",
+      "aliases": [
+        "wing",
+        "pilot",
+        "reference"
+      ],
+      "keywords": [
+        "B-Wing Pilot",
+        "wing",
+        "pilot",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4224
+    },
+    {
+      "relPath": "figures/barada-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Barada",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Barada",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3693
+    },
+    {
+      "relPath": "figures/ben-obi-wan-kenobi-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Ben (Obi-Wan) Kenobi",
+      "aliases": [
+        "Ben",
+        "Obi-Wan",
+        "Old Ben",
+        "Farm Ben",
+        "12 Back Ben",
+        "obi",
+        "wan",
+        "kenobi",
+        "reference"
+      ],
+      "keywords": [
+        "Ben (Obi-Wan) Kenobi",
+        "Ben",
+        "Obi-Wan",
+        "Old Ben",
+        "Farm Ben",
+        "12 Back Ben",
+        "obi",
+        "wan",
+        "kenobi",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4839
+    },
+    {
+      "relPath": "figures/bespin-security-guard-2-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Bespin Security Guard (Black)",
+      "aliases": [
+        "Black",
+        "bespin",
+        "security",
+        "guard",
+        "reference"
+      ],
+      "keywords": [
+        "Bespin Security Guard (Black)",
+        "Black",
+        "bespin",
+        "security",
+        "guard",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2848
+    },
+    {
+      "relPath": "figures/bespin-security-guard-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Bespin Security Guard (White)",
+      "aliases": [
+        "White",
+        "bespin",
+        "security",
+        "guard",
+        "reference"
+      ],
+      "keywords": [
+        "Bespin Security Guard (White)",
+        "White",
+        "bespin",
+        "security",
+        "guard",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3597
+    },
+    {
+      "relPath": "figures/bib-fortuna-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Bib Fortuna",
+      "aliases": [
+        "bib",
+        "fortuna",
+        "reference"
+      ],
+      "keywords": [
+        "Bib Fortuna",
+        "bib",
+        "fortuna",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3598
+    },
+    {
+      "relPath": "figures/biker-scout-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Biker Scout",
+      "aliases": [
+        "Scout Trooper",
+        "biker",
+        "scout",
+        "reference"
+      ],
+      "keywords": [
+        "Biker Scout",
+        "Scout Trooper",
+        "biker",
+        "scout",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4196
+    },
+    {
+      "relPath": "figures/boba-fett-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Boba Fett",
+      "aliases": [
+        "boba",
+        "fett",
+        "reference"
+      ],
+      "keywords": [
+        "Boba Fett",
+        "boba",
+        "fett",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6510
+    },
+    {
+      "relPath": "figures/boba-fett-reference-3.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Boba Fett",
+      "aliases": [
+        "boba",
+        "fett",
+        "reference"
+      ],
+      "keywords": [
+        "Boba Fett",
+        "boba",
+        "fett",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3315
+    },
+    {
+      "relPath": "figures/boba-fett-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Boba Fett",
+      "aliases": [
+        "boba",
+        "fett",
+        "reference"
+      ],
+      "keywords": [
+        "Boba Fett",
+        "boba",
+        "fett",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5812
+    },
+    {
+      "relPath": "figures/bossk-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Bossk",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Bossk",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4911
+    },
+    {
+      "relPath": "figures/c-3po-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "C-3PO",
+      "aliases": [
+        "Threepio",
+        "See-Threepio",
+        "Golden Droid",
+        "3po",
+        "reference"
+      ],
+      "keywords": [
+        "C-3PO",
+        "Threepio",
+        "See-Threepio",
+        "Golden Droid",
+        "3po",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4042
+    },
+    {
+      "relPath": "figures/c-3po-removable-limbs-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "C-3PO (Removable Limbs)",
+      "aliases": [
+        "Removable Limbs",
+        "Removable Limbs C-3PO",
+        "3po",
+        "removable",
+        "limbs",
+        "reference"
+      ],
+      "keywords": [
+        "C-3PO (Removable Limbs)",
+        "Removable Limbs",
+        "Removable Limbs C-3PO",
+        "3po",
+        "removable",
+        "limbs",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4984
+    },
+    {
+      "relPath": "figures/chewbacca-reference-1.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Chewbacca",
+      "aliases": [
+        "Chewy",
+        "Chewie",
+        "OG",
+        "O.G.",
+        "Original",
+        "reference"
+      ],
+      "keywords": [
+        "Chewbacca",
+        "Chewy",
+        "Chewie",
+        "OG",
+        "O.G.",
+        "Original",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4491
+    },
+    {
+      "relPath": "figures/chewbacca-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Chewbacca",
+      "aliases": [
+        "Chewy",
+        "Chewie",
+        "OG",
+        "O.G.",
+        "Original",
+        "reference"
+      ],
+      "keywords": [
+        "Chewbacca",
+        "Chewy",
+        "Chewie",
+        "OG",
+        "O.G.",
+        "Original",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3587
+    },
+    {
+      "relPath": "figures/chief-chirpa-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Chief Chirpa",
+      "aliases": [
+        "chief",
+        "chirpa",
+        "reference"
+      ],
+      "keywords": [
+        "Chief Chirpa",
+        "chief",
+        "chirpa",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5585
+    },
+    {
+      "relPath": "figures/cloud-car-pilot-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "(Twin-Pod) Cloud Car Pilot",
+      "aliases": [
+        "Twin-Pod",
+        "Cloud Car Pilot",
+        "cloud",
+        "car",
+        "pilot",
+        "reference"
+      ],
+      "keywords": [
+        "(Twin-Pod) Cloud Car Pilot",
+        "Twin-Pod",
+        "Cloud Car Pilot",
+        "cloud",
+        "car",
+        "pilot",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4015
+    },
+    {
+      "relPath": "figures/darth-vader-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Darth Vader",
+      "aliases": [
+        "Vader",
+        "Dark Vader",
+        "darth",
+        "reference"
+      ],
+      "keywords": [
+        "Darth Vader",
+        "Vader",
+        "Dark Vader",
+        "darth",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5748
+    },
+    {
+      "relPath": "figures/death-squad-commander-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Death Squad Commander",
+      "aliases": [
+        "Star Destroyer Commander",
+        "DSC",
+        "death",
+        "squad",
+        "commander",
+        "reference"
+      ],
+      "keywords": [
+        "Death Squad Commander",
+        "Star Destroyer Commander",
+        "DSC",
+        "death",
+        "squad",
+        "commander",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4269
+    },
+    {
+      "relPath": "figures/death-star-droid-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Death Star Droid",
+      "aliases": [
+        "Mouse Droid",
+        "death",
+        "star",
+        "droid",
+        "reference"
+      ],
+      "keywords": [
+        "Death Star Droid",
+        "Mouse Droid",
+        "death",
+        "star",
+        "droid",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3719
+    },
+    {
+      "relPath": "figures/dengar-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Dengar",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Dengar",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4458
+    },
+    {
+      "relPath": "figures/droids-c-3po-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Droids C-3PO",
+      "aliases": [
+        "droids",
+        "3po",
+        "reference"
+      ],
+      "keywords": [
+        "Droids C-3PO",
+        "droids",
+        "3po",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3002
+    },
+    {
+      "relPath": "figures/droids-r2-d2-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Droids R2-D2",
+      "aliases": [
+        "droids",
+        "r2",
+        "d2",
+        "reference"
+      ],
+      "keywords": [
+        "Droids R2-D2",
+        "droids",
+        "r2",
+        "d2",
+        "reference"
+      ],
+      "years": [],
+      "chars": 1752
+    },
+    {
+      "relPath": "figures/droids-r2-d2-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Droids R2-D2",
+      "aliases": [
+        "droids",
+        "r2",
+        "d2",
+        "reference"
+      ],
+      "keywords": [
+        "Droids R2-D2",
+        "droids",
+        "r2",
+        "d2",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6584
+    },
+    {
+      "relPath": "figures/dulok-scout-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Dulok Scout",
+      "aliases": [
+        "dulok",
+        "scout",
+        "reference"
+      ],
+      "keywords": [
+        "Dulok Scout",
+        "dulok",
+        "scout",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2429
+    },
+    {
+      "relPath": "figures/dulok-shaman-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Dulok Shaman",
+      "aliases": [
+        "dulok",
+        "shaman",
+        "reference"
+      ],
+      "keywords": [
+        "Dulok Shaman",
+        "dulok",
+        "shaman",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2456
+    },
+    {
+      "relPath": "figures/emperors-royal-guard-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Emperor’s Royal Guard",
+      "aliases": [
+        "Royal Guard",
+        "Emperor's Guard",
+        "emperors",
+        "royal",
+        "guard",
+        "reference"
+      ],
+      "keywords": [
+        "Emperor’s Royal Guard",
+        "Royal Guard",
+        "Emperor's Guard",
+        "emperors",
+        "royal",
+        "guard",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4289
+    },
+    {
+      "relPath": "figures/ev-9d9-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "EV-9D9",
+      "aliases": [
+        "ev",
+        "9d9",
+        "reference"
+      ],
+      "keywords": [
+        "EV-9D9",
+        "ev",
+        "9d9",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5748
+    },
+    {
+      "relPath": "figures/fx-7-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "FX-7",
+      "aliases": [
+        "fx",
+        "reference"
+      ],
+      "keywords": [
+        "FX-7",
+        "fx",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3999
+    },
+    {
+      "relPath": "figures/gamorrean-guard-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Gamorrean Guard",
+      "aliases": [
+        "gamorrean",
+        "guard",
+        "reference"
+      ],
+      "keywords": [
+        "Gamorrean Guard",
+        "gamorrean",
+        "guard",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3990
+    },
+    {
+      "relPath": "figures/gamorrean-guard-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Gamorrean Guard",
+      "aliases": [
+        "gamorrean",
+        "guard",
+        "reference"
+      ],
+      "keywords": [
+        "Gamorrean Guard",
+        "gamorrean",
+        "guard",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5123
+    },
+    {
+      "relPath": "figures/general-madine-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "General Madine",
+      "aliases": [
+        "general",
+        "madine",
+        "reference"
+      ],
+      "keywords": [
+        "General Madine",
+        "general",
+        "madine",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4670
+    },
+    {
+      "relPath": "figures/greedo-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Greedo",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Greedo",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4423
+    },
+    {
+      "relPath": "figures/hammerhead-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Hammerhead",
+      "aliases": [
+        "Momaw Nadon",
+        "reference"
+      ],
+      "keywords": [
+        "Hammerhead",
+        "Momaw Nadon",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3913
+    },
+    {
+      "relPath": "figures/han-solo-bespin-outfit-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Han Solo (Bespin Outfit)",
+      "aliases": [
+        "Bespin Outfit",
+        "han",
+        "solo",
+        "bespin",
+        "outfit",
+        "reference"
+      ],
+      "keywords": [
+        "Han Solo (Bespin Outfit)",
+        "Bespin Outfit",
+        "han",
+        "solo",
+        "bespin",
+        "outfit",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4483
+    },
+    {
+      "relPath": "figures/han-solo-hoth-outfit-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Han Solo (Hoth Outfit)",
+      "aliases": [
+        "Hoth Outfit",
+        "han",
+        "solo",
+        "hoth",
+        "outfit",
+        "reference"
+      ],
+      "keywords": [
+        "Han Solo (Hoth Outfit)",
+        "Hoth Outfit",
+        "han",
+        "solo",
+        "hoth",
+        "outfit",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6008
+    },
+    {
+      "relPath": "figures/han-solo-in-carbonite-chamber-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Han Solo (in Carbonite Chamber)",
+      "aliases": [
+        "in Carbonite Chamber",
+        "Carbonite Han",
+        "han",
+        "solo",
+        "in",
+        "carbonite",
+        "chamber",
+        "reference"
+      ],
+      "keywords": [
+        "Han Solo (in Carbonite Chamber)",
+        "in Carbonite Chamber",
+        "Carbonite Han",
+        "han",
+        "solo",
+        "in",
+        "carbonite",
+        "chamber",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5724
+    },
+    {
+      "relPath": "figures/han-solo-in-trench-coat-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Han Solo (in Trench Coat)",
+      "aliases": [
+        "in Trench Coat",
+        "Han Endor",
+        "Trench Coat Han",
+        "han",
+        "solo",
+        "in",
+        "trench",
+        "coat",
+        "reference"
+      ],
+      "keywords": [
+        "Han Solo (in Trench Coat)",
+        "in Trench Coat",
+        "Han Endor",
+        "Trench Coat Han",
+        "han",
+        "solo",
+        "in",
+        "trench",
+        "coat",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3014
+    },
+    {
+      "relPath": "figures/han-solo-in-trench-coat-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Han Solo (in Trench Coat)",
+      "aliases": [
+        "in Trench Coat",
+        "Han Endor",
+        "Trench Coat Han",
+        "han",
+        "solo",
+        "in",
+        "trench",
+        "coat",
+        "reference"
+      ],
+      "keywords": [
+        "Han Solo (in Trench Coat)",
+        "in Trench Coat",
+        "Han Endor",
+        "Trench Coat Han",
+        "han",
+        "solo",
+        "in",
+        "trench",
+        "coat",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5710
+    },
+    {
+      "relPath": "figures/han-solo-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Han Solo",
+      "aliases": [
+        "Han",
+        "OG Han",
+        "Original Han",
+        "Small Head Han",
+        "Big Head Han",
+        "solo",
+        "reference"
+      ],
+      "keywords": [
+        "Han Solo",
+        "Han",
+        "OG Han",
+        "Original Han",
+        "Small Head Han",
+        "Big Head Han",
+        "solo",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4286
+    },
+    {
+      "relPath": "figures/ig-88-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "IG-88",
+      "aliases": [
+        "ig",
+        "88",
+        "reference"
+      ],
+      "keywords": [
+        "IG-88",
+        "ig",
+        "88",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5852
+    },
+    {
+      "relPath": "figures/ig-88-reference-3.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "IG-88",
+      "aliases": [
+        "ig",
+        "88",
+        "reference"
+      ],
+      "keywords": [
+        "IG-88",
+        "ig",
+        "88",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4642
+    },
+    {
+      "relPath": "figures/ig-88-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "IG-88",
+      "aliases": [
+        "ig",
+        "88",
+        "reference"
+      ],
+      "keywords": [
+        "IG-88",
+        "ig",
+        "88",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6750
+    },
+    {
+      "relPath": "figures/imperial-commander-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Commander",
+      "aliases": [
+        "imperial",
+        "commander",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Commander",
+        "imperial",
+        "commander",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4465
+    },
+    {
+      "relPath": "figures/imperial-dignitary-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Dignitary",
+      "aliases": [
+        "imperial",
+        "dignitary",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Dignitary",
+        "imperial",
+        "dignitary",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5299
+    },
+    {
+      "relPath": "figures/imperial-gunner-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Gunner",
+      "aliases": [
+        "imperial",
+        "gunner",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Gunner",
+        "imperial",
+        "gunner",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5048
+    },
+    {
+      "relPath": "figures/imperial-stormtrooper-hoth-battle-gear-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "aliases": [
+        "Hoth Battle Gear",
+        "Hoth Stormtrooper",
+        "Snowtrooper",
+        "imperial",
+        "stormtrooper",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "Hoth Battle Gear",
+        "Hoth Stormtrooper",
+        "Snowtrooper",
+        "imperial",
+        "stormtrooper",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6501
+    },
+    {
+      "relPath": "figures/imperial-stormtrooper-hoth-battle-gear-reference-3.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "aliases": [
+        "Hoth Battle Gear",
+        "Hoth Stormtrooper",
+        "Snowtrooper",
+        "imperial",
+        "stormtrooper",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "Hoth Battle Gear",
+        "Hoth Stormtrooper",
+        "Snowtrooper",
+        "imperial",
+        "stormtrooper",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5251
+    },
+    {
+      "relPath": "figures/imperial-stormtrooper-hoth-battle-gear-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "aliases": [
+        "Hoth Battle Gear",
+        "Hoth Stormtrooper",
+        "Snowtrooper",
+        "imperial",
+        "stormtrooper",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "Hoth Battle Gear",
+        "Hoth Stormtrooper",
+        "Snowtrooper",
+        "imperial",
+        "stormtrooper",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3030
+    },
+    {
+      "relPath": "figures/imperial-tie-fighter-pilot-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Tie Fighter Pilot",
+      "aliases": [
+        "TIE Pilot",
+        "imperial",
+        "tie",
+        "fighter",
+        "pilot",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Tie Fighter Pilot",
+        "TIE Pilot",
+        "imperial",
+        "tie",
+        "fighter",
+        "pilot",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5975
+    },
+    {
+      "relPath": "figures/imperial-tie-fighter-pilot-reference-3.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Tie Fighter Pilot",
+      "aliases": [
+        "TIE Pilot",
+        "imperial",
+        "tie",
+        "fighter",
+        "pilot",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Tie Fighter Pilot",
+        "TIE Pilot",
+        "imperial",
+        "tie",
+        "fighter",
+        "pilot",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2628
+    },
+    {
+      "relPath": "figures/imperial-tie-fighter-pilot-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Tie Fighter Pilot",
+      "aliases": [
+        "TIE Pilot",
+        "imperial",
+        "tie",
+        "fighter",
+        "pilot",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Tie Fighter Pilot",
+        "TIE Pilot",
+        "imperial",
+        "tie",
+        "fighter",
+        "pilot",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6085
+    },
+    {
+      "relPath": "figures/jawa-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Jawa",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Jawa",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3243
+    },
+    {
+      "relPath": "figures/king-gorneesh-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "King Gorneesh",
+      "aliases": [
+        "king",
+        "gorneesh",
+        "reference"
+      ],
+      "keywords": [
+        "King Gorneesh",
+        "king",
+        "gorneesh",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2456
+    },
+    {
+      "relPath": "figures/klaatu-in-skiff-guard-outfit-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Klaatu (in Skiff Guard Outfit)",
+      "aliases": [
+        "in Skiff Guard Outfit",
+        "klaatu",
+        "in",
+        "skiff",
+        "guard",
+        "outfit",
+        "reference"
+      ],
+      "keywords": [
+        "Klaatu (in Skiff Guard Outfit)",
+        "in Skiff Guard Outfit",
+        "klaatu",
+        "in",
+        "skiff",
+        "guard",
+        "outfit",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4455
+    },
+    {
+      "relPath": "figures/klaatu-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Klaatu",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Klaatu",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4497
+    },
+    {
+      "relPath": "figures/klaatu-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Klaatu",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Klaatu",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5357
+    },
+    {
+      "relPath": "figures/lando-calrissian-general-pilot-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Lando Calrissian (General Pilot)",
+      "aliases": [
+        "General Pilot",
+        "lando",
+        "calrissian",
+        "general",
+        "pilot",
+        "reference"
+      ],
+      "keywords": [
+        "Lando Calrissian (General Pilot)",
+        "General Pilot",
+        "lando",
+        "calrissian",
+        "general",
+        "pilot",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3734
+    },
+    {
+      "relPath": "figures/lando-calrissian-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Lando Calrissian",
+      "aliases": [
+        "lando",
+        "calrissian",
+        "reference"
+      ],
+      "keywords": [
+        "Lando Calrissian",
+        "lando",
+        "calrissian",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4722
+    },
+    {
+      "relPath": "figures/lando-calrissian-skiff-guard-disguise-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Lando Calrissian (Skiff Guard Disguise)",
+      "aliases": [
+        "Skiff Guard Disguise",
+        "Skiff Lando",
+        "lando",
+        "calrissian",
+        "skiff",
+        "guard",
+        "disguise",
+        "reference"
+      ],
+      "keywords": [
+        "Lando Calrissian (Skiff Guard Disguise)",
+        "Skiff Guard Disguise",
+        "Skiff Lando",
+        "lando",
+        "calrissian",
+        "skiff",
+        "guard",
+        "disguise",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3952
+    },
+    {
+      "relPath": "figures/leia-hoth-outfit-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Leia (Hoth Outfit)",
+      "aliases": [
+        "Hoth Outfit",
+        "Hoth Leia",
+        "leia",
+        "hoth",
+        "outfit",
+        "reference"
+      ],
+      "keywords": [
+        "Leia (Hoth Outfit)",
+        "Hoth Outfit",
+        "Hoth Leia",
+        "leia",
+        "hoth",
+        "outfit",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3883
+    },
+    {
+      "relPath": "figures/leia-organa-bespin-gown-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Leia Organa (Bespin Gown)",
+      "aliases": [
+        "Bespin Gown",
+        "Bespin Leia",
+        "leia",
+        "organa",
+        "bespin",
+        "gown",
+        "reference"
+      ],
+      "keywords": [
+        "Leia Organa (Bespin Gown)",
+        "Bespin Gown",
+        "Bespin Leia",
+        "leia",
+        "organa",
+        "bespin",
+        "gown",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3645
+    },
+    {
+      "relPath": "figures/lobot-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Lobot",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Lobot",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3624
+    },
+    {
+      "relPath": "figures/logray-ewok-medicine-man-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Logray (Ewok Medicine Man)",
+      "aliases": [
+        "Ewok Medicine Man",
+        "logray",
+        "ewok",
+        "medicine",
+        "man",
+        "reference"
+      ],
+      "keywords": [
+        "Logray (Ewok Medicine Man)",
+        "Ewok Medicine Man",
+        "logray",
+        "ewok",
+        "medicine",
+        "man",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4600
+    },
+    {
+      "relPath": "figures/logray-ewoks-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Logray (Ewoks)",
+      "aliases": [
+        "Ewoks",
+        "logray",
+        "reference"
+      ],
+      "keywords": [
+        "Logray (Ewoks)",
+        "Ewoks",
+        "logray",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2479
+    },
+    {
+      "relPath": "figures/luke-skywalker-bespin-fatigues-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (Bespin Fatigues)",
+      "aliases": [
+        "Bespin Fatigues",
+        "Bespin Luke",
+        "luke",
+        "skywalker",
+        "bespin",
+        "fatigues",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (Bespin Fatigues)",
+        "Bespin Fatigues",
+        "Bespin Luke",
+        "luke",
+        "skywalker",
+        "bespin",
+        "fatigues",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6164
+    },
+    {
+      "relPath": "figures/luke-skywalker-bespin-fatigues-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (Bespin Fatigues)",
+      "aliases": [
+        "Bespin Fatigues",
+        "Bespin Luke",
+        "luke",
+        "skywalker",
+        "bespin",
+        "fatigues",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (Bespin Fatigues)",
+        "Bespin Fatigues",
+        "Bespin Luke",
+        "luke",
+        "skywalker",
+        "bespin",
+        "fatigues",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6253
+    },
+    {
+      "relPath": "figures/luke-skywalker-hoth-battle-gear-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (Hoth Battle Gear)",
+      "aliases": [
+        "Hoth Battle Gear",
+        "Hoth Luke",
+        "luke",
+        "skywalker",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (Hoth Battle Gear)",
+        "Hoth Battle Gear",
+        "Hoth Luke",
+        "luke",
+        "skywalker",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4616
+    },
+    {
+      "relPath": "figures/luke-skywalker-imperial-stormtrooper-outfit-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (Imperial Stormtrooper Outfit)",
+      "aliases": [
+        "Imperial Stormtrooper Outfit",
+        "Stormtrooper Luke",
+        "Luke Stormtrooper",
+        "luke",
+        "skywalker",
+        "imperial",
+        "stormtrooper",
+        "outfit",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (Imperial Stormtrooper Outfit)",
+        "Imperial Stormtrooper Outfit",
+        "Stormtrooper Luke",
+        "Luke Stormtrooper",
+        "luke",
+        "skywalker",
+        "imperial",
+        "stormtrooper",
+        "outfit",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5397
+    },
+    {
+      "relPath": "figures/luke-skywalker-in-battle-poncho-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (in Battle Poncho)",
+      "aliases": [
+        "in Battle Poncho",
+        "luke",
+        "skywalker",
+        "in",
+        "battle",
+        "poncho",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (in Battle Poncho)",
+        "in Battle Poncho",
+        "luke",
+        "skywalker",
+        "in",
+        "battle",
+        "poncho",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5437
+    },
+    {
+      "relPath": "figures/luke-skywalker-jedi-knight-outfit-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (Jedi Knight Outfit)",
+      "aliases": [
+        "Jedi Knight Outfit",
+        "Jedi Luke",
+        "luke",
+        "skywalker",
+        "jedi",
+        "knight",
+        "outfit",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Jedi Knight Outfit",
+        "Jedi Luke",
+        "luke",
+        "skywalker",
+        "jedi",
+        "knight",
+        "outfit",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5621
+    },
+    {
+      "relPath": "figures/luke-skywalker-jedi-knight-outfit-reference-3.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (Jedi Knight Outfit)",
+      "aliases": [
+        "Jedi Knight Outfit",
+        "Jedi Luke",
+        "luke",
+        "skywalker",
+        "jedi",
+        "knight",
+        "outfit",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Jedi Knight Outfit",
+        "Jedi Luke",
+        "luke",
+        "skywalker",
+        "jedi",
+        "knight",
+        "outfit",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6174
+    },
+    {
+      "relPath": "figures/luke-skywalker-jedi-knight-outfit-reference-4.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (Jedi Knight Outfit)",
+      "aliases": [
+        "Jedi Knight Outfit",
+        "Jedi Luke",
+        "luke",
+        "skywalker",
+        "jedi",
+        "knight",
+        "outfit",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Jedi Knight Outfit",
+        "Jedi Luke",
+        "luke",
+        "skywalker",
+        "jedi",
+        "knight",
+        "outfit",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5670
+    },
+    {
+      "relPath": "figures/luke-skywalker-jedi-knight-outfit-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (Jedi Knight Outfit)",
+      "aliases": [
+        "Jedi Knight Outfit",
+        "Jedi Luke",
+        "luke",
+        "skywalker",
+        "jedi",
+        "knight",
+        "outfit",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Jedi Knight Outfit",
+        "Jedi Luke",
+        "luke",
+        "skywalker",
+        "jedi",
+        "knight",
+        "outfit",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3552
+    },
+    {
+      "relPath": "figures/luke-skywalker-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker",
+      "aliases": [
+        "luke",
+        "skywalker",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker",
+        "luke",
+        "skywalker",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3815
+    },
+    {
+      "relPath": "figures/luke-skywalker-x-wing-pilot-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "aliases": [
+        "X-Wing Pilot",
+        "X-Wing Luke",
+        "Pilot Luke",
+        "luke",
+        "skywalker",
+        "wing",
+        "pilot",
+        "reference"
+      ],
+      "keywords": [
+        "Luke Skywalker (X-Wing Pilot)",
+        "X-Wing Pilot",
+        "X-Wing Luke",
+        "Pilot Luke",
+        "luke",
+        "skywalker",
+        "wing",
+        "pilot",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3512
+    },
+    {
+      "relPath": "figures/lumat-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Lumat",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Lumat",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3408
+    },
+    {
+      "relPath": "figures/nien-nunb-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Nien Nunb",
+      "aliases": [
+        "nien",
+        "nunb",
+        "reference"
+      ],
+      "keywords": [
+        "Nien Nunb",
+        "nien",
+        "nunb",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3884
+    },
+    {
+      "relPath": "figures/nikto-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Nikto",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Nikto",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3797
+    },
+    {
+      "relPath": "figures/paploo-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Paploo",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Paploo",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5908
+    },
+    {
+      "relPath": "figures/power-droid-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Power Droid",
+      "aliases": [
+        "Gonk",
+        "power",
+        "droid",
+        "reference"
+      ],
+      "keywords": [
+        "Power Droid",
+        "Gonk",
+        "power",
+        "droid",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3424
+    },
+    {
+      "relPath": "figures/princess-leia-organa-boussh-disguise-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Princess Leia Organa (Boushh Disguise)",
+      "aliases": [
+        "Boushh Disguise",
+        "Boushh",
+        "Boushh Leia",
+        "princess",
+        "leia",
+        "organa",
+        "boussh",
+        "disguise",
+        "reference"
+      ],
+      "keywords": [
+        "Princess Leia Organa (Boushh Disguise)",
+        "Boushh Disguise",
+        "Boushh",
+        "Boushh Leia",
+        "princess",
+        "leia",
+        "organa",
+        "boussh",
+        "disguise",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2917
+    },
+    {
+      "relPath": "figures/princess-leia-organa-in-combat-poncho-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Princess Leia Organa (in Combat Poncho)",
+      "aliases": [
+        "in Combat Poncho",
+        "Endor Leia",
+        "Poncho Leia",
+        "princess",
+        "leia",
+        "organa",
+        "in",
+        "combat",
+        "poncho",
+        "reference"
+      ],
+      "keywords": [
+        "Princess Leia Organa (in Combat Poncho)",
+        "in Combat Poncho",
+        "Endor Leia",
+        "Poncho Leia",
+        "princess",
+        "leia",
+        "organa",
+        "in",
+        "combat",
+        "poncho",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5192
+    },
+    {
+      "relPath": "figures/princess-leia-organa-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Princess Leia Organa",
+      "aliases": [
+        "Leia",
+        "White Leia",
+        "The Princess",
+        "Organa",
+        "OG",
+        "O.G.",
+        "Original",
+        "First 12",
+        "12 Back Leia",
+        "princess",
+        "reference"
+      ],
+      "keywords": [
+        "Princess Leia Organa",
+        "Leia",
+        "White Leia",
+        "The Princess",
+        "Organa",
+        "OG",
+        "O.G.",
+        "Original",
+        "First 12",
+        "12 Back Leia",
+        "princess",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2766
+    },
+    {
+      "relPath": "figures/prune-face-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Prune Face",
+      "aliases": [
+        "Orrimaarko",
+        "prune",
+        "face",
+        "reference"
+      ],
+      "keywords": [
+        "Prune Face",
+        "Orrimaarko",
+        "prune",
+        "face",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3633
+    },
+    {
+      "relPath": "figures/r2-d2-reference-1.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "R2-D2 (Artoo-Detoo)",
+      "aliases": [
+        "R2",
+        "Artoo",
+        "Solid Dome",
+        "OG",
+        "O.G.",
+        "Original",
+        "Early Bird R2",
+        "12 Back R2",
+        "d2",
+        "reference"
+      ],
+      "keywords": [
+        "R2-D2 (Artoo-Detoo)",
+        "R2",
+        "Artoo",
+        "Solid Dome",
+        "OG",
+        "O.G.",
+        "Original",
+        "Early Bird R2",
+        "12 Back R2",
+        "d2",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4477
+    },
+    {
+      "relPath": "figures/r2-d2-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "R2-D2 (Artoo-Detoo)",
+      "aliases": [
+        "R2",
+        "Artoo",
+        "Solid Dome",
+        "OG",
+        "O.G.",
+        "Original",
+        "Early Bird R2",
+        "12 Back R2",
+        "d2",
+        "reference"
+      ],
+      "keywords": [
+        "R2-D2 (Artoo-Detoo)",
+        "R2",
+        "Artoo",
+        "Solid Dome",
+        "OG",
+        "O.G.",
+        "Original",
+        "Early Bird R2",
+        "12 Back R2",
+        "d2",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3126
+    },
+    {
+      "relPath": "figures/r2-d2-sensorscope-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "R2-D2 (Sensorscope)",
+      "aliases": [
+        "Sensorscope",
+        "Sensorscope R2-D2",
+        "r2",
+        "d2",
+        "reference"
+      ],
+      "keywords": [
+        "R2-D2 (Sensorscope)",
+        "Sensorscope",
+        "Sensorscope R2-D2",
+        "r2",
+        "d2",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4649
+    },
+    {
+      "relPath": "figures/r2-d2-sensorscope-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "R2-D2 (Sensorscope)",
+      "aliases": [
+        "Sensorscope",
+        "Sensorscope R2-D2",
+        "r2",
+        "d2",
+        "reference"
+      ],
+      "keywords": [
+        "R2-D2 (Sensorscope)",
+        "Sensorscope",
+        "Sensorscope R2-D2",
+        "r2",
+        "d2",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6143
+    },
+    {
+      "relPath": "figures/r5-d4-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "R5-D4",
+      "aliases": [
+        "r5",
+        "d4",
+        "reference"
+      ],
+      "keywords": [
+        "R5-D4",
+        "r5",
+        "d4",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3424
+    },
+    {
+      "relPath": "figures/r5-d4-reference-3.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "R5-D4",
+      "aliases": [
+        "r5",
+        "d4",
+        "reference"
+      ],
+      "keywords": [
+        "R5-D4",
+        "r5",
+        "d4",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5907
+    },
+    {
+      "relPath": "figures/r5-d4-reference-4.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "R5-D4",
+      "aliases": [
+        "r5",
+        "d4",
+        "reference"
+      ],
+      "keywords": [
+        "R5-D4",
+        "r5",
+        "d4",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5105
+    },
+    {
+      "relPath": "figures/r5-d4-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "R5-D4",
+      "aliases": [
+        "r5",
+        "d4",
+        "reference"
+      ],
+      "keywords": [
+        "R5-D4",
+        "r5",
+        "d4",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5113
+    },
+    {
+      "relPath": "figures/rancor-keeper-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Rancor Keeper",
+      "aliases": [
+        "Malakili",
+        "rancor",
+        "keeper",
+        "reference"
+      ],
+      "keywords": [
+        "Rancor Keeper",
+        "Malakili",
+        "rancor",
+        "keeper",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4374
+    },
+    {
+      "relPath": "figures/rebel-commander-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Rebel Commander",
+      "aliases": [
+        "rebel",
+        "commander",
+        "reference"
+      ],
+      "keywords": [
+        "Rebel Commander",
+        "rebel",
+        "commander",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4015
+    },
+    {
+      "relPath": "figures/rebel-commando-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Rebel Commando",
+      "aliases": [
+        "rebel",
+        "commando",
+        "reference"
+      ],
+      "keywords": [
+        "Rebel Commando",
+        "rebel",
+        "commando",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4270
+    },
+    {
+      "relPath": "figures/rebel-soldier-hoth-battle-gear-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Rebel Soldier (Hoth Battle Gear)",
+      "aliases": [
+        "Hoth Battle Gear",
+        "Hoth Rebel",
+        "rebel",
+        "soldier",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "keywords": [
+        "Rebel Soldier (Hoth Battle Gear)",
+        "Hoth Battle Gear",
+        "Hoth Rebel",
+        "rebel",
+        "soldier",
+        "hoth",
+        "battle",
+        "gear",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3205
+    },
+    {
+      "relPath": "figures/ree-yees-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Ree Yees",
+      "aliases": [
+        "ree",
+        "yees",
+        "reference"
+      ],
+      "keywords": [
+        "Ree Yees",
+        "ree",
+        "yees",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4289
+    },
+    {
+      "relPath": "figures/romba-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Romba",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Romba",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5225
+    },
+    {
+      "relPath": "figures/sand-people-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Tusken Raider (Sand People)",
+      "aliases": [
+        "Tusken Raider",
+        "Sand People",
+        "Sandperson",
+        "Tusken",
+        "TR",
+        "Raiders",
+        "Sandman",
+        "Sandmen",
+        "sand",
+        "people",
+        "reference"
+      ],
+      "keywords": [
+        "Tusken Raider (Sand People)",
+        "Tusken Raider",
+        "Sand People",
+        "Sandperson",
+        "Tusken",
+        "TR",
+        "Raiders",
+        "Sandman",
+        "Sandmen",
+        "sand",
+        "people",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4587
+    },
+    {
+      "relPath": "figures/snaggletooth-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Snaggletooth",
+      "aliases": [
+        "Zutton",
+        "Blue Snaggletooth",
+        "Red Snaggletooth",
+        "reference"
+      ],
+      "keywords": [
+        "Snaggletooth",
+        "Zutton",
+        "Blue Snaggletooth",
+        "Red Snaggletooth",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4903
+    },
+    {
+      "relPath": "figures/squid-head-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Squid Head",
+      "aliases": [
+        "Tessek",
+        "squid",
+        "head",
+        "reference"
+      ],
+      "keywords": [
+        "Squid Head",
+        "Tessek",
+        "squid",
+        "head",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5735
+    },
+    {
+      "relPath": "figures/stormtrooper-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Imperial Stormtrooper",
+      "aliases": [
+        "Stormtrooper",
+        "Stormy",
+        "Stormie",
+        "Trooper",
+        "TK",
+        "White Trooper",
+        "reference"
+      ],
+      "keywords": [
+        "Imperial Stormtrooper",
+        "Stormtrooper",
+        "Stormy",
+        "Stormie",
+        "Trooper",
+        "TK",
+        "White Trooper",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4040
+    },
+    {
+      "relPath": "figures/teebo-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Teebo",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Teebo",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5123
+    },
+    {
+      "relPath": "figures/the-emperor-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "The Emperor",
+      "aliases": [
+        "Emperor Palpatine",
+        "Palpatine",
+        "the",
+        "emperor",
+        "reference"
+      ],
+      "keywords": [
+        "The Emperor",
+        "Emperor Palpatine",
+        "Palpatine",
+        "the",
+        "emperor",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4441
+    },
+    {
+      "relPath": "figures/ugnaught-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Ugnaught",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Ugnaught",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5005
+    },
+    {
+      "relPath": "figures/urgah-lady-gorneesh-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Urgah Lady Gorneesh",
+      "aliases": [
+        "urgah",
+        "lady",
+        "gorneesh",
+        "reference"
+      ],
+      "keywords": [
+        "Urgah Lady Gorneesh",
+        "urgah",
+        "lady",
+        "gorneesh",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2478
+    },
+    {
+      "relPath": "figures/walrusman-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Walrus Man",
+      "aliases": [
+        "Ponda Baba",
+        "walrusman",
+        "reference"
+      ],
+      "keywords": [
+        "Walrus Man",
+        "Ponda Baba",
+        "walrusman",
+        "reference"
+      ],
+      "years": [],
+      "chars": 4060
+    },
+    {
+      "relPath": "figures/warok-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Warok",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Warok",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5407
+    },
+    {
+      "relPath": "figures/weequay-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Weequay",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Weequay",
+        "reference"
+      ],
+      "years": [],
+      "chars": 2925
+    },
+    {
+      "relPath": "figures/wicket-w-warrick-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Wicket W. Warrick",
+      "aliases": [
+        "Wicket W.Warrick (Ewoks)",
+        "Wicket",
+        "Ewok",
+        "warrick",
+        "reference"
+      ],
+      "keywords": [
+        "Wicket W. Warrick",
+        "Wicket W.Warrick (Ewoks)",
+        "Wicket",
+        "Ewok",
+        "warrick",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3979
+    },
+    {
+      "relPath": "figures/yak-face-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Yak Face",
+      "aliases": [
+        "Saelt-Marae",
+        "yak",
+        "face",
+        "reference"
+      ],
+      "keywords": [
+        "Yak Face",
+        "Saelt-Marae",
+        "yak",
+        "face",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3881
+    },
+    {
+      "relPath": "figures/yoda-reference-2.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Yoda",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Yoda",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5771
+    },
+    {
+      "relPath": "figures/yoda-reference-3.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Yoda",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Yoda",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5438
+    },
+    {
+      "relPath": "figures/yoda-reference-4.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Yoda",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Yoda",
+        "reference"
+      ],
+      "years": [],
+      "chars": 6453
+    },
+    {
+      "relPath": "figures/yoda-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Yoda",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Yoda",
+        "reference"
+      ],
+      "years": [],
+      "chars": 5038
+    },
+    {
+      "relPath": "figures/zuckuss-reference.txt",
+      "folder": "figures",
+      "topic": "figure",
+      "role": "",
+      "name": "Zuckuss",
+      "aliases": [
+        "reference"
+      ],
+      "keywords": [
+        "Zuckuss",
+        "reference"
+      ],
+      "years": [],
+      "chars": 3655
+    },
+    {
+      "relPath": "references/accessory-production.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "accessory",
+      "aliases": [
+        "production"
+      ],
+      "keywords": [
+        "accessory",
+        "production"
+      ],
+      "years": [],
+      "chars": 1813
+    },
+    {
+      "relPath": "references/collector_glossary-2.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "glossary",
+      "aliases": [
+        "collector_glossary"
+      ],
+      "keywords": [
+        "glossary",
+        "collector_glossary"
+      ],
+      "years": [],
+      "chars": 3728
+    },
+    {
+      "relPath": "references/collector_glossary.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "collector_glossary",
+      "aliases": [],
+      "keywords": [
+        "collector_glossary"
+      ],
+      "years": [],
+      "chars": 4771
+    },
+    {
+      "relPath": "references/coo-guide.txt",
+      "folder": "references",
+      "topic": "coo",
+      "role": "",
+      "name": "coo",
+      "aliases": [
+        "guide"
+      ],
+      "keywords": [
+        "coo",
+        "guide"
+      ],
+      "years": [],
+      "chars": 1660
+    },
+    {
+      "relPath": "references/early-bird-certificate-package.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "early",
+      "aliases": [
+        "bird",
+        "certificate",
+        "package"
+      ],
+      "keywords": [
+        "early",
+        "bird",
+        "certificate",
+        "package"
+      ],
+      "years": [],
+      "chars": 3672
+    },
+    {
+      "relPath": "references/palitoy-history.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "history",
+      "name": "palitoy-history",
+      "aliases": [],
+      "keywords": [],
+      "years": [],
+      "chars": 2885
+    },
+    {
+      "relPath": "references/palitoy-uk-1978.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Darth Vader",
+      "aliases": [],
+      "keywords": [
+        "Darth Vader",
+        "Stormtrooper",
+        "C-3PO",
+        "Sand People",
+        "Sandpeople",
+        "Chewbacca",
+        "Dip Dots painting set",
+        "Dip Dots",
+        "Keel kite",
+        "kite",
+        "Keel",
+        "Poster art set",
+        "Playnts",
+        "Poster art",
+        "Play-Doh set",
+        "Play-Doh",
+        "Play Doh",
+        "Escape the Death Star game",
+        "Escape the Death Star",
+        "The Adventures of R2-D2 game",
+        "The Adventures of R2-D2",
+        "Destroy the Death Star game",
+        "Destroy the Death Star",
+        "Light Saber",
+        "Lightsaber",
+        "Han Solo",
+        "Luke Skywalker",
+        "Princess Leia Organa",
+        "Ben (Obi-Wan) Kenobi",
+        "Artoo-Detoo (R2-D2)",
+        "R2-D2",
+        "Artoo-Detoo",
+        "Artoo Detoo",
+        "See-Threepio (C-3PO)",
+        "See-Threepio",
+        "See Threepio",
+        "Death Squad Commander",
+        "Jawa",
+        "Land Speeder",
+        "Landspeeder",
+        "X-Wing Fighter",
+        "X-Wing",
+        "X Wing",
+        "Death Star",
+        "TIE Fighter",
+        "TIE",
+        "Princess Leia"
+      ],
+      "years": [
+        1978
+      ],
+      "chars": 5188
+    },
+    {
+      "relPath": "references/palitoy-uk-1979-2.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Millennium Falcon",
+      "aliases": [],
+      "keywords": [
+        "Millennium Falcon",
+        "Falcon",
+        "Millenium Falcon",
+        "Y-Wing",
+        "Y Wing",
+        "Y-Wing Fighter",
+        "Blaster Pistol",
+        "Blaster",
+        "Three Position Laser Rifle",
+        "Laser Rifle",
+        "Three Position Rifle",
+        "Radio Controlled R2-D2",
+        "RC R2-D2",
+        "Radio Controlled R2",
+        "Talking R2-D2",
+        "Talking R2",
+        "Darth Vader TIE Fighter",
+        "Vader TIE Fighter",
+        "Darth Vader TIE",
+        "Cantina",
+        "Land of the Jawas",
+        "Droid Factory",
+        "Imperial Troop Transporter",
+        "ITT",
+        "Troop Transporter"
+      ],
+      "years": [
+        1979
+      ],
+      "chars": 1900
+    },
+    {
+      "relPath": "references/palitoy-uk-1979.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Darth Vader",
+      "aliases": [],
+      "keywords": [
+        "Darth Vader",
+        "Stormtrooper",
+        "C-3PO",
+        "Sand People",
+        "Sandpeople",
+        "Chewbacca",
+        "3D Poster Art",
+        "3D poster",
+        "Dip Dots painting set",
+        "Dip Dots",
+        "Light Saber",
+        "Lightsaber",
+        "Han Solo",
+        "Luke Skywalker",
+        "Princess Leia Organa",
+        "Ben (Obi-Wan) Kenobi",
+        "Artoo-Detoo (R2-D2)",
+        "R2-D2",
+        "Artoo-Detoo",
+        "Artoo Detoo",
+        "See-Threepio (C-3PO)",
+        "See-Threepio",
+        "See Threepio",
+        "Death Squad Commander",
+        "Jawa",
+        "Hammerhead",
+        "Snaggletooth",
+        "Walrus Man",
+        "Greedo",
+        "Power Droid",
+        "Death Star Droid",
+        "R5-D4",
+        "Luke Skywalker (X-Wing Pilot)",
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot",
+        "Land Speeder",
+        "Landspeeder",
+        "X-Wing Fighter",
+        "X-Wing",
+        "X Wing",
+        "Death Star",
+        "TIE Fighter",
+        "TIE",
+        "Princess Leia",
+        "Darth Vader TIE Fighter",
+        "Vader TIE",
+        "Darth Vader TIE",
+        "Imperial Cruiser"
+      ],
+      "years": [
+        1979
+      ],
+      "chars": 6791
+    },
+    {
+      "relPath": "references/palitoy-uk-1980-2.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Luke Skywalker",
+      "aliases": [],
+      "keywords": [
+        "Luke Skywalker",
+        "Princess Leia",
+        "Boba Fett",
+        "IG-88",
+        "IG88",
+        "X-Wing Fighter",
+        "X-Wing",
+        "X Wing",
+        "TIE Fighter",
+        "TIE",
+        "Darth Vader TIE Fighter",
+        "Vader TIE",
+        "Darth Vader TIE",
+        "Landspeeder",
+        "Land Speeder",
+        "Imperial Cruiser",
+        "Millennium Falcon",
+        "Falcon",
+        "Millenium Falcon",
+        "Y-Wing",
+        "Y Wing",
+        "Y-Wing Fighter",
+        "Blaster Pistol",
+        "Blaster",
+        "Three Position Laser Rifle",
+        "Laser Rifle",
+        "Radio Controlled R2-D2",
+        "RC R2-D2",
+        "Talking R2-D2",
+        "Talking R2",
+        "Vader TIE Fighter",
+        "Cantina",
+        "Land of the Jawas",
+        "Droid Factory",
+        "Imperial Troop Transporter",
+        "ITT",
+        "Troop Transporter",
+        "Yoda Hand Puppet",
+        "Yoda puppet",
+        "Tauntaun",
+        "Rebel Armoured Snowspeeder",
+        "Snowspeeder",
+        "Rebel Armored Snowspeeder",
+        "Twin-Pod Cloud Car",
+        "Twin Pod Cloud Car",
+        "Cloud Car",
+        "The Force Lightsaber",
+        "Force Lightsaber",
+        "Force Lightsabre"
+      ],
+      "years": [
+        1980
+      ],
+      "chars": 4604
+    },
+    {
+      "relPath": "references/palitoy-uk-1980.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Han Solo",
+      "aliases": [],
+      "keywords": [
+        "Han Solo",
+        "Luke Skywalker",
+        "Princess Leia Organa",
+        "Ben (Obi-Wan) Kenobi",
+        "Artoo-Detoo (R2-D2)",
+        "R2-D2",
+        "Artoo-Detoo",
+        "Artoo Detoo",
+        "See-Threepio (C-3PO)",
+        "C-3PO",
+        "See-Threepio",
+        "See Threepio",
+        "Darth Vader",
+        "Death Squad Commander",
+        "Jawa",
+        "Stormtrooper",
+        "Sand People",
+        "Hammerhead",
+        "Snaggletooth",
+        "Walrus Man",
+        "Greedo",
+        "Power Droid",
+        "Death Star Droid",
+        "R5-D4",
+        "Luke Skywalker (X-Wing Pilot)",
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot",
+        "Han Solo (Hoth Outfit)",
+        "Luke Skywalker (Bespin Fatigues)",
+        "Princess Leia Organa (Bespin Gown)",
+        "Leia Organa (Bespin Gown)",
+        "Leia Bespin",
+        "Bespin Leia",
+        "Lando Calrissian",
+        "Rebel Soldier (Hoth Battle Gear)",
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "FX-7 (Medical Droid)",
+        "IG-88 (Bounty Hunter)",
+        "IG-88",
+        "Bespin Security Guard",
+        "Bossk (Bounty Hunter)",
+        "Boba Fett",
+        "Land Speeder",
+        "Landspeeder",
+        "TIE Fighter",
+        "TIE",
+        "Death Star"
+      ],
+      "years": [
+        1980
+      ],
+      "chars": 6627
+    },
+    {
+      "relPath": "references/palitoy-uk-1981-2.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Darth Vader TIE Fighter",
+      "aliases": [],
+      "keywords": [
+        "Darth Vader TIE Fighter",
+        "Vader TIE",
+        "Darth Vader TIE",
+        "Landspeeder",
+        "Land Speeder",
+        "Imperial Cruiser",
+        "Millennium Falcon",
+        "Falcon",
+        "Millenium Falcon",
+        "Y-Wing",
+        "Y Wing",
+        "Y-Wing Fighter",
+        "Twin-Pod Cloud Car",
+        "Twin-Pod",
+        "Twin Pod",
+        "Slave I",
+        "Slave One",
+        "Slave 1",
+        "Snowspeeder",
+        "Rebel Armoured Snowspeeder",
+        "TIE Bomber",
+        "Blaster Pistol",
+        "Blaster",
+        "Three Position Laser Rifle",
+        "Laser Rifle",
+        "Vader TIE Fighter",
+        "Imperial Troop Transporter",
+        "ITT",
+        "Yoda Hand Puppet",
+        "Yoda puppet",
+        "Tauntaun",
+        "Twin Pod Cloud Car",
+        "Cloud Car",
+        "Turret and Probot playset",
+        "Turret & Probot",
+        "Probot playset",
+        "Imperial Attack Base",
+        "Attack Base",
+        "The Force Lightsaber",
+        "Force Lightsaber",
+        "Force Lightsabre",
+        "Yoda",
+        "Craft Master Yoda",
+        "Luke Skywalker on Tauntaun",
+        "Craft Master Luke",
+        "Luke on Tauntaun",
+        "Glow Paint by Numbers Craft Master",
+        "Glow Paint by Numbers",
+        "Paint by Numbers"
+      ],
+      "years": [
+        1981
+      ],
+      "chars": 4439
+    },
+    {
+      "relPath": "references/palitoy-uk-1981.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Han Solo",
+      "aliases": [],
+      "keywords": [
+        "Han Solo",
+        "Luke Skywalker",
+        "Princess Leia Organa",
+        "Ben (Obi-Wan) Kenobi",
+        "Artoo-Detoo (R2-D2)",
+        "R2-D2",
+        "Artoo-Detoo",
+        "Artoo Detoo",
+        "See-Threepio (C-3PO)",
+        "C-3PO",
+        "See-Threepio",
+        "See Threepio",
+        "Darth Vader",
+        "Star Destroyer Commander",
+        "Death Squad Commander",
+        "Jawa",
+        "Stormtrooper",
+        "Sand People",
+        "Hammerhead",
+        "Snaggletooth",
+        "Walrus Man",
+        "Greedo",
+        "Power Droid",
+        "Death Star Droid",
+        "R5-D4",
+        "Luke Skywalker (X-Wing Pilot)",
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot",
+        "Dengar",
+        "Lobot",
+        "Yoda",
+        "Han Solo (Bespin Outfit)",
+        "Ugnaught",
+        "2-1B",
+        "AT-AT Driver",
+        "Imperial Commander",
+        "Rebel Commander",
+        "Princess Leia Organa (Hoth Outfit)",
+        "Leia (Hoth Outfit)",
+        "Leia Hoth",
+        "Hoth Leia",
+        "Bespin Security Guard",
+        "TIE Fighter",
+        "TIE",
+        "X-Wing Fighter",
+        "X-Wing",
+        "Boba Fett",
+        "IG-88",
+        "IG88",
+        "X Wing"
+      ],
+      "years": [
+        1981
+      ],
+      "chars": 6739
+    },
+    {
+      "relPath": "references/palitoy-uk-1982-2.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Dengar",
+      "aliases": [],
+      "keywords": [
+        "Dengar",
+        "Lobot",
+        "Yoda",
+        "Han Solo (Bespin Outfit)",
+        "Ugnaught",
+        "2-1B",
+        "AT-AT Driver",
+        "Imperial Commander",
+        "Rebel Commander",
+        "Princess Leia Organa (Hoth Outfit)",
+        "Leia (Hoth Outfit)",
+        "Leia Hoth",
+        "Hoth Leia",
+        "Luke Skywalker (Hoth Battle Gear)",
+        "AT-AT Commander",
+        "Cloud Car Pilot",
+        "Twin-Pod Cloud Car Pilot",
+        "Twin Pod Cloud Car Pilot",
+        "Bespin Security Guard",
+        "Imperial TIE Fighter Pilot",
+        "Artoo-Detoo (R2-D2) with Sensorscope",
+        "R2-D2 with Sensorscope",
+        "R2-D2 Sensorscope",
+        "Sensorscope",
+        "C-3PO with Removable Limbs",
+        "C-3PO Removable Limbs",
+        "4-LOM",
+        "4LOM",
+        "4 Lom",
+        "Zuckuss",
+        "TIE Fighter",
+        "TIE",
+        "Battle Damaged X-Wing Fighter",
+        "Battle Damaged X-Wing",
+        "X-Wing white",
+        "Boba Fett",
+        "IG-88",
+        "IG88",
+        "X-Wing Fighter",
+        "X-Wing",
+        "X Wing",
+        "Darth Vader TIE Fighter",
+        "Vader TIE",
+        "Darth Vader TIE",
+        "Landspeeder",
+        "Land Speeder",
+        "Imperial Cruiser",
+        "Millennium Falcon",
+        "Falcon",
+        "Millenium Falcon",
+        "Y-Wing",
+        "Y Wing",
+        "Y-Wing Fighter",
+        "Twin-Pod Cloud Car",
+        "Twin-Pod",
+        "Twin Pod",
+        "Slave I",
+        "Slave One",
+        "Slave 1",
+        "Snowspeeder",
+        "Rebel Armoured Snowspeeder"
+      ],
+      "years": [
+        1982
+      ],
+      "chars": 6556
+    },
+    {
+      "relPath": "references/palitoy-uk-1982-3.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "TIE Bomber",
+      "aliases": [],
+      "keywords": [
+        "TIE Bomber",
+        "Blaster Pistol",
+        "Blaster",
+        "Three Position Laser Rifle",
+        "Laser Rifle",
+        "Darth Vader TIE Fighter",
+        "Vader TIE Fighter",
+        "Imperial Troop Transporter",
+        "ITT",
+        "Yoda Hand Puppet",
+        "Yoda puppet",
+        "Tauntaun",
+        "Rebel Armoured Snowspeeder",
+        "Snowspeeder",
+        "Twin-Pod Cloud Car",
+        "Twin Pod Cloud Car",
+        "Cloud Car",
+        "The Force Lightsaber",
+        "Force Lightsaber",
+        "Force Lightsabre",
+        "INT-4 Interceptor",
+        "INT-4",
+        "CAP-2 Captivator",
+        "CAP-2",
+        "MTV-7 Multi-Terrain Vehicle",
+        "MTV-7",
+        "MLC-3 Mobile Laser Cannon",
+        "MLC-3",
+        "MLC",
+        "PDT-8 Personnel Deployment Transport",
+        "PDT-8",
+        "Tauntaun with Open Belly Rescue Feature",
+        "Open Belly Tauntaun",
+        "Tauntaun open belly",
+        "Slave I",
+        "Slave 1",
+        "Slave One",
+        "Boba Fett's Spaceship",
+        "Wampa",
+        "Dagobah Action Playset",
+        "Dagobah",
+        "AT-AT",
+        "AT-AT All Terrain Armoured Transport",
+        "All Terrain Armoured Transport",
+        "Millennium Falcon",
+        "Falcon",
+        "Darth Vader's Star Destroyer Action Playset",
+        "Darth Vader's Star Destroyer",
+        "Star Destroyer Action Playset"
+      ],
+      "years": [
+        1982
+      ],
+      "chars": 4175
+    },
+    {
+      "relPath": "references/palitoy-uk-1982.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Han Solo",
+      "aliases": [],
+      "keywords": [
+        "Han Solo",
+        "Luke Skywalker",
+        "Princess Leia Organa",
+        "Ben (Obi-Wan) Kenobi",
+        "Darth Vader",
+        "Star Destroyer Commander",
+        "Death Squad Commander",
+        "Jawa",
+        "Stormtrooper",
+        "Sand People",
+        "Hammerhead",
+        "Snaggletooth",
+        "Walrus Man",
+        "Greedo",
+        "Power Droid",
+        "Death Star Droid",
+        "R5-D4",
+        "Luke Skywalker (X-Wing Pilot)",
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot",
+        "Han Solo (Hoth Outfit)",
+        "Luke Skywalker (Bespin Fatigues)",
+        "Princess Leia Organa (Bespin Gown)",
+        "Leia Organa (Bespin Gown)",
+        "Leia Bespin",
+        "Bespin Leia",
+        "Lando Calrissian",
+        "Rebel Soldier (Hoth Battle Gear)",
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "FX-7 (Medical Droid)",
+        "IG-88 (Bounty Hunter)",
+        "IG-88",
+        "Bespin Security Guard",
+        "Bossk (Bounty Hunter)",
+        "Boba Fett"
+      ],
+      "years": [
+        1982
+      ],
+      "chars": 6711
+    },
+    {
+      "relPath": "references/palitoy-uk-1983-2.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Lobot",
+      "aliases": [],
+      "keywords": [
+        "Lobot",
+        "Yoda",
+        "Han Solo (Bespin Outfit)",
+        "Ugnaught",
+        "2-1B",
+        "AT-AT Driver",
+        "Imperial Commander",
+        "Rebel Commander",
+        "Princess Leia Organa (Hoth Outfit)",
+        "Leia (Hoth Outfit)",
+        "Leia Hoth",
+        "Hoth Leia",
+        "Luke Skywalker (Hoth Battle Gear)",
+        "AT-AT Commander",
+        "Cloud Car Pilot",
+        "Twin-Pod Cloud Car Pilot",
+        "Twin Pod Cloud Car Pilot",
+        "Bespin Security Guard",
+        "Imperial TIE Fighter Pilot",
+        "Artoo-Detoo (R2-D2) with Sensorscope",
+        "R2-D2 with Sensorscope",
+        "R2-D2 Sensorscope",
+        "Sensorscope",
+        "C-3PO with Removable Limbs",
+        "C-3PO Removable Limbs",
+        "4-LOM",
+        "4LOM",
+        "4 Lom",
+        "Zuckuss",
+        "Gamorrean Guard",
+        "Bib Fortuna",
+        "Emperor's Royal Guard",
+        "Admiral Ackbar",
+        "Chief Chirpa",
+        "Logray (Ewok Medicine Man)",
+        "Klaatu",
+        "Princess Leia Organa (Boushh Disguise)",
+        "Rebel Commando",
+        "Weequay",
+        "General Madine",
+        "Ree Yees",
+        "Ree-Yees",
+        "ReeYees",
+        "Biker Scout",
+        "Nien Nunb",
+        "Nien Numb",
+        "Lando Calrissian (Skiff Guard Outfit)",
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Squid Head",
+        "Rebel Armoured Snowspeeder",
+        "Snowspeeder",
+        "Tauntaun with Open Belly Rescue Feature",
+        "Open Belly Tauntaun",
+        "Wampa"
+      ],
+      "years": [
+        1983
+      ],
+      "chars": 6701
+    },
+    {
+      "relPath": "references/palitoy-uk-1983-3.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Slave I",
+      "aliases": [],
+      "keywords": [
+        "Slave I",
+        "Slave 1",
+        "Slave One",
+        "AT-AT",
+        "AT-AT All Terrain Armoured Transport",
+        "Battle Damaged X-Wing Fighter",
+        "Battle Damaged X-Wing",
+        "Radar Laser Cannon",
+        "Radar Laser",
+        "Tri-pod Laser Cannon",
+        "Tripod Laser Cannon",
+        "Tri-pod",
+        "Vehicle Maintenance Energizer",
+        "VME",
+        "INT-4 Interceptor",
+        "INT-4",
+        "CAP-2 Captivator",
+        "CAP-2",
+        "MTV-7 Multi-Terrain Vehicle",
+        "MTV-7",
+        "MLC-3 Mobile Laser Cannon",
+        "MLC-3",
+        "Darth Vader TIE Fighter",
+        "Vader TIE Fighter",
+        "Darth Vader's Star Destroyer Action Playset",
+        "Darth Vader's Star Destroyer",
+        "Rebel Transport",
+        "Rebel Transport vehicle",
+        "Scout Walker",
+        "Scout Walker vehicle",
+        "Jabba the Hutt Action Playset",
+        "Jabba the Hutt",
+        "Jabba playset",
+        "Speeder Bike",
+        "AST-5 Armoured Sentinel Transport",
+        "AST-5",
+        "ISP-6 Imperial Shuttle Pod",
+        "ISP-6"
+      ],
+      "years": [
+        1983
+      ],
+      "chars": 3171
+    },
+    {
+      "relPath": "references/palitoy-uk-1983.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "year",
+      "name": "Han Solo",
+      "aliases": [],
+      "keywords": [
+        "Han Solo",
+        "Luke Skywalker",
+        "Princess Leia Organa",
+        "Ben (Obi-Wan) Kenobi",
+        "Darth Vader",
+        "Star Destroyer Commander",
+        "Death Squad Commander",
+        "Jawa",
+        "Stormtrooper",
+        "Sand People",
+        "Hammerhead",
+        "Snaggletooth",
+        "Walrus Man",
+        "Greedo",
+        "Power Droid",
+        "Death Star Droid",
+        "R5-D4",
+        "Luke Skywalker (X-Wing Pilot)",
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot",
+        "Han Solo (Hoth Outfit)",
+        "Luke Skywalker (Bespin Fatigues)",
+        "Princess Leia Organa (Bespin Gown)",
+        "Leia Organa (Bespin Gown)",
+        "Leia Bespin",
+        "Bespin Leia",
+        "Lando Calrissian",
+        "Rebel Soldier (Hoth Battle Gear)",
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "FX-7 (Medical Droid)",
+        "IG-88 (Bounty Hunter)",
+        "IG-88",
+        "Bespin Security Guard",
+        "Bossk (Bounty Hunter)",
+        "Boba Fett",
+        "Dengar"
+      ],
+      "years": [
+        1983
+      ],
+      "chars": 6682
+    },
+    {
+      "relPath": "references/palitoy-uk-not-figures-2.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "not-figures",
+      "name": "Land of the Jawas",
+      "aliases": [],
+      "keywords": [
+        "Land of the Jawas",
+        "Droid Factory",
+        "Imperial Troop Transporter",
+        "Land Speeder",
+        "TIE Fighter",
+        "Death Star",
+        "X-Wing Fighter",
+        "Darth Vader TIE Fighter",
+        "Landspeeder",
+        "Imperial Cruiser",
+        "Millennium Falcon",
+        "Y-Wing",
+        "Blaster Pistol",
+        "Three Position Laser Rifle",
+        "Radio Controlled R2-D2",
+        "Talking R2-D2",
+        "Cantina",
+        "Yoda Hand Puppet",
+        "Tauntaun",
+        "Rebel Armoured Snowspeeder",
+        "Twin-Pod Cloud Car",
+        "The Force Lightsaber",
+        "Slave I",
+        "Snowspeeder",
+        "TIE Bomber"
+      ],
+      "years": [
+        1979,
+        1980,
+        1981
+      ],
+      "chars": 6708
+    },
+    {
+      "relPath": "references/palitoy-uk-not-figures-3.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "not-figures",
+      "name": "Imperial Troop Transporter",
+      "aliases": [],
+      "keywords": [
+        "Imperial Troop Transporter",
+        "Yoda Hand Puppet",
+        "Tauntaun",
+        "Rebel Armoured Snowspeeder",
+        "Twin-Pod Cloud Car",
+        "Turret and Probot playset",
+        "Imperial Attack Base",
+        "The Force Lightsaber",
+        "Yoda",
+        "Luke Skywalker on Tauntaun",
+        "Glow Paint by Numbers Craft Master",
+        "TIE Fighter",
+        "Battle Damaged X-Wing Fighter",
+        "X-Wing Fighter",
+        "Darth Vader TIE Fighter",
+        "Landspeeder",
+        "Imperial Cruiser",
+        "Millennium Falcon",
+        "Y-Wing",
+        "Slave I",
+        "Snowspeeder",
+        "TIE Bomber",
+        "Blaster Pistol",
+        "Three Position Laser Rifle",
+        "INT-4 Interceptor",
+        "CAP-2 Captivator",
+        "MTV-7 Multi-Terrain Vehicle",
+        "MLC-3 Mobile Laser Cannon",
+        "PDT-8 Personnel Deployment Transport",
+        "Tauntaun with Open Belly Rescue Feature",
+        "Wampa"
+      ],
+      "years": [
+        1981,
+        1982
+      ],
+      "chars": 6751
+    },
+    {
+      "relPath": "references/palitoy-uk-not-figures-4.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "not-figures",
+      "name": "Dagobah Action Playset",
+      "aliases": [],
+      "keywords": [
+        "Dagobah Action Playset",
+        "AT-AT",
+        "Millennium Falcon",
+        "Darth Vader's Star Destroyer Action Playset",
+        "Rebel Armoured Snowspeeder",
+        "Tauntaun with Open Belly Rescue Feature",
+        "Wampa",
+        "Slave I",
+        "Battle Damaged X-Wing Fighter",
+        "Radar Laser Cannon",
+        "Tri-pod Laser Cannon",
+        "Vehicle Maintenance Energizer",
+        "INT-4 Interceptor",
+        "CAP-2 Captivator",
+        "MTV-7 Multi-Terrain Vehicle",
+        "MLC-3 Mobile Laser Cannon",
+        "Darth Vader TIE Fighter",
+        "Rebel Transport",
+        "Scout Walker",
+        "Jabba the Hutt Action Playset",
+        "Speeder Bike",
+        "AST-5 Armoured Sentinel Transport",
+        "ISP-6 Imperial Shuttle Pod"
+      ],
+      "years": [
+        1982,
+        1983
+      ],
+      "chars": 3763
+    },
+    {
+      "relPath": "references/palitoy-uk-not-figures.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "not-figures",
+      "name": "Darth Vader",
+      "aliases": [],
+      "keywords": [
+        "Darth Vader",
+        "Stormtrooper",
+        "C-3PO",
+        "Sand People",
+        "Chewbacca",
+        "Dip Dots painting set",
+        "Keel kite",
+        "Poster art set",
+        "Play-Doh set",
+        "Escape the Death Star game",
+        "The Adventures of R2-D2 game",
+        "Destroy the Death Star game",
+        "Light Saber",
+        "Land Speeder",
+        "X-Wing Fighter",
+        "Death Star",
+        "TIE Fighter",
+        "3D Poster Art",
+        "Darth Vader TIE Fighter",
+        "Landspeeder",
+        "Imperial Cruiser",
+        "Millennium Falcon",
+        "Y-Wing",
+        "Blaster Pistol",
+        "Three Position Laser Rifle",
+        "Radio Controlled R2-D2",
+        "Talking R2-D2",
+        "Cantina"
+      ],
+      "years": [
+        1978,
+        1979
+      ],
+      "chars": 6794
+    },
+    {
+      "relPath": "references/palitoy-uk-overview.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "overview",
+      "name": "1978",
+      "aliases": [],
+      "keywords": [
+        "1978",
+        "1979",
+        "1980",
+        "1981",
+        "1982",
+        "1983",
+        "Nien Nunb",
+        "Nien Numb",
+        "Ree Yees",
+        "Ree-Yees",
+        "4-LOM",
+        "Rebel Commando",
+        "IG-88 large size",
+        "TIE Bomber die-cast",
+        "Craft Master figurines and Glow Paint by Numbers",
+        "TIE Fighter vehicle",
+        "The Force Lightsaber"
+      ],
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "chars": 3049
+    },
+    {
+      "relPath": "references/palitoy-uk-when-2.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "when",
+      "name": "Bossk (Bounty Hunter)",
+      "aliases": [],
+      "keywords": [
+        "Bossk (Bounty Hunter)",
+        "C-3PO",
+        "C-3PO with Removable Limbs",
+        "C-3PO Removable Limbs",
+        "Cantina",
+        "CAP-2 Captivator",
+        "CAP-2",
+        "Chewbacca",
+        "Chief Chirpa",
+        "Cloud Car Pilot",
+        "Twin-Pod Cloud Car Pilot",
+        "Twin Pod Cloud Car Pilot",
+        "Dagobah Action Playset",
+        "Dagobah",
+        "Darth Vader",
+        "Darth Vader TIE Fighter",
+        "Vader TIE",
+        "Darth Vader TIE",
+        "Vader TIE Fighter",
+        "Darth Vader's Star Destroyer Action Playset",
+        "Darth Vader's Star Destroyer",
+        "Star Destroyer Action Playset",
+        "Death Squad Commander",
+        "Death Star",
+        "Death Star Droid",
+        "Dengar",
+        "Destroy the Death Star game",
+        "Destroy the Death Star",
+        "Dip Dots painting set",
+        "Dip Dots",
+        "Droid Factory",
+        "Emperor's Royal Guard",
+        "Escape the Death Star game",
+        "Escape the Death Star",
+        "FX-7 (Medical Droid)",
+        "Gamorrean Guard"
+      ],
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "chars": 6735
+    },
+    {
+      "relPath": "references/palitoy-uk-when-3.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "when",
+      "name": "General Madine",
+      "aliases": [],
+      "keywords": [
+        "General Madine",
+        "Glow Paint by Numbers Craft Master",
+        "Glow Paint by Numbers",
+        "Paint by Numbers",
+        "Greedo",
+        "Hammerhead",
+        "Han Solo",
+        "Han Solo (Bespin Outfit)",
+        "Han Solo (Hoth Outfit)",
+        "IG-88",
+        "IG88",
+        "IG-88 (Bounty Hunter)",
+        "Imperial Attack Base",
+        "Attack Base",
+        "Imperial Commander",
+        "Imperial Cruiser",
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "Imperial TIE Fighter Pilot",
+        "Imperial Troop Transporter",
+        "ITT",
+        "Troop Transporter",
+        "INT-4 Interceptor",
+        "INT-4",
+        "ISP-6 Imperial Shuttle Pod",
+        "ISP-6",
+        "Jabba the Hutt Action Playset",
+        "Jabba the Hutt",
+        "Jabba playset",
+        "Jawa"
+      ],
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "chars": 6660
+    },
+    {
+      "relPath": "references/palitoy-uk-when-4.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "when",
+      "name": "Jawa",
+      "aliases": [],
+      "keywords": [
+        "Jawa",
+        "Keel kite",
+        "kite",
+        "Keel",
+        "Klaatu",
+        "Land of the Jawas",
+        "Land Speeder",
+        "Landspeeder",
+        "Lando Calrissian",
+        "Lando Calrissian (Skiff Guard Outfit)",
+        "Light Saber",
+        "Lightsaber",
+        "Lobot",
+        "Logray (Ewok Medicine Man)",
+        "Luke Skywalker",
+        "Luke Skywalker (Bespin Fatigues)",
+        "Luke Skywalker (Hoth Battle Gear)",
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Luke Skywalker (X-Wing Pilot)",
+        "Luke Skywalker X-Wing Pilot",
+        "Luke X-Wing Pilot",
+        "Luke Skywalker on Tauntaun",
+        "Craft Master Luke",
+        "Luke on Tauntaun",
+        "Millennium Falcon",
+        "Falcon",
+        "Millenium Falcon",
+        "MLC-3 Mobile Laser Cannon",
+        "MLC-3",
+        "MLC",
+        "MTV-7 Multi-Terrain Vehicle",
+        "MTV-7"
+      ],
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "chars": 6715
+    },
+    {
+      "relPath": "references/palitoy-uk-when-5.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "when",
+      "name": "Nien Nunb",
+      "aliases": [],
+      "keywords": [
+        "Nien Nunb",
+        "Nien Numb",
+        "PDT-8 Personnel Deployment Transport",
+        "PDT-8",
+        "Play-Doh set",
+        "Play-Doh",
+        "Play Doh",
+        "Poster art set",
+        "Playnts",
+        "Poster art",
+        "Power Droid",
+        "Princess Leia",
+        "Princess Leia Organa",
+        "Princess Leia Organa (Bespin Gown)",
+        "Leia Organa (Bespin Gown)",
+        "Leia Bespin",
+        "Bespin Leia",
+        "Princess Leia Organa (Boushh Disguise)",
+        "Princess Leia Organa (Hoth Outfit)",
+        "Leia (Hoth Outfit)",
+        "Leia Hoth",
+        "Hoth Leia",
+        "R5-D4",
+        "Radar Laser Cannon",
+        "Radar Laser",
+        "Radio Controlled R2-D2",
+        "RC R2-D2",
+        "Radio Controlled R2",
+        "Rebel Armoured Snowspeeder",
+        "Snowspeeder",
+        "Rebel Armored Snowspeeder",
+        "Rebel Commander",
+        "Rebel Commando",
+        "Rebel Soldier (Hoth Battle Gear)",
+        "Rebel Transport",
+        "Rebel Transport vehicle",
+        "Ree Yees",
+        "Ree-Yees",
+        "ReeYees",
+        "Sand People"
+      ],
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "chars": 6658
+    },
+    {
+      "relPath": "references/palitoy-uk-when-6.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "when",
+      "name": "Sand People",
+      "aliases": [],
+      "keywords": [
+        "Sand People",
+        "Sandpeople",
+        "Scout Walker",
+        "Scout Walker vehicle",
+        "See-Threepio (C-3PO)",
+        "C-3PO",
+        "See-Threepio",
+        "See Threepio",
+        "Slave I",
+        "Slave One",
+        "Slave 1",
+        "Boba Fett's Spaceship",
+        "Snaggletooth",
+        "Snowspeeder",
+        "Rebel Armoured Snowspeeder",
+        "Speeder Bike",
+        "Squid Head",
+        "Star Destroyer Commander",
+        "Death Squad Commander",
+        "Stormtrooper",
+        "Talking R2-D2",
+        "Talking R2",
+        "Tauntaun",
+        "Tauntaun with Open Belly Rescue Feature",
+        "Open Belly Tauntaun",
+        "Tauntaun open belly",
+        "The Adventures of R2-D2 game",
+        "The Adventures of R2-D2",
+        "The Force Lightsaber",
+        "Force Lightsaber",
+        "Force Lightsabre",
+        "Three Position Laser Rifle",
+        "Laser Rifle",
+        "Three Position Rifle",
+        "TIE Bomber",
+        "TIE Fighter",
+        "TIE"
+      ],
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "chars": 6552
+    },
+    {
+      "relPath": "references/palitoy-uk-when-7.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "when",
+      "name": "TIE Fighter",
+      "aliases": [],
+      "keywords": [
+        "TIE Fighter",
+        "TIE",
+        "Tri-pod Laser Cannon",
+        "Tripod Laser Cannon",
+        "Tri-pod",
+        "Turret and Probot playset",
+        "Turret & Probot",
+        "Probot playset",
+        "Twin-Pod Cloud Car",
+        "Twin-Pod",
+        "Twin Pod",
+        "Twin Pod Cloud Car",
+        "Cloud Car",
+        "Ugnaught",
+        "Vehicle Maintenance Energizer",
+        "VME",
+        "Walrus Man",
+        "Wampa",
+        "Weequay",
+        "X-Wing Fighter",
+        "X-Wing",
+        "X Wing",
+        "Y-Wing",
+        "Y Wing",
+        "Y-Wing Fighter",
+        "Yoda",
+        "Craft Master Yoda",
+        "Yoda Hand Puppet",
+        "Yoda puppet",
+        "Zuckuss"
+      ],
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "chars": 4482
+    },
+    {
+      "relPath": "references/palitoy-uk-when.txt",
+      "folder": "references",
+      "topic": "palitoy",
+      "role": "when",
+      "name": "2-1B",
+      "aliases": [],
+      "keywords": [
+        "2-1B",
+        "3D Poster Art",
+        "3D poster",
+        "4-LOM",
+        "4LOM",
+        "4 Lom",
+        "Admiral Ackbar",
+        "Artoo-Detoo (R2-D2)",
+        "R2-D2",
+        "Artoo-Detoo",
+        "Artoo Detoo",
+        "Artoo-Detoo (R2-D2) with Sensorscope",
+        "R2-D2 with Sensorscope",
+        "R2-D2 Sensorscope",
+        "Sensorscope",
+        "AST-5 Armoured Sentinel Transport",
+        "AST-5",
+        "AT-AT",
+        "AT-AT All Terrain Armoured Transport",
+        "All Terrain Armoured Transport",
+        "AT-AT Commander",
+        "AT-AT Driver",
+        "Battle Damaged X-Wing Fighter",
+        "Battle Damaged X-Wing",
+        "X-Wing white",
+        "Ben (Obi-Wan) Kenobi",
+        "Bespin Security Guard",
+        "Bib Fortuna",
+        "Biker Scout",
+        "Blaster Pistol",
+        "Blaster",
+        "Boba Fett"
+      ],
+      "years": [
+        1978,
+        1979,
+        1980,
+        1981,
+        1982,
+        1983
+      ],
+      "chars": 6775
+    },
+    {
+      "relPath": "references/references.json",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "references",
+      "aliases": [],
+      "keywords": [
+        "references"
+      ],
+      "years": [],
+      "chars": 1331
+    },
+    {
+      "relPath": "references/variant-counts-2.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "summary",
+      "name": "most variants",
+      "aliases": [
+        "most outfits",
+        "most versions",
+        "variant counts",
+        "outfit counts",
+        "character versions",
+        "how many versions",
+        "Sand People",
+        "I Unitoy",
+        "II Unitoy",
+        "III Kader",
+        "IV Kader/ Meccano"
+      ],
+      "keywords": [
+        "most variants",
+        "most outfits",
+        "most versions",
+        "variant counts",
+        "outfit counts",
+        "character versions",
+        "how many versions",
+        "Sand People",
+        "I Unitoy",
+        "II Unitoy",
+        "III Kader",
+        "IV Kader/ Meccano",
+        "V Kader",
+        "Han Solo (Hoth Outfit)",
+        "I Unitoy/ Kader China",
+        "II Smile",
+        "III Kader/ PBP",
+        "IG-88",
+        "I Smile",
+        "II Kader",
+        "III Unitoy",
+        "Lando Calrissian",
+        "I KADER",
+        "R5-D4",
+        "V Unitoy",
+        "VIII Kader",
+        "Teebo",
+        "I Unitoy/",
+        "II Taiwan (U.M.)",
+        "Klaatu",
+        "III Lili Ledy (MIM)",
+        "Amanaman",
+        "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+        "I Smile/ Glasslite",
+        "Droids R2-D2",
+        "Barada",
+        "EV-9D9",
+        "Imperial Dignitary",
+        "Lumat",
+        "I Lili Ledy (MIM)",
+        "Paploo",
+        "Yak Face",
+        "C-3PO",
+        "R2-D2",
+        "Stormtrooper",
+        "Chewbacca",
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Chief Chirpa",
+        "Princess Leia Organa",
+        "AT-AT Driver",
+        "Bib Fortuna",
+        "Biker Scout",
+        "Boba Fett",
+        "Bossk",
+        "Gamorrean Guard",
+        "Jawa",
+        "Logray (Ewok Medicine Man)",
+        "variant",
+        "counts"
+      ],
+      "years": [],
+      "chars": 6386
+    },
+    {
+      "relPath": "references/variant-counts-3.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "summary",
+      "name": "most variants",
+      "aliases": [
+        "most outfits",
+        "most versions",
+        "variant counts",
+        "outfit counts",
+        "character versions",
+        "how many versions",
+        "R2-D2 (Sensorscope)",
+        "2-1B",
+        "Admiral Ackbar",
+        "Bespin Security Guard (White)",
+        "Death Squad Commander"
+      ],
+      "keywords": [
+        "most variants",
+        "most outfits",
+        "most versions",
+        "variant counts",
+        "outfit counts",
+        "character versions",
+        "how many versions",
+        "R2-D2 (Sensorscope)",
+        "2-1B",
+        "Admiral Ackbar",
+        "Bespin Security Guard (White)",
+        "Death Squad Commander",
+        "Dengar",
+        "Emperor’s Royal Guard",
+        "FX-7",
+        "Han Solo",
+        "Han Solo (Bespin Outfit)",
+        "Imperial Commander",
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "Imperial Tie Fighter Pilot",
+        "Lando Calrissian (Skiff Guard Disguise)",
+        "Leia (Hoth Outfit)",
+        "Leia Organa (Bespin Gown)",
+        "Lobot",
+        "Nien Nunb",
+        "Princess Leia Organa (Boushh Disguise)",
+        "Rebel Commander",
+        "Rebel Soldier (Hoth Battle Gear)",
+        "Ree Yees",
+        "Snaggletooth",
+        "The Emperor",
+        "Ugnaught",
+        "Weequay",
+        "(Twin-Pod) Cloud Car Pilot",
+        "At-At Commander",
+        "AT-ST Driver",
+        "B-Wing Pilot",
+        "Bespin Security Guard (Black)",
+        "C-3PO (Removable Limbs)",
+        "Greedo",
+        "Hammerhead",
+        "variant",
+        "counts"
+      ],
+      "years": [],
+      "chars": 6356
+    },
+    {
+      "relPath": "references/variant-counts-4.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "summary",
+      "name": "most variants",
+      "aliases": [
+        "most outfits",
+        "most versions",
+        "variant counts",
+        "outfit counts",
+        "character versions",
+        "how many versions",
+        "Han Solo (in Trench Coat)",
+        "Luke Skywalker (Hoth Battle Gear)",
+        "Luke Skywalker (X-Wing Pilot)",
+        "Power Droid",
+        "Princess Leia Organa (in Combat Poncho)"
+      ],
+      "keywords": [
+        "most variants",
+        "most outfits",
+        "most versions",
+        "variant counts",
+        "outfit counts",
+        "character versions",
+        "how many versions",
+        "Han Solo (in Trench Coat)",
+        "Luke Skywalker (Hoth Battle Gear)",
+        "Luke Skywalker (X-Wing Pilot)",
+        "Power Droid",
+        "Princess Leia Organa (in Combat Poncho)",
+        "Prune Face",
+        "Rancor Keeper",
+        "Walrus Man",
+        "Wicket W. Warrick",
+        "Zuckuss",
+        "A-Wing Pilot",
+        "Anakin Skywalker",
+        "Han Solo (in Carbonite Chamber)",
+        "Imperial Gunner",
+        "Klaatu (in Skiff Guard Outfit)",
+        "Lando Calrissian (General Pilot)",
+        "Luke Skywalker (Imperial Stormtrooper Outfit)",
+        "Luke Skywalker (in Battle Poncho)",
+        "Nikto",
+        "Romba",
+        "Warok",
+        "4-LOM",
+        "8D8",
+        "Death Star Droid",
+        "Droids C-3PO",
+        "Dulok Scout",
+        "Dulok Shaman",
+        "General Madine",
+        "King Gorneesh",
+        "Logray (Ewoks)",
+        "Rebel Commando",
+        "Squid Head",
+        "Urgah Lady Gorneesh",
+        "Wicket W.Warrick (Ewoks)",
+        "variant",
+        "counts"
+      ],
+      "years": [],
+      "chars": 5292
+    },
+    {
+      "relPath": "references/variant-counts.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "summary",
+      "name": "most variants",
+      "aliases": [
+        "most outfits",
+        "most versions",
+        "variant counts",
+        "outfit counts",
+        "character versions",
+        "how many versions",
+        "Luke Skywalker",
+        "Han Solo",
+        "Princess Leia Organa",
+        "R2-D2",
+        "C-3PO"
+      ],
+      "keywords": [
+        "most variants",
+        "most outfits",
+        "most versions",
+        "variant counts",
+        "outfit counts",
+        "character versions",
+        "how many versions",
+        "Luke Skywalker",
+        "Han Solo",
+        "Princess Leia Organa",
+        "R2-D2",
+        "C-3PO",
+        "Lando Calrissian",
+        "Bespin Security Guard",
+        "Klaatu",
+        "Logray",
+        "Stormtrooper",
+        "Wicket W. Warrick",
+        "Darth Vader",
+        "I Kader/ Kader China",
+        "II Kader",
+        "III Kader/ Glasslite",
+        "IV Smile/ LL Retorno & Regreso",
+        "V Unitoy",
+        "VI Unitoy",
+        "VII Unitoy",
+        "VIII Unitoy/ PBP",
+        "IX Top Toys",
+        "X Made In Taiwan",
+        "XI Taiwan",
+        "XII Takara",
+        "I Kader / Poch / Kader China / Meccano / Glasslite",
+        "II Unitoy / Poch / PBP",
+        "III TAIWAN",
+        "IV Smile",
+        "Luke Skywalker (Bespin Fatigues)",
+        "I Smile",
+        "II Unitoy",
+        "III Kader",
+        "Yoda",
+        "I Kader HK",
+        "III Smile",
+        "IV Top Toys",
+        "Ben (Obi-Wan) Kenobi",
+        "I Unitoy",
+        "II Unitoy/ Lili Ledy",
+        "variant",
+        "counts"
+      ],
+      "years": [],
+      "chars": 6311
+    },
+    {
+      "relPath": "references/vendor-codes.txt",
+      "folder": "references",
+      "topic": "factory",
+      "role": "",
+      "name": "vendor",
+      "aliases": [
+        "codes"
+      ],
+      "keywords": [
+        "vendor",
+        "codes"
+      ],
+      "years": [],
+      "chars": 1868
+    },
+    {
+      "relPath": "terms/collector_terms.json",
+      "folder": "terms",
+      "topic": "term",
+      "role": "",
+      "name": "collector_terms",
+      "aliases": [],
+      "keywords": [
+        "collector_terms"
+      ],
+      "years": [],
+      "chars": 3732
+    },
+    {
+      "relPath": "variants/accvar_dt_lightsaber_m2_yellow.json",
+      "folder": "variants",
+      "topic": "variant",
+      "role": "",
+      "name": "accvar_dt_lightsaber_m2_yellow",
+      "aliases": [],
+      "keywords": [
+        "accvar_dt_lightsaber_m2_yellow"
+      ],
+      "years": [],
+      "chars": 729
+    },
+    {
+      "relPath": "variants/accvar_handheld_lightsaber_m3_yellow.json",
+      "folder": "variants",
+      "topic": "variant",
+      "role": "",
+      "name": "accvar_handheld_lightsaber_m3_yellow",
+      "aliases": [],
+      "keywords": [
+        "accvar_handheld_lightsaber_m3_yellow"
+      ],
+      "years": [],
+      "chars": 711
+    },
+    {
+      "relPath": "variants/accvar_st_lightsaber_m1_yellow.json",
+      "folder": "variants",
+      "topic": "variant",
+      "role": "",
+      "name": "accvar_st_lightsaber_m1_yellow",
+      "aliases": [],
+      "keywords": [
+        "accvar_st_lightsaber_m1_yellow"
+      ],
+      "years": [],
+      "chars": 790
+    }
+  ]
+}
