@@ -234,6 +234,10 @@ await test("system prompt carries the brief's rules", async () => {
   assert.match(sys, /one name per line/);
   assert.match(sys, /Do not stop at the number/);
   assert.match(sys, /before the follow-up questions/);
+  assert.match(sys, /was made between/);
+  assert.match(sys, /Do not count the factories yourself/);
+  assert.match(sys, /Years says not recorded/);
+  assert.match(sys, /8 different factories/);
   assert.doesNotMatch(sys, /label claims/i);
   assert.doesNotMatch(sys, /Evidence: documented/);
 });
@@ -971,6 +975,8 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   assert.equal(variants.json.sources[0], "references/variant-counts.txt");
   const variantPrompt = calls.at(-1).body.messages.at(-1).content;
   assert.match(variantPrompt, /Darth Vader — 12/);
+  assert.match(variantPrompt, /Years: 1978 to 1985/);
+  assert.match(variantPrompt, /Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
   assert.match(variantPrompt, /Stormtrooper — 7/);
   assert.match(variantPrompt, /Yoda — 4/);
   assert.match(variantPrompt, /Han Solo \(Hoth Outfit\) — 3/);
@@ -1005,6 +1011,8 @@ await test("outfit and variant ranking questions retrieve the count summary", as
     assert.match(vaderBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"), label);
   }
   assert.equal(vaderBlock.split("\n").filter(line => line.startsWith("- ")).length, 12);
+  assert.match(vaderBlock, /Years: 1978 to 1985/);
+  assert.match(vaderBlock, /Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
 
   const hanPrompt = calls.at(-2).body.messages.at(-1).content;
   for (const name of ["Han Solo", "Han Solo (Hoth Outfit)", "Han Solo (Bespin Outfit)", "Han Solo (in Trench Coat)", "Han Solo (in Carbonite Chamber)"]) {
@@ -1021,6 +1029,18 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   for (const label of ["I Unitoy", "II Smile", "III Lili Ledy (MIM)"]) {
     assert.match(nienBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"), label);
   }
+  assert.match(nienBlock, /Years: 1983/);
+  assert.match(nienBlock, /Factories: 2 different factories: Unitoy, Smile\/Lili Ledy/);
+
+  const yoda = await call({ message: "how many variants does Yoda have?" });
+  assert.ok(yoda.json.sources.some(source => source.includes("variant-counts")), yoda.json.sources.join(", "));
+  assert.ok(yoda.json.sources.some(source => source.startsWith("figures/yoda")), yoda.json.sources.join(", "));
+  const yodaPrompt = calls.at(-1).body.messages.at(-1).content;
+  const yodaAt = yodaPrompt.indexOf("Yoda — 4");
+  assert.ok(yodaAt >= 0);
+  const yodaBlock = yodaPrompt.slice(yodaAt).split(/\n\d+\. /)[0];
+  assert.match(yodaBlock, /Years: not recorded/);
+  assert.match(yodaBlock, /Factories: 4 different factories: Kader, Unitoy, Smile, Top Toys/);
 });
 
 await test("variant count summary matches the generator and stays under the cap", async () => {
@@ -1038,9 +1058,10 @@ await test("variant count summary matches the generator and stays under the cap"
   }
   const before = beforeParts["variant-counts.txt"];
   const summary = Object.values(beforeParts).join("\n");
-  assert.match(before, /Darth Vader — 12/);
+  assert.match(before, /Darth Vader — 12 — Years: 1978 to 1985 — Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
+  assert.match(summary, /Yoda — 4 — Years: not recorded/);
   assert.match(before, /Stormtrooper — 7/);
-  assert.match(before, /Yoda — 4/);
+  assert.match(summary, /Yoda — 4/);
   assert.match(before, /Chewbacca — 6/);
   assert.match(before, /R2-D2 — 7/);
   assert.match(before, /Luke Skywalker — 7 versions/);

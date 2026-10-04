@@ -6,6 +6,7 @@ These variant counts were taken from the live Variant Villain figure guides on 2
 A figure's variant count is the number of documented manufacturer/region families on that page: lines such as "I: Kader" and "VII: Takara". A blank label still counts when the numeral is printed ("II:"). A label that starts with "not" is skipped. A sub-point such as "IV.1" is not another family. Paint shades, cape moulds and lightsaber moulds are not part of this count. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families.
 Each count was checked against that page's COO sheet or figure-guide image. Where the image and the text disagree, the image is used. A column the sheet marks as not this figure is left out. Stormtrooper's text index lists I-VI. The COO sheet image adds VII: PBP/Lili Ledy, so Stormtrooper is 7. Wicket W. Warrick's Return of the Jedi sheet shows two families, I Smile (HK) and II Taiwan.
 If the images do not show a readable roman family grid, the figure is unverified. Do not guess a number, and do not invent a higher count than this summary. Yoda's sheet is four families (I Kader HK, II Unitoy, III Smile, IV Top Toys). Lili Ledy, Kader China and Poch/PBP sit under those families. They are not extra roman families. Yoda's snake, cane, belt and cloak are accessories.
+Each figure line has Years and Factories. Those were calculated when this summary was built. Repeat them. Do not count the factories again from the family lines. Years come from a Released or Release Date line in that figure's dossier. If Years says not recorded, leave the years out. Smile and Lili Ledy, including an LL line, are one factory. Kader China is Kader. Made in Taiwan, Taiwan and Universal Manufacturers are Taiwan.
 
 Outfits, versions and looks mean distinct catalog figures of one character. They are not paint variants of a single figure. Han Solo (in Trench Coat) is Han's Endor figure. Princess Leia Organa (in Combat Poncho) is Leia's Endor figure. The catalog has no further Endor figure for either character. A Droids-line figure of the same character counts as one version.
 
@@ -60,7 +61,7 @@ Character versions (distinct catalog figures, ranked). A character with one cata
 - Wicket W.Warrick (Ewoks)
 
 Ranked figures by documented manufacturer/region variants (highest first). Each line under a figure is one family, in numeral order:
-1. Darth Vader — 12
+1. Darth Vader — 12 — Years: 1978 to 1985 — Factories: 8 different factories: Kader, Glasslite, Smile/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara
 - I Kader/ Kader China
 - II Kader
 - III Kader/ Glasslite
@@ -73,7 +74,7 @@ Ranked figures by documented manufacturer/region variants (highest first). Each 
 - X Made In Taiwan
 - XI Taiwan
 - XII Takara
-2. C-3PO — 7
+2. C-3PO — 7 — Years: 1978 to 1985 — Factories: 3 different factories: Kader, Unitoy, Takara
 - I Kader
 - II Unitoy/
 - III Kader/
@@ -81,7 +82,7 @@ Ranked figures by documented manufacturer/region variants (highest first). Each 
 - V Kader
 - VI Takara
 - VII Unitoy
-3. R2-D2 — 7
+3. R2-D2 — 7 — Years: 1978 to 1981 — Factories: 4 different factories: Unitoy, Smile/Lili Ledy, Kader, Taiwan
 - I Unitoy/
 - II Smile
 - III Kader/
@@ -89,7 +90,7 @@ Ranked figures by documented manufacturer/region variants (highest first). Each 
 - V Unitoy
 - VI Taiwan
 - VII Kader
-4. Stormtrooper — 7 (text index I-VI; COO sheet image shows I-VII)
+4. Stormtrooper — 7 (text index I-VI; COO sheet image shows I-VII) — Years: 1978 to 1985 — Factories: 6 different factories: Kader, Unitoy, PBP, Smile/Lili Ledy, Takara, Top Toys
 - I Kader/ China
 - II Unitoy
 - III Unitoy/ PBP/ Lili Ledy
@@ -97,129 +98,40 @@ Ranked figures by documented manufacturer/region variants (highest first). Each 
 - V Takara
 - VI Top Toys
 - VII PBP/Lili Ledy
-5. Chewbacca — 6
+5. Chewbacca — 6 — Years: 1978 to 1984 — Factories: 5 different factories: Unitoy, Kader, Smile/Lili Ledy, Taiwan, Top Toys
 - I Unitoy/
 - II F2.1 Kader/
 - III Smile
 - IV Taiwan
 - V Smile/ Lili Ledy
 - VI Top Toys
-6. Luke Skywalker (Jedi Knight Outfit) — 6
+6. Luke Skywalker (Jedi Knight Outfit) — 6 — Years: not recorded — Factories: 4 different factories: Smile, Unitoy, Taiwan, Top Toys
 - I Smile
 - II Smile NCOO
 - III Smile Macau NCOO
 - IV Unitoy/
 - V Universal Manufacturers (Taiwan)
 - VI Top Toys
-7. Chief Chirpa — 5
+7. Chief Chirpa — 5 — Years: 1983 — Factories: 3 different factories: Smile/Lili Ledy, Kader, Top Toys
 - I Smile
 - II Kader
 - III Kader
 - IV Lili Ledy
 - V Top Toys
-8. Princess Leia Organa — 5
+8. Princess Leia Organa — 5 — Years: 1978 to 1984 — Factories: 4 different factories: Kader, Unitoy, Smile, Taiwan
 - I Kader/
 - II Unitoy
 - III Kader/
 - IV Smile
 - V Taiwan
-9. Sand People — 5
+9. Sand People — 5 — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, Meccano
 - I Unitoy
 - II Unitoy
 - III Kader
 - IV Kader/ Meccano
 - V Kader
-10. AT-AT Driver — 4
+10. AT-AT Driver — 4 — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
 - I Kader/
 - II Unitoy/
 - III Smile MIHK
 - IV Smile NCOO
-11. Bib Fortuna — 4
-- I Smile
-- II Kader/
-- III Taiwan (U.M.)
-- IV Smile
-12. Biker Scout — 4
-- I Kader/ PBP/ Meccano
-- II Taiwan (U.M.)
-- III Unitoy
-- IV Lili Ledy (MIM)
-13. Boba Fett — 4
-- I Kader/ Meccano
-- II Kader
-- III Kader
-- IV Taiwan
-14. Bossk — 4
-- I Kader
-- II Smile
-- III Unitoy
-- IV PBP
-15. Gamorrean Guard — 4
-- I Kader
-- II Unitoy/ Macau
-- III Smile
-- IV Lili Ledy
-16. Jawa — 4
-- I Kader
-- II Kader/ Kader China
-- III Unitoy
-- IV Unitoy/
-17. Logray (Ewok Medicine Man) — 4
-- I Unitoy/Macau
-- II Kader
-- III Lili Ledy (MIM)
-- IV Top Toys
-18. R2-D2 (Sensorscope) — 4
-- I Unitoy
-- II Smile
-- V Unitoy
-- VI Unitoy
-19. Yoda — 4
-- I Kader HK
-- II Unitoy
-- III Smile
-- IV Top Toys
-20. 2-1B — 3
-- I Smile
-- II Unitoy
-- III Kader
-21. Admiral Ackbar — 3
-- I Unitoy/
-- II Smile/ Meccano
-- III Taiwan (U.M.)
-22. Ben (Obi-Wan) Kenobi — 3
-- I Unitoy
-- II Unitoy/ Lili Ledy
-- III Kader
-23. Bespin Security Guard (White) — 3
-- I Smile
-- II Unitoy
-- III Kader
-24. Death Squad Commander — 3
-- I Unitoy
-- II Kader/
-- III PBP
-25. Dengar — 3
-- I Smile
-- II Unitoy/ PBP
-- III Kader
-26. Emperor’s Royal Guard — 3
-- I Kader/ Lili Ledy
-- II Unitoy
-- III Taiwan (U.M.)
-27. FX-7 — 3
-- I Kader
-- II Smile
-- III Unitoy
-28. Han Solo — 3
-- I Unitoy
-- II Kader/
-- III PBP
-29. Han Solo (Bespin Outfit) — 3
-- I Unitoy/
-- II Kader/
-- III Smile
-30. Han Solo (Hoth Outfit) — 3
-- I Unitoy/ Kader China
-- II Smile
-- III Kader/ PBP

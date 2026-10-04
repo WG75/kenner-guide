@@ -83,14 +83,146 @@ def family_label(family):
     return numeral
 
 
+ROMAN_VALUES = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+
+# Longer keys are matched by their own regex. Smile and Lili Ledy (including
+# "LL") are one factory: a Smile column sold by Lili Ledy is not a second maker.
+FACTORY_RULES = (
+    ("kader", re.compile(r"\bkader\b", re.I)),
+    ("unitoy", re.compile(r"\bunitoy\b", re.I)),
+    ("smile", re.compile(r"\bsmile\b|\blili\s+ledy\b|\bll\b", re.I)),
+    ("pbp", re.compile(r"\bpbp\b|\bpoch\b", re.I)),
+    ("top toys", re.compile(r"\btop\s+toys\b", re.I)),
+    ("takara", re.compile(r"\btakara\b", re.I)),
+    ("glasslite", re.compile(r"\bglasslite\b", re.I)),
+    ("meccano", re.compile(r"\bmeccano\b", re.I)),
+    ("taiwan", re.compile(r"\btaiwan\b|\bu\s*\.?\s*m\s*\.?\b|universal\s+manufacturers", re.I)),
+)
+
+FACTORY_NAMES = {
+    "kader": "Kader",
+    "unitoy": "Unitoy",
+    "pbp": "PBP",
+    "top toys": "Top Toys",
+    "takara": "Takara",
+    "glasslite": "Glasslite",
+    "meccano": "Meccano",
+    "taiwan": "Taiwan",
+}
+
+
+def roman_value(token):
+    letters = re.sub(r"[^IVXLCDM]", "", str(token or "").upper())
+    total = 0
+    previous = 0
+    for char in reversed(letters):
+        value = ROMAN_VALUES.get(char, 0)
+        if value < previous:
+            total -= value
+        else:
+            total += value
+            previous = value
+    return total
+
+
+def ordered_families(families):
+    return sorted(families, key=lambda family: (roman_value(family.get("numeral")), family.get("numeral") or ""))
+
+
+def distinct_factories(families):
+    """Factory count is fixed here. Smile and Lili Ledy share one slot."""
+    seen = []
+    saw_smile = False
+    saw_lili = False
+    for family in ordered_families(families):
+        label = family.get("label") or ""
+        found = []
+        for key, pattern in FACTORY_RULES:
+            match = pattern.search(label)
+            if match:
+                found.append((match.start(), key))
+        for _, key in sorted(found):
+            if key not in seen:
+                seen.append(key)
+        if re.search(r"\bsmile\b", label, re.I):
+            saw_smile = True
+        if re.search(r"\blili\s+ledy\b|\bll\b", label, re.I):
+            saw_lili = True
+    names = []
+    for key in seen:
+        if key == "smile":
+            if saw_smile and saw_lili:
+                names.append("Smile/Lili Ledy")
+            elif saw_lili:
+                names.append("Lili Ledy")
+            else:
+                names.append("Smile")
+        else:
+            names.append(FACTORY_NAMES[key])
+    return names
+
+
+def factory_phrase(names):
+    if not names:
+        return "not recorded"
+    word = "factory" if len(names) == 1 else "different factories"
+    return f"{len(names)} {word}: " + ", ".join(names)
+
+
+def dossier_text(rel_file):
+    path = DATA / rel_file
+    chunks = []
+    if path.exists():
+        chunks.append(path.read_text(encoding="utf-8"))
+    base = re.sub(r"-\d+$", "", path.stem)
+    for sibling in sorted(path.parent.glob(base + "-*.txt")):
+        if sibling.resolve() == path.resolve():
+            continue
+        chunks.append(sibling.read_text(encoding="utf-8"))
+    return "\n".join(chunks)
+
+
+def production_years(text):
+    """First and last release from an explicit Released or Release Date line.
+
+    A mould date stamp is not a release year. A missing line stays missing.
+    """
+    ranges = [
+        (int(start), int(end))
+        for start, end in re.findall(r"Released:\s*(\d{4})\s*[–—-]\s*(\d{4})", text, flags=re.I)
+    ]
+    if ranges:
+        return min(start for start, _end in ranges), max(end for _start, end in ranges)
+    onwards = [int(year) for year in re.findall(r"Released:\s*(\d{4})\s+onwards", text, flags=re.I)]
+    if onwards:
+        return min(onwards), None
+    singles = [int(year) for year in re.findall(r"Release Date:\s*(\d{4})", text, flags=re.I)]
+    if singles:
+        return min(singles), max(singles)
+    return None, None
+
+
+def years_phrase(first, last):
+    if first and last and first != last:
+        return f"{first} to {last}"
+    if first and last:
+        return str(first)
+    if first:
+        return f"from {first}"
+    return "not recorded"
+
+
 def figure_block(index, row):
     note = ""
     if row["basis"].startswith("COO Family"):
         note = " (COO Family headings; the page prints the numerals without manufacturer names on those lines)"
     elif "adds VII" in row["basis"]:
         note = " (text index I-VI; COO sheet image shows I-VII)"
-    block = [f"{index}. {row['name']} — {row['count']}{note}"]
-    for family in row["families"]:
+    families = ordered_families(row["families"])
+    block = [
+        f"{index}. {row['name']} — {row['count']}{note} — Years: {row['years']} — Factories: {row['factories']}"
+    ]
+    for family in families:
         block.append(f"- {family_label(family)}")
     return block
 
@@ -107,12 +239,17 @@ def render(figures, snapshot, by_url):
                 "basis": (live or {}).get("basis") or "not in the fetched snapshot",
             })
             continue
+        first, last = production_years(dossier_text(figure.get("file") or ""))
+        names = distinct_factories(live["families"])
         counted.append({
             "name": figure["name"],
             "url": live["url"],
             "count": live["count"],
             "basis": live.get("basis") or "",
             "families": live["families"],
+            "years": years_phrase(first, last),
+            "factories": factory_phrase(names),
+            "factory_names": names,
         })
     counted.sort(key=lambda row: (-row["count"], row["name"].lower()))
     unverified.sort(key=lambda row: row["name"].lower())
@@ -140,6 +277,7 @@ def render(figures, snapshot, by_url):
         "A figure's variant count is the number of documented manufacturer/region families on that page: lines such as \"I: Kader\" and \"VII: Takara\". A blank label still counts when the numeral is printed (\"II:\"). A label that starts with \"not\" is skipped. A sub-point such as \"IV.1\" is not another family. Paint shades, cape moulds and lightsaber moulds are not part of this count. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families.",
         "Each count was checked against that page's COO sheet or figure-guide image. Where the image and the text disagree, the image is used. A column the sheet marks as not this figure is left out. Stormtrooper's text index lists I-VI. The COO sheet image adds VII: PBP/Lili Ledy, so Stormtrooper is 7. Wicket W. Warrick's Return of the Jedi sheet shows two families, I Smile (HK) and II Taiwan.",
         "If the images do not show a readable roman family grid, the figure is unverified. Do not guess a number, and do not invent a higher count than this summary. Yoda's sheet is four families (I Kader HK, II Unitoy, III Smile, IV Top Toys). Lili Ledy, Kader China and Poch/PBP sit under those families. They are not extra roman families. Yoda's snake, cane, belt and cloak are accessories.",
+        "Each figure line has Years and Factories. Those were calculated when this summary was built. Repeat them. Do not count the factories again from the family lines. Years come from a Released or Release Date line in that figure's dossier. If Years says not recorded, leave the years out. Smile and Lili Ledy, including an LL line, are one factory. Kader China is Kader. Made in Taiwan, Taiwan and Universal Manufacturers are Taiwan.",
         "",
         "Outfits, versions and looks mean distinct catalog figures of one character. They are not paint variants of a single figure. Han Solo (in Trench Coat) is Han's Endor figure. Princess Leia Organa (in Combat Poncho) is Leia's Endor figure. The catalog has no further Endor figure for either character. A Droids-line figure of the same character counts as one version.",
         "",
@@ -231,7 +369,9 @@ def main():
     print(f"figures counted: {len(counted)}; unverified: {len(unverified)}; multi-version characters: {len(characters)}")
     print("top 15 variants:")
     for row in counted[:15]:
-        print(f"  {row['count']:2}  {row['name']}")
+        print(f"  {row['count']:2}  {row['name']}  years {row['years']}  factories {row['factories']}")
+    vader = next(row for row in counted if row["name"] == "Darth Vader")
+    print("Vader factories:", vader["factories"])
     for path in written:
         print(f"wrote {path.relative_to(ROOT)} ({len(path.read_text(encoding='utf-8'))} chars)")
 
