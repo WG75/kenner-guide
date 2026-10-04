@@ -143,10 +143,33 @@ def recorded_keywords(text):
     return unique(names)[:40]
 
 
+ALLOWED_TOPICS = {
+    "figure", "accessory", "cardback", "coo", "factory", "variant",
+    "term", "reference", "palitoy", "playset", "vehicle",
+}
+
+
+def declared_topic(text):
+    match = re.search(
+        r"^Topic: (figure|accessory|cardback|coo|factory|variant|term|reference|palitoy|playset|vehicle)$",
+        text,
+        re.M,
+    )
+    return match.group(1) if match else ""
+
+
 def index_file(folder, name, text):
     rel = f"{folder}/{name}" if folder else name
-    topic = topic_for(folder, name)
+    topic = declared_topic(text) or topic_for(folder, name)
+    if topic not in ALLOWED_TOPICS:
+        topic = topic_for(folder, name)
+    role_match = re.search(r"^Role: ([a-z0-9-]+)$", text, re.M)
+    role = role_match.group(1) if role_match else role_for(name)
     keywords = palitoy_keywords(text) if topic == "palitoy" else recorded_keywords(text)
+    if declared_topic(text):
+        name_line = re.search(r"^Name: (.+)$", text, re.M)
+        if name_line:
+            keywords = unique([name_line.group(1).strip()] + keywords)
     slug_bits = re.sub(r"\.[a-z0-9]+$", "", name, flags=re.I).replace("-", " ")
     if topic != "palitoy":
         extra = variant_count_keywords(text) if "variant-count" in name.lower() else []
@@ -157,7 +180,7 @@ def index_file(folder, name, text):
         "relPath": rel,
         "folder": folder,
         "topic": topic,
-        "role": role_for(name),
+        "role": role,
         "name": keywords[0] if keywords else Path(name).stem,
         "aliases": keywords[1:12] if topic != "palitoy" else [],
         "keywords": keywords,
@@ -192,7 +215,7 @@ def main():
     payload = {
         "generated": "2026-10-04",
         "generator": "tools/build-retrieval-index.py",
-        "note": "Not injected into chat. Topic routing reads this file. Palitoy roles: year, when, not-figures, overview, history. Variant-count role: summary.",
+        "note": "Not injected into chat. Topic routing reads this file. Palitoy roles: year, when, not-figures, overview, history. Variant-count role: summary. A Topic line may set playset, vehicle, cardback, coo, factory or variant.",
         "files": collect(),
     }
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
