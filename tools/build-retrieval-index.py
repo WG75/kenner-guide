@@ -55,6 +55,8 @@ def role_for(name):
         return "overview"
     if re.search(r"palitoy-uk-19\d\d", stem):
         return "year"
+    if "variant-count" in stem:
+        return "summary"
     return ""
 
 
@@ -113,6 +115,21 @@ def palitoy_keywords(text):
     return unique(names)
 
 
+def variant_count_keywords(text):
+    """Figure and family lines in the variant-count summary.
+
+    Numbered lines are "1. Darth Vader — 71 versions ...". Family lines are
+    "- I Kader/ Kader China — 14 versions". The name is the text before the
+    first em dash.
+    """
+    names = []
+    for line in text.splitlines():
+        match = re.match(r"^(?:\d+\. |- )(.+?) —", line)
+        if match:
+            names.append(match.group(1).strip())
+    return unique(names)
+
+
 def recorded_keywords(text):
     names = []
     recorded = re.search(r"^(?:Figure|Accessory) Name: (.+)$", text, re.M)
@@ -132,7 +149,10 @@ def index_file(folder, name, text):
     keywords = palitoy_keywords(text) if topic == "palitoy" else recorded_keywords(text)
     slug_bits = re.sub(r"\.[a-z0-9]+$", "", name, flags=re.I).replace("-", " ")
     if topic != "palitoy":
-        keywords = unique(keywords + slug_bits.split())[:40]
+        extra = variant_count_keywords(text) if "variant-count" in name.lower() else []
+        keywords = unique(keywords + extra + slug_bits.split())
+        if "variant-count" not in name.lower():
+            keywords = keywords[:40]
     return {
         "relPath": rel,
         "folder": folder,
@@ -172,7 +192,7 @@ def main():
     payload = {
         "generated": "2026-10-04",
         "generator": "tools/build-retrieval-index.py",
-        "note": "Not injected into chat. Topic routing reads this file. Palitoy roles: year, when, not-figures, overview, history.",
+        "note": "Not injected into chat. Topic routing reads this file. Palitoy roles: year, when, not-figures, overview, history. Variant-count role: summary.",
         "files": collect(),
     }
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

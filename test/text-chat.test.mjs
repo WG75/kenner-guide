@@ -226,9 +226,25 @@ await test("history roles/injection: only user/assistant strings accepted; refer
 await test("system prompt carries the brief's rules", async () => {
   await call({ message: "What was the Early Bird?" });
   const sys = calls[0].body.messages[0].content;
-  for (const re of [/VF-CB/, /British English/, /1977 to 1985/, /Documented/, /Probable/, /Possible/, /Unknown/, /Never invent variants/i, /first four figures \(Luke, Leia, Chewbacca and R2-D2\)/, /Do not call it a "mail-away"/]) {
+  for (const re of [/VF-CB/, /British English/, /1977 to 1985/, /I'm not sure/, /the sources disagree/, /Never invent variants/i, /first four figures \(Luke, Leia, Chewbacca and R2-D2\)/, /Do not call it a "mail-away"/]) {
     assert.match(sys, re);
   }
+  assert.match(sys, /Do not print an "Evidence:" line/);
+  assert.match(sys, /one family per line/);
+  assert.match(sys, /one name per line/);
+  assert.match(sys, /Do not stop at the number/);
+  assert.match(sys, /before the follow-up questions/);
+  assert.match(sys, /was made between/);
+  assert.match(sys, /Do not count the factories yourself/);
+  assert.match(sys, /Years says not recorded/);
+  assert.match(sys, /8 different factories/);
+  assert.match(sys, /71 versions across 12 families/);
+  assert.match(sys, /versions unverified/);
+  assert.match(sys, /Do not count the versions yourself/);
+  assert.match(sys, /debut-cardbacks block for that figure/);
+  assert.match(sys, /double-telescoping sabre question only for Luke Skywalker, Ben \(Obi-Wan\) Kenobi or Darth Vader/);
+  assert.doesNotMatch(sys, /label claims/i);
+  assert.doesNotMatch(sys, /Evidence: documented/);
 });
 
 await test("missing OPENAI_API_KEY: clear message, no fetch", async () => {
@@ -560,7 +576,10 @@ await test("typed name then 'this' cardback question retrieves that debut block"
       assert.ok(block, `${typed} -> ${figure} missing for '${follow}'. sources: ${json.sources}`);
       assert.match(prompt, new RegExp(`figure in play is ${figure.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`));
       assert.match(sent.messages[0].content, /Do not say there is no cardback data/);
-      if (figure === "Jawa") assert.match(block, /Evidence: documented/);
+      if (figure === "Jawa") {
+        assert.match(block, /Star Wars 12A/);
+        assert.doesNotMatch(block, /Evidence:/i);
+      }
     }
   }
 });
@@ -573,8 +592,9 @@ await test("Early Bird R2-D2 factory question retrieves the probable Unitoy and 
   assert.match(prompt, /Unitoy and Kader versions are both probable in Early Bird sets/);
   assert.match(prompt, /no single Early Bird factory is established/);
   assert.match(prompt, /Factory codes on cards only start at the 32B backs/);
-  assert.match(prompt, /Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only/);
+  assert.match(prompt, /Working assumption: Early Bird figures are Unitoy or Kader only/);
   assert.match(prompt, /No Taiwan Early Bird/);
+  assert.doesNotMatch(prompt, /Evidence:/i);
   assert.doesNotMatch(prompt, /M3 Kader/);
   assert.doesNotMatch(prompt, /\[truncated\]/);
 });
@@ -625,7 +645,8 @@ await test("typed variant identifier asks discriminating questions then retrieve
   const prompt = calls.at(-1).body.messages.at(-1).content;
   assert.match(prompt, /REFERENCE: figures\/bossk-reference\.txt/);
   assert.match(prompt, /Figure Name: Bossk/);
-  assert.match(prompt, /say unknown/);
+  assert.match(prompt, /not sure/);
+  assert.doesNotMatch(prompt, /Evidence:/i);
   assert.match(prompt, /Hong Kong/);
 });
 
@@ -744,7 +765,8 @@ await test("Early Bird R2-D2 factory question retrieves part 1 without truncatio
   assert.equal(json.reply, "MOCK ANSWER");
   assert.ok(json.sources.includes("figures/r2-d2-reference-1.txt"), `got ${json.sources}`);
   const prompt = calls.at(-1).body.messages.at(-1).content;
-  assert.match(prompt, /Working assumption, evidence probable: Early Bird figures are Unitoy or Kader only/);
+  assert.match(prompt, /Working assumption: Early Bird figures are Unitoy or Kader only/);
+  assert.doesNotMatch(prompt, /Evidence:/i);
   assert.match(prompt, /No Taiwan Early Bird/);
   assert.doesNotMatch(prompt, /\[truncated\]/);
 });
@@ -958,34 +980,162 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   const variants = await call({ message: "Which figure has the most variants?" });
   assert.notEqual(variants.json.offTopic, true);
   assert.equal(variants.json.sources[0], "references/variant-counts.txt");
+  assert.ok(variants.json.sources.includes("figures/darth-vader-reference.txt"), variants.json.sources.join(", "));
   const variantPrompt = calls.at(-1).body.messages.at(-1).content;
-  assert.match(variantPrompt, /Darth Vader — 12/);
-  assert.match(variantPrompt, /Han Solo \(Hoth Outfit\) — 3/);
-  assert.ok(variantPrompt.indexOf("Darth Vader — 12") < variantPrompt.indexOf("Han Solo (Hoth Outfit) — 3"));
+  assert.match(variantPrompt, /REFERENCE: figures\/darth-vader-reference\.txt/);
+  assert.match(variantPrompt, /Darth Vader — 71 versions across 12 families/);
+  assert.match(variantPrompt, /Years: 1978 to 1985/);
+  assert.match(variantPrompt, /Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
+  assert.match(variantPrompt, /Stormtrooper — 7/);
+  assert.match(variantPrompt, /Yoda — 29 versions across 4 families/);
+  assert.match(variantPrompt, /Han Solo \(Hoth Outfit\) — 20 versions across 3 families/);
+  assert.ok(variantPrompt.indexOf("Darth Vader — 71") < variantPrompt.indexOf("Han Solo (Hoth Outfit) — 20"));
 
   const han = await call({ message: "how many versions of Han Solo are there?" });
   assert.ok(han.json.sources.includes("references/variant-counts.txt"), han.json.sources.join(", "));
   assert.ok(han.json.sources.some(source => source.startsWith("figures/han-solo")), han.json.sources.join(", "));
+  const hanPrompt = calls.at(-1).body.messages.at(-1).content;
+
+  const vaderVersions = await call({ message: "how many versions of Vader" });
+  assert.equal(vaderVersions.json.sources[0], "references/variant-counts.txt");
+  assert.ok(vaderVersions.json.sources.includes("figures/darth-vader-reference.txt"), vaderVersions.json.sources.join(", "));
+  const vaderVersionsPrompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(vaderVersionsPrompt, /Darth Vader — 71 versions across 12 families/);
+  assert.match(vaderVersionsPrompt, /REFERENCE: figures\/darth-vader-reference\.txt/);
 
   const vader = await call({ message: "how many variants does Darth Vader have?" });
   assert.ok(vader.json.sources.includes("references/variant-counts.txt"), vader.json.sources.join(", "));
   assert.ok(vader.json.sources.includes("figures/darth-vader-reference.txt"), vader.json.sources.join(", "));
+  const vaderPrompt = calls.at(-1).body.messages.at(-1).content;
+  const vaderAt = vaderPrompt.indexOf("Darth Vader — 71 versions across 12 families");
+  assert.ok(vaderAt >= 0);
+  const vaderBlock = vaderPrompt.slice(vaderAt).split(/\n\d+\. /)[0];
+  const vaderFamilies = [
+    ["I Kader/ Kader China", 14],
+    ["II Kader", 5],
+    ["III Kader/ Glasslite", 15],
+    ["IV Smile/ LL Retorno & Regreso", 7],
+    ["V Unitoy", 4],
+    ["VI Unitoy", 3],
+    ["VII Unitoy", 4],
+    ["VIII Unitoy/ PBP", 13],
+    ["IX Top Toys", 1],
+    ["X Made In Taiwan", 2],
+    ["XI Taiwan", 2],
+    ["XII Takara", 1]
+  ];
+  for (const [label, versions] of vaderFamilies) {
+    const versionWord = versions === 1 ? "version" : "versions";
+    assert.match(vaderBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} — ${versions} ${versionWord}$`, "m"), label);
+  }
+  assert.equal(vaderBlock.split("\n").filter(line => line.startsWith("- ")).length, 12);
+  assert.match(vaderBlock, /Years: 1978 to 1985/);
+  assert.match(vaderBlock, /Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
+
+  for (const name of ["Han Solo", "Han Solo (Hoth Outfit)", "Han Solo (Bespin Outfit)", "Han Solo (in Trench Coat)", "Han Solo (in Carbonite Chamber)"]) {
+    assert.match(hanPrompt, new RegExp(`^- ${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"), name);
+  }
+
+  const nien = await call({ message: "how many variants does Nien Nunb have?" });
+  assert.ok(nien.json.sources.some(source => source.includes("variant-counts")), nien.json.sources.join(", "));
+  assert.ok(nien.json.sources.includes("figures/nien-nunb-reference.txt"), nien.json.sources.join(", "));
+  const nienPrompt = calls.at(-1).body.messages.at(-1).content;
+  const nienAt = nienPrompt.indexOf("Nien Nunb — 3");
+  assert.ok(nienAt >= 0);
+  const nienBlock = nienPrompt.slice(nienAt).split(/\n\d+\. /)[0];
+  for (const label of ["I Unitoy", "II Smile", "III Lili Ledy (MIM)"]) {
+    assert.match(nienBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"), label);
+  }
+  assert.match(nienBlock, /Years: 1983/);
+  assert.match(nienBlock, /Factories: 2 different factories: Unitoy, Smile\/Lili Ledy/);
+
+  const yoda = await call({ message: "how many variants does Yoda have?" });
+  assert.ok(yoda.json.sources.some(source => source.includes("variant-counts")), yoda.json.sources.join(", "));
+  assert.ok(yoda.json.sources.some(source => source.startsWith("figures/yoda")), yoda.json.sources.join(", "));
+  const yodaPrompt = calls.at(-1).body.messages.at(-1).content;
+  const yodaAt = yodaPrompt.indexOf("Yoda — 29 versions across 4 families");
+  assert.ok(yodaAt >= 0);
+  const yodaBlock = yodaPrompt.slice(yodaAt).split(/\n\d+\. /)[0];
+  assert.match(yodaBlock, /Years: not recorded/);
+  assert.match(yodaBlock, /Factories: 4 different factories: Kader, Unitoy, Smile, Top Toys/);
+  assert.equal(yoda.json.actions.some(action => /double-telescoping|telescop/i.test(action.label)), false);
+  assert.ok(yoda.json.actions.some(action => /cardbacks did Yoda come on/i.test(action.label)));
+  for (const [label, versions] of [["I Kader HK", 9], ["II Unitoy", 14], ["III Smile", 5], ["IV Top Toys", 1]]) {
+    const versionWord = versions === 1 ? "version" : "versions";
+    assert.match(yodaBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} — ${versions} ${versionWord}$`, "m"), label);
+  }
+});
+
+await test("Vader count follow-ups are questions the reference data can answer", async () => {
+  const vader = await call({ message: "how many variants does Darth Vader have?" });
+  const labels = vader.json.actions.map(action => action.label);
+  assert.deepEqual(labels, [
+    "How do I tell the Kader versions of Darth Vader apart?",
+    "Which cardbacks did Darth Vader come on?",
+    "Which Darth Vader has the double-telescoping sabre?"
+  ]);
+  assert.ok(labels.every(label => label.length <= 120));
+  const most = await call({ message: "Which figure has the most variants?" });
+  assert.deepEqual(most.json.actions.map(action => action.label), labels);
+
+  const droids = await call({ message: "how many variants does Droids C-3PO have?" });
+  assert.equal(droids.json.actions.some(action => /cardback/i.test(action.label)), false);
+  assert.equal(droids.json.actions.some(action => /double-telescoping|telescop/i.test(action.label)), false);
+
+  for (const label of labels) {
+    const next = await call({ message: label });
+    assert.notEqual(next.json.offTopic, true, label);
+    assert.ok(next.json.sources.length > 0, `${label} -> ${next.json.sources}`);
+    const prompt = calls.at(-1).body.messages.at(-1).content;
+    assert.match(prompt, /Darth Vader/, label);
+    if (/cardbacks/i.test(label)) {
+      assert.ok(next.json.sources.some(source => source.includes("debut-cardbacks")), next.json.sources.join(", "));
+      assert.match(prompt, /Figure Name: Darth Vader/);
+    } else if (/double-telescoping/i.test(label)) {
+      assert.ok(
+        next.json.sources.some(source => /double-telescoping|darth-vader-reference/.test(source)),
+        next.json.sources.join(", ")
+      );
+    } else {
+      assert.ok(next.json.sources.some(source => source.includes("darth-vader")), next.json.sources.join(", "));
+    }
+  }
 });
 
 await test("variant count summary matches the generator and stays under the cap", async () => {
   const { execFileSync } = await import("node:child_process");
   const dir = path.join(root, "data/references");
-  const before = fs.readFileSync(path.join(dir, "variant-counts.txt"), "utf8");
-  const beforeTwo = fs.readFileSync(path.join(dir, "variant-counts-2.txt"), "utf8");
+  const partNames = fs.readdirSync(dir).filter(name => /^variant-counts(?:-\d+)?\.txt$/.test(name)).sort();
+  const beforeParts = Object.fromEntries(partNames.map(name => [name, fs.readFileSync(path.join(dir, name), "utf8")]));
   execFileSync("python3", ["tools/build-variant-counts.py"], { cwd: root });
-  assert.equal(fs.readFileSync(path.join(dir, "variant-counts.txt"), "utf8"), before);
-  assert.equal(fs.readFileSync(path.join(dir, "variant-counts-2.txt"), "utf8"), beforeTwo);
-  assert.match(before, /Darth Vader — 12/);
+  const afterNames = fs.readdirSync(dir).filter(name => /^variant-counts(?:-\d+)?\.txt$/.test(name)).sort();
+  assert.deepEqual(afterNames, partNames);
+  for (const name of partNames) {
+    const text = fs.readFileSync(path.join(dir, name), "utf8");
+    assert.equal(text, beforeParts[name]);
+    assert.ok(text.length <= 7000, `${name} is ${text.length} characters`);
+  }
+  const before = beforeParts["variant-counts.txt"];
+  const summary = Object.values(beforeParts).join("\n");
+  assert.match(before, /Darth Vader — 71 versions across 12 families — Years: 1978 to 1985 — Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
+  assert.match(summary, /Yoda — 29 versions across 4 families — Years: not recorded/);
+  assert.match(summary, /Stormtrooper — 7 families/);
+  assert.match(summary, /Yoda — 29 versions across 4 families/);
+  assert.match(summary, /Chewbacca — 6/);
+  assert.match(summary, /R2-D2 — 7/);
   assert.match(before, /Luke Skywalker — 7 versions/);
-  assert.match(beforeTwo, /not counted/i);
-  assert.match(beforeTwo, /^- Luke Skywalker$/m);
-  assert.match(beforeTwo, /^- Chewbacca$/m);
-  assert.ok(before.length <= 7000 && beforeTwo.length <= 7000);
+  assert.match(summary, /Unverified/);
+  assert.match(summary, /^- 8D8 —/m);
+  assert.match(summary, /^- Rebel Commando —/m);
+  assert.match(summary, /^- Squid Head —/m);
+  assert.match(summary, /droids-c-3po/);
+  assert.match(summary, /C-3PO \(Removable Limbs\) — 2/);
+  assert.doesNotMatch(summary, /c-3po-removable-limbs/);
+  assert.match(summary, /Wicket W\. Warrick — 2/);
+  assert.match(summary, /VI Top Toys/);
+  assert.match(summary, /^- XII Takara — 1 version$/m);
+  assert.match(summary, /^- I Kader\/ Kader China — 14 versions$/m);
+  assert.doesNotMatch(summary, /not counted/i);
 });
 
 await test("identify a figure and identify accessories start guided questions", async () => {
@@ -1010,7 +1160,8 @@ await test("identify a figure and identify accessories start guided questions", 
   assert.equal(calls.length, 1);
   const prompt = calls.at(-1).body.messages.at(-1).content;
   assert.match(prompt, /Jawa blaster/);
-  assert.match(prompt, /say unknown/i);
+  assert.match(prompt, /not sure/i);
+  assert.doesNotMatch(prompt, /Evidence:/i);
   assert.match(done.json.reply, /MOCK ANSWER/);
   assert.ok(done.json.actions.length >= 2);
   assert.doesNotMatch(done.json.reply, /<<<|FOLLOWUPS/);
@@ -1117,6 +1268,22 @@ await test("retrieval index routes Palitoy and records the other topics", async 
   assert.deepEqual(yearFile.years, [1981]);
   assert.ok(yearFile.keywords.includes("Dengar"));
   assert.ok(!yearFile.keywords.some(keyword => /Warren UK list/.test(keyword)));
+  for (const rel of [
+    "references/variant-counts.txt",
+    "references/variant-counts-2.txt",
+    "references/variant-counts-3.txt",
+    "references/variant-counts-4.txt"
+  ]) {
+    const counts = index.files.find(file => file.relPath === rel);
+    assert.ok(counts, rel);
+    assert.equal(counts.topic, "variant", rel);
+    assert.equal(counts.role, "summary", rel);
+  }
+  const summary = index.files.find(file => file.relPath === "references/variant-counts.txt");
+  assert.ok(summary.keywords.includes("Darth Vader"));
+  const vaderFile = index.files.find(file => file.relPath === "figures/darth-vader-reference.txt");
+  assert.equal(vaderFile.topic, "figure");
+  assert.equal(vaderFile.name, "Darth Vader");
 });
 
 await test("Palitoy release files match the generator and stay under the cap", async () => {

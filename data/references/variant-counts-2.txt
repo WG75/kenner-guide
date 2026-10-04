@@ -1,74 +1,142 @@
 Name: Variant and outfit counts
 Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
-Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Evidence: documented. Do not guess a count that is not in this summary.
-38. Luke Skywalker (Bespin Fatigues) — 3 — I Smile; II Unitoy; III Kader
-39. Nien Nunb — 3 — I Unitoy; II Smile; III Lili Ledy (MIM)
-40. Princess Leia Organa (Boushh Disguise) — 3 — I Smile / Smile Macau; II Unitoy / Lili Ledy; III Taiwan (U.M.)
-41. R5-D4 — 3 — I Unitoy; V Unitoy; VIII Kader
-42. Rebel Commander — 3 — I Unitoy; II Smile; III Kader/ Lili Ledy
-43. Rebel Soldier (Hoth Battle Gear) — 3 — I Kader/ Kader China; II Unitoy/ Meccano; III Smile/ PBP
-44. Ree Yees — 3 — I Smile; II Taiwan (U.M.); III Lili Ledy (MIM)
-45. Snaggletooth — 3 — I Smile; II Smile; III Smile/ PBP
-46. The Emperor — 3 — I Smile/ Lili Ledy; II Unitoy; III Unitoy
-47. Ugnaught — 3 — I Unitoy; II Kader; III Smile
-48. Weequay — 3 — I Unitoy; II Smile/ Lili Ledy; III Unitoy
-49. (Twin-Pod) Cloud Car Pilot — 2 — I Smile/ Lili Ledy; II Unitoy/ PBP
-50. 4-LOM — 2 — I Smile; II Unitoy / PBP
-51. At-At Commander — 2 — I Smile; II Unitoy / PBP
-52. AT-ST Driver — 2 — I Taiwan (U.M.); II Unitoy/ Lili Ledy
-53. B-Wing Pilot — 2 — I Unitoy; II Kader/ Lili Ledy
-54. Bespin Security Guard (Black) — 2 — I Unitoy / PBP; II Smile
-55. Death Star Droid — 2 — I Kader/ Meccano; II Unitoy
-56. Greedo — 2 — I Smile/ PBP; II Smile
-57. Hammerhead — 2 — I Smile/ PBP; II Smile
-58. Han Solo (in Trench Coat) — 2 — I Smile; II Kader/ Lili Ledy
-59. Luke Skywalker (Hoth Battle Gear) — 2 — I Unitoy / PBP / Meccano; II Smile
-60. Luke Skywalker (X-Wing Pilot) — 2 — I Unitoy/ PBP; II Kader/ Kader China
-61. Power Droid — 2 — I Kader; II Kader
-62. Princess Leia Organa (in Combat Poncho) — 2 — I Smile; II Kader/ Lili Ledy
-63. Prune Face — 2 — I Smile; II Kader/ Lili Ledy
-64. Rancor Keeper — 2 — I Smile/ Lili Ledy; II Taiwan (U.M.)
-65. Teebo — 2 — I Unitoy/ Lili Ledy; II Taiwan (U.M.)
-66. Walrus Man — 2 — I Smile/ PBP; II Smile
-67. Wicket W. Warrick — 2 — I Smile/ Lili Ledy; II Taiwan (U.M.)
-68. Wicket W.Warrick (Ewoks) — 2 — I Smile/ Lili Ledy; II Taiwan (U.M.)
-69. Zuckuss — 2 — I Smile; II Unitoy/ Lili Ledy / Kader China
-70. A-Wing Pilot — 1 — I Smile
-71. Amanaman — 1 — I Smile
-72. Anakin Skywalker — 1 — I Smile
-73. Artoo-Detoo (R2-D2) with pop-up Lightsaber — 1 — I Smile/ Glasslite
-74. Barada — 1 — I Smile
-75. Droids R2-D2 — 1 — I Smile/ Glasslite
-76. Dulok Scout — 1 — I Unitoy HK
-77. Dulok Shaman — 1 — I Smile HK
-78. EV-9D9 — 1 — I Kader
-79. Han Solo (in Carbonite Chamber) — 1 — I Smile
-80. Imperial Dignitary — 1 — I Kader
-81. Imperial Gunner — 1 — I Kader
-82. King Gorneesh — 1 — I Smile HK
-83. Klaatu (in Skiff Guard Outfit) — 1 — I Smile/ Lili Ledy
-84. Lando Calrissian (General Pilot) — 1 — I Smile
-85. Logray (Ewoks) — 1 — I Lili Ledy Made in Mexico
-86. Luke Skywalker (Imperial Stormtrooper Outfit) — 1 — I Kader
-87. Luke Skywalker (in Battle Poncho) — 1 — I Smile
-88. Lumat — 1 — I Lili Ledy (MIM)
-89. Nikto — 1 — I Smile/ Lili Ledy
-90. Paploo — 1 — I Lili Ledy (MIM)
-91. Romba — 1 — I Smile
-92. Urgah Lady Gorneesh — 1 — I Lili Ledy Made in Mexico
-93. Warok — 1 — I Smile
-94. Yak Face — 1 — I Smile
+Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Do not guess a count that is not in this summary. An unverified figure has no number.
+6. Sand People — 25 versions across 5 families — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, Meccano
+- I Unitoy — 5 versions
+- II Unitoy — 5 versions
+- III Kader — 3 versions
+- IV Kader/ Meccano — 5 versions
+- V Kader — 7 versions
+7. Han Solo (Hoth Outfit) — 20 versions across 3 families — Years: not recorded — Factories: 4 different factories: Unitoy, Kader, Smile, PBP
+- I Unitoy/ Kader China — 5 versions
+- II Smile — 2 versions
+- III Kader/ PBP — 13 versions
+8. IG-88 — 17 versions across 3 families — Years: not recorded — Factories: 3 different factories: Smile, Kader, Unitoy
+- I Smile — 3 versions
+- II Kader — 3 versions
+- III Unitoy — 11 versions
+9. Lando Calrissian — 14 versions — family count unverified — Years: not recorded — Factories: 3 different factories: Kader, Smile, Unitoy
+- I KADER — 3 versions
+- II SMILE — 4 versions
+- III Unitoy — 7 versions
+10. R5-D4 — 12 versions across 3 families — Years: not recorded — Factories: 2 different factories: Unitoy, Kader
+- I Unitoy — 6 versions
+- V Unitoy — 2 versions
+- VIII Kader — 4 versions
+11. Teebo — 12 versions across 2 families — Years: not recorded — Factories: 2 different factories: Unitoy, Taiwan
+- I Unitoy/ — 5 versions
+- II Taiwan (U.M.) — 7 versions
+12. Klaatu — 10 versions across 3 families — Years: not recorded — Factories: 2 different factories: Smile/Lili Ledy, Unitoy
+- I Smile — 2 versions
+- II Unitoy — 4 versions
+- III Lili Ledy (MIM) — 4 versions
+13. Amanaman — 4 versions across 1 family — Years: not recorded — Factories: 1 factory: Smile
+- I Smile — 4 versions
+14. Artoo-Detoo (R2-D2) with pop-up Lightsaber — 4 versions across 1 family — Years: not recorded — Factories: 2 different factories: Smile, Glasslite
+- I Smile/ Glasslite — 4 versions
+15. Droids R2-D2 — 4 versions across 1 family — Years: not recorded — Factories: 2 different factories: Smile, Glasslite
+- I Smile/ Glasslite — 4 versions
+16. Barada — 2 versions across 1 family — Years: not recorded — Factories: 1 factory: Smile
+- I Smile — 2 versions
+17. EV-9D9 — 2 versions across 1 family — Years: 1985 — Factories: 1 factory: Kader
+- I Kader — 2 versions
+18. Imperial Dignitary — 2 versions across 1 family — Years: 1985 — Factories: 1 factory: Kader
+- I Kader — 2 versions
+19. Lumat — 2 versions across 1 family — Years: not recorded — Factories: 1 factory: Lili Ledy
+- I Lili Ledy (MIM) — 2 versions
+20. Paploo — 2 versions across 1 family — Years: 1984 — Factories: 1 factory: Lili Ledy
+- I Lili Ledy (MIM) — 2 versions
+21. Yak Face — 2 versions across 1 family — Years: not recorded — Factories: 1 factory: Smile
+- I Smile — 2 versions
 
-Not counted (the figure file has no roman-numeral index, Family heading list, or labelled COO Family list):
-- 8D8
-- C-3PO (Removable Limbs)
-- Chewbacca
-- Droids C-3PO
-- Jawa
-- Luke Skywalker
-- R2-D2
-- Rebel Commando
-- Sand People
-- Squid Head
-
-Sources: figure files under data/figures and the catalog names in data/catalog-1.json through data/catalog-6.json. Regenerated by tools/build-variant-counts.py.
+Families documented, versions unverified (the pictured lists or the sheet labels do not cover every family, so no version total is given):
+1. C-3PO — 7 families — versions unverified — Years: 1978 to 1985 — Factories: 3 different factories: Kader, Unitoy, Takara
+- I Kader
+- II Unitoy/
+- III Kader/
+- IV Unitoy
+- V Kader
+- VI Takara
+- VII Unitoy
+2. R2-D2 — 7 families — versions unverified — Years: 1978 to 1981 — Factories: 4 different factories: Unitoy, Smile/Lili Ledy, Kader, Taiwan
+- I Unitoy/
+- II Smile
+- III Kader/
+- IV Kader/ Lili Ledy Retorno
+- V Unitoy
+- VI Taiwan
+- VII Kader
+3. Stormtrooper — 7 families (text index I-VI; COO sheet image shows I-VII) — versions unverified — Years: 1978 to 1985 — Factories: 6 different factories: Kader, Unitoy, PBP, Smile/Lili Ledy, Takara, Top Toys
+- I Kader/ China
+- II Unitoy
+- III Unitoy/ PBP/ Lili Ledy
+- IV Smile
+- V Takara
+- VI Top Toys
+- VII PBP/Lili Ledy
+4. Chewbacca — 6 families — versions unverified — Years: 1978 to 1984 — Factories: 5 different factories: Unitoy, Kader, Smile/Lili Ledy, Taiwan, Top Toys
+- I Unitoy/
+- II F2.1 Kader/
+- III Smile
+- IV Taiwan
+- V Smile/ Lili Ledy
+- VI Top Toys
+5. Luke Skywalker (Jedi Knight Outfit) — 6 families — versions unverified — Years: not recorded — Factories: 4 different factories: Smile, Unitoy, Taiwan, Top Toys
+- I Smile
+- II Smile NCOO
+- III Smile Macau NCOO
+- IV Unitoy/
+- V Universal Manufacturers (Taiwan)
+- VI Top Toys
+6. Chief Chirpa — 5 families — versions unverified — Years: 1983 — Factories: 3 different factories: Smile/Lili Ledy, Kader, Top Toys
+- I Smile
+- II Kader
+- III Kader
+- IV Lili Ledy
+- V Top Toys
+7. Princess Leia Organa — 5 families — versions unverified — Years: 1978 to 1984 — Factories: 4 different factories: Kader, Unitoy, Smile, Taiwan
+- I Kader/
+- II Unitoy
+- III Kader/
+- IV Smile
+- V Taiwan
+8. AT-AT Driver — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
+- I Kader/
+- II Unitoy/
+- III Smile MIHK
+- IV Smile NCOO
+9. Bib Fortuna — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Kader, Taiwan
+- I Smile
+- II Kader/
+- III Taiwan (U.M.)
+- IV Smile
+10. Biker Scout — 4 families — versions unverified — Years: 1983 — Factories: 6 different factories: Kader, PBP, Meccano, Taiwan, Unitoy, Lili Ledy
+- I Kader/ PBP/ Meccano
+- II Taiwan (U.M.)
+- III Unitoy
+- IV Lili Ledy (MIM)
+11. Boba Fett — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Meccano, Taiwan
+- I Kader/ Meccano
+- II Kader
+- III Kader
+- IV Taiwan
+12. Bossk — 4 families — versions unverified — Years: not recorded — Factories: 4 different factories: Kader, Smile, Unitoy, PBP
+- I Kader
+- II Smile
+- III Unitoy
+- IV PBP
+13. Gamorrean Guard — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile/Lili Ledy
+- I Kader
+- II Unitoy/ Macau
+- III Smile
+- IV Lili Ledy
+14. Jawa — 4 families — versions unverified — Years: not recorded — Factories: 2 different factories: Kader, Unitoy
+- I Kader
+- II Kader/ Kader China
+- III Unitoy
+- IV Unitoy/
+15. Logray (Ewok Medicine Man) — 4 families — versions unverified — Years: 1983 — Factories: 4 different factories: Unitoy, Kader, Lili Ledy, Top Toys
+- I Unitoy/Macau
+- II Kader
+- III Lili Ledy (MIM)
+- IV Top Toys

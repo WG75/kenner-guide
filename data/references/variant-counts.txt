@@ -1,65 +1,94 @@
 Name: Variant and outfit counts
 Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
 
-Counting basis (evidence: documented):
-A figure's variant count is the number of documented manufacturer/region families in its figure file. Paint shades, cape moulds and lightsaber moulds are not part of this count. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families.
-The count uses the first list the file actually has:
-1. Roman-numeral index bullets from the Variant Villain page, such as "- I: Unitoy". A label that starts with "not" (for example "Not an R5 COO" or "Not used for R2SS") is not a variant of that figure and is skipped.
-2. If there is no roman index, headings "Family I:" and "Family II:" are counted.
-3. If there is neither, labelled lines "COO Family 1: Unitoy" are counted. A bare "COO Family 1:" with no manufacturer on that line is a detail heading and is not a second family.
-Split reference files are read in order. The first part that contains one of these lists supplies the count, so a repeated index in a later part is not added again.
-If the figure file has none of these lists, the count is "not counted". Do not guess a number, and do not invent a higher count than this summary.
+Counting basis:
+These variant counts were taken from the live Variant Villain figure guides on 2026-10-04 (https://www.variantvillain.com/characters/sw/, /esb/, /rotj/, /potf/ and /droids/). The snapshot is data-source/vv-variant-counts.json. It records each page URL. Power of the Force and Droids and Ewoks use the same roman-numeral figure guide, so they are included.
+A figure has two levels. Families are the documented manufacturer/region columns: lines such as "I: Kader" and "VII: Takara". A blank label still counts when the numeral is printed ("II:"). A label that starts with "not" is skipped. A sub-point such as "IV.1" is not another family. Versions are the pictured sub-variants inside a family, read from that page's combination list. Paint shades listed on their own, cape moulds and lightsaber moulds are not versions. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families.
+Each family count was checked against that page's COO sheet or figure-guide image. Where the image and the text disagree, the image is used. A column the sheet marks as not this figure is left out. Stormtrooper's text index lists I-VI. The COO sheet image adds VII: PBP/Lili Ledy, so Stormtrooper is 7 families. Wicket W. Warrick's Return of the Jedi sheet shows two families, I Smile (HK) and II Taiwan. Version totals are ranked only when every family on that line has a pictured list. If the line says versions unverified, do not add the family lines together and do not invent a version total.
+If the images do not show a readable roman family grid, the family count is unverified. Do not guess a family count. A line that says family count unverified still has a version total when the page text lists the pictured variants. Yoda's sheet is four families (I Kader HK, II Unitoy, III Smile, IV Top Toys). Lili Ledy, Kader China and Poch/PBP sit under those families. They are not extra roman families. Yoda's snake, cane, belt and cloak are accessories. Darth Vader's version total is the pictured mould and colour lines, which is higher than counting one line per torso mould.
+Each figure line has Years and Factories. Those were calculated when this summary was built. Repeat them. Do not count the factories again from the family lines. Do not count the versions again from the family lines. Years come from a Released or Release Date line in that figure's dossier. If Years says not recorded, leave the years out. Smile and Lili Ledy, including an LL line, are one factory. Kader China is Kader. Made in Taiwan, Taiwan and Universal Manufacturers are Taiwan.
 
 Outfits, versions and looks mean distinct catalog figures of one character. They are not paint variants of a single figure. Han Solo (in Trench Coat) is Han's Endor figure. Princess Leia Organa (in Combat Poncho) is Leia's Endor figure. The catalog has no further Endor figure for either character. A Droids-line figure of the same character counts as one version.
 
-Character versions (distinct catalog figures, ranked). A character with one catalog figure is not listed:
-1. Luke Skywalker — 7 versions — Luke Skywalker; Luke Skywalker (X-Wing Pilot); Luke Skywalker (Bespin Fatigues); Luke Skywalker (Hoth Battle Gear); Luke Skywalker (Jedi Knight Outfit); Luke Skywalker (in Battle Poncho); Luke Skywalker (Imperial Stormtrooper Outfit)
-2. Han Solo — 5 versions — Han Solo; Han Solo (Hoth Outfit); Han Solo (Bespin Outfit); Han Solo (in Trench Coat); Han Solo (in Carbonite Chamber)
-3. Princess Leia Organa — 5 versions — Princess Leia Organa; Leia Organa (Bespin Gown); Leia (Hoth Outfit); Princess Leia Organa (Boushh Disguise); Princess Leia Organa (in Combat Poncho)
-4. R2-D2 — 4 versions — R2-D2; R2-D2 (Sensorscope); Artoo-Detoo (R2-D2) with pop-up Lightsaber; Droids R2-D2
-5. C-3PO — 3 versions — C-3PO; C-3PO (Removable Limbs); Droids C-3PO
-6. Lando Calrissian — 3 versions — Lando Calrissian; Lando Calrissian (Skiff Guard Disguise); Lando Calrissian (General Pilot)
-7. Bespin Security Guard — 2 versions — Bespin Security Guard (White); Bespin Security Guard (Black)
-8. Klaatu — 2 versions — Klaatu; Klaatu (in Skiff Guard Outfit)
-9. Logray — 2 versions — Logray (Ewok Medicine Man); Logray (Ewoks)
-10. Stormtrooper — 2 versions — Stormtrooper; Imperial Stormtrooper (Hoth Battle Gear)
-11. Wicket W. Warrick — 2 versions — Wicket W. Warrick; Wicket W.Warrick (Ewoks)
+Character versions (distinct catalog figures, ranked). A character with one catalog figure is not listed. Each line under a character is one version:
+1. Luke Skywalker — 7 versions
+- Luke Skywalker
+- Luke Skywalker (X-Wing Pilot)
+- Luke Skywalker (Bespin Fatigues)
+- Luke Skywalker (Hoth Battle Gear)
+- Luke Skywalker (Jedi Knight Outfit)
+- Luke Skywalker (in Battle Poncho)
+- Luke Skywalker (Imperial Stormtrooper Outfit)
+2. Han Solo — 5 versions
+- Han Solo
+- Han Solo (Hoth Outfit)
+- Han Solo (Bespin Outfit)
+- Han Solo (in Trench Coat)
+- Han Solo (in Carbonite Chamber)
+3. Princess Leia Organa — 5 versions
+- Princess Leia Organa
+- Leia Organa (Bespin Gown)
+- Leia (Hoth Outfit)
+- Princess Leia Organa (Boushh Disguise)
+- Princess Leia Organa (in Combat Poncho)
+4. R2-D2 — 4 versions
+- R2-D2
+- R2-D2 (Sensorscope)
+- Artoo-Detoo (R2-D2) with pop-up Lightsaber
+- Droids R2-D2
+5. C-3PO — 3 versions
+- C-3PO
+- C-3PO (Removable Limbs)
+- Droids C-3PO
+6. Lando Calrissian — 3 versions
+- Lando Calrissian
+- Lando Calrissian (Skiff Guard Disguise)
+- Lando Calrissian (General Pilot)
+7. Bespin Security Guard — 2 versions
+- Bespin Security Guard (White)
+- Bespin Security Guard (Black)
+8. Klaatu — 2 versions
+- Klaatu
+- Klaatu (in Skiff Guard Outfit)
+9. Logray — 2 versions
+- Logray (Ewok Medicine Man)
+- Logray (Ewoks)
+10. Stormtrooper — 2 versions
+- Stormtrooper
+- Imperial Stormtrooper (Hoth Battle Gear)
+11. Wicket W. Warrick — 2 versions
+- Wicket W. Warrick
+- Wicket W.Warrick (Ewoks)
 
-Ranked figures by documented manufacturer/region variants (highest first):
-1. Darth Vader — 12 — COO 1 Kader / Kader China; COO 2 Kader; COO 3 Kader / Glasslite; COO 4 Smile / Lili Ledy; COO 5 Unitoy; COO 6 Unitoy; COO 7 Unitoy; COO 8 Unitoy / PBP; COO 9 Top Toys; COO 10 Taiwan; COO 11 Taiwan; COO 12 Takara
-2. C-3PO — 7 — COO 1 Kader; COO 2 Unitoy / Lili Ledy (Retorno); COO 3 Kader / Lili Ledy (Regreso); COO 4 Unitoy; COO 5 Kader; COO 6 Takara; COO 7 Unitoy
-3. Luke Skywalker (Jedi Knight Outfit) — 6 — I Smile; II Smile NCOO; III Smile Macau NCOO; IV Unitoy/ Lili Ledy; V Universal Manufacturers (Taiwan); IV Top Toys
-4. Ben (Obi-Wan) Kenobi — 5 — I Unitoy / Poch; II Kader; III Lili Ledy; IV Taiwan; V Smile
-5. Chief Chirpa — 5 — I Smile; II Kader; III Kader; IV Lili Ledy; V Top Toys
-6. Princess Leia Organa — 5 — COO 1 Kader / Glasslite; COO 2 Unitoy; COO 3 Kader / Glasslite; COO 4 Smile; COO 5 Taiwan
-7. Stormtrooper — 5 — COO 1 Kader / Poch / Nina; COO 2 Unitoy / PBP; COO 3 Unitoy / Poch / PBP / Lili Ledy; COO 4 Smile; COO 5 Smile (No COO)
-8. AT-AT Driver — 4 — I Kader/ PBP; II Unitoy/ Kader China; III Smile MIHK; IV Smile NCOO
-9. Bib Fortuna — 4 — I Smile; II Kader/ Lili Ledy; III Taiwan (U.M.); IV Smile
-10. Biker Scout — 4 — I Kader/ PBP/ Meccano; II Taiwan (U.M.); III Unitoy; IV Lili Ledy (MIM)
-11. Boba Fett — 4 — I Kader/ Meccano; II Kader / PBP/ Lili Ledy; III Kader; IV Taiwan
-12. Bossk — 4 — I Kader; II Smile; III Unitoy; IV PBP
-13. Gamorrean Guard — 4 — I Kader; II Unitoy/ Macau; III Smile; IV Lili Ledy
-14. Logray (Ewok Medicine Man) — 4 — I Unitoy/Macau; II Kader; III Lili Ledy (MIM); IV Top Toys
-15. R2-D2 (Sensorscope) — 4 — I Unitoy; II Smile; V Unitoy; VI Unitoy
-16. Yoda — 4 — I Kader HK / Lili Ledy; II Unitoy / Kader China /; III Smile; IV Top Toys
-17. 2-1B — 3 — I Smile; II Unitoy; III Kader
-18. Admiral Ackbar — 3 — I Unitoy/ Lili Ledy; II Smile/ Meccano; III Taiwan (U.M.)
-19. Bespin Security Guard (White) — 3 — I Smile; II Unitoy; III Kader
-20. Death Squad Commander — 3 — I UNITOY (Hong Kong); II KADER / KADER China / Lili Ledy crossover; III PBP (Spain)
-21. Dengar — 3 — I Smile; II Unitoy/ PBP; III Kader
-22. Emperor’s Royal Guard — 3 — I Kader/ Lili Ledy; II Unitoy; III Taiwan (U.M.)
-23. FX-7 — 3 — I Kader; II Smile; III Unitoy
-24. General Madine — 3 — I Taiwan (U.M.); II Smile; III Unitoy / Lili Ledy
-25. Han Solo — 3 — COO 1 Unitoy; COO 2 Kader / Glasslite; COO 3 PBP
-26. Han Solo (Bespin Outfit) — 3 — I Unitoy/ Lili Ledy Retorno; II Kader/ Lili Ledy Regreso; III Smile
-27. Han Solo (Hoth Outfit) — 3 — I Unitoy/ Kader China; II Smile; III Kader/ PBP
-28. IG-88 — 3 — I Smile; II Kader; III Unitoy / PBP
-29. Imperial Commander — 3 — I Smile; II Unitoy/ PBP/ Lili Ledy; III Kader/ Kader China
-30. Imperial Stormtrooper (Hoth Battle Gear) — 3 — I Kader/ Kader China/ Glasslite; II Unitoy/ PBP; III Smile
-31. Imperial Tie Fighter Pilot — 3 — I Smile; II Unitoy/; III Kader China
-32. Klaatu — 3 — I Smile; II Unitoy; III Lili Ledy (MIM)
-33. Lando Calrissian — 3 — I Kader /; II Smile; III Unitoy / PBP
-34. Lando Calrissian (Skiff Guard Disguise) — 3 — I Smile; II Unitoy; III Lili Ledy (MIM)
-35. Leia (Hoth Outfit) — 3 — I Kader/ Kader China; II Smile; III Unitoy/ Meccano
-36. Leia Organa (Bespin Gown) — 3 — I Kader/; II Unitoy; III Smile
-37. Lobot — 3 — I Smile; II Unitoy; III Kader
+Ranked figures by pictured versions (highest first). Each line under a figure is one family, in numeral order, with that family's version count:
+1. Darth Vader — 71 versions across 12 families — Years: 1978 to 1985 — Factories: 8 different factories: Kader, Glasslite, Smile/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara
+- I Kader/ Kader China — 14 versions
+- II Kader — 5 versions
+- III Kader/ Glasslite — 15 versions
+- IV Smile/ LL Retorno & Regreso — 7 versions
+- V Unitoy — 4 versions
+- VI Unitoy — 3 versions
+- VII Unitoy — 4 versions
+- VIII Unitoy/ PBP — 13 versions
+- IX Top Toys — 1 version
+- X Made In Taiwan — 2 versions
+- XI Taiwan — 2 versions
+- XII Takara — 1 version
+2. Luke Skywalker — 32 versions — family count unverified — Years: not recorded — Factories: 7 different factories: Kader, PBP, Meccano, Glasslite, Unitoy, Taiwan, Smile
+- I Kader / Poch / Kader China / Meccano / Glasslite — 10 versions
+- II Unitoy / Poch / PBP — 12 versions
+- III TAIWAN — 5 versions
+- IV Smile — 5 versions
+3. Luke Skywalker (Bespin Fatigues) — 30 versions across 3 families — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
+- I Smile — 7 versions
+- II Unitoy — 9 versions
+- III Kader — 14 versions
+4. Yoda — 29 versions across 4 families — Years: not recorded — Factories: 4 different factories: Kader, Unitoy, Smile, Top Toys
+- I Kader HK — 9 versions
+- II Unitoy — 14 versions
+- III Smile — 5 versions
+- IV Top Toys — 1 version
+5. Ben (Obi-Wan) Kenobi — 27 versions across 3 families — Years: from 1978 — Factories: 3 different factories: Unitoy, Lili Ledy, Kader
+- I Unitoy — 6 versions
+- II Unitoy/ Lili Ledy — 8 versions
+- III Kader — 13 versions

@@ -1,0 +1,132 @@
+Name: Variant and outfit counts
+Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
+Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Do not guess a count that is not in this summary. An unverified figure has no number.
+16. R2-D2 (Sensorscope) — 4 families — versions unverified — Years: not recorded — Factories: 2 different factories: Unitoy, Smile
+- I Unitoy
+- II Smile
+- V Unitoy
+- VI Unitoy
+17. 2-1B — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
+- I Smile
+- II Unitoy
+- III Kader
+18. Admiral Ackbar — 3 families — versions unverified — Years: 1983 — Factories: 4 different factories: Unitoy, Smile, Meccano, Taiwan
+- I Unitoy/
+- II Smile/ Meccano
+- III Taiwan (U.M.)
+19. Bespin Security Guard (White) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
+- I Smile
+- II Unitoy
+- III Kader
+20. Death Squad Commander — 3 families — versions unverified — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, PBP
+- I Unitoy
+- II Kader/
+- III PBP
+21. Dengar — 3 families — versions unverified — Years: 1981 — Factories: 4 different factories: Smile, Unitoy, PBP, Kader
+- I Smile
+- II Unitoy/ PBP
+- III Kader
+22. Emperor’s Royal Guard — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Kader, Lili Ledy, Unitoy, Taiwan
+- I Kader/ Lili Ledy
+- II Unitoy
+- III Taiwan (U.M.)
+23. FX-7 — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Smile, Unitoy
+- I Kader
+- II Smile
+- III Unitoy
+24. Han Solo — 3 families — versions unverified — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, PBP
+- I Unitoy
+- II Kader/
+- III PBP
+25. Han Solo (Bespin Outfit) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, Kader, Smile
+- I Unitoy/
+- II Kader/
+- III Smile
+26. Imperial Commander — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Smile/Lili Ledy, Unitoy, PBP, Kader
+- I Smile
+- II Unitoy/ PBP/ Lili Ledy
+- III Kader/ Kader China
+27. Imperial Stormtrooper (Hoth Battle Gear) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
+- I Kader/ Kader China/
+- II Unitoy/
+- III Smile
+28. Imperial Tie Fighter Pilot — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Smile, Unitoy, PBP, Kader
+- I Smile
+- II Unitoy/ PBP/
+- III Kader China
+29. Lando Calrissian (Skiff Guard Disguise) — 3 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile/Lili Ledy, Unitoy
+- I Smile
+- II Unitoy
+- III Lili Ledy (MIM)
+30. Leia (Hoth Outfit) — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Kader, Smile, Unitoy, Meccano
+- I Kader/ Kader China
+- II Smile
+- III Unitoy/ Meccano
+31. Leia Organa (Bespin Gown) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
+- I Kader/
+- II Unitoy
+- III Smile
+32. Lobot — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
+- I Smile
+- II Unitoy
+- III Kader
+33. Nien Nunb — 3 families — versions unverified — Years: 1983 — Factories: 2 different factories: Unitoy, Smile/Lili Ledy
+- I Unitoy
+- II Smile
+- III Lili Ledy (MIM)
+34. Princess Leia Organa (Boushh Disguise) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile/Lili Ledy, Unitoy, Taiwan
+- I Smile / Smile Macau
+- II Unitoy / Lili Ledy
+- III Taiwan (U.M.)
+35. Rebel Commander — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, Smile, Kader
+- I Unitoy
+- II Smile
+- III Kader/
+36. Rebel Soldier (Hoth Battle Gear) — 3 families — versions unverified — Years: not recorded — Factories: 5 different factories: Kader, Unitoy, Meccano, Smile, PBP
+- I Kader/ Kader China
+- II Unitoy/ Meccano
+- III Smile/ PBP
+37. Ree Yees — 3 families — versions unverified — Years: 1983 — Factories: 2 different factories: Smile/Lili Ledy, Taiwan
+- I Smile
+- II Taiwan (U.M.)
+- III Lili Ledy (MIM)
+38. Snaggletooth — 3 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
+- I Smile
+- II Smile
+- III Smile/ PBP
+39. The Emperor — 3 families — versions unverified — Years: 1983 — Factories: 2 different factories: Smile, Unitoy
+- I Smile/
+- II Unitoy
+- III Unitoy
+40. Ugnaught — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, Kader, Smile
+- I Unitoy
+- II Kader
+- III Smile
+41. Weequay — 3 families — versions unverified — Years: not recorded — Factories: 2 different factories: Unitoy, Smile/Lili Ledy
+- I Unitoy
+- II Smile/ Lili Ledy
+- III Unitoy
+42. (Twin-Pod) Cloud Car Pilot — 2 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile/Lili Ledy, Unitoy, PBP
+- I Smile/ Lili Ledy
+- II Unitoy/ PBP
+43. At-At Commander — 2 families — versions unverified — Years: 1981 — Factories: 3 different factories: Smile, Unitoy, PBP
+- I Smile
+- II Unitoy / PBP
+44. AT-ST Driver — 2 families — versions unverified — Years: 1984 — Factories: 3 different factories: Taiwan, Unitoy, Lili Ledy
+- I Taiwan (U.M.)
+- II Unitoy/ Lili Ledy
+45. B-Wing Pilot — 2 families — versions unverified — Years: 1984 — Factories: 2 different factories: Unitoy, Kader
+- I Unitoy
+- II Kader/
+46. Bespin Security Guard (Black) — 2 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, PBP, Smile
+- I Unitoy / PBP
+- II Smile
+47. C-3PO (Removable Limbs) — 2 families — versions unverified — Years: 1982 — Factories: 2 different factories: Unitoy, Smile
+- I Unitoy
+- II Smile
+48. Greedo — 2 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
+- I Smile/ PBP
+- II Smile
+49. Hammerhead — 2 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
+- I Smile/ PBP
+- II Smile
