@@ -1,0 +1,102 @@
+Name: Variant Villain knowledge notes
+Aliases: 101 reference guide, accessory production, factory codes, vintage price stickers
+Topic: reference
+Role: guide
+
+Short paraphrase of the remaining Variant Villain knowledge articles: the 101 guide, accessory production, factory codes and price stickers. Vendor-codes remains the factory list used for a named factory. Photographs are not stored.
+
+Accessory Production
+Source name: Variant Villain. Source URL: https://www.variantvillain.com/knowledge/introduction-to-accessories/ Reliability: high. Recorded: 2026-10-04.
+- Accessory Production
+- INTRODUCTION TO COOs
+- COO TERMS
+- ACCESSORY PRODUCTION PROCESS
+- VENDOR CODES
+- The aim of this weapons and accessories guide is to make a comprehensive guide of all weapons and accessories released within the original Star Wars line in the
+- For comparison include comparable bootlegs and repros (made till today).
+- also add good information on producer, factory and belonging COO-family if known.
+- In short: There is the plastic injector and the cavity mould (made out of steel, brass or aluminium.
+- Therefore often referred to as steel mould).
+- The product made out of plastic removed from the cavity mould has different signs and parts.
+- Ejector pins help to remove the plastic product from the cavity mould and have nothing in common with gate scars.
+- In terms of vintage weapons (compared to COO families) it's important to know that weapons were not shot single. They came on sprue trees
+- Still those can come from the same cavity mould.
+- If you call a weapon a variant it's about the different mould not necessarily the position of the EPM.
+- General Terms in COO Collecting
+- > Go to the Accessories Guide
+- Cookie Policy (EU) Privacy Policy Impressum
+
+Vendor Codes
+Source name: Variant Villain. Source URL: https://www.variantvillain.com/knowledge/factory-codes/ Reliability: high. Recorded: 2026-10-04.
+- Vendor Codes
+- INTRODUCTION TO COOs
+- COO TERMS
+- ACCESSORY PRODUCTION PROCESS
+- FACTORY CODES
+- Qualidux
+- Great Shin
+- Hong Kong, China or Macau?
+- QC SAMPLES
+- The first letter describes the location in the ROTJ area: T = Taiwan, M = Macau and H = Hong Kong.
+- The second letter is the factory code.
+- 1. Prior to 32B Backs
+- No vendor codes present.
+- 2. 32B - ESB 48 Backs: Vendor codes can be present in several places
+- K (“Kader” of Hong Kong)
+- U (“Unitoy” of Hong Kong)
+- S (“Smile” of Hong Kong)
+- 3. ROTJ 48 - POTF
+- TJ (“Universal Manufacturers” of Taiwan)
+- TC (Taiwan, Only on vehicles?)
+- HN (“Smile” Hong Kong and Macau)
+- HT (“Unitoy” Hong Kong)
+- HG (“Kader” China, Macau)
+- ME (Macau)
+- MC (Macau, only on vehicles???)
+- Known Vendors
+- “Kader Industrial Co. Ltd.” (known: “K”/”HG”)
+- Location Hong Kong and after '83 with plants in China and Macau.
+- Established in Hong Kong in 1948, Kader celebrates 60 years as a leading plastics and toys manufacturer.
+- In the 70s and 80s, business from foreign clients continued to expand, leading the Company to produce such famous products as the original Star Wars figurines, Teddy Ruxpin
+- The Company also started its Mainland operations, opening its first factory in the border town of Shekou in 1983.
+- The move allowed Kader to overcome labour supply constraints in Hong Kong, making room for further growth.
+- Kenneth Ting, the Company was listed on the Hong Kong Stock Exchange in 1985.
+- homepage: http://www.kader.com.hk/
+- “Unitoy (H.K.) Limited ” (known: “U”/”HT”)
+- Location Hong Kong
+- Unitoy is a member of Uni-Fortune Toys Group which is a toy manufacturer as well as a Hong Kong based company.
+- We own our factories in China and all the tooling, engineering and production are integrated at our China plant.
+- Homepage: http://www.uni-toys.com
+- “Smile Industries Ltd.” (known: “S”/”HN”)
+- Location Hong Kong with plants in Macau.
+- Joseph Law in 1971.
+- Smile is already the leading manufacturer for LED decorative light strings in North America and Canada.
+- Infosite: https://hongkong.mingluji.com/Smile_Industries_Ltd
+- Joe Law - HK Plastic and Toy Industry Pioneer
+- Smile Industries Ltd,
+- CO. LTD. UNITB 7/F. RELIANCE MFY.
+- BLDG. 24 WONG CHUK HANG RD
+- ABERDEEN HK
+- “Universal Manufacturers” (known: “W”?/”TJ”)
+- Location Taiwan
+- This factory was responsible for figure and some vehicle output during the Return of the Jedi era.
+- There's no further info we can offer about this vendor as yet.
+- “Jetta Company Ltd.”
+- (as listed in a Palitoy Far-East document)
+- Established in Hong Kong in 1977.
+- Focus on manufacturing of toys and gifts.
+- Started China factory from 1981.
+- Currently one of the largest OEM toy manufacturers
+- 5 major plants in China
+- Exceeding 40,000 employees.
+- homepage: http://www.jetta.com.hk/
+- “Qualidux Ind. Co Ltd.”
+- (Mentioned on “Rocket Rider” (Biker Scout) QC Sample)
+- homepage: http://www.qualidux.com.hk/
+- “Great Shing” (known: “GS”)
+- 4-LOM
+- QC Sample Kader
+- Rebo Band Microphones
+- Jann Tosh
+- QC Sample Smile
+- AT-AT Driver

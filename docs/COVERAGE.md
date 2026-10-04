@@ -66,6 +66,8 @@ Chat injects a reference file only when `tcLoadFiles` reads it and it is at most
 
 Palitoy UK release years are Warren's own list (1978 to 1983; he wrote "1978 to 1975"). `tools/build-palitoy-releases.py` writes `data-source/palitoy-uk-releases.json` and the `data/references/palitoy-uk-*.txt` files. Each entry cites that list, reliability primary, recorded 2026-10-04, and no public URL. A year question loads that year. A "when" question loads the item's year index. A question about what was not a figure loads the non-figure files. Status notes (unconfirmed, not released, not stated) stay on the entry. `data/references/palitoy-history.txt` is a short paraphrase of the Wikipedia Palitoy article (reliability lower, fetched 2026-10-04). The Fandom Palitoy page was skipped because robots.txt returned a Cloudflare challenge.
 
+Phase B adds short paraphrases of the Variant Villain sections that were not already figure or accessory dossiers. `tools/fetch-vv-phase-b.py` reads the sitemaps one page at a time and writes `data-source/vv-phase-b.json`. `tools/build-vv-phase-b.py` writes `data/references/vv-*.txt` and rebuilds the retrieval index. Each note cites Variant Villain, the page URL, reliability high, and 2026-10-04. Photographs are not stored. Topics now include playset and vehicle. Company cardback guides are role guide, so a Palitoy or Trilogo cardback question ranks those files, while a named figure's debut question still ranks the debut workbook first.
+
 These were split so a long guide is not cut off mid-file. Each part repeats the name, aliases, and source. The Early Bird factory sentence stays in part 1 of R2-D2 and Chewbacca.
 
 - `data/figures/r2-d2-reference-1.txt` and `r2-d2-reference-2.txt`

@@ -1,7 +1,7 @@
 {
   "generated": "2026-10-04",
   "generator": "tools/build-retrieval-index.py",
-  "note": "Not injected into chat. Topic routing reads this file. Palitoy roles: year, when, not-figures, overview, history. Variant-count role: summary.",
+  "note": "Not injected into chat. Topic routing reads this file. Palitoy roles: year, when, not-figures, overview, history. Variant-count role: summary. A Topic line may set playset, vehicle, cardback, coo, factory or variant.",
   "files": [
     {
       "relPath": "accessories/2-1b-mouthpiece.txt",
@@ -6668,6 +6668,1302 @@
       ],
       "years": [],
       "chars": 1868
+    },
+    {
+      "relPath": "references/vv-baggies-10.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv",
+        "10"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv",
+        "10"
+      ],
+      "years": [],
+      "chars": 3440
+    },
+    {
+      "relPath": "references/vv-baggies-11.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv",
+        "11"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv",
+        "11"
+      ],
+      "years": [],
+      "chars": 4469
+    },
+    {
+      "relPath": "references/vv-baggies-12.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv",
+        "12"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv",
+        "12"
+      ],
+      "years": [],
+      "chars": 5651
+    },
+    {
+      "relPath": "references/vv-baggies-13.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv",
+        "13"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv",
+        "13"
+      ],
+      "years": [],
+      "chars": 3906
+    },
+    {
+      "relPath": "references/vv-baggies-2.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "years": [],
+      "chars": 6025
+    },
+    {
+      "relPath": "references/vv-baggies-3.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "years": [],
+      "chars": 5959
+    },
+    {
+      "relPath": "references/vv-baggies-4.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "years": [],
+      "chars": 6474
+    },
+    {
+      "relPath": "references/vv-baggies-5.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "years": [],
+      "chars": 1415
+    },
+    {
+      "relPath": "references/vv-baggies-6.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "years": [],
+      "chars": 6028
+    },
+    {
+      "relPath": "references/vv-baggies-7.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "years": [],
+      "chars": 5658
+    },
+    {
+      "relPath": "references/vv-baggies-8.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "years": [],
+      "chars": 3365
+    },
+    {
+      "relPath": "references/vv-baggies-9.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "years": [],
+      "chars": 4345
+    },
+    {
+      "relPath": "references/vv-baggies.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain baggie guide",
+      "aliases": [
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain baggie guide",
+        "baggies",
+        "mailers",
+        "multi-packs",
+        "Early Bird 4 packs",
+        "Palitoy baggies",
+        "vv"
+      ],
+      "years": [],
+      "chars": 6277
+    },
+    {
+      "relPath": "references/vv-bootlegs-2.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Variant Villain bootlegs",
+      "aliases": [
+        "bootlegs",
+        "knock-offs",
+        "knockoffs",
+        "fakes",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain bootlegs",
+        "bootlegs",
+        "knock-offs",
+        "knockoffs",
+        "fakes",
+        "vv"
+      ],
+      "years": [],
+      "chars": 6366
+    },
+    {
+      "relPath": "references/vv-bootlegs-3.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Variant Villain bootlegs",
+      "aliases": [
+        "bootlegs",
+        "knock-offs",
+        "knockoffs",
+        "fakes",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain bootlegs",
+        "bootlegs",
+        "knock-offs",
+        "knockoffs",
+        "fakes",
+        "vv"
+      ],
+      "years": [],
+      "chars": 5610
+    },
+    {
+      "relPath": "references/vv-bootlegs.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Variant Villain bootlegs",
+      "aliases": [
+        "bootlegs",
+        "knock-offs",
+        "knockoffs",
+        "fakes",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain bootlegs",
+        "bootlegs",
+        "knock-offs",
+        "knockoffs",
+        "fakes",
+        "vv"
+      ],
+      "years": [],
+      "chars": 6496
+    },
+    {
+      "relPath": "references/vv-cardbacks-10.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks",
+        "10"
+      ],
+      "years": [],
+      "chars": 5104
+    },
+    {
+      "relPath": "references/vv-cardbacks-11.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks",
+        "11"
+      ],
+      "years": [],
+      "chars": 6284
+    },
+    {
+      "relPath": "references/vv-cardbacks-12.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks",
+        "12"
+      ],
+      "years": [],
+      "chars": 5738
+    },
+    {
+      "relPath": "references/vv-cardbacks-13.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks",
+        "13"
+      ],
+      "years": [],
+      "chars": 1732
+    },
+    {
+      "relPath": "references/vv-cardbacks-2.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks"
+      ],
+      "years": [],
+      "chars": 5578
+    },
+    {
+      "relPath": "references/vv-cardbacks-3.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks"
+      ],
+      "years": [],
+      "chars": 3608
+    },
+    {
+      "relPath": "references/vv-cardbacks-4.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks"
+      ],
+      "years": [],
+      "chars": 4294
+    },
+    {
+      "relPath": "references/vv-cardbacks-5.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks"
+      ],
+      "years": [],
+      "chars": 4503
+    },
+    {
+      "relPath": "references/vv-cardbacks-6.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks"
+      ],
+      "years": [],
+      "chars": 5019
+    },
+    {
+      "relPath": "references/vv-cardbacks-7.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks"
+      ],
+      "years": [],
+      "chars": 5582
+    },
+    {
+      "relPath": "references/vv-cardbacks-8.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks"
+      ],
+      "years": [],
+      "chars": 6417
+    },
+    {
+      "relPath": "references/vv-cardbacks-9.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks"
+      ],
+      "years": [],
+      "chars": 3763
+    },
+    {
+      "relPath": "references/vv-cardbacks.txt",
+      "folder": "references",
+      "topic": "cardback",
+      "role": "guide",
+      "name": "Variant Villain cardback guides",
+      "aliases": [
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks"
+      ],
+      "keywords": [
+        "Variant Villain cardback guides",
+        "Palitoy cardbacks",
+        "Trilogo cardbacks",
+        "Meccano cardbacks",
+        "Glasslite cardbacks",
+        "Lili Ledy cardbacks",
+        "Top Toys cardbacks",
+        "Clipper cardbacks",
+        "Toy Toni cardbacks",
+        "punch guide",
+        "Darth Vader cardbacks",
+        "Yoda cardbacks",
+        "vv",
+        "cardbacks"
+      ],
+      "years": [],
+      "chars": 5900
+    },
+    {
+      "relPath": "references/vv-coo-notes.txt",
+      "folder": "references",
+      "topic": "coo",
+      "role": "guide",
+      "name": "Variant Villain COO guides",
+      "aliases": [
+        "introduction to COOs",
+        "COO terminology",
+        "how to use the COO guides",
+        "country of origin guide",
+        "vv",
+        "coo",
+        "notes"
+      ],
+      "keywords": [
+        "Variant Villain COO guides",
+        "introduction to COOs",
+        "COO terminology",
+        "how to use the COO guides",
+        "country of origin guide",
+        "vv",
+        "coo",
+        "notes"
+      ],
+      "years": [],
+      "chars": 5317
+    },
+    {
+      "relPath": "references/vv-droids-line-2.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Droids line variation guide",
+      "aliases": [
+        "Droids cartoon figures",
+        "Jann Tosh",
+        "Jord Dusat",
+        "Kea Moll",
+        "vv",
+        "droids",
+        "line"
+      ],
+      "keywords": [
+        "Droids line variation guide",
+        "Droids cartoon figures",
+        "Jann Tosh",
+        "Jord Dusat",
+        "Kea Moll",
+        "vv",
+        "droids",
+        "line"
+      ],
+      "years": [],
+      "chars": 3230
+    },
+    {
+      "relPath": "references/vv-droids-line.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Droids line variation guide",
+      "aliases": [
+        "Droids cartoon figures",
+        "Jann Tosh",
+        "Jord Dusat",
+        "Kea Moll",
+        "vv",
+        "droids",
+        "line"
+      ],
+      "keywords": [
+        "Droids line variation guide",
+        "Droids cartoon figures",
+        "Jann Tosh",
+        "Jord Dusat",
+        "Kea Moll",
+        "vv",
+        "droids",
+        "line"
+      ],
+      "years": [],
+      "chars": 6288
+    },
+    {
+      "relPath": "references/vv-glasslite-2.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Glasslite figure guide",
+      "aliases": [
+        "Glasslite",
+        "Glasslite figures",
+        "Brazil",
+        "vv"
+      ],
+      "keywords": [
+        "Glasslite figure guide",
+        "Glasslite",
+        "Glasslite figures",
+        "Brazil",
+        "vv"
+      ],
+      "years": [],
+      "chars": 4503
+    },
+    {
+      "relPath": "references/vv-glasslite-3.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Glasslite figure guide",
+      "aliases": [
+        "Glasslite",
+        "Glasslite figures",
+        "Brazil",
+        "vv"
+      ],
+      "keywords": [
+        "Glasslite figure guide",
+        "Glasslite",
+        "Glasslite figures",
+        "Brazil",
+        "vv"
+      ],
+      "years": [],
+      "chars": 4544
+    },
+    {
+      "relPath": "references/vv-glasslite.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Glasslite figure guide",
+      "aliases": [
+        "Glasslite",
+        "Glasslite figures",
+        "Brazil",
+        "vv"
+      ],
+      "keywords": [
+        "Glasslite figure guide",
+        "Glasslite",
+        "Glasslite figures",
+        "Brazil",
+        "vv"
+      ],
+      "years": [],
+      "chars": 4612
+    },
+    {
+      "relPath": "references/vv-kenner-hard-torso.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Kenner hard-torso and mould-colour notes",
+      "aliases": [
+        "hard torso",
+        "mould colour variants",
+        "mold color variants",
+        "vv",
+        "kenner",
+        "hard",
+        "torso"
+      ],
+      "keywords": [
+        "Kenner hard-torso and mould-colour notes",
+        "hard torso",
+        "mould colour variants",
+        "mold color variants",
+        "vv",
+        "kenner",
+        "hard",
+        "torso"
+      ],
+      "years": [],
+      "chars": 4337
+    },
+    {
+      "relPath": "references/vv-knowledge-2.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain knowledge notes",
+      "aliases": [
+        "101 reference guide",
+        "accessory production",
+        "factory codes",
+        "vintage price stickers",
+        "vv",
+        "knowledge"
+      ],
+      "keywords": [
+        "Variant Villain knowledge notes",
+        "101 reference guide",
+        "accessory production",
+        "factory codes",
+        "vintage price stickers",
+        "vv",
+        "knowledge"
+      ],
+      "years": [],
+      "chars": 5648
+    },
+    {
+      "relPath": "references/vv-knowledge.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "guide",
+      "name": "Variant Villain knowledge notes",
+      "aliases": [
+        "101 reference guide",
+        "accessory production",
+        "factory codes",
+        "vintage price stickers",
+        "vv",
+        "knowledge"
+      ],
+      "keywords": [
+        "Variant Villain knowledge notes",
+        "101 reference guide",
+        "accessory production",
+        "factory codes",
+        "vintage price stickers",
+        "vv",
+        "knowledge"
+      ],
+      "years": [],
+      "chars": 4976
+    },
+    {
+      "relPath": "references/vv-lili-ledy.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Lili Ledy guide",
+      "aliases": [
+        "Lili Ledy",
+        "Lilly Ledy",
+        "vv",
+        "lili",
+        "ledy"
+      ],
+      "keywords": [
+        "Lili Ledy guide",
+        "Lili Ledy",
+        "Lilly Ledy",
+        "vv",
+        "lili",
+        "ledy"
+      ],
+      "years": [],
+      "chars": 803
+    },
+    {
+      "relPath": "references/vv-playsets.txt",
+      "folder": "references",
+      "topic": "playset",
+      "role": "guide",
+      "name": "Variant Villain playsets",
+      "aliases": [
+        "playsets",
+        "special offer playsets",
+        "Creature Cantina",
+        "Hoth Ice Planet",
+        "Death Star playset",
+        "Sandcrawler",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain playsets",
+        "playsets",
+        "special offer playsets",
+        "Creature Cantina",
+        "Hoth Ice Planet",
+        "Death Star playset",
+        "Sandcrawler",
+        "vv"
+      ],
+      "years": [],
+      "chars": 1111
+    },
+    {
+      "relPath": "references/vv-poch.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Poch and PBP guide",
+      "aliases": [
+        "Poch",
+        "PBP",
+        "Poch guide",
+        "vv"
+      ],
+      "keywords": [
+        "Poch and PBP guide",
+        "Poch",
+        "PBP",
+        "Poch guide",
+        "vv"
+      ],
+      "years": [],
+      "chars": 4624
+    },
+    {
+      "relPath": "references/vv-top-toys-2.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Top Toys guide",
+      "aliases": [
+        "Top Toys",
+        "vv",
+        "top",
+        "toys"
+      ],
+      "keywords": [
+        "Top Toys guide",
+        "Top Toys",
+        "vv",
+        "top",
+        "toys"
+      ],
+      "years": [],
+      "chars": 657
+    },
+    {
+      "relPath": "references/vv-top-toys.txt",
+      "folder": "references",
+      "topic": "variant",
+      "role": "guide",
+      "name": "Top Toys guide",
+      "aliases": [
+        "Top Toys",
+        "vv",
+        "top",
+        "toys"
+      ],
+      "keywords": [
+        "Top Toys guide",
+        "Top Toys",
+        "vv",
+        "top",
+        "toys"
+      ],
+      "years": [],
+      "chars": 6311
+    },
+    {
+      "relPath": "references/vv-vehicles.txt",
+      "folder": "references",
+      "topic": "vehicle",
+      "role": "guide",
+      "name": "Variant Villain vehicles and mini-rigs",
+      "aliases": [
+        "vehicles",
+        "mini-rigs",
+        "mini rigs",
+        "die-cast",
+        "Glasslite TIE Fighter",
+        "Glasslite X-Wing",
+        "Landspeeder",
+        "special offer vehicles",
+        "vv"
+      ],
+      "keywords": [
+        "Variant Villain vehicles and mini-rigs",
+        "vehicles",
+        "mini-rigs",
+        "mini rigs",
+        "die-cast",
+        "Glasslite TIE Fighter",
+        "Glasslite X-Wing",
+        "Landspeeder",
+        "special offer vehicles",
+        "vv"
+      ],
+      "years": [],
+      "chars": 5496
     },
     {
       "relPath": "terms/collector_terms.json",

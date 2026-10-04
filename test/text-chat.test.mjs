@@ -1260,7 +1260,7 @@ await test("retrieval index routes Palitoy and records the other topics", async 
   assert.equal(tcPalitoyIntent("Is Palitoy a factory?"), null);
   const index = JSON.parse(fs.readFileSync(path.join(root, "data/retrieval-index.json"), "utf8"));
   const topics = new Set(index.files.map(file => file.topic));
-  for (const topic of ["figure", "accessory", "cardback", "coo", "factory", "palitoy", "variant"]) {
+  for (const topic of ["figure", "accessory", "cardback", "coo", "factory", "palitoy", "variant", "playset", "vehicle"]) {
     assert.ok(topics.has(topic), `missing topic ${topic}`);
   }
   const yearFile = index.files.find(file => file.relPath === "references/palitoy-uk-1981.txt");
@@ -1315,6 +1315,49 @@ await test("Palitoy release files match the generator and stay under the cap", a
     if (text.length > 7000) over.push(`${entry} ${text.length}`);
   }
   assert.equal(over.length, 0, over.join("\n"));
+});
+
+await test("Variant Villain vehicle, playset and cardback guides are retrieved", async () => {
+  const vehicles = await call({ message: "Which mini-rigs were special offers?" });
+  assert.ok(vehicles.json.sources.includes("references/vv-vehicles.txt"), vehicles.json.sources.join(", "));
+  const vehiclePrompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(vehiclePrompt, /MLC-3/);
+  assert.match(vehiclePrompt, /presumed/);
+  assert.match(vehiclePrompt, /Reliability: high/);
+  assert.match(vehiclePrompt, /Recorded: 2026-10-04/);
+  assert.doesNotMatch(vehiclePrompt, /wp-content\/uploads/);
+
+  const playsets = await call({ message: "Which playsets were special offers?" });
+  assert.equal(playsets.json.sources[0], "references/vv-playsets.txt");
+  assert.match(calls.at(-1).body.messages.at(-1).content, /Hoth Ice Planet|Jabbas Dungeon playset|Creature Cantina/);
+
+  const cards = await call({ message: "What Palitoy cardbacks does Variant Villain list?" });
+  assert.match(cards.json.sources[0], /^references\/vv-cardbacks/);
+  assert.match(calls.at(-1).body.messages.at(-1).content, /Palitoy/);
+
+  const vader = await call({ message: "which card did Vader come on?" });
+  assert.match(vader.json.sources[0], /compatibility\/debut-cardbacks-reference/, vader.json.sources.join(", "));
+});
+
+await test("phase B paraphrase files match the generator and record skips", async () => {
+  const { execFileSync } = await import("node:child_process");
+  const dir = path.join(root, "data/references");
+  const names = fs.readdirSync(dir).filter(name => name.startsWith("vv-")).sort();
+  const before = Object.fromEntries(names.map(name => [name, fs.readFileSync(path.join(dir, name), "utf8")]));
+  const indexBefore = fs.readFileSync(path.join(root, "data/retrieval-index.json"), "utf8");
+  execFileSync("python3", ["tools/build-vv-phase-b.py"], { cwd: root });
+  const after = fs.readdirSync(dir).filter(name => name.startsWith("vv-")).sort();
+  assert.deepEqual(after, names);
+  for (const name of names) {
+    assert.equal(fs.readFileSync(path.join(dir, name), "utf8"), before[name], name);
+  }
+  assert.equal(fs.readFileSync(path.join(root, "data/retrieval-index.json"), "utf8"), indexBefore);
+  const snapshot = JSON.parse(fs.readFileSync(path.join(root, "data-source/vv-phase-b.json"), "utf8"));
+  assert.equal(snapshot.reliability, "high");
+  assert.equal(snapshot.fetched, "2026-10-04");
+  assert.equal(snapshot.errors.length, 0);
+  assert.ok(snapshot.skipped.some(item => item.reason === "image gallery"));
+  assert.ok(snapshot.skipped.some(item => /figure or accessory page already/.test(item.reason)));
 });
 
 console.error = quietErrors;
