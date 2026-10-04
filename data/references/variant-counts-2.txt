@@ -1,142 +1,73 @@
 Name: Variant and outfit counts
 Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
-Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Do not guess a count that is not in this summary. An unverified figure has no number.
+Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Variant Villain's COO family is the moulds of one character that are the same mould, including an exact duplicate and a changed country stamp. Its terminology page treats a new steel mould as slightly different, and so as another family; that is the author's view. The numbers are not the order the moulds were used. Source: https://www.variantvillain.com/knowledge/coo-terminology/ and https://www.variantvillain.com/knowledge/how-to-use-the-coo-guides/ Reliability: high. Recorded: 2026-10-04. Each factory is named once, with its Variant Villain family numbers in brackets. Do not guess a count that is not in this summary. An unverified figure has no number.
+2. Luke Skywalker — 32 versions — family count unverified — Years: not recorded — Factories: 7 different factories: Kader, PBP, Meccano, Glasslite, Unitoy, Taiwan, Smile
+- Kader, with PBP, Meccano and Glasslite (Variant Villain family I): 10 versions
+- Unitoy, with PBP (Variant Villain family II): 12 versions
+- Taiwan (Variant Villain family III): 5 versions
+- Smile (Variant Villain family IV): 5 versions
+3. Luke Skywalker (Bespin Fatigues) — 30 versions across 3 families — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
+- Smile (Variant Villain family I): 7 versions
+- Unitoy (Variant Villain family II): 9 versions
+- Kader (Variant Villain family III): 14 versions
+4. Yoda — 29 versions across 4 families — Years: not recorded — Factories: 4 different factories: Kader, Unitoy, Smile, Top Toys
+- Kader, HK (Variant Villain family I): 9 versions
+- Unitoy (Variant Villain family II): 14 versions
+- Smile (Variant Villain family III): 5 versions
+- Top Toys (Variant Villain family IV): 1 version
+5. Ben (Obi-Wan) Kenobi — 27 versions across 3 families — Years: from 1978 — Factories: 3 different factories: Unitoy, Lili Ledy, Kader
+- Unitoy (Variant Villain families I and II): I, 6 versions; II with Lili Ledy, 8 versions
+- Kader (Variant Villain family III): 13 versions
 6. Sand People — 25 versions across 5 families — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, Meccano
-- I Unitoy — 5 versions
-- II Unitoy — 5 versions
-- III Kader — 3 versions
-- IV Kader/ Meccano — 5 versions
-- V Kader — 7 versions
+- Unitoy (Variant Villain families I and II): I, 5 versions; II, 5 versions
+- Kader (Variant Villain families III, IV and V): III, 3 versions; IV with Meccano, 5 versions; V, 7 versions
 7. Han Solo (Hoth Outfit) — 20 versions across 3 families — Years: not recorded — Factories: 4 different factories: Unitoy, Kader, Smile, PBP
-- I Unitoy/ Kader China — 5 versions
-- II Smile — 2 versions
-- III Kader/ PBP — 13 versions
+- Unitoy, with Kader (Variant Villain family I): 5 versions
+- Smile (Variant Villain family II): 2 versions
+- Kader, with PBP (Variant Villain family III): 13 versions
 8. IG-88 — 17 versions across 3 families — Years: not recorded — Factories: 3 different factories: Smile, Kader, Unitoy
-- I Smile — 3 versions
-- II Kader — 3 versions
-- III Unitoy — 11 versions
+- Smile (Variant Villain family I): 3 versions
+- Kader (Variant Villain family II): 3 versions
+- Unitoy (Variant Villain family III): 11 versions
 9. Lando Calrissian — 14 versions — family count unverified — Years: not recorded — Factories: 3 different factories: Kader, Smile, Unitoy
-- I KADER — 3 versions
-- II SMILE — 4 versions
-- III Unitoy — 7 versions
+- Kader (Variant Villain family I): 3 versions
+- Smile (Variant Villain family II): 4 versions
+- Unitoy (Variant Villain family III): 7 versions
 10. R5-D4 — 12 versions across 3 families — Years: not recorded — Factories: 2 different factories: Unitoy, Kader
-- I Unitoy — 6 versions
-- V Unitoy — 2 versions
-- VIII Kader — 4 versions
+- Unitoy (Variant Villain families I and V): I, 6 versions; V, 2 versions
+- Kader (Variant Villain family VIII): 4 versions
 11. Teebo — 12 versions across 2 families — Years: not recorded — Factories: 2 different factories: Unitoy, Taiwan
-- I Unitoy/ — 5 versions
-- II Taiwan (U.M.) — 7 versions
+- Unitoy (Variant Villain family I): 5 versions
+- Taiwan (Variant Villain family II): 7 versions
 12. Klaatu — 10 versions across 3 families — Years: not recorded — Factories: 2 different factories: Smile/Lili Ledy, Unitoy
-- I Smile — 2 versions
-- II Unitoy — 4 versions
-- III Lili Ledy (MIM) — 4 versions
+- Smile/Lili Ledy (Variant Villain families I and III): I is Smile, 2 versions; III is Lili Ledy (MIM), 4 versions
+- Unitoy (Variant Villain family II): 4 versions
 13. Amanaman — 4 versions across 1 family — Years: not recorded — Factories: 1 factory: Smile
-- I Smile — 4 versions
+- Smile (Variant Villain family I): 4 versions
 14. Artoo-Detoo (R2-D2) with pop-up Lightsaber — 4 versions across 1 family — Years: not recorded — Factories: 2 different factories: Smile, Glasslite
-- I Smile/ Glasslite — 4 versions
+- Smile, with Glasslite (Variant Villain family I): 4 versions
 15. Droids R2-D2 — 4 versions across 1 family — Years: not recorded — Factories: 2 different factories: Smile, Glasslite
-- I Smile/ Glasslite — 4 versions
+- Smile, with Glasslite (Variant Villain family I): 4 versions
 16. Barada — 2 versions across 1 family — Years: not recorded — Factories: 1 factory: Smile
-- I Smile — 2 versions
+- Smile (Variant Villain family I): 2 versions
 17. EV-9D9 — 2 versions across 1 family — Years: 1985 — Factories: 1 factory: Kader
-- I Kader — 2 versions
+- Kader (Variant Villain family I): 2 versions
 18. Imperial Dignitary — 2 versions across 1 family — Years: 1985 — Factories: 1 factory: Kader
-- I Kader — 2 versions
+- Kader (Variant Villain family I): 2 versions
 19. Lumat — 2 versions across 1 family — Years: not recorded — Factories: 1 factory: Lili Ledy
-- I Lili Ledy (MIM) — 2 versions
+- Lili Ledy, MIM (Variant Villain family I): 2 versions
 20. Paploo — 2 versions across 1 family — Years: 1984 — Factories: 1 factory: Lili Ledy
-- I Lili Ledy (MIM) — 2 versions
+- Lili Ledy, MIM (Variant Villain family I): 2 versions
 21. Yak Face — 2 versions across 1 family — Years: not recorded — Factories: 1 factory: Smile
-- I Smile — 2 versions
+- Smile (Variant Villain family I): 2 versions
 
-Families documented, versions unverified (the pictured lists or the sheet labels do not cover every family, so no version total is given):
+Families documented, versions unverified (the pictured lists or the sheet labels do not cover every family, so no version total is given). Variant Villain's COO family is the moulds of one character that are the same mould, including an exact duplicate and a changed country stamp. Its terminology page treats a new steel mould as slightly different, and so as another family; that is the author's view. The numbers are not the order the moulds were used. Source: https://www.variantvillain.com/knowledge/coo-terminology/ and https://www.variantvillain.com/knowledge/how-to-use-the-coo-guides/ Reliability: high. Recorded: 2026-10-04. Each line is one factory, with the Variant Villain family numbers in brackets.
 1. C-3PO — 7 families — versions unverified — Years: 1978 to 1985 — Factories: 3 different factories: Kader, Unitoy, Takara
-- I Kader
-- II Unitoy/
-- III Kader/
-- IV Unitoy
-- V Kader
-- VI Takara
-- VII Unitoy
+- Kader (Variant Villain families I, III and V)
+- Unitoy (Variant Villain families II, IV and VII)
+- Takara (Variant Villain family VI)
 2. R2-D2 — 7 families — versions unverified — Years: 1978 to 1981 — Factories: 4 different factories: Unitoy, Smile/Lili Ledy, Kader, Taiwan
-- I Unitoy/
-- II Smile
-- III Kader/
-- IV Kader/ Lili Ledy Retorno
-- V Unitoy
-- VI Taiwan
-- VII Kader
-3. Stormtrooper — 7 families (text index I-VI; COO sheet image shows I-VII) — versions unverified — Years: 1978 to 1985 — Factories: 6 different factories: Kader, Unitoy, PBP, Smile/Lili Ledy, Takara, Top Toys
-- I Kader/ China
-- II Unitoy
-- III Unitoy/ PBP/ Lili Ledy
-- IV Smile
-- V Takara
-- VI Top Toys
-- VII PBP/Lili Ledy
-4. Chewbacca — 6 families — versions unverified — Years: 1978 to 1984 — Factories: 5 different factories: Unitoy, Kader, Smile/Lili Ledy, Taiwan, Top Toys
-- I Unitoy/
-- II F2.1 Kader/
-- III Smile
-- IV Taiwan
-- V Smile/ Lili Ledy
-- VI Top Toys
-5. Luke Skywalker (Jedi Knight Outfit) — 6 families — versions unverified — Years: not recorded — Factories: 4 different factories: Smile, Unitoy, Taiwan, Top Toys
-- I Smile
-- II Smile NCOO
-- III Smile Macau NCOO
-- IV Unitoy/
-- V Universal Manufacturers (Taiwan)
-- VI Top Toys
-6. Chief Chirpa — 5 families — versions unverified — Years: 1983 — Factories: 3 different factories: Smile/Lili Ledy, Kader, Top Toys
-- I Smile
-- II Kader
-- III Kader
-- IV Lili Ledy
-- V Top Toys
-7. Princess Leia Organa — 5 families — versions unverified — Years: 1978 to 1984 — Factories: 4 different factories: Kader, Unitoy, Smile, Taiwan
-- I Kader/
-- II Unitoy
-- III Kader/
-- IV Smile
-- V Taiwan
-8. AT-AT Driver — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
-- I Kader/
-- II Unitoy/
-- III Smile MIHK
-- IV Smile NCOO
-9. Bib Fortuna — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Kader, Taiwan
-- I Smile
-- II Kader/
-- III Taiwan (U.M.)
-- IV Smile
-10. Biker Scout — 4 families — versions unverified — Years: 1983 — Factories: 6 different factories: Kader, PBP, Meccano, Taiwan, Unitoy, Lili Ledy
-- I Kader/ PBP/ Meccano
-- II Taiwan (U.M.)
-- III Unitoy
-- IV Lili Ledy (MIM)
-11. Boba Fett — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Meccano, Taiwan
-- I Kader/ Meccano
-- II Kader
-- III Kader
-- IV Taiwan
-12. Bossk — 4 families — versions unverified — Years: not recorded — Factories: 4 different factories: Kader, Smile, Unitoy, PBP
-- I Kader
-- II Smile
-- III Unitoy
-- IV PBP
-13. Gamorrean Guard — 4 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile/Lili Ledy
-- I Kader
-- II Unitoy/ Macau
-- III Smile
-- IV Lili Ledy
-14. Jawa — 4 families — versions unverified — Years: not recorded — Factories: 2 different factories: Kader, Unitoy
-- I Kader
-- II Kader/ Kader China
-- III Unitoy
-- IV Unitoy/
-15. Logray (Ewok Medicine Man) — 4 families — versions unverified — Years: 1983 — Factories: 4 different factories: Unitoy, Kader, Lili Ledy, Top Toys
-- I Unitoy/Macau
-- II Kader
-- III Lili Ledy (MIM)
-- IV Top Toys
+- Unitoy (Variant Villain families I and V)
+- Smile (Variant Villain family II)
+- Kader (Variant Villain families III, IV and VII): IV with Lili Ledy
+- Taiwan (Variant Villain family VI)

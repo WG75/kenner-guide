@@ -1,72 +1,88 @@
 Name: Variant and outfit counts
 Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions
-Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Do not guess a count that is not in this summary. An unverified figure has no number.
-50. Han Solo (in Trench Coat) — 2 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, Kader
-- I Smile
-- II Kader/
-51. Luke Skywalker (Hoth Battle Gear) — 2 families — versions unverified — Years: 1981 — Factories: 4 different factories: Unitoy, PBP, Meccano, Smile
-- I Unitoy / PBP / Meccano
-- II Smile
-52. Luke Skywalker (X-Wing Pilot) — 2 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, PBP, Kader
-- I Unitoy/ PBP
-- II Kader/ Kader China
-53. Power Droid — 2 families — versions unverified — Years: not recorded — Factories: 1 factory: Kader
-- I Kader
-- II Kader
-54. Princess Leia Organa (in Combat Poncho) — 2 families — versions unverified — Years: 1984 — Factories: 2 different factories: Smile, Kader
-- I Smile
-- II Kader/
-55. Prune Face — 2 families — versions unverified — Years: 1984 — Factories: 2 different factories: Smile, Kader
-- I Smile
-- II Kader/
-56. Rancor Keeper — 2 families — versions unverified — Years: 1984 — Factories: 2 different factories: Smile, Taiwan
-- I Smile/
-- II Taiwan (U.M.)
-57. Walrus Man — 2 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
-- I Smile/ PBP
-- II Smile
-58. Wicket W. Warrick — 2 families — versions unverified — Years: 1984 — Factories: 2 different factories: Smile, Taiwan
-- I Smile/
-- II Taiwan (U.M.)
-59. Zuckuss — 2 families — versions unverified — Years: 1982 — Factories: 2 different factories: Smile, Unitoy
-- I Smile
-- II Unitoy/
-60. A-Wing Pilot — 1 family — versions unverified — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-61. Anakin Skywalker — 1 family — versions unverified — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-62. Han Solo (in Carbonite Chamber) — 1 family — versions unverified — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-63. Imperial Gunner — 1 family — versions unverified — Years: 1985 — Factories: 1 factory: Kader
-- I Kader
-64. Klaatu (in Skiff Guard Outfit) — 1 family — versions unverified — Years: 1984 — Factories: 1 factory: Smile
-- I Smile/
-65. Lando Calrissian (General Pilot) — 1 family — versions unverified — Years: not recorded — Factories: 1 factory: Smile
-- I Smile
-66. Luke Skywalker (Imperial Stormtrooper Outfit) — 1 family — versions unverified — Years: 1985 — Factories: 1 factory: Kader
-- I Kader
-67. Luke Skywalker (in Battle Poncho) — 1 family — versions unverified — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-68. Nikto — 1 family — versions unverified — Years: 1984 — Factories: 1 factory: Smile
-- I Smile/
-69. Romba — 1 family — versions unverified — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-70. Warok — 1 family — versions unverified — Years: 1985 — Factories: 1 factory: Smile
-- I Smile
-
-Unverified (no readable roman family grid on the COO sheet or figure-guide images, so no family count is given):
-- 4-LOM — https://www.variantvillain.com/characters/esb/4-lom/ — Overview photo has no roman family headers.
-- 8D8 — https://www.variantvillain.com/characters/rotj/8d8/ — Close-up photos are numbered 1-2 and are not a roman family grid.
-- Death Star Droid — https://www.variantvillain.com/characters/sw/death-star-droid/ — Overview photo has no roman family headers.
-- Droids C-3PO — https://www.variantvillain.com/characters/droids/droids-c-3po/ — Loose-figure photos have no roman family headers.
-- Dulok Scout — https://www.variantvillain.com/characters/droids/dulok-scout/ — No COO sheet image on the page.
-- Dulok Shaman — https://www.variantvillain.com/characters/droids/dulok-shaman/ — No COO sheet image on the page.
-- General Madine — https://www.variantvillain.com/characters/rotj/general-madine/ — The only image is a loose-figure photo with no roman grid.
-- King Gorneesh — https://www.variantvillain.com/characters/droids/king-gorneesh/ — No COO sheet image on the page.
-- Logray (Ewoks) — https://www.variantvillain.com/characters/droids/logray-ewoks/ — No COO sheet image on the page.
-- Rebel Commando — https://www.variantvillain.com/characters/rotj/rebel-commando/ — Close-up photos are numbered 1-3 and are not a roman family grid.
-- Squid Head — https://www.variantvillain.com/characters/rotj/squid-head/ — Close-up photos are numbered 1-3 and are not a roman family grid.
-- Urgah Lady Gorneesh — https://www.variantvillain.com/characters/droids/urgah-lady-gorneesh/ — No COO sheet image on the page.
-- Wicket W.Warrick (Ewoks) — https://www.variantvillain.com/characters/droids/wicket-w-warrick/ — No COO sheet image. The page says a later sheet is coming soon. The Return of the Jedi Wicket sheet is a different figure and shows two families.
-
-Sources: live Variant Villain character pages fetched 2026-10-04, stored in data-source/vv-variant-counts.json. Outfit totals use the catalog names in data/catalog-1.json through data/catalog-6.json. Regenerated by tools/build-variant-counts.py.
+Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Variant Villain's COO family is the moulds of one character that are the same mould, including an exact duplicate and a changed country stamp. Its terminology page treats a new steel mould as slightly different, and so as another family; that is the author's view. The numbers are not the order the moulds were used. Source: https://www.variantvillain.com/knowledge/coo-terminology/ and https://www.variantvillain.com/knowledge/how-to-use-the-coo-guides/ Reliability: high. Recorded: 2026-10-04. Each factory is named once, with its Variant Villain family numbers in brackets. Do not guess a count that is not in this summary. An unverified figure has no number.
+24. Han Solo — 3 families — versions unverified — Years: 1978 to 1985 — Factories: 3 different factories: Unitoy, Kader, PBP
+- Unitoy (Variant Villain family I)
+- Kader (Variant Villain family II)
+- PBP (Variant Villain family III)
+25. Han Solo (Bespin Outfit) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, Kader, Smile
+- Unitoy (Variant Villain family I)
+- Kader (Variant Villain family II)
+- Smile (Variant Villain family III)
+26. Imperial Commander — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Smile/Lili Ledy, Unitoy, PBP, Kader
+- Smile (Variant Villain family I)
+- Unitoy, with PBP and Lili Ledy (Variant Villain family II)
+- Kader (Variant Villain family III)
+27. Imperial Stormtrooper (Hoth Battle Gear) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
+- Kader (Variant Villain family I)
+- Unitoy (Variant Villain family II)
+- Smile (Variant Villain family III)
+28. Imperial Tie Fighter Pilot — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Smile, Unitoy, PBP, Kader
+- Smile (Variant Villain family I)
+- Unitoy, with PBP (Variant Villain family II)
+- Kader (Variant Villain family III)
+29. Lando Calrissian (Skiff Guard Disguise) — 3 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile/Lili Ledy, Unitoy
+- Smile/Lili Ledy (Variant Villain families I and III): I is Smile; III is Lili Ledy (MIM)
+- Unitoy (Variant Villain family II)
+30. Leia (Hoth Outfit) — 3 families — versions unverified — Years: not recorded — Factories: 4 different factories: Kader, Smile, Unitoy, Meccano
+- Kader (Variant Villain family I)
+- Smile (Variant Villain family II)
+- Unitoy, with Meccano (Variant Villain family III)
+31. Leia Organa (Bespin Gown) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Kader, Unitoy, Smile
+- Kader (Variant Villain family I)
+- Unitoy (Variant Villain family II)
+- Smile (Variant Villain family III)
+32. Lobot — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
+- Smile (Variant Villain family I)
+- Unitoy (Variant Villain family II)
+- Kader (Variant Villain family III)
+33. Nien Nunb — 3 families — versions unverified — Years: 1983 — Factories: 2 different factories: Unitoy, Smile/Lili Ledy
+- Unitoy (Variant Villain family I)
+- Smile/Lili Ledy (Variant Villain families II and III): II is Smile; III is Lili Ledy (MIM)
+34. Princess Leia Organa (Boushh Disguise) — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile/Lili Ledy, Unitoy, Taiwan
+- Smile, Macau (Variant Villain family I)
+- Unitoy, with Lili Ledy (Variant Villain family II)
+- Taiwan (Variant Villain family III)
+35. Rebel Commander — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, Smile, Kader
+- Unitoy (Variant Villain family I)
+- Smile (Variant Villain family II)
+- Kader (Variant Villain family III)
+36. Rebel Soldier (Hoth Battle Gear) — 3 families — versions unverified — Years: not recorded — Factories: 5 different factories: Kader, Unitoy, Meccano, Smile, PBP
+- Kader (Variant Villain family I)
+- Unitoy, with Meccano (Variant Villain family II)
+- Smile, with PBP (Variant Villain family III)
+37. Ree Yees — 3 families — versions unverified — Years: 1983 — Factories: 2 different factories: Smile/Lili Ledy, Taiwan
+- Smile/Lili Ledy (Variant Villain families I and III): I is Smile; III is Lili Ledy (MIM)
+- Taiwan (Variant Villain family II)
+38. Snaggletooth — 3 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
+- Smile (Variant Villain families I, II and III): III with PBP
+39. The Emperor — 3 families — versions unverified — Years: 1983 — Factories: 2 different factories: Smile, Unitoy
+- Smile (Variant Villain family I)
+- Unitoy (Variant Villain families II and III)
+40. Ugnaught — 3 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, Kader, Smile
+- Unitoy (Variant Villain family I)
+- Kader (Variant Villain family II)
+- Smile (Variant Villain family III)
+41. Weequay — 3 families — versions unverified — Years: not recorded — Factories: 2 different factories: Unitoy, Smile/Lili Ledy
+- Unitoy (Variant Villain families I and III)
+- Smile/Lili Ledy (Variant Villain family II)
+42. (Twin-Pod) Cloud Car Pilot — 2 families — versions unverified — Years: not recorded — Factories: 3 different factories: Smile/Lili Ledy, Unitoy, PBP
+- Smile/Lili Ledy (Variant Villain family I)
+- Unitoy, with PBP (Variant Villain family II)
+43. At-At Commander — 2 families — versions unverified — Years: 1981 — Factories: 3 different factories: Smile, Unitoy, PBP
+- Smile (Variant Villain family I)
+- Unitoy, with PBP (Variant Villain family II)
+44. AT-ST Driver — 2 families — versions unverified — Years: 1984 — Factories: 3 different factories: Taiwan, Unitoy, Lili Ledy
+- Taiwan (Variant Villain family I)
+- Unitoy, with Lili Ledy (Variant Villain family II)
+45. B-Wing Pilot — 2 families — versions unverified — Years: 1984 — Factories: 2 different factories: Unitoy, Kader
+- Unitoy (Variant Villain family I)
+- Kader (Variant Villain family II)
+46. Bespin Security Guard (Black) — 2 families — versions unverified — Years: not recorded — Factories: 3 different factories: Unitoy, PBP, Smile
+- Unitoy, with PBP (Variant Villain family I)
+- Smile (Variant Villain family II)
+47. C-3PO (Removable Limbs) — 2 families — versions unverified — Years: 1982 — Factories: 2 different factories: Unitoy, Smile
+- Unitoy (Variant Villain family I)
+- Smile (Variant Villain family II)
+48. Greedo — 2 families — versions unverified — Years: not recorded — Factories: 2 different factories: Smile, PBP
+- Smile (Variant Villain families I and II): I with PBP

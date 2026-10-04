@@ -17,12 +17,17 @@ figure beyond those.
 
 import json
 import re
+import subprocess
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data"
 SNAPSHOT = ROOT / "data-source" / "vv-variant-counts.json"
-MAX_CHARS = 6800
+# Stay under the chat cap, and leave room for the Vader dossier beside the
+# first two parts. A count answer injects at most those two parts plus the
+# dossier, within 20,000 characters.
+MAX_CHARS = 7000
 OUT_DIR = DATA / "references"
 OUT_STEM = "variant-counts"
 
@@ -76,12 +81,215 @@ def load_snapshot():
     return data, by_url
 
 
-def family_label(family):
-    numeral = family["numeral"].upper()
-    label = re.sub(r"\s+", " ", (family.get("label") or "")).strip()
-    if label:
-        return f"{numeral} {label}"
-    return numeral
+# Paraphrase of Variant Villain's own pages, fetched 2026-10-04. Not a guess
+# about what a family is. The chat copies this, then the factory groups.
+FAMILY_SENTENCE = (
+    "Variant Villain's COO family is the moulds of one character that are the same mould, "
+    "including an exact duplicate and a changed country stamp. "
+    "Its terminology page treats a new steel mould as slightly different, and so as another family; that is the author's view. "
+    "The numbers are not the order the moulds were used. "
+    "Source: https://www.variantvillain.com/knowledge/coo-terminology/ "
+    "and https://www.variantvillain.com/knowledge/how-to-use-the-coo-guides/ "
+    "Reliability: high. Recorded: 2026-10-04."
+)
+
+# Vader's page is the one that says how its repeated factory names are told apart.
+VADER_FAMILY_NOTE = (
+    "- Vader's guide sorts by COO family, then torso mould, because those factories mixed moulds. "
+    "Unitoy V is only torso mould M5. VI and VII mix M5 and M6 and are told apart by the foot mould. "
+    "VIII is M6 and M7, also used at PBP. "
+    "Taiwan X and XI differ only slightly between M9 and M10, which may be wear or different plastic. "
+    "Source: https://www.variantvillain.com/characters/sw/darth-vader/ Reliability: high. Recorded: 2026-10-04."
+)
+
+# Stamp and place words the page prints on a family label. China is not here:
+# Kader China is Kader. Retorno and Regreso are card lines, not a mould or stamp.
+QUALIFIER_RE = re.compile(r"\b(MIM|NCOO|MIHK|Macau|HK)\b|\b(F\d+(?:\.\d+)?)\b", re.I)
+QUALIFIER_CANON = {
+    "mim": "MIM",
+    "ncoo": "NCOO",
+    "mihk": "MIHK",
+    "macau": "Macau",
+    "hk": "HK",
+}
+
+
+def join_and(items):
+    items = [item for item in items if item]
+    if not items:
+        return ""
+    if len(items) == 1:
+        return items[0]
+    if len(items) == 2:
+        return f"{items[0]} and {items[1]}"
+    return ", ".join(items[:-1]) + " and " + items[-1]
+
+
+def factory_keys(label):
+    found = []
+    for key, pattern in FACTORY_RULES:
+        for match in pattern.finditer(label or ""):
+            found.append((match.start(), key))
+    found.sort()
+    keys = []
+    for _, key in found:
+        if key not in keys:
+            keys.append(key)
+    return keys
+
+
+def smile_display(labels):
+    saw_smile = any(re.search(r"\bsmile\b", label or "", re.I) for label in labels)
+    saw_lili = any(re.search(r"\blili\s+ledy\b|\bll\b", label or "", re.I) for label in labels)
+    if saw_smile and saw_lili:
+        return "Smile/Lili Ledy"
+    if saw_lili:
+        return "Lili Ledy"
+    if saw_smile:
+        return "Smile"
+    return "Smile/Lili Ledy"
+
+
+def factory_display(key, labels):
+    if key == "smile":
+        return smile_display(labels)
+    return FACTORY_NAMES[key]
+
+
+def label_qualifiers(label):
+    found = []
+    for match in QUALIFIER_RE.finditer(label or ""):
+        token = match.group(1) or match.group(2)
+        canon = QUALIFIER_CANON.get(token.lower(), token)
+        if canon not in found:
+            found.append(canon)
+    return found
+
+
+def vv_reference(numerals):
+    noun = "family" if len(numerals) == 1 else "families"
+    return f"Variant Villain {noun} {join_and(numerals)}"
+
+
+def co_factory_names(family, primary):
+    label = family.get("label") or ""
+    names = []
+    for key in factory_keys(label):
+        if key == primary:
+            continue
+        name = factory_display(key, [label])
+        if name not in names:
+            names.append(name)
+    return names
+
+
+def family_groups(families):
+    """One group per factory, in the order the factories first appear."""
+    groups = []
+    index = {}
+    for family in ordered_families(families):
+        keys = factory_keys(family.get("label") or "")
+        if keys:
+            slot = ("factory", keys[0])
+        else:
+            slot = ("blank", (family.get("numeral") or "").upper())
+        if slot not in index:
+            index[slot] = {"slot": slot, "families": []}
+            groups.append(index[slot])
+        index[slot]["families"].append(family)
+    return groups
+
+
+def smile_side(label):
+    smile = bool(re.search(r"\bsmile\b", label or "", re.I))
+    lili = bool(re.search(r"\blili\s+ledy\b|\bll\b", label or "", re.I))
+    if smile and lili:
+        return "Smile/Lili Ledy"
+    if lili:
+        return "Lili Ledy"
+    if smile:
+        return "Smile"
+    return ""
+
+
+def format_family_group(group, show_versions):
+    members = group["families"]
+    if group["slot"][0] == "blank":
+        family = members[0]
+        numeral = (family.get("numeral") or "").upper()
+        line = f"- Family {numeral} ({vv_reference([numeral])})"
+        if show_versions and family.get("micro_count") is not None:
+            line += f": {counted_noun(family['micro_count'], 'version')}"
+        return line
+
+    primary = group["slot"][1]
+    labels = [family.get("label") or "" for family in members]
+    name = factory_display(primary, labels)
+    numerals = [(family.get("numeral") or "").upper() for family in members]
+    ref = vv_reference(numerals)
+    sides = [smile_side(label) for label in labels]
+    side_note = primary == "smile" and len({side for side in sides if side}) > 1
+
+    def extras(family):
+        """What the page says distinguishes this family from the others."""
+        bits = []
+        cos = co_factory_names(family, primary)
+        if cos:
+            bits.append("with " + join_and(cos))
+        if side_note:
+            side = smile_side(family.get("label") or "")
+            if side:
+                bits.append(side)
+        quals = label_qualifiers(family.get("label") or "")
+        if quals:
+            bits.append("(" + ", ".join(quals) + ")")
+        return bits
+
+    if len(members) == 1:
+        family = members[0]
+        # A single family has nothing to compare. Keep a second factory or a
+        # stamp word from its label. Smile-versus-Lili only matters in a group.
+        title = name
+        cos = co_factory_names(family, primary)
+        if cos:
+            title += ", with " + join_and(cos)
+        quals = label_qualifiers(family.get("label") or "")
+        if quals:
+            title += ", " + ", ".join(quals)
+        line = f"- {title} ({ref})"
+        if show_versions and family.get("micro_count") is not None:
+            line += f": {counted_noun(family['micro_count'], 'version')}"
+        return line
+
+    def detail(family, bits):
+        numeral = (family.get("numeral") or "").upper()
+        text = numeral
+        if bits and bits[0] in {"Smile", "Lili Ledy", "Smile/Lili Ledy"}:
+            text = f"{numeral} is {bits[0]}"
+            bits = bits[1:]
+        for bit in bits:
+            if bit.startswith("with ") or bit.startswith("("):
+                text += " " + bit
+            else:
+                text += ", " + bit
+        if show_versions and family.get("micro_count") is not None:
+            text += ", " + counted_noun(family["micro_count"], "version")
+        return text
+
+    described = [(family, extras(family)) for family in members]
+    counted = show_versions and any(family.get("micro_count") is not None for family in members)
+    if counted:
+        return f"- {name} ({ref}): " + "; ".join(detail(family, bits) for family, bits in described)
+    noted = [(family, bits) for family, bits in described if bits]
+    if not noted:
+        return f"- {name} ({ref})"
+    return f"- {name} ({ref}): " + "; ".join(detail(family, bits) for family, bits in noted)
+
+
+def grouped_family_lines(families, show_versions):
+    if not families:
+        return []
+    return [format_family_group(group, show_versions) for group in family_groups(families)]
 
 
 ROMAN_VALUES = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
@@ -232,8 +440,7 @@ def figure_block(index, row):
         block = [
             f"{index}. {row['name']} — {counted_noun(row['count'], 'family')}{note} — versions unverified — {years} — {factories}"
         ]
-        for family in families:
-            block.append(f"- {family_label(family)}")
+        block.extend(grouped_family_lines(families, show_versions=False))
         return block
     version_total = counted_noun(row["micro"], "version")
     if row.get("family_count_unverified"):
@@ -244,8 +451,9 @@ def figure_block(index, row):
         block = [
             f"{index}. {row['name']} — {version_total} across {counted_noun(row['count'], 'family')}{note} — {years} — {factories}"
         ]
-    for family in families:
-        block.append(f"- {family_label(family)} — {counted_noun(family['micro_count'], 'version')}")
+    block.extend(grouped_family_lines(families, show_versions=True))
+    if row["name"] == "Darth Vader":
+        block.append(VADER_FAMILY_NOTE)
     return block
 
 
@@ -323,7 +531,7 @@ def render(figures, snapshot, by_url):
         "",
         "Counting basis:",
         f"These variant counts were taken from the live Variant Villain figure guides on {fetched} (https://www.variantvillain.com/characters/sw/, /esb/, /rotj/, /potf/ and /droids/). The snapshot is data-source/vv-variant-counts.json. It records each page URL. Power of the Force and Droids and Ewoks use the same roman-numeral figure guide, so they are included.",
-        "A figure has two levels. Families are the documented manufacturer/region columns: lines such as \"I: Kader\" and \"VII: Takara\". A blank label still counts when the numeral is printed (\"II:\"). A label that starts with \"not\" is skipped. A sub-point such as \"IV.1\" is not another family. Versions are the pictured sub-variants inside a family, read from that page's combination list. Paint shades listed on their own, cape moulds and lightsaber moulds are not versions. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families.",
+        "A figure has two levels. Families are the documented manufacturer/region columns: lines such as \"I: Kader\" and \"VII: Takara\". The COO-family explanation, with its source URLs, is given at the ranked list. A blank label still counts when the numeral is printed (\"II:\"). A label that starts with \"not\" is skipped. A sub-point such as \"IV.1\" is not another family. Versions are the pictured sub-variants inside a family, read from that page's combination list. Paint shades listed on their own, cape moulds and lightsaber moulds are not versions. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families. The list under a figure names each factory once. Variant Villain family numbers stay in brackets. Another factory on the same family is written \"with\" that factory. A further note is added only when that figure's own page says how those families differ.",
         "Each family count was checked against that page's COO sheet or figure-guide image. Where the image and the text disagree, the image is used. A column the sheet marks as not this figure is left out. Stormtrooper's text index lists I-VI. The COO sheet image adds VII: PBP/Lili Ledy, so Stormtrooper is 7 families. Wicket W. Warrick's Return of the Jedi sheet shows two families, I Smile (HK) and II Taiwan. Version totals are ranked only when every family on that line has a pictured list. If the line says versions unverified, do not add the family lines together and do not invent a version total.",
         "If the images do not show a readable roman family grid, the family count is unverified. Do not guess a family count. A line that says family count unverified still has a version total when the page text lists the pictured variants. Yoda's sheet is four families (I Kader HK, II Unitoy, III Smile, IV Top Toys). Lili Ledy, Kader China and Poch/PBP sit under those families. They are not extra roman families. Yoda's snake, cane, belt and cloak are accessories. Darth Vader's version total is the pictured mould and colour lines, which is higher than counting one line per torso mould.",
         "Each figure line has Years and Factories. Those were calculated when this summary was built. Repeat them. Do not count the factories again from the family lines. Do not count the versions again from the family lines. Years come from a Released or Release Date line in that figure's dossier. If Years says not recorded, leave the years out. Smile and Lili Ledy, including an LL line, are one factory. Kader China is Kader. Made in Taiwan, Taiwan and Universal Manufacturers are Taiwan.",
@@ -337,11 +545,19 @@ def render(figures, snapshot, by_url):
         for name in names:
             lines.append(f"- {name}")
     lines.append("")
-    lines.append("Ranked figures by pictured versions (highest first). Each line under a figure is one family, in numeral order, with that family's version count:")
+    lines.append(
+        "Ranked figures by pictured versions (highest first). "
+        + FAMILY_SENTENCE
+        + " Each line under a figure is one factory, with that factory's Variant Villain family numbers in brackets and the version count for each family."
+    )
     for index, row in enumerate(counted, start=1):
         lines.extend(figure_block(index, row))
     lines.append("")
-    lines.append("Families documented, versions unverified (the pictured lists or the sheet labels do not cover every family, so no version total is given):")
+    lines.append(
+        "Families documented, versions unverified (the pictured lists or the sheet labels do not cover every family, so no version total is given). "
+        + FAMILY_SENTENCE
+        + " Each line is one factory, with the Variant Villain family numbers in brackets."
+    )
     for index, row in enumerate(family_only, start=1):
         lines.extend(figure_block(index, row))
     lines.append("")
@@ -380,13 +596,15 @@ def split_text(text):
     header = "\n".join([
         "Name: Variant and outfit counts",
         "Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions",
-        "Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Do not guess a count that is not in this summary. An unverified figure has no number.",
+        "Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. "
+        + FAMILY_SENTENCE
+        + " Each factory is named once, with its Variant Villain family numbers in brackets. Do not guess a count that is not in this summary. An unverified figure has no number.",
         "",
     ])
     parts = []
     current = ""
     for chunk in atomic_chunks(text):
-        if current and len(current) + len(chunk) > MAX_CHARS - len(header):
+        if current and len(current) + len(chunk) > MAX_CHARS:
             parts.append(current if current.endswith("\n") else current + "\n")
             current = header + chunk
         else:
@@ -419,6 +637,7 @@ def main():
     text, counted, unverified, characters = render(load_catalog(), snapshot, by_url)
     parts = split_text(text)
     written = write_parts(parts)
+    subprocess.check_call([sys.executable, str(ROOT / "tools" / "build-retrieval-index.py")])
     print(f"figures with version totals: {len(counted)}; unverified families: {len(unverified)}; multi-version characters: {len(characters)}")
     print("top 15 versions:")
     for row in counted[:15]:
