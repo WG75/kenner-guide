@@ -230,6 +230,10 @@ await test("system prompt carries the brief's rules", async () => {
     assert.match(sys, re);
   }
   assert.match(sys, /Do not print an "Evidence:" line/);
+  assert.match(sys, /one family per line/);
+  assert.match(sys, /one name per line/);
+  assert.match(sys, /Do not stop at the number/);
+  assert.match(sys, /before the follow-up questions/);
   assert.doesNotMatch(sys, /label claims/i);
   assert.doesNotMatch(sys, /Evidence: documented/);
 });
@@ -979,23 +983,67 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   const vader = await call({ message: "how many variants does Darth Vader have?" });
   assert.ok(vader.json.sources.includes("references/variant-counts.txt"), vader.json.sources.join(", "));
   assert.ok(vader.json.sources.includes("figures/darth-vader-reference.txt"), vader.json.sources.join(", "));
+  const vaderPrompt = calls.at(-1).body.messages.at(-1).content;
+  const vaderAt = vaderPrompt.indexOf("Darth Vader — 12");
+  assert.ok(vaderAt >= 0);
+  const vaderBlock = vaderPrompt.slice(vaderAt).split(/\n\d+\. /)[0];
+  const vaderFamilies = [
+    "I Kader/ Kader China",
+    "II Kader",
+    "III Kader/ Glasslite",
+    "IV Smile/ LL Retorno & Regreso",
+    "V Unitoy",
+    "VI Unitoy",
+    "VII Unitoy",
+    "VIII Unitoy/ PBP",
+    "IX Top Toys",
+    "X Made In Taiwan",
+    "XI Taiwan",
+    "XII Takara"
+  ];
+  for (const label of vaderFamilies) {
+    assert.match(vaderBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"), label);
+  }
+  assert.equal(vaderBlock.split("\n").filter(line => line.startsWith("- ")).length, 12);
+
+  const hanPrompt = calls.at(-2).body.messages.at(-1).content;
+  for (const name of ["Han Solo", "Han Solo (Hoth Outfit)", "Han Solo (Bespin Outfit)", "Han Solo (in Trench Coat)", "Han Solo (in Carbonite Chamber)"]) {
+    assert.match(hanPrompt, new RegExp(`^- ${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"), name);
+  }
+
+  const nien = await call({ message: "how many variants does Nien Nunb have?" });
+  assert.ok(nien.json.sources.includes("references/variant-counts-2.txt"), nien.json.sources.join(", "));
+  assert.ok(nien.json.sources.includes("figures/nien-nunb-reference.txt"), nien.json.sources.join(", "));
+  const nienPrompt = calls.at(-1).body.messages.at(-1).content;
+  const nienAt = nienPrompt.indexOf("Nien Nunb — 3");
+  assert.ok(nienAt >= 0);
+  const nienBlock = nienPrompt.slice(nienAt).split(/\n\d+\. /)[0];
+  for (const label of ["I Unitoy", "II Smile", "III Lili Ledy (MIM)"]) {
+    assert.match(nienBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"), label);
+  }
 });
 
 await test("variant count summary matches the generator and stays under the cap", async () => {
   const { execFileSync } = await import("node:child_process");
   const dir = path.join(root, "data/references");
-  const before = fs.readFileSync(path.join(dir, "variant-counts.txt"), "utf8");
-  const beforeTwo = fs.readFileSync(path.join(dir, "variant-counts-2.txt"), "utf8");
+  const partNames = fs.readdirSync(dir).filter(name => /^variant-counts(?:-\d+)?\.txt$/.test(name)).sort();
+  const beforeParts = Object.fromEntries(partNames.map(name => [name, fs.readFileSync(path.join(dir, name), "utf8")]));
   execFileSync("python3", ["tools/build-variant-counts.py"], { cwd: root });
-  assert.equal(fs.readFileSync(path.join(dir, "variant-counts.txt"), "utf8"), before);
-  assert.equal(fs.readFileSync(path.join(dir, "variant-counts-2.txt"), "utf8"), beforeTwo);
+  const afterNames = fs.readdirSync(dir).filter(name => /^variant-counts(?:-\d+)?\.txt$/.test(name)).sort();
+  assert.deepEqual(afterNames, partNames);
+  for (const name of partNames) {
+    const text = fs.readFileSync(path.join(dir, name), "utf8");
+    assert.equal(text, beforeParts[name]);
+    assert.ok(text.length <= 7000, `${name} is ${text.length} characters`);
+  }
+  const before = beforeParts["variant-counts.txt"];
+  const summary = Object.values(beforeParts).join("\n");
   assert.match(before, /Darth Vader — 12/);
   assert.match(before, /Stormtrooper — 7/);
   assert.match(before, /Yoda — 4/);
   assert.match(before, /Chewbacca — 6/);
   assert.match(before, /R2-D2 — 7/);
   assert.match(before, /Luke Skywalker — 7 versions/);
-  const summary = before + beforeTwo;
   assert.match(summary, /Unverified/);
   assert.match(summary, /^- 8D8 —/m);
   assert.match(summary, /^- Rebel Commando —/m);
@@ -1005,8 +1053,8 @@ await test("variant count summary matches the generator and stays under the cap"
   assert.doesNotMatch(summary, /c-3po-removable-limbs/);
   assert.match(summary, /Wicket W\. Warrick — 2/);
   assert.match(summary, /VI Top Toys/);
+  assert.match(summary, /^- XII Takara$/m);
   assert.doesNotMatch(summary, /not counted/i);
-  assert.ok(before.length <= 7000 && beforeTwo.length <= 7000);
 });
 
 await test("identify a figure and identify accessories start guided questions", async () => {

@@ -4,9 +4,9 @@
 Variant counts come from data-source/vv-variant-counts.json, a snapshot of
 the live Variant Villain figure guides fetched on 2026-10-04. The snapshot
 is not served from /data. Each count is the page's roman-numeral
-manufacturer/region list (I: Kader). Paint, cape and sabre sections are
-not counted. A page with no such list and no COO Family headings is
-unverified.
+manufacturer/region list, written as one family per line. Paint, cape and
+sabre sections are not counted. A page with no such list and no COO Family
+headings is unverified.
 
 An outfit (also called a version or a look) is one catalog figure of a
 character. Han Solo (in Trench Coat) is Han's Endor figure. Princess Leia
@@ -83,6 +83,18 @@ def family_label(family):
     return numeral
 
 
+def figure_block(index, row):
+    note = ""
+    if row["basis"].startswith("COO Family"):
+        note = " (COO Family headings; the page prints the numerals without manufacturer names on those lines)"
+    elif "adds VII" in row["basis"]:
+        note = " (text index I-VI; COO sheet image shows I-VII)"
+    block = [f"{index}. {row['name']} — {row['count']}{note}"]
+    for family in row["families"]:
+        block.append(f"- {family_label(family)}")
+    return block
+
+
 def render(figures, snapshot, by_url):
     counted = []
     unverified = []
@@ -131,20 +143,16 @@ def render(figures, snapshot, by_url):
         "",
         "Outfits, versions and looks mean distinct catalog figures of one character. They are not paint variants of a single figure. Han Solo (in Trench Coat) is Han's Endor figure. Princess Leia Organa (in Combat Poncho) is Leia's Endor figure. The catalog has no further Endor figure for either character. A Droids-line figure of the same character counts as one version.",
         "",
-        "Character versions (distinct catalog figures, ranked). A character with one catalog figure is not listed:",
+        "Character versions (distinct catalog figures, ranked). A character with one catalog figure is not listed. Each line under a character is one version:",
     ]
     for index, (key, names) in enumerate(ranked_characters, start=1):
-        lines.append(f"{index}. {key} — {len(names)} versions — " + "; ".join(names))
+        lines.append(f"{index}. {key} — {len(names)} versions")
+        for name in names:
+            lines.append(f"- {name}")
     lines.append("")
-    lines.append("Ranked figures by documented manufacturer/region variants (highest first):")
+    lines.append("Ranked figures by documented manufacturer/region variants (highest first). Each line under a figure is one family, in numeral order:")
     for index, row in enumerate(counted, start=1):
-        labels = "; ".join(family_label(family) for family in row["families"])
-        note = ""
-        if row["basis"].startswith("COO Family"):
-            note = " (COO Family headings; the page prints the numerals without manufacturer names on those lines)"
-        elif "adds VII" in row["basis"]:
-            note = " (text index I-VI; COO sheet image shows I-VII)"
-        lines.append(f"{index}. {row['name']} — {row['count']} — {labels}{note}")
+        lines.extend(figure_block(index, row))
     lines.append("")
     lines.append("Unverified (no readable roman family grid on the COO sheet or figure-guide images, so no count is given):")
     for row in unverified:
@@ -155,24 +163,43 @@ def render(figures, snapshot, by_url):
     return "\n".join(lines) + "\n", counted, unverified, ranked_characters
 
 
+def atomic_chunks(text):
+    """Keep a count line and the family or version lines under it in one chunk."""
+    lines = text.splitlines(keepends=True)
+    chunks = []
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        if re.match(r"\d+\. ", line):
+            block = line
+            index += 1
+            while index < len(lines) and lines[index].startswith("- "):
+                block += lines[index]
+                index += 1
+            chunks.append(block)
+            continue
+        chunks.append(line)
+        index += 1
+    return chunks
+
+
 def split_text(text):
     if len(text) <= MAX_CHARS:
         return [text]
     header = "\n".join([
         "Name: Variant and outfit counts",
         "Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions",
-        "Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Do not guess a count that is not in this summary. An unverified figure has no number.",
+        "Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. Do not guess a count that is not in this summary. An unverified figure has no number.",
         "",
     ])
-    body = text.splitlines(keepends=True)
     parts = []
     current = ""
-    for line in body:
-        if current and len(current) + len(line) > MAX_CHARS - len(header):
+    for chunk in atomic_chunks(text):
+        if current and len(current) + len(chunk) > MAX_CHARS - len(header):
             parts.append(current if current.endswith("\n") else current + "\n")
-            current = header + line
+            current = header + chunk
         else:
-            current += line
+            current += chunk
     if current:
         parts.append(current if current.endswith("\n") else current + "\n")
     return parts
