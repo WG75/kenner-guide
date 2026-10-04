@@ -938,6 +938,54 @@ await test("welcome state has no starter chips and the welcome class toggles", a
   assert.doesNotMatch(afterGreeting, /addActionButtons/);
 });
 
+await test("outfit and variant ranking questions retrieve the count summary", async () => {
+  const outfits = await call({ message: "which character has the most outfits?" });
+  assert.notEqual(outfits.json.offTopic, true);
+  assert.ok(outfits.json.sources.includes("references/variant-counts.txt"), outfits.json.sources.join(", "));
+  assert.equal(calls.length, 1);
+  const prompt = calls[0].body.messages.at(-1).content;
+  assert.match(prompt, /Luke Skywalker — 7 versions/);
+  assert.match(prompt, /Han Solo — 5 versions/);
+  assert.match(prompt, /Princess Leia Organa — 5 versions/);
+  assert.match(prompt, /Lando Calrissian — 3 versions/);
+  assert.match(prompt, /manufacturer\/region/);
+  assert.match(prompt, /Outfits, versions and looks/);
+  assert.ok(outfits.json.actions.length >= 2);
+  assert.equal(outfits.json.actions.some(action => /identify a figure/i.test(action.label)), false);
+
+  const variants = await call({ message: "Which figure has the most variants?" });
+  assert.notEqual(variants.json.offTopic, true);
+  assert.equal(variants.json.sources[0], "references/variant-counts.txt");
+  const variantPrompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(variantPrompt, /Darth Vader — 12/);
+  assert.match(variantPrompt, /Han Solo \(Hoth Outfit\) — 3/);
+  assert.ok(variantPrompt.indexOf("Darth Vader — 12") < variantPrompt.indexOf("Han Solo (Hoth Outfit) — 3"));
+
+  const han = await call({ message: "how many versions of Han Solo are there?" });
+  assert.ok(han.json.sources.includes("references/variant-counts.txt"), han.json.sources.join(", "));
+  assert.ok(han.json.sources.some(source => source.startsWith("figures/han-solo")), han.json.sources.join(", "));
+
+  const vader = await call({ message: "how many variants does Darth Vader have?" });
+  assert.ok(vader.json.sources.includes("references/variant-counts.txt"), vader.json.sources.join(", "));
+  assert.ok(vader.json.sources.includes("figures/darth-vader-reference.txt"), vader.json.sources.join(", "));
+});
+
+await test("variant count summary matches the generator and stays under the cap", async () => {
+  const { execFileSync } = await import("node:child_process");
+  const dir = path.join(root, "data/references");
+  const before = fs.readFileSync(path.join(dir, "variant-counts.txt"), "utf8");
+  const beforeTwo = fs.readFileSync(path.join(dir, "variant-counts-2.txt"), "utf8");
+  execFileSync("python3", ["tools/build-variant-counts.py"], { cwd: root });
+  assert.equal(fs.readFileSync(path.join(dir, "variant-counts.txt"), "utf8"), before);
+  assert.equal(fs.readFileSync(path.join(dir, "variant-counts-2.txt"), "utf8"), beforeTwo);
+  assert.match(before, /Darth Vader — 12/);
+  assert.match(before, /Luke Skywalker — 7 versions/);
+  assert.match(beforeTwo, /not counted/i);
+  assert.match(beforeTwo, /^- Luke Skywalker$/m);
+  assert.match(beforeTwo, /^- Chewbacca$/m);
+  assert.ok(before.length <= 7000 && beforeTwo.length <= 7000);
+});
+
 await test("identify a figure and identify accessories start guided questions", async () => {
   const figure = await call({ message: "identify a figure" });
   assert.equal(calls.length, 0);
