@@ -3,7 +3,7 @@ Aliases: most variants, most outfits, most versions, variant counts, outfit coun
 
 Counting basis:
 These variant counts were taken from the live Variant Villain figure guides on 2026-10-04 (https://www.variantvillain.com/characters/sw/, /esb/, /rotj/, /potf/ and /droids/). The snapshot is data-source/vv-variant-counts.json. It records each page URL. Power of the Force and Droids and Ewoks use the same roman-numeral figure guide, so they are included.
-A figure has two levels. Families are the documented manufacturer/region columns: lines such as "I: Kader" and "VII: Takara". A blank label still counts when the numeral is printed ("II:"). A label that starts with "not" is skipped. A sub-point such as "IV.1" is not another family. Versions are the pictured sub-variants inside a family, read from that page's combination list. Paint shades listed on their own, cape moulds and lightsaber moulds are not versions. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families.
+A figure has two levels. Families are the documented manufacturer/region columns: lines such as "I: Kader" and "VII: Takara". A family is a production batch identified by the Country of Origin stamp and the mould. A blank label still counts when the numeral is printed ("II:"). A label that starts with "not" is skipped. A sub-point such as "IV.1" is not another family. Versions are the pictured sub-variants inside a family, read from that page's combination list. Paint shades listed on their own, cape moulds and lightsaber moulds are not versions. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families. The list under a figure names each factory once. Variant Villain family numbers stay in brackets. Another factory on the same family is written "with" that factory. A mould note is written only when every family in that factory group has one torso mould and those moulds differ.
 Each family count was checked against that page's COO sheet or figure-guide image. Where the image and the text disagree, the image is used. A column the sheet marks as not this figure is left out. Stormtrooper's text index lists I-VI. The COO sheet image adds VII: PBP/Lili Ledy, so Stormtrooper is 7 families. Wicket W. Warrick's Return of the Jedi sheet shows two families, I Smile (HK) and II Taiwan. Version totals are ranked only when every family on that line has a pictured list. If the line says versions unverified, do not add the family lines together and do not invent a version total.
 If the images do not show a readable roman family grid, the family count is unverified. Do not guess a family count. A line that says family count unverified still has a version total when the page text lists the pictured variants. Yoda's sheet is four families (I Kader HK, II Unitoy, III Smile, IV Top Toys). Lili Ledy, Kader China and Poch/PBP sit under those families. They are not extra roman families. Yoda's snake, cane, belt and cloak are accessories. Darth Vader's version total is the pictured mould and colour lines, which is higher than counting one line per torso mould.
 Each figure line has Years and Factories. Those were calculated when this summary was built. Repeat them. Do not count the factories again from the family lines. Do not count the versions again from the family lines. Years come from a Released or Release Date line in that figure's dossier. If Years says not recorded, leave the years out. Smile and Lili Ledy, including an LL line, are one factory. Kader China is Kader. Made in Taiwan, Taiwan and Universal Manufacturers are Taiwan.
@@ -60,35 +60,16 @@ Character versions (distinct catalog figures, ranked). A character with one cata
 - Wicket W. Warrick
 - Wicket W.Warrick (Ewoks)
 
-Ranked figures by pictured versions (highest first). Each line under a figure is one family, in numeral order, with that family's version count:
+Ranked figures by pictured versions (highest first). A family is a production batch identified by the Country of Origin stamp and the mould. Each line under a figure is one factory, with that factory's Variant Villain family numbers in brackets and the version count for each family:
 1. Darth Vader — 71 versions across 12 families — Years: 1978 to 1985 — Factories: 8 different factories: Kader, Glasslite, Smile/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara
-- I Kader/ Kader China — 14 versions
-- II Kader — 5 versions
-- III Kader/ Glasslite — 15 versions
-- IV Smile/ LL Retorno & Regreso — 7 versions
-- V Unitoy — 4 versions
-- VI Unitoy — 3 versions
-- VII Unitoy — 4 versions
-- VIII Unitoy/ PBP — 13 versions
-- IX Top Toys — 1 version
-- X Made In Taiwan — 2 versions
-- XI Taiwan — 2 versions
-- XII Takara — 1 version
+- Kader (Variant Villain families I, II and III): I, 14 versions; II, 5 versions; III with Glasslite, 15 versions
+- Smile/Lili Ledy (Variant Villain family IV): 7 versions
+- Unitoy (Variant Villain families V, VI, VII and VIII): V, 4 versions; VI, 3 versions; VII, 4 versions; VIII with PBP, 13 versions
+- Top Toys (Variant Villain family IX): 1 version
+- Taiwan (Variant Villain families X and XI): X, 2 versions, torso mould M9; XI, 2 versions, torso mould M10
+- Takara (Variant Villain family XII): 1 version
 2. Luke Skywalker — 32 versions — family count unverified — Years: not recorded — Factories: 7 different factories: Kader, PBP, Meccano, Glasslite, Unitoy, Taiwan, Smile
-- I Kader / Poch / Kader China / Meccano / Glasslite — 10 versions
-- II Unitoy / Poch / PBP — 12 versions
-- III TAIWAN — 5 versions
-- IV Smile — 5 versions
-3. Luke Skywalker (Bespin Fatigues) — 30 versions across 3 families — Years: not recorded — Factories: 3 different factories: Smile, Unitoy, Kader
-- I Smile — 7 versions
-- II Unitoy — 9 versions
-- III Kader — 14 versions
-4. Yoda — 29 versions across 4 families — Years: not recorded — Factories: 4 different factories: Kader, Unitoy, Smile, Top Toys
-- I Kader HK — 9 versions
-- II Unitoy — 14 versions
-- III Smile — 5 versions
-- IV Top Toys — 1 version
-5. Ben (Obi-Wan) Kenobi — 27 versions across 3 families — Years: from 1978 — Factories: 3 different factories: Unitoy, Lili Ledy, Kader
-- I Unitoy — 6 versions
-- II Unitoy/ Lili Ledy — 8 versions
-- III Kader — 13 versions
+- Kader, with PBP, Meccano and Glasslite (Variant Villain family I): 10 versions
+- Unitoy, with PBP (Variant Villain family II): 12 versions
+- Taiwan (Variant Villain family III): 5 versions
+- Smile (Variant Villain family IV): 5 versions

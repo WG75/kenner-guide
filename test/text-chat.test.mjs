@@ -230,7 +230,9 @@ await test("system prompt carries the brief's rules", async () => {
     assert.match(sys, re);
   }
   assert.match(sys, /Do not print an "Evidence:" line/);
-  assert.match(sys, /one family per line/);
+  assert.match(sys, /one factory per line/);
+  assert.match(sys, /A family is a production batch identified by the Country of Origin stamp and the mould/);
+  assert.match(sys, /Variant Villain family numbers in brackets/);
   assert.match(sys, /one name per line/);
   assert.match(sys, /Do not stop at the number/);
   assert.match(sys, /before the follow-up questions/);
@@ -1010,25 +1012,19 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   const vaderAt = vaderPrompt.indexOf("Darth Vader — 71 versions across 12 families");
   assert.ok(vaderAt >= 0);
   const vaderBlock = vaderPrompt.slice(vaderAt).split(/\n\d+\. /)[0];
-  const vaderFamilies = [
-    ["I Kader/ Kader China", 14],
-    ["II Kader", 5],
-    ["III Kader/ Glasslite", 15],
-    ["IV Smile/ LL Retorno & Regreso", 7],
-    ["V Unitoy", 4],
-    ["VI Unitoy", 3],
-    ["VII Unitoy", 4],
-    ["VIII Unitoy/ PBP", 13],
-    ["IX Top Toys", 1],
-    ["X Made In Taiwan", 2],
-    ["XI Taiwan", 2],
-    ["XII Takara", 1]
-  ];
-  for (const [label, versions] of vaderFamilies) {
-    const versionWord = versions === 1 ? "version" : "versions";
-    assert.match(vaderBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} — ${versions} ${versionWord}$`, "m"), label);
-  }
-  assert.equal(vaderBlock.split("\n").filter(line => line.startsWith("- ")).length, 12);
+  assert.match(vaderPrompt, /A family is a production batch identified by the Country of Origin stamp and the mould/);
+  assert.ok(vaderPrompt.indexOf("A family is a production batch") < vaderAt);
+  assert.match(vaderBlock, /^- Kader \(Variant Villain families I, II and III\): I, 14 versions; II, 5 versions; III with Glasslite, 15 versions$/m);
+  assert.match(vaderBlock, /^- Smile\/Lili Ledy \(Variant Villain family IV\): 7 versions$/m);
+  assert.match(vaderBlock, /^- Unitoy \(Variant Villain families V, VI, VII and VIII\): V, 4 versions; VI, 3 versions; VII, 4 versions; VIII with PBP, 13 versions$/m);
+  assert.match(vaderBlock, /^- Top Toys \(Variant Villain family IX\): 1 version$/m);
+  assert.match(vaderBlock, /^- Taiwan \(Variant Villain families X and XI\): X, 2 versions, torso mould M9; XI, 2 versions, torso mould M10$/m);
+  assert.match(vaderBlock, /^- Takara \(Variant Villain family XII\): 1 version$/m);
+  const vaderFactoryLines = vaderBlock.split("\n").filter(line => line.startsWith("- ") && !line.includes("production batch"));
+  assert.equal(vaderFactoryLines.length, 6);
+  assert.equal(vaderFactoryLines.filter(line => line.startsWith("- Unitoy")).length, 1);
+  assert.equal(vaderFactoryLines.filter(line => line.startsWith("- Taiwan")).length, 1);
+  assert.equal(vaderFactoryLines.filter(line => line.startsWith("- Kader")).length, 1);
   assert.match(vaderBlock, /Years: 1978 to 1985/);
   assert.match(vaderBlock, /Factories: 8 different factories: Kader, Glasslite, Smile\/Lili Ledy, Unitoy, PBP, Top Toys, Taiwan, Takara/);
 
@@ -1043,9 +1039,8 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   const nienAt = nienPrompt.indexOf("Nien Nunb — 3");
   assert.ok(nienAt >= 0);
   const nienBlock = nienPrompt.slice(nienAt).split(/\n\d+\. /)[0];
-  for (const label of ["I Unitoy", "II Smile", "III Lili Ledy (MIM)"]) {
-    assert.match(nienBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "m"), label);
-  }
+  assert.match(nienBlock, /^- Unitoy \(Variant Villain family I\)$/m);
+  assert.match(nienBlock, /^- Smile\/Lili Ledy \(Variant Villain families II and III\): II is Smile; III is Lili Ledy \(MIM\)$/m);
   assert.match(nienBlock, /Years: 1983/);
   assert.match(nienBlock, /Factories: 2 different factories: Unitoy, Smile\/Lili Ledy/);
 
@@ -1060,10 +1055,10 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   assert.match(yodaBlock, /Factories: 4 different factories: Kader, Unitoy, Smile, Top Toys/);
   assert.equal(yoda.json.actions.some(action => /double-telescoping|telescop/i.test(action.label)), false);
   assert.ok(yoda.json.actions.some(action => /cardbacks did Yoda come on/i.test(action.label)));
-  for (const [label, versions] of [["I Kader HK", 9], ["II Unitoy", 14], ["III Smile", 5], ["IV Top Toys", 1]]) {
-    const versionWord = versions === 1 ? "version" : "versions";
-    assert.match(yodaBlock, new RegExp(`^- ${label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} — ${versions} ${versionWord}$`, "m"), label);
-  }
+  assert.match(yodaBlock, /^- Kader, HK \(Variant Villain family I\): 9 versions$/m);
+  assert.match(yodaBlock, /^- Unitoy \(Variant Villain family II\): 14 versions$/m);
+  assert.match(yodaBlock, /^- Smile \(Variant Villain family III\): 5 versions$/m);
+  assert.match(yodaBlock, /^- Top Toys \(Variant Villain family IV\): 1 version$/m);
 });
 
 await test("Vader count follow-ups are questions the reference data can answer", async () => {
@@ -1132,9 +1127,10 @@ await test("variant count summary matches the generator and stays under the cap"
   assert.match(summary, /C-3PO \(Removable Limbs\) — 2/);
   assert.doesNotMatch(summary, /c-3po-removable-limbs/);
   assert.match(summary, /Wicket W\. Warrick — 2/);
-  assert.match(summary, /VI Top Toys/);
-  assert.match(summary, /^- XII Takara — 1 version$/m);
-  assert.match(summary, /^- I Kader\/ Kader China — 14 versions$/m);
+  assert.match(summary, /Top Toys \(Variant Villain family VI\)/);
+  assert.match(summary, /^- Takara \(Variant Villain family XII\): 1 version$/m);
+  assert.match(summary, /^- Kader \(Variant Villain families I, II and III\): I, 14 versions; II, 5 versions; III with Glasslite, 15 versions$/m);
+  assert.match(summary, /A family is a production batch identified by the Country of Origin stamp and the mould/);
   assert.doesNotMatch(summary, /not counted/i);
 });
 
@@ -1268,12 +1264,11 @@ await test("retrieval index routes Palitoy and records the other topics", async 
   assert.deepEqual(yearFile.years, [1981]);
   assert.ok(yearFile.keywords.includes("Dengar"));
   assert.ok(!yearFile.keywords.some(keyword => /Warren UK list/.test(keyword)));
-  for (const rel of [
-    "references/variant-counts.txt",
-    "references/variant-counts-2.txt",
-    "references/variant-counts-3.txt",
-    "references/variant-counts-4.txt"
-  ]) {
+  const countNames = fs.readdirSync(path.join(root, "data/references"))
+    .filter(name => /^variant-counts(?:-\d+)?\.txt$/.test(name));
+  assert.ok(countNames.includes("variant-counts.txt"));
+  for (const name of countNames) {
+    const rel = `references/${name}`;
     const counts = index.files.find(file => file.relPath === rel);
     assert.ok(counts, rel);
     assert.equal(counts.topic, "variant", rel);

@@ -116,11 +116,10 @@ def palitoy_keywords(text):
 
 
 def variant_count_keywords(text):
-    """Figure and family lines in the variant-count summary.
+    """Figure lines in the variant-count summary.
 
-    Numbered lines are "1. Darth Vader — 71 versions ...". Family lines are
-    "- I Kader/ Kader China — 14 versions". The name is the text before the
-    first em dash.
+    Numbered lines are "1. Darth Vader — 71 versions ...". Factory group
+    lines have no em dash, so they are not keywords.
     """
     names = []
     for line in text.splitlines():
