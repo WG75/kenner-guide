@@ -32,9 +32,10 @@ const FOLLOW_SETS = {
     "How do I tell the variants apart?"
   ],
   greeting: [
-    "Identify a figure",
-    "Identify accessories",
-    "What does COO mean?"
+    "What does COO mean?",
+    "What are the Last 17?",
+    "Which figures are Early Bird?",
+    "What is a debut cardback?"
   ],
   general: [
     "Which cardbacks did it come on?",
@@ -167,7 +168,29 @@ export function followTopicFor(text) {
   return "figure";
 }
 
+/* Starter questions on an empty chat. Identify stays on the two buttons
+   above the input, so these chips never repeat those labels. Each one is a
+   question the retriever answers from the COO guide, the Last 17 term, the
+   Early Bird package file, or the debut-cardback glossary entry. */
+export function welcomeStarters() {
+  return FOLLOW_SETS.greeting.slice();
+}
+
+/* Empty chat is a compact welcome block. The first user message switches
+   the page to a scrolling transcript with the composer docked at the bottom. */
+export function layoutMode(userMessageCount) {
+  return Number(userMessageCount) > 0 ? "chatting" : "welcome";
+}
+
+export function syncLayoutClass(classList, userMessageCount) {
+  const mode = layoutMode(userMessageCount);
+  classList.toggle("welcome", mode === "welcome");
+  classList.toggle("chatting", mode === "chatting");
+  return mode;
+}
+
 export function fallbackFollowUps(topic) {
   const set = FOLLOW_SETS[topic] || FOLLOW_SETS.general;
+  if (topic === "greeting") return set.slice();
   return set.slice(0, 3);
 }

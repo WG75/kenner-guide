@@ -573,9 +573,9 @@ const TC_GREETING_RE = /^(?:hi|hello|hey|hiya|howdy|good (?:morning|afternoon|ev
 const TC_THANKS_RE = /^(?:thanks|thank you|thx|cheers|ta|brilliant|great|perfect|ok|okay|cool|nice one)(?: (?:very much|a lot|mate))?[\s!.,?]*$/i;
 
 const TC_GREETINGS = [
-  "Hello, I'm VF-CB. Tap Identify a figure or Identify Accessories, or ask me a question about vintage Kenner Star Wars.",
-  "Hello. Tap Identify a figure or Identify Accessories, or just ask a question.",
-  "Good to see you. Tap Identify a figure or Identify Accessories, or ask me something from the vintage line."
+  "Hello, I'm VF-CB. I can talk through a figure or an accessory with the buttons below, or you can ask a question about vintage Kenner Star Wars.",
+  "Hello. Use the buttons below for a figure or an accessory, or just ask a question.",
+  "Good to see you. The buttons below start a figure or accessory check, or ask me something from the vintage line."
 ];
 
 const TC_THANKS = [
@@ -1091,10 +1091,12 @@ function tcReply(res, reply, extra = {}) {
   const scripted = Array.isArray(rest.actions) && rest.actions.length > 0;
   let actions = Array.isArray(rest.actions) ? rest.actions : [];
   if (!scripted && !skipFollowUps) {
+    const topic = followTopic || "general";
     const followUps = parsed.followUps && parsed.followUps.length >= 2
       ? parsed.followUps
-      : fallbackFollowUps(followTopic || "general");
-    actions = followUps.slice(0, 3).map(label => ({ label, value: label }));
+      : fallbackFollowUps(topic);
+    const limit = topic === "greeting" ? followUps.length : 3;
+    actions = followUps.slice(0, limit).map(label => ({ label, value: label }));
   }
   return res.status(200).json({
     reply: parsed.reply,

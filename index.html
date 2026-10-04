@@ -101,6 +101,35 @@
       scroll-behavior: smooth;
     }
 
+    /* Empty chat: greeting, starters, Identify buttons, hint and input sit
+       together under the search box. After the first user message, .chatting
+       lets the transcript fill the space and keeps the composer docked. */
+    .app.welcome {
+      overflow-y: auto;
+    }
+
+    .app.welcome .chat,
+    .app.welcome .composer {
+      width: min(720px, 100%);
+      margin-inline: auto;
+    }
+
+    .app.welcome .chat {
+      flex: 0 0 auto;
+      overflow: visible;
+      padding-bottom: 4px;
+    }
+
+    .app.welcome .status {
+      min-height: 0;
+      padding: 0;
+    }
+
+    .app.welcome .composer {
+      border-top: 0;
+      background: transparent;
+    }
+
     .message {
       width: fit-content;
       max-width: min(760px, 88vw);
@@ -399,7 +428,7 @@
 </head>
 
 <body>
-  <div class="app">
+  <div class="app welcome">
     <header class="header">
       <div class="droid-icon">🤖</div>
       <div class="title-wrap">
@@ -481,8 +510,9 @@
   </div>
 
   <script type="module">
-    import { previewSearch, openSearchResult, parseFollowUps, fallbackFollowUps, followTopicFor } from "./vfcb-chat-ui.js";
+    import { previewSearch, openSearchResult, parseFollowUps, fallbackFollowUps, followTopicFor, welcomeStarters, syncLayoutClass } from "./vfcb-chat-ui.js";
 
+    const appEl = document.querySelector(".app");
     const chatEl = document.getElementById("chat");
     const inputEl = document.getElementById("input");
     const statusEl = document.getElementById("status");
@@ -528,6 +558,10 @@
         role: role === "user" ? "user" : "assistant",
         content: text
       });
+
+      if (role === "user") {
+        syncLayoutClass(appEl.classList, state.history.filter((turn) => turn.role === "user").length);
+      }
     }
 
     function addImageCard(image) {
@@ -857,9 +891,9 @@
 
     addMessage(
       "assistant",
-      "Hello, I'm VF-CB. Tap Identify a figure or Identify Accessories, or ask me a question."
+      "Hello, I'm VF-CB. I can talk through a figure or an accessory with the buttons below, or you can ask a question."
     );
-    addActionButtons(fallbackFollowUps("greeting").map((label) => ({ label, value: label })));
+    addActionButtons(welcomeStarters().map((label) => ({ label, value: label })));
 
     window.sendMessage = sendMessage;
     window.openPhotoPicker = openPhotoPicker;
