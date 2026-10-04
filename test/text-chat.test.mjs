@@ -666,6 +666,8 @@ await test("every retrieval file is under the 7000 character cap", async () => {
       const full = path.join(dir, entry.name);
       if (entry.isDirectory()) walk(full);
       else if (/^catalog(-\d+)?\.json$/.test(entry.name)) continue;
+      // The retrieval index is a topic list, not an injected reference.
+      else if (entry.name === "retrieval-index.json") continue;
       else {
         const text = fs.readFileSync(full, "utf8");
         if (text.length > cap) over.push(`${path.relative(root, full)} (${text.length})`);
@@ -1038,6 +1040,114 @@ await test("every catalog figure and accessory name retrieves its own file", asy
     }
   }
   assert.equal(misses.length, 0, `\n${misses.slice(0, 15).join("\n")}`);
+});
+
+await test("Palitoy UK year, when, and non-figure questions use the release files", async () => {
+  const year = await call({ message: "what Palitoy toys came out in 1981?" });
+  assert.equal(calls.length, 1);
+  assert.ok(year.json.sources.length >= 1, year.json.sources.join(", "));
+  assert.ok(year.json.sources.every(source => /references\/palitoy-uk-1981/.test(source)), year.json.sources.join(", "));
+  assert.ok(year.json.sources.some(source => source === "references/palitoy-uk-1981.txt"));
+  assert.ok(year.json.sources.some(source => source === "references/palitoy-uk-1981-2.txt"));
+  const yearPrompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(yearPrompt, /Star Destroyer Commander/);
+  assert.match(yearPrompt, /not released/);
+  assert.match(yearPrompt, /IG-88/);
+  assert.match(yearPrompt, /TIE Bomber/);
+  assert.match(yearPrompt, /unconfirmed/);
+  assert.match(yearPrompt, /Craft Master/);
+  assert.match(yearPrompt, /Kenner with Palitoy sticker/);
+  assert.doesNotMatch(yearPrompt, /retrieval-index/);
+  assert.match(calls.at(-1).body.messages[0].content, /not stated means an earlier year said not released/);
+
+  const when = await call({ message: "when did Palitoy release the Millennium Falcon?" });
+  assert.match(when.json.sources[0], /references\/palitoy-uk-when/);
+  assert.ok(when.json.sources.every(source => /palitoy-uk-when/.test(source)), when.json.sources.join(", "));
+  const whenPrompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(whenPrompt, /Millennium Falcon \| die-cast/);
+  assert.match(whenPrompt, /1979, 1980, 1981, 1982/);
+  assert.match(whenPrompt, /Millennium Falcon \| vehicle/);
+  assert.match(whenPrompt, /years: 1980, 1982/);
+
+  const other = await call({ message: "what did Palitoy sell in the UK that wasn't figures?" });
+  assert.ok(other.json.sources.every(source => /palitoy-uk-not-figures/.test(source)), other.json.sources.join(", "));
+  assert.equal(other.json.sources[0], "references/palitoy-uk-not-figures.txt");
+  const otherPrompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(otherPrompt, /Keel kite/);
+  assert.match(otherPrompt, /Escape the Death Star game/);
+  assert.match(otherPrompt, /not action figures/i);
+
+  const numb = await call({ message: "when did Palitoy release Nien Numb?" });
+  const numbPrompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(numb.json.sources[0], /palitoy-uk-when/);
+  assert.match(numbPrompt, /Nien Nunb/);
+  assert.match(numbPrompt, /Warren wrote Nien Numb/);
+  assert.match(numbPrompt, /1983/);
+
+  const history = await call({ message: "What is the history of Palitoy?" });
+  assert.equal(history.json.sources[0], "references/palitoy-history.txt");
+  const historyPrompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(historyPrompt, /Coalville/);
+  assert.match(historyPrompt, /https:\/\/en\.wikipedia\.org\/wiki\/Palitoy/);
+  assert.match(historyPrompt, /Reliability: lower/);
+  assert.match(historyPrompt, /sources disagree/);
+
+  const factory = await call({ message: "Is Palitoy a factory?" });
+  assert.ok(factory.json.sources.includes("references/vendor-codes.txt"), factory.json.sources.join(", "));
+  assert.ok(!factory.json.sources.some(source => /palitoy-uk-1981/.test(source)), factory.json.sources.join(", "));
+});
+
+await test("retrieval index routes Palitoy and records the other topics", async () => {
+  const { tcTopicRoute, tcPalitoyIntent } = await import(pathToFileURL(path.join(root, "api", "chat.js")).href);
+  const year = tcTopicRoute("what Palitoy toys came out in 1981?");
+  assert.ok(year.topics.includes("palitoy"));
+  assert.equal(year.palitoy.year, 1981);
+  assert.equal(year.palitoy.when, false);
+  const vehicle = tcTopicRoute("which mini-rigs and playsets were there?");
+  assert.ok(vehicle.topics.includes("vehicle"));
+  assert.ok(vehicle.topics.includes("playset"));
+  assert.equal(tcPalitoyIntent("Is Palitoy a factory?"), null);
+  const index = JSON.parse(fs.readFileSync(path.join(root, "data/retrieval-index.json"), "utf8"));
+  const topics = new Set(index.files.map(file => file.topic));
+  for (const topic of ["figure", "accessory", "cardback", "coo", "factory", "palitoy", "variant"]) {
+    assert.ok(topics.has(topic), `missing topic ${topic}`);
+  }
+  const yearFile = index.files.find(file => file.relPath === "references/palitoy-uk-1981.txt");
+  assert.equal(yearFile.role, "year");
+  assert.deepEqual(yearFile.years, [1981]);
+  assert.ok(yearFile.keywords.includes("Dengar"));
+  assert.ok(!yearFile.keywords.some(keyword => /Warren UK list/.test(keyword)));
+});
+
+await test("Palitoy release files match the generator and stay under the cap", async () => {
+  const { execFileSync } = await import("node:child_process");
+  const names = [
+    "data/references/palitoy-uk-1981.txt",
+    "data/references/palitoy-uk-when.txt",
+    "data/references/palitoy-history.txt",
+    "data/retrieval-index.json",
+    "data-source/palitoy-uk-releases.json"
+  ];
+  const before = Object.fromEntries(names.map(name => [name, fs.readFileSync(path.join(root, name), "utf8")]));
+  execFileSync("python3", ["tools/build-palitoy-releases.py"], { cwd: root });
+  for (const name of names) {
+    assert.equal(fs.readFileSync(path.join(root, name), "utf8"), before[name], name);
+  }
+  const source = JSON.parse(before["data-source/palitoy-uk-releases.json"]);
+  assert.equal(source.source.url, null);
+  assert.equal(source.source.reliability, "primary");
+  assert.match(source.wording_note, /1978 to 1975/);
+  const nunb = source.items.find(item => item.name === "Nien Nunb");
+  assert.ok(nunb);
+  assert.match(nunb.notes.join(" "), /Nien Numb/);
+  assert.equal(source.items.some(item => item.name === "Nien Numb"), false);
+  const over = [];
+  for (const entry of fs.readdirSync(path.join(root, "data/references"))) {
+    if (!entry.startsWith("palitoy-")) continue;
+    const text = fs.readFileSync(path.join(root, "data/references", entry), "utf8");
+    if (text.length > 7000) over.push(`${entry} ${text.length}`);
+  }
+  assert.equal(over.length, 0, over.join("\n"));
 });
 
 console.error = quietErrors;

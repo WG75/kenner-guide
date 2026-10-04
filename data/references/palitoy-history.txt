@@ -1,0 +1,18 @@
+Palitoy company history
+
+This is a short paraphrase. It is not a copy of the page, and it is not Warren's UK release list. UK toy years are in the Palitoy UK release files. If a release year here conflicts with that list, say the sources disagree and keep his status notes. If a supplied reference disagrees about a variant, a factory or a cardback, Variant Villain wins unless the file says otherwise.
+
+Palitoy was a British toy company. The business began in 1919 in Coalville, Leicestershire, when Alfred Edward Pallett founded the Cascelloid Company. A toy followed in 1920 and a doll in 1925. British Xylonite bought Cascelloid in 1931, and Palitoy was the trademark used from 1935 for the toy side of that business.
+Source name: Wikipedia, Palitoy. Source URL: https://en.wikipedia.org/wiki/Palitoy. Reliability: lower. Fetched: 2026-10-04.
+
+General Mills bought Palitoy in 1968, and it sat in that company's toy group. The article describes Palitoy as a maker of popular British toys, including licensed lines, and it names Star Wars figures and Play-Doh among the products. It does not give a year-by-year UK Star Wars release list.
+Source name: Wikipedia, Palitoy. Source URL: https://en.wikipedia.org/wiki/Palitoy. Reliability: lower. Fetched: 2026-10-04.
+
+The same article says the design department closed in 1984, leaving mainly sales and marketing. In 1985 General Mills left the toy business. Palitoy took the Kenner Parker name, and on 1 May 1985 most of the Coalville work ended, with manufacturing moved overseas. Tonka bought Kenner Parker, including Palitoy, in 1987. Hasbro bought Tonka in 1991 and closed the old Palitoy site in 1994. Play-Doh production there moved to a Hasbro factory in Ireland.
+Source name: Wikipedia, Palitoy. Source URL: https://en.wikipedia.org/wiki/Palitoy. Reliability: lower. Fetched: 2026-10-04.
+
+A Variant Villain figure page already in the reference data describes Palitoy as head of Star Wars European operations for General Mills, and as a Coalville distribution hub. It says the grey-limb Hoth stormtrooper was not produced by Palitoy. That is a figure claim, not a UK release year. If that claim and this history pull in different directions, say the sources disagree. Variant Villain wins on the figure.
+Source name: Variant Villain, Imperial Stormtrooper (Hoth Battle Gear). Source URL: https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/. Reliability: high. Recorded: 2026-10-04. Taken from the figure notes already stored. Not a new page fetch.
+
+The Fandom Palitoy article was not used. On 2026-10-04 a polite request for https://starwars.fandom.com/robots.txt came back as a Cloudflare challenge (HTTP 403), so the page was skipped.
+Source name: starwars.fandom.com robots check. Source URL: https://starwars.fandom.com/robots.txt. Reliability: lower. Fetched: 2026-10-04. Result: skipped.
