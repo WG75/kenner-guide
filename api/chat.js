@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { parseFollowUps, fallbackFollowUps, followTopicFor } from "../vfcb-chat-ui.js";
+import { selectVvReferencePhotos } from "./vv-reference-photos.js";
 
 export { tcTopicRoute, tcPalitoyIntent };
 
@@ -1738,10 +1739,12 @@ async function handleTextChat(res, { message, history, flowState }) {
     }
 
     const countFollowUps = tcCountFollowUps(question);
+    const images = selectVvReferencePhotos({ question, sources });
     return tcReply(res, answer, {
       sources,
       flowState: carriedFlow,
       followTopic: followTopicFor(question),
+      ...(images.length ? { images } : {}),
       ...(countFollowUps.length >= 2 ? { actions: countFollowUps.map(label => ({ label, value: label })) } : {})
     });
   } catch (err) {
