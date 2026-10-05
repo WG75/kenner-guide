@@ -50,6 +50,11 @@ Variant questions:
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
 
+Accessory factory:
+- Families listed: I Kader/ Lili Ledy, II Unitoy, III Taiwan (Universal Manufacturers). Several factories. The pike has its own accessory page. There is no cloak accessory page.
+- This page describes the cloak with the family: Kader a fluffy bright red cloak; Lili Ledy a bright or darker ribbed cloak, not glued, so the slit it left the factory with is not proven; Unitoy a fluffy red cloak; Taiwan a strongly ribbed cloak.
+- Source: https://www.variantvillain.com/characters/rotj/emperors-royal-guard/ and https://www.variantvillain.com/accessory-guide/erg-pike/ Reliability: high. Recorded: 2026-10-05.
+
 Sources:
 https://www.variantvillain.com/characters/rotj/emperors-royal-guard/
 https://www.variantvillain.com/knowledge/introduction-to-coos/

@@ -39,6 +39,11 @@ Variant questions:
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
 
+Accessory factory:
+- The figure guide lists one family, I: Smile. Smile in Hong Kong produced the figure and the accessory, so the skiff vibro staff is the Smile mould.
+- On the Vibro Axe page the Smile mould is M2 (mid grey plastic, ejector-pin marks mirrored on either side). That page does not name Barada. This figure page says the staff is yet to be documented, and it does not link the Vibro Axe page.
+- Source: https://www.variantvillain.com/characters/potf/barada/ and https://www.variantvillain.com/accessory-guide/vibro-axe/ Reliability: high. Recorded: 2026-10-05.
+
 Sources:
 https://www.variantvillain.com/characters/potf/barada/
 https://www.variantvillain.com/knowledge/introduction-to-coos/

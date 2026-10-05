@@ -444,7 +444,7 @@
         "spear"
       ],
       "years": [],
-      "chars": 833
+      "chars": 1777
     },
     {
       "relPath": "accessories/gaderffii-stick.txt",
@@ -1222,7 +1222,7 @@
         "axe"
       ],
       "years": [],
-      "chars": 1466
+      "chars": 2885
     },
     {
       "relPath": "accessories/yoda-belt.txt",
@@ -1944,7 +1944,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3854
+      "chars": 4248
     },
     {
       "relPath": "figures/8d8-reference.txt",
@@ -2244,7 +2244,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3693
+      "chars": 4270
     },
     {
       "relPath": "figures/ben-obi-wan-kenobi-reference.txt",
@@ -2564,7 +2564,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5585
+      "chars": 6188
     },
     {
       "relPath": "figures/cloud-car-pilot-reference.txt",
@@ -2762,7 +2762,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 2429
+      "chars": 2749
     },
     {
       "relPath": "figures/dulok-shaman-reference.txt",
@@ -2782,7 +2782,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 2456
+      "chars": 2814
     },
     {
       "relPath": "figures/emperors-royal-guard-reference.txt",
@@ -2808,7 +2808,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4289
+      "chars": 4915
     },
     {
       "relPath": "figures/ev-9d9-reference.txt",
@@ -3444,7 +3444,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 2456
+      "chars": 2780
     },
     {
       "relPath": "figures/klaatu-in-skiff-guard-outfit-reference.txt",
@@ -3472,7 +3472,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4455
+      "chars": 4993
     },
     {
       "relPath": "figures/klaatu-reference-2.txt",
@@ -3488,7 +3488,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4497
+      "chars": 4906
     },
     {
       "relPath": "figures/klaatu-reference.txt",
@@ -3504,7 +3504,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5357
+      "chars": 6161
     },
     {
       "relPath": "figures/lando-calrissian-general-pilot-reference.txt",
@@ -3530,7 +3530,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3734
+      "chars": 4211
     },
     {
       "relPath": "figures/lando-calrissian-reference.txt",
@@ -3580,7 +3580,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3952
+      "chars": 4550
     },
     {
       "relPath": "figures/leia-hoth-outfit-reference.txt",
@@ -3676,7 +3676,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4600
+      "chars": 4972
     },
     {
       "relPath": "figures/logray-ewoks-reference.txt",
@@ -3696,7 +3696,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 2479
+      "chars": 2821
     },
     {
       "relPath": "figures/luke-skywalker-bespin-fatigues-reference-2.txt",
@@ -3814,7 +3814,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5397
+      "chars": 5923
     },
     {
       "relPath": "figures/luke-skywalker-in-battle-poncho-reference.txt",
@@ -3842,7 +3842,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5437
+      "chars": 5975
     },
     {
       "relPath": "figures/luke-skywalker-jedi-knight-outfit-reference-2.txt",
@@ -4028,7 +4028,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3408
+      "chars": 3760
     },
     {
       "relPath": "figures/nien-nunb-reference.txt",
@@ -4064,7 +4064,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3797
+      "chars": 4275
     },
     {
       "relPath": "figures/paploo-reference.txt",
@@ -4080,7 +4080,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5908
+      "chars": 6387
     },
     {
       "relPath": "figures/power-droid-reference.txt",
@@ -4168,7 +4168,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5192
+      "chars": 5702
     },
     {
       "relPath": "figures/princess-leia-organa-reference.txt",
@@ -4226,7 +4226,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3633
+      "chars": 3991
     },
     {
       "relPath": "figures/r2-d2-reference-1.txt",
@@ -4444,7 +4444,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4374
+      "chars": 4893
     },
     {
       "relPath": "figures/rebel-commander-reference.txt",
@@ -4484,7 +4484,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4270
+      "chars": 4631
     },
     {
       "relPath": "figures/rebel-soldier-hoth-battle-gear-reference.txt",
@@ -4550,7 +4550,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5225
+      "chars": 5809
     },
     {
       "relPath": "figures/sand-people-reference.txt",
@@ -4630,7 +4630,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5735
+      "chars": 6253
     },
     {
       "relPath": "figures/stormtrooper-reference.txt",
@@ -4772,7 +4772,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5407
+      "chars": 5747
     },
     {
       "relPath": "figures/weequay-reference.txt",
@@ -4788,7 +4788,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 2925
+      "chars": 3474
     },
     {
       "relPath": "figures/wicket-w-warrick-reference.txt",
@@ -4812,7 +4812,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3979
+      "chars": 4618
     },
     {
       "relPath": "figures/yak-face-reference.txt",
@@ -4834,7 +4834,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3881
+      "chars": 4600
     },
     {
       "relPath": "figures/yoda-reference-2.txt",
@@ -4914,7 +4914,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3655
+      "chars": 3977
     },
     {
       "relPath": "references/accessory-production.txt",

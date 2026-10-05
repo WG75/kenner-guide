@@ -48,6 +48,11 @@ imperialgunnery.com (evidence: documented where the page states it; 'we believe'
 - theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
 - https://theswca.com/
 
+Accessory factory:
+- Families listed: I Smile/ Lili Ledy, II Taiwan (Universal Manufacturers). Several factories, so the hood and the vibroblade are not determinable to one factory.
+- The headings are "RANCOR KEEPER HOOD" and "RANCOR KEEPER VIBROBLADE". Neither links to an accessory guide. The Vibro Axe page does not name the Rancor Keeper.
+- Source: https://www.variantvillain.com/characters/rotj/rancor-keeper/ and https://www.variantvillain.com/accessory-guide/vibro-axe/ Reliability: high. Recorded: 2026-10-05.
+
 Sources:
 https://www.variantvillain.com/characters/rotj/rancor-keeper/
 https://www.variantvillain.com/knowledge/introduction-to-coos/

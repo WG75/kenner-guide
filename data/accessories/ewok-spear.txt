@@ -6,10 +6,17 @@ Overview:
 Ewok Spear is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- Families and notes named on the page index
-  - MOULD COMPARISON
-  - #1: Universal Manufacturers
-  - #2: Smile
+- Mould comparison. The page says content will be added shortly.
+  - #1, Universal Manufacturers
+  - #2, Smile
+- Figures named on this page
+  - Further reading links the Wicket figure guide and the Romba figure guide.
+  - "LL Wicket Figure Guide" is printed in the further reading and is not a link. No Lili Ledy mould is listed.
+- Figure pages read with this, recorded 2026-10-05
+  - Romba's figure guide lists only Smile. His page says the spear was produced by Smile in Hong Kong, is shared with Wicket, and is yet to be documented. That is mould #2 on this page.
+  - Wicket's figure guide lists Smile/ Lili Ledy and Taiwan (Universal Manufacturers). Several factories, so his spear is not determinable to one mould. This page does not say which spear belongs to which family.
+  - Paploo's figure guide lists only Lili Ledy. His spear is his own and is yet to be documented. This page does not name him.
+  - The Ewoks-line Wicket figure guide lists only Lili Ledy (Made in Mexico), so his spear is the Lili Ledy one. This page does not list that mould.
 
 Identification: use the mould and colour notes above. A COO stamp alone does not prove the accessory mould.
 Rarity: unknown unless a section above states it.

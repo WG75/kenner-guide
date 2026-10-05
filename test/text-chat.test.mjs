@@ -1406,6 +1406,34 @@ await test("Variant Villain photos stay out of the model and can be switched off
   assert.ok(html.indexOf("addMessage(\"assistant\", shown.reply)") < html.indexOf("appendAnswerImages(data.images, \"after\")"));
 });
 
+await test("a one-factory figure's accessory uses that factory's Variant Villain mould", async () => {
+  const barada = fs.readFileSync(path.join(root, "data/figures/barada-reference.txt"), "utf8");
+  assert.match(barada, /one family, I: Smile/);
+  assert.match(barada, /Smile mould is M2/);
+  assert.match(barada, /accessory-guide\/vibro-axe\//);
+  const nikto = fs.readFileSync(path.join(root, "data/figures/nikto-reference.txt"), "utf8");
+  assert.match(nikto, /I: Smile\/ Lili Ledy/);
+  assert.match(nikto, /not determinable/);
+  assert.doesNotMatch(nikto, /made only by Smile/);
+  const axe = fs.readFileSync(path.join(root, "data/accessories/vibro-axe.txt"), "utf8");
+  assert.match(axe, /M1, Unitoy/);
+  assert.match(axe, /M2, Smile/);
+  assert.match(axe, /M3, Lili Ledy/);
+  assert.doesNotMatch(axe, /M1, Smile/);
+
+  const asked = await call({ message: "What staff did Barada come with?" });
+  assert.ok(asked.json.sources.includes("figures/barada-reference.txt"), asked.json.sources.join(", "));
+  const prompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(prompt, /Smile mould is M2/);
+  assert.match(prompt, /https:\/\/www\.variantvillain\.com\/accessory-guide\/vibro-axe\//);
+
+  const nik = await call({ message: "What weapon did Nikto come with?" });
+  assert.ok(nik.json.sources.includes("figures/nikto-reference.txt"), nik.json.sources.join(", "));
+  const nikPrompt = calls.at(-1).body.messages.at(-1).content;
+  assert.match(nikPrompt, /Smile\/ Lili Ledy/);
+  assert.match(nikPrompt, /not determinable/);
+});
+
 console.error = quietErrors;
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
