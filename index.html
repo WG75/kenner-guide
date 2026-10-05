@@ -201,6 +201,19 @@
       white-space: pre-wrap;
     }
 
+    .image-credit {
+      display: inline-block;
+      margin-top: 9px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .image-credit:hover {
+      text-decoration: underline;
+    }
+
     .status {
       flex: 0 0 auto;
       min-height: 20px;
@@ -579,19 +592,41 @@
 
       const img = document.createElement("img");
       img.src = image.url;
-      img.alt = image.title || "VF-CB reference image";
+      img.alt = image.alt || image.title || "VF-CB reference image";
       img.loading = "lazy";
       card.appendChild(img);
 
-      if (image.caption) {
+      if (image.sourcePage && image.alt) {
+        const altText = document.createElement("div");
+        altText.className = "image-caption";
+        altText.textContent = image.alt;
+        card.appendChild(altText);
+      } else if (image.caption) {
         const caption = document.createElement("div");
         caption.className = "image-caption";
         caption.innerHTML = formatText(image.caption);
         card.appendChild(caption);
       }
 
+      if (image.sourcePage) {
+        const credit = document.createElement("a");
+        credit.className = "image-credit";
+        credit.href = image.sourcePage;
+        credit.target = "_blank";
+        credit.rel = "noopener noreferrer";
+        credit.textContent = "Photo: Variant Villain";
+        card.appendChild(credit);
+      }
+
       chatEl.appendChild(card);
       scrollToBottom();
+    }
+
+    function appendAnswerImages(images, place) {
+      const list = Array.isArray(images) ? images : [];
+      const vv = list.filter((image) => image && image.sourcePage);
+      const other = list.filter((image) => image && !image.sourcePage);
+      (place === "after" ? vv : other).forEach(addImageCard);
     }
 
     function addActionButtons(actions) {
@@ -660,12 +695,11 @@
 
         state.flowState = data.flowState || null;
 
-        if (Array.isArray(data.images)) {
-          data.images.forEach(addImageCard);
-        }
+        appendAnswerImages(data.images, "before");
 
         const shown = presentReply(data, text);
         addMessage("assistant", shown.reply);
+        appendAnswerImages(data.images, "after");
 
         if (shown.actions.length) addActionButtons(shown.actions);
       } catch (err) {
@@ -847,12 +881,11 @@
 
         state.flowState = data.flowState || null;
 
-        if (Array.isArray(data.images)) {
-          data.images.forEach(addImageCard);
-        }
+        appendAnswerImages(data.images, "before");
 
         const shown = presentReply(data, "identify a figure");
         addMessage("assistant", shown.reply || "I could not identify the figure from that image.");
+        appendAnswerImages(data.images, "after");
 
         if (shown.actions.length) addActionButtons(shown.actions);
       } catch (err) {

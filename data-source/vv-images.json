@@ -1,0 +1,5224 @@
+{
+  "generated": "2026-10-04",
+  "source": "https://www.variantvillain.com/",
+  "note": "Hot-link map for the chat UI. Not injected into the model. Each image URL was checked with HEAD or GET and returned an image from variantvillain.com.",
+  "pagesCached": 168,
+  "pagesFetched": 0,
+  "errors": [],
+  "entries": [
+    {
+      "id": "sw/luke-skywalker",
+      "kind": "figure",
+      "name": "Luke Skywalker",
+      "page": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+      "files": [
+        "figures/luke-skywalker-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/sw_lukea.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+          "alt": "Luke Skywalker, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ANH_LukeSkywalker_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+          "alt": "Luke Skywalker, figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ANH_LukeSkywalker_01.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+          "alt": "Luke Skywalker, COO family I, Kader / Poch / Kader China / Meccano / Glasslite",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ANH_LukeSkywalker_03.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+          "alt": "Luke Skywalker, COO family II, Unitoy / Poch / PBP",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ANH_LukeSkywalker_06.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+          "alt": "Luke Skywalker, COO family III, TAIWAN",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ANH_LukeSkywalker_07.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+          "alt": "Luke Skywalker, COO family IV, Smile",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/princess-leia-organa",
+      "kind": "figure",
+      "name": "Princess Leia Organa",
+      "page": "https://www.variantvillain.com/characters/sw/princess-leia-organa/",
+      "files": [
+        "figures/princess-leia-organa-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_Leia.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/princess-leia-organa/",
+          "alt": "Princess Leia Organa, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/r2-d2",
+      "kind": "figure",
+      "name": "R2-D2",
+      "page": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "files": [
+        "figures/r2-d2-reference-1.txt",
+        "figures/r2-d2-reference-2.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2-D2-COO-sheet-3.7-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r2-d2/",
+          "alt": "R2-D2, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/05/R2-f1a.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r2-d2/",
+          "alt": "R2-D2, COO family I, Unitoy/ Poch",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/10/R2-f2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r2-d2/",
+          "alt": "R2-D2, COO family II, Smile",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/07/R2-f3-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r2-d2/",
+          "alt": "R2-D2, COO family III, Kader/ Lili Ledy (Regreso)",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2-f4-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r2-d2/",
+          "alt": "R2-D2, COO family IV, Kader/ Lili Ledy (Retorno)",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/07/R2-f5-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r2-d2/",
+          "alt": "R2-D2, COO family V, Unitoy",
+          "role": "coo",
+          "family": "V",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/07/R2-f6-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r2-d2/",
+          "alt": "R2-D2, COO family VI, Taiwan",
+          "role": "coo",
+          "family": "VI",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/08/R2-f7.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r2-d2/",
+          "alt": "R2-D2, COO family VII, Kader",
+          "role": "coo",
+          "family": "VII",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/chewbacca",
+      "kind": "figure",
+      "name": "Chewbacca",
+      "page": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "files": [
+        "figures/chewbacca-reference-1.txt",
+        "figures/chewbacca-reference-2.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/Chewbacca-COO-Sheet-3.2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/chewbacca/",
+          "alt": "Chewbacca, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/11/F1a-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/chewbacca/",
+          "alt": "Chewbacca, COO family I, Unitoy (MIHK COO)",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/F2a-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/chewbacca/",
+          "alt": "Chewbacca, COO family II, Kader (HK COO)",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/F3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/chewbacca/",
+          "alt": "Chewbacca, COO family III, Smile (HK COO/ NCOO)",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/11/F4-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/chewbacca/",
+          "alt": "Chewbacca, COO family IV, Taiwan (MIT COO)",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/11/F5-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/chewbacca/",
+          "alt": "Chewbacca, COO family V, Smile/ Lili Ledy (NCOO)",
+          "role": "coo",
+          "family": "V",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/F6.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/chewbacca/",
+          "alt": "Chewbacca, COO family VI, Top Toys (NCOO)",
+          "role": "coo",
+          "family": "VI",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/c-3po",
+      "kind": "figure",
+      "name": "C-3PO",
+      "page": "https://www.variantvillain.com/characters/sw/c-3po/",
+      "files": [
+        "figures/c-3po-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/01/C3PO-COO-sheet-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/c-3po/",
+          "alt": "C-3PO, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/LLV_013.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/c-3po/",
+          "alt": "C-3PO, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/darth-vader",
+      "kind": "figure",
+      "name": "Darth Vader",
+      "page": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "files": [
+        "figures/darth-vader-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/06/SW_DarthVader_NEW4-Kopie.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/000_2_DarthVader_Chest_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/001_DarthVader_Figure_Fam1_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family I, KADER/ Kader CHINA",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/002_DarthVader_Figure_Fam2_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family II, KADER",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/003_DarthVader_Figure_Fam3_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family III, KADER",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/004_DarthVader_Figure_Fam4_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family IV, SMILE/ LILI LEDY",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/005_DarthVader_Figure_Fam5_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family V, UNITOY",
+          "role": "coo",
+          "family": "V",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/006_DarthVader_Figure_Fam6_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family VI, UNITOY",
+          "role": "coo",
+          "family": "VI",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/007_DarthVader_Figure_Fam7_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family VII, UNITOY",
+          "role": "coo",
+          "family": "VII",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/008_DarthVader_Figure_Fam8_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family VIII, UNITOY/ PBP",
+          "role": "coo",
+          "family": "VIII",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/009_DarthVader_Figure_Fam9_002.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family IX, TOP TOYS",
+          "role": "coo",
+          "family": "IX",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/010_DarthVader_Figure_Fam10_002.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family X, TAIWAN",
+          "role": "coo",
+          "family": "X",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/011_DarthVader_Figure_Fam11_002.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family XI, TAIWAN",
+          "role": "coo",
+          "family": "XI",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/012_DarthVader_Figure_Fam12_002.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/darth-vader/",
+          "alt": "Darth Vader, COO family XII, TAKARA",
+          "role": "coo",
+          "family": "XII",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/stormtrooper",
+      "kind": "figure",
+      "name": "Stormtrooper",
+      "page": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "files": [
+        "figures/stormtrooper-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/11/Stormtrooper-COO-Sheet_3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+          "alt": "Stormtrooper, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/28423749_774645909387164_2468306519407247720_o.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+          "alt": "Stormtrooper, COO family I, Kader/ Poch/ Kader China",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/28516031_774645876053834_6191400736562287156_o.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+          "alt": "Stormtrooper, COO family II, Unitoy/ Poch",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/10838038_774645896053832_875273495671829309_o.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+          "alt": "Stormtrooper, COO family III, Unitoy/ Poch/ PBP/ Lili Ledy",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/28238077_774645989387156_2102462457947955957_o.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+          "alt": "Stormtrooper, COO family IV, Smile",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/28238552_774646039387151_636375467749378599_o.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+          "alt": "Stormtrooper, COO family V, Takara & Top Toys",
+          "role": "coo",
+          "family": "V",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/ben-obi-wan-kenobi",
+      "kind": "figure",
+      "name": "Ben (Obi-Wan) Kenobi",
+      "page": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "files": [
+        "figures/ben-obi-wan-kenobi-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_BenKenobi.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+          "alt": "Ben (Obi-Wan) Kenobi, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/ANH_BenKenobi_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+          "alt": "Ben (Obi-Wan) Kenobi, figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/ANH_BenKenobi_01.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+          "alt": "Ben (Obi-Wan) Kenobi, COO family I, UNITOY/ POCH",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/ANH_BenKenobi_03.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+          "alt": "Ben (Obi-Wan) Kenobi, COO family II, UNITOY / LILI LEDY",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/ANH_BenKenobi_05.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+          "alt": "Ben (Obi-Wan) Kenobi, COO family III, KADER / POCH",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/han-solo",
+      "kind": "figure",
+      "name": "Han Solo",
+      "page": "https://www.variantvillain.com/characters/sw/han-solo/",
+      "files": [
+        "figures/han-solo-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_HanSolo.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/han-solo/",
+          "alt": "Han Solo, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/jawa",
+      "kind": "figure",
+      "name": "Jawa",
+      "page": "https://www.variantvillain.com/characters/sw/jawa/",
+      "files": [
+        "figures/jawa-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/10/Jawa-COO-Sheet-3.3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/jawa/",
+          "alt": "Jawa, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/09/F1-Kader.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/jawa/",
+          "alt": "Jawa, COO family I, Kader",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/09/F2-Kader.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/jawa/",
+          "alt": "Jawa, COO family II, Kader: HONG KONG & CHINA",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/09/F3F4-Unitoy.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/jawa/",
+          "alt": "Jawa, COO family III, Unitoy",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/sand-people",
+      "kind": "figure",
+      "name": "Sand People",
+      "page": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "files": [
+        "figures/sand-people-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/sw_tusken.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/sand-people/",
+          "alt": "Sand People, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/08/003-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/sand-people/",
+          "alt": "Sand People, figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/08/100.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/sand-people/",
+          "alt": "Sand People, COO family I, UNITOY",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/08/101.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/sand-people/",
+          "alt": "Sand People, COO family II, UNITOY",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/08/103.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/sand-people/",
+          "alt": "Sand People, COO family III, KADER",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/08/104-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/sand-people/",
+          "alt": "Sand People, COO family IV, KADER/ MECCANO",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/08/105.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/sand-people/",
+          "alt": "Sand People, COO family V, KADER",
+          "role": "coo",
+          "family": "V",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/death-squad-commander",
+      "kind": "figure",
+      "name": "Death Squad Commander",
+      "page": "https://www.variantvillain.com/characters/sw/death-squad-commander/",
+      "files": [
+        "figures/death-squad-commander-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_DSC.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/death-squad-commander/",
+          "alt": "Death Squad Commander, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/greedo",
+      "kind": "figure",
+      "name": "Greedo",
+      "page": "https://www.variantvillain.com/characters/sw/greedo/",
+      "files": [
+        "figures/greedo-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/06/Greedo-COO-sheet-3.2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/greedo/",
+          "alt": "Greedo, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/hammerhead",
+      "kind": "figure",
+      "name": "Hammerhead",
+      "page": "https://www.variantvillain.com/characters/sw/hammerhead/",
+      "files": [
+        "figures/hammerhead-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/07/Hammerhead-COO-sheet-3.2-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/hammerhead/",
+          "alt": "Hammerhead, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/snaggletooth",
+      "kind": "figure",
+      "name": "Snaggletooth",
+      "page": "https://www.variantvillain.com/characters/sw/snaggletooth/",
+      "files": [
+        "figures/snaggletooth-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/06/Snaggletooth-COO-sheet-3.2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/snaggletooth/",
+          "alt": "Snaggletooth, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/walrusman",
+      "kind": "figure",
+      "name": "Walrus Man",
+      "page": "https://www.variantvillain.com/characters/sw/walrusman/",
+      "files": [
+        "figures/walrusman-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/06/Walrus-Man-COO-sheet-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/walrusman/",
+          "alt": "Walrus Man, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/luke-skywalker-x-wing-pilot",
+      "kind": "figure",
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "page": "https://www.variantvillain.com/characters/sw/luke-skywalker-x-wing-pilot/",
+      "files": [
+        "figures/luke-skywalker-x-wing-pilot-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/sw_lukepilot31.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/luke-skywalker-x-wing-pilot/",
+          "alt": "Luke Skywalker (X-Wing Pilot), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/r5-d4",
+      "kind": "figure",
+      "name": "R5-D4",
+      "page": "https://www.variantvillain.com/characters/sw/r5-d4/",
+      "files": [
+        "figures/r5-d4-reference-2.txt",
+        "figures/r5-d4-reference-3.txt",
+        "figures/r5-d4-reference-4.txt",
+        "figures/r5-d4-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/03/R5D4-COO-Sheet-3.4-3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r5-d4/",
+          "alt": "R5-D4, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/10/Intro-1024x771.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r5-d4/",
+          "alt": "R5-D4, figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/03/F1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r5-d4/",
+          "alt": "R5-D4, COO family I, UNITOY",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/03/F4.2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r5-d4/",
+          "alt": "R5-D4, COO family IV, KADER/ POCH/ MECCANO",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/03/F5.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r5-d4/",
+          "alt": "R5-D4, COO family V, UNITOY",
+          "role": "coo",
+          "family": "V",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/03/F8.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/r5-d4/",
+          "alt": "R5-D4, COO family VIII, KADER",
+          "role": "coo",
+          "family": "VIII",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/death-star-droid",
+      "kind": "figure",
+      "name": "Death Star Droid",
+      "page": "https://www.variantvillain.com/characters/sw/death-star-droid/",
+      "files": [
+        "figures/death-star-droid-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/04/sw_dsd-A.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/death-star-droid/",
+          "alt": "Death Star Droid, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/power-droid",
+      "kind": "figure",
+      "name": "Power Droid",
+      "page": "https://www.variantvillain.com/characters/sw/power-droid/",
+      "files": [
+        "figures/power-droid-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/sw_gonk.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/power-droid/",
+          "alt": "Power Droid, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "sw/boba-fett",
+      "kind": "figure",
+      "name": "Boba Fett",
+      "page": "https://www.variantvillain.com/characters/sw/boba-fett/",
+      "files": [
+        "figures/boba-fett-reference-2.txt",
+        "figures/boba-fett-reference-3.txt",
+        "figures/boba-fett-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/01/Boba-Fett-COO-Sheet-3.3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/boba-fett/",
+          "alt": "Boba Fett, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/01/F1-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/boba-fett/",
+          "alt": "Boba Fett, COO family I, KADER / MECCANO",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/01/F2b.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/boba-fett/",
+          "alt": "Boba Fett, COO family II, F3 POCH",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/01/BobaFett_Fam4_TW_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/sw/boba-fett/",
+          "alt": "Boba Fett, COO family IV, TAIWAN",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/leia-organa-bespin-gown",
+      "kind": "figure",
+      "name": "Leia Organa (Bespin Gown)",
+      "page": "https://www.variantvillain.com/characters/esb/leia-organa-bespin-gown/",
+      "files": [
+        "figures/leia-organa-bespin-gown-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_11.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/leia-organa-bespin-gown/",
+          "alt": "Leia Organa (Bespin Gown), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/fx-7",
+      "kind": "figure",
+      "name": "FX-7",
+      "page": "https://www.variantvillain.com/characters/esb/fx-7/",
+      "files": [
+        "figures/fx-7-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/esb_13.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/fx-7/",
+          "alt": "FX-7, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/imperial-stormtrooper-hoth-battle-gear",
+      "kind": "figure",
+      "name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "page": "https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/",
+      "files": [
+        "figures/imperial-stormtrooper-hoth-battle-gear-reference-2.txt",
+        "figures/imperial-stormtrooper-hoth-battle-gear-reference-3.txt",
+        "figures/imperial-stormtrooper-hoth-battle-gear-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_18.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/imperial-stormtrooper-hoth-battle-gear/",
+          "alt": "Imperial Stormtrooper (Hoth Battle Gear), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/rebel-soldier-hoth-battle-gear",
+      "kind": "figure",
+      "name": "Rebel Soldier (Hoth Battle Gear)",
+      "page": "https://www.variantvillain.com/characters/esb/rebel-soldier-hoth-battle-gear/",
+      "files": [
+        "figures/rebel-soldier-hoth-battle-gear-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_15.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/rebel-soldier-hoth-battle-gear/",
+          "alt": "Rebel Soldier (Hoth Battle Gear), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/bossk",
+      "kind": "figure",
+      "name": "Bossk",
+      "page": "https://www.variantvillain.com/characters/esb/bossk/",
+      "files": [
+        "figures/bossk-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Bossk-coo-guide.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/bossk/",
+          "alt": "Bossk, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/27628934_760711457447276_1019816664220222475_o.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/bossk/",
+          "alt": "Bossk, COO family I, Kader/poch",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/27356074_760711460780609_1514645279164777026_o.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/bossk/",
+          "alt": "Bossk, COO family II, SMILE",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/27628547_760711500780605_5895650708243910882_o.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/bossk/",
+          "alt": "Bossk, COO family III, UNITOY/POCH",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/27174052_760711537447268_3905334297030504279_o.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/bossk/",
+          "alt": "Bossk, COO family IV, PBP",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/ig-88",
+      "kind": "figure",
+      "name": "IG-88",
+      "page": "https://www.variantvillain.com/characters/esb/ig-88/",
+      "files": [
+        "figures/ig-88-reference-2.txt",
+        "figures/ig-88-reference-3.txt",
+        "figures/ig-88-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/04/IG88-COO-Sheet-3.2-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/ig-88/",
+          "alt": "IG-88, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/07/F1-Smile.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/ig-88/",
+          "alt": "IG-88, COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/07/F2-Kader.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/ig-88/",
+          "alt": "IG-88, COO family II, Kader",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/09/F3a-Unitoy.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/ig-88/",
+          "alt": "IG-88, COO family III, Unitoy",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/luke-skywalker-bespin-fatigues",
+      "kind": "figure",
+      "name": "Luke Skywalker (Bespin Fatigues)",
+      "page": "https://www.variantvillain.com/characters/esb/luke-skywalker-bespin-fatigues/",
+      "files": [
+        "figures/luke-skywalker-bespin-fatigues-reference-2.txt",
+        "figures/luke-skywalker-bespin-fatigues-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/12/Luke-Bespin-COO-sheet-3.3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/luke-skywalker-bespin-fatigues/",
+          "alt": "Luke Skywalker (Bespin Fatigues), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_LukeBespin_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/luke-skywalker-bespin-fatigues/",
+          "alt": "Luke Skywalker (Bespin Fatigues), figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ftr7ez3j.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/luke-skywalker-bespin-fatigues/",
+          "alt": "Luke Skywalker (Bespin Fatigues), COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_LukeBespin_03.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/luke-skywalker-bespin-fatigues/",
+          "alt": "Luke Skywalker (Bespin Fatigues), COO family II, Unitoy/ Poch",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_LukeBespin_05.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/luke-skywalker-bespin-fatigues/",
+          "alt": "Luke Skywalker (Bespin Fatigues), COO family III, Kader/ Poch/ PBP/ LL RETORNO/ KADER CHINA/ LL REGRESO",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/han-solo-hoth-outfit",
+      "kind": "figure",
+      "name": "Han Solo (Hoth Outfit)",
+      "page": "https://www.variantvillain.com/characters/esb/han-solo-hoth-outfit/",
+      "files": [
+        "figures/han-solo-hoth-outfit-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/05/Han-Hoth-COO-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/han-solo-hoth-outfit/",
+          "alt": "Han Solo (Hoth Outfit), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_HanHoth_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/han-solo-hoth-outfit/",
+          "alt": "Han Solo (Hoth Outfit), figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_HanHoth_01.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/han-solo-hoth-outfit/",
+          "alt": "Han Solo (Hoth Outfit), COO family I, Unitoy/ Poch/ Kader China",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_HanHoth_02.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/han-solo-hoth-outfit/",
+          "alt": "Han Solo (Hoth Outfit), COO family II, Smile",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_HanHoth_03.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/han-solo-hoth-outfit/",
+          "alt": "Han Solo (Hoth Outfit), COO family III, Kader/ POCH/ PBP",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/lando-calrissian",
+      "kind": "figure",
+      "name": "Lando Calrissian",
+      "page": "https://www.variantvillain.com/characters/esb/lando-calrissian/",
+      "files": [
+        "figures/lando-calrissian-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/esb_24.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/lando-calrissian/",
+          "alt": "Lando Calrissian, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/06/F1-Kader.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/lando-calrissian/",
+          "alt": "Lando Calrissian, COO family I, KADER",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/06/F2-Smile.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/lando-calrissian/",
+          "alt": "Lando Calrissian, COO family II, SMILE",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/06/F3a-Unitoy.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/lando-calrissian/",
+          "alt": "Lando Calrissian, COO family III, Unitoy",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/bespin-security-guard",
+      "kind": "figure",
+      "name": "Bespin Security Guard (White)",
+      "page": "https://www.variantvillain.com/characters/esb/bespin-security-guard/",
+      "files": [
+        "figures/bespin-security-guard-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/esb_06.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/bespin-security-guard/",
+          "alt": "Bespin Security Guard (White), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/yoda",
+      "kind": "figure",
+      "name": "Yoda",
+      "page": "https://www.variantvillain.com/characters/esb/yoda/",
+      "files": [
+        "figures/yoda-reference-2.txt",
+        "figures/yoda-reference-3.txt",
+        "figures/yoda-reference-4.txt",
+        "figures/yoda-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/02/Yoda-COO-Guide-3.2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/yoda/",
+          "alt": "Yoda, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/05/F1a-Kader-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/yoda/",
+          "alt": "Yoda, COO family I, Kader (HK)",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/05/F2a-Unitoy.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/yoda/",
+          "alt": "Yoda, COO family II, Unitoy (HK)",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/05/F3-Smile.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/yoda/",
+          "alt": "Yoda, COO family III, Smile (HK)",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/F4-Top-Toys-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/yoda/",
+          "alt": "Yoda, COO family IV, Top Toys (NO COO)",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/ugnaught",
+      "kind": "figure",
+      "name": "Ugnaught",
+      "page": "https://www.variantvillain.com/characters/esb/ugnaught/",
+      "files": [
+        "figures/ugnaught-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ugnaught-COO-guide-3.2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/ugnaught/",
+          "alt": "Ugnaught, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/2-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/ugnaught/",
+          "alt": "Ugnaught, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/dengar",
+      "kind": "figure",
+      "name": "Dengar",
+      "page": "https://www.variantvillain.com/characters/esb/dengar/",
+      "files": [
+        "figures/dengar-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/01/Dengar-COO-3.3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/dengar/",
+          "alt": "Dengar, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/han-solo-bespin-outfit",
+      "kind": "figure",
+      "name": "Han Solo (Bespin Outfit)",
+      "page": "https://www.variantvillain.com/characters/esb/han-solo-bespin-outfit/",
+      "files": [
+        "figures/han-solo-bespin-outfit-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/Han-Solo-Bespin-COO-3.4.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/han-solo-bespin-outfit/",
+          "alt": "Han Solo (Bespin Outfit), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/lobot",
+      "kind": "figure",
+      "name": "Lobot",
+      "page": "https://www.variantvillain.com/characters/esb/lobot/",
+      "files": [
+        "figures/lobot-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/Lobot-COO-3.2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/lobot/",
+          "alt": "Lobot, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/leia-hoth-outfit",
+      "kind": "figure",
+      "name": "Leia (Hoth Outfit)",
+      "page": "https://www.variantvillain.com/characters/esb/leia-hoth-outfit/",
+      "files": [
+        "figures/leia-hoth-outfit-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/esb_19.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/leia-hoth-outfit/",
+          "alt": "Leia (Hoth Outfit), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/rebel-commander",
+      "kind": "figure",
+      "name": "Rebel Commander",
+      "page": "https://www.variantvillain.com/characters/esb/rebel-commander/",
+      "files": [
+        "figures/rebel-commander-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/01/ESB_16-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/rebel-commander/",
+          "alt": "Rebel Commander, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/at-at-driver",
+      "kind": "figure",
+      "name": "AT-AT Driver",
+      "page": "https://www.variantvillain.com/characters/esb/at-at-driver/",
+      "files": [
+        "figures/at-at-driver-reference-2.txt",
+        "figures/at-at-driver-reference-3.txt",
+        "figures/at-at-driver-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/ATAT-Driver-COO-Sheet-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/at-at-driver/",
+          "alt": "AT-AT Driver, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/F1.1a-3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/at-at-driver/",
+          "alt": "AT-AT Driver, COO family I, F1.1 KADER (MIHK)",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/F2.1a-Unitoy-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/at-at-driver/",
+          "alt": "AT-AT Driver, COO family II, F2.1 UNITOY (MIHK)",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/F3.1b-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/at-at-driver/",
+          "alt": "AT-AT Driver, COO family III, SMILE (MIHK & NCOO)",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/imperial-commander",
+      "kind": "figure",
+      "name": "Imperial Commander",
+      "page": "https://www.variantvillain.com/characters/esb/imperial-commander/",
+      "files": [
+        "figures/imperial-commander-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_17b.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/imperial-commander/",
+          "alt": "Imperial Commander, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/2-1b",
+      "kind": "figure",
+      "name": "2-1B",
+      "page": "https://www.variantvillain.com/characters/esb/2-1b/",
+      "files": [
+        "figures/2-1b-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/03/2-1b-COO-Sheet-3.3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/2-1b/",
+          "alt": "2-1B, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/2-1-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/2-1b/",
+          "alt": "2-1B, COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/4-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/2-1b/",
+          "alt": "2-1B, COO family II, F2: Unitoy / F3: Kader",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/r2-d2-sensorscope",
+      "kind": "figure",
+      "name": "R2-D2 (Sensorscope)",
+      "page": "https://www.variantvillain.com/characters/esb/r2-d2-sensorscope/",
+      "files": [
+        "figures/r2-d2-sensorscope-reference-2.txt",
+        "figures/r2-d2-sensorscope-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/03/R2SS-COO-sheet-3.3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/r2-d2-sensorscope/",
+          "alt": "R2-D2 (Sensorscope), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/07/R2SS-f1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/r2-d2-sensorscope/",
+          "alt": "R2-D2 (Sensorscope), COO family I, Unitoy",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/07/R2SS-f2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/r2-d2-sensorscope/",
+          "alt": "R2-D2 (Sensorscope), COO family II, Smile",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/07/R2SS-f5-f6.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/r2-d2-sensorscope/",
+          "alt": "R2-D2 (Sensorscope), COO family V, Unitoy",
+          "role": "coo",
+          "family": "V",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/c-3po-removable-limbs",
+      "kind": "figure",
+      "name": "C-3PO (Removable Limbs)",
+      "page": "https://www.variantvillain.com/characters/esb/c-3po-removable-limbs/",
+      "files": [
+        "figures/c-3po-removable-limbs-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/01/C3PO-COO-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/c-3po-removable-limbs/",
+          "alt": "C-3PO (Removable Limbs), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/2_Families.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/c-3po-removable-limbs/",
+          "alt": "C-3PO (Removable Limbs), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/luke-skywalker-hoth-battle-gear",
+      "kind": "figure",
+      "name": "Luke Skywalker (Hoth Battle Gear)",
+      "page": "https://www.variantvillain.com/characters/esb/luke-skywalker-hoth-battle-gear/",
+      "files": [
+        "figures/luke-skywalker-hoth-battle-gear-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_26.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/luke-skywalker-hoth-battle-gear/",
+          "alt": "Luke Skywalker (Hoth Battle Gear), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/at-at-commander",
+      "kind": "figure",
+      "name": "At-At Commander",
+      "page": "https://www.variantvillain.com/characters/esb/at-at-commander/",
+      "files": [
+        "figures/at-at-commander-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/esb_04_b.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/at-at-commander/",
+          "alt": "At-At Commander, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/cloud-car-pilot",
+      "kind": "figure",
+      "name": "(Twin-Pod) Cloud Car Pilot",
+      "page": "https://www.variantvillain.com/characters/esb/cloud-car-pilot/",
+      "files": [
+        "figures/cloud-car-pilot-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/06/CCP-COO-Sheet-3.2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/cloud-car-pilot/",
+          "alt": "(Twin-Pod) Cloud Car Pilot, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/CCP_3-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/cloud-car-pilot/",
+          "alt": "(Twin-Pod) Cloud Car Pilot, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/bespin-security-guard-2",
+      "kind": "figure",
+      "name": "Bespin Security Guard (Black)",
+      "page": "https://www.variantvillain.com/characters/esb/bespin-security-guard-2/",
+      "files": [
+        "figures/bespin-security-guard-2-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/esb_05.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/bespin-security-guard-2/",
+          "alt": "Bespin Security Guard (Black), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/zuckuss",
+      "kind": "figure",
+      "name": "Zuckuss",
+      "page": "https://www.variantvillain.com/characters/esb/zuckuss/",
+      "files": [
+        "figures/zuckuss-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_29.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/zuckuss/",
+          "alt": "Zuckuss, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/imperial-tie-fighter-pilot",
+      "kind": "figure",
+      "name": "Imperial Tie Fighter Pilot",
+      "page": "https://www.variantvillain.com/characters/esb/imperial-tie-fighter-pilot/",
+      "files": [
+        "figures/imperial-tie-fighter-pilot-reference-2.txt",
+        "figures/imperial-tie-fighter-pilot-reference-3.txt",
+        "figures/imperial-tie-fighter-pilot-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/05/TFP-COO-Sheet-3.2-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/imperial-tie-fighter-pilot/",
+          "alt": "Imperial Tie Fighter Pilot, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/01/TFP_FF_1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/imperial-tie-fighter-pilot/",
+          "alt": "Imperial Tie Fighter Pilot, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/02/IMG_20211128_184638-1024x768.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/imperial-tie-fighter-pilot/",
+          "alt": "Imperial Tie Fighter Pilot, figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "esb/4-lom",
+      "kind": "figure",
+      "name": "4-LOM",
+      "page": "https://www.variantvillain.com/characters/esb/4-lom/",
+      "files": [
+        "figures/4-lom-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ESB_03a.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/esb/4-lom/",
+          "alt": "4-LOM, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/admiral-ackbar",
+      "kind": "figure",
+      "name": "Admiral Ackbar",
+      "page": "https://www.variantvillain.com/characters/rotj/admiral-ackbar/",
+      "files": [
+        "figures/admiral-ackbar-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Admiral-Ackbar-COO-Sheet.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/admiral-ackbar/",
+          "alt": "Admiral Ackbar, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/luke-skywalker-jedi-knight-outfit",
+      "kind": "figure",
+      "name": "Luke Skywalker (Jedi Knight Outfit)",
+      "page": "https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/",
+      "files": [
+        "figures/luke-skywalker-jedi-knight-outfit-reference-2.txt",
+        "figures/luke-skywalker-jedi-knight-outfit-reference-3.txt",
+        "figures/luke-skywalker-jedi-knight-outfit-reference-4.txt",
+        "figures/luke-skywalker-jedi-knight-outfit-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/04/Luke-Jedi-COO-Sheet-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/",
+          "alt": "Luke Skywalker (Jedi Knight Outfit), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/09/F1-Smile-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/",
+          "alt": "Luke Skywalker (Jedi Knight Outfit), COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/09/F4.1-Unitoy.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/",
+          "alt": "Luke Skywalker (Jedi Knight Outfit), COO family IV, UNITOY",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/09/F5-Taiwan.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/",
+          "alt": "Luke Skywalker (Jedi Knight Outfit), COO family V, UNIVERSAL MANUFACTURERS (TAIWAN)",
+          "role": "coo",
+          "family": "V",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/09/F6-Tops-Toys.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/",
+          "alt": "Luke Skywalker (Jedi Knight Outfit), COO family VI, TOP TOYS",
+          "role": "coo",
+          "family": "VI",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/princess-leia-organa-boussh-disguise",
+      "kind": "figure",
+      "name": "Princess Leia Organa (Boushh Disguise)",
+      "page": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-boussh-disguise/",
+      "files": [
+        "figures/princess-leia-organa-boussh-disguise-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Boushh-Coo-Guide-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-boussh-disguise/",
+          "alt": "Princess Leia Organa (Boushh Disguise), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/3_Boushh.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-boussh-disguise/",
+          "alt": "Princess Leia Organa (Boushh Disguise), Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/gamorrean-guard",
+      "kind": "figure",
+      "name": "Gamorrean Guard",
+      "page": "https://www.variantvillain.com/characters/rotj/gamorrean-guard/",
+      "files": [
+        "figures/gamorrean-guard-reference-2.txt",
+        "figures/gamorrean-guard-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/04/GG-COO-Sheet-3.2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/gamorrean-guard/",
+          "alt": "Gamorrean Guard, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/04/F1-Kader-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/gamorrean-guard/",
+          "alt": "Gamorrean Guard, COO family I, Kader (HK)",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/02/F2-Unitoy.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/gamorrean-guard/",
+          "alt": "Gamorrean Guard, COO family II, Unitoy/ Kader Macau",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/04/F3-Smile-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/gamorrean-guard/",
+          "alt": "Gamorrean Guard, COO family III, Smile (HK)",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/07/F4-Lili-Ledy-1.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/gamorrean-guard/",
+          "alt": "Gamorrean Guard, COO family IV, Lili Ledy",
+          "role": "coo",
+          "family": "IV",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/emperors-royal-guard",
+      "kind": "figure",
+      "name": "Emperor's Royal Guard",
+      "page": "https://www.variantvillain.com/characters/rotj/emperors-royal-guard/",
+      "files": [
+        "figures/emperors-royal-guard-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ERG-Coo-Guide-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/emperors-royal-guard/",
+          "alt": "Emperor's Royal Guard, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/2-1-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/emperors-royal-guard/",
+          "alt": "Emperor's Royal Guard, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/chief-chirpa",
+      "kind": "figure",
+      "name": "Chief Chirpa",
+      "page": "https://www.variantvillain.com/characters/rotj/chief-chirpa/",
+      "files": [
+        "figures/chief-chirpa-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/01/Chirpa-COO-Sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/chief-chirpa/",
+          "alt": "Chief Chirpa, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/03/IMG_20220319_113706.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/chief-chirpa/",
+          "alt": "Chief Chirpa, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/logray-ewok-medicine-man",
+      "kind": "figure",
+      "name": "Logray (Ewok Medicine Man)",
+      "page": "https://www.variantvillain.com/characters/rotj/logray-ewok-medicine-man/",
+      "files": [
+        "figures/logray-ewok-medicine-man-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/06/Logray-COO-Sheet.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/logray-ewok-medicine-man/",
+          "alt": "Logray (Ewok Medicine Man), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/klaatu",
+      "kind": "figure",
+      "name": "Klaatu",
+      "page": "https://www.variantvillain.com/characters/rotj/klaatu/",
+      "files": [
+        "figures/klaatu-reference-2.txt",
+        "figures/klaatu-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu-COO-3.1-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/klaatu/",
+          "alt": "Klaatu, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu_FF_F1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/klaatu/",
+          "alt": "Klaatu, COO family I, Smile (Hong KONG/MACAU)",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu_FF_F2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/klaatu/",
+          "alt": "Klaatu, COO family II, Unitoy (Hong Kong)",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu_FF_F3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/klaatu/",
+          "alt": "Klaatu, COO family III, LILI LEDY (MEXICO)",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/rebel-commando",
+      "kind": "figure",
+      "name": "Rebel Commando",
+      "page": "https://www.variantvillain.com/characters/rotj/rebel-commando/",
+      "files": [
+        "figures/rebel-commando-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/rebel_22.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/rebel-commando/",
+          "alt": "Rebel Commando, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/weequay",
+      "kind": "figure",
+      "name": "Weequay",
+      "page": "https://www.variantvillain.com/characters/rotj/weequay/",
+      "files": [
+        "figures/weequay-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Weequay-Coo-Guide-1-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/weequay/",
+          "alt": "Weequay, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/3-3-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/weequay/",
+          "alt": "Weequay, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/squid-head",
+      "kind": "figure",
+      "name": "Squid Head",
+      "page": "https://www.variantvillain.com/characters/rotj/squid-head/",
+      "files": [
+        "figures/squid-head-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/squidh12.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/squid-head/",
+          "alt": "Squid Head, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/general-madine",
+      "kind": "figure",
+      "name": "General Madine",
+      "page": "https://www.variantvillain.com/characters/rotj/general-madine/",
+      "files": [
+        "figures/general-madine-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/52605711_1003950973123322_1805963246079836160_n.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/general-madine/",
+          "alt": "General Madine, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/bib-fortuna",
+      "kind": "figure",
+      "name": "Bib Fortuna",
+      "page": "https://www.variantvillain.com/characters/rotj/bib-fortuna/",
+      "files": [
+        "figures/bib-fortuna-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/01/Bib-Fortuna-COO-Sheet-1-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/bib-fortuna/",
+          "alt": "Bib Fortuna, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/ree-yees",
+      "kind": "figure",
+      "name": "Ree Yees",
+      "page": "https://www.variantvillain.com/characters/rotj/ree-yees/",
+      "files": [
+        "figures/ree-yees-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/01/Ree-Yees-COO-Sheet-3.3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/ree-yees/",
+          "alt": "Ree Yees, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/biker-scout",
+      "kind": "figure",
+      "name": "Biker Scout",
+      "page": "https://www.variantvillain.com/characters/rotj/biker-scout/",
+      "files": [
+        "figures/biker-scout-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/08/Biker-Scout-COO-sheet-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/biker-scout/",
+          "alt": "Biker Scout, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/lando-calrissian-skiff-guard-disguise",
+      "kind": "figure",
+      "name": "Lando Calrissian (Skiff Guard Disguise)",
+      "page": "https://www.variantvillain.com/characters/rotj/lando-calrissian-skiff-guard-disguise/",
+      "files": [
+        "figures/lando-calrissian-skiff-guard-disguise-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/05/Lando-Skiff-COO-Sheet.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/lando-calrissian-skiff-guard-disguise/",
+          "alt": "Lando Calrissian (Skiff Guard Disguise), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/2-10.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/lando-calrissian-skiff-guard-disguise/",
+          "alt": "Lando Calrissian (Skiff Guard Disguise), figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/nien-nunb",
+      "kind": "figure",
+      "name": "Nien Nunb",
+      "page": "https://www.variantvillain.com/characters/rotj/nien-nunb/",
+      "files": [
+        "figures/nien-nunb-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/Nien-Nunb-coo-guide.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/nien-nunb/",
+          "alt": "Nien Nunb, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/F1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/nien-nunb/",
+          "alt": "Nien Nunb, COO family I, Unitoy",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/F2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/nien-nunb/",
+          "alt": "Nien Nunb, COO family II, Smile",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/F3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/nien-nunb/",
+          "alt": "Nien Nunb, COO family III, Lili Ledy \"Made in Mexico\"",
+          "role": "coo",
+          "family": "III",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/nikto",
+      "kind": "figure",
+      "name": "Nikto",
+      "page": "https://www.variantvillain.com/characters/rotj/nikto/",
+      "files": [
+        "figures/nikto-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Nikto-COO-Sheet.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/nikto/",
+          "alt": "Nikto, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/8d8",
+      "kind": "figure",
+      "name": "8D8",
+      "page": "https://www.variantvillain.com/characters/rotj/8d8/",
+      "files": [
+        "figures/8d8-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/8d810.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/8d8/",
+          "alt": "8D8, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/princess-leia-organa-in-combat-poncho",
+      "kind": "figure",
+      "name": "Princess Leia Organa (in Combat Poncho)",
+      "page": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-in-combat-poncho/",
+      "files": [
+        "figures/princess-leia-organa-in-combat-poncho-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/01/Leia-Endor-COO-Sheet.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-in-combat-poncho/",
+          "alt": "Princess Leia Organa (in Combat Poncho), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/wicket-w-warrick",
+      "kind": "figure",
+      "name": "Wicket W. Warrick",
+      "page": "https://www.variantvillain.com/characters/rotj/wicket-w-warrick/",
+      "files": [
+        "figures/wicket-w-warrick-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/09/Wicket-COO-Sheet.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/wicket-w-warrick/",
+          "alt": "Wicket W. Warrick, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/the-emperor",
+      "kind": "figure",
+      "name": "The Emperor",
+      "page": "https://www.variantvillain.com/characters/rotj/the-emperor/",
+      "files": [
+        "figures/the-emperor-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/03/Emperor-COO-Sheet-3.3.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/the-emperor/",
+          "alt": "The Emperor, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/b-wing-pilot",
+      "kind": "figure",
+      "name": "B-Wing Pilot",
+      "page": "https://www.variantvillain.com/characters/rotj/b-wing-pilot/",
+      "files": [
+        "figures/b-wing-pilot-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/03/B-Wing-Pilot-COO-Sheet.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/b-wing-pilot/",
+          "alt": "B-Wing Pilot, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/klaatu-in-skiff-guard-outfit",
+      "kind": "figure",
+      "name": "Klaatu (in Skiff Guard Outfit)",
+      "page": "https://www.variantvillain.com/characters/rotj/klaatu-in-skiff-guard-outfit/",
+      "files": [
+        "figures/klaatu-in-skiff-guard-outfit-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Klaatu-Skiff-COO-Sheet.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/klaatu-in-skiff-guard-outfit/",
+          "alt": "Klaatu (in Skiff Guard Outfit), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/han-solo-in-trench-coat",
+      "kind": "figure",
+      "name": "Han Solo (in Trench Coat)",
+      "page": "https://www.variantvillain.com/characters/rotj/han-solo-in-trench-coat/",
+      "files": [
+        "figures/han-solo-in-trench-coat-reference-2.txt",
+        "figures/han-solo-in-trench-coat-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/Han-Endor-COO-Sheet-3.2-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/han-solo-in-trench-coat/",
+          "alt": "Han Solo (in Trench Coat), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/1-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/han-solo-in-trench-coat/",
+          "alt": "Han Solo (in Trench Coat), figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/teebo",
+      "kind": "figure",
+      "name": "Teebo",
+      "page": "https://www.variantvillain.com/characters/rotj/teebo/",
+      "files": [
+        "figures/teebo-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/03/Teebo-COO-Sheet-3.4-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/teebo/",
+          "alt": "Teebo, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/07/Teebo_001_EyeComparison.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/teebo/",
+          "alt": "Teebo, figure guide overview",
+          "role": "guide",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/07/01.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/teebo/",
+          "alt": "Teebo, COO family I, UNITOY / Lili Ledy",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/07/03.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/teebo/",
+          "alt": "Teebo, COO family II, TAIWAN (U.M.)",
+          "role": "coo",
+          "family": "II",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/prune-face",
+      "kind": "figure",
+      "name": "Prune Face",
+      "page": "https://www.variantvillain.com/characters/rotj/prune-face/",
+      "files": [
+        "figures/prune-face-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/Prune-Face-COO-v3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/prune-face/",
+          "alt": "Prune Face, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/at-st-driver",
+      "kind": "figure",
+      "name": "AT-ST Driver",
+      "page": "https://www.variantvillain.com/characters/rotj/at-st-driver/",
+      "files": [
+        "figures/at-st-driver-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ATST-COO-Sheet.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/at-st-driver/",
+          "alt": "AT-ST Driver, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/rancor-keeper",
+      "kind": "figure",
+      "name": "Rancor Keeper",
+      "page": "https://www.variantvillain.com/characters/rotj/rancor-keeper/",
+      "files": [
+        "figures/rancor-keeper-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/Rancor-Keeper-COO-Sheet-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/rancor-keeper/",
+          "alt": "Rancor Keeper, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/lumat",
+      "kind": "figure",
+      "name": "Lumat",
+      "page": "https://www.variantvillain.com/characters/rotj/lumat/",
+      "files": [
+        "figures/lumat-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lumat-COO-Sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/lumat/",
+          "alt": "Lumat, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lumat-Figure-Focus.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/lumat/",
+          "alt": "Lumat, COO family I, Lili Ledy",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "rotj/paploo",
+      "kind": "figure",
+      "name": "Paploo",
+      "page": "https://www.variantvillain.com/characters/rotj/paploo/",
+      "files": [
+        "figures/paploo-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Paploo-COO-Sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/paploo/",
+          "alt": "Paploo, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Paploo-Figure-Focus-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/rotj/paploo/",
+          "alt": "Paploo, COO family I, Lili Ledy",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/luke-skywalker-in-battle-poncho",
+      "kind": "figure",
+      "name": "Luke Skywalker (in Battle Poncho)",
+      "page": "https://www.variantvillain.com/characters/potf/luke-skywalker-in-battle-poncho/",
+      "files": [
+        "figures/luke-skywalker-in-battle-poncho-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Endor-COO-Sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/luke-skywalker-in-battle-poncho/",
+          "alt": "Luke Skywalker (in Battle Poncho), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Endor-Figure-Focus-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/luke-skywalker-in-battle-poncho/",
+          "alt": "Luke Skywalker (in Battle Poncho), COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/artoo-detoo-r2-d2-with-pop-up-lightsaber",
+      "kind": "figure",
+      "name": "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+      "page": "https://www.variantvillain.com/characters/potf/artoo-detoo-r2-d2-with-pop-up-lightsaber/",
+      "files": [
+        "figures/artoo-detoo-r2-d2-with-pop-up-lightsaber-reference-2.txt",
+        "figures/artoo-detoo-r2-d2-with-pop-up-lightsaber-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/artoo-detoo-r2-d2-with-pop-up-lightsaber/",
+          "alt": "Artoo-Detoo (R2-D2) with pop-up Lightsaber, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/08/R2P-f1b.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/artoo-detoo-r2-d2-with-pop-up-lightsaber/",
+          "alt": "Artoo-Detoo (R2-D2) with pop-up Lightsaber, COO family I, Smile/ Glasslite",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/romba",
+      "kind": "figure",
+      "name": "Romba",
+      "page": "https://www.variantvillain.com/characters/potf/romba/",
+      "files": [
+        "figures/romba-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Romba-COO-Sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/romba/",
+          "alt": "Romba, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Romba-Figure-Focus-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/romba/",
+          "alt": "Romba, COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/amanaman",
+      "kind": "figure",
+      "name": "Amanaman",
+      "page": "https://www.variantvillain.com/characters/potf/amanaman/",
+      "files": [
+        "figures/amanaman-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/06/Amanaman-COO-Sheet-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/amanaman/",
+          "alt": "Amanaman, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/06/Amanaman_FigureComp_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/amanaman/",
+          "alt": "Amanaman, COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/barada",
+      "kind": "figure",
+      "name": "Barada",
+      "page": "https://www.variantvillain.com/characters/potf/barada/",
+      "files": [
+        "figures/barada-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/06/Barada-COO-Sheet-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/barada/",
+          "alt": "Barada, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Barada-Figure-Focus.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/barada/",
+          "alt": "Barada, COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/imperial-gunner",
+      "kind": "figure",
+      "name": "Imperial Gunner",
+      "page": "https://www.variantvillain.com/characters/potf/imperial-gunner/",
+      "files": [
+        "figures/imperial-gunner-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Gunner-COO-sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/imperial-gunner/",
+          "alt": "Imperial Gunner, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Gunner-Figure-Focus-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/imperial-gunner/",
+          "alt": "Imperial Gunner, COO family I, Kader",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/han-solo-in-carbonite-chamber",
+      "kind": "figure",
+      "name": "Han Solo (in Carbonite Chamber)",
+      "page": "https://www.variantvillain.com/characters/potf/han-solo-in-carbonite-chamber/",
+      "files": [
+        "figures/han-solo-in-carbonite-chamber-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Han-Carbonite-COO-Sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/han-solo-in-carbonite-chamber/",
+          "alt": "Han Solo (in Carbonite Chamber), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Han-Carbonite-Figure-Focus.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/han-solo-in-carbonite-chamber/",
+          "alt": "Han Solo (in Carbonite Chamber), COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/luke-skywalker-imperial-stormtrooper-outfit",
+      "kind": "figure",
+      "name": "Luke Skywalker (Imperial Stormtrooper Outfit)",
+      "page": "https://www.variantvillain.com/characters/potf/luke-skywalker-imperial-stormtrooper-outfit/",
+      "files": [
+        "figures/luke-skywalker-imperial-stormtrooper-outfit-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Stormtrooper-COO-sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/luke-skywalker-imperial-stormtrooper-outfit/",
+          "alt": "Luke Skywalker (Imperial Stormtrooper Outfit), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Luke-Stormtrooper-Figure-Focus-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/luke-skywalker-imperial-stormtrooper-outfit/",
+          "alt": "Luke Skywalker (Imperial Stormtrooper Outfit), COO family I, Kader",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/anakin-skywalker-2",
+      "kind": "figure",
+      "name": "Anakin Skywalker",
+      "page": "https://www.variantvillain.com/characters/potf/anakin-skywalker-2/",
+      "files": [
+        "figures/anakin-skywalker-2-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Anakin-COO-sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/anakin-skywalker-2/",
+          "alt": "Anakin Skywalker, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Anakin-Figure-Focus.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/anakin-skywalker-2/",
+          "alt": "Anakin Skywalker, COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/ev-9d9",
+      "kind": "figure",
+      "name": "EV-9D9",
+      "page": "https://www.variantvillain.com/characters/potf/ev-9d9/",
+      "files": [
+        "figures/ev-9d9-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/06/EV-9D9-COO-Sheet-3.1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/ev-9d9/",
+          "alt": "EV-9D9, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/EV-9D9-Figure-Focus-a-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/ev-9d9/",
+          "alt": "EV-9D9, COO family I, Kader",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/warok",
+      "kind": "figure",
+      "name": "Warok",
+      "page": "https://www.variantvillain.com/characters/potf/warok/",
+      "files": [
+        "figures/warok-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Warok-COO-Sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/warok/",
+          "alt": "Warok, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Warok-Figure-Focus-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/warok/",
+          "alt": "Warok, COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/lando-calrissian-general-pilot",
+      "kind": "figure",
+      "name": "Lando Calrissian (General Pilot)",
+      "page": "https://www.variantvillain.com/characters/potf/lando-calrissian-general-pilot/",
+      "files": [
+        "figures/lando-calrissian-general-pilot-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lando-General-COO-Sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/lando-calrissian-general-pilot/",
+          "alt": "Lando Calrissian (General Pilot), COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lando-General-Figure-Focus-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/lando-calrissian-general-pilot/",
+          "alt": "Lando Calrissian (General Pilot), COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/a-wing-pilot-2",
+      "kind": "figure",
+      "name": "A-Wing Pilot",
+      "page": "https://www.variantvillain.com/characters/potf/a-wing-pilot-2/",
+      "files": [
+        "figures/a-wing-pilot-2-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/A-Wing-Pilot-COO-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/a-wing-pilot-2/",
+          "alt": "A-Wing Pilot, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/A-Wing-Pilot-Figure-Focus-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/a-wing-pilot-2/",
+          "alt": "A-Wing Pilot, COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/imperial-dignitary",
+      "kind": "figure",
+      "name": "Imperial Dignitary",
+      "page": "https://www.variantvillain.com/characters/potf/imperial-dignitary/",
+      "files": [
+        "figures/imperial-dignitary-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Dignitary-COO-sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/imperial-dignitary/",
+          "alt": "Imperial Dignitary, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Imperial-Digniatry-Figure-Focus-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/imperial-dignitary/",
+          "alt": "Imperial Dignitary, COO family I, Kader",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "potf/yak-face",
+      "kind": "figure",
+      "name": "Yak Face",
+      "page": "https://www.variantvillain.com/characters/potf/yak-face/",
+      "files": [
+        "figures/yak-face-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Yak-Face-COO-Sheet-3.0.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/yak-face/",
+          "alt": "Yak Face, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Yak-Face-Figure-Focus-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/potf/yak-face/",
+          "alt": "Yak Face, COO family I, Smile",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "droids/droids-c-3po",
+      "kind": "figure",
+      "name": "Droids C-3PO",
+      "page": "https://www.variantvillain.com/characters/droids/droids-c-3po/",
+      "files": [
+        "figures/droids-c-3po-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/1-24.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/droids/droids-c-3po/",
+          "alt": "Droids C-3PO, Variant Villain figure photo",
+          "role": "figure",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "droids/droids-r2-d2",
+      "kind": "figure",
+      "name": "Droids R2-D2",
+      "page": "https://www.variantvillain.com/characters/droids/droids-r2-d2/",
+      "files": [
+        "figures/droids-r2-d2-reference-2.txt",
+        "figures/droids-r2-d2-reference.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/01/R2-Pop-Up-COO-Sheet-3.1-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/droids/droids-r2-d2/",
+          "alt": "Droids R2-D2, COO sheet",
+          "role": "coo",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/08/R2P-f1b.jpg",
+          "sourcePage": "https://www.variantvillain.com/characters/droids/droids-r2-d2/",
+          "alt": "Droids R2-D2, COO family I, Smile/ Glasslite",
+          "role": "coo",
+          "family": "I",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "droids/wicket-w-warrick",
+      "kind": "figure",
+      "name": "Wicket W.Warrick (Ewoks)",
+      "page": "https://www.variantvillain.com/characters/droids/wicket-w-warrick/",
+      "files": [],
+      "images": []
+    },
+    {
+      "id": "droids/logray-ewoks",
+      "kind": "figure",
+      "name": "Logray (Ewoks)",
+      "page": "https://www.variantvillain.com/characters/droids/logray-ewoks/",
+      "files": [
+        "figures/logray-ewoks-reference.txt"
+      ],
+      "images": []
+    },
+    {
+      "id": "droids/king-gorneesh",
+      "kind": "figure",
+      "name": "King Gorneesh",
+      "page": "https://www.variantvillain.com/characters/droids/king-gorneesh/",
+      "files": [
+        "figures/king-gorneesh-reference.txt"
+      ],
+      "images": []
+    },
+    {
+      "id": "droids/urgah-lady-gorneesh",
+      "kind": "figure",
+      "name": "Urgah Lady Gorneesh",
+      "page": "https://www.variantvillain.com/characters/droids/urgah-lady-gorneesh/",
+      "files": [
+        "figures/urgah-lady-gorneesh-reference.txt"
+      ],
+      "images": []
+    },
+    {
+      "id": "droids/dulok-scout",
+      "kind": "figure",
+      "name": "Dulok Scout",
+      "page": "https://www.variantvillain.com/characters/droids/dulok-scout/",
+      "files": [
+        "figures/dulok-scout-reference.txt"
+      ],
+      "images": []
+    },
+    {
+      "id": "droids/dulok-shaman",
+      "kind": "figure",
+      "name": "Dulok Shaman",
+      "page": "https://www.variantvillain.com/characters/droids/dulok-shaman/",
+      "files": [
+        "figures/dulok-shaman-reference.txt"
+      ],
+      "images": []
+    },
+    {
+      "id": "accessory-guide/2-1b-mouthpiece",
+      "kind": "accessory",
+      "name": "2-1B Mouthpiece",
+      "page": "https://www.variantvillain.com/accessory-guide/2-1b-mouthpiece/",
+      "files": [
+        "accessories/2-1b-mouthpiece.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/8.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/2-1b-mouthpiece/",
+          "alt": "2-1B Mouthpiece, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/9.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/2-1b-mouthpiece/",
+          "alt": "2-1B Mouthpiece, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/2-1b-probe",
+      "kind": "accessory",
+      "name": "2-1B Probe",
+      "page": "https://www.variantvillain.com/accessory-guide/2-1b-probe/",
+      "files": [
+        "accessories/2-1b-probe.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/11.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/2-1b-probe/",
+          "alt": "2-1B Probe, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/AAH-033.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/2-1b-probe/",
+          "alt": "2-1B Probe, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/ackbar-staff",
+      "kind": "accessory",
+      "name": "Ackbar Staff",
+      "page": "https://www.variantvillain.com/accessory-guide/ackbar-staff/",
+      "files": [
+        "accessories/ackbar-staff.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/AckbarStick_000_Mold_3-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ackbar-staff/",
+          "alt": "Ackbar Staff, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/AckbarStick_M1_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ackbar-staff/",
+          "alt": "Ackbar Staff, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/amanaman-staff",
+      "kind": "accessory",
+      "name": "Amanaman Staff",
+      "page": "https://www.variantvillain.com/accessory-guide/amanaman-staff/",
+      "files": [
+        "accessories/amanaman-staff.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/Amanaman_Staff_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/amanaman-staff/",
+          "alt": "Amanaman Staff, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/AAH-048.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/amanaman-staff/",
+          "alt": "Amanaman Staff, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/at-at-driver-rifle",
+      "kind": "accessory",
+      "name": "AT-AT Driver Rifle",
+      "page": "https://www.variantvillain.com/accessory-guide/at-at-driver-rifle/",
+      "files": [
+        "accessories/at-at-driver-rifle.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/03/ATATRifle_0001.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/at-at-driver-rifle/",
+          "alt": "AT-AT Driver Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/ATATRifle_M1_0000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/at-at-driver-rifle/",
+          "alt": "AT-AT Driver Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/ben-obi-wan-kenobi-cape",
+      "kind": "accessory",
+      "name": "Ben (Obi-Wan) Kenobi Cape",
+      "page": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
+      "files": [
+        "accessories/ben-obi-wan-kenobi-cape.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/07/BenKenobi_Cape_Comparison.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
+          "alt": "Ben (Obi-Wan) Kenobi Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/07/BenKenobi_Cape_overoverview.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
+          "alt": "Ben (Obi-Wan) Kenobi Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/bespin-blaster",
+      "kind": "accessory",
+      "name": "Bespin Blaster",
+      "page": "https://www.variantvillain.com/accessory-guide/bespin-blaster/",
+      "files": [
+        "accessories/bespin-blaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/BespinBlaster_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bespin-blaster/",
+          "alt": "Bespin Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/RebelBlaster_2019__M1_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bespin-blaster/",
+          "alt": "Bespin Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/bib-fortuna-belt",
+      "kind": "accessory",
+      "name": "Bib Fortuna Belt",
+      "page": "https://www.variantvillain.com/accessory-guide/bib-fortuna-belt/",
+      "files": [
+        "accessories/bib-fortuna-belt.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/BibFortuna_Belt_M00_00-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bib-fortuna-belt/",
+          "alt": "Bib Fortuna Belt, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/39872719_893903284128092_6289106880522354688_n.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bib-fortuna-belt/",
+          "alt": "Bib Fortuna Belt, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/bib-fortuna-cloak",
+      "kind": "accessory",
+      "name": "Bib Fortuna Cloak",
+      "page": "https://www.variantvillain.com/accessory-guide/bib-fortuna-cloak/",
+      "files": [
+        "accessories/bib-fortuna-cloak.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/BibFortuna_Cloak_M00_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bib-fortuna-cloak/",
+          "alt": "Bib Fortuna Cloak, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/40771185_901915443326876_2718669269930868736_n.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bib-fortuna-cloak/",
+          "alt": "Bib Fortuna Cloak, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/bib-fortuna-staff",
+      "kind": "accessory",
+      "name": "Bib Fortuna Staff",
+      "page": "https://www.variantvillain.com/accessory-guide/bib-fortuna-staff/",
+      "files": [
+        "accessories/bib-fortuna-staff.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/BibFortuna_Staff_M00_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bib-fortuna-staff/",
+          "alt": "Bib Fortuna Staff, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/39557828_893912404127180_3264972677437194240_n.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bib-fortuna-staff/",
+          "alt": "Bib Fortuna Staff, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/biker-scout-blaster",
+      "kind": "accessory",
+      "name": "Biker Scout Blaster",
+      "page": "https://www.variantvillain.com/accessory-guide/biker-scout-blaster/",
+      "files": [
+        "accessories/biker-scout-blaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/02/Biker_Blaster_2.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/biker-scout-blaster/",
+          "alt": "Biker Scout Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Biker_Blaster_M1_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/biker-scout-blaster/",
+          "alt": "Biker Scout Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/bossk-rifle",
+      "kind": "accessory",
+      "name": "Bossk Rifle",
+      "page": "https://www.variantvillain.com/accessory-guide/bossk-rifle/",
+      "files": [
+        "accessories/bossk-rifle.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Bossk_Rifle_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bossk-rifle/",
+          "alt": "Bossk Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Bossk_Rifle_M1_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/bossk-rifle/",
+          "alt": "Bossk Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/c-3po-removable-limbs-net",
+      "kind": "accessory",
+      "name": "C-3PO (Removable Limbs) Net",
+      "page": "https://www.variantvillain.com/accessory-guide/c-3po-removable-limbs-net/",
+      "files": [
+        "accessories/c-3po-removable-limbs-net.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/8_bag-rotated-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/c-3po-removable-limbs-net/",
+          "alt": "C-3PO (Removable Limbs) Net, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/AAH-043.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/c-3po-removable-limbs-net/",
+          "alt": "C-3PO (Removable Limbs) Net, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/carbonite-chamber",
+      "kind": "accessory",
+      "name": "Carbonite Chamber",
+      "page": "https://www.variantvillain.com/accessory-guide/carbonite-chamber/",
+      "files": [
+        "accessories/carbonite-chamber.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/carbonite-chamber/",
+          "alt": "Carbonite Chamber, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/2.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/carbonite-chamber/",
+          "alt": "Carbonite Chamber, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/chewbacca-bowcaster",
+      "kind": "accessory",
+      "name": "Bowcaster (Chewbacca)",
+      "page": "https://www.variantvillain.com/accessory-guide/chewbacca-bowcaster/",
+      "files": [
+        "accessories/chewbacca-bowcaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/07/crossbow_M_Overview_c.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/chewbacca-bowcaster/",
+          "alt": "Bowcaster (Chewbacca), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/07/Crossbow_M1_000a_overview.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/chewbacca-bowcaster/",
+          "alt": "Bowcaster (Chewbacca), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/commlink-guide",
+      "kind": "accessory",
+      "name": "Commlink Guide",
+      "page": "https://www.variantvillain.com/accessory-guide/commlink-guide/",
+      "files": [
+        "accessories/commlink-guide.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Comlink_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/commlink-guide/",
+          "alt": "Commlink Guide, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Comlink_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/commlink-guide/",
+          "alt": "Commlink Guide, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/darth-vader-cape",
+      "kind": "accessory",
+      "name": "Darth Vader Cape",
+      "page": "https://www.variantvillain.com/accessory-guide/darth-vader-cape/",
+      "files": [
+        "accessories/darth-vader-cape.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/05/DarthVader_Cape_Comparison_001a.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/darth-vader-cape/",
+          "alt": "Darth Vader Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/DarthVader_Cape_Comparison_002.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/darth-vader-cape/",
+          "alt": "Darth Vader Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/double-telescoping-lightsaber",
+      "kind": "accessory",
+      "name": "Double Telescoping Lightsaber (DT)",
+      "page": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
+      "files": [
+        "accessories/double-telescoping-lightsaber.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/DT_Lightsaber_Comp-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
+          "alt": "Double Telescoping Lightsaber (DT), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/DT_Lightsaber_Color-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
+          "alt": "Double Telescoping Lightsaber (DT), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/emperor-cane",
+      "kind": "accessory",
+      "name": "Emperor Cane",
+      "page": "https://www.variantvillain.com/accessory-guide/emperor-cane/",
+      "files": [
+        "accessories/emperor-cane.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Emperor_Cane_000a.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/emperor-cane/",
+          "alt": "Emperor Cane, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Emperor_Cane_M1_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/emperor-cane/",
+          "alt": "Emperor Cane, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/endor-blaster",
+      "kind": "accessory",
+      "name": "Endor Blaster",
+      "page": "https://www.variantvillain.com/accessory-guide/endor-blaster/",
+      "files": [
+        "accessories/endor-blaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/EndorPistol_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/endor-blaster/",
+          "alt": "Endor Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/EndorPistol_M1_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/endor-blaster/",
+          "alt": "Endor Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/erg-pike",
+      "kind": "accessory",
+      "name": "Emperor’s Royal Guard Pike",
+      "page": "https://www.variantvillain.com/accessory-guide/erg-pike/",
+      "files": [
+        "accessories/erg-pike.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/8-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/erg-pike/",
+          "alt": "Emperor’s Royal Guard Pike, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/AAH-012.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/erg-pike/",
+          "alt": "Emperor’s Royal Guard Pike, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/ewok-spear",
+      "kind": "accessory",
+      "name": "Ewok Spear",
+      "page": "https://www.variantvillain.com/accessory-guide/ewok-spear/",
+      "files": [
+        "accessories/ewok-spear.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/WhatsApp-Image-2023-11-24-at-14.10.30.jpeg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ewok-spear/",
+          "alt": "Ewok Spear, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/gaderffii-stick",
+      "kind": "accessory",
+      "name": "Gaffi Stick (Tusken Raider)",
+      "page": "https://www.variantvillain.com/accessory-guide/gaderffii-stick/",
+      "files": [
+        "accessories/gaderffii-stick.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/02/Tusken_Gaffi_comparison_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/gaderffii-stick/",
+          "alt": "Gaffi Stick (Tusken Raider), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/02/Tusken_Gaffi_M1_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/gaderffii-stick/",
+          "alt": "Gaffi Stick (Tusken Raider), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/gamorrean-axe",
+      "kind": "accessory",
+      "name": "Gamorrean Axe",
+      "page": "https://www.variantvillain.com/accessory-guide/gamorrean-axe/",
+      "files": [
+        "accessories/gamorrean-axe.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/02/GGAxe_002.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/gamorrean-axe/",
+          "alt": "Gamorrean Axe, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/GGAxe_M01_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/gamorrean-axe/",
+          "alt": "Gamorrean Axe, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/general-madine-staff",
+      "kind": "accessory",
+      "name": "General Madine Staff",
+      "page": "https://www.variantvillain.com/accessory-guide/general-madine-staff/",
+      "files": [
+        "accessories/general-madine-staff.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/Madine_Staff_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/general-madine-staff/",
+          "alt": "General Madine Staff, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/Madine_Staff_M1_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/general-madine-staff/",
+          "alt": "General Madine Staff, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/han-endor-trench-coat",
+      "kind": "accessory",
+      "name": "Trench Coat (Han Endor)",
+      "page": "https://www.variantvillain.com/accessory-guide/han-endor-trench-coat/",
+      "files": [
+        "accessories/han-endor-trench-coat.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/00_HanEndorCoat_0000_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/han-endor-trench-coat/",
+          "alt": "Trench Coat (Han Endor), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/00_HanEndorCoat_0000_002.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/han-endor-trench-coat/",
+          "alt": "Trench Coat (Han Endor), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/handheld-lightsaber",
+      "kind": "accessory",
+      "name": "Handheld Lightsaber",
+      "page": "https://www.variantvillain.com/accessory-guide/handheld-lightsaber/",
+      "files": [
+        "accessories/handheld-lightsaber.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/04/Handheld-saber-alteration.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/handheld-lightsaber/",
+          "alt": "Handheld Lightsaber, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/HandheldSaber_2018__M01_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/handheld-lightsaber/",
+          "alt": "Handheld Lightsaber, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/hoth-rebel-rilfe",
+      "kind": "accessory",
+      "name": "Hoth Rebel Rifle",
+      "page": "https://www.variantvillain.com/accessory-guide/hoth-rebel-rilfe/",
+      "files": [
+        "accessories/hoth-rebel-rifle.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/HothRebelRifle_000000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/hoth-rebel-rilfe/",
+          "alt": "Hoth Rebel Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/HothRebelRifle_M1_0000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/hoth-rebel-rilfe/",
+          "alt": "Hoth Rebel Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/hoth-trooper-skirt",
+      "kind": "accessory",
+      "name": "Hoth Trooper Skirt",
+      "page": "https://www.variantvillain.com/accessory-guide/hoth-trooper-skirt/",
+      "files": [
+        "accessories/hoth-trooper-skirt-2.txt",
+        "accessories/hoth-trooper-skirt.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/02/HothTrooperSkirt_000_01.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/hoth-trooper-skirt/",
+          "alt": "Hoth Trooper Skirt, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/ig-88-rifle",
+      "kind": "accessory",
+      "name": "IG-88 Rifle",
+      "page": "https://www.variantvillain.com/accessory-guide/ig-88-rifle/",
+      "files": [
+        "accessories/ig-88-rifle.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/IG_Rifle_000-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ig-88-rifle/",
+          "alt": "IG-88 Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/IG_Rifle_M1_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ig-88-rifle/",
+          "alt": "IG-88 Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/imperial-blaster",
+      "kind": "accessory",
+      "name": "Imperial Blaster (E-11)",
+      "page": "https://www.variantvillain.com/accessory-guide/imperial-blaster/",
+      "files": [
+        "accessories/imperial-blaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Imperial_Blaster_0000b.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/imperial-blaster/",
+          "alt": "Imperial Blaster (E-11), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/07/Imperial_Blaster_M1_000-1b.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/imperial-blaster/",
+          "alt": "Imperial Blaster (E-11), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/imperial-hoth-rifle",
+      "kind": "accessory",
+      "name": "Imperial Hoth Rifle",
+      "page": "https://www.variantvillain.com/accessory-guide/imperial-hoth-rifle/",
+      "files": [
+        "accessories/imperial-hoth-rifle.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Hoth_Rifle_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/imperial-hoth-rifle/",
+          "alt": "Imperial Hoth Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Hoth_Rifle_M1_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/imperial-hoth-rifle/",
+          "alt": "Imperial Hoth Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/jawa-blaster",
+      "kind": "accessory",
+      "name": "Jawa Blaster",
+      "page": "https://www.variantvillain.com/accessory-guide/jawa-blaster/",
+      "files": [
+        "accessories/jawa-blaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/JawaBlaster_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/jawa-blaster/",
+          "alt": "Jawa Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/JawaBlaster_M2_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/jawa-blaster/",
+          "alt": "Jawa Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/jawa-cloak",
+      "kind": "accessory",
+      "name": "Jawa Cloth Cloak",
+      "page": "https://www.variantvillain.com/accessory-guide/jawa-cloak/",
+      "files": [
+        "accessories/jawa-cloak.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/01/JawaCloak_00_ComparisonCloak.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/jawa-cloak/",
+          "alt": "Jawa Cloth Cloak, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/01/JawaCloak_00_ComparisonHood2.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/jawa-cloak/",
+          "alt": "Jawa Cloth Cloak, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/jawa-vinyl-cape",
+      "kind": "accessory",
+      "name": "Jawa Vinyl Cape",
+      "page": "https://www.variantvillain.com/accessory-guide/jawa-vinyl-cape/",
+      "files": [
+        "accessories/jawa-vinyl-cape.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/05/Jawa_Vinylcape__Overview01.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/jawa-vinyl-cape/",
+          "alt": "Jawa Vinyl Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/05/Jawa_Vinylcape_000a.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/jawa-vinyl-cape/",
+          "alt": "Jawa Vinyl Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/klaatu-skirt-2",
+      "kind": "accessory",
+      "name": "Klaatu Skirt",
+      "page": "https://www.variantvillain.com/accessory-guide/klaatu-skirt-2/",
+      "files": [
+        "accessories/klaatu-skirt-2.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu_Skirt_000_Overview01.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/klaatu-skirt-2/",
+          "alt": "Klaatu Skirt, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/11/Klaatu_Skirt_001_Smile00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/klaatu-skirt-2/",
+          "alt": "Klaatu Skirt, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/lando-calrissian-cape",
+      "kind": "accessory",
+      "name": "Lando Calrissian Cape",
+      "page": "https://www.variantvillain.com/accessory-guide/lando-calrissian-cape/",
+      "files": [
+        "accessories/lando-calrissian-cape.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/05/Lando_Cape_000_Overview_01.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/lando-calrissian-cape/",
+          "alt": "Lando Calrissian Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/05/Lando_Cape_001_00-1024x659.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/lando-calrissian-cape/",
+          "alt": "Lando Calrissian Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/lando-skiff-helmet",
+      "kind": "accessory",
+      "name": "Lando Skiff Helmet",
+      "page": "https://www.variantvillain.com/accessory-guide/lando-skiff-helmet/",
+      "files": [
+        "accessories/lando-skiff-helmet.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/7.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/lando-skiff-helmet/",
+          "alt": "Lando Skiff Helmet, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/leia-bespin-cape",
+      "kind": "accessory",
+      "name": "Leia Bespin Cape",
+      "page": "https://www.variantvillain.com/accessory-guide/leia-bespin-cape/",
+      "files": [
+        "accessories/leia-bespin-cape.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/LeiaBespinCape_000_Comp-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/leia-bespin-cape/",
+          "alt": "Leia Bespin Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/LeiaBespinCape_001_Kader_01.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/leia-bespin-cape/",
+          "alt": "Leia Bespin Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/leia-blaster",
+      "kind": "accessory",
+      "name": "Princess Leia Blaster",
+      "page": "https://www.variantvillain.com/accessory-guide/leia-blaster/",
+      "files": [
+        "accessories/leia-blaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/07/Leia_Pistol_Compare_b.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/leia-blaster/",
+          "alt": "Princess Leia Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Leia_Pistol_M01_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/leia-blaster/",
+          "alt": "Princess Leia Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/leia-boushh-helmet",
+      "kind": "accessory",
+      "name": "Leia Boushh Helmet",
+      "page": "https://www.variantvillain.com/accessory-guide/leia-boushh-helmet/",
+      "files": [
+        "accessories/leia-boushh-helmet.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/7_Boushh.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/leia-boushh-helmet/",
+          "alt": "Leia Boushh Helmet, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/leia-boushh-rifle",
+      "kind": "accessory",
+      "name": "Leia Boushh Rifle",
+      "page": "https://www.variantvillain.com/accessory-guide/leia-boushh-rifle/",
+      "files": [
+        "accessories/leia-boushh-rifle.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/8_Boushh.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/leia-boushh-rifle/",
+          "alt": "Leia Boushh Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/AAH-017.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/leia-boushh-rifle/",
+          "alt": "Leia Boushh Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/luke-jedi-cloak",
+      "kind": "accessory",
+      "name": "Luke Jedi Cloak",
+      "page": "https://www.variantvillain.com/accessory-guide/luke-jedi-cloak/",
+      "files": [
+        "accessories/luke-jedi-cloak.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Photo-from-Mark-Andrews.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/luke-jedi-cloak/",
+          "alt": "Luke Jedi Cloak, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/palace-blaster",
+      "kind": "accessory",
+      "name": "Palace Blaster",
+      "page": "https://www.variantvillain.com/accessory-guide/palace-blaster/",
+      "files": [
+        "accessories/palace-blaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/PalaceBlaster_2018_M00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/palace-blaster/",
+          "alt": "Palace Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/PalaceBlaster_2018_M01_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/palace-blaster/",
+          "alt": "Palace Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/pilot-blaster",
+      "kind": "accessory",
+      "name": "Pilot Blaster",
+      "page": "https://www.variantvillain.com/accessory-guide/pilot-blaster/",
+      "files": [
+        "accessories/pilot-blaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Pilot_Blaster_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/pilot-blaster/",
+          "alt": "Pilot Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Pilot_Blaster_M1_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/pilot-blaster/",
+          "alt": "Pilot Blaster, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/pop-up-saber",
+      "kind": "accessory",
+      "name": "Pop-Up Saber",
+      "page": "https://www.variantvillain.com/accessory-guide/pop-up-saber/",
+      "files": [
+        "accessories/pop-up-saber.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/08/PopupSaber_000_MouldComparison.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/pop-up-saber/",
+          "alt": "Pop-Up Saber, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/08/PopupSaber_M1_001.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/pop-up-saber/",
+          "alt": "Pop-Up Saber, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/princess-leia-organa-cape",
+      "kind": "accessory",
+      "name": "Princess Leia Organa Cape",
+      "page": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
+      "files": [
+        "accessories/princess-leia-organa-cape.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/03/LeiaPrincess_Cape_Comparison_004.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
+          "alt": "Princess Leia Organa Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/prune-face-rifle",
+      "kind": "accessory",
+      "name": "Prune Face Rifle",
+      "page": "https://www.variantvillain.com/accessory-guide/prune-face-rifle/",
+      "files": [
+        "accessories/prune-face-rifle.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/08/PruneFace_Rifle_000_Overview.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/prune-face-rifle/",
+          "alt": "Prune Face Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2026/08/PruneFace_Rifle_001_Kader.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/prune-face-rifle/",
+          "alt": "Prune Face Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/rebel-blaster",
+      "kind": "accessory",
+      "name": "Rebel Blaster (DL-44)",
+      "page": "https://www.variantvillain.com/accessory-guide/rebel-blaster/",
+      "files": [
+        "accessories/rebel-blaster.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/RebelBlaster_2018__M00a.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/rebel-blaster/",
+          "alt": "Rebel Blaster (DL-44), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/RebelBlaster_2018__M1b_00.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/rebel-blaster/",
+          "alt": "Rebel Blaster (DL-44), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/ree-yees-rifle",
+      "kind": "accessory",
+      "name": "Ree Yees Rifle",
+      "page": "https://www.variantvillain.com/accessory-guide/ree-yees-rifle/",
+      "files": [
+        "accessories/ree-yees-rifle.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/RY_Rifle_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ree-yees-rifle/",
+          "alt": "Ree Yees Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/RY_Rifle_M1_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ree-yees-rifle/",
+          "alt": "Ree Yees Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/sa80-rifle",
+      "kind": "accessory",
+      "name": "SA80 Rifle",
+      "page": "https://www.variantvillain.com/accessory-guide/sa80-rifle/",
+      "files": [
+        "accessories/sa80-rifle.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/Yps_510.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/sa80-rifle/",
+          "alt": "SA80 Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/GiJoe_Rifle_000.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/sa80-rifle/",
+          "alt": "SA80 Rifle, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/squid-head-belt",
+      "kind": "accessory",
+      "name": "Squid Head Belt",
+      "page": "https://www.variantvillain.com/accessory-guide/squid-head-belt/",
+      "files": [
+        "accessories/squid-head-belt.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/FF_14.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/squid-head-belt/",
+          "alt": "Squid Head Belt, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/squid-head-skirt",
+      "kind": "accessory",
+      "name": "Squid Head Skirt",
+      "page": "https://www.variantvillain.com/accessory-guide/squid-head-skirt/",
+      "files": [
+        "accessories/squid-head-skirt.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/FF_8.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/squid-head-skirt/",
+          "alt": "Squid Head Skirt, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/teebo-axe",
+      "kind": "accessory",
+      "name": "Teebo Axe",
+      "page": "https://www.variantvillain.com/accessory-guide/teebo-axe/",
+      "files": [
+        "accessories/teebo-axe.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/01/TeeboAxe_000_Comparison.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/teebo-axe/",
+          "alt": "Teebo Axe, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/01/TeeboAxe_001_ColourComp.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/teebo-axe/",
+          "alt": "Teebo Axe, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/teebo-hood",
+      "kind": "accessory",
+      "name": "Teebo Headpiece",
+      "page": "https://www.variantvillain.com/accessory-guide/teebo-hood/",
+      "files": [
+        "accessories/teebo-hood.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/01/Teebo_Hood_000_Comparison.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/teebo-hood/",
+          "alt": "Teebo Headpiece, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/01/Teebo_Hood_001_ColourComparison1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/teebo-hood/",
+          "alt": "Teebo Headpiece, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/teebo-horn",
+      "kind": "accessory",
+      "name": "Teebo Battle Horn",
+      "page": "https://www.variantvillain.com/accessory-guide/teebo-horn/",
+      "files": [
+        "accessories/teebo-horn.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/01/Teebo_Horn_000_MouldComparison.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/teebo-horn/",
+          "alt": "Teebo Battle Horn, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2025/01/Teebo_Horn_001_ColourComparison.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/teebo-horn/",
+          "alt": "Teebo Battle Horn, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/telescoping-lightsaber",
+      "kind": "accessory",
+      "name": "Telescoping Lightsaber (Single Telescoping / ST)",
+      "page": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
+      "files": [
+        "accessories/telescoping-lightsaber.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2024/04/Lightsaber_Comparison_Final03.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
+          "alt": "Telescoping Lightsaber (Single Telescoping / ST), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/Lightsaber_All-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
+          "alt": "Telescoping Lightsaber (Single Telescoping / ST), Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/tusken-raider-cape",
+      "kind": "accessory",
+      "name": "Tusken Raider Cape",
+      "page": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
+      "files": [
+        "accessories/tusken-raider-cape.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/08/Tuske_Cape_Comparison_01-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
+          "alt": "Tusken Raider Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/08/Tuske_Cape_Comparison_02.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
+          "alt": "Tusken Raider Cape, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/ugnaught-case",
+      "kind": "accessory",
+      "name": "Ugnaught Case",
+      "page": "https://www.variantvillain.com/accessory-guide/ugnaught-case/",
+      "files": [
+        "accessories/ugnaught-case.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/9-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ugnaught-case/",
+          "alt": "Ugnaught Case, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/AAH-016.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ugnaught-case/",
+          "alt": "Ugnaught Case, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/ugnaught-smock-guide",
+      "kind": "accessory",
+      "name": "Ugnaught Smock",
+      "page": "https://www.variantvillain.com/accessory-guide/ugnaught-smock-guide/",
+      "files": [
+        "accessories/ugnaught-smock-guide.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/11-scaled-2.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ugnaught-smock-guide/",
+          "alt": "Ugnaught Smock, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/12-1-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/ugnaught-smock-guide/",
+          "alt": "Ugnaught Smock, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/vibro-axe",
+      "kind": "accessory",
+      "name": "Vibro Axe",
+      "page": "https://www.variantvillain.com/accessory-guide/vibro-axe/",
+      "files": [
+        "accessories/vibro-axe.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/8-2-scaled-1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/vibro-axe/",
+          "alt": "Vibro Axe, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/11/AAH-010.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/vibro-axe/",
+          "alt": "Vibro Axe, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/yoda-belt",
+      "kind": "accessory",
+      "name": "Yoda Belt",
+      "page": "https://www.variantvillain.com/accessory-guide/yoda-belt/",
+      "files": [
+        "accessories/yoda-belt.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/belt_1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/yoda-belt/",
+          "alt": "Yoda Belt, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/belt_2.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/yoda-belt/",
+          "alt": "Yoda Belt, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/yoda-cane",
+      "kind": "accessory",
+      "name": "Yoda Cane",
+      "page": "https://www.variantvillain.com/accessory-guide/yoda-cane/",
+      "files": [
+        "accessories/yoda-cane.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/cane_1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/yoda-cane/",
+          "alt": "Yoda Cane, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/02/yoda-f1-5.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/yoda-cane/",
+          "alt": "Yoda Cane, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "id": "accessory-guide/yoda-snake",
+      "kind": "accessory",
+      "name": "Yoda Snake",
+      "page": "https://www.variantvillain.com/accessory-guide/yoda-snake/",
+      "files": [
+        "accessories/yoda-snake.txt"
+      ],
+      "images": [
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2023/03/snake_1.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/yoda-snake/",
+          "alt": "Yoda Snake, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        },
+        {
+          "url": "https://www.variantvillain.com/wp-content/uploads/2022/02/yoda-f1-8.jpg",
+          "sourcePage": "https://www.variantvillain.com/accessory-guide/yoda-snake/",
+          "alt": "Yoda Snake, Variant Villain accessory photo",
+          "role": "accessory",
+          "family": "",
+          "check": "HEAD",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "figuresWithPhotos": [
+      "(Twin-Pod) Cloud Car Pilot",
+      "2-1B",
+      "4-LOM",
+      "8D8",
+      "A-Wing Pilot",
+      "AT-AT Driver",
+      "AT-ST Driver",
+      "Admiral Ackbar",
+      "Amanaman",
+      "Anakin Skywalker",
+      "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+      "At-At Commander",
+      "B-Wing Pilot",
+      "Barada",
+      "Ben (Obi-Wan) Kenobi",
+      "Bespin Security Guard (Black)",
+      "Bespin Security Guard (White)",
+      "Bib Fortuna",
+      "Biker Scout",
+      "Boba Fett",
+      "Bossk",
+      "C-3PO",
+      "C-3PO (Removable Limbs)",
+      "Chewbacca",
+      "Chief Chirpa",
+      "Darth Vader",
+      "Death Squad Commander",
+      "Death Star Droid",
+      "Dengar",
+      "Droids C-3PO",
+      "Droids R2-D2",
+      "EV-9D9",
+      "Emperor's Royal Guard",
+      "FX-7",
+      "Gamorrean Guard",
+      "General Madine",
+      "Greedo",
+      "Hammerhead",
+      "Han Solo",
+      "Han Solo (Bespin Outfit)",
+      "Han Solo (Hoth Outfit)",
+      "Han Solo (in Carbonite Chamber)",
+      "Han Solo (in Trench Coat)",
+      "IG-88",
+      "Imperial Commander",
+      "Imperial Dignitary",
+      "Imperial Gunner",
+      "Imperial Stormtrooper (Hoth Battle Gear)",
+      "Imperial Tie Fighter Pilot",
+      "Jawa",
+      "Klaatu",
+      "Klaatu (in Skiff Guard Outfit)",
+      "Lando Calrissian",
+      "Lando Calrissian (General Pilot)",
+      "Lando Calrissian (Skiff Guard Disguise)",
+      "Leia (Hoth Outfit)",
+      "Leia Organa (Bespin Gown)",
+      "Lobot",
+      "Logray (Ewok Medicine Man)",
+      "Luke Skywalker",
+      "Luke Skywalker (Bespin Fatigues)",
+      "Luke Skywalker (Hoth Battle Gear)",
+      "Luke Skywalker (Imperial Stormtrooper Outfit)",
+      "Luke Skywalker (Jedi Knight Outfit)",
+      "Luke Skywalker (X-Wing Pilot)",
+      "Luke Skywalker (in Battle Poncho)",
+      "Lumat",
+      "Nien Nunb",
+      "Nikto",
+      "Paploo",
+      "Power Droid",
+      "Princess Leia Organa",
+      "Princess Leia Organa (Boushh Disguise)",
+      "Princess Leia Organa (in Combat Poncho)",
+      "Prune Face",
+      "R2-D2",
+      "R2-D2 (Sensorscope)",
+      "R5-D4",
+      "Rancor Keeper",
+      "Rebel Commander",
+      "Rebel Commando",
+      "Rebel Soldier (Hoth Battle Gear)",
+      "Ree Yees",
+      "Romba",
+      "Sand People",
+      "Snaggletooth",
+      "Squid Head",
+      "Stormtrooper",
+      "Teebo",
+      "The Emperor",
+      "Ugnaught",
+      "Walrus Man",
+      "Warok",
+      "Weequay",
+      "Wicket W. Warrick",
+      "Yak Face",
+      "Yoda",
+      "Zuckuss"
+    ],
+    "figuresWithoutPhotos": [
+      "Dulok Scout",
+      "Dulok Shaman",
+      "King Gorneesh",
+      "Logray (Ewoks)",
+      "Urgah Lady Gorneesh",
+      "Wicket W.Warrick (Ewoks)"
+    ],
+    "accessoriesWithPhotos": [
+      "2-1B Mouthpiece",
+      "2-1B Probe",
+      "AT-AT Driver Rifle",
+      "Ackbar Staff",
+      "Amanaman Staff",
+      "Ben (Obi-Wan) Kenobi Cape",
+      "Bespin Blaster",
+      "Bib Fortuna Belt",
+      "Bib Fortuna Cloak",
+      "Bib Fortuna Staff",
+      "Biker Scout Blaster",
+      "Bossk Rifle",
+      "Bowcaster (Chewbacca)",
+      "C-3PO (Removable Limbs) Net",
+      "Carbonite Chamber",
+      "Commlink Guide",
+      "Darth Vader Cape",
+      "Double Telescoping Lightsaber (DT)",
+      "Emperor Cane",
+      "Emperor’s Royal Guard Pike",
+      "Endor Blaster",
+      "Ewok Spear",
+      "Gaffi Stick (Tusken Raider)",
+      "Gamorrean Axe",
+      "General Madine Staff",
+      "Handheld Lightsaber",
+      "Hoth Rebel Rifle",
+      "Hoth Trooper Skirt",
+      "IG-88 Rifle",
+      "Imperial Blaster (E-11)",
+      "Imperial Hoth Rifle",
+      "Jawa Blaster",
+      "Jawa Cloth Cloak",
+      "Jawa Vinyl Cape",
+      "Klaatu Skirt",
+      "Lando Calrissian Cape",
+      "Lando Skiff Helmet",
+      "Leia Bespin Cape",
+      "Leia Boushh Helmet",
+      "Leia Boushh Rifle",
+      "Luke Jedi Cloak",
+      "Palace Blaster",
+      "Pilot Blaster",
+      "Pop-Up Saber",
+      "Princess Leia Blaster",
+      "Princess Leia Organa Cape",
+      "Prune Face Rifle",
+      "Rebel Blaster (DL-44)",
+      "Ree Yees Rifle",
+      "SA80 Rifle",
+      "Squid Head Belt",
+      "Squid Head Skirt",
+      "Teebo Axe",
+      "Teebo Battle Horn",
+      "Teebo Headpiece",
+      "Telescoping Lightsaber (Single Telescoping / ST)",
+      "Trench Coat (Han Endor)",
+      "Tusken Raider Cape",
+      "Ugnaught Case",
+      "Ugnaught Smock",
+      "Vibro Axe",
+      "Yoda Belt",
+      "Yoda Cane",
+      "Yoda Snake"
+    ],
+    "accessoriesWithoutPhotos": []
+  }
+}

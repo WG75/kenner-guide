@@ -1325,6 +1325,68 @@ await test("Palitoy release files match the generator and stay under the cap", a
   assert.equal(over.length, 0, over.join("\n"));
 });
 
+await test("Variant Villain photos stay out of the model and can be switched off", async () => {
+  const photoHref = pathToFileURL(path.join(root, "api", "vv-reference-photos.js")).href;
+  const photos = await import(photoHref);
+  assert.equal(photos.VV_REFERENCE_PHOTOS, true);
+  assert.deepEqual(photos.selectVvReferencePhotos({
+    question: "how many versions of Vader",
+    sources: ["figures/darth-vader-reference.txt"],
+    enabled: false
+  }), []);
+
+  const map = JSON.parse(fs.readFileSync(path.join(root, "data-source", "vv-images.json"), "utf8"));
+  assert.ok(Array.isArray(map.entries) && map.entries.length > 0);
+  assert.equal(fs.existsSync(path.join(root, "data", "vv-images.json")), false);
+  for (const entry of map.entries) {
+    assert.match(entry.page, /^https:\/\/www\.variantvillain\.com\//);
+    for (const image of entry.images) {
+      assert.match(image.url, /^https:\/\/www\.variantvillain\.com\/wp-content\/uploads\//);
+      assert.equal(image.sourcePage, entry.page);
+      assert.ok(image.alt);
+      assert.ok(image.check === "HEAD" || image.check === "GET");
+      assert.ok(image.status === 200 || image.status === 206);
+    }
+  }
+
+  const vader = await call({ message: "how many versions of Vader" });
+  assert.ok(Array.isArray(vader.json.images));
+  assert.ok(vader.json.images.length >= 1 && vader.json.images.length <= 3);
+  for (const image of vader.json.images) {
+    assert.match(image.url, /^https:\/\/www\.variantvillain\.com\/wp-content\/uploads\//);
+    assert.match(image.sourcePage, /\/characters\/sw\/darth-vader\/$/);
+    assert.equal(image.credit, "Photo: Variant Villain");
+    assert.ok(image.alt);
+  }
+  const prompt = calls.at(-1).body.messages.map(message => message.content).join("\n");
+  assert.doesNotMatch(prompt, /wp-content\/uploads/);
+  for (const image of vader.json.images) assert.equal(prompt.includes(image.url), false);
+
+  const cape = await call({ message: "Tell me about the Darth Vader cape" });
+  assert.ok(cape.json.sources.includes("accessories/darth-vader-cape.txt"), cape.json.sources.join(", "));
+  assert.ok(cape.json.images.some(image => image.sourcePage.endsWith("/accessory-guide/darth-vader-cape/")));
+  assert.ok(cape.json.images.length <= 3);
+
+  const family = photos.selectVvReferencePhotos({
+    question: "Show me Vader family VIII",
+    sources: ["figures/darth-vader-reference.txt"],
+    map
+  });
+  assert.ok(family.length >= 1 && family.length <= 3);
+  assert.match(family[0].alt, /VIII/);
+
+  const off = await call({ message: "What is the weather in Paris tomorrow?" });
+  assert.equal(off.json.offTopic, true);
+  assert.equal(off.json.images, undefined);
+
+  const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  assert.match(html, /img\.loading = "lazy"/);
+  assert.match(html, /textContent = "Photo: Variant Villain"/);
+  assert.match(html, /image\.sourcePage/);
+  assert.ok(html.indexOf("appendAnswerImages(data.images, \"before\")") < html.indexOf("addMessage(\"assistant\", shown.reply)"));
+  assert.ok(html.indexOf("addMessage(\"assistant\", shown.reply)") < html.indexOf("appendAnswerImages(data.images, \"after\")"));
+});
+
 console.error = quietErrors;
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
