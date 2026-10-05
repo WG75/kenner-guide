@@ -43,6 +43,12 @@ Variant questions:
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
 
+Accessory factory:
+- Families listed: I Smile, II Unitoy, III Lili Ledy (MIM). Several factories, so the axe mould is not determinable.
+- "VIBRO AXE GUIDE" links to the Vibro Axe page. That page's further reading links this figure guide and does not name his mould.
+- "LANDO SKIFF HELMET" links to the Lando Skiff Helmet page.
+- Source: https://www.variantvillain.com/characters/rotj/lando-calrissian-skiff-guard-disguise/ and https://www.variantvillain.com/accessory-guide/vibro-axe/ and https://www.variantvillain.com/accessory-guide/lando-skiff-helmet/ Reliability: high. Recorded: 2026-10-05.
+
 Sources:
 https://www.variantvillain.com/characters/rotj/lando-calrissian-skiff-guard-disguise/
 https://www.variantvillain.com/knowledge/introduction-to-coos/

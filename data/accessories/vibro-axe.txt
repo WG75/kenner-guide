@@ -6,20 +6,21 @@ Overview:
 Vibro Axe is documented in the Variant Villain accessory guide. Colour lists, mould lists and figure pairings that follow a colon or a heading are kept in full. Unstated moulds, colours and figure pairings are unknown.
 
 Which figures / mould and colour notes (evidence: documented where the page states them):
-- Families and notes named on the page index
-  - MOULD COMPARISON
-  - M1:  Unitoy
-  - M2: Smile
-  - M3: Lili Ledy
-  - M1: Unitoy
-  - Lighter grey plastic
-  - Deep EPM on the grip halfway up the handle
-  - Mid grey plastic
-  - There’s two alternating versions of this axe, with the EPMs found mirrored on either side of the axe. These were shot in different cavities of the same steel tooling.
-  - A unique mould, roughly based on the Smile HK factory sculpt.
-  - Found commonly lettered “A” or “B”, but can also be found with a blank area instead of a letter.
-  - Notably thicker axe blade than the Kenner version.
-  - Found commonly in a range of darker grey colours. A distinctly lighter grey version was also produced.
+- Mould comparison, read from the page on 2026-10-05. M1 is Unitoy, not Smile.
+  - M1, Unitoy. Lighter grey plastic. A deep ejector-pin mark on the grip, halfway up the handle.
+  - M2, Smile. Mid grey plastic. Two alternating versions, with the ejector-pin marks mirrored on either side of the axe, shot in different cavities of the same steel tooling.
+  - M3, Lili Ledy. A unique mould, roughly based on the Smile Hong Kong sculpt. Commonly lettered "A" or "B", or blank. A thicker blade than the Kenner version. Commonly darker grey, and a distinctly lighter grey was also produced.
+- Figures named on this page
+  - Further reading links the Weequay figure guide, the Lili Ledy Weequay guide, the Lando Skiff figure guide, the Lili Ledy Lando Skiff guide, the Klaatu figure guide and the Lili Ledy Klaatu guide.
+  - The page does not name Barada, Yak Face, Nikto, Klaatu in the skiff guard outfit, or the Rancor Keeper.
+- Figure pages that link here, recorded 2026-10-05
+  - Klaatu's contents heading "VIBRO AXE" links here. His page assigns a vibro staff with a small ejector-pin mark to Smile and to Unitoy, and a dark grey lettered axe to Lili Ledy.
+  - Weequay's contents heading "VIBRO AXE" links here. Weequay was made by Unitoy, Smile and Lili Ledy, and neither page says which mould he carries.
+  - Lando Skiff's contents heading "VIBRO AXE GUIDE" links here. He was made by Smile, Unitoy and Lili Ledy, and neither page says which mould he carries.
+  - Klaatu Skiff's contents heading "LL VIBRO AXE GUIDE" links here. His figure guide line is "I: Smile/ Lili Ledy". The skiff vibro staff heading on that page is not a link.
+- One factory on the figure page, so the staff is that factory's mould
+  - Barada's figure guide lists only Smile, so his skiff vibro staff is the Smile mould, M2 on this page. His figure page says the staff is yet to be documented and does not link here.
+  - Yak Face's figure guide lists only Smile, so his skiff vibro staff is M2 on this page. His figure page says the staff is yet to be documented and does not link here. It also says some Trilogo cards had a black M1 Palace blaster, or no accessory.
 - Bootlegs
   - Coming soon
 

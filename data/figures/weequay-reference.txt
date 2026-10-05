@@ -50,6 +50,11 @@ Variant questions:
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
 
+Accessory factory:
+- Families listed: I Unitoy, II Smile/ Lili Ledy, III Unitoy. Several factories, so the axe mould is not determinable from the figure alone.
+- The contents heading "VIBRO AXE" links to the Vibro Axe page. That page's further reading links this figure guide, and it does not say which mould Weequay carries. Its moulds are M1 Unitoy, M2 Smile and M3 Lili Ledy.
+- Source: https://www.variantvillain.com/characters/rotj/weequay/ and https://www.variantvillain.com/accessory-guide/vibro-axe/ Reliability: high. Recorded: 2026-10-05.
+
 Sources:
 https://www.variantvillain.com/characters/rotj/weequay/
 https://www.variantvillain.com/knowledge/introduction-to-coos/

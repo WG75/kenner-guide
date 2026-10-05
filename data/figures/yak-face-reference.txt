@@ -41,6 +41,12 @@ Variant questions:
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
 
+Accessory factory:
+- The figure guide lists one family, I: Smile. Smile in Hong Kong produced the figure and accessories, so the skiff vibro staff is the Smile mould.
+- On the Vibro Axe page the Smile mould is M2. That page does not name Yak Face. This figure page says the staff is yet to be documented, and it does not link the Vibro Axe page.
+- The same page says a Trilogo Yak Face was occasionally packed with a black M1 Palace blaster, and often with no accessory at all.
+- Source: https://www.variantvillain.com/characters/potf/yak-face/ and https://www.variantvillain.com/accessory-guide/vibro-axe/ and https://www.variantvillain.com/accessory-guide/palace-blaster/#m1 Reliability: high. Recorded: 2026-10-05.
+
 Sources:
 https://www.variantvillain.com/characters/potf/yak-face/
 https://www.variantvillain.com/knowledge/introduction-to-coos/

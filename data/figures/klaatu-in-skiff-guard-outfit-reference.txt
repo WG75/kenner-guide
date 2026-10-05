@@ -52,6 +52,12 @@ Rebelscum photo archive (evidence: documented), https://www.rebelscum.com/VINtKl
 - theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
 - https://theswca.com/
 
+Accessory factory:
+- The figure guide line is "I: Smile/ Lili Ledy". Two factories are named.
+- "SKIFF VIBRO STAFF" is a contents heading and is not a link. "LL VIBRO AXE GUIDE" links to the Vibro Axe page, whose Lili Ledy mould is M3.
+- The page does not say which factory carried the staff. One mould for every Klaatu skiff is not determinable.
+- Source: https://www.variantvillain.com/characters/rotj/klaatu-in-skiff-guard-outfit/ and https://www.variantvillain.com/accessory-guide/vibro-axe/ Reliability: high. Recorded: 2026-10-05.
+
 Sources:
 https://www.variantvillain.com/characters/rotj/klaatu-in-skiff-guard-outfit/
 https://www.variantvillain.com/knowledge/introduction-to-coos/

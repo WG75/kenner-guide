@@ -58,6 +58,12 @@ Variant questions:
 3. Which accessory mould or colour is with it?
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
 
+Accessory factory:
+- Three families are listed: I Smile, II Unitoy, III Lili Ledy (MIM). The weapon is not one mould for every Klaatu.
+- This page says Smile and Unitoy came with a vibro staff with a small ejector-pin mark. Lili Ledy came with a dark grey vibro axe lettered A, B, or with no stamp (part 2).
+- The contents heading "VIBRO AXE" links to the Vibro Axe page. There M1 is Unitoy (lighter grey, a deep ejector-pin mark), M2 is Smile (mid grey, ejector-pin marks mirrored on either side), and M3 is Lili Ledy (darker grey, lettered A or B or blank, a thicker blade). That page's further reading also links this figure guide.
+- Source: https://www.variantvillain.com/characters/rotj/klaatu/ and https://www.variantvillain.com/accessory-guide/vibro-axe/ Reliability: high. Recorded: 2026-10-05.
+
 Sources:
 https://www.variantvillain.com/characters/rotj/klaatu/
 https://www.variantvillain.com/knowledge/introduction-to-coos/

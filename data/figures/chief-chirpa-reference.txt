@@ -69,6 +69,11 @@ imperialgunnery.com (evidence: documented where the page states it; 'we believe'
 - theswca.com: unknown for production COO, paint and debut. Single archive-object pages were not used as production variants.
 - https://theswca.com/
 
+Accessory factory:
+- Families listed: I Smile, II Kader, III Kader, IV Lili Ledy, V Top Toys. Several factories, so a Chirpa of unknown family does not fix the staff or hood.
+- The figure overview on this page pairs some of them: F1 Smile with a standard staff and a brown hood, a staff variation with a brown hood, and a no-COO example with a reddish hood; F2 and F3 Kader include a caramel hood and staff on the white examples. There is no accessory-guide page for the staff or the hood.
+- Source: https://www.variantvillain.com/characters/rotj/chief-chirpa/ Reliability: high. Recorded: 2026-10-05.
+
 Sources:
 https://www.variantvillain.com/characters/rotj/chief-chirpa/
 https://www.variantvillain.com/knowledge/introduction-to-coos/
