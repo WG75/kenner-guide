@@ -231,11 +231,16 @@ await test("system prompt carries the brief's rules", async () => {
   }
   assert.match(sys, /Do not print an "Evidence:" line/);
   assert.match(sys, /one factory per line/);
-  assert.match(sys, /COO family/);
-  assert.match(sys, /same mould/);
-  assert.match(sys, /not the order the moulds were used/);
-  assert.match(sys, /knowledge\/coo-terminology/);
-  assert.match(sys, /how-to-use-the-coo-guides/);
+  assert.match(sys, /A family is a group of figures made from the same mould/);
+  assert.match(sys, /even if the mould was copied or the country stamp changed/);
+  assert.match(sys, /The family numbers are just labels, not the order they were made/);
+  assert.match(sys, /Do not mention an author, a page, or anyone's view/);
+  assert.match(sys, /Do not print a Source, Reliability or Recorded line/);
+  assert.match(sys, /short explanation of a family/);
+  assert.doesNotMatch(sys, /author's view/);
+  assert.doesNotMatch(sys, /that page/);
+  assert.doesNotMatch(sys, /knowledge\/coo-terminology/);
+  assert.doesNotMatch(sys, /how-to-use-the-coo-guides/);
   assert.doesNotMatch(sys, /production batch identified by the Country of Origin stamp/);
   assert.match(sys, /Variant Villain family numbers in brackets/);
   assert.match(sys, /one name per line/);
@@ -1017,10 +1022,12 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   const vaderAt = vaderPrompt.indexOf("Darth Vader — 71 versions across 12 families");
   assert.ok(vaderAt >= 0);
   const vaderBlock = vaderPrompt.slice(vaderAt).split(/\n\d+\. /)[0];
-  assert.match(vaderPrompt, /COO family is the moulds of one character that are the same mould/);
-  assert.match(vaderPrompt, /https:\/\/www\.variantvillain\.com\/knowledge\/coo-terminology\//);
-  assert.match(vaderPrompt, /Recorded: 2026-10-04/);
-  assert.ok(vaderPrompt.indexOf("COO family is the moulds") < vaderAt);
+  const familyReply = "A family is a group of figures made from the same mould, even if the mould was copied or the country stamp changed. The family numbers are just labels, not the order they were made.";
+  assert.match(vaderPrompt, /A family is a group of figures made from the same mould, even if the mould was copied or the country stamp changed\. The family numbers are just labels, not the order they were made\./);
+  assert.ok(vaderPrompt.indexOf(familyReply) < vaderAt);
+  const familyLine = vaderPrompt.slice(0, vaderAt).split("\n").filter(line => line.includes(familyReply)).pop();
+  assert.ok(familyLine);
+  assert.doesNotMatch(familyLine, /Source:|Reliability:|Recorded:|author|that page/);
   assert.doesNotMatch(vaderPrompt, /production batch identified by the Country of Origin stamp/);
   assert.match(vaderBlock, /^- Kader \(Variant Villain families I, II and III\): I, 14 versions; II, 5 versions; III with Glasslite, 15 versions$/m);
   assert.match(vaderBlock, /^- Smile\/Lili Ledy \(Variant Villain family IV\): 7 versions$/m);
@@ -1029,7 +1036,7 @@ await test("outfit and variant ranking questions retrieve the count summary", as
   assert.match(vaderBlock, /^- Taiwan \(Variant Villain families X and XI\): X, 2 versions; XI, 2 versions$/m);
   assert.match(vaderBlock, /told apart by the foot mould/);
   assert.match(vaderBlock, /may be wear or different plastic/);
-  assert.match(vaderBlock, /https:\/\/www\.variantvillain\.com\/characters\/sw\/darth-vader\//);
+  assert.doesNotMatch(vaderBlock, /Source:|Reliability:|Recorded:|author's view|that page/);
   assert.match(vaderBlock, /^- Takara \(Variant Villain family XII\): 1 version$/m);
   const vaderFactoryLines = vaderBlock.split("\n").filter(line => line.includes("(Variant Villain famil"));
   assert.equal(vaderFactoryLines.length, 6);
@@ -1141,8 +1148,20 @@ await test("variant count summary matches the generator and stays under the cap"
   assert.match(summary, /Top Toys \(Variant Villain family VI\)/);
   assert.match(summary, /^- Takara \(Variant Villain family XII\): 1 version$/m);
   assert.match(summary, /^- Kader \(Variant Villain families I, II and III\): I, 14 versions; II, 5 versions; III with Glasslite, 15 versions$/m);
-  assert.match(summary, /COO family is the moulds of one character that are the same mould/);
+  assert.match(summary, /A family is a group of figures made from the same mould, even if the mould was copied or the country stamp changed\. The family numbers are just labels, not the order they were made\./);
+  assert.match(summary, /Family record, not for the reply/);
+  assert.match(summary, /author's view/);
   assert.match(summary, /https:\/\/www\.variantvillain\.com\/knowledge\/coo-terminology\//);
+  assert.match(summary, /https:\/\/www\.variantvillain\.com\/knowledge\/how-to-use-the-coo-guides\//);
+  assert.match(summary, /https:\/\/www\.variantvillain\.com\/characters\/sw\/darth-vader\//);
+  assert.match(summary, /Reliability: high\. Recorded: 2026-10-04/);
+  const spoken = summary.split("\n").filter(line =>
+    line.includes("A family is a group of figures") || line.startsWith("- Vader's guide sorts")
+  );
+  assert.ok(spoken.length >= 2);
+  for (const line of spoken) {
+    assert.doesNotMatch(line, /Source:|Reliability:|Recorded:|author|that page/, line);
+  }
   assert.doesNotMatch(summary, /production batch identified by the Country of Origin stamp/);
   assert.doesNotMatch(summary, /not counted/i);
 });

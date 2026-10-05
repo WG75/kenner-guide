@@ -81,25 +81,36 @@ def load_snapshot():
     return data, by_url
 
 
-# Paraphrase of Variant Villain's own pages, fetched 2026-10-04. Not a guess
-# about what a family is. The chat copies this, then the factory groups.
-FAMILY_SENTENCE = (
+# What the reply says. Two short sentences. No author, no page, no source line.
+FAMILY_REPLY = (
+    "A family is a group of figures made from the same mould, "
+    "even if the mould was copied or the country stamp changed. "
+    "The family numbers are just labels, not the order they were made."
+)
+
+# Stored paraphrase of Variant Villain, fetched 2026-10-04. The new-steel-mould
+# point stays here with its source. The reply does not say it.
+FAMILY_RECORD = (
+    "Family record, not for the reply. "
     "Variant Villain's COO family is the moulds of one character that are the same mould, "
     "including an exact duplicate and a changed country stamp. "
     "Its terminology page treats a new steel mould as slightly different, and so as another family; that is the author's view. "
     "The numbers are not the order the moulds were used. "
     "Source: https://www.variantvillain.com/knowledge/coo-terminology/ "
     "and https://www.variantvillain.com/knowledge/how-to-use-the-coo-guides/ "
+    "Reliability: high. Recorded: 2026-10-04. "
+    "Darth Vader's guide tells the repeated factories apart. "
+    "Source: https://www.variantvillain.com/characters/sw/darth-vader/ "
     "Reliability: high. Recorded: 2026-10-04."
 )
 
 # Vader's page is the one that says how its repeated factory names are told apart.
+# The source URL stays in FAMILY_RECORD, not on this line.
 VADER_FAMILY_NOTE = (
     "- Vader's guide sorts by COO family, then torso mould, because those factories mixed moulds. "
     "Unitoy V is only torso mould M5. VI and VII mix M5 and M6 and are told apart by the foot mould. "
     "VIII is M6 and M7, also used at PBP. "
-    "Taiwan X and XI differ only slightly between M9 and M10, which may be wear or different plastic. "
-    "Source: https://www.variantvillain.com/characters/sw/darth-vader/ Reliability: high. Recorded: 2026-10-04."
+    "Taiwan X and XI differ only slightly between M9 and M10, which may be wear or different plastic."
 )
 
 # Stamp and place words the page prints on a family label. China is not here:
@@ -531,7 +542,7 @@ def render(figures, snapshot, by_url):
         "",
         "Counting basis:",
         f"These variant counts were taken from the live Variant Villain figure guides on {fetched} (https://www.variantvillain.com/characters/sw/, /esb/, /rotj/, /potf/ and /droids/). The snapshot is data-source/vv-variant-counts.json. It records each page URL. Power of the Force and Droids and Ewoks use the same roman-numeral figure guide, so they are included.",
-        "A figure has two levels. Families are the documented manufacturer/region columns: lines such as \"I: Kader\" and \"VII: Takara\". The COO-family explanation, with its source URLs, is given at the ranked list. A blank label still counts when the numeral is printed (\"II:\"). A label that starts with \"not\" is skipped. A sub-point such as \"IV.1\" is not another family. Versions are the pictured sub-variants inside a family, read from that page's combination list. Paint shades listed on their own, cape moulds and lightsaber moulds are not versions. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families. The list under a figure names each factory once. Variant Villain family numbers stay in brackets. Another factory on the same family is written \"with\" that factory. A further note is added only when that figure's own page says how those families differ.",
+        "A figure has two levels. Families are the documented manufacturer/region columns: lines such as \"I: Kader\" and \"VII: Takara\". The short family explanation at the ranked list is the one to say. Source URLs stay in the family record and are not for the reply. A blank label still counts when the numeral is printed (\"II:\"). A label that starts with \"not\" is skipped. A sub-point such as \"IV.1\" is not another family. Versions are the pictured sub-variants inside a family, read from that page's combination list. Paint shades listed on their own, cape moulds and lightsaber moulds are not versions. Darth Vader's capes and telescoping or double-telescoping sabres are accessory variants, not extra figure families. The list under a figure names each factory once. Variant Villain family numbers stay in brackets. Another factory on the same family is written \"with\" that factory. A further note is added only when that figure's own page says how those families differ.",
         "Each family count was checked against that page's COO sheet or figure-guide image. Where the image and the text disagree, the image is used. A column the sheet marks as not this figure is left out. Stormtrooper's text index lists I-VI. The COO sheet image adds VII: PBP/Lili Ledy, so Stormtrooper is 7 families. Wicket W. Warrick's Return of the Jedi sheet shows two families, I Smile (HK) and II Taiwan. Version totals are ranked only when every family on that line has a pictured list. If the line says versions unverified, do not add the family lines together and do not invent a version total.",
         "If the images do not show a readable roman family grid, the family count is unverified. Do not guess a family count. A line that says family count unverified still has a version total when the page text lists the pictured variants. Yoda's sheet is four families (I Kader HK, II Unitoy, III Smile, IV Top Toys). Lili Ledy, Kader China and Poch/PBP sit under those families. They are not extra roman families. Yoda's snake, cane, belt and cloak are accessories. Darth Vader's version total is the pictured mould and colour lines, which is higher than counting one line per torso mould.",
         "Each figure line has Years and Factories. Those were calculated when this summary was built. Repeat them. Do not count the factories again from the family lines. Do not count the versions again from the family lines. Years come from a Released or Release Date line in that figure's dossier. If Years says not recorded, leave the years out. Smile and Lili Ledy, including an LL line, are one factory. Kader China is Kader. Made in Taiwan, Taiwan and Universal Manufacturers are Taiwan.",
@@ -547,7 +558,7 @@ def render(figures, snapshot, by_url):
     lines.append("")
     lines.append(
         "Ranked figures by pictured versions (highest first). "
-        + FAMILY_SENTENCE
+        + FAMILY_REPLY
         + " Each line under a figure is one factory, with that factory's Variant Villain family numbers in brackets and the version count for each family."
     )
     for index, row in enumerate(counted, start=1):
@@ -555,7 +566,7 @@ def render(figures, snapshot, by_url):
     lines.append("")
     lines.append(
         "Families documented, versions unverified (the pictured lists or the sheet labels do not cover every family, so no version total is given). "
-        + FAMILY_SENTENCE
+        + FAMILY_REPLY
         + " Each line is one factory, with the Variant Villain family numbers in brackets."
     )
     for index, row in enumerate(family_only, start=1):
@@ -567,6 +578,7 @@ def render(figures, snapshot, by_url):
         lines.append(f"- {row['name']} — {row['url']}{extra}")
     lines.append("")
     lines.append(f"Sources: live Variant Villain character pages fetched {fetched}, stored in data-source/vv-variant-counts.json. Outfit totals use the catalog names in data/catalog-1.json through data/catalog-6.json. Regenerated by tools/build-variant-counts.py.")
+    lines.append(FAMILY_RECORD)
     return "\n".join(lines) + "\n", counted, unverified, ranked_characters
 
 
@@ -597,7 +609,7 @@ def split_text(text):
         "Name: Variant and outfit counts",
         "Aliases: most variants, most outfits, most versions, variant counts, outfit counts, character versions, how many versions",
         "Part of the variant and outfit count summary. Counting basis and the top of the ranking are in part 1. Family and version lists continue here. "
-        + FAMILY_SENTENCE
+        + FAMILY_REPLY
         + " Each factory is named once, with its Variant Villain family numbers in brackets. Do not guess a count that is not in this summary. An unverified figure has no number.",
         "",
     ])
