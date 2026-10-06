@@ -225,6 +225,7 @@
     .input-wrap {
       flex: 0 0 auto;
       display: flex;
+      align-items: center;
       gap: 10px;
       padding: 8px 12px 10px;
       background: transparent;
@@ -234,17 +235,32 @@
       flex: 1 1 auto;
       min-width: 0;
       min-height: 46px;
-      max-height: 130px;
+      max-height: 160px;
       resize: none;
+      overflow-y: auto;
       border: 1px solid var(--line);
       outline: none;
       border-radius: 12px;
-      padding: 12px 13px;
+      padding: 10px 13px;
       background: var(--panel2);
       color: var(--text);
       font-size: 15px;
       font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.35;
+      line-height: 22px;
+    }
+
+    /* The empty field's height follows rows, not the wrapped placeholder.
+       Two lines once the prompt wraps; three lines at about 390px. */
+    @media (max-width: 599px) {
+      .input {
+        min-height: 74px;
+      }
+    }
+
+    @media (max-width: 394px) {
+      .input {
+        min-height: 96px;
+      }
     }
 
     .input:focus {
@@ -253,7 +269,9 @@
 
     .send {
       flex: 0 0 auto;
+      align-self: center;
       width: 72px;
+      height: 46px;
       border: 0;
       border-radius: 12px;
       background: var(--accent);
@@ -909,8 +927,16 @@
     }
 
     function autoSizeInput() {
-      inputEl.style.height = "auto";
-      inputEl.style.height = Math.min(inputEl.scrollHeight, 130) + "px";
+      const max = parseFloat(getComputedStyle(inputEl).maxHeight) || 160;
+      if (!inputEl.value) {
+        inputEl.style.height = "";
+        return;
+      }
+      inputEl.style.minHeight = "0px";
+      inputEl.style.height = "0px";
+      const needed = inputEl.scrollHeight;
+      inputEl.style.minHeight = "";
+      inputEl.style.height = Math.min(needed, max) + "px";
     }
 
     inputEl.addEventListener("input", autoSizeInput);
