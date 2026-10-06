@@ -1434,6 +1434,34 @@ await test("a one-factory figure's accessory uses that factory's Variant Villain
   assert.match(nikPrompt, /not determinable/);
 });
 
+await test("mocked model answers Cloud Car Pilot and identify a figure without crashing the function", async () => {
+  // Vercel compiles api/chat.js with ncc into CommonJS. import.meta in that
+  // bundle is a SyntaxError, so the function dies on load (FUNCTION_INVOCATION_FAILED)
+  // and the page shows "Sorry, there was a problem getting an answer." for every question.
+  for (const file of ["api/chat.js", "api/vv-reference-photos.js", "vfcb-chat-ui.js"]) {
+    const source = fs.readFileSync(path.join(root, file), "utf8");
+    assert.equal(source.includes("import.meta"), false, file);
+  }
+  const vercel = JSON.parse(fs.readFileSync(path.join(root, "vercel.json"), "utf8"));
+  const include = String(vercel.functions["api/chat.js"].includeFiles);
+  assert.match(include, /data\/\*\*/);
+  assert.match(include, /data-source\/vv-images\.json/);
+
+  const identify = await call({ message: "identify a figure" });
+  assert.equal(identify.status, 200);
+  assert.match(identify.json.reply, /Which figure shall we identify/);
+  assert.equal(identify.json.flowState.topic, "variant_identify");
+  assert.equal(calls.length, 0);
+
+  const cloud = await call({ message: "Cloud car pilot" });
+  assert.equal(cloud.status, 200);
+  assert.equal(cloud.json.error, undefined);
+  assert.equal(cloud.json.reply, "MOCK ANSWER");
+  assert.equal(calls.length, 1);
+  assert.match(calls[0].url, /api\.openai\.com\/v1\/chat\/completions/);
+  assert.ok(cloud.json.sources.some(source => /cloud-car/i.test(source)), cloud.json.sources.join(", "));
+});
+
 console.error = quietErrors;
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);
