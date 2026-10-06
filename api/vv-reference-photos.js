@@ -1,12 +1,10 @@
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
 
 // Hot-linked Variant Villain photos shown under a text answer.
 // Set this to false if Variant Villain asks us to stop. Nothing else needs to change.
 export const VV_REFERENCE_PHOTOS = true;
 
-const MAP_PATH = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "data-source", "vv-images.json");
 const CREDIT = "Photo: Variant Villain";
 const MAX_IMAGES = 3;
 const FAMILY_RE = /\bfamily\s+(xii|xi|x|ix|viii|vii|vi|v|iv|iii|ii|i)\b/i;
@@ -14,12 +12,29 @@ const ACCESSORY_RE = /\b(cape|cloak|saber|sabre|blaster|rifle|helmet|staff|weapo
 
 let mapCache;
 
+/* Vercel compiles this file to CommonJS, where a file-URL meta property is a
+   syntax error, so the map is found from the project directory (and __dirname
+   when the bundle has one). A missing map only hides photos. */
+function mapCandidates() {
+  const relative = path.join("data-source", "vv-images.json");
+  const candidates = [path.join(process.cwd(), relative)];
+  if (typeof __dirname === "string") {
+    candidates.push(path.join(__dirname, "..", relative));
+    candidates.push(path.join(__dirname, relative));
+  }
+  return candidates;
+}
+
 function loadMap() {
   if (mapCache) return mapCache;
-  try {
-    mapCache = JSON.parse(fs.readFileSync(MAP_PATH, "utf8"));
-  } catch (err) {
-    mapCache = { entries: [] };
+  mapCache = { entries: [] };
+  for (const candidate of mapCandidates()) {
+    try {
+      mapCache = JSON.parse(fs.readFileSync(candidate, "utf8"));
+      break;
+    } catch (err) {
+      // Try the next location. An empty map leaves the answer without photos.
+    }
   }
   return mapCache;
 }
