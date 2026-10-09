@@ -1460,6 +1460,21 @@ await test("mocked model answers Cloud Car Pilot and identify a figure without c
   assert.equal(calls.length, 1);
   assert.match(calls[0].url, /api\.openai\.com\/v1\/chat\/completions/);
   assert.ok(cloud.json.sources.some(source => /cloud-car/i.test(source)), cloud.json.sources.join(", "));
+  const cloudPrompt = calls[0].body.messages.map(message => message.content).join("\n");
+  const reference = cloudPrompt.split("Reference data (your only source of facts):")[1].split("=== END OF REFERENCE DATA ===")[0];
+  const plain = "(Twin-Pod) Cloud Car Pilot is an Empire Strikes Back figure. It came with a pilot blaster and a commlink. It appeared on ESB 41, 45 and 47 backs, and later on ROTJ/Trilogo cards.";
+  assert.ok(reference.includes(plain), plain);
+  assert.match(cloudPrompt, /open with one short sentence/);
+  assert.match(cloudPrompt, /Never say that a figure is not an Early Bird figure/);
+  assert.doesNotMatch(reference, /not an Early Bird figure/);
+  assert.doesNotMatch(reference, /not confirmed/);
+  assert.doesNotMatch(reference, /figure-level family range/);
+  assert.doesNotMatch(reference, /48-back/);
+
+  const jawa = await call({ message: "What comes with a Jawa?" });
+  const jawaReference = calls.at(-1).body.messages.map(message => message.content).join("\n").split("Reference data (your only source of facts):")[1].split("=== END OF REFERENCE DATA ===")[0];
+  assert.equal(jawa.status, 200);
+  assert.doesNotMatch(jawaReference, /not an Early Bird figure/);
 });
 
 console.error = quietErrors;
