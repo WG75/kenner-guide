@@ -24,11 +24,10 @@
 
     html, body {
       margin: 0;
-      height: 100%;
+      min-height: 100%;
       background: var(--black);
       color: var(--white);
       font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
-      overflow: hidden;
     }
 
     button, textarea {
@@ -36,39 +35,22 @@
     }
 
     .surround {
-      height: 100dvh;
+      min-height: 100dvh;
       display: flex;
       flex-direction: column;
       padding: 18px 16px;
       background: linear-gradient(180deg, #101010, #070707 36%);
-      overflow: hidden;
-    }
-
-    .surround:has(.welcome) {
-      overflow-y: auto;
     }
 
     .gold-frame {
       width: min(920px, 100%);
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
+      flex: 0 0 auto;
       background: var(--gold);
       padding: 3px;
     }
 
-    .surround:has(.chatting) .gold-frame,
-    .surround:has(.chatting) .white-frame,
-    .surround:has(.chatting) .app {
-      flex: 1;
-      min-height: 0;
-    }
-
     .white-frame {
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
       background: var(--white);
       padding: 3px;
     }
@@ -76,13 +58,8 @@
     .app {
       display: flex;
       flex-direction: column;
-      min-height: 0;
       background: radial-gradient(circle at 50% 0%, #e0232a 0%, var(--window) 46%, var(--window-deep) 100%);
       color: var(--white);
-    }
-
-    .surround:has(.chatting) .app {
-      overflow: hidden;
     }
 
     .hero {
@@ -192,17 +169,11 @@
     }
 
     .chat {
-      flex: 1 1 auto;
-      overflow-y: auto;
-      padding: 18px 16px;
+      flex: 0 0 auto;
+      padding: 18px 16px 8px;
       display: flex;
       flex-direction: column;
       gap: 12px;
-      scroll-behavior: smooth;
-    }
-
-    .app.welcome {
-      overflow-y: auto;
     }
 
     .app.welcome .chat {
@@ -603,7 +574,8 @@
     }
 
     function scrollToBottom() {
-      chatEl.scrollTop = chatEl.scrollHeight;
+      const composer = document.querySelector(".composer");
+      if (composer) composer.scrollIntoView({ block: "end" });
     }
 
     function addMessage(role, text) {

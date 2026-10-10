@@ -1675,7 +1675,7 @@ function tcPickVariantFigure(target) {
 function tcStartVariant(res, target) {
   const name = String(target || "").trim();
   if (!name) {
-    return tcReply(res, "Which figure shall we identify? Type the name, or use the camera button if you have a photo. I'll then ask about the COO stamp, the head, paint or body, the accessory, and the cardback. If the reference data doesn't settle the variant, I'll say I'm not sure.", {
+    return tcReply(res, "There are two ways to do this. Press the camera icon to upload a photo of the figure, or type the figure's name. If you don't know the name, describe it to me.", {
       flowState: { topic: "variant_identify", step: "need_name", answers: [], displayName: "" },
       skipFollowUps: true
     });
@@ -1697,7 +1697,7 @@ function tcStartVariant(res, target) {
 }
 
 const TC_ACCESSORY_QUESTIONS = [
-  "Which accessory shall we look at, or which figure is it with? Type either name. If I can't match it in the reference data, I'll say I'm not sure.",
+  "There are two ways to do this. Press the camera icon to upload a photo of the accessory, or type its name. If you don't know the name, describe it to me.",
   "What mould or sculpt do you see, if you can tell (Smile, Unitoy, Kader, or a mould number)? Say if you can't tell. That is your observation, not a source fact.",
   "What colour is it? Say if you aren't sure. That is your observation, not a source fact.",
   "Any markings, a date stamp, or a country of origin on it? Say if there aren't any. That is your observation, not a source fact."
