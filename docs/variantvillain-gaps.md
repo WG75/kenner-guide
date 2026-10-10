@@ -4,14 +4,14 @@ Figures are the 96 entries on the Wikipedia [List of Kenner Star Wars action fig
 
 Accessories are the original pieces on the Variant Villain accessory guide, plus any bubble piece from that figure list that has no guide page.
 
-A figure page "has COO/factory/mould details" when the fetched character page names a COO family, a country stamp, or a factory guide line. A verified COO choice is stricter: the bot only offers stamp buttons when the page (or the 1980 Lando leg notes) names the wording. An accessory page has details when its article names a mould, factory, or country stamp. Menu links such as "Introduction to COOs" do not count.
+A figure page "has COO/factory/mould details" when the fetched character page names a COO family, a country stamp, or a factory guide line. A verified COO choice is stricter: the bot only offers stamp buttons when the wording is known. Thirty-one figures take that wording from the owner's stamp sheet (10 Oct 2026). The others take it from the character page, including the 1980 Lando leg notes. An accessory page has details when its article names a mould, factory, or country stamp. Menu links such as "Introduction to COOs" do not count.
 
 ## Counts
 
 - Figures: 96
 - Figures with a Variant Villain page: 96
 - Figures with COO/factory/mould details: 96
-- Figures with verified COO choices in the bot: 65
+- Figures with verified COO choices in the bot: 96
 - (a) Figures with no Variant Villain page: 0
 - (b) Figures with a page but no COO/factory/mould details: 0
 - Accessories checked: 111

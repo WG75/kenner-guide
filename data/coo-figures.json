@@ -1144,9 +1144,53 @@
       "name": "Han Solo",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/han-solo/",
       "file": "figures/han-solo-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the left leg, under the licensing details. 'Hong Kong' is Unitoy or Kader. No COO is Glasslite or PBP.",
+      "options": [
+        {
+          "id": "hk-left",
+          "label": "Hong Kong, left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy M1",
+            "Kader M2"
+          ],
+          "examples": [
+            "Hong Kong, left leg, under the licensing details"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M1 and the Kader M2. 'Hong Kong' is on the left leg under the licensing details. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO, left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Glasslite M2",
+            "PBP M3"
+          ],
+          "examples": [
+            "No COO, left leg, under the licensing details"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "dots",
+              "label": "Dotted remnants of the country text",
+              "conclusion": "That is the Glasslite M2. The left leg is No COO, with dotted remnants of the country text under the licensing details.",
+              "sure": true
+            },
+            {
+              "id": "smooth",
+              "label": "Smooth, no country text left",
+              "conclusion": "That stamp is shared by the Glasslite M2 and the PBP M3. A smooth No COO under the licensing text is listed for both. I'm not sure which of those it is from the stamp alone.",
+              "sure": false
+            }
+          ]
+        }
+      ],
       "families": [],
       "guide": [
         "I: Unitoy",
@@ -1155,7 +1199,17 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = 'Hong Kong' left leg under licencing details",
+        "Kader M2 = 'Hong Kong' left leg under licencing details",
+        "Glasslite M2 = No COO, it would be either smooth or dotted remnants of the COO text left leg under licencing details",
+        "PBP M3 = Smooth no COO under licencing text."
+      ],
+      "missing": "Hong Kong on the left leg does not separate Unitoy M1 from Kader M2. A smooth No COO does not separate Glasslite M2 from PBP M3."
     },
     {
       "name": "Jawa",
@@ -1393,9 +1447,55 @@
       "name": "Death Squad Commander",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/death-squad-commander/",
       "file": "figures/death-squad-commander-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the left leg, under the licensing details. A clear 'Hong Kong', an almost smoothed 'Hong Kong', and a smooth No COO are different moulds.",
+      "options": [
+        {
+          "id": "hk-clear",
+          "label": "Hong Kong, clear, left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy M1",
+            "Kader M2",
+            "PBP M3"
+          ],
+          "examples": [
+            "Hong Kong, clear, left leg, under the licensing details"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M1, the Kader M2, and the PBP M3. A clear 'Hong Kong' on the left leg under the licensing details is listed for all three. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "hk-faint",
+          "label": "Hong Kong, text almost smoothed over",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader China M2",
+            "Lili Ledy M2"
+          ],
+          "examples": [
+            "Hong Kong, text almost smoothed over"
+          ],
+          "conclusion": "That stamp is shared by the Kader China M2 and the Lili Ledy M2. The 'Hong Kong' on the left leg under the licensing details is almost smoothed over. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "smooth",
+          "label": "No COO, just smooth",
+          "coo": "No COO",
+          "factories": [
+            "PBP M3"
+          ],
+          "examples": [
+            "No COO, just smooth"
+          ],
+          "conclusion": "That is the PBP M3. The left leg is a smooth No COO under the licensing details.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Unitoy",
@@ -1404,15 +1504,71 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = 'Hong Kong' left leg under licencing details",
+        "Kader M2 = 'Hong Kong' left leg under licencing details",
+        "Kader China M2 = 'Hong Kong' left leg under licencing details. Text is undefined almost smoothed over.",
+        "Lili Ledy M2 = 'Hong Kong' left leg under licencing details. Text is undefined almost smoothed over.",
+        "PBP M3 = 'Hong Kong' left leg under licencing details or No COO just smooth"
+      ],
+      "missing": "A clear Hong Kong stamp does not separate Unitoy M1, Kader M2, and PBP M3. An almost smoothed Hong Kong stamp does not separate Kader China M2 from Lili Ledy M2."
     },
     {
       "name": "Greedo",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/greedo/",
       "file": "figures/greedo-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the left leg, under the licensing details. A scar in place of the country is PBP.",
+      "options": [
+        {
+          "id": "hk",
+          "label": "Hong Kong, left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Smile M2"
+          ],
+          "examples": [
+            "Hong Kong, left leg, under the licensing details"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Smile M2. 'Hong Kong' is on the left leg under the licensing details. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "scar",
+          "label": "No COO, a scar in place of the country",
+          "coo": "No COO",
+          "factories": [
+            "PBP M1"
+          ],
+          "examples": [
+            "No COO, a scar in place of the country"
+          ],
+          "conclusion": "That is the PBP M1. The country is a scar, No COO.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO, no scar",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Smile M2"
+          ],
+          "examples": [
+            "No COO, no scar"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Smile M2. No COO without a scar is listed for both. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile/ PBP",
@@ -1420,15 +1576,69 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'Hong Kong' left leg under licencing details or No COO",
+        "PBP M1 = No COO scar",
+        "Smile M2 = 'Hong Kong' left leg under licencing details or No COO"
+      ],
+      "missing": "Hong Kong does not separate Smile M1 from Smile M2. No COO without a scar does not separate them either."
     },
     {
       "name": "Hammerhead",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/hammerhead/",
       "file": "figures/hammerhead-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the left leg, under the licensing details. A scar in place of the country is PBP.",
+      "options": [
+        {
+          "id": "hk",
+          "label": "Hong Kong, left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Smile M2"
+          ],
+          "examples": [
+            "Hong Kong, left leg, under the licensing details"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Smile M2. 'Hong Kong' is on the left leg under the licensing details. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "scar",
+          "label": "No COO, a scar in place of the country",
+          "coo": "No COO",
+          "factories": [
+            "PBP M1"
+          ],
+          "examples": [
+            "No COO, a scar in place of the country"
+          ],
+          "conclusion": "That is the PBP M1. The country is a scar, No COO.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO, no scar",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Smile M2"
+          ],
+          "examples": [
+            "No COO, no scar"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Smile M2. No COO without a scar is listed for both. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile/ PBP",
@@ -1436,15 +1646,69 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'Hong Kong' left leg under licencing details or No COO",
+        "PBP M1 = No COO scar",
+        "Smile M2 = 'Hong Kong' left leg under licencing details or No COO"
+      ],
+      "missing": "Hong Kong does not separate Smile M1 from Smile M2. No COO without a scar does not separate them either."
     },
     {
       "name": "Snaggletooth",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/snaggletooth/",
       "file": "figures/snaggletooth-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Blue Snaggletooth carries 'Hong Kong' on the left boot, under the licensing details. The other moulds use the left leg.",
+      "options": [
+        {
+          "id": "boot",
+          "label": "Hong Kong on the left boot, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1"
+          ],
+          "examples": [
+            "Hong Kong on the left boot, under the licensing details"
+          ],
+          "conclusion": "That is the Smile M1. That boot stamp is the blue Snaggletooth only. 'Hong Kong' sits on the left boot under the licensing details.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "leg",
+          "label": "Hong Kong on the left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M2",
+            "Smile M3"
+          ],
+          "examples": [
+            "Hong Kong on the left leg, under the licensing details"
+          ],
+          "conclusion": "That stamp is shared by the Smile M2 and the Smile M3. 'Hong Kong' is on the left leg under the licensing details. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "scar",
+          "label": "A scar in place of the COO, under the licensing text",
+          "coo": "No COO",
+          "factories": [
+            "Smile M3",
+            "PBP M3"
+          ],
+          "examples": [
+            "A scar in place of the COO, under the licensing text"
+          ],
+          "conclusion": "That stamp is shared by the Smile M3 and the PBP M3. A scar stands in place of the country, under the licensing text. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile",
@@ -1453,15 +1717,55 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'Hong Kong' left boot under licencing details (Blue Snaggletooth only)",
+        "Smile M2 = 'Hong Kong' left leg under licencing details",
+        "Smile M3 = 'Hong Kong' left leg under licencing details or a scar instead of COO.",
+        "PBP M3 = Scar in place of COO under licencing text."
+      ],
+      "missing": "Hong Kong on the left leg does not separate Smile M2 from Smile M3. A scar does not separate Smile M3 from PBP M3. The red Snaggletooth boot stamp is not described."
     },
     {
       "name": "Walrus Man",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/walrusman/",
       "file": "figures/walrusman-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the left leg, under the licensing details. No COO, whether scarred, smooth, speckled, or missing its licensing text, is PBP.",
+      "options": [
+        {
+          "id": "hk",
+          "label": "Hong Kong, left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Smile M2"
+          ],
+          "examples": [
+            "Hong Kong, left leg, under the licensing details"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Smile M2. 'Hong Kong' is on the left leg under the licensing details. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO (scar, smooth, speckles, or missing licensing text)",
+          "coo": "No COO",
+          "factories": [
+            "PBP M1"
+          ],
+          "examples": [
+            "No COO (scar, smooth, speckles, or missing licensing text)"
+          ],
+          "conclusion": "That is the PBP M1. No COO on this figure, with a scar, a smooth leg, speckles, or missing licensing text, is the PBP M1.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile/ PBP",
@@ -1469,7 +1773,16 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'Hong Kong' left leg under licencing details",
+        "PBP M1 = No COO. Might have a scar, smooth or speckles. Some also have missing licensing text.",
+        "Smile M2 = 'Hong Kong' left leg under licencing details"
+      ],
+      "missing": "Hong Kong on the left leg does not separate Smile M1 from Smile M2."
     },
     {
       "name": "Luke Skywalker (X-Wing Pilot)",
@@ -1719,9 +2032,38 @@
       "name": "Power Droid",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/power-droid/",
       "file": "figures/power-droid-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Both moulds say Hong Kong. The tell is where the G of Kong sits against the silver. The leg is not stated.",
+      "options": [
+        {
+          "id": "g-just",
+          "label": "The G of Kong is just above the silver",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1"
+          ],
+          "examples": [
+            "The G of Kong is just above the silver"
+          ],
+          "conclusion": "That is the Kader M1. 'Hong Kong' is stamped with the G of Kong just above the silver.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "g-run",
+          "label": "The G of Kong is one run above the silver",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M2"
+          ],
+          "examples": [
+            "The G of Kong is one run above the silver"
+          ],
+          "conclusion": "That is the Kader M2. 'Hong Kong' is stamped with the G of Kong one run above the silver.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Kader",
@@ -1729,7 +2071,15 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which of these do you see?",
+      "ownerStamps": [
+        "Kader M1 = 'Hong Kong', the G of Kong is just above the silver",
+        "Kader M2 = 'Hong Kong', the G of Kong is one run above the silver"
+      ],
+      "missing": "Which leg carries the stamp is not stated."
     },
     {
       "name": "Boba Fett",
@@ -1874,9 +2224,82 @@
       "name": "Leia Organa (Bespin Gown)",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/leia-organa-bespin-gown/",
       "file": "figures/leia-organa-bespin-gown-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Kader's 'Made in' stamp is on her right leg, across 2 lines. China sits on a raised bar. Unitoy and Smile use 'Hong Kong' under the licensing details, or No COO.",
+      "options": [
+        {
+          "id": "mihk",
+          "label": "Made in Hong Kong, 2 lines, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1"
+          ],
+          "examples": [
+            "Made in Hong Kong, 2 lines, right leg"
+          ],
+          "conclusion": "That is the Kader M1. 'Made in Hong Kong' runs across 2 lines on her right leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "china",
+          "label": "Made in China, 2 lines, right leg, China on a raised bar",
+          "coo": "China",
+          "factories": [
+            "Kader China M1",
+            "Lili Ledy M1"
+          ],
+          "examples": [
+            "Made in China, 2 lines, right leg, China on a raised bar"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "sharp",
+              "label": "Letters are sharp",
+              "conclusion": "That is the Kader China M1. 'Made in China' runs across 2 lines on her right leg, with China on a raised bar.",
+              "sure": true
+            },
+            {
+              "id": "glossy",
+              "label": "More glossy, letters not as sharp",
+              "conclusion": "That is the Lili Ledy M1. 'Made in China' runs across 2 lines on her right leg, with China on a raised bar. The figure looks more glossy and the letters are not as sharp.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "hk",
+          "label": "Hong Kong under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy M2",
+            "Smile M3"
+          ],
+          "examples": [
+            "Hong Kong under the licensing details"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M2 and the Smile M3. 'Hong Kong' sits under the licensing details. The leg is not stated. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy M2",
+            "Smile M3"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M2 and the Smile M3. No COO is listed for both. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Kader/",
@@ -1885,15 +2308,83 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Kader M1 = 'Made in Hong Kong' across 2 lines on her right leg",
+        "Kader China M1 = 'Made in China' across 2 lines on her right leg, with China on a raised bar.",
+        "Lili Ledy M1 = 'Made in China' across 2 lines on her right leg, with China on a raised bar. Looks more glossy and the letters are not as sharp.",
+        "Unitoy M2 = 'Hong Kong' under licensing details or No COO.",
+        "Smile M3 = 'Hong Kong' under licensing details or No COO."
+      ],
+      "missing": "Hong Kong under the licensing details, and No COO, do not separate Unitoy M2 from Smile M3. The leg for Unitoy and Smile is not stated."
     },
     {
       "name": "FX-7",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/fx-7/",
       "file": "figures/fx-7-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Kader says Made in Hong Kong and also carries a 1 or 2 on the base plus 3 EPM marks. Unitoy's 'Hong Kong' sits directly under the licensing details.",
+      "options": [
+        {
+          "id": "kader",
+          "label": "Made in Hong Kong, with a 1 or 2 on the base and 3 EPM marks",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1"
+          ],
+          "examples": [
+            "Made in Hong Kong, with a 1 or 2 on the base and 3 EPM marks"
+          ],
+          "conclusion": "That is the Kader M1. It says Made in Hong Kong, and the base has the number 1 or 2 plus 3 EPM marks.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "unitoy",
+          "label": "Hong Kong directly under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy M3"
+          ],
+          "examples": [
+            "Hong Kong directly under the licensing details"
+          ],
+          "conclusion": "That is the Unitoy M3. 'Hong Kong' sits directly under the licensing details.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "smile-hk",
+          "label": "Hong Kong, not directly under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M2"
+          ],
+          "examples": [
+            "Hong Kong, not directly under the licensing details"
+          ],
+          "conclusion": "That is the Smile M2. The stamp is 'Hong Kong'. The position against the licensing mark is not stated for this mould.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Smile M2"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That is the Smile M2. This mould is also found as No COO.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Kader",
@@ -1902,7 +2393,16 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Kader M1 = 'Made in Hong Kong', also has the number 1 or 2 on its base and 3 EPM marks.",
+        "Smile M2 = 'Hong Kong' or No COO.",
+        "Unitoy M3 = 'Hong Kong' directly under the licensing details."
+      ],
+      "missing": "The leg is not stated for Smile M2 or Unitoy M3. Smile's position against the licensing mark is not stated."
     },
     {
       "name": "Imperial Stormtrooper (Hoth Battle Gear)",
@@ -1977,9 +2477,68 @@
       "name": "Bossk",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/bossk/",
       "file": "figures/bossk-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Read the left leg and the right leg. 'Made in Hong Kong' on the left leg is Kader. 'Hong Kong' under the licensing details is Smile or Unitoy. Licensing on the right leg with No COO is Kader. Licensing on the left leg only is PBP.",
+      "options": [
+        {
+          "id": "mihk",
+          "label": "Made in Hong Kong on the left leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1"
+          ],
+          "examples": [
+            "Made in Hong Kong on the left leg"
+          ],
+          "conclusion": "That is the Kader M1. 'Made in Hong Kong' is on the left leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "hk",
+          "label": "Hong Kong under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M2",
+            "Unitoy M3"
+          ],
+          "examples": [
+            "Hong Kong under the licensing details"
+          ],
+          "conclusion": "That stamp is shared by the Smile M2 and the Unitoy M3. 'Hong Kong' sits under the licensing details. Smile's is on the left leg. Unitoy's leg is not stated. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "right",
+          "label": "No COO, licensing details on the right leg",
+          "coo": "No COO",
+          "factories": [
+            "Kader M1"
+          ],
+          "examples": [
+            "No COO, licensing details on the right leg"
+          ],
+          "conclusion": "That is the Kader M1. No COO, with the licensing details on his right leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "left-only",
+          "label": "No COO, licensing on the left leg only",
+          "coo": "No COO",
+          "factories": [
+            "Smile M2",
+            "PBP M4"
+          ],
+          "examples": [
+            "No COO, licensing on the left leg only"
+          ],
+          "conclusion": "That stamp is shared by the Smile M2 and the PBP M4. Licensing details with no country are listed for both. PBP's licensing is on the left leg only. Smile's leg is not stated for this state. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [
         {
           "title": "COO Family I:",
@@ -2031,7 +2590,17 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Kader M1 = 'Made in Hong Kong' on left leg or No COO and licensing details on his right leg.",
+        "Smile M2 = 'Hong Kong' on left leg under licensing details or licensing details only.",
+        "Unitoy M3 = 'Hong Kong' directly under the licensing details.",
+        "PBP M4 = Licensing on left leg only. No COO."
+      ],
+      "missing": "Hong Kong under the licensing details does not separate Smile M2 from Unitoy M3. Unitoy's leg is not stated. Smile's 'licensing details only' does not name the leg."
     },
     {
       "name": "IG-88",
@@ -2759,9 +3328,66 @@
       "name": "Ugnaught",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/ugnaught/",
       "file": "figures/ugnaught-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the right leg for 'Made in Hong Kong' across 2 lines, and the left leg for licensing details or a plain 'Hong Kong'.",
+      "options": [
+        {
+          "id": "two-lines",
+          "label": "Made in Hong Kong, 2 lines, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1",
+            "Kader M2"
+          ],
+          "examples": [
+            "Made in Hong Kong, 2 lines, right leg"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "left-license",
+              "label": "Licensing details on the left leg",
+              "conclusion": "That is the Kader M2. 'Made in Hong Kong' runs across 2 lines on the right leg, and the licensing details are on the left leg.",
+              "sure": true
+            },
+            {
+              "id": "no-left",
+              "label": "No licensing details on the left leg",
+              "conclusion": "That is the Unitoy M1. 'Made in Hong Kong' runs across 2 lines on the right leg. The left-leg licensing is described for Kader, not this mould.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "smooth",
+          "label": "No COO, smooth leg",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy M1"
+          ],
+          "examples": [
+            "No COO, smooth leg"
+          ],
+          "conclusion": "That is the Unitoy M1. The leg is a smooth No COO.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "hk-left",
+          "label": "Hong Kong, left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M3"
+          ],
+          "examples": [
+            "Hong Kong, left leg, under the licensing details"
+          ],
+          "conclusion": "That is the Smile M3. 'Hong Kong' is on the left leg under the licensing details.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Unitoy",
@@ -2770,15 +3396,95 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = Made in Hong Kong on right leg across 2 lines or No COO smooth leg.",
+        "Kader M2 = 'Made in Hong Kong' across 2 lines on right leg. Licensing details on left leg.",
+        "Smile M3 = 'Hong Kong' left leg under licencing details"
+      ],
+      "missing": "Whether Unitoy M1 can also carry licensing details on the left leg is not stated. The smooth No COO does not name which leg."
     },
     {
       "name": "Dengar",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/dengar/",
       "file": "figures/dengar-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Smile uses the left leg. Unitoy and PBP use the right leg. Kader's 'Made in Hong Kong' is 2 lines on the left leg.",
+      "options": [
+        {
+          "id": "smile-hk",
+          "label": "Hong Kong, left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1"
+          ],
+          "examples": [
+            "Hong Kong, left leg, under the licensing details"
+          ],
+          "conclusion": "That is the Smile M1. 'Hong Kong' is on the left leg under the licensing details.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "smile-ncoo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That is the Smile M1. No COO is the other state of this mould. A scar is a different mould.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "unitoy",
+          "label": "Made in Hong Kong, 2 lines, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M2"
+          ],
+          "examples": [
+            "Made in Hong Kong, 2 lines, right leg"
+          ],
+          "conclusion": "That is the Unitoy M2. 'Made in Hong Kong' runs across 2 lines on the right leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "pbp",
+          "label": "Scar on the right leg, or 'Made in' with a scar underneath",
+          "coo": "",
+          "factories": [
+            "PBP M2"
+          ],
+          "examples": [
+            "Scar on the right leg, or 'Made in' with a scar underneath"
+          ],
+          "conclusion": "That is the PBP M2. The right leg has a scar, or it says 'Made in' with a scar underneath.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "kader",
+          "label": "Made in Hong Kong, 2 lines, left leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M3"
+          ],
+          "examples": [
+            "Made in Hong Kong, 2 lines, left leg"
+          ],
+          "conclusion": "That is the Kader M3. 'Made in Hong Kong' runs across 2 lines on the left leg.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile",
@@ -2787,15 +3493,111 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'Hong Kong' left leg under licencing details or No COO",
+        "Unitoy M2 = 'Made in Hong Kong' on right leg across 2 lines.",
+        "PBP M2 = Scar on right leg or Made In with scar underneath.",
+        "Kader M3 = 'Made in Hong Kong' on left leg across 2 lines."
+      ],
+      "missing": "Smile's No COO does not say whether the country is smooth, scarred, or dotted."
     },
     {
       "name": "Han Solo (Bespin Outfit)",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/han-solo-bespin-outfit/",
       "file": "figures/han-solo-bespin-outfit-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Read which leg says 'Made in Hong Kong', and whether it is across 2 lines. A smooth No COO on the left leg is Kader China or Lili Ledy.",
+      "options": [
+        {
+          "id": "unitoy",
+          "label": "Made in Hong Kong, 2 lines, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1"
+          ],
+          "examples": [
+            "Made in Hong Kong, 2 lines, right leg"
+          ],
+          "conclusion": "That is the Unitoy M1. 'Made in Hong Kong' runs across 2 lines on the right leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "lili",
+          "label": "Made in Hong Kong on the right leg, not across 2 lines",
+          "coo": "Hong Kong",
+          "factories": [
+            "Lili Ledy M1"
+          ],
+          "examples": [
+            "Made in Hong Kong on the right leg, not across 2 lines"
+          ],
+          "conclusion": "That is the Lili Ledy M1. 'Made in Hong Kong' is on the right leg. Line breaks are not stated for this mould.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "kader",
+          "label": "Made in Hong Kong, 2 lines, left leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M2"
+          ],
+          "examples": [
+            "Made in Hong Kong, 2 lines, left leg"
+          ],
+          "conclusion": "That is the Kader M2. 'Made in Hong Kong' runs across 2 lines on the left leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "smooth",
+          "label": "No COO, smooth left leg",
+          "coo": "No COO",
+          "factories": [
+            "Kader China M2",
+            "Lili Ledy M2"
+          ],
+          "examples": [
+            "No COO, smooth left leg"
+          ],
+          "conclusion": "That stamp is shared by the Kader China M2 and the Lili Ledy M2. The left leg is a smooth No COO. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "smile-hk",
+          "label": "Hong Kong under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M3"
+          ],
+          "examples": [
+            "Hong Kong under the licensing details"
+          ],
+          "conclusion": "That is the Smile M3. 'Hong Kong' sits under the licensing details. The leg is not stated.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "smile-ncoo",
+          "label": "No COO, not a smooth left leg",
+          "coo": "No COO",
+          "factories": [
+            "Smile M3"
+          ],
+          "examples": [
+            "No COO, not a smooth left leg"
+          ],
+          "conclusion": "That is the Smile M3. No COO is the other state of this mould. A smooth left leg is Kader China or Lili Ledy instead.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Unitoy/",
@@ -2804,15 +3606,72 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = 'Made in Hong Kong' on right leg across 2 lines.",
+        "Lili Ledy M1 = 'Made in Hong Kong' on right leg.",
+        "Kader M2 = 'Made in Hong Kong' across 2 lines on left leg",
+        "Kader China M2 = No COO smooth left leg.",
+        "Lili Ledy M2 = No COO smooth left leg.",
+        "Smile M3 = 'Hong Kong' under licensing details or No COO."
+      ],
+      "missing": "A smooth No COO on the left leg does not separate Kader China M2 from Lili Ledy M2. Lili Ledy M1 does not say whether the right-leg stamp is one line or two. Smile's leg is not stated."
     },
     {
       "name": "Lobot",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/lobot/",
       "file": "figures/lobot-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Smile uses 'Hong Kong' on the left leg under the licensing details, or No COO. Unitoy and Kader use 'Made in Hong Kong' across 2 lines on the right leg.",
+      "options": [
+        {
+          "id": "smile",
+          "label": "Hong Kong, left leg, under the licensing details",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1"
+          ],
+          "examples": [
+            "Hong Kong, left leg, under the licensing details"
+          ],
+          "conclusion": "That is the Smile M1. 'Hong Kong' is on the left leg under the licensing details.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "two-lines",
+          "label": "Made in Hong Kong, 2 lines, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M2",
+            "Kader M3"
+          ],
+          "examples": [
+            "Made in Hong Kong, 2 lines, right leg"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M2 and the Kader M3. 'Made in Hong Kong' runs across 2 lines on the right leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Kader M3"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Kader M3. No COO is listed for both. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile",
@@ -2821,7 +3680,16 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'Hong Kong' left leg under licencing details or No COO",
+        "Unitoy M2 = 'Made in Hong Kong' across 2 lines on right leg.",
+        "Kader M3 = 'Made in Hong Kong' across 2 lines on right leg or no COO."
+      ],
+      "missing": "Made in Hong Kong across 2 lines on the right leg does not separate Unitoy M2 from Kader M3. No COO does not separate Smile M1 from Kader M3."
     },
     {
       "name": "Leia (Hoth Outfit)",
@@ -2861,9 +3729,54 @@
       "name": "Rebel Commander",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/rebel-commander/",
       "file": "figures/rebel-commander-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "All three moulds can say 'Made in Hong Kong' across 2 lines on the right leg. Slight remnants of the text are Smile. 'Made in' with the country missing is Kader.",
+      "options": [
+        {
+          "id": "full",
+          "label": "Made in Hong Kong, 2 lines, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1",
+            "Smile M2",
+            "Kader M3"
+          ],
+          "examples": [
+            "Made in Hong Kong, 2 lines, right leg"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M1, the Smile M2, and the Kader M3. 'Made in Hong Kong' runs across 2 lines on the right leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "remnants",
+          "label": "No COO, slight remnants of the text",
+          "coo": "No COO",
+          "factories": [
+            "Smile M2"
+          ],
+          "examples": [
+            "No COO, slight remnants of the text"
+          ],
+          "conclusion": "That is the Smile M2. No COO, with slight remnants of the text.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "made-in",
+          "label": "'Made in', with the country text missing",
+          "coo": "",
+          "factories": [
+            "Kader M3"
+          ],
+          "examples": [
+            "'Made in', with the country text missing"
+          ],
+          "conclusion": "That is the Kader M3. It says 'Made in' and the country text is missing.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Unitoy",
@@ -2872,7 +3785,16 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = 'Made in Hong Kong' across 2 lines on right leg.",
+        "Smile M2 = 'Made in Hong Kong' across 2 lines on right leg, or No COO just slight remnants of the text",
+        "Kader M3 = 'Made in Hong Kong' across 2 lines on right leg or 'Made in' with the COO country text missing."
+      ],
+      "missing": "A complete 'Made in Hong Kong' across 2 lines on the right leg does not separate Unitoy M1, Smile M2, and Kader M3."
     },
     {
       "name": "AT-AT Driver",
@@ -3112,9 +4034,53 @@
       "name": "2-1B",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/2-1b/",
       "file": "figures/2-1b-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the right leg. Across 2 lines is Unitoy or Kader. 'Made in Hong Kong' without that line break, or No COO, is Smile.",
+      "options": [
+        {
+          "id": "two-lines",
+          "label": "Made in Hong Kong, 2 lines, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M2",
+            "Kader M3"
+          ],
+          "examples": [
+            "Made in Hong Kong, 2 lines, right leg"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M2 and the Kader M3. 'Made in Hong Kong' runs across 2 lines on the right leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "smile",
+          "label": "Made in Hong Kong on the right leg, not across 2 lines",
+          "coo": "Hong Kong",
+          "factories": [
+            "Smile M1"
+          ],
+          "examples": [
+            "Made in Hong Kong on the right leg, not across 2 lines"
+          ],
+          "conclusion": "That is the Smile M1. 'Made in Hong Kong' is on the right leg. Line breaks are not stated for this mould.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That is the Smile M1. No COO is the other state of this mould.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile",
@@ -3123,7 +4089,16 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'Made in Hong Kong' on right leg or no COO",
+        "Unitoy M2 = 'Made in Hong Kong' on right leg across 2 lines.",
+        "Kader M3 = 'Made in Hong Kong' on right leg across 2 lines."
+      ],
+      "missing": "Made in Hong Kong across 2 lines on the right leg does not separate Unitoy M2 from Kader M3. Smile does not say whether its stamp is one line or two."
     },
     {
       "name": "R2-D2 (Sensorscope)",
@@ -3289,9 +4264,66 @@
       "name": "Luke Skywalker (Hoth Battle Gear)",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/luke-skywalker-hoth-battle-gear/",
       "file": "figures/luke-skywalker-hoth-battle-gear-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the right leg. A clear single line is Unitoy. A faint 'Made in Hong Kong' is Smile. Small dots and no country are PBP.",
+      "options": [
+        {
+          "id": "clear",
+          "label": "Made in Hong Kong, one clear line, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1"
+          ],
+          "examples": [
+            "Made in Hong Kong, one clear line, right leg"
+          ],
+          "conclusion": "That is the Unitoy M1. 'Made in Hong Kong' runs across a single line on the right leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "faint",
+          "label": "Made in Hong Kong, faint, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Smile M2"
+          ],
+          "examples": [
+            "Made in Hong Kong, faint, right leg"
+          ],
+          "conclusion": "That is the Smile M2. 'Made in Hong Kong' is faint on the right leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "dots",
+          "label": "No COO, small dots",
+          "coo": "No COO",
+          "factories": [
+            "PBP M1"
+          ],
+          "examples": [
+            "No COO, small dots"
+          ],
+          "conclusion": "That is the PBP M1. No COO, with small dots instead of the country.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO, no dots",
+          "coo": "No COO",
+          "factories": [
+            "Smile M2"
+          ],
+          "examples": [
+            "No COO, no dots"
+          ],
+          "conclusion": "That is the Smile M2. No COO is the other state of this mould.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Unitoy / PBP / Meccano",
@@ -3299,15 +4331,68 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = 'Made in Hong Kong' on right leg across a single line.",
+        "PBP M1 = No COO small dots instead.",
+        "Smile M2 = 'Made in Hong Kong' faintly on right leg. Or No COO."
+      ],
+      "missing": "Smile's No COO does not say whether any of the country remains."
     },
     {
       "name": "At-At Commander",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/at-at-commander/",
       "file": "figures/at-at-commander-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the right leg. A single line of 'Made in Hong Kong' is Smile or Unitoy. A scar with dots is PBP.",
+      "options": [
+        {
+          "id": "line",
+          "label": "Made in Hong Kong, one line, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Smile M1",
+            "Unitoy M2"
+          ],
+          "examples": [
+            "Made in Hong Kong, one line, right leg"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Unitoy M2. 'Made in Hong Kong' runs across a single line on the right leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That is the Smile M1. No COO is the other state of this mould.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "scar",
+          "label": "Scar on the right leg, with dots",
+          "coo": "",
+          "factories": [
+            "PBP M2"
+          ],
+          "examples": [
+            "Scar on the right leg, with dots"
+          ],
+          "conclusion": "That is the PBP M2. The right leg has a scar with dots.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile",
@@ -3315,7 +4400,16 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'Made in Hong Kong' on right leg across a single line or no COO.",
+        "Unitoy M2 = 'Made in Hong Kong' on right leg across a single line.",
+        "PBP M2 = Scar on right leg with dots"
+      ],
+      "missing": "A single-line 'Made in Hong Kong' on the right leg does not separate Smile M1 from Unitoy M2."
     },
     {
       "name": "(Twin-Pod) Cloud Car Pilot",
@@ -3395,9 +4489,53 @@
       "name": "Bespin Security Guard (Black)",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/bespin-security-guard-2/",
       "file": "figures/bespin-security-guard-2-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the left leg. A single line of 'Made in Hong Kong' is Unitoy or Smile. Rough scarring and no country is PBP.",
+      "options": [
+        {
+          "id": "line",
+          "label": "Made in Hong Kong, one line, left leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1",
+            "Smile M2"
+          ],
+          "examples": [
+            "Made in Hong Kong, one line, left leg"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M1 and the Smile M2. 'Made in Hong Kong' runs across a single line on the left leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "scar",
+          "label": "No COO, rough scarring on the left leg",
+          "coo": "No COO",
+          "factories": [
+            "PBP M1"
+          ],
+          "examples": [
+            "No COO, rough scarring on the left leg"
+          ],
+          "conclusion": "That is the PBP M1. The left leg is No COO, with rough scarring instead of the country.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO, no scar",
+          "coo": "No COO",
+          "factories": [
+            "Smile M2"
+          ],
+          "examples": [
+            "No COO, no scar"
+          ],
+          "conclusion": "That is the Smile M2. No COO is the other state of this mould.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Unitoy / PBP",
@@ -3405,7 +4543,16 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = 'Made in Hong Kong' on left leg across a single line.",
+        "PBP M1 = No COO, rough scarring instead on left leg.",
+        "Smile M2 = 'Made in Hong Kong' on left leg across a single line or no COO."
+      ],
+      "missing": "A single-line 'Made in Hong Kong' on the left leg does not separate Unitoy M1 from Smile M2."
     },
     {
       "name": "Zuckuss",
@@ -3538,9 +4685,40 @@
       "name": "4-LOM",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/4-lom/",
       "file": "figures/4-lom-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the right leg. A single line of 'Made in Hong Kong' is Smile or Unitoy. No COO is Smile or PBP.",
+      "options": [
+        {
+          "id": "line",
+          "label": "Made in Hong Kong, one line, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Smile M1",
+            "Unitoy M2"
+          ],
+          "examples": [
+            "Made in Hong Kong, one line, right leg"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Unitoy M2. 'Made in Hong Kong' runs across a single line on the right leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "PBP M2"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the PBP M2. No COO is listed for both. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile",
@@ -3548,7 +4726,16 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'Made in Hong Kong' on right leg across a single line or no COO.",
+        "Unitoy M2 = 'Made in Hong Kong' on right leg across a single line.",
+        "PBP M2 = No COO."
+      ],
+      "missing": "A single-line 'Made in Hong Kong' on the right leg does not separate Smile M1 from Unitoy M2. No COO does not separate Smile M1 from PBP M2."
     },
     {
       "name": "Admiral Ackbar",
@@ -4117,9 +5304,69 @@
       "name": "Chief Chirpa",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/chief-chirpa/",
       "file": "figures/chief-chirpa-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "These are not a 'Made in Hong Kong' stamp. Look at the right leg for 'H.K.' on a raised bar, and check whether either leg has licensing details.",
+      "options": [
+        {
+          "id": "hk-bar",
+          "label": "'H.K.' on a raised bar on the right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Smile M1",
+            "Kader M2",
+            "Kader M3"
+          ],
+          "examples": [
+            "'H.K.' on a raised bar on the right leg"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "faint",
+              "label": "The raised bar is very faint, almost smooth",
+              "conclusion": "That is the Smile M1. 'H.K.' is on the right leg on a raised bar that is very faint, almost smooth.",
+              "sure": true
+            },
+            {
+              "id": "clear",
+              "label": "The raised bar is clear",
+              "conclusion": "That stamp is shared by the Smile M1, the Kader M2, and the Kader M3. A clear 'H.K.' on a raised bar on the right leg is listed for all three. I'm not sure which of those it is from the stamp alone.",
+              "sure": false
+            }
+          ]
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO, no raised bar",
+          "coo": "No COO",
+          "factories": [
+            "Kader M2",
+            "Kader M3",
+            "Lili Ledy M4",
+            "Top Toys M5"
+          ],
+          "examples": [
+            "No COO, no raised bar"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "no-license",
+              "label": "No licensing details on either leg",
+              "conclusion": "That is the Top Toys M5. No COO, and no licensing details on either leg.",
+              "sure": true
+            },
+            {
+              "id": "license",
+              "label": "Licensing details are still there",
+              "conclusion": "That stamp is shared by the Kader M2, the Kader M3, and the Lili Ledy M4. No COO with no raised bar, and licensing details still present, is listed for all three. I'm not sure which of those it is from the stamp alone.",
+              "sure": false
+            }
+          ]
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile",
@@ -4130,7 +5377,18 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which of these do you see?",
+      "ownerStamps": [
+        "Smile M1 = 'H.K.' on right leg on raised bar. Sometimes very faint almost smooth raised bar.",
+        "Kader M2 = 'H.K.' on right leg on raised bar or no bar and no COO.",
+        "Kader M3 = Either no COO or raised bar with 'H.K.'.",
+        "Lili Ledy M4 = No COO.",
+        "Top Toys M5 = No COO and no licensing details on either leg."
+      ],
+      "missing": "A clear 'H.K.' on a raised bar does not separate Smile M1, Kader M2, and Kader M3. No COO with licensing still present does not separate Kader M2, Kader M3, and Lili Ledy M4."
     },
     {
       "name": "Logray (Ewok Medicine Man)",
@@ -4623,9 +5881,54 @@
       "name": "Nien Nunb",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/nien-nunb/",
       "file": "figures/nien-nunb-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Look at the right leg. A single line of 'Made in Hong Kong' is Unitoy or Smile. No COO with the licensing details on the right leg is Lili Ledy.",
+      "options": [
+        {
+          "id": "line",
+          "label": "Made in Hong Kong, one line, right leg",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1",
+            "Smile M2"
+          ],
+          "examples": [
+            "Made in Hong Kong, one line, right leg"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M1 and the Smile M2. 'Made in Hong Kong' runs across a single line on the right leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "lili",
+          "label": "No COO, licensing details on the right leg",
+          "coo": "No COO",
+          "factories": [
+            "Lili Ledy M3"
+          ],
+          "examples": [
+            "No COO, licensing details on the right leg"
+          ],
+          "conclusion": "That is the Lili Ledy M3. No COO, with the licensing details on the right leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO, licensing not on the right leg",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy M1",
+            "Smile M2"
+          ],
+          "examples": [
+            "No COO, licensing not on the right leg"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M1 and the Smile M2. No COO is the other state of both moulds. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [
         {
           "title": "COO Family I:",
@@ -4654,43 +5957,130 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = 'Made in Hong Kong' on right leg across a single line or no COO.",
+        "Smile M2 = 'Made in Hong Kong' on right leg across a single line or no COO.",
+        "Lili Ledy M3 = No COO with licensing details on right leg."
+      ],
+      "missing": "A single-line 'Made in Hong Kong' on the right leg does not separate Unitoy M1 from Smile M2. No COO without the licensing on the right leg does not separate them either."
     },
     {
       "name": "Nikto",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/nikto/",
       "file": "figures/nikto-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Both known moulds are No COO. The stamp does not say which factory it is.",
+      "options": [
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Lili Ledy M1"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Lili Ledy M1. Both are No COO. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile/"
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Smile M1 = No COO",
+        "Lili Ledy M1 = No COO"
+      ],
+      "missing": "Nothing in the stamp separates Smile M1 from Lili Ledy M1. Licensing location is not stated."
     },
     {
       "name": "8D8",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/8d8/",
       "file": "figures/8d8-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Both moulds are No COO. The licensing details are on his back, not the legs.",
+      "options": [
+        {
+          "id": "back",
+          "label": "No COO, licensing details on the back",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Lili Ledy M2"
+          ],
+          "examples": [
+            "No COO, licensing details on the back"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Lili Ledy M2. No COO, with the licensing details on his back. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which of these do you see?",
+      "ownerStamps": [
+        "Smile M1 = No COO with licensing details on his back",
+        "Lili Ledy M2 = No COO with licensing details on his back"
+      ],
+      "missing": "Nothing separates Smile M1 from Lili Ledy M2."
     },
     {
       "name": "Princess Leia Organa (in Combat Poncho)",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-in-combat-poncho/",
       "file": "figures/princess-leia-organa-in-combat-poncho-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "All of these are No COO. The tell is where the licensing sits.",
+      "options": [
+        {
+          "id": "leg",
+          "label": "Licensing on the left leg",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1"
+          ],
+          "examples": [
+            "Licensing on the left leg"
+          ],
+          "conclusion": "That is the Smile M1. No COO, with the licensing on the left leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "boot",
+          "label": "Licensing on the left boot",
+          "coo": "No COO",
+          "factories": [
+            "Kader M2",
+            "Lili Ledy M2"
+          ],
+          "examples": [
+            "Licensing on the left boot"
+          ],
+          "conclusion": "That stamp is shared by the Kader M2 and the Lili Ledy M2. No COO, with the licensing on the left boot. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile",
@@ -4698,7 +6088,16 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which of these do you see?",
+      "ownerStamps": [
+        "Smile M1 = No COO with licensing on left leg",
+        "Kader M2 = No COO with licensing on left boot",
+        "Lili Ledy M2 = No COO with licensing on left boot"
+      ],
+      "missing": "Licensing on the left boot does not separate Kader M2 from Lili Ledy M2."
     },
     {
       "name": "Wicket W. Warrick",
@@ -4737,9 +6136,26 @@
       "name": "The Emperor",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/the-emperor/",
       "file": "figures/the-emperor-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "All three moulds are No COO with the licensing on the left leg. The stamp does not separate them.",
+      "options": [
+        {
+          "id": "left",
+          "label": "No COO, licensing on the left leg",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Unitoy M2",
+            "Unitoy M3"
+          ],
+          "examples": [
+            "No COO, licensing on the left leg"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1, the Unitoy M2, and the Unitoy M3. No COO, with the licensing on the left leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile/",
@@ -4748,15 +6164,53 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which of these do you see?",
+      "ownerStamps": [
+        "Smile M1 = No COO with licensing on left leg",
+        "Unitoy M2 = No COO with licensing on left leg",
+        "Unitoy M3 = No COO with licensing on left leg"
+      ],
+      "missing": "Nothing separates Smile M1, Unitoy M2, and Unitoy M3."
     },
     {
       "name": "B-Wing Pilot",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/b-wing-pilot/",
       "file": "figures/b-wing-pilot-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Both moulds are No COO. The tell is which leg carries the licensing.",
+      "options": [
+        {
+          "id": "left",
+          "label": "Licensing on the left leg",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy M1"
+          ],
+          "examples": [
+            "Licensing on the left leg"
+          ],
+          "conclusion": "That is the Unitoy M1. No COO, with the licensing on the left leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "right",
+          "label": "Licensing on the right leg",
+          "coo": "No COO",
+          "factories": [
+            "Kader M2"
+          ],
+          "examples": [
+            "Licensing on the right leg"
+          ],
+          "conclusion": "That is the Kader M2. No COO, with the licensing on the right leg.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Unitoy",
@@ -4764,22 +6218,54 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which of these do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = No COO with licensing on left leg",
+        "Kader M2 = No COO with licensing on right leg"
+      ],
+      "missing": "No other stamp wording is described."
     },
     {
       "name": "Klaatu (in Skiff Guard Outfit)",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/klaatu-in-skiff-guard-outfit/",
       "file": "figures/klaatu-in-skiff-guard-outfit-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Both moulds are No COO with the licensing on the left leg. The stamp does not separate them.",
+      "options": [
+        {
+          "id": "left",
+          "label": "No COO, licensing on the left leg",
+          "coo": "No COO",
+          "factories": [
+            "Smile M1",
+            "Lili Ledy M1"
+          ],
+          "examples": [
+            "No COO, licensing on the left leg"
+          ],
+          "conclusion": "That stamp is shared by the Smile M1 and the Lili Ledy M1. No COO, with the licensing on the left leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile/"
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which of these do you see?",
+      "ownerStamps": [
+        "Smile M1 = No COO with licensing on left leg",
+        "Lili Ledy M1 = No COO with licensing on left leg"
+      ],
+      "missing": "Nothing separates Smile M1 from Lili Ledy M1."
     },
     {
       "name": "Han Solo (in Trench Coat)",
@@ -4931,9 +6417,25 @@
       "name": "Prune Face",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/prune-face/",
       "file": "figures/prune-face-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "Both moulds are No COO with the licensing on the left leg. The stamp does not separate them.",
+      "options": [
+        {
+          "id": "left",
+          "label": "No COO, licensing on the left leg",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy M1",
+            "Kader M2"
+          ],
+          "examples": [
+            "No COO, licensing on the left leg"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M1 and the Kader M2. No COO, with the licensing on the left leg. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        }
+      ],
       "families": [],
       "guide": [
         "I: Smile",
@@ -4941,7 +6443,15 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which of these do you see?",
+      "ownerStamps": [
+        "Unitoy M1 = No COO with licensing on left leg",
+        "Kader M2 = No COO with licensing on left leg"
+      ],
+      "missing": "Nothing separates Unitoy M1 from Kader M2."
     },
     {
       "name": "AT-ST Driver",
@@ -5013,9 +6523,24 @@
       "name": "Lumat",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/lumat/",
       "file": "figures/lumat-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "The only described mould is No COO.",
+      "options": [
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Lili Ledy M1"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That is the Lili Ledy M1. It is No COO.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [
         {
           "title": "COO Family I:",
@@ -5040,15 +6565,37 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Lili Ledy M1 = No COO"
+      ],
+      "missing": "Only Lili Ledy M1 is described, and only as No COO. Licensing location is not stated."
     },
     {
       "name": "Paploo",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/paploo/",
       "file": "figures/paploo-reference.txt",
-      "verified": false,
-      "whereToLook": "",
-      "options": [],
+      "verified": true,
+      "whereToLook": "The only described mould is No COO.",
+      "options": [
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Lili Ledy M1"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That is the Lili Ledy M1. It is No COO.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
       "families": [
         {
           "title": "COO Family I:",
@@ -5073,7 +6620,14 @@
       ],
       "stamps": [],
       "hasDetails": true,
-      "error": ""
+      "error": "",
+      "source": "owner",
+      "sourceNote": "Owner of variantvillain.com, 10 Oct 2026.",
+      "ask": "Which stamp do you see?",
+      "ownerStamps": [
+        "Lili Ledy M1 = No COO"
+      ],
+      "missing": "Only Lili Ledy M1 is described, and only as No COO. Licensing location is not stated."
     },
     {
       "name": "Luke Skywalker (in Battle Poncho)",
@@ -6097,5 +7651,6 @@
       "hasDetails": true,
       "error": ""
     }
-  ]
+  ],
+  "ownerStampNote": "Owner of variantvillain.com, 10 Oct 2026. Typos corrected on import."
 }

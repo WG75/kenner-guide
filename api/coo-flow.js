@@ -80,12 +80,13 @@ export function cooOpening(displayName) {
   record.options = options;
   record.whereToLook = withoutMexico(record.whereToLook);
   const where = record.whereToLook;
+  const ask = withoutMexico(record.ask || "Which stamp do you see?");
   const reply = [
     COO_EXPLANATION,
     "",
     `Let's check ${name}. ${where}`.trim(),
     "",
-    "Which stamp do you see?"
+    ask
   ].join("\n");
   return {
     reply,
