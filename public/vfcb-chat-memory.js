@@ -58,7 +58,7 @@
     }
     const img = document.createElement("img");
     img.src = imageUrl;
-    img.alt = title || "VF-CB reference image";
+    img.alt = title || "SW-7885 reference image";
     img.loading = "lazy";
     img.style.width = "100%";
     img.style.maxWidth = "100%";

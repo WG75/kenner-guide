@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>VF-CB | Vintage Figures Chat Bot</title>
+  <title>SW-7885 | Vintage Figures Chat Bot</title>
+  <meta name="description" content="SW-7885, vintage collector relations for Kenner and Palitoy Star Wars figures and accessories produced between 1978 and 1985." />
 
   <style>
     :root {
@@ -101,23 +102,20 @@
       scroll-behavior: smooth;
     }
 
-    /* Empty chat: greeting, Identify buttons, hint and input sit together
-       under the search box. After the first user message, .chatting lets the
-       transcript fill the space and keeps the composer docked. */
+    /* Empty chat: a centred greeting, then the Identify buttons and the
+       input. After the first user message, .chatting lets the transcript
+       fill the space and keeps the composer docked. */
     .app.welcome {
       overflow-y: auto;
     }
 
-    .app.welcome .chat,
     .app.welcome .composer {
       width: min(720px, 100%);
       margin-inline: auto;
     }
 
     .app.welcome .chat {
-      flex: 0 0 auto;
-      overflow: visible;
-      padding-bottom: 4px;
+      display: none;
     }
 
     .app.welcome .status {
@@ -249,20 +247,6 @@
       line-height: 22px;
     }
 
-    /* The empty field's height follows rows, not the wrapped placeholder.
-       Two lines once the prompt wraps; three lines at about 390px. */
-    @media (max-width: 599px) {
-      .input {
-        min-height: 74px;
-      }
-    }
-
-    @media (max-width: 394px) {
-      .input {
-        min-height: 96px;
-      }
-    }
-
     .input:focus {
       border-color: rgba(241,194,50,0.65);
     }
@@ -282,87 +266,6 @@
 
     .send:active {
       transform: scale(0.98);
-    }
-
-    .lookup {
-      flex: 0 0 auto;
-      padding: 10px 16px 12px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(10, 11, 16, 0.94);
-    }
-
-    .lookup label {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .lookup input {
-      width: 100%;
-      min-height: 44px;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 10px 12px;
-      background: var(--panel2);
-      color: var(--text);
-      font-size: 16px;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .lookup input:focus {
-      outline: 2px solid rgba(241,194,50,0.65);
-      outline-offset: 1px;
-    }
-
-    .search-results {
-      list-style: none;
-      margin: 8px 0 0;
-      padding: 0;
-      max-height: 40vh;
-      overflow-y: auto;
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      background: var(--panel);
-    }
-
-    .search-results[hidden] {
-      display: none;
-    }
-
-    .search-result {
-      width: 100%;
-      min-height: 44px;
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      align-items: center;
-      text-align: left;
-      border: 0;
-      border-bottom: 1px solid var(--line);
-      background: transparent;
-      color: var(--text);
-      padding: 10px 12px;
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    .search-results li:last-child .search-result {
-      border-bottom: 0;
-    }
-
-    .search-results [aria-selected="true"] .search-result,
-    .search-result:hover,
-    .search-result:focus {
-      background: var(--panel2);
-      color: var(--accent);
-      outline: none;
-    }
-
-    .search-meta {
-      color: var(--muted);
-      font-size: 12px;
-      flex: 0 0 auto;
     }
 
     .composer {
@@ -399,11 +302,36 @@
       outline-offset: 1px;
     }
 
-    .ask-hint {
-      margin: 6px 16px 0;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.3;
+    .welcome-intro {
+      flex: 0 0 auto;
+      display: none;
+    }
+
+    .app.welcome .welcome-intro {
+      display: block;
+      width: min(720px, 100%);
+      margin-inline: auto;
+      padding: 28px 22px 2px;
+      text-align: center;
+    }
+
+    .welcome-greeting {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .welcome-greeting a,
+    .welcome-greeting a:visited {
+      color: var(--accent);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .welcome-greeting a:hover,
+    .welcome-greeting a:focus-visible {
+      text-decoration: underline;
     }
 
     .action-row {
@@ -449,10 +377,12 @@
         flex-direction: column;
       }
 
-      .search-result {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 2px;
+      .app.welcome .welcome-intro {
+        padding: 20px 16px 2px;
+      }
+
+      .welcome-greeting {
+        font-size: 15px;
       }
     }
   </style>
@@ -463,25 +393,13 @@
     <header class="header">
       <div class="droid-icon">🤖</div>
       <div class="title-wrap">
-        <div class="title">VF-CB</div>
+        <div class="title">SW-7885</div>
         <div class="subtitle">Collector Companion Droid for vintage Star Wars figures and accessories</div>
       </div>
     </header>
 
-    <div class="lookup" role="search">
-      <label for="catalogSearch">Search figures and accessories</label>
-      <input
-        id="catalogSearch"
-        type="search"
-        autocomplete="off"
-        enterkeyhint="search"
-        placeholder="Search a figure or accessory"
-        aria-label="Search figures and accessories"
-        aria-autocomplete="list"
-        aria-controls="catalogResults"
-        aria-expanded="false"
-      />
-      <ul id="catalogResults" class="search-results" role="listbox" aria-label="Search results" hidden></ul>
+    <div class="welcome-intro">
+      <p class="welcome-greeting" id="welcomeGreeting">Hello, I am SW-7885, vintage collector relations. And this is my counterpart, <a href="https://www.variantvillain.com/" target="_blank" rel="noopener noreferrer">Variant Villain</a>, fluent in over one thousand figures and accessories produced between 1978 and 1985. How can we be of assistance?</p>
     </div>
 
     <main id="chat" class="chat"></main>
@@ -508,10 +426,9 @@
 
     <footer class="composer">
       <div class="identify-row">
-        <button type="button" id="identifyFigure" class="identify-button">Identify a figure</button>
+        <button type="button" id="identifyFigure" class="identify-button">Identify a Figure</button>
         <button type="button" id="identifyAccessories" class="identify-button">Identify Accessories</button>
       </div>
-      <p class="ask-hint">or ask me a question...</p>
       <div class="input-wrap">
         <input
           type="file"
@@ -529,8 +446,8 @@
           id="input"
           class="input"
           rows="1"
-          placeholder="Ask about figures, variants, COOs, cloaks or accessories..."
-          aria-label="Ask a question"
+          placeholder="Ask your question here"
+          aria-label="Ask your question here"
         ></textarea>
 
         <button type="button" class="send" id="sendButton">
@@ -541,7 +458,7 @@
   </div>
 
   <script type="module">
-    import { previewSearch, openSearchResult, parseFollowUps, fallbackFollowUps, followTopicFor, syncLayoutClass } from "./vfcb-chat-ui.js";
+    import { parseFollowUps, fallbackFollowUps, followTopicFor, syncLayoutClass } from "./vfcb-chat-ui.js";
 
     const appEl = document.querySelector(".app");
     const chatEl = document.getElementById("chat");
@@ -610,7 +527,7 @@
 
       const img = document.createElement("img");
       img.src = image.url;
-      img.alt = image.alt || image.title || "VF-CB reference image";
+      img.alt = image.alt || image.title || "SW-7885 reference image";
       img.loading = "lazy";
       card.appendChild(img);
 
@@ -706,7 +623,7 @@
         autoSizeInput();
       }
 
-      setStatus("VF-CB is checking the reference files...");
+      setStatus("SW-7885 is checking the reference files...");
 
       try {
         const data = await askApi(text);
@@ -753,110 +670,16 @@
     }
 
     let pendingPhoto = null;
-    let catalogItems = [];
-    let searchResults = [];
-    let activeResult = -1;
 
     function openPhotoPicker() {
       document.getElementById("photoInput").click();
     }
 
-    function loadCatalog() {
-      fetch("data/catalog.json")
-        .then((response) => response.json())
-        .then((catalog) => {
-          if (!Array.isArray(catalog.parts)) return catalog;
-          return Promise.all(catalog.parts.map((name) => fetch(`data/${name}`).then((response) => response.json())))
-            .then((parts) => ({
-              figures: parts.flatMap((part) => part.figures || []),
-              accessories: parts.flatMap((part) => part.accessories || [])
-            }));
-        })
-        .then((catalog) => {
-          catalogItems = [
-            ...(catalog.figures || []).map((item) => ({ ...item, type: "figure" })),
-            ...(catalog.accessories || []).map((item) => ({ ...item, type: "accessory" }))
-          ];
-        })
-        .catch(() => {});
-    }
-
-    function renderSearchResults(query) {
-      const list = document.getElementById("catalogResults");
-      const box = document.getElementById("catalogSearch");
-      const preview = previewSearch(query, catalogItems);
-      searchResults = preview.results;
-      activeResult = -1;
-      list.innerHTML = "";
-      if (!searchResults.length || !String(query || "").trim()) {
-        list.hidden = true;
-        box.setAttribute("aria-expanded", "false");
-        box.removeAttribute("aria-activedescendant");
-        return;
-      }
-      searchResults.forEach((item, index) => {
-        const li = document.createElement("li");
-        li.id = `catalog-result-${index}`;
-        li.setAttribute("role", "option");
-        li.setAttribute("aria-selected", "false");
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "search-result";
-        const name = document.createElement("span");
-        name.className = "search-name";
-        name.textContent = item.name;
-        const meta = document.createElement("span");
-        meta.className = "search-meta";
-        meta.textContent = `${item.type} · ${item.era || "era unknown"}`;
-        button.append(name, meta);
-        button.addEventListener("click", () => chooseSearchResult(item));
-        li.appendChild(button);
-        list.appendChild(li);
-      });
-      list.hidden = false;
-      box.setAttribute("aria-expanded", "true");
-    }
-
-    function chooseSearchResult(item) {
-      const opened = openSearchResult(item);
-      const box = document.getElementById("catalogSearch");
-      box.value = "";
-      renderSearchResults("");
-      if (opened.chatMessage && opened.typedQuerySent === false) sendMessage(opened.chatMessage);
-    }
-
-    function moveSearchResult(delta) {
-      const options = [...document.querySelectorAll("#catalogResults [role='option']")];
-      if (!options.length) return;
-      activeResult = Math.max(0, Math.min(options.length - 1, activeResult + delta));
-      options.forEach((option, index) => option.setAttribute("aria-selected", index === activeResult ? "true" : "false"));
-      document.getElementById("catalogSearch").setAttribute("aria-activedescendant", options[activeResult].id);
-      options[activeResult].scrollIntoView({ block: "nearest" });
-    }
-
     document.addEventListener("DOMContentLoaded", () => {
-      loadCatalog();
       document.getElementById("identifyFigure").addEventListener("click", startIdentifyFigure);
       document.getElementById("identifyAccessories").addEventListener("click", startIdentifyAccessories);
       document.getElementById("sendButton").addEventListener("click", () => sendMessage());
       document.getElementById("photoButton").addEventListener("click", openPhotoPicker);
-      const searchBox = document.getElementById("catalogSearch");
-      searchBox.addEventListener("input", () => renderSearchResults(searchBox.value));
-      searchBox.addEventListener("keydown", (event) => {
-        if (event.key === "ArrowDown") {
-          event.preventDefault();
-          moveSearchResult(1);
-        } else if (event.key === "ArrowUp") {
-          event.preventDefault();
-          moveSearchResult(-1);
-        } else if (event.key === "Enter") {
-          event.preventDefault();
-          if (activeResult >= 0 && searchResults[activeResult]) chooseSearchResult(searchResults[activeResult]);
-        } else if (event.key === "Escape") {
-          searchBox.value = "";
-          renderSearchResults("");
-        }
-      });
       const input = document.getElementById("photoInput");
 
       input.addEventListener("change", (event) => {
@@ -891,7 +714,7 @@
       const photoToAnalyse = pendingPhoto;
 
       addMessage("user", "📷 Photo uploaded for analysis");
-      setStatus("VF-CB is analysing the photo...");
+      setStatus("SW-7885 is analysing the photo...");
 
       try {
         const imageDataUrl = await fileToDataUrl(photoToAnalyse);
@@ -948,10 +771,11 @@
       }
     });
 
-    addMessage(
-      "assistant",
-      "Hello, I'm VF-CB. I can talk through a figure or an accessory with the buttons below, or you can ask a question."
-    );
+    const welcomeGreeting = document.getElementById("welcomeGreeting");
+    state.history.push({
+      role: "assistant",
+      content: welcomeGreeting.textContent.replace(/\s+/g, " ").trim()
+    });
 
     window.sendMessage = sendMessage;
     window.openPhotoPicker = openPhotoPicker;

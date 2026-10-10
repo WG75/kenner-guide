@@ -1,19 +1,4 @@
-/* Search and follow-up helpers shared by the chat page and the tests.
-   Catalog parts have a name and era, not a per-item alias list, and they
-   already sit near 7,000 characters. Search therefore matches the name,
-   any aliases array an item happens to carry, text in parentheses, and a
-   short nickname map. Typing in the box only returns results. It does not
-   build a chat message. */
-
-const NICKNAMES = {
-  "chewbacca": ["chewie", "chewy"],
-  "darth vader": ["vader"],
-  "r2-d2": ["artoo", "r2d2"],
-  "c-3po": ["threepio", "c3po"],
-  "ben (obi-wan) kenobi": ["ben", "obi-wan", "kenobi"],
-  "sand people": ["tusken", "tusken raider"],
-  "jawa": ["jawas"]
-};
+/* Follow-up helpers shared by the chat page and the tests. */
 
 const FOLLOW_SETS = {
   figure: [
@@ -51,66 +36,6 @@ const FOLLOW_SETS = {
 
 const FOLLOW_START = "<<<FOLLOWUPS>>>";
 const FOLLOW_END = "<<<END>>>";
-
-function aliasStrings(item) {
-  const out = [];
-  if (Array.isArray(item.aliases)) out.push(...item.aliases);
-  const name = String(item.name || "");
-  for (const match of name.matchAll(/\(([^)]+)\)/g)) out.push(match[1]);
-  const nick = NICKNAMES[name.toLowerCase()];
-  if (nick) out.push(...nick);
-  return out.map(value => String(value).trim()).filter(Boolean);
-}
-
-function searchScore(item, query, aliases) {
-  const name = item.name.toLowerCase();
-  let score = 0;
-  if (name === query) score += 100;
-  else if (name.startsWith(query)) score += 50;
-  if (aliases.some(alias => alias.toLowerCase() === query)) score += 80;
-  if (name.includes(query)) score += 20;
-  return score;
-}
-
-/* Case-insensitive. Every query word must appear in the name or an alias,
-   either as a substring or as the start of a word. */
-export function searchCatalog(items, query, limit = 8) {
-  const q = String(query || "").trim().toLowerCase();
-  if (!q) return [];
-  const words = q.split(/\s+/).filter(Boolean);
-  const scored = [];
-  for (const item of items || []) {
-    if (!item || !item.name) continue;
-    const aliases = aliasStrings(item);
-    const hay = [item.name, ...aliases].join(" ").toLowerCase();
-    const tokens = hay.split(/[^a-z0-9]+/).filter(Boolean);
-    const matched = words.every(word => hay.includes(word) || tokens.some(token => token.startsWith(word)));
-    if (!matched) continue;
-    scored.push({
-      name: item.name,
-      type: item.type === "accessory" ? "accessory" : "figure",
-      era: item.era || "",
-      file: item.file || "",
-      score: searchScore(item, q, aliases)
-    });
-  }
-  scored.sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
-  return scored.slice(0, limit);
-}
-
-/* The characters in the search box are not a chat message. */
-export function previewSearch(query, items) {
-  return { results: searchCatalog(items, query), chatMessage: null };
-}
-
-/* A chosen result opens chat with a natural question, not the typed text. */
-export function openSearchResult(item) {
-  const name = String(item && item.name || "").trim();
-  return {
-    chatMessage: name ? `Tell me about ${name}` : "",
-    typedQuerySent: false
-  };
-}
 
 function cleanFollowUpLines(list) {
   const seen = new Set();
