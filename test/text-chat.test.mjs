@@ -995,7 +995,7 @@ await test("photo follow-up buttons ask about the figure or start identification
   const anotherFigure = await call({ message: "identify-another-figure", flowState: vaderFlow });
   assert.equal(calls.length, 0);
   assert.equal(anotherFigure.json.flowState.topic, "variant_identify");
-  assert.match(anotherFigure.json.reply, /Which figure shall we identify/);
+  assert.match(anotherFigure.json.reply, /Press the camera icon to upload a photo of the figure/);
 
   const accessoryFlow = {
     topic: "image_identified",
@@ -1014,7 +1014,7 @@ await test("photo follow-up buttons ask about the figure or start identification
   assert.match(mould.json.reply, /Let's check Jawa Blaster/);
   const anotherAccessory = await call({ message: "identify-another-accessory", flowState: accessoryFlow });
   assert.equal(anotherAccessory.json.flowState.topic, "accessory_identify");
-  assert.match(anotherAccessory.json.reply, /Which accessory shall we look at/);
+  assert.match(anotherAccessory.json.reply, /Press the camera icon to upload a photo of the accessory/);
 
   const colour = await call({
     message: "what colour is this?",
@@ -1308,13 +1308,12 @@ await test("identify a figure and identify accessories start guided questions", 
   const figure = await call({ message: "identify a figure" });
   assert.equal(calls.length, 0);
   assert.equal(figure.json.flowState.topic, "variant_identify");
-  assert.match(figure.json.reply, /camera button/);
-  assert.match(figure.json.reply, /COO stamp/);
+  assert.equal(figure.json.reply, "There are two ways to do this. Press the camera icon to upload a photo of the figure, or type the figure's name. If you don't know the name, describe it to me.");
   assert.equal(figure.json.actions.length, 0);
   const accessory = await call({ message: "identify accessories" });
   assert.equal(calls.length, 0);
   assert.equal(accessory.json.flowState.topic, "accessory_identify");
-  assert.match(accessory.json.reply, /accessory|figure/i);
+  assert.equal(accessory.json.reply, "There are two ways to do this. Press the camera icon to upload a photo of the accessory, or type its name. If you don't know the name, describe it to me.");
   let state = accessory.json.flowState;
   for (const answer of ["Jawa blaster", "Unitoy", "black"]) {
     const next = await call({ message: answer, flowState: state });
@@ -1587,7 +1586,7 @@ await test("mocked model answers Cloud Car Pilot and identify a figure without c
 
   const identify = await call({ message: "identify a figure" });
   assert.equal(identify.status, 200);
-  assert.match(identify.json.reply, /Which figure shall we identify/);
+  assert.match(identify.json.reply, /type the figure's name/);
   assert.equal(identify.json.flowState.topic, "variant_identify");
   assert.equal(calls.length, 0);
 
