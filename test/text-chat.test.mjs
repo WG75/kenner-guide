@@ -5,7 +5,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { searchCatalog, previewSearch, openSearchResult, parseFollowUps, fallbackFollowUps, layoutMode, syncLayoutClass } from "../vfcb-chat-ui.js";
+import { parseFollowUps, fallbackFollowUps, layoutMode, syncLayoutClass } from "../vfcb-chat-ui.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 process.chdir(root);
@@ -226,9 +226,10 @@ await test("history roles/injection: only user/assistant strings accepted; refer
 await test("system prompt carries the brief's rules", async () => {
   await call({ message: "What was the Early Bird?" });
   const sys = calls[0].body.messages[0].content;
-  for (const re of [/VF-CB/, /British English/, /1977 to 1985/, /I'm not sure/, /the sources disagree/, /Never invent variants/i, /first four figures \(Luke, Leia, Chewbacca and R2-D2\)/, /Do not call it a "mail-away"/]) {
+  for (const re of [/SW-7885/, /British English/, /1977 to 1985/, /I'm not sure/, /the sources disagree/, /Never invent variants/i, /first four figures \(Luke, Leia, Chewbacca and R2-D2\)/, /Do not call it a "mail-away"/]) {
     assert.match(sys, re);
   }
+  assert.doesNotMatch(sys, /VF-CB/);
   assert.match(sys, /Do not print an "Evidence:" line/);
   assert.match(sys, /one factory per line/);
   assert.match(sys, /A family is a group of figures made from the same mould/);
@@ -688,9 +689,9 @@ function loadCatalog() {
 await test("every retrieval file is under the 7000 character cap", async () => {
   // data/flows/*.json is loaded whole by loadFlow for the scripted chats.
   // tcLoadFiles does not scan that folder, and TC_MAX_FILE_CHARS is not applied.
-  // data/catalog.json and data/catalog-N.json are fetched only by the search
-  // box in index.html (and by loadCatalog in this file). They are not injected
-  // into the model prompt, so they are outside the retrieval cap on purpose.
+  // data/catalog.json and data/catalog-N.json are a name index for the tools
+  // and for loadCatalog in this file. They are not injected into the model
+  // prompt, so they are outside the retrieval cap on purpose.
   const cap = 7000;
   const over = [];
   const walk = (dir) => {
@@ -860,34 +861,6 @@ await test("last 17 term lists the seventeen POTF figures and excludes the five"
   assert.ok(json.sources.includes("terms/collector_terms.json"), json.sources.join(", "));
 });
 
-await test("catalog search matches names and aliases and does not send the typed text", async () => {
-  const catalog = loadCatalog();
-  const items = [
-    ...catalog.figures.map(item => ({ ...item, type: "figure" })),
-    ...catalog.accessories.map(item => ({ ...item, type: "accessory" }))
-  ];
-  const jawa = searchCatalog(items, "jawa");
-  assert.equal(jawa[0].name, "Jawa");
-  assert.equal(jawa[0].type, "figure");
-  assert.ok(jawa[0].era);
-  const luke = searchCatalog(items, "LUKE sky");
-  assert.equal(luke[0].name, "Luke Skywalker");
-  const chewie = searchCatalog(items, "chewie");
-  assert.equal(chewie[0].name, "Chewbacca");
-  const scope = searchCatalog(items, "sensorscope");
-  assert.ok(scope.some(item => item.name.includes("Sensorscope")));
-  const blaster = searchCatalog(items, "jawa blast");
-  assert.ok(blaster.some(item => item.type === "accessory" && /blaster/i.test(item.name)));
-  const aliasItem = searchCatalog([{ name: "Bossk", type: "figure", era: "Empire", aliases: ["the bounty hunter"] }], "bounty");
-  assert.equal(aliasItem[0].name, "Bossk");
-  const preview = previewSearch("not a chat message", items);
-  assert.equal(preview.chatMessage, null);
-  const opened = openSearchResult(jawa[0]);
-  assert.equal(opened.chatMessage, "Tell me about Jawa");
-  assert.equal(opened.typedQuerySent, false);
-  assert.doesNotMatch(opened.chatMessage, /not a chat message/);
-});
-
 await test("follow-up block is parsed and a broken block uses the topic fallback", async () => {
   const parsed = parseFollowUps("Bossk came with a rifle.\n\n<<<FOLLOWUPS>>>\n- Which cardbacks did Bossk come on?\n- What moulds of rifle are documented?\n<<<END>>>");
   assert.equal(parsed.reply, "Bossk came with a rifle.");
@@ -918,13 +891,16 @@ await test("follow-up block is parsed and a broken block uses the topic fallback
   assert.doesNotMatch(json.reply, /<<<|FOLLOWUPS/);
 });
 
-await test("identify buttons replace the old chips and the lookup dropdown", async () => {
+await test("identify buttons sit under the greeting and above the question box", async () => {
   const page = fs.readFileSync(path.join(root, "index.html"), "utf8");
-  assert.match(page, /Identify a figure/);
+  assert.match(page, /Identify a Figure/);
   assert.match(page, /Identify Accessories/);
-  assert.match(page, /or ask me a question\.\.\./);
-  assert.match(page, /id="catalogSearch"/);
-  assert.match(page, /aria-label="Search figures and accessories"/);
+  assert.match(page, /Ask your question here/);
+  assert.match(page, /<title>SW-7885 \| Vintage Figures Chat Bot<\/title>/);
+  assert.doesNotMatch(page, /VF-CB/);
+  assert.doesNotMatch(page, /id="catalogSearch"/);
+  assert.doesNotMatch(page, /Search figures and accessories/);
+  assert.doesNotMatch(page, /or ask me a question/);
   assert.doesNotMatch(page, /Jawa figure/);
   assert.doesNotMatch(page, /Jawa blaster/);
   assert.doesNotMatch(page, /Identify a blaster/);
@@ -937,12 +913,12 @@ await test("identify buttons replace the old chips and the lookup dropdown", asy
   assert.doesNotMatch(page, /catalogSelect/);
   assert.doesNotMatch(page, /Look up/);
   assert.doesNotMatch(page, /class="chips"/);
+  const greetingAt = page.indexOf('id="welcomeGreeting"');
   const buttonsAt = page.indexOf('id="identifyFigure"');
-  const hintAt = page.indexOf("or ask me a question...");
   const inputAt = page.indexOf('id="input"');
-  const searchAt = page.indexOf('id="catalogSearch"');
   const headerAt = page.indexOf('class="header"');
-  assert.ok(headerAt < searchAt && searchAt < buttonsAt && buttonsAt < hintAt && hintAt < inputAt);
+  assert.ok(headerAt < greetingAt && greetingAt < buttonsAt && buttonsAt < inputAt);
+  assert.match(page, /href="https:\/\/www\.variantvillain\.com\/" target="_blank" rel="noopener noreferrer">Variant Villain<\/a>/);
 });
 
 await test("welcome state has no starter chips and the welcome class toggles", async () => {
@@ -964,14 +940,12 @@ await test("welcome state has no starter chips and the welcome class toggles", a
   assert.equal(classList.names.has("chatting"), true);
   const page = fs.readFileSync(path.join(root, "index.html"), "utf8");
   assert.match(page, /class="app welcome"/);
-  assert.match(page, /Hello, I'm VF-CB/);
+  assert.match(page, /Hello, I am SW-7885, vintage collector relations/);
   assert.doesNotMatch(page, /welcomeStarters/);
   assert.doesNotMatch(page, /addActionButtons\(welcomeStarters/);
   assert.match(page, /syncLayoutClass\(/);
   assert.match(page, /\.app\.welcome \.chat/);
-  const greetingAt = page.lastIndexOf("Hello, I'm VF-CB");
-  const afterGreeting = page.slice(greetingAt);
-  assert.doesNotMatch(afterGreeting, /addActionButtons/);
+  assert.doesNotMatch(page, /addMessage\(\s*\n\s*"assistant"/);
 });
 
 await test("outfit and variant ranking questions retrieve the count summary", async () => {

@@ -133,7 +133,7 @@ export default async function handler(req, res) {
             {
               role: "system",
               content: `
-You are VF-CB, a Vintage Kenner Star Wars figure identification assistant.
+You are SW-7885, a Vintage Kenner Star Wars figure identification assistant.
 
 Your job:
 - identify the broad figure family only
@@ -573,11 +573,11 @@ const TC_OFFTOPIC_RE = new RegExp(
   "capital of|how old is|write me|write a)\\b"
 );
 
-const TC_GREETING_RE = /^(?:hi|hello|hey|hiya|howdy|good (?:morning|afternoon|evening)|yo|greetings)(?: there| vf-?cb)?[\s!.,?]*$/i;
+const TC_GREETING_RE = /^(?:hi|hello|hey|hiya|howdy|good (?:morning|afternoon|evening)|yo|greetings)(?: there| vf-?cb| sw-?7885)?[\s!.,?]*$/i;
 const TC_THANKS_RE = /^(?:thanks|thank you|thx|cheers|ta|brilliant|great|perfect|ok|okay|cool|nice one)(?: (?:very much|a lot|mate))?[\s!.,?]*$/i;
 
 const TC_GREETINGS = [
-  "Hello, I'm VF-CB. I can talk through a figure or an accessory with the buttons below, or you can ask a question about vintage Kenner Star Wars.",
+  "Hello, I am SW-7885, vintage collector relations. And this is my counterpart, Variant Villain, fluent in over one thousand figures and accessories produced between 1978 and 1985. How can we be of assistance?",
   "Hello. Use the buttons below for a figure or an accessory, or just ask a question.",
   "Good to see you. The buttons below start a figure or accessory check, or ask me something from the vintage line."
 ];
@@ -601,7 +601,7 @@ const TC_NO_REFERENCE_REPLIES = [
   "My reference data doesn't cover that yet, so I won't guess. Could you tell me which figure, accessory or topic you mean?"
 ];
 
-const TC_SYSTEM_PROMPT = `You are VF-CB, a collector droid and specialist reference companion for vintage Kenner Star Wars toys (1977-1985). You are not a general chatbot.
+const TC_SYSTEM_PROMPT = `You are SW-7885, vintage collector relations, a specialist reference companion for vintage Kenner Star Wars toys (1977-1985). Variant Villain is your counterpart. You are not a general chatbot.
 
 Voice: natural, friendly conversational language, the way one collector talks to another. Concise. British English. No waffle, no long preambles, no re-introducing yourself. Stay grounded only in the reference data.
 
