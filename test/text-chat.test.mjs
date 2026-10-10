@@ -848,6 +848,74 @@ await test("Lando COO choices are the 1980 stamps and the first question explain
   assert.match(smooth.json.reply, /not sure/i);
 });
 
+await test("owner stamp sheet gives Han, Snaggletooth, Chirpa, and Nikto their own buttons", async () => {
+  const han = await call({ message: "identify the variant of Han Solo" });
+  assert.equal(calls.length, 0);
+  assert.equal(han.json.quickReplies, true);
+  assert.match(han.json.reply, /country of origin \(COO\) stamp/);
+  assert.doesNotMatch(han.json.reply, /Mexico|Taiwan|Macau|This question is not evidence/);
+  assert.deepEqual(han.json.actions.map(action => action.label), [
+    "Hong Kong, left leg, under the licensing details",
+    "No COO, left leg, under the licensing details"
+  ]);
+  const shared = await call({ message: "Hong Kong, left leg, under the licensing details", flowState: han.json.flowState });
+  assert.match(shared.json.reply, /Unitoy M1/);
+  assert.match(shared.json.reply, /Kader M2/);
+  assert.match(shared.json.reply, /not sure/i);
+  assert.equal(shared.json.flowState, null);
+  const open = await call({ message: "No COO, left leg, under the licensing details", flowState: han.json.flowState });
+  assert.deepEqual(open.json.actions.map(action => action.label), [
+    "Dotted remnants of the country text",
+    "Smooth, no country text left"
+  ]);
+  const dots = await call({ message: "Dotted remnants of the country text", flowState: open.json.flowState });
+  assert.match(dots.json.reply, /Glasslite M2/);
+  assert.equal(dots.json.flowState, null);
+
+  const snag = await call({ message: "identify the variant of Snaggletooth" });
+  assert.deepEqual(snag.json.actions.map(action => action.label), [
+    "Hong Kong on the left boot, under the licensing details",
+    "Hong Kong on the left leg, under the licensing details",
+    "A scar in place of the COO, under the licensing text"
+  ]);
+  assert.match(snag.json.reply, /left boot/);
+  const boot = await call({ message: "Hong Kong on the left boot, under the licensing details", flowState: snag.json.flowState });
+  assert.match(boot.json.reply, /Smile M1/);
+  assert.match(boot.json.reply, /blue Snaggletooth/i);
+  const scar = await call({ message: "A scar in place of the COO, under the licensing text", flowState: snag.json.flowState });
+  assert.match(scar.json.reply, /Smile M3/);
+  assert.match(scar.json.reply, /PBP M3/);
+  assert.match(scar.json.reply, /not sure/i);
+
+  const chirpa = await call({ message: "identify the variant of Chief Chirpa" });
+  assert.match(chirpa.json.reply, /raised bar/);
+  assert.deepEqual(chirpa.json.actions.map(action => action.label), [
+    "'H.K.' on a raised bar on the right leg",
+    "No COO, no raised bar"
+  ]);
+  assert.doesNotMatch(JSON.stringify(chirpa.json.actions), /Mexico|Made in Hong Kong/);
+  const bar = await call({ message: "'H.K.' on a raised bar on the right leg", flowState: chirpa.json.flowState });
+  assert.deepEqual(bar.json.actions.map(action => action.label), [
+    "The raised bar is very faint, almost smooth",
+    "The raised bar is clear"
+  ]);
+  const faint = await call({ message: "The raised bar is very faint, almost smooth", flowState: bar.json.flowState });
+  assert.match(faint.json.reply, /Smile M1/);
+  const none = await call({ message: "No COO, no raised bar", flowState: chirpa.json.flowState });
+  const top = await call({ message: "No licensing details on either leg", flowState: none.json.flowState });
+  assert.match(top.json.reply, /Top Toys M5/);
+
+  const nikto = await call({ message: "identify the variant of Nikto" });
+  assert.deepEqual(nikto.json.actions.map(action => action.label), ["No COO"]);
+  assert.doesNotMatch(nikto.json.reply, /Hong Kong|China|Taiwan|Macau|Mexico/);
+  const neither = await call({ message: "No COO", flowState: nikto.json.flowState });
+  assert.match(neither.json.reply, /Smile M1/);
+  assert.match(neither.json.reply, /Lili Ledy M1/);
+  assert.match(neither.json.reply, /not sure/i);
+  assert.equal(neither.json.flowState, null);
+  assert.equal(calls.length, 0);
+});
+
 await test("no figure's COO question offers Mexico", async () => {
   const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
   assert.ok(data.figures.length >= 90, data.figures.length);
@@ -913,7 +981,7 @@ await test("every retrieval file is under the 7000 character cap", async () => {
       // Debut year and card are used only to write the photo-identification sentence.
       else if (entry.name === "kenner-debut-figures.json") continue;
       // Per-figure COO buttons are read by the scripted flow, not injected into the model.
-      else if (entry.name === "coo-figures.json") continue;
+      else if (entry.name === "coo-figures.json" || entry.name === "coo-owner-stamps.json") continue;
       else {
         const text = fs.readFileSync(full, "utf8");
         if (text.length > cap) over.push(`${path.relative(root, full)} (${text.length})`);

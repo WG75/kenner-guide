@@ -259,7 +259,7 @@ def main():
     md.append("")
     md.append("Accessories are the original pieces on the Variant Villain accessory guide, plus any bubble piece from that figure list that has no guide page.")
     md.append("")
-    md.append("A figure page \"has COO/factory/mould details\" when the fetched character page names a COO family, a country stamp, or a factory guide line. A verified COO choice is stricter: the bot only offers stamp buttons when the page (or the 1980 Lando leg notes) names the wording. An accessory page has details when its article names a mould, factory, or country stamp. Menu links such as \"Introduction to COOs\" do not count.")
+    md.append("A figure page \"has COO/factory/mould details\" when the fetched character page names a COO family, a country stamp, or a factory guide line. A verified COO choice is stricter: the bot only offers stamp buttons when the wording is known. Thirty-one figures take that wording from the owner's stamp sheet (10 Oct 2026). The others take it from the character page, including the 1980 Lando leg notes. An accessory page has details when its article names a mould, factory, or country stamp. Menu links such as \"Introduction to COOs\" do not count.")
     md.append("")
     md.append("## Counts")
     md.append("")
