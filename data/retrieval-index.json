@@ -4096,7 +4096,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 6487
+      "chars": 6549
     },
     {
       "relPath": "figures/power-droid-reference.txt",
@@ -4931,6 +4931,24 @@
       ],
       "years": [],
       "chars": 4077
+    },
+    {
+      "relPath": "references/accessory-list-corrections.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "accessory",
+      "aliases": [
+        "list",
+        "corrections"
+      ],
+      "keywords": [
+        "accessory",
+        "list",
+        "corrections"
+      ],
+      "years": [],
+      "chars": 4709
     },
     {
       "relPath": "references/accessory-production.txt",

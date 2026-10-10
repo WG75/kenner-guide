@@ -1866,9 +1866,40 @@ await test("owner VF-CB reference pack rules stay on the accessory files", async
   assert.equal(variant.id, "accvar_dt_lightsaber_m2_yellow");
   assert.equal(variant.variant_code, "M1");
   const gaps = read("docs/variantvillain-gaps.md");
-  assert.match(gaps, /\(c\) Accessories with no page or no details: 15/);
+  assert.match(gaps, /\(c\) Accessories with no page or no details: 12/);
   assert.match(gaps, /Luke Skywalker — lightsaber — Telescoping Lightsaber/);
-  assert.match(gaps, /Anakin Skywalker — lightsaber — Variant Villain and Rebelscum/);
+  assert.doesNotMatch(gaps, /Han Solo \(Bespin Outfit\) — cape/);
+  assert.doesNotMatch(gaps, /Romba — bow/);
+  assert.doesNotMatch(gaps, /Paploo — spear/);
+});
+
+await test("Han Bespin, Romba and Paploo have no cape, bow or spear", async () => {
+  const { completenessLine } = await import(pathToFileURL(path.join(root, "api", "kenner-debut.js")).href);
+  const debut = JSON.parse(fs.readFileSync(path.join(root, "data/kenner-debut-figures.json"), "utf8"));
+  const byName = Object.fromEntries(debut.figures.map(figure => [figure.name, figure]));
+  const han = byName["Han Solo (Bespin Outfit)"];
+  const romba = byName.Romba;
+  const paploo = byName.Paploo;
+  const anakin = byName["Anakin Skywalker"];
+  assert.deepEqual(han.accessories, ["blaster"]);
+  assert.deepEqual(romba.accessories, []);
+  assert.deepEqual(paploo.accessories, []);
+  assert.deepEqual(anakin.accessories, []);
+  assert.equal(completenessLine(han, ["blaster"]), "He looks complete, with his blaster.");
+  assert.equal(completenessLine(han, ["cape", "blaster"]), "He looks complete, with his blaster.");
+  assert.equal(completenessLine(romba, ["bow"]), "");
+  assert.equal(completenessLine(paploo, ["spear"]), "");
+  assert.equal(completenessLine(anakin, ["lightsaber"]), "");
+  const paplooFile = fs.readFileSync(path.join(root, "data/figures/paploo-reference.txt"), "utf8");
+  assert.match(paplooFile, /Paploo has no spear/);
+  assert.doesNotMatch(paplooFile, /hood, quiver and spear/);
+  const builder = fs.readFileSync(path.join(root, "tools/build-kenner-debut-figures.py"), "utf8");
+  assert.match(builder, /"39339": \("Han Solo \(Bespin Outfit\)", "he", \["blaster"\]\)/);
+  assert.match(builder, /"93680": \("Paploo", "he", \[\]\)/);
+  assert.match(builder, /"93730": \("Romba", "he", \[\]\)/);
+  const note = fs.readFileSync(path.join(root, "data/references/accessory-list-corrections.txt"), "utf8");
+  assert.match(note, /Wikipedia has no accessory column|does not name accessories/);
+  assert.match(note, /variantvillain.com stays the authority/);
 });
 
 console.error = quietErrors;

@@ -14,10 +14,10 @@ A figure page "has COO/factory/mould details" when the fetched character page na
 - Figures with verified COO choices in the bot: 96
 - (a) Figures with no Variant Villain page: 0
 - (b) Figures with a page but no COO/factory/mould details: 0
-- Accessories checked: 79
+- Accessories checked: 76
 - Accessories with a page: 64
 - Accessories whose page has mould/factory/COO details: 64
-- (c) Accessories with no page or no details: 15
+- (c) Accessories with no page or no details: 12
 
 ## (a) Figures with no Variant Villain page
 
@@ -29,7 +29,6 @@ None.
 
 ## (c) Accessories with no page or no details
 
-- Han Solo (Bespin Outfit) — cape — no page — no page
 - R2-D2 (Sensorscope) — sensorscope — no page — no page
 - 4-LOM — blaster — no page — no page
 - Zuckuss — blaster — no page — no page
@@ -38,8 +37,6 @@ None.
 - Nikto — staff — no page — no page
 - Rancor Keeper — axe — no page — no page
 - Lumat — bow — no page — no page
-- Paploo — spear — no page — no page
-- Romba — bow — no page — no page
 - Barada — polearm — no page — no page
 - Warok — bow — no page — no page
 - Lando Calrissian (General Pilot) — cape — no page — no page
@@ -84,7 +81,7 @@ None.
 
 ## Debut list pieces that are not a missing accessory
 
-- Anakin Skywalker — lightsaber — Variant Villain and Rebelscum say Anakin Skywalker was never packaged with an accessory.
+None.
 
 Conflicts between the owner VF-CB reference pack and the live data are in `docs/vfcb-reference-pack-conflicts.md`.
 
