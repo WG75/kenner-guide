@@ -35,6 +35,120 @@ export function findDebutFigure(displayName) {
   return null;
 }
 
+/* Words that show up in several outfits and must not, on their own, move
+   a photo off the original release. */
+const GENERIC_WORDS = new Set([
+  "outfit", "disguise", "battle", "gear", "pilot", "guard", "with", "from",
+  "the", "and", "into", "wear", "wearing", "knight", "suit", "original",
+  "imperial", "royal", "organa", "wing", "coat", "gown"
+]);
+
+/* Cues the catalogue name does not spell out. Skiff Guard is the helmet
+   or skiff outfit. General Pilot is the uniform. */
+const EXTRA_PHRASES = {
+  "70830": ["helmet", "skiff"],
+  "93820": ["uniform", "general"],
+  "39060": ["x wing", "flight suit"],
+  "70660": ["boushh", "helmet"],
+  "93780": ["stormtrooper"],
+  "93720": ["pop up", "popup"]
+};
+
+function characterId(name) {
+  const n = norm(name);
+  if (!n) return null;
+  if (n.startsWith("luke")) return "luke";
+  if (n.includes("leia")) return "leia";
+  if (n.startsWith("han solo") || n.startsWith("han ")) return "han";
+  if (n.startsWith("lando")) return "lando";
+  if (n.startsWith("chewbacca") || n.startsWith("chewie")) return "chewbacca";
+  if (n.includes("artoo") || /\br2\b/.test(n)) return "r2";
+  if (n.includes("3po")) return "c3po";
+  if (n.includes("stormtrooper")) return "stormtrooper";
+  if (n.startsWith("bespin security")) return "bespin-guard";
+  if (n.startsWith("klaatu")) return "klaatu";
+  return null;
+}
+
+function qualifierWords(name) {
+  const raw = String(name || "");
+  const paren = raw.match(/\(([^)]+)\)/);
+  let source = paren ? paren[1] : "";
+  if (!source) {
+    const inMatch = raw.match(/\bin\s+(.+)$/i);
+    source = inMatch ? inMatch[1] : "";
+  }
+  return norm(source).split(" ").filter(word => word.length > 3 && !GENERIC_WORDS.has(word));
+}
+
+function variantPhrases(figure) {
+  const words = qualifierWords(figure.name);
+  const extra = EXTRA_PHRASES[figure.product] || [];
+  const phrases = [];
+  if (words.length) phrases.push(words.join(" "));
+  for (const word of words) phrases.push(word);
+  for (const item of extra) phrases.push(norm(item));
+  return [...new Set(phrases.filter(Boolean))];
+}
+
+function evidenceBlob(visibleAccessories, costumeCues) {
+  const parts = [];
+  if (Array.isArray(visibleAccessories)) parts.push(...visibleAccessories);
+  if (Array.isArray(costumeCues)) parts.push(...costumeCues);
+  return norm(parts.join(" "));
+}
+
+function baseFigure(group) {
+  return group.slice().sort((a, b) =>
+    a.year - b.year || a.name.length - b.name.length || String(a.product).localeCompare(String(b.product))
+  )[0];
+}
+
+function bestSupportedVariant(group, base, blob) {
+  let best = null;
+  let bestLength = 0;
+  for (const figure of group) {
+    if (figure === base) continue;
+    for (const phrase of variantPhrases(figure)) {
+      if (!phrase || !blob.includes(phrase)) continue;
+      if (phrase.length > bestLength) {
+        best = figure;
+        bestLength = phrase.length;
+      }
+    }
+  }
+  return best;
+}
+
+/* Same-name figures (Lando, Luke, Han, Leia, Chewbacca, and the other
+   multi-release characters) stay on the original release unless the photo
+   evidence names that later outfit. The model's variant subtitle is not
+   evidence: "Lando Calrissian (Skiff Guard)" with no helmet still resolves
+   to the 1980 Lando, which is what keeps the debut sentence. */
+export function resolveDebutFigure(displayName, evidence = {}) {
+  const figures = loadFigures();
+  const familyId = characterId(displayName);
+  if (familyId) {
+    const group = figures.filter(fig => characterId(fig.name) === familyId);
+    if (group.length === 1) return group[0];
+    if (group.length > 1) {
+      const base = baseFigure(group);
+      const blob = evidenceBlob(evidence.visibleAccessories, evidence.costumeCues);
+      return bestSupportedVariant(group, base, blob) || base;
+    }
+  }
+  const exact = findDebutFigure(displayName);
+  if (exact) return exact;
+  const want = norm(displayName);
+  if (!want) return null;
+  const contained = figures.filter(fig => {
+    const name = norm(fig.name);
+    return name && (want.includes(name) || name.includes(want));
+  });
+  if (contained.length === 1) return contained[0];
+  return null;
+}
+
 function joinList(items) {
   if (items.length <= 1) return items[0] || "";
   if (items.length === 2) return `${items[0]} and ${items[1]}`;
@@ -82,7 +196,7 @@ function releaseClause(figure) {
   return `first released in ${figure.year} on the ${figure.cardback} ${figure.line} cardback${outside}`;
 }
 
-export function composePhotoReply({ itemKind, displayName, visibleAccessories }) {
+export function composePhotoReply({ itemKind, displayName, visibleAccessories, costumeCues }) {
   const accessory = itemKind === "accessory";
   if (accessory) {
     const name = String(displayName || "").trim() || "an unidentified accessory";
@@ -102,7 +216,7 @@ export function composePhotoReply({ itemKind, displayName, visibleAccessories })
     };
   }
 
-  const figure = findDebutFigure(displayName);
+  const figure = resolveDebutFigure(displayName, { visibleAccessories, costumeCues });
   const name = figure ? figure.name : (String(displayName || "").trim() || "an unidentified figure");
   const pronoun = figure ? figure.pronoun : "he";
   const possessive = figure ? figure.possessive : "his";

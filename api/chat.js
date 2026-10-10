@@ -208,24 +208,23 @@ Your job:
 
 Use "accessory" for a loose weapon, cape, cloak or other accessory photographed on its own. Otherwise use "figure".
 
-Use collector-friendly naming.
+Use the original Kenner release name. Add a later-outfit name only when that costume is actually visible. A guessed subtitle is not enough.
 
-Examples:
-- Luke Skywalker in Bespin Fatigues
-- Luke Skywalker (Original / Tatooine / Farm boy)
-- Luke Skywalker (X-Wing Pilot)
-- Luke Skywalker (Hoth)
-- Luke Skywalker (Jedi Knight)
-- Luke Skywalker (Endor / Poncho)
-- Luke Skywalker (Stormtrooper)
+Same-name examples:
+- Lando Calrissian is the 1980 figure in a blue shirt with a cape. Use Lando Calrissian (Skiff Guard Disguise) only when a helmet or skiff guard outfit is visible. Use Lando Calrissian (General Pilot) only when a general's uniform is visible.
+- Luke Skywalker is the farm-boy tunic. Use an X-Wing, Hoth, Bespin, Jedi, poncho or Stormtrooper name only when that outfit is visible.
+- Han Solo is the black-vest figure. Use Hoth, Bespin, trench coat or carbonite only when that outfit is visible.
+- Princess Leia Organa is the white gown. Use Bespin, Hoth, Boushh or the combat poncho only when that outfit is visible.
+- Chewbacca is the 1977 figure with a bowcaster.
 - Jawa
 - Darth Vader
 - Stormtrooper
-- Princess Leia Organa
-- Han Solo
-- Chewbacca
 - C-3PO
 - R2-D2
+
+Also return "costume_cues": short phrases for clothing you can actually see, such as "blue shirt", "cape", "helmet", "skiff outfit" or "general uniform". Use [] when you cannot see a costume. Never list a cue that is not in the photo.
+
+"visible_accessories" is required for a figure. Use [] when none of those pieces are in the photo.
 
 If uncertain, use:
 figure_key: "uncertain"
@@ -275,6 +274,9 @@ confidence: "low"
       const visibleAccessories = Array.isArray(parsed?.visible_accessories)
         ? parsed.visible_accessories.filter(item => typeof item === "string")
         : null;
+      const costumeCues = Array.isArray(parsed?.costume_cues)
+        ? parsed.costume_cues.filter(item => typeof item === "string")
+        : [];
 
       if (!isVintage || figureKey === "uncertain") {
         return res.status(200).json({
@@ -292,7 +294,8 @@ confidence: "low"
         itemKind,
         displayName,
         figureKey,
-        visibleAccessories
+        visibleAccessories,
+        costumeCues
       }));
     }
 
@@ -312,14 +315,15 @@ confidence: "low"
   }
 }
 
-function photoIdentificationReply({ itemKind, displayName, figureKey, visibleAccessories }) {
-  const composed = composePhotoReply({ itemKind, displayName, visibleAccessories });
+function photoIdentificationReply({ itemKind, displayName, figureKey, visibleAccessories, costumeCues }) {
+  const composed = composePhotoReply({ itemKind, displayName, visibleAccessories, costumeCues });
+  const figure = composed.itemKind === "figure" ? normaliseFigureKey(composed.displayName) : figureKey;
   return {
     reply: composed.reply,
     flowState: {
       topic: "image_identified",
       itemKind: composed.itemKind,
-      figure: figureKey,
+      figure,
       displayName: composed.displayName,
       pronoun: composed.pronoun,
       possessive: composed.possessive,

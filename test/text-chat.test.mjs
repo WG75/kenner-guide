@@ -5,7 +5,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { parseFollowUps, fallbackFollowUps, layoutMode, syncLayoutClass, actionIntent, askAboutPrompt } from "../vfcb-chat-ui.js";
+import { parseFollowUps, fallbackFollowUps, layoutMode, syncLayoutClass, actionIntent, askAboutPrompt, appendTranscriptEntry, loadTranscript, saveTranscript, TRANSCRIPT_KEY } from "../vfcb-chat-ui.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 process.chdir(root);
@@ -350,6 +350,102 @@ await test("Lando photo reply names the debut card and visible accessories", asy
   const missing = await call({ message: "", image: "data:image/png;base64,AAAA" });
   assert.match(missing.json.reply, /He appears to be missing his blaster\./);
   assert.equal(missing.json.actions[1].label, "Would you like to identify his variant or either of his accessories?");
+  assert.match(calls[0].body.messages[0].content, /blue shirt/);
+  assert.match(calls[0].body.messages[0].content, /Skiff Guard Disguise/);
+});
+
+await test("same-name photos stay on the original figure unless the later outfit is visible", async () => {
+  async function identify(displayName, extras = {}) {
+    nextResponse = async () => ({
+      ok: true,
+      status: 200,
+      json: async () => ({
+        choices: [{
+          message: {
+            content: JSON.stringify({
+              figure_key: "guessed",
+              display_name: displayName,
+              confidence: "high",
+              is_vintage_star_wars: true,
+              visible_accessories: extras.visible || [],
+              costume_cues: extras.cues || []
+            })
+          }
+        }]
+      })
+    });
+    const { json } = await call({ message: "Analyse this uploaded figure photo.", image: "data:image/png;base64,AAAA" });
+    return json;
+  }
+
+  const lando = await identify("Lando Calrissian (Skiff Guard)", { visible: ["cape", "blaster"], cues: ["blue shirt", "cape"] });
+  assert.equal(lando.reply, "The figure in your photo appears to be Lando Calrissian, first released in 1980 on the 31-back The Empire Strikes Back cardback. He looks complete, with his cape and blaster.");
+  assert.equal(lando.flowState.displayName, "Lando Calrissian");
+  assert.equal(lando.flowState.figure, "lando_calrissian");
+  assert.doesNotMatch(lando.reply, /Skiff|General Pilot/);
+
+  const skiff = await identify("Lando Calrissian", { visible: ["helmet", "cape"], cues: ["skiff outfit", "helmet"] });
+  assert.equal(skiff.reply, "The figure in your photo appears to be Lando Calrissian (Skiff Guard Disguise), first released in 1983 on the 65-back Return of the Jedi cardback. He looks complete, with his helmet and cape.");
+  assert.equal(skiff.flowState.displayName, "Lando Calrissian (Skiff Guard Disguise)");
+
+  const general = await identify("Lando Calrissian (General Pilot)", { visible: ["cape"], cues: ["blue shirt"] });
+  assert.match(general.reply, /^The figure in your photo appears to be Lando Calrissian, first released in 1980 on the 31-back The Empire Strikes Back cardback\./);
+  assert.doesNotMatch(general.reply, /General Pilot/);
+
+  const generalSeen = await identify("Lando", { visible: ["cape", "blaster"], cues: ["general uniform"] });
+  assert.equal(generalSeen.reply, "The figure in your photo appears to be Lando Calrissian (General Pilot), first released in 1985 on the 92-back Power of the Force cardback. He looks complete, with his cape and blaster.");
+
+  const luke = await identify("Luke Skywalker (X-Wing Pilot)", { visible: ["lightsaber"], cues: ["tunic"] });
+  assert.equal(luke.reply, "The figure in your photo appears to be Luke Skywalker, first released in 1977 on the 12-back Star Wars cardback. He looks complete, with his lightsaber.");
+
+  const lukeHoth = await identify("Luke Skywalker", { visible: ["blaster"], cues: ["hoth gear"] });
+  assert.equal(lukeHoth.reply, "The figure in your photo appears to be Luke Skywalker (Hoth Battle Gear), first released in 1982 on the 45-back The Empire Strikes Back cardback. He looks complete, with his blaster.");
+
+  const han = await identify("Han Solo (Hoth Outfit)", { visible: ["blaster"], cues: ["black vest"] });
+  assert.equal(han.reply, "The figure in your photo appears to be Han Solo, first released in 1977 on the 12-back Star Wars cardback. He looks complete, with his blaster.");
+
+  const hanHoth = await identify("Han Solo (Hoth Outfit)", { visible: ["blaster"], cues: ["hoth parka"] });
+  assert.equal(hanHoth.reply, "The figure in your photo appears to be Han Solo (Hoth Outfit), first released in 1980 on the 31-back The Empire Strikes Back cardback. He looks complete, with his blaster.");
+
+  const leia = await identify("Princess Leia Organa (Boushh Disguise)", { visible: ["cape", "blaster"], cues: ["white gown"] });
+  assert.equal(leia.reply, "The figure in your photo appears to be Princess Leia Organa, first released in 1977 on the 12-back Star Wars cardback. She looks complete, with her cape and blaster.");
+
+  const leiaHoth = await identify("Leia (Hoth Outfit)", { visible: ["blaster"], cues: ["hoth"] });
+  assert.equal(leiaHoth.reply, "The figure in your photo appears to be Leia (Hoth Outfit), first released in 1981 on the 41-back The Empire Strikes Back cardback. She looks complete, with her blaster.");
+
+  const chewie = await identify("Chewbacca (Bandolier)", { visible: ["bowcaster"], cues: ["bandolier"] });
+  assert.equal(chewie.reply, "The figure in your photo appears to be Chewbacca, first released in 1977 on the 12-back Star Wars cardback. He looks complete, with his bowcaster.");
+  assert.equal(chewie.flowState.displayName, "Chewbacca");
+});
+
+await test("a quick reply or another photo appends to the transcript", async () => {
+  let transcript = appendTranscriptEntry(null, { kind: "image", url: "data:image/jpeg;base64,ONE", alt: "Uploaded photo", userPhoto: true });
+  transcript = appendTranscriptEntry(transcript, { kind: "text", role: "assistant", text: "The figure in your photo appears to be Lando Calrissian, first released in 1980 on the 31-back The Empire Strikes Back cardback." });
+  transcript = appendTranscriptEntry(transcript, { kind: "text", role: "user", text: "Would you like to identify his variant?" });
+  transcript = appendTranscriptEntry(transcript, { kind: "image", url: "data:image/jpeg;base64,TWO", alt: "Uploaded photo", userPhoto: true });
+  assert.equal(transcript.entries.length, 4);
+  assert.equal(transcript.entries[0].url, "data:image/jpeg;base64,ONE");
+  assert.match(transcript.entries[1].text, /Lando Calrissian/);
+  assert.equal(transcript.entries[3].url, "data:image/jpeg;base64,TWO");
+
+  const storage = new Map();
+  const memory = {
+    getItem(key) { return storage.has(key) ? storage.get(key) : null; },
+    setItem(key, value) { storage.set(key, value); }
+  };
+  assert.equal(saveTranscript(memory, transcript), true);
+  const loaded = loadTranscript(memory);
+  assert.equal(loaded.entries.length, 4);
+  assert.equal(loaded.entries[0].url, transcript.entries[0].url);
+  assert.equal(memory.getItem(TRANSCRIPT_KEY) != null, true);
+
+  const page = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  assert.match(page, /user-photo/);
+  assert.match(page, /alt: "Uploaded photo"/);
+  assert.match(page, /sessionStorage/);
+  assert.match(page, /restoreTranscript/);
+  assert.doesNotMatch(page, /chatEl\.innerHTML/);
+  assert.doesNotMatch(page, /chatEl\.replaceChildren/);
 });
 
 await test("accessory photo asks about the accessory instead of Yes or No", async () => {

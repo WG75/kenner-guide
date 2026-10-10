@@ -143,3 +143,60 @@ export function askAboutPrompt(displayName, kind) {
     prompt: `What would you like to know about ${subject}?`
   };
 }
+
+export const TRANSCRIPT_KEY = "sw7885.transcript.v1";
+
+export function emptyTranscript() {
+  return { entries: [], flowState: null, quickReplies: null, helper: "" };
+}
+
+/* Appending is the only way a turn joins the transcript. Quick replies and
+   later photos add entries; they never replace the ones already there. */
+export function appendTranscriptEntry(transcript, entry) {
+  const entries = Array.isArray(transcript && transcript.entries) ? transcript.entries.slice() : [];
+  entries.push(entry);
+  return {
+    entries,
+    flowState: transcript && Object.prototype.hasOwnProperty.call(transcript, "flowState") ? transcript.flowState : null,
+    quickReplies: transcript ? transcript.quickReplies ?? null : null,
+    helper: transcript && transcript.helper ? transcript.helper : ""
+  };
+}
+
+export function loadTranscript(storage) {
+  if (!storage) return null;
+  try {
+    const raw = storage.getItem(TRANSCRIPT_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!parsed || !Array.isArray(parsed.entries)) return null;
+    return {
+      entries: parsed.entries,
+      flowState: parsed.flowState || null,
+      quickReplies: Array.isArray(parsed.quickReplies) ? parsed.quickReplies : null,
+      helper: typeof parsed.helper === "string" ? parsed.helper : ""
+    };
+  } catch (err) {
+    return null;
+  }
+}
+
+export function saveTranscript(storage, transcript) {
+  if (!storage) return false;
+  const payload = transcript && Array.isArray(transcript.entries) ? transcript : emptyTranscript();
+  try {
+    storage.setItem(TRANSCRIPT_KEY, JSON.stringify(payload));
+    return true;
+  } catch (err) {
+    const slim = {
+      ...payload,
+      entries: payload.entries.map(entry => entry && entry.kind === "image" ? { ...entry, url: "" } : entry)
+    };
+    try {
+      storage.setItem(TRANSCRIPT_KEY, JSON.stringify(slim));
+    } catch (err2) {
+      return false;
+    }
+    return false;
+  }
+}

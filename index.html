@@ -241,6 +241,18 @@
       background: #050505;
     }
 
+    .image-card.user-photo {
+      align-self: flex-end;
+      padding: 6px;
+      background: var(--ink);
+    }
+
+    .image-card.user-photo img {
+      width: auto;
+      max-width: min(240px, 70vw);
+      max-height: 240px;
+    }
+
     .image-caption {
       margin-top: 8px;
       color: var(--white);
@@ -538,7 +550,7 @@
   </div>
 
   <script type="module">
-    import { parseFollowUps, fallbackFollowUps, followTopicFor, syncLayoutClass, actionIntent, askAboutPrompt } from "./vfcb-chat-ui.js";
+    import { parseFollowUps, fallbackFollowUps, followTopicFor, syncLayoutClass, actionIntent, askAboutPrompt, appendTranscriptEntry, loadTranscript, saveTranscript } from "./vfcb-chat-ui.js";
 
     const appEl = document.querySelector(".app");
     const chatEl = document.getElementById("chat");
@@ -549,8 +561,32 @@
 
     const state = {
       history: [],
-      flowState: null
+      entries: [],
+      flowState: null,
+      quickActions: null,
+      quickHelper: ""
     };
+
+    let persistEnabled = false;
+
+    function transcriptSnapshot() {
+      return {
+        entries: state.entries,
+        flowState: state.flowState,
+        quickReplies: state.quickActions,
+        helper: state.quickHelper
+      };
+    }
+
+    function persistTranscript() {
+      if (!persistEnabled) return;
+      saveTranscript(window.sessionStorage, transcriptSnapshot());
+    }
+
+    function remember(entry) {
+      state.entries = appendTranscriptEntry(transcriptSnapshot(), entry).entries;
+      persistTranscript();
+    }
 
     function escapeHtml(text) {
       return String(text || "")
@@ -578,28 +614,29 @@
       if (composer) composer.scrollIntoView({ block: "end" });
     }
 
-    function addMessage(role, text) {
+    function paintMessage(role, text) {
       const msg = document.createElement("div");
       msg.className = "message " + (role === "user" ? "user" : "bot");
       msg.innerHTML = formatText(text);
       chatEl.appendChild(msg);
       scrollToBottom();
+    }
 
-      state.history.push({
-        role: role === "user" ? "user" : "assistant",
-        content: text
-      });
-
+    function addMessage(role, text) {
+      paintMessage(role, text);
+      const storedRole = role === "user" ? "user" : "assistant";
+      state.history.push({ role: storedRole, content: text });
+      remember({ kind: "text", role: storedRole, text });
       if (role === "user") {
         syncLayoutClass(appEl.classList, state.history.filter((turn) => turn.role === "user").length);
       }
     }
 
-    function addImageCard(image) {
+    function paintImageCard(image) {
       if (!image || !image.url) return;
 
       const card = document.createElement("div");
-      card.className = "image-card";
+      card.className = "image-card" + (image.userPhoto ? " user-photo" : "");
 
       if (image.title) {
         const title = document.createElement("div");
@@ -640,6 +677,21 @@
       scrollToBottom();
     }
 
+    function addImageCard(image) {
+      if (!image || !image.url) return;
+      paintImageCard(image);
+      remember({
+        kind: "image",
+        url: image.url,
+        alt: image.alt || image.title || "SW-7885 reference image",
+        title: image.title || "",
+        caption: image.caption || "",
+        sourcePage: image.sourcePage || "",
+        userPhoto: Boolean(image.userPhoto),
+        historyText: image.historyText || ""
+      });
+    }
+
     function appendAnswerImages(images, place) {
       const list = Array.isArray(images) ? images : [];
       const vv = list.filter((image) => image && image.sourcePage);
@@ -659,6 +711,9 @@
       quickRepliesEl.replaceChildren();
       quickRepliesEl.classList.remove("is-shown");
       quickHelperEl.classList.remove("is-shown");
+      state.quickActions = null;
+      state.quickHelper = "";
+      persistTranscript();
     }
 
     function showQuickReplies(actions, helper) {
@@ -675,6 +730,12 @@
       quickRepliesEl.classList.add("is-shown");
       if (helper) quickHelperEl.textContent = helper;
       quickHelperEl.classList.add("is-shown");
+      state.quickActions = actions.map(action => ({
+        label: action.label || action.value || "Select",
+        value: action.value || action.label || ""
+      }));
+      state.quickHelper = helper || quickHelperEl.textContent || "";
+      persistTranscript();
     }
 
     function promptAboutIdentified(kind) {
@@ -688,6 +749,10 @@
 
     function runAction(action) {
       const intent = actionIntent(action);
+      const label = String((action && (action.label || action.value)) || "").trim();
+      if (intent === "ask-figure" || intent === "ask-accessory" || intent === "identify-details" || intent === "identify-accessory") {
+        if (label) addMessage("user", label);
+      }
       if (intent === "ask-figure") {
         promptAboutIdentified("figure");
         return;
@@ -899,7 +964,18 @@
       clearPhoto();
       inputEl.value = "";
       autoSizeInput();
-      addMessage("user", note ? "📷 " + note : "📷 Photo uploaded for analysis");
+      const shownPhoto = await compressPhoto(imageDataUrl);
+      addImageCard({
+        url: shownPhoto,
+        alt: "Uploaded photo",
+        userPhoto: true,
+        historyText: note ? "" : "📷 Photo uploaded for analysis"
+      });
+      if (note) addMessage("user", note);
+      else {
+        state.history.push({ role: "user", content: "📷 Photo uploaded for analysis" });
+        syncLayoutClass(appEl.classList, state.history.filter((turn) => turn.role === "user").length);
+      }
       setStatus("SW-7885 is analysing the photo...");
 
       try {
@@ -927,6 +1003,32 @@
       } finally {
         setStatus("");
       }
+    }
+
+    function compressPhoto(dataUrl) {
+      return new Promise((resolve) => {
+        const img = new Image();
+        img.onload = () => {
+          const max = 720;
+          const scale = Math.min(1, max / Math.max(img.width, img.height, 1));
+          const canvas = document.createElement("canvas");
+          canvas.width = Math.max(1, Math.round(img.width * scale));
+          canvas.height = Math.max(1, Math.round(img.height * scale));
+          const ctx = canvas.getContext("2d");
+          if (!ctx) {
+            resolve(dataUrl);
+            return;
+          }
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          try {
+            resolve(canvas.toDataURL("image/jpeg", 0.72));
+          } catch (err) {
+            resolve(dataUrl);
+          }
+        };
+        img.onerror = () => resolve(dataUrl);
+        img.src = dataUrl;
+      });
     }
 
     function fileToDataUrl(file) {
@@ -963,10 +1065,43 @@
     });
 
     const welcomeGreeting = document.getElementById("welcomeGreeting");
-    state.history.push({
+    const greetingTurn = {
       role: "assistant",
       content: welcomeGreeting.textContent.replace(/\s+/g, " ").trim()
-    });
+    };
+
+    function restoreTranscript() {
+      const saved = loadTranscript(window.sessionStorage);
+      if (!saved || !saved.entries.length) return false;
+      state.entries = saved.entries.slice();
+      state.flowState = saved.flowState || null;
+      state.history = [greetingTurn];
+      for (const entry of state.entries) {
+        if (!entry || typeof entry !== "object") continue;
+        if (entry.kind === "text" && entry.text) {
+          paintMessage(entry.role === "user" ? "user" : "assistant", entry.text);
+          state.history.push({
+            role: entry.role === "user" ? "user" : "assistant",
+            content: entry.text
+          });
+        } else if (entry.kind === "image" && entry.url) {
+          paintImageCard(entry);
+          if (entry.historyText) {
+            state.history.push({ role: "user", content: entry.historyText });
+          }
+        }
+      }
+      const userTurns = state.history.filter((turn) => turn.role === "user").length;
+      syncLayoutClass(appEl.classList, userTurns > 0 || state.entries.length ? Math.max(userTurns, 1) : 0);
+      if (Array.isArray(saved.quickReplies) && saved.quickReplies.length) {
+        showQuickReplies(saved.quickReplies, saved.helper || "");
+      }
+      scrollToBottom();
+      return true;
+    }
+
+    if (!restoreTranscript()) state.history.push(greetingTurn);
+    persistEnabled = true;
 
     window.sendMessage = sendMessage;
     window.openPhotoPicker = openPhotoPicker;
