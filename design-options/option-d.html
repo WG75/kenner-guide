@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SW-7885 · Option D</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,500;0,700;1,700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #101010;
+      --red: #e10600;
+      --red-deep: #9b0c08;
+      --yellow: #f0c400;
+      --gold: #e0b03a;
+      --white: #f7f7f7;
+      --ink: #141414;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: #050505;
+      color: var(--white);
+      font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+    }
+
+    .card {
+      min-height: 100dvh;
+      background: var(--black);
+      box-shadow:
+        inset 0 0 0 10px var(--black),
+        inset 0 0 0 12px var(--gold),
+        inset 0 0 0 16px var(--black),
+        inset 0 0 0 18px var(--gold);
+      padding: 28px 32px 32px;
+    }
+
+    .legal {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #d0d0d0;
+    }
+
+    .namebar {
+      margin: 14px 0 0;
+      background: var(--red);
+      color: var(--white);
+      text-align: center;
+      padding: 8px 12px 10px;
+      border-top: 5px solid var(--yellow);
+      border-bottom: 5px solid var(--yellow);
+    }
+
+    .title {
+      margin: 0;
+      font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+      font-weight: 700;
+      font-size: clamp(32px, 6vw, 48px);
+      letter-spacing: 0.16em;
+      line-height: 1;
+      text-indent: 0.16em;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      text-align: center;
+      color: var(--yellow);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .copy {
+      width: min(720px, 100%);
+      margin: 22px auto 0;
+    }
+
+    .greeting {
+      margin: 0;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.45;
+    }
+
+    .greeting a {
+      color: var(--yellow);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid var(--yellow);
+    }
+
+    .identify-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .identify,
+    .camera,
+    .send {
+      font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 0;
+    }
+
+    .identify {
+      flex: 1 1 0;
+      min-height: 48px;
+      background: var(--red);
+      color: var(--white);
+      font-size: 16px;
+      box-shadow: inset 0 -4px 0 var(--red-deep);
+    }
+
+    .identify:hover { background: #ff1f16; }
+
+    .identify:focus-visible,
+    .camera:focus-visible,
+    .send:focus-visible {
+      outline: 2px solid var(--yellow);
+      outline-offset: 2px;
+    }
+
+    .composer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .camera {
+      width: 56px;
+      height: 48px;
+      flex: 0 0 auto;
+      background: var(--red);
+      color: var(--white);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 -4px 0 var(--red-deep);
+    }
+
+    .ask {
+      flex: 1 1 auto;
+      min-width: 0;
+      height: 48px;
+      border: 2px solid var(--yellow);
+      background: var(--white);
+      color: var(--ink);
+      font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+      font-size: 16px;
+      padding: 0 12px;
+    }
+
+    .ask::placeholder { color: #5c5c5c; }
+
+    .ask:focus { outline: 2px solid var(--red); outline-offset: 1px; }
+
+    .send {
+      width: 96px;
+      height: 48px;
+      flex: 0 0 auto;
+      background: var(--yellow);
+      color: var(--ink);
+      font-size: 16px;
+      box-shadow: inset 0 -4px 0 #b08a00;
+    }
+
+    .card-foot {
+      width: min(720px, 100%);
+      margin: 28px auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .kenner-word {
+      display: inline-block;
+      background: var(--white);
+      color: var(--red);
+      font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      padding: 6px 16px 8px;
+      border-radius: 999px;
+    }
+
+    .fine {
+      margin: 0;
+      color: #c8c8c8;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-align: right;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        box-shadow:
+          inset 0 0 0 6px var(--black),
+          inset 0 0 0 8px var(--gold),
+          inset 0 0 0 11px var(--black),
+          inset 0 0 0 13px var(--gold);
+        padding: 18px 14px 24px;
+      }
+      .legal { font-size: 10px; letter-spacing: 0.08em; }
+      .greeting { font-size: 16px; }
+      .identify-row { flex-direction: column; }
+      .send { width: 76px; }
+      .card-foot { flex-direction: column; align-items: flex-start; }
+      .fine { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p class="legal"><span>Ages 4 and up</span><span>No. 7885</span></p>
+    <header class="namebar">
+      <h1 class="title">SW-7885</h1>
+    </header>
+    <p class="subtitle">Collector Companion Droid for vintage Star Wars figures and accessories</p>
+
+    <div class="copy">
+      <p class="greeting">Hello, I am SW-7885, vintage collector relations. And this is my counterpart, <a href="https://www.variantvillain.com/" target="_blank" rel="noopener noreferrer">Variant Villain</a>, fluent in over one thousand figures and accessories produced between 1978 and 1985. How can we be of assistance?</p>
+
+      <div class="identify-row">
+        <button type="button" class="identify">Identify a Figure</button>
+        <button type="button" class="identify">Identify Accessories</button>
+      </div>
+
+      <form class="composer" action="#" onsubmit="return false">
+        <button type="button" class="camera" aria-label="Upload a figure photo">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="currentColor" d="M9 6.5 10.2 4.5h3.6L15 6.5h3.2A1.8 1.8 0 0 1 20 8.3v8.4a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 16.7V8.3A1.8 1.8 0 0 1 5.8 6.5H9Zm3 10.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z"/>
+          </svg>
+        </button>
+        <input class="ask" type="text" placeholder="Ask your question here" aria-label="Ask your question here" />
+        <button type="submit" class="send">Send</button>
+      </form>
+
+      <div class="card-foot">
+        <span class="kenner-word">Kenner</span>
+        <p class="fine">Vintage line · 1978–1985</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

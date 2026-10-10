@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SW-7885 · Option C</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #070707;
+      --window: #c4161c;
+      --window-deep: #8e1016;
+      --gold: #e6c35c;
+      --white: #f7f7f7;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--black);
+      color: var(--white);
+      font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+    }
+
+    .surround {
+      min-height: 100dvh;
+      padding: 36px 20px 48px;
+      background:
+        linear-gradient(180deg, #101010, #070707 30%);
+    }
+
+    .gold-frame {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      background: var(--gold);
+      padding: 3px;
+    }
+
+    .white-frame {
+      background: var(--white);
+      padding: 3px;
+    }
+
+    .red-window {
+      background:
+        radial-gradient(circle at 50% 0%, #e0232a 0%, var(--window) 42%, var(--window-deep) 100%);
+      padding: 26px 22px 20px;
+    }
+
+    .lockup { text-align: center; }
+
+    .title {
+      margin: 0;
+      font-size: clamp(34px, 6vw, 52px);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 0.95;
+      text-indent: 0.12em;
+    }
+
+    .subtitle {
+      margin: 8px 0 0;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: #ffe8e8;
+    }
+
+    .greeting {
+      margin: 22px auto 0;
+      max-width: 620px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .greeting a {
+      color: var(--gold);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .identify-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .identify {
+      flex: 1 1 0;
+      min-height: 48px;
+      background: #111111;
+      color: var(--white);
+      border: 1px solid var(--gold);
+      font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .identify:hover { background: #1c1c1c; }
+
+    .identify:focus-visible,
+    .camera:focus-visible,
+    .send:focus-visible {
+      outline: 2px solid var(--white);
+      outline-offset: 2px;
+    }
+
+    .composer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .camera,
+    .send {
+      flex: 0 0 auto;
+      height: 48px;
+      border: 1px solid var(--gold);
+      background: #111111;
+      color: var(--gold);
+      cursor: pointer;
+      font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .camera {
+      width: 56px;
+      display: grid;
+      place-items: center;
+      padding: 0;
+    }
+
+    .ask {
+      flex: 1 1 auto;
+      min-width: 0;
+      height: 48px;
+      border: 0;
+      background: var(--white);
+      color: #1a1a1a;
+      font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 0 12px;
+    }
+
+    .ask::placeholder { color: #6b6b6b; }
+
+    .ask:focus { outline: 2px solid #111; outline-offset: -3px; }
+
+    .send { width: 92px; font-size: 16px; }
+
+    .send:hover,
+    .camera:hover { background: #000; }
+
+    @media (max-width: 640px) {
+      .surround { padding: 16px 10px 32px; }
+      .red-window { padding: 18px 12px 14px; }
+      .greeting { font-size: 16px; }
+      .identify-row { flex-direction: column; }
+      .send { width: 72px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="surround">
+    <div class="gold-frame">
+      <div class="white-frame">
+        <div class="red-window">
+          <header class="lockup">
+            <h1 class="title">SW-7885</h1>
+            <p class="subtitle">Collector Companion Droid for vintage Star Wars figures and accessories</p>
+          </header>
+
+          <p class="greeting">Hello, I am SW-7885, vintage collector relations. And this is my counterpart, <a href="https://www.variantvillain.com/" target="_blank" rel="noopener noreferrer">Variant Villain</a>, fluent in over one thousand figures and accessories produced between 1978 and 1985. How can we be of assistance?</p>
+
+          <div class="identify-row">
+            <button type="button" class="identify">Identify a Figure</button>
+            <button type="button" class="identify">Identify Accessories</button>
+          </div>
+
+          <form class="composer" action="#" onsubmit="return false">
+            <button type="button" class="camera" aria-label="Upload a figure photo">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path fill="currentColor" d="M9 6.5 10.2 4.5h3.6L15 6.5h3.2A1.8 1.8 0 0 1 20 8.3v8.4a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 16.7V8.3A1.8 1.8 0 0 1 5.8 6.5H9Zm3 10.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z"/>
+              </svg>
+            </button>
+            <input class="ask" type="text" placeholder="Ask your question here" aria-label="Ask your question here" />
+            <button type="submit" class="send">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

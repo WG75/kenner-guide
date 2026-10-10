@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SW-7885 · Option B</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black: #070707;
+      --gold: #e0b03a;
+      --gold-light: #f6e2a0;
+      --gold-mid: #c8962e;
+      --gold-deep: #8d6412;
+      --red: #e10600;
+      --white: #f4efe4;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(ellipse at 50% -10%, rgba(224, 176, 58, 0.28), transparent 42%),
+        var(--black);
+      color: var(--white);
+      font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+    }
+
+    .sheet {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      padding: 8px 18px 36px;
+    }
+
+    .metal-bar {
+      text-align: center;
+      padding: 22px 8px 16px;
+      background:
+        linear-gradient(180deg, rgba(246, 226, 160, 0.16), transparent 55%),
+        repeating-linear-gradient(90deg, rgba(255, 236, 180, 0.04) 0 1px, transparent 1px 3px);
+      border-bottom: 0;
+    }
+
+    .rule {
+      height: 4px;
+      margin: 0 auto;
+      width: min(640px, 100%);
+      background: linear-gradient(90deg, #5c430c, #f6e2a0, #e0b03a, #fff6d0, #c8962e, #8d6412);
+    }
+
+    .wordmark {
+      margin: 0;
+      font-family: Oswald, "Arial Narrow", Impact, sans-serif;
+      font-weight: 700;
+      font-size: clamp(46px, 10vw, 76px);
+      letter-spacing: 0.08em;
+      line-height: 0.9;
+      background: linear-gradient(180deg, #fff8dc 0%, #f6e2a0 18%, #e0b03a 42%, #8d6412 50%, #f0d56a 72%, #a67c1a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 2px 0 #3a2a08);
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--gold-light);
+      font-size: 14px;
+      letter-spacing: 0.06em;
+    }
+
+    .greeting {
+      margin: 28px auto 0;
+      max-width: 640px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.45;
+      color: var(--white);
+    }
+
+    .greeting a {
+      color: var(--gold-light);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .identify-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .identify {
+      flex: 1 1 0;
+      min-height: 48px;
+      background: transparent;
+      color: var(--gold-light);
+      border: 2px solid var(--gold);
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: inset 0 0 0 1px rgba(246, 226, 160, 0.35);
+    }
+
+    .identify:hover { background: rgba(224, 176, 58, 0.12); }
+
+    .identify:focus-visible,
+    .camera:focus-visible,
+    .send:focus-visible {
+      outline: 2px solid var(--gold-light);
+      outline-offset: 2px;
+    }
+
+    .composer {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .camera {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 auto;
+      border: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      color: #1a1203;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(circle at 35% 30%, #fff6d0, #e0b03a 42%, #8d6412 78%);
+      box-shadow: inset 0 1px 0 #fff8df, 0 2px 0 #5c430c;
+    }
+
+    .ask {
+      flex: 1 1 auto;
+      min-width: 0;
+      height: 48px;
+      border: 0;
+      border-bottom: 2px solid var(--gold-mid);
+      background: transparent;
+      color: var(--white);
+      font-family: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+      font-size: 17px;
+      padding: 0 4px;
+    }
+
+    .ask::placeholder { color: #8d8372; }
+
+    .ask:focus { outline: none; border-bottom-color: var(--gold-light); }
+
+    .send {
+      flex: 0 0 auto;
+      width: 96px;
+      height: 48px;
+      border: 0;
+      cursor: pointer;
+      background: var(--red);
+      color: #fff;
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      box-shadow: inset 0 -3px 0 #8e090c;
+    }
+
+    .send:hover { background: #ff1a12; }
+
+    @media (max-width: 640px) {
+      .sheet { padding: 4px 14px 28px; }
+      .greeting { font-size: 16px; }
+      .identify-row { flex-direction: column; }
+      .send { width: 78px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <header class="metal-bar">
+      <h1 class="wordmark">SW-7885</h1>
+      <p class="subtitle">Collector Companion Droid for vintage Star Wars figures and accessories</p>
+    </header>
+    <div class="rule" role="presentation"></div>
+
+    <p class="greeting">Hello, I am SW-7885, vintage collector relations. And this is my counterpart, <a href="https://www.variantvillain.com/" target="_blank" rel="noopener noreferrer">Variant Villain</a>, fluent in over one thousand figures and accessories produced between 1978 and 1985. How can we be of assistance?</p>
+
+    <div class="identify-row">
+      <button type="button" class="identify">Identify a Figure</button>
+      <button type="button" class="identify">Identify Accessories</button>
+    </div>
+
+    <form class="composer" action="#" onsubmit="return false">
+      <button type="button" class="camera" aria-label="Upload a figure photo">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path fill="currentColor" d="M9 6.5 10.2 4.5h3.6L15 6.5h3.2A1.8 1.8 0 0 1 20 8.3v8.4a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 16.7V8.3A1.8 1.8 0 0 1 5.8 6.5H9Zm3 10.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z"/>
+        </svg>
+      </button>
+      <input class="ask" type="text" placeholder="Ask your question here" aria-label="Ask your question here" />
+      <button type="submit" class="send">Send</button>
+    </form>
+  </div>
+</body>
+</html>
