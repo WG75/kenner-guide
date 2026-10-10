@@ -372,7 +372,7 @@
         "lightsaber"
       ],
       "years": [],
-      "chars": 3536
+      "chars": 3754
     },
     {
       "relPath": "accessories/emperor-cane.txt",
@@ -466,7 +466,7 @@
         "stick"
       ],
       "years": [],
-      "chars": 3868
+      "chars": 3962
     },
     {
       "relPath": "accessories/gamorrean-axe.txt",
@@ -704,7 +704,7 @@
         "cloak"
       ],
       "years": [],
-      "chars": 1645
+      "chars": 2187
     },
     {
       "relPath": "accessories/jawa-vinyl-cape.txt",
@@ -724,7 +724,7 @@
         "cape"
       ],
       "years": [],
-      "chars": 758
+      "chars": 1684
     },
     {
       "relPath": "accessories/klaatu-skirt-2.txt",
@@ -863,6 +863,22 @@
       "chars": 910
     },
     {
+      "relPath": "accessories/lightsaber.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Lightsaber",
+      "aliases": [
+        "Saber"
+      ],
+      "keywords": [
+        "Lightsaber",
+        "Saber"
+      ],
+      "years": [],
+      "chars": 1538
+    },
+    {
       "relPath": "accessories/luke-jedi-cloak.txt",
       "folder": "accessories",
       "topic": "accessory",
@@ -996,7 +1012,7 @@
         "blaster"
       ],
       "years": [],
-      "chars": 4688
+      "chars": 4838
     },
     {
       "relPath": "accessories/ree-yees-rifle.txt",
@@ -1146,7 +1162,7 @@
         "lightsaber"
       ],
       "years": [],
-      "chars": 2882
+      "chars": 3839
     },
     {
       "relPath": "accessories/tusken-raider-cape.txt",
@@ -2276,7 +2292,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4839
+      "chars": 5063
     },
     {
       "relPath": "figures/bespin-security-guard-2-reference.txt",
@@ -2922,7 +2938,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4523
+      "chars": 4685
     },
     {
       "relPath": "figures/hammerhead-reference.txt",
@@ -4608,7 +4624,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5003
+      "chars": 5165
     },
     {
       "relPath": "figures/squid-head-reference.txt",
@@ -4959,7 +4975,7 @@
         "collector_glossary"
       ],
       "years": [],
-      "chars": 4771
+      "chars": 4952
     },
     {
       "relPath": "references/coo-guide.txt",
@@ -4995,7 +5011,7 @@
         "package"
       ],
       "years": [],
-      "chars": 3672
+      "chars": 3807
     },
     {
       "relPath": "references/palitoy-history.txt",
@@ -6352,6 +6368,22 @@
       "chars": 6775
     },
     {
+      "relPath": "references/reference-urls.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "reference",
+      "aliases": [
+        "urls"
+      ],
+      "keywords": [
+        "reference",
+        "urls"
+      ],
+      "years": [],
+      "chars": 1903
+    },
+    {
       "relPath": "references/references.json",
       "folder": "references",
       "topic": "reference",
@@ -6670,7 +6702,7 @@
         "collector_terms"
       ],
       "years": [],
-      "chars": 3732
+      "chars": 3877
     },
     {
       "relPath": "variants/accvar_dt_lightsaber_m2_yellow.json",
@@ -6683,7 +6715,7 @@
         "accvar_dt_lightsaber_m2_yellow"
       ],
       "years": [],
-      "chars": 729
+      "chars": 923
     },
     {
       "relPath": "variants/accvar_handheld_lightsaber_m3_yellow.json",

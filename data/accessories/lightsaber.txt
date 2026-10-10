@@ -1,0 +1,34 @@
+Accessory Name: Lightsaber
+Aliases: Lightsaber; Saber
+
+Category:
+Accessory
+
+Overview:
+Vintage Kenner lightsabers are separate production types, not one accessory with a colour change. The detail lives in the files named below. This page is the short index. Source for the split: owner VF-CB reference pack, corrected where that pack disagrees with the live guides.
+
+1. Double-telescoping (DT)
+- Two-stage blade, with an inner filament
+- Earliest releases only
+- Luke Skywalker, yellow, is the common DT. Most, but not all, Early Bird Lukes had it
+- Ben Kenobi, blue, is extremely rare
+- Darth Vader, red, is extremely rare
+- A lettered hilt is M1. The unlettered circled DT is the other early type
+- See accessories/double-telescoping-lightsaber.txt
+
+2. Single telescoping (ST)
+- One extending blade. It replaced the DT
+- Luke yellow, Vader red, Ben blue
+- M1 is the lettered hilt. M2 through M10 are the Vader figure-guide list
+- See accessories/telescoping-lightsaber.txt
+
+3. Handheld
+- A separate later sabre, not a telescoping blade
+- Used with later figures, including Luke Skywalker (Bespin Fatigues) and Luke Skywalker (Jedi Knight Outfit)
+- See accessories/handheld-lightsaber.txt
+
+4. Pop-up sabre
+- The green removable lightsaber packed with the Last 17 R2-D2
+- See accessories/pop-up-saber.txt
+
+The owner pack called the Vader DT red "mostly pre-production" and called Ben's blue very rare compared with Vader's red. Those two lines are not used. Both Ben and Vader DT lightsabers are extremely rare, and Luke is the common DT.

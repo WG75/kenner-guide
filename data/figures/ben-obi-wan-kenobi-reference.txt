@@ -113,8 +113,8 @@ Colour:
 - Double-telescoping (DT) lightsabers are documented for Luke Skywalker (yellow), Ben Kenobi (blue) and Darth Vader (red) only, on the earliest releases, before the standard telescoping lightsaber replaced them. Evidence: documented.
 
 Moulds:
-- M1 (circled DT)
-- M2 (lettered DT)
+- M1 (lettered DT). A lettered hilt is always M1. Source: owner VF-CB reference pack.
+- Circled DT (unlettered). An older note on this page called the circled type M1 and the lettered type M2. That numbering is not used.
 
 Key Traits:
 - Inner telescoping blade
@@ -122,7 +122,7 @@ Key Traits:
 - Pale/translucent colours
 
 Notes:
-- M1 likely earlier than M2
+- The circled type is often treated as earlier than the lettered M1
 - Found across early Kader, Unitoy, Smile runs
 
 --------------------------------------------------

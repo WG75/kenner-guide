@@ -1844,6 +1844,33 @@ await test("mocked model answers Cloud Car Pilot and identify a figure without c
   assert.doesNotMatch(jawaReference, /not an Early Bird figure/);
 });
 
+await test("owner VF-CB reference pack rules stay on the accessory files", async () => {
+  const read = (rel) => fs.readFileSync(path.join(root, rel), "utf8");
+  const rebel = read("data/accessories/rebel-blaster.txt");
+  const gaffi = read("data/accessories/gaderffii-stick.txt");
+  const dt = read("data/accessories/double-telescoping-lightsaber.txt");
+  const saber = read("data/accessories/telescoping-lightsaber.txt");
+  const glossary = read("data/references/collector_glossary.txt");
+  const greedo = read("data/figures/greedo-reference.txt");
+  const variant = JSON.parse(read("data/variants/accvar_dt_lightsaber_m2_yellow.json"));
+  assert.match(rebel, /This guide uses Rebel Blaster/);
+  assert.doesNotMatch(greedo, /Weapons and Accessories: Smuggler Blaster/);
+  assert.match(gaffi, /M1 \(Unitoy\), M2, and M3 \(Kader\)/);
+  assert.doesNotMatch(gaffi, /PBP \(Spain\)/);
+  assert.match(dt, /A lettered hilt is always M1/);
+  assert.match(dt, /M1 – Lettered DT/);
+  assert.doesNotMatch(dt, /M2 – “Lettered DT”/);
+  assert.match(saber, /M6 – Round transition, thin shaft \(PBP\)/);
+  assert.match(saber, /M9 – Smooth transition, fat tip, short shaft \(Lili Ledy Regreso\)/);
+  assert.match(glossary, /does not grade a figure Mint/);
+  assert.equal(variant.id, "accvar_dt_lightsaber_m2_yellow");
+  assert.equal(variant.variant_code, "M1");
+  const gaps = read("docs/variantvillain-gaps.md");
+  assert.match(gaps, /\(c\) Accessories with no page or no details: 15/);
+  assert.match(gaps, /Luke Skywalker — lightsaber — Telescoping Lightsaber/);
+  assert.match(gaps, /Anakin Skywalker — lightsaber — Variant Villain and Rebelscum/);
+});
+
 console.error = quietErrors;
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed ? 1 : 0);

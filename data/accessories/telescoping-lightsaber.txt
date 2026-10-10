@@ -151,8 +151,23 @@ DT sabers should NOT be paired with standard production figures.
 
 ---
 
+Mould list (single telescoping):
+
+A lettered hilt is always M1. Source: owner VF-CB reference pack. The ten moulds below are the list on the Darth Vader figure guide (variantvillain.com). The owner pack's single-telescoping guide agrees with this list except M6 and M9, which are not copied from the pack. See docs/vfcb-reference-pack-conflicts.md.
+
+- M1 – Flat transition, lettered hilt (early Kader, Unitoy, Smile, Taiwan)
+- M2 – Flat transition, unlettered (Unitoy up to 21-back)
+- M3 – Flat transition, thin tip (Unitoy post 21-back, also Lili Ledy Retorno)
+- M4 – Flat transition, short shaft (Takara)
+- M5 – Round transition, wide shaft (Kader and Smile post 12c-back, also PBP)
+- M6 – Round transition, thin shaft (PBP)
+- M7 – Smooth transition, EPM to handle (Taiwan)
+- M8 – Smooth transition, fat tip, long shaft (Glasslite)
+- M9 – Smooth transition, fat tip, short shaft (Lili Ledy Regreso)
+- M10 – Smooth transition, EPM to shaft (Top Toys)
+
 Related reference files:
 - double-telescoping-lightsaber.txt
 - luke-skywalker-reference.txt
 - darth-vader-reference.txt
-- obi-wan-kenobi-reference.txt
+- ben-obi-wan-kenobi-reference.txt

@@ -3,7 +3,8 @@ Accessory Name: Rebel Blaster (DL-44)
 Category:
 Primary Weapon – Blaster Pistol 
 
-Also known as: Rebel Blaster, Smugger Blaster. Smaugglers Blaster, Smugglers
+Also known as: Rebel Blaster, Han Solo Blaster.
+Older lists called this a Smuggler Blaster. This guide uses Rebel Blaster. Smugger Blaster and Smaugglers Blaster are misspellings, not names. Source: owner VF-CB reference pack.
 
 Used With:
 - Han Solo (primary)
