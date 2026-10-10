@@ -6,19 +6,18 @@
   <title>SW-7885 · Option A</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Cinzel:wght@700;900&family=Oswald:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Cinzel:wght@900&display=swap" rel="stylesheet" />
   <style>
     :root {
       --black: #0c0c0c;
       --panel: #141414;
       --red: #e10600;
-      --red-deep: #8e090c;
+      --window: #c4161c;
       --gold: #e0b03a;
       --gold-light: #f6e2a0;
       --gold-deep: #8d6412;
       --chrome: #f4f4f4;
       --chrome-mid: #b5b5b5;
-      --chrome-shadow: #5e5e5e;
       --white: #f7f7f7;
     }
 
@@ -35,71 +34,88 @@
     }
 
     .box {
-      width: min(780px, calc(100% - 32px));
+      width: min(920px, calc(100% - 32px));
       margin: 28px auto 40px;
       background: var(--panel);
       border: 1px solid var(--gold-deep);
-      box-shadow:
-        0 0 0 5px #0c0c0c,
-        0 0 0 6px #c6a15a;
-      padding: 26px 28px 22px;
+      box-shadow: 0 0 0 5px #0c0c0c, 0 0 0 6px #c6a15a;
+      padding: 22px 24px 20px;
     }
 
-    .lockup { text-align: center; }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(180px, 0.75fr);
+      gap: 18px;
+      align-items: stretch;
+    }
 
-    .saga {
-      margin: 0;
-      font-family: Oswald, "Arial Narrow", Impact, sans-serif;
-      font-weight: 600;
+    .aka, .code, .role, .blurb { margin: 0; }
+
+    .aka {
       font-size: 15px;
-      letter-spacing: 0.48em;
-      color: transparent;
-      -webkit-text-stroke: 1px var(--chrome);
-      text-indent: 0.48em;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
     }
 
-    .banner {
-      width: min(540px, 100%);
-      margin: 10px auto 0;
-      background: linear-gradient(180deg, #ffffff 0%, #d9d9d9 28%, #8a8a8a 46%, #f7f7f7 54%, #6a6a6a 100%);
-      padding: 4px;
-      clip-path: polygon(7% 0, 93% 0, 100% 50%, 93% 100%, 7% 100%, 0 50%);
-    }
-
-    .banner-inner {
-      background: linear-gradient(180deg, #2a0506 0%, #0c0c0c 40%, #1a0708 100%);
-      clip-path: polygon(6% 0, 94% 0, 100% 50%, 94% 100%, 6% 100%, 0 50%);
-      padding: 8px 28px 10px;
-    }
-
-    .banner-text {
-      display: block;
-      font-family: Cinzel, Palatino, "Times New Roman", serif;
-      font-weight: 900;
-      font-size: clamp(30px, 5vw, 48px);
-      letter-spacing: 0.14em;
-      line-height: 1;
-      color: var(--red);
-      -webkit-text-stroke: 1.5px var(--chrome);
-      paint-order: stroke fill;
-      text-shadow:
-        0 1px 0 #ffffff,
-        0 2px 0 var(--chrome-mid),
-        0 3px 0 var(--chrome-shadow);
-      padding-left: 0.14em;
-    }
-
-    .subtitle {
-      margin: 12px 0 0;
-      color: #d5d5d5;
-      font-size: 14px;
-      font-weight: 500;
+    .code {
+      margin-top: 4px;
+      font-size: 20px;
+      font-weight: 700;
       letter-spacing: 0.04em;
     }
 
+    .role {
+      margin-top: 6px;
+      font-family: Cinzel, Palatino, "Times New Roman", serif;
+      font-weight: 900;
+      font-size: clamp(26px, 3.4vw, 38px);
+      letter-spacing: 0.06em;
+      line-height: 1.05;
+      color: var(--red);
+      -webkit-text-stroke: 1px var(--chrome);
+      paint-order: stroke fill;
+      text-shadow: 0 1px 0 #fff, 0 2px 0 var(--chrome-mid);
+    }
+
+    .blurb {
+      margin-top: 8px;
+      max-width: 42ch;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.3;
+      color: #e6e6e6;
+    }
+
+    .art-frame {
+      background: var(--gold);
+      padding: 3px;
+      min-height: 180px;
+    }
+
+    .art-white { background: var(--chrome); padding: 3px; height: 100%; }
+
+    .art {
+      height: 100%;
+      min-height: 168px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 12px;
+      background: radial-gradient(circle at 50% 0%, #e0232a, var(--window) 55%, #8e1016);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.35;
+    }
+
+    .art span { max-width: 16ch; }
+
     .greeting {
       margin: 26px auto 0;
-      max-width: 640px;
+      max-width: 680px;
       text-align: center;
       font-size: 18px;
       font-weight: 500;
@@ -113,18 +129,9 @@
       border-bottom: 1px solid var(--gold);
     }
 
-    .greeting a:hover,
-    .greeting a:focus-visible { color: #fff4cc; }
+    .identify-row { display: flex; gap: 12px; margin-top: 22px; }
 
-    .identify-row {
-      display: flex;
-      gap: 12px;
-      margin-top: 22px;
-    }
-
-    .identify,
-    .send,
-    .camera {
+    .identify, .send, .camera {
       font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
       font-weight: 700;
       letter-spacing: 0.08em;
@@ -136,43 +143,16 @@
       box-shadow: inset 0 1px 0 #fff8df, 0 2px 0 #5c430c;
     }
 
-    .identify {
-      flex: 1 1 0;
-      min-height: 48px;
-      font-size: 16px;
-    }
-
-    .identify:hover,
-    .send:hover,
-    .camera:hover { filter: brightness(1.06); }
-
-    .identify:focus-visible,
-    .send:focus-visible,
-    .camera:focus-visible {
+    .identify { flex: 1 1 0; min-height: 48px; font-size: 16px; }
+    .identify:hover, .send:hover, .camera:hover { filter: brightness(1.06); }
+    .identify:focus-visible, .send:focus-visible, .camera:focus-visible {
       outline: 2px solid var(--chrome);
       outline-offset: 2px;
     }
 
-    .composer {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .camera,
-    .send {
-      flex: 0 0 auto;
-      height: 48px;
-    }
-
-    .camera {
-      width: 56px;
-      display: grid;
-      place-items: center;
-      padding: 0;
-    }
-
+    .composer { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+    .camera, .send { flex: 0 0 auto; height: 48px; }
+    .camera { width: 56px; display: grid; place-items: center; padding: 0; }
     .camera svg { display: block; }
 
     .ask {
@@ -188,21 +168,13 @@
     }
 
     .ask::placeholder { color: #9a9a9a; }
-
-    .ask:focus {
-      outline: 2px solid var(--gold);
-      outline-offset: 1px;
-    }
-
-    .send {
-      width: 92px;
-      font-size: 16px;
-    }
+    .ask:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+    .send { width: 92px; font-size: 16px; }
 
     @media (max-width: 640px) {
-      .box { width: calc(100% - 16px); margin-top: 12px; padding: 18px 14px 16px; }
-      .saga { font-size: 12px; letter-spacing: 0.32em; text-indent: 0.32em; }
-      .subtitle { font-size: 13px; }
+      .box { width: calc(100% - 16px); margin-top: 12px; padding: 16px 12px 14px; }
+      .hero { grid-template-columns: 1fr; }
+      .art { min-height: 140px; }
       .greeting { font-size: 16px; }
       .identify-row { flex-direction: column; }
       .send { width: 72px; }
@@ -211,15 +183,20 @@
 </head>
 <body>
   <div class="box">
-    <header class="lockup">
-      <p class="saga">STAR WARS</p>
-      <div class="banner">
-        <div class="banner-inner">
-          <span class="banner-text">SW-7885</span>
+    <section class="hero">
+      <div class="cover-copy">
+        <p class="aka">ESS DOUBLE U - SEVENTY EIGHT EIGHTY FIVE</p>
+        <p class="code">(SW-7885)</p>
+        <h1 class="role">COLLECTOR'S DROID</h1>
+        <p class="blurb">Holds knowledge for Star Wars figures produced between 1978 and 1985</p>
+        <p class="blurb">Includes photos and information on figure and accessory variants</p>
+      </div>
+      <div class="art-frame">
+        <div class="art-white">
+          <div class="art" role="img" aria-label="SW-7885 droid art coming soon"><span>SW-7885 droid art coming soon</span></div>
         </div>
       </div>
-      <p class="subtitle">Collector Companion Droid for vintage Star Wars figures and accessories</p>
-    </header>
+    </section>
 
     <p class="greeting">Hello, I am SW-7885, vintage collector relations. And this is my counterpart, <a href="https://www.variantvillain.com/" target="_blank" rel="noopener noreferrer">Variant Villain</a>, fluent in over one thousand figures and accessories produced between 1978 and 1985. How can we be of assistance?</p>
 
@@ -230,9 +207,7 @@
 
     <form class="composer" action="#" onsubmit="return false">
       <button type="button" class="camera" aria-label="Upload a figure photo">
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-          <path fill="currentColor" d="M9 6.5 10.2 4.5h3.6L15 6.5h3.2A1.8 1.8 0 0 1 20 8.3v8.4a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 16.7V8.3A1.8 1.8 0 0 1 5.8 6.5H9Zm3 10.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M9 6.5 10.2 4.5h3.6L15 6.5h3.2A1.8 1.8 0 0 1 20 8.3v8.4a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 16.7V8.3A1.8 1.8 0 0 1 5.8 6.5H9Zm3 10.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z"/></svg>
       </button>
       <input class="ask" type="text" placeholder="Ask your question here" aria-label="Ask your question here" />
       <button type="submit" class="send">Send</button>

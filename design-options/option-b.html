@@ -31,55 +31,97 @@
     }
 
     .sheet {
-      width: min(760px, 100%);
+      width: min(920px, calc(100% - 28px));
       margin: 0 auto;
-      padding: 8px 18px 36px;
+      padding: 22px 4px 36px;
     }
 
-    .metal-bar {
-      text-align: center;
-      padding: 22px 8px 16px;
-      background:
-        linear-gradient(180deg, rgba(246, 226, 160, 0.16), transparent 55%),
-        repeating-linear-gradient(90deg, rgba(255, 236, 180, 0.04) 0 1px, transparent 1px 3px);
-      border-bottom: 0;
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(180px, 0.75fr);
+      gap: 18px;
+      align-items: stretch;
     }
 
-    .rule {
-      height: 4px;
-      margin: 0 auto;
-      width: min(640px, 100%);
-      background: linear-gradient(90deg, #5c430c, #f6e2a0, #e0b03a, #fff6d0, #c8962e, #8d6412);
+    .aka, .code, .role, .blurb { margin: 0; }
+
+    .aka {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
     }
 
-    .wordmark {
-      margin: 0;
+    .code {
+      margin-top: 2px;
+      font-family: Oswald, "Arial Narrow", sans-serif;
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+      color: var(--gold-light);
+    }
+
+    .role {
+      margin-top: 4px;
       font-family: Oswald, "Arial Narrow", Impact, sans-serif;
       font-weight: 700;
-      font-size: clamp(46px, 10vw, 76px);
-      letter-spacing: 0.08em;
-      line-height: 0.9;
-      background: linear-gradient(180deg, #fff8dc 0%, #f6e2a0 18%, #e0b03a 42%, #8d6412 50%, #f0d56a 72%, #a67c1a 100%);
+      font-size: clamp(32px, 4vw, 48px);
+      letter-spacing: 0.04em;
+      line-height: 0.95;
+      background: linear-gradient(180deg, #fff8dc 0%, #f6e2a0 22%, #e0b03a 48%, #8d6412 52%, #f0d56a 78%, #a67c1a 100%);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       filter: drop-shadow(0 2px 0 #3a2a08);
     }
 
-    .subtitle {
-      margin: 10px 0 0;
+    .blurb {
+      margin-top: 8px;
+      max-width: 42ch;
+      font-size: 15px;
+      line-height: 1.3;
+      color: var(--white);
+    }
+
+    .art-frame {
+      padding: 3px;
+      min-height: 180px;
+      background: linear-gradient(160deg, #fff6d0, #e0b03a 35%, #8d6412 70%, #f6e2a0);
+    }
+
+    .art {
+      height: 100%;
+      min-height: 174px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 14px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(246, 226, 160, 0.16), transparent 55%),
+        #0a0a0a;
       color: var(--gold-light);
+      font-family: Oswald, "Arial Narrow", sans-serif;
       font-size: 14px;
-      letter-spacing: 0.06em;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.35;
+    }
+
+    .art span { max-width: 16ch; }
+
+    .rule {
+      height: 3px;
+      margin: 18px 0 0;
+      background: linear-gradient(90deg, #5c430c, #f6e2a0, #e0b03a, #fff6d0, #c8962e, #8d6412);
     }
 
     .greeting {
-      margin: 28px auto 0;
-      max-width: 640px;
+      margin: 22px auto 0;
+      max-width: 680px;
       text-align: center;
       font-size: 18px;
       line-height: 1.45;
-      color: var(--white);
     }
 
     .greeting a {
@@ -89,11 +131,7 @@
       border-bottom: 1px solid var(--gold);
     }
 
-    .identify-row {
-      display: flex;
-      gap: 12px;
-      margin-top: 26px;
-    }
+    .identify-row { display: flex; gap: 12px; margin-top: 22px; }
 
     .identify {
       flex: 1 1 0;
@@ -111,20 +149,12 @@
     }
 
     .identify:hover { background: rgba(224, 176, 58, 0.12); }
-
-    .identify:focus-visible,
-    .camera:focus-visible,
-    .send:focus-visible {
+    .identify:focus-visible, .camera:focus-visible, .send:focus-visible {
       outline: 2px solid var(--gold-light);
       outline-offset: 2px;
     }
 
-    .composer {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-top: 14px;
-    }
+    .composer { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
 
     .camera {
       width: 52px;
@@ -154,7 +184,6 @@
     }
 
     .ask::placeholder { color: #8d8372; }
-
     .ask:focus { outline: none; border-bottom-color: var(--gold-light); }
 
     .send {
@@ -173,10 +202,10 @@
       box-shadow: inset 0 -3px 0 #8e090c;
     }
 
-    .send:hover { background: #ff1a12; }
-
     @media (max-width: 640px) {
-      .sheet { padding: 4px 14px 28px; }
+      .sheet { width: calc(100% - 20px); padding-top: 16px; }
+      .hero { grid-template-columns: 1fr; }
+      .art { min-height: 140px; }
       .greeting { font-size: 16px; }
       .identify-row { flex-direction: column; }
       .send { width: 78px; }
@@ -185,10 +214,18 @@
 </head>
 <body>
   <div class="sheet">
-    <header class="metal-bar">
-      <h1 class="wordmark">SW-7885</h1>
-      <p class="subtitle">Collector Companion Droid for vintage Star Wars figures and accessories</p>
-    </header>
+    <section class="hero">
+      <div class="cover-copy">
+        <p class="aka">ESS DOUBLE U - SEVENTY EIGHT EIGHTY FIVE</p>
+        <p class="code">(SW-7885)</p>
+        <h1 class="role">COLLECTOR'S DROID</h1>
+        <p class="blurb">Holds knowledge for Star Wars figures produced between 1978 and 1985</p>
+        <p class="blurb">Includes photos and information on figure and accessory variants</p>
+      </div>
+      <div class="art-frame">
+        <div class="art" role="img" aria-label="SW-7885 droid art coming soon"><span>SW-7885 droid art coming soon</span></div>
+      </div>
+    </section>
     <div class="rule" role="presentation"></div>
 
     <p class="greeting">Hello, I am SW-7885, vintage collector relations. And this is my counterpart, <a href="https://www.variantvillain.com/" target="_blank" rel="noopener noreferrer">Variant Villain</a>, fluent in over one thousand figures and accessories produced between 1978 and 1985. How can we be of assistance?</p>
@@ -200,9 +237,7 @@
 
     <form class="composer" action="#" onsubmit="return false">
       <button type="button" class="camera" aria-label="Upload a figure photo">
-        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-          <path fill="currentColor" d="M9 6.5 10.2 4.5h3.6L15 6.5h3.2A1.8 1.8 0 0 1 20 8.3v8.4a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 16.7V8.3A1.8 1.8 0 0 1 5.8 6.5H9Zm3 10.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z"/>
-        </svg>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M9 6.5 10.2 4.5h3.6L15 6.5h3.2A1.8 1.8 0 0 1 20 8.3v8.4a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 16.7V8.3A1.8 1.8 0 0 1 5.8 6.5H9Zm3 10.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z"/></svg>
       </button>
       <input class="ask" type="text" placeholder="Ask your question here" aria-label="Ask your question here" />
       <button type="submit" class="send">Send</button>
