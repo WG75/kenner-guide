@@ -1,6 +1,6 @@
 {
   "source": "https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures",
-  "sourceNote": "Debut card and year are that page's debut-package table. The year column is production year and is used here as the first-release year in the photo reply. Accessories are the original bubble pieces for the completeness line only. This file is not reference evidence for variant answers.",
+  "sourceNote": "Debut card and year are that page's debut-package table. The year column is production year and is used here as the first-release year in the photo reply. Wikipedia has no accessory column. Accessories are the photo completeness list in tools/build-kenner-debut-figures.py. Han Solo (Bespin Outfit) has no cape, Romba has no bow, and Paploo has no spear. Anakin Skywalker has no accessory. This file is not reference evidence for variant answers.",
   "figures": [
     {
       "product": "38180",
@@ -613,7 +613,6 @@
       "pronoun": "he",
       "possessive": "his",
       "accessories": [
-        "cape",
         "blaster"
       ]
     },
@@ -1416,9 +1415,7 @@
       "outsideUs": false,
       "pronoun": "he",
       "possessive": "his",
-      "accessories": [
-        "spear"
-      ]
+      "accessories": []
     },
     {
       "product": "93710",
@@ -1469,9 +1466,7 @@
       "outsideUs": false,
       "pronoun": "he",
       "possessive": "his",
-      "accessories": [
-        "bow"
-      ]
+      "accessories": []
     },
     {
       "product": "93740",
@@ -1573,9 +1568,7 @@
       "outsideUs": false,
       "pronoun": "he",
       "possessive": "his",
-      "accessories": [
-        "lightsaber"
-      ]
+      "accessories": []
     },
     {
       "product": "93800",

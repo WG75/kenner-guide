@@ -16,6 +16,11 @@ from pathlib import Path
 
 # Product number -> collector name, pronoun, original bubble accessories.
 # Names match the figure dossiers where the app already has one.
+# This list is not read from Wikipedia. That table's columns are wave, debut
+# card, figure name, product number and year. It has no accessory column.
+# Owner correction: Han Solo (Bespin Outfit) has no cape, Romba has no bow,
+# and Paploo has no spear. Anakin Skywalker has no accessory: his Variant
+# Villain page says he was never packaged with one.
 EXTRAS = {
     "38180": ("Luke Skywalker", "he", ["lightsaber"]),
     "38190": ("Princess Leia Organa", "she", ["cape", "blaster"]),
@@ -51,7 +56,7 @@ EXTRAS = {
     "38310": ("Yoda", "he", ["cane", "snake", "belt"]),
     "39319": ("Ugnaught", "he", ["smock", "case"]),
     "39329": ("Dengar", "he", ["rifle"]),
-    "39339": ("Han Solo (Bespin Outfit)", "he", ["cape", "blaster"]),
+    "39339": ("Han Solo (Bespin Outfit)", "he", ["blaster"]),
     "39349": ("Lobot", "he", ["blaster"]),
     "39359": ("Leia (Hoth Outfit)", "she", ["blaster"]),
     "39369": ("Rebel Commander", "he", ["blaster"]),
@@ -97,16 +102,16 @@ EXTRAS = {
     "71330": ("AT-ST Driver", "he", ["blaster"]),
     "71350": ("Rancor Keeper", "he", ["axe"]),
     "93670": ("Lumat", "he", ["bow"]),
-    "93680": ("Paploo", "he", ["spear"]),
+    "93680": ("Paploo", "he", []),
     "93710": ("Luke Skywalker (in Battle Poncho)", "he", ["blaster"]),
     "93720": ("Artoo-Detoo (R2-D2) with pop-up Lightsaber", "he", ["lightsaber"]),
-    "93730": ("Romba", "he", ["bow"]),
+    "93730": ("Romba", "he", []),
     "93740": ("Amanaman", "he", ["staff"]),
     "93750": ("Barada", "he", ["polearm"]),
     "93760": ("Imperial Gunner", "he", ["blaster"]),
     "93770": ("Han Solo (in Carbonite Chamber)", "he", ["carbonite chamber"]),
     "93780": ("Luke Skywalker (Imperial Stormtrooper Outfit)", "he", ["blaster"]),
-    "93790": ("Anakin Skywalker", "he", ["lightsaber"]),
+    "93790": ("Anakin Skywalker", "he", []),
     "93800": ("EV-9D9", "it", []),
     "93810": ("Warok", "he", ["bow"]),
     "93820": ("Lando Calrissian (General Pilot)", "he", ["cape", "blaster"]),
@@ -186,7 +191,7 @@ def main():
         raise SystemExit(f"Product numbers not in the table: {missing}")
     out = {
         "source": "https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures",
-        "sourceNote": "Debut card and year are that page's debut-package table. The year column is production year and is used here as the first-release year in the photo reply. Accessories are the original bubble pieces for the completeness line only. This file is not reference evidence for variant answers.",
+        "sourceNote": "Debut card and year are that page's debut-package table. The year column is production year and is used here as the first-release year in the photo reply. Wikipedia has no accessory column. Accessories are the photo completeness list in tools/build-kenner-debut-figures.py. Han Solo (Bespin Outfit) has no cape, Romba has no bow, and Paploo has no spear. Anakin Skywalker has no accessory. This file is not reference evidence for variant answers.",
         "figures": figures,
     }
     dest = Path(__file__).resolve().parents[1] / "data" / "kenner-debut-figures.json"
