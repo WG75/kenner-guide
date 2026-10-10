@@ -38,6 +38,8 @@ The hood is often a key distinguishing feature between variants, with difference
 - height
 - overall shape and cut
 
+The owner VF-CB reference pack groups cloth cloaks into N families. N1 is the early cloth type, with a coarse weave and a simpler construction. N2 differs in fabric density, stitching layout and sleeve proportions. N3 differs in fabric texture and hood construction. Further N families differ in weave, stitching and garment proportions. Weave and stitching identify the cloak. Colour does not. The pack's phrase "later release" for the cloth cloak is not used here: the switch from vinyl happened very early, and cloth appeared very early.
+
 ---
 
 Collector Notes:

@@ -123,7 +123,66 @@ def match_figure(fig, catalog):
     return top[0] if len(top) == 1 else None
 
 
+# Bubble pieces that are the same accessory as an existing guide, even when the
+# guide title does not contain the figure's name. Justified from the figure
+# reference or from reports/missing-vv-accessories.md.
+SAME_ACCESSORY = {
+    ("luke skywalker", "lightsaber"): "Telescoping Lightsaber",
+    ("darth vader", "lightsaber"): "Telescoping Lightsaber",
+    ("ben obi wan kenobi", "lightsaber"): "Telescoping Lightsaber",
+    ("luke skywalker x wing pilot", "lightsaber"): "Telescoping Lightsaber",
+    ("luke skywalker jedi knight outfit", "lightsaber"): "Handheld Lightsaber",
+    ("artoo detoo r2 d2 with pop up lightsaber", "lightsaber"): "Pop-Up Saber",
+    ("han solo", "blaster"): "Rebel Blaster",
+    ("greedo", "blaster"): "Rebel Blaster",
+    ("snaggletooth", "blaster"): "Rebel Blaster",
+    ("han solo hoth outfit", "blaster"): "Rebel Blaster",
+    ("han solo in trench coat", "blaster"): "Rebel Blaster",
+    ("luke skywalker bespin fatigues", "blaster"): "Rebel Blaster",
+    ("death squad commander", "blaster"): "Imperial Blaster",
+    ("walrus man", "blaster"): "Imperial Blaster",
+    ("boba fett", "blaster"): "Imperial Blaster",
+    ("luke skywalker imperial stormtrooper outfit", "blaster"): "Imperial Blaster",
+    ("han solo bespin outfit", "blaster"): "Bespin Blaster",
+    ("lando calrissian", "blaster"): "Bespin Blaster",
+    ("lobot", "blaster"): "Bespin Blaster",
+    ("at at commander", "blaster"): "Bespin Blaster",
+    ("squid head", "rifle"): "Bespin Blaster",
+    ("dengar", "rifle"): "Imperial Hoth Rifle",
+    ("luke skywalker hoth battle gear", "blaster"): "Hoth Rebel Rifle",
+    ("imperial stormtrooper hoth battle gear", "skirt"): "Hoth Trooper Skirt",
+    ("twin pod cloud car pilot", "blaster"): "Pilot Blaster",
+    ("nien nunb", "blaster"): "Pilot Blaster",
+    ("at st driver", "blaster"): "Endor Blaster",
+    ("luke skywalker in battle poncho", "blaster"): "Palace Blaster",
+    ("lando calrissian general pilot", "blaster"): "Palace Blaster",
+    ("weequay", "pike"): "Vibro Axe",
+    ("wicket w warrick", "spear"): "Ewok Spear",
+    ("teebo", "hood"): "Teebo Headpiece",
+}
+
+# The loose name match would treat this as the Bespin Lando cape. It is not.
+NOT_THE_SAME = {
+    ("lando calrissian general pilot", "cape"): "Lando Calrissian Cape is the Bespin cape. The General Pilot cape is his own and is not on that page.",
+}
+
+# Wikipedia lists a lightsaber. Variant Villain and Rebelscum say he was never packed with one.
+NOT_AN_ACCESSORY = {
+    ("anakin skywalker", "lightsaber"): "Variant Villain and Rebelscum say Anakin Skywalker was never packaged with an accessory.",
+}
+
+
+def piece_key(figure_name, piece):
+    return (norm(figure_name), norm(piece))
+
+
 def accessory_covers(piece, figure_name, accessory_name):
+    key = piece_key(figure_name, piece)
+    if key in NOT_THE_SAME or key in NOT_AN_ACCESSORY:
+        return False
+    mapped = SAME_ACCESSORY.get(key)
+    if mapped:
+        return norm(mapped) == norm(accessory_name)
     piece_n = norm(piece)
     acc_n = norm(accessory_name)
     fig_n = norm(figure_name)
@@ -216,12 +275,22 @@ def main():
             "gap": gap
         })
 
-    covered = {(norm(acc.get("name")),) for acc in catalog_accessories}
     acc_names = [acc.get("name", "") for acc in catalog_accessories]
+    mapped_rows = []
+    not_accessory_rows = []
     for fig in debut:
         for piece in fig.get("accessories") or []:
-            if any(accessory_covers(piece, fig["name"], name) for name in acc_names):
+            key = piece_key(fig["name"], piece)
+            if key in NOT_AN_ACCESSORY:
+                not_accessory_rows.append((fig, piece, NOT_AN_ACCESSORY[key]))
                 continue
+            guide = SAME_ACCESSORY.get(key)
+            if guide and any(norm(name) == norm(guide) for name in acc_names):
+                mapped_rows.append((fig, piece, guide))
+                continue
+            if key not in NOT_THE_SAME and any(accessory_covers(piece, fig["name"], name) for name in acc_names):
+                continue
+            note = NOT_THE_SAME.get(key, "Original bubble piece with no Variant Villain accessory-guide page.")
             rows.append({
                 "kind": "accessory",
                 "name": f"{fig['name']} — {piece}",
@@ -232,7 +301,7 @@ def main():
                 "page_url": "",
                 "has_coo_factory_mould_details": "no",
                 "verified_coo_choices": "",
-                "detail_note": "Original bubble piece with no Variant Villain accessory-guide page.",
+                "detail_note": note,
                 "gap": "accessory-no-page"
             })
 
@@ -257,7 +326,7 @@ def main():
     md.append("")
     md.append(f"Figures are the {len(figures)} entries on the Wikipedia [List of Kenner Star Wars action figures]({WIKI}), stored in `data/kenner-debut-figures.json`. The table's year column runs {years[0]}–{years[-1]}. Twelve of those figures are dated 1977; they are the first wave of the same vintage line (the shelf years collectors call 1978–1985).")
     md.append("")
-    md.append("Accessories are the original pieces on the Variant Villain accessory guide, plus any bubble piece from that figure list that has no guide page.")
+    md.append("Accessories are the original pieces on the Variant Villain accessory guide, plus any bubble piece from that figure list that has no guide page. A bubble piece is not listed in (c) when it is the same accessory as one of those guides, even if the guide title does not contain the figure's name. Luke, Vader and Ben lightsabers are the telescoping guides. The Rebel Blaster is the weapon older lists called a Smuggler Blaster.")
     md.append("")
     md.append("A figure page \"has COO/factory/mould details\" when the fetched character page names a COO family, a country stamp, or a factory guide line. A verified COO choice is stricter: the bot only offers stamp buttons when the wording is known. Thirty-one figures take that wording from the owner's stamp sheet (10 Oct 2026). The others take it from the character page, including the 1980 Lando leg notes. An accessory page has details when its article names a mould, factory, or country stamp. Menu links such as \"Introduction to COOs\" do not count.")
     md.append("")
@@ -291,6 +360,23 @@ def main():
             why = "no page" if row["has_page"] == "no" else "page has no mould, factory, or COO tells"
             url = row["page_url"] or "no page"
             md.append(f"- {row['name']} — {why} — {url}")
+    md.append("")
+    md.append("## Bubble pieces counted with an existing guide")
+    md.append("")
+    md.append(f"{len(mapped_rows)} debut pieces are the same accessory as a guide that is already in the count above. They are not in (c).")
+    md.append("")
+    for fig, piece, guide in mapped_rows:
+        md.append(f"- {fig['name']} — {piece} — {guide}")
+    md.append("")
+    md.append("## Debut list pieces that are not a missing accessory")
+    md.append("")
+    if not not_accessory_rows:
+        md.append("None.")
+    else:
+        for fig, piece, why in not_accessory_rows:
+            md.append(f"- {fig['name']} — {piece} — {why}")
+    md.append("")
+    md.append("Conflicts between the owner VF-CB reference pack and the live data are in `docs/vfcb-reference-pack-conflicts.md`.")
     md.append("")
     md.append("The full row list is `docs/variantvillain-gaps.csv`.")
     md.append("")

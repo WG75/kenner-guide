@@ -6,7 +6,7 @@ Primary Weapon – Unique Character Weapon
 
 Used With:
 - Tusken Raider (Kenner)
-- Tusken Raider (regional variants: PBP, Lili Ledy, etc.)
+- Tusken Raider
 
 --------------------------------------------------
 
@@ -64,7 +64,7 @@ Colours:
 
 Notes:
 - Most common variant
-- Produced across multiple factories
+- The owner rule does not name a factory for M2
 
 Quick ID:
 👉 Balanced shape + softer detail = M2
@@ -121,17 +121,13 @@ IMPORTANT:
 
 FACTORY ASSOCIATION
 
-KADER:
-- Early and mid production
-- Stronger brown tones
+Gaffi sticks exist only as M1 (Unitoy), M2, and M3 (Kader). Source: owner VF-CB reference pack.
 
-PBP (Spain):
-- Slight variation in finish
-- Subtle structural differences
+- M1 is the Unitoy stick (gate scar, cleaner sculpt).
+- M2 is the standard stick. That rule does not name M2's factory.
+- M3 is the Kader stick (softer, less defined axe head).
 
-LILI LEDY (Mexico):
-- Can show lighter or slightly different tones
-- Sometimes softer mould appearance
+No other factory is a gaffi stick mould. The conflict with an older factory list is in docs/vfcb-reference-pack-conflicts.md.
 
 --------------------------------------------------
 
@@ -156,12 +152,9 @@ IDENTIFICATION STRATEGY
 
 MATCHING TO FIGURES
 
-- Early Tusken Raider → more likely M1
+- Early Tusken Raider → more likely M1 (Unitoy)
 - Mid production → M2
-- Later production → M3
-
-Regional figures:
-- May require closer factory matching
+- Later production → M3 (Kader)
 
 --------------------------------------------------
 

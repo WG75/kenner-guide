@@ -1,0 +1,40 @@
+Topic: Variant Villain reference URLs
+Source: owner VF-CB reference pack. Character pages already stored on each figure file are not repeated here. The http introduction-to-coos address in the pack is the same page as the https knowledge URL below.
+
+Knowledge
+- https://www.variantvillain.com/
+- https://www.variantvillain.com/knowledge/introduction-to-coos/
+- https://www.variantvillain.com/knowledge/coo-terminology/
+- https://www.variantvillain.com/knowledge/how-to-use-the-coo-guides/
+- https://www.variantvillain.com/knowledge/101guide/
+- https://www.variantvillain.com/knowledge/introduction-to-accessories/
+- https://www.variantvillain.com/knowledge/factory-codes/
+
+Character indexes
+- https://www.variantvillain.com/characters/sw/
+- https://www.variantvillain.com/characters/esb/
+- https://www.variantvillain.com/characters/rotj/
+- https://www.variantvillain.com/characters/potf/
+- https://www.variantvillain.com/characters/droids/
+
+Variation guides
+- https://www.variantvillain.com/variations/glasslite-guide/
+- https://www.variantvillain.com/variations/lili-ledy-guide/
+- https://www.variantvillain.com/variations/poch-guide/
+- https://www.variantvillain.com/variations/top-toys/
+- https://www.variantvillain.com/variations/kenner-guide/hard-torso/
+- https://www.variantvillain.com/variations/kenner-guide/mold-color-variants/
+
+Accessory index
+- https://www.variantvillain.com/accessory-guide/
+- https://www.variantvillain.com/accessory-guide#sabers
+- https://www.variantvillain.com/accessory-guide#blasters
+- https://www.variantvillain.com/accessory-guide#rifles
+- https://www.variantvillain.com/accessory-guide#staffs
+- https://www.variantvillain.com/accessory-guide#belts
+- https://www.variantvillain.com/accessory-guide#hoods
+- https://www.variantvillain.com/accessory-guide#capes
+- https://www.variantvillain.com/accessory-guide#other
+
+Bootlegs
+- https://www.variantvillain.com/bootlegs/
