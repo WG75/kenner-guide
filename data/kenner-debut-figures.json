@@ -1,0 +1,1681 @@
+{
+  "source": "https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures",
+  "sourceNote": "Debut card and year are that page's debut-package table. The year column is production year and is used here as the first-release year in the photo reply. Accessories are the original bubble pieces for the completeness line only. This file is not reference evidence for variant answers.",
+  "figures": [
+    {
+      "product": "38180",
+      "name": "Luke Skywalker",
+      "wikiName": "Luke Skywalker",
+      "aliases": [
+        "Luke Skywalker"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "lightsaber"
+      ]
+    },
+    {
+      "product": "38190",
+      "name": "Princess Leia Organa",
+      "wikiName": "Princess Leia",
+      "aliases": [
+        "Princess Leia Organa",
+        "Princess Leia"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "she",
+      "possessive": "her",
+      "accessories": [
+        "cape",
+        "blaster"
+      ]
+    },
+    {
+      "product": "38200",
+      "name": "R2-D2 (Artoo-Detoo)",
+      "wikiName": "Artoo-Detoo (R2-D2)",
+      "aliases": [
+        "R2-D2 (Artoo-Detoo)",
+        "R2-D2 in Artoo-Detoo",
+        "Artoo-Detoo (R2-D2)",
+        "Artoo-Detoo in R2-D2"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": []
+    },
+    {
+      "product": "38210",
+      "name": "Chewbacca",
+      "wikiName": "Chewbacca",
+      "aliases": [
+        "Chewbacca"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "bowcaster"
+      ]
+    },
+    {
+      "product": "38220",
+      "name": "C-3PO",
+      "wikiName": "See-Threepio (C-3PO)",
+      "aliases": [
+        "C-3PO",
+        "See-Threepio (C-3PO)",
+        "See-Threepio in C-3PO"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": []
+    },
+    {
+      "product": "38230",
+      "name": "Darth Vader",
+      "wikiName": "Darth Vader",
+      "aliases": [
+        "Darth Vader"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "cape",
+        "lightsaber"
+      ]
+    },
+    {
+      "product": "38240",
+      "name": "Imperial Stormtrooper",
+      "wikiName": "Stormtrooper",
+      "aliases": [
+        "Imperial Stormtrooper",
+        "Stormtrooper"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "38250",
+      "name": "Ben (Obi-Wan) Kenobi",
+      "wikiName": "Ben (Obi-Wan) Kenobi",
+      "aliases": [
+        "Ben (Obi-Wan) Kenobi",
+        "Ben in Obi-Wan Kenobi"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "cape",
+        "lightsaber"
+      ]
+    },
+    {
+      "product": "38260",
+      "name": "Han Solo",
+      "wikiName": "Han Solo",
+      "aliases": [
+        "Han Solo"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "38270",
+      "name": "Jawa",
+      "wikiName": "Jawa",
+      "aliases": [
+        "Jawa"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "cloak",
+        "blaster"
+      ]
+    },
+    {
+      "product": "38280",
+      "name": "Tusken Raider (Sand People)",
+      "wikiName": "Sand People",
+      "aliases": [
+        "Tusken Raider (Sand People)",
+        "Tusken Raider in Sand People",
+        "Sand People"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "gaderffii stick",
+        "cape"
+      ]
+    },
+    {
+      "product": "38290",
+      "name": "Death Squad Commander",
+      "wikiName": "Death Squad Commander",
+      "aliases": [
+        "Death Squad Commander"
+      ],
+      "year": 1977,
+      "cardback": "12-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39020",
+      "name": "Greedo",
+      "wikiName": "Greedo",
+      "aliases": [
+        "Greedo"
+      ],
+      "year": 1978,
+      "cardback": "20-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39030",
+      "name": "Hammerhead",
+      "wikiName": "Hammerhead",
+      "aliases": [
+        "Hammerhead"
+      ],
+      "year": 1978,
+      "cardback": "20-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": []
+    },
+    {
+      "product": "39040",
+      "name": "Snaggletooth",
+      "wikiName": "Snaggletooth",
+      "aliases": [
+        "Snaggletooth"
+      ],
+      "year": 1978,
+      "cardback": "20-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39050",
+      "name": "Walrus Man",
+      "wikiName": "Walrus Man",
+      "aliases": [
+        "Walrus Man"
+      ],
+      "year": 1978,
+      "cardback": "20-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39060",
+      "name": "Luke Skywalker (X-Wing Pilot)",
+      "wikiName": "Luke Skywalker: X-wing Pilot",
+      "aliases": [
+        "Luke Skywalker (X-Wing Pilot)",
+        "Luke Skywalker in X-Wing Pilot",
+        "Luke Skywalker: X-wing Pilot"
+      ],
+      "year": 1978,
+      "cardback": "20-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "lightsaber"
+      ]
+    },
+    {
+      "product": "39070",
+      "name": "R5-D4",
+      "wikiName": "R5-D4",
+      "aliases": [
+        "R5-D4"
+      ],
+      "year": 1978,
+      "cardback": "20-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "it",
+      "possessive": "its",
+      "accessories": []
+    },
+    {
+      "product": "39080",
+      "name": "Death Star Droid",
+      "wikiName": "Death Star Droid",
+      "aliases": [
+        "Death Star Droid"
+      ],
+      "year": 1978,
+      "cardback": "20-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "it",
+      "possessive": "its",
+      "accessories": []
+    },
+    {
+      "product": "39090",
+      "name": "Power Droid",
+      "wikiName": "Power Droid",
+      "aliases": [
+        "Power Droid"
+      ],
+      "year": 1978,
+      "cardback": "20-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "it",
+      "possessive": "its",
+      "accessories": []
+    },
+    {
+      "product": "39250",
+      "name": "Boba Fett",
+      "wikiName": "Boba Fett",
+      "aliases": [
+        "Boba Fett"
+      ],
+      "year": 1979,
+      "cardback": "21-back",
+      "line": "Star Wars",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39720",
+      "name": "Leia Organa (Bespin Gown)",
+      "wikiName": "Leia Organa (Bespin Gown)",
+      "aliases": [
+        "Leia Organa (Bespin Gown)",
+        "Leia Organa in Bespin Gown"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "she",
+      "possessive": "her",
+      "accessories": [
+        "cape",
+        "blaster"
+      ]
+    },
+    {
+      "product": "39730",
+      "name": "FX-7",
+      "wikiName": "FX-7",
+      "aliases": [
+        "FX-7"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "it",
+      "possessive": "its",
+      "accessories": []
+    },
+    {
+      "product": "39740",
+      "name": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "wikiName": "Imperial Stormtrooper (Hoth Battle Gear)",
+      "aliases": [
+        "Imperial Stormtrooper (Hoth Battle Gear)",
+        "Imperial Stormtrooper in Hoth Battle Gear"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "rifle",
+        "skirt"
+      ]
+    },
+    {
+      "product": "39750",
+      "name": "Rebel Soldier (Hoth Battle Gear)",
+      "wikiName": "Rebel Soldier (Hoth Battle Gear)",
+      "aliases": [
+        "Rebel Soldier (Hoth Battle Gear)",
+        "Rebel Soldier in Hoth Battle Gear"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "rifle"
+      ]
+    },
+    {
+      "product": "39760",
+      "name": "Bossk",
+      "wikiName": "Bossk (Bounty Hunter)",
+      "aliases": [
+        "Bossk",
+        "Bossk (Bounty Hunter)",
+        "Bossk in Bounty Hunter"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "rifle"
+      ]
+    },
+    {
+      "product": "39770",
+      "name": "IG-88",
+      "wikiName": "IG-88",
+      "aliases": [
+        "IG-88"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "it",
+      "possessive": "its",
+      "accessories": [
+        "rifle"
+      ]
+    },
+    {
+      "product": "39780",
+      "name": "Luke Skywalker (Bespin Fatigues)",
+      "wikiName": "Luke Skywalker (Bespin Fatigues)",
+      "aliases": [
+        "Luke Skywalker (Bespin Fatigues)",
+        "Luke Skywalker in Bespin Fatigues"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39790",
+      "name": "Han Solo (Hoth Outfit)",
+      "wikiName": "Han Solo (Hoth Outfit)",
+      "aliases": [
+        "Han Solo (Hoth Outfit)",
+        "Han Solo in Hoth Outfit"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39800",
+      "name": "Lando Calrissian",
+      "wikiName": "Lando Calrissian",
+      "aliases": [
+        "Lando Calrissian"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "cape",
+        "blaster"
+      ]
+    },
+    {
+      "product": "39810",
+      "name": "Bespin Security Guard (White)",
+      "wikiName": "Bespin Security Guard",
+      "aliases": [
+        "Bespin Security Guard (White)",
+        "Bespin Security Guard in White",
+        "Bespin Security Guard"
+      ],
+      "year": 1980,
+      "cardback": "31-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "38310",
+      "name": "Yoda",
+      "wikiName": "Yoda",
+      "aliases": [
+        "Yoda"
+      ],
+      "year": 1980,
+      "cardback": "32-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "cane",
+        "snake",
+        "belt"
+      ]
+    },
+    {
+      "product": "39319",
+      "name": "Ugnaught",
+      "wikiName": "Ugnaught",
+      "aliases": [
+        "Ugnaught"
+      ],
+      "year": 1981,
+      "cardback": "41-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "smock",
+        "case"
+      ]
+    },
+    {
+      "product": "39329",
+      "name": "Dengar",
+      "wikiName": "Dengar",
+      "aliases": [
+        "Dengar"
+      ],
+      "year": 1981,
+      "cardback": "41-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "rifle"
+      ]
+    },
+    {
+      "product": "39339",
+      "name": "Han Solo (Bespin Outfit)",
+      "wikiName": "Han Solo (Bespin Outfit)",
+      "aliases": [
+        "Han Solo (Bespin Outfit)",
+        "Han Solo in Bespin Outfit"
+      ],
+      "year": 1981,
+      "cardback": "41-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "cape",
+        "blaster"
+      ]
+    },
+    {
+      "product": "39349",
+      "name": "Lobot",
+      "wikiName": "Lobot",
+      "aliases": [
+        "Lobot"
+      ],
+      "year": 1981,
+      "cardback": "41-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39359",
+      "name": "Leia (Hoth Outfit)",
+      "wikiName": "Leia (Hoth Outfit)",
+      "aliases": [
+        "Leia (Hoth Outfit)",
+        "Leia in Hoth Outfit"
+      ],
+      "year": 1981,
+      "cardback": "41-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "she",
+      "possessive": "her",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39369",
+      "name": "Rebel Commander",
+      "wikiName": "Rebel Commander",
+      "aliases": [
+        "Rebel Commander"
+      ],
+      "year": 1981,
+      "cardback": "41-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39379",
+      "name": "AT-AT Driver",
+      "wikiName": "AT-AT Driver",
+      "aliases": [
+        "AT-AT Driver"
+      ],
+      "year": 1981,
+      "cardback": "41-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "rifle"
+      ]
+    },
+    {
+      "product": "39389",
+      "name": "Imperial Commander",
+      "wikiName": "Imperial Commander",
+      "aliases": [
+        "Imperial Commander"
+      ],
+      "year": 1981,
+      "cardback": "41-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "39399",
+      "name": "2-1B",
+      "wikiName": "2-1B",
+      "aliases": [
+        "2-1B"
+      ],
+      "year": 1981,
+      "cardback": "41-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "it",
+      "possessive": "its",
+      "accessories": [
+        "probe"
+      ]
+    },
+    {
+      "product": "69420",
+      "name": "R2-D2 (Sensorscope)",
+      "wikiName": "Artoo-Detoo (R2-D2) (with Sensorscope)",
+      "aliases": [
+        "R2-D2 (Sensorscope)",
+        "R2-D2 in Sensorscope",
+        "Artoo-Detoo (R2-D2) (with Sensorscope)",
+        "Artoo-Detoo in R2-D2 in with Sensorscope"
+      ],
+      "year": 1982,
+      "cardback": "45-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "sensorscope"
+      ]
+    },
+    {
+      "product": "69430",
+      "name": "C-3PO (Removable Limbs)",
+      "wikiName": "C-3PO (Removable Limbs)",
+      "aliases": [
+        "C-3PO (Removable Limbs)",
+        "C-3PO in Removable Limbs"
+      ],
+      "year": 1982,
+      "cardback": "45-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": []
+    },
+    {
+      "product": "69610",
+      "name": "Luke Skywalker (Hoth Battle Gear)",
+      "wikiName": "Luke Skywalker (Hoth Battle Gear)",
+      "aliases": [
+        "Luke Skywalker (Hoth Battle Gear)",
+        "Luke Skywalker in Hoth Battle Gear"
+      ],
+      "year": 1982,
+      "cardback": "45-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "69620",
+      "name": "At-At Commander",
+      "wikiName": "AT-AT Commander",
+      "aliases": [
+        "At-At Commander",
+        "AT-AT Commander"
+      ],
+      "year": 1982,
+      "cardback": "45-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "69630",
+      "name": "(Twin-Pod) Cloud Car Pilot",
+      "wikiName": "(Twin-Pod) Cloud Car Pilot",
+      "aliases": [
+        "(Twin-Pod) Cloud Car Pilot",
+        " in Twin-Pod Cloud Car Pilot"
+      ],
+      "year": 1982,
+      "cardback": "45-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "69640",
+      "name": "Bespin Security Guard (Black)",
+      "wikiName": "Bespin Security Guard",
+      "aliases": [
+        "Bespin Security Guard (Black)",
+        "Bespin Security Guard in Black",
+        "Bespin Security Guard"
+      ],
+      "year": 1982,
+      "cardback": "45-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "70010",
+      "name": "4-LOM",
+      "wikiName": "4-LOM",
+      "aliases": [
+        "4-LOM"
+      ],
+      "year": 1982,
+      "cardback": "48-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "it",
+      "possessive": "its",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "70020",
+      "name": "Zuckuss",
+      "wikiName": "Zuckuss",
+      "aliases": [
+        "Zuckuss"
+      ],
+      "year": 1982,
+      "cardback": "47-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "70030",
+      "name": "Imperial Tie Fighter Pilot",
+      "wikiName": "Imperial Tie Fighter Pilot",
+      "aliases": [
+        "Imperial Tie Fighter Pilot"
+      ],
+      "year": 1982,
+      "cardback": "47-back",
+      "line": "The Empire Strikes Back",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "70310",
+      "name": "Admiral Ackbar",
+      "wikiName": "Admiral Ackbar",
+      "aliases": [
+        "Admiral Ackbar"
+      ],
+      "year": 1982,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "staff"
+      ]
+    },
+    {
+      "product": "70650",
+      "name": "Luke Skywalker (Jedi Knight Outfit)",
+      "wikiName": "Luke Skywalker (Jedi Knight Outfit)",
+      "aliases": [
+        "Luke Skywalker (Jedi Knight Outfit)",
+        "Luke Skywalker in Jedi Knight Outfit"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "lightsaber",
+        "cloak"
+      ]
+    },
+    {
+      "product": "70660",
+      "name": "Princess Leia Organa (Boushh Disguise)",
+      "wikiName": "Princess Leia Organa (Boushh Disguise)",
+      "aliases": [
+        "Princess Leia Organa (Boushh Disguise)",
+        "Princess Leia Organa in Boushh Disguise"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "she",
+      "possessive": "her",
+      "accessories": [
+        "helmet",
+        "rifle"
+      ]
+    },
+    {
+      "product": "70670",
+      "name": "Gamorrean Guard",
+      "wikiName": "Gamorrean Guard",
+      "aliases": [
+        "Gamorrean Guard"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "axe"
+      ]
+    },
+    {
+      "product": "70680",
+      "name": "Emperor's Royal Guard",
+      "wikiName": "Emperor's Royal Guard",
+      "aliases": [
+        "Emperor's Royal Guard"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "pike"
+      ]
+    },
+    {
+      "product": "70690",
+      "name": "Chief Chirpa",
+      "wikiName": "Chief Chirpa",
+      "aliases": [
+        "Chief Chirpa"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "staff"
+      ]
+    },
+    {
+      "product": "70710",
+      "name": "Logray (Ewok Medicine Man)",
+      "wikiName": "Logray (Ewok Medicine Man)",
+      "aliases": [
+        "Logray (Ewok Medicine Man)",
+        "Logray in Ewok Medicine Man"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "staff"
+      ]
+    },
+    {
+      "product": "70730",
+      "name": "Klaatu",
+      "wikiName": "Klaatu",
+      "aliases": [
+        "Klaatu"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "skirt"
+      ]
+    },
+    {
+      "product": "70740",
+      "name": "Rebel Commando",
+      "wikiName": "Rebel Commando",
+      "aliases": [
+        "Rebel Commando"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "70760",
+      "name": "Weequay",
+      "wikiName": "Weequay",
+      "aliases": [
+        "Weequay"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "pike"
+      ]
+    },
+    {
+      "product": "70770",
+      "name": "Squid Head",
+      "wikiName": "Squid Head",
+      "aliases": [
+        "Squid Head"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "rifle",
+        "skirt"
+      ]
+    },
+    {
+      "product": "70780",
+      "name": "General Madine",
+      "wikiName": "General Madine",
+      "aliases": [
+        "General Madine"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "staff"
+      ]
+    },
+    {
+      "product": "70790",
+      "name": "Bib Fortuna",
+      "wikiName": "Bib Fortuna",
+      "aliases": [
+        "Bib Fortuna"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "cloak",
+        "staff"
+      ]
+    },
+    {
+      "product": "70800",
+      "name": "Ree Yees",
+      "wikiName": "Ree-Yees",
+      "aliases": [
+        "Ree Yees",
+        "Ree-Yees"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "rifle"
+      ]
+    },
+    {
+      "product": "70820",
+      "name": "Biker Scout",
+      "wikiName": "Biker Scout",
+      "aliases": [
+        "Biker Scout"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "70830",
+      "name": "Lando Calrissian (Skiff Guard Disguise)",
+      "wikiName": "Lando Calrissian (Skiff Guard Disguise)",
+      "aliases": [
+        "Lando Calrissian (Skiff Guard Disguise)",
+        "Lando Calrissian in Skiff Guard Disguise"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "helmet",
+        "cape"
+      ]
+    },
+    {
+      "product": "70840",
+      "name": "Nien Nunb",
+      "wikiName": "Nien Nunb",
+      "aliases": [
+        "Nien Nunb"
+      ],
+      "year": 1983,
+      "cardback": "65-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "71190",
+      "name": "Nikto",
+      "wikiName": "Nikto",
+      "aliases": [
+        "Nikto"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "staff"
+      ]
+    },
+    {
+      "product": "71210",
+      "name": "8D8",
+      "wikiName": "8D8",
+      "aliases": [
+        "8D8"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "it",
+      "possessive": "its",
+      "accessories": []
+    },
+    {
+      "product": "71220",
+      "name": "Princess Leia Organa (in Combat Poncho)",
+      "wikiName": "Princess Leia Organa (in Combat Poncho)",
+      "aliases": [
+        "Princess Leia Organa (in Combat Poncho)",
+        "Princess Leia Organa in in Combat Poncho"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "she",
+      "possessive": "her",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "71230",
+      "name": "Wicket W. Warrick",
+      "wikiName": "Wicket W. Warrick",
+      "aliases": [
+        "Wicket W. Warrick"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "spear"
+      ]
+    },
+    {
+      "product": "71240",
+      "name": "The Emperor",
+      "wikiName": "The Emperor",
+      "aliases": [
+        "The Emperor"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "cane"
+      ]
+    },
+    {
+      "product": "71280",
+      "name": "B-Wing Pilot",
+      "wikiName": "B-Wing Pilot",
+      "aliases": [
+        "B-Wing Pilot"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "71290",
+      "name": "Klaatu (in Skiff Guard Outfit)",
+      "wikiName": "Klaatu (in Skiff Guard Outfit)",
+      "aliases": [
+        "Klaatu (in Skiff Guard Outfit)",
+        "Klaatu in in Skiff Guard Outfit"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "skirt"
+      ]
+    },
+    {
+      "product": "71300",
+      "name": "Han Solo (in Trench Coat)",
+      "wikiName": "Han Solo (in Trench Coat)",
+      "aliases": [
+        "Han Solo (in Trench Coat)",
+        "Han Solo in in Trench Coat"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "71310",
+      "name": "Teebo",
+      "wikiName": "Teebo",
+      "aliases": [
+        "Teebo"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "hood",
+        "axe",
+        "horn"
+      ]
+    },
+    {
+      "product": "71320",
+      "name": "Prune Face",
+      "wikiName": "Prune Face",
+      "aliases": [
+        "Prune Face"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "rifle"
+      ]
+    },
+    {
+      "product": "71330",
+      "name": "AT-ST Driver",
+      "wikiName": "AT-ST Driver",
+      "aliases": [
+        "AT-ST Driver"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "71350",
+      "name": "Rancor Keeper",
+      "wikiName": "Rancor Keeper",
+      "aliases": [
+        "Rancor Keeper"
+      ],
+      "year": 1984,
+      "cardback": "77-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "axe"
+      ]
+    },
+    {
+      "product": "93670",
+      "name": "Lumat",
+      "wikiName": "Lumat",
+      "aliases": [
+        "Lumat"
+      ],
+      "year": 1984,
+      "cardback": "79-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "bow"
+      ]
+    },
+    {
+      "product": "93680",
+      "name": "Paploo",
+      "wikiName": "Paploo",
+      "aliases": [
+        "Paploo"
+      ],
+      "year": 1984,
+      "cardback": "79-back",
+      "line": "Return of the Jedi",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "spear"
+      ]
+    },
+    {
+      "product": "93710",
+      "name": "Luke Skywalker (in Battle Poncho)",
+      "wikiName": "Luke Skywalker (in Battle Poncho)",
+      "aliases": [
+        "Luke Skywalker (in Battle Poncho)",
+        "Luke Skywalker in in Battle Poncho"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "93720",
+      "name": "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+      "wikiName": "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+      "aliases": [
+        "Artoo-Detoo (R2-D2) with pop-up Lightsaber",
+        "Artoo-Detoo in R2-D2 with pop-up Lightsaber"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "lightsaber"
+      ]
+    },
+    {
+      "product": "93730",
+      "name": "Romba",
+      "wikiName": "Romba",
+      "aliases": [
+        "Romba"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "bow"
+      ]
+    },
+    {
+      "product": "93740",
+      "name": "Amanaman",
+      "wikiName": "Amanaman",
+      "aliases": [
+        "Amanaman"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "staff"
+      ]
+    },
+    {
+      "product": "93750",
+      "name": "Barada",
+      "wikiName": "Barada",
+      "aliases": [
+        "Barada"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "polearm"
+      ]
+    },
+    {
+      "product": "93760",
+      "name": "Imperial Gunner",
+      "wikiName": "Imperial Gunner",
+      "aliases": [
+        "Imperial Gunner"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "93770",
+      "name": "Han Solo (in Carbonite Chamber)",
+      "wikiName": "Han Solo (in Carbonite Chamber)",
+      "aliases": [
+        "Han Solo (in Carbonite Chamber)",
+        "Han Solo in in Carbonite Chamber"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "carbonite chamber"
+      ]
+    },
+    {
+      "product": "93780",
+      "name": "Luke Skywalker (Imperial Stormtrooper Outfit)",
+      "wikiName": "Luke Skywalker (Imperial Stormtrooper Outfit)",
+      "aliases": [
+        "Luke Skywalker (Imperial Stormtrooper Outfit)",
+        "Luke Skywalker in Imperial Stormtrooper Outfit"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "93790",
+      "name": "Anakin Skywalker",
+      "wikiName": "Anakin Skywalker",
+      "aliases": [
+        "Anakin Skywalker"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "lightsaber"
+      ]
+    },
+    {
+      "product": "93800",
+      "name": "EV-9D9",
+      "wikiName": "EV-9D9",
+      "aliases": [
+        "EV-9D9"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "it",
+      "possessive": "its",
+      "accessories": []
+    },
+    {
+      "product": "93810",
+      "name": "Warok",
+      "wikiName": "Warok",
+      "aliases": [
+        "Warok"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "bow"
+      ]
+    },
+    {
+      "product": "93820",
+      "name": "Lando Calrissian (General Pilot)",
+      "wikiName": "Lando Calrissian (General Pilot)",
+      "aliases": [
+        "Lando Calrissian (General Pilot)",
+        "Lando Calrissian in General Pilot"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "cape",
+        "blaster"
+      ]
+    },
+    {
+      "product": "93830",
+      "name": "A-Wing Pilot",
+      "wikiName": "A-Wing Pilot",
+      "aliases": [
+        "A-Wing Pilot"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "blaster"
+      ]
+    },
+    {
+      "product": "93850",
+      "name": "Imperial Dignitary",
+      "wikiName": "Imperial Dignitary",
+      "aliases": [
+        "Imperial Dignitary"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": false,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": []
+    },
+    {
+      "product": "93840",
+      "name": "Yak Face",
+      "wikiName": "Yak Face",
+      "aliases": [
+        "Yak Face"
+      ],
+      "year": 1985,
+      "cardback": "92-back",
+      "line": "Power of the Force",
+      "outsideUs": true,
+      "pronoun": "he",
+      "possessive": "his",
+      "accessories": [
+        "staff"
+      ]
+    }
+  ]
+}

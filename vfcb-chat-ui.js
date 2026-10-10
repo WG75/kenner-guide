@@ -117,3 +117,29 @@ export function fallbackFollowUps(topic) {
   if (topic === "greeting") return set.slice();
   return set.slice(0, 3);
 }
+
+/* Photo results put two questions above the text box. Ask-about focuses
+   the box. The other button continues identification without posting the
+   raw value as a chat message. */
+export function actionIntent(action) {
+  const value = String((action && (action.value || action.label)) || "")
+    .trim()
+    .toLowerCase()
+    .replace(/[_]+/g, "-")
+    .replace(/\s+/g, " ");
+  if (value === "ask-about-figure" || value === "do you have a question about this figure?") return "ask-figure";
+  if (value === "ask-about-accessory" || value === "do you have a question about this accessory?") return "ask-accessory";
+  if (value === "identify-variant-or-accessories") return "identify-details";
+  if (value === "identify-this-accessory") return "identify-accessory";
+  return "send";
+}
+
+export function askAboutPrompt(displayName, kind) {
+  const noun = kind === "accessory" ? "accessory" : "figure";
+  const name = String(displayName || "").trim();
+  const subject = name || `this ${noun}`;
+  return {
+    placeholder: `Ask about ${subject}`,
+    prompt: `What would you like to know about ${subject}?`
+  };
+}

@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { parseFollowUps, fallbackFollowUps, followTopicFor } from "../vfcb-chat-ui.js";
 import { selectVvReferencePhotos } from "./vv-reference-photos.js";
+import { composePhotoReply, PHOTO_HELPER } from "./kenner-debut.js";
 
 export { tcTopicRoute, tcPalitoyIntent };
 
@@ -24,6 +25,64 @@ export default async function handler(req, res) {
     if (flowState?.topic === "image_identified") {
       const normalisedMessage = normalise(String(message || ""));
       const figure = flowState.figure || "unknown";
+      const identifiedName = typeof flowState.displayName === "string" && flowState.displayName.trim()
+        ? flowState.displayName.trim()
+        : "";
+
+      if (["identify another figure", "identify-another-figure"].includes(normalisedMessage)) {
+        return tcStartVariant(res, "");
+      }
+
+      if (["identify another accessory", "identify-another-accessory"].includes(normalisedMessage)) {
+        return tcStartAccessory(res);
+      }
+
+      if (normalisedMessage === "identify-variant-or-accessories" || normalisedMessage === "identify variant or accessories") {
+        const accessories = Array.isArray(flowState.accessories) ? flowState.accessories : [];
+        const possessive = flowState.possessive || "his";
+        if (!accessories.length) {
+          return tcStartVariant(res, identifiedName);
+        }
+        return res.status(200).json({
+          reply: `Which shall we check for ${identifiedName || "this figure"}?`,
+          flowState: {
+            ...flowState,
+            step: "choose_check"
+          },
+          actions: [
+            { label: `Identify ${possessive} variant`, value: `identify the variant of ${identifiedName}` },
+            ...accessories.map(item => ({
+              label: `Identify ${possessive} ${item}`,
+              value: `identify the ${item} of ${identifiedName}`
+            }))
+          ],
+          quickReplies: true,
+          helper: PHOTO_HELPER
+        });
+      }
+
+      if (normalisedMessage === "identify-this-accessory") {
+        return tcStartNamedAccessory(res, identifiedName || "this accessory", "");
+      }
+
+      if (
+        ["ask about this figure", "ask-about-figure", "ask about this accessory", "ask-about-accessory"].includes(normalisedMessage)
+      ) {
+        const noun = normalisedMessage.includes("accessory") ? "accessory" : "figure";
+        const subject = identifiedName || `this ${noun}`;
+        return res.status(200).json({
+          reply: `What would you like to know about ${subject}?`,
+          flowState: {
+            ...flowState,
+            topic: "image_identified",
+            itemKind: noun,
+            figure,
+            ...(identifiedName ? { displayName: identifiedName } : {}),
+            step: "post_identification"
+          },
+          actions: []
+        });
+      }
 
       if (
         flowState.step === "post_identification" &&
@@ -141,9 +200,13 @@ Your job:
 - detect if the item appears modern, fake, bootleg or unrelated
 - return ONLY compact JSON with these keys:
   "figure_key": a stable snake_case key
-  "display_name": the best broad figure name
+  "display_name": the best broad name
+  "item_kind": "figure" or "accessory"
+  "visible_accessories": short names of the original accessories you can see, such as "cape", "blaster", "rifle", "lightsaber", "cloak" or "bowcaster". Use [] when none of those pieces are in the photo. Leave this out when item_kind is "accessory".
   "confidence": "high", "medium", or "low"
   "is_vintage_star_wars": true or false
+
+Use "accessory" for a loose weapon, cape, cloak or other accessory photographed on its own. Otherwise use "figure".
 
 Use collector-friendly naming.
 
@@ -186,7 +249,7 @@ confidence: "low"
               ]
             }
           ],
-          max_tokens: 220
+          max_tokens: 400
         })
       });
 
@@ -208,6 +271,10 @@ confidence: "low"
       const confidence = parsed?.confidence || "low";
       const isVintage = parsed?.is_vintage_star_wars !== false;
       const figureKey = parsed?.figure_key || normaliseFigureKey(displayName);
+      const itemKind = parsed?.item_kind === "accessory" ? "accessory" : "figure";
+      const visibleAccessories = Array.isArray(parsed?.visible_accessories)
+        ? parsed.visible_accessories.filter(item => typeof item === "string")
+        : null;
 
       if (!isVintage || figureKey === "uncertain") {
         return res.status(200).json({
@@ -221,20 +288,12 @@ confidence: "low"
         });
       }
 
-      return res.status(200).json({
-        reply:
-          `This figure appears to be ${displayName}.\n\nConfidence: ${confidence}\n\nDid you have any questions about this figure or would you like to look up another?`,
-        flowState: {
-          topic: "image_identified",
-          figure: figureKey,
-          displayName,
-          step: "post_identification"
-        },
-        actions: [
-          { label: "Yes", value: "yes" },
-          { label: "No", value: "no" }
-        ]
-      });
+      return res.status(200).json(photoIdentificationReply({
+        itemKind,
+        displayName,
+        figureKey,
+        visibleAccessories
+      }));
     }
 
     return await handleTextChat(res, {
@@ -251,6 +310,42 @@ confidence: "low"
       actions: []
     });
   }
+}
+
+function photoIdentificationReply({ itemKind, displayName, figureKey, visibleAccessories }) {
+  const composed = composePhotoReply({ itemKind, displayName, visibleAccessories });
+  return {
+    reply: composed.reply,
+    flowState: {
+      topic: "image_identified",
+      itemKind: composed.itemKind,
+      figure: figureKey,
+      displayName: composed.displayName,
+      pronoun: composed.pronoun,
+      possessive: composed.possessive,
+      accessories: composed.accessories,
+      step: "post_identification"
+    },
+    actions: composed.actions,
+    quickReplies: true,
+    helper: composed.helper
+  };
+}
+
+function tcStartNamedAccessory(res, accessoryLabel, figureName) {
+  const label = String(accessoryLabel || "").trim() || "this accessory";
+  const figure = String(figureName || "").trim();
+  const lead = figure
+    ? `Let's check the ${label} that came with ${figure}.`
+    : `Let's check ${label}.`;
+  return tcReply(res, `${lead}\n\n${TC_ACCESSORY_QUESTIONS[1]}`, {
+    flowState: {
+      topic: "accessory_identify",
+      step: 1,
+      answers: [figure ? `${figure} ${label}` : label]
+    },
+    skipFollowUps: true
+  });
 }
 
 function startDataFlow(flowId) {
@@ -1440,7 +1535,14 @@ function tcErrorReply(res, code, reply, flowState) {
 /* "this", "it", "my figure", "mine" and the close forms "its" / "my one".
    Only applied once a photo or guided lookup has identified a figure. */
 const TC_ANAPHORA_RE = /\b(?:this|it|its|mine)\b|\bmy (?:figure|one)\b/i;
-const TC_PHOTO_FIGURE_RE = /this figure appears to be ([^\n.]+)\./i;
+function tcPhotoItemFromText(content) {
+  const text = String(content || "");
+  let match = text.match(/the (figure|accessory) in your photo appears to be ([^,.\n]+)/i);
+  if (match) return { itemKind: match[1].toLowerCase(), label: match[2].trim() };
+  match = text.match(/this (figure|accessory) appears to be ([^\n.]+)\./i);
+  if (match) return { itemKind: match[1].toLowerCase(), label: match[2].trim() };
+  return null;
+}
 
 function tcRefersToFigureInPlay(message) {
   return TC_ANAPHORA_RE.test(String(message || "").toLowerCase().replace(/[’‘]/g, "'"));
@@ -1466,7 +1568,8 @@ function tcFigureFromFlowState(flowState) {
   return {
     key,
     label: named ? flowState.displayName.trim() : key.replace(/_/g, " "),
-    named: Boolean(named)
+    named: Boolean(named),
+    itemKind: flowState.itemKind === "accessory" ? "accessory" : "figure"
   };
 }
 
@@ -1474,13 +1577,18 @@ function tcFigureFromHistory(turns) {
   for (let i = turns.length - 1; i >= 0; i--) {
     const turn = turns[i];
     if (!turn || turn.role !== "assistant") continue;
-    const match = String(turn.content || "").match(TC_PHOTO_FIGURE_RE);
+    const match = tcPhotoItemFromText(turn.content);
     if (!match) continue;
-    const label = match[1].trim();
+    const label = match.label;
     if (!label || /uncertain/i.test(label)) return null;
     const key = normaliseFigureKey(label);
     if (!key || key === "unknown" || key === "uncertain") return null;
-    return { key, label, named: true };
+    return {
+      key,
+      label,
+      named: true,
+      itemKind: match.itemKind === "accessory" ? "accessory" : "figure"
+    };
   }
   return null;
 }
@@ -1493,12 +1601,12 @@ function tcResolveIdentifiedFigure(flowState, turns) {
   const fromHistory = tcFigureFromHistory(turns);
   if (fromState) {
     if (!fromState.named && fromHistory && fromHistory.key === fromState.key) {
-      return { key: fromState.key, label: fromHistory.label };
+      return { key: fromState.key, label: fromHistory.label, itemKind: fromState.itemKind || fromHistory.itemKind || "figure" };
     }
-    return { key: fromState.key, label: fromState.label };
+    return { key: fromState.key, label: fromState.label, itemKind: fromState.itemKind || "figure" };
   }
   if (!fromHistory) return null;
-  return { key: fromHistory.key, label: fromHistory.label };
+  return { key: fromHistory.key, label: fromHistory.label, itemKind: fromHistory.itemKind || "figure" };
 }
 
 function tcCarriedFlow(flowState, identified) {
@@ -1508,6 +1616,7 @@ function tcCarriedFlow(flowState, identified) {
     : "post_identification";
   return {
     topic: "image_identified",
+    itemKind: identified.itemKind === "accessory" ? "accessory" : "figure",
     figure: identified.key,
     displayName: identified.label,
     step
@@ -1650,12 +1759,31 @@ async function handleTextChat(res, { message, history, flowState }) {
     flowState = null;
   } else {
     const opened = normalise(question);
-    if (opened === "identify a figure" || opened === "identify figure") return tcStartVariant(res, "");
-    if (opened === "identify accessories" || opened === "identify an accessory" || opened === "identify accessory") {
+    if (
+      opened === "identify a figure" ||
+      opened === "identify figure" ||
+      opened === "identify another figure" ||
+      opened === "identify-another-figure"
+    ) return tcStartVariant(res, "");
+    if (
+      opened === "identify accessories" ||
+      opened === "identify an accessory" ||
+      opened === "identify accessory" ||
+      opened === "identify another accessory" ||
+      opened === "identify-another-accessory"
+    ) {
       return tcStartAccessory(res);
     }
     const variantTarget = tcVariantTarget(question);
     if (variantTarget !== null) return tcStartVariant(res, variantTarget);
+    const namedAccessory = question.match(/^identify the (.+) of (.+)$/i);
+    if (namedAccessory && !/^variant\b/i.test(namedAccessory[1].trim())) {
+      return tcStartNamedAccessory(
+        res,
+        namedAccessory[1].trim(),
+        namedAccessory[2].trim().replace(/[?.!]+$/g, "")
+      );
+    }
   }
   const priorUserTurns = turns.filter(t => t.role === "user").map(t => t.content);
   // Raw last assistant message (even our own canned replies) so wording isn't repeated back-to-back.
@@ -1740,8 +1868,9 @@ async function handleTextChat(res, { message, history, flowState }) {
 
   const sources = ranked.map(r => r.file.relPath);
   const context = tcBuildContext(ranked, question);
+  const itemNoun = identified && identified.itemKind === "accessory" ? "accessory" : "figure";
   const figureNote = bindFigure
-    ? `Context only, not evidence: the figure in play is ${identified.label}. In this question, "this", "it", "my figure", "mine", and a short accessories choice such as "show accessories" or "B" refer to that figure. This sentence is not a source of collector facts.\n\n`
+    ? `Context only, not evidence: the ${itemNoun} in play is ${identified.label}. In this question, "this", "it", "my figure", "mine", and a short accessories choice such as "show accessories" or "B" refer to that ${itemNoun}. This sentence is not a source of collector facts.\n\n`
     : typedDebutNames.length
       ? `Context only, not evidence: the figure in play is ${typedDebutNames.join(", ")}. In this question, "this", "it", "my figure" and "mine" refer to that figure. This sentence is not a source of collector facts.\n\n`
       : "";

@@ -4,329 +4,186 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>SW-7885 | Vintage Figures Chat Bot</title>
-  <meta name="description" content="SW-7885, vintage collector relations for Kenner and Palitoy Star Wars figures and accessories produced between 1978 and 1985." />
+  <meta name="description" content="SW-7885, Collector's Droid for vintage Star Wars figures and accessories produced between 1978 and 1985." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg: #08090d;
-      --panel: #11131b;
-      --panel2: #191c27;
-      --line: rgba(255,255,255,0.10);
-      --text: #f2f2f6;
-      --muted: #8d91a3;
-      --accent: #f1c232;
-      --accentText: #111;
-      --bot: #191c27;
-      --user: #2a2615;
-      --userLine: rgba(241,194,50,0.45);
-      --radius: 14px;
+      --black: #070707;
+      --window: #c4161c;
+      --window-deep: #8e1016;
+      --gold: #e6c35c;
+      --white: #f7f7f7;
+      --ink: #111111;
       --safeBottom: env(safe-area-inset-bottom, 0px);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html,
-    body {
+    html, body {
       margin: 0;
-      min-height: 100%;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Arial, Helvetica, sans-serif;
+      height: 100%;
+      background: var(--black);
+      color: var(--white);
+      font-family: "Archivo Narrow", "Arial Narrow", Arial, sans-serif;
       overflow: hidden;
     }
 
-    body {
+    button, textarea {
+      font-family: inherit;
+    }
+
+    .surround {
       height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      padding: 18px 16px;
+      background: linear-gradient(180deg, #101010, #070707 36%);
+      overflow: hidden;
+    }
+
+    .surround:has(.welcome) {
+      overflow-y: auto;
+    }
+
+    .gold-frame {
+      width: min(920px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      background: var(--gold);
+      padding: 3px;
+    }
+
+    .surround:has(.chatting) .gold-frame,
+    .surround:has(.chatting) .white-frame,
+    .surround:has(.chatting) .app {
+      flex: 1;
+      min-height: 0;
+    }
+
+    .white-frame {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      background: var(--white);
+      padding: 3px;
     }
 
     .app {
-      height: 100dvh;
       display: flex;
       flex-direction: column;
-      background:
-        radial-gradient(circle at 20% 0%, rgba(241,194,50,0.08), transparent 32%),
-        linear-gradient(180deg, #101119 0%, #08090d 55%);
-    }
-
-    .header {
-      flex: 0 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 16px;
-      border-bottom: 1px solid var(--line);
-      background: rgba(10, 11, 16, 0.94);
-      backdrop-filter: blur(12px);
-    }
-
-    .droid-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: 11px;
-      background: var(--accent);
-      color: var(--accentText);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex: 0 0 auto;
-    }
-
-    .title-wrap {
-      min-width: 0;
-    }
-
-    .title {
-      font-size: 16px;
-      font-weight: 800;
-      letter-spacing: 0.04em;
-      line-height: 1.15;
-    }
-
-    .subtitle {
-      margin-top: 2px;
-      font-size: 12px;
-      color: var(--muted);
-      line-height: 1.25;
-    }
-
-    .chat {
-      flex: 1 1 auto;
-      overflow-y: auto;
-      padding: 18px 16px 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      scroll-behavior: smooth;
-    }
-
-    /* Empty chat: a centred greeting, then the Identify buttons and the
-       input. After the first user message, .chatting lets the transcript
-       fill the space and keeps the composer docked. */
-    .app.welcome {
-      overflow-y: auto;
-    }
-
-    .app.welcome .composer {
-      width: min(720px, 100%);
-      margin-inline: auto;
-    }
-
-    .app.welcome .chat {
-      display: none;
-    }
-
-    .app.welcome .status {
       min-height: 0;
-      padding: 0;
+      background: radial-gradient(circle at 50% 0%, #e0232a 0%, var(--window) 46%, var(--window-deep) 100%);
+      color: var(--white);
     }
 
-    .app.welcome .composer {
-      border-top: 0;
-      background: transparent;
+    .surround:has(.chatting) .app {
+      overflow: hidden;
     }
 
-    .message {
-      width: fit-content;
-      max-width: min(760px, 88vw);
-      padding: 13px 15px;
-      border-radius: var(--radius);
-      line-height: 1.55;
+    .hero {
+      display: none;
+      grid-template-columns: minmax(0, 1.25fr) minmax(180px, 0.75fr);
+      gap: 16px;
+      align-items: stretch;
+      padding: 18px 16px 0;
+    }
+
+    .app.welcome .hero {
+      display: grid;
+    }
+
+    .aka, .code, .role, .blurb { margin: 0; }
+
+    .aka {
       font-size: 15px;
-      white-space: pre-wrap;
-      overflow-wrap: anywhere;
-      text-align: left;
-      align-self: flex-start;
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.20);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
     }
 
-    .message.bot {
-      background: var(--bot);
-      border-top-left-radius: 5px;
-    }
-
-    .message.user {
-      background: var(--user);
-      border-color: var(--userLine);
-      color: var(--text);
-      border-top-left-radius: 5px;
-    }
-
-    .message a {
-      color: var(--accent);
-      text-decoration: none;
+    .code {
+      margin-top: 3px;
+      font-size: 20px;
       font-weight: 700;
     }
 
-    .message a:hover {
-      text-decoration: underline;
+    .role {
+      margin-top: 4px;
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 0.95;
     }
 
-    .image-card {
-      width: fit-content;
-      max-width: min(760px, 88vw);
-      align-self: flex-start;
+    .blurb {
+      margin-top: 8px;
+      max-width: 40ch;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .art-frame {
+      background: var(--gold);
+      padding: 3px;
+      min-height: 180px;
+    }
+
+    .art-white {
+      height: 100%;
+      background: var(--white);
+      padding: 3px;
+    }
+
+    .art {
+      height: 100%;
+      min-height: 168px;
+      display: grid;
+      place-items: center;
+      text-align: center;
       padding: 12px;
-      border-radius: var(--radius);
-      background: var(--panel);
-      border: 1px solid var(--line);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.20);
-    }
-
-    .image-title {
-      font-size: 14px;
-      font-weight: 800;
-      margin-bottom: 9px;
-    }
-
-    .image-card img {
-      display: block;
-      width: 100%;
-      max-height: 520px;
-      object-fit: contain;
-      border-radius: 11px;
-      background: #050609;
-    }
-
-    .image-caption {
-      margin-top: 9px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 1.45;
-      white-space: pre-wrap;
-    }
-
-    .image-credit {
-      display: inline-block;
-      margin-top: 9px;
-      color: var(--accent);
+      background: var(--ink);
+      color: var(--gold);
       font-size: 13px;
       font-weight: 700;
-      text-decoration: none;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.35;
     }
 
-    .image-credit:hover {
-      text-decoration: underline;
-    }
-
-    .status {
-      flex: 0 0 auto;
-      min-height: 20px;
-      padding: 0 16px 4px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .input-wrap {
-      flex: 0 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 12px 10px;
-      background: transparent;
-    }
-
-    .input {
-      flex: 1 1 auto;
-      min-width: 0;
-      min-height: 46px;
-      max-height: 160px;
-      resize: none;
-      overflow-y: auto;
-      border: 1px solid var(--line);
-      outline: none;
-      border-radius: 12px;
-      padding: 10px 13px;
-      background: var(--panel2);
-      color: var(--text);
-      font-size: 15px;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 22px;
-    }
-
-    .input:focus {
-      border-color: rgba(241,194,50,0.65);
-    }
-
-    .send {
-      flex: 0 0 auto;
-      align-self: center;
-      width: 72px;
-      height: 46px;
-      border: 0;
-      border-radius: 12px;
-      background: var(--accent);
-      color: var(--accentText);
-      font-weight: 800;
-      cursor: pointer;
-    }
-
-    .send:active {
-      transform: scale(0.98);
-    }
-
-    .composer {
-      flex: 0 0 auto;
-      border-top: 1px solid var(--line);
-      background: rgba(10, 11, 16, 0.96);
-      padding-bottom: var(--safeBottom);
-    }
-
-    .identify-row {
-      display: flex;
-      gap: 8px;
-      padding: 10px 12px 0;
-    }
-
-    .identify-button {
-      flex: 1 1 0;
-      min-height: 44px;
-      border: 1px solid rgba(241,194,50,0.55);
-      background: var(--panel2);
-      color: var(--text);
-      border-radius: 12px;
-      padding: 10px 12px;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .identify-button:hover,
-    .identify-button:focus {
-      border-color: var(--accent);
-      color: var(--accent);
-      outline: 2px solid rgba(241,194,50,0.45);
-      outline-offset: 1px;
-    }
+    .art span { max-width: 16ch; }
 
     .welcome-intro {
-      flex: 0 0 auto;
       display: none;
     }
 
     .app.welcome .welcome-intro {
       display: block;
-      width: min(720px, 100%);
-      margin-inline: auto;
-      padding: 28px 22px 2px;
+      width: min(680px, 100%);
+      margin: 22px auto 0;
+      padding: 0 16px;
       text-align: center;
     }
 
     .welcome-greeting {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.6;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.4;
       text-align: center;
     }
 
     .welcome-greeting a,
     .welcome-greeting a:visited {
-      color: var(--accent);
+      color: var(--gold);
       font-weight: 700;
       text-decoration: none;
+      border-bottom: 1px solid var(--gold);
     }
 
     .welcome-greeting a:hover,
@@ -334,136 +191,390 @@
       text-decoration: underline;
     }
 
+    .chat {
+      flex: 1 1 auto;
+      overflow-y: auto;
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      scroll-behavior: smooth;
+    }
+
+    .app.welcome {
+      overflow-y: auto;
+    }
+
+    .app.welcome .chat {
+      display: none;
+    }
+
+    .app.welcome .status:empty {
+      display: none;
+    }
+
+    .message {
+      width: fit-content;
+      max-width: min(760px, 88%);
+      padding: 12px 14px;
+      line-height: 1.45;
+      font-size: 16px;
+      font-weight: 500;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      text-align: left;
+      align-self: flex-start;
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    .message.user {
+      background: var(--ink);
+      color: var(--white);
+      border: 1px solid var(--gold);
+    }
+
+    .message a {
+      color: var(--window-deep);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .message.user a { color: var(--gold); }
+
+    .message a:hover { text-decoration: underline; }
+
+    .image-card {
+      width: fit-content;
+      max-width: min(760px, 88%);
+      align-self: flex-start;
+      padding: 12px;
+      background: var(--ink);
+      color: var(--white);
+      border: 1px solid var(--gold);
+    }
+
+    .image-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .image-card img {
+      display: block;
+      width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      background: #050505;
+    }
+
+    .image-caption {
+      margin-top: 8px;
+      color: var(--white);
+      font-size: 14px;
+      line-height: 1.4;
+      white-space: pre-wrap;
+    }
+
+    .image-credit {
+      display: inline-block;
+      margin-top: 8px;
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .status {
+      flex: 0 0 auto;
+      min-height: 0;
+      padding: 0 16px 6px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .photo-preview {
+      display: none;
+      justify-content: center;
+      width: min(680px, 100%);
+      margin: 14px auto 0;
+    }
+
+    .photo-preview.is-shown {
+      display: flex;
+    }
+
+    .photo-thumb {
+      position: relative;
+      display: inline-block;
+      background: var(--ink);
+      border: 1px solid var(--gold);
+      line-height: 0;
+    }
+
+    .photo-preview img {
+      display: block;
+      max-width: min(180px, 70vw);
+      max-height: 180px;
+      object-fit: contain;
+    }
+
+    .photo-remove {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--gold);
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .photo-remove:focus-visible {
+      outline: 2px solid var(--white);
+      outline-offset: 2px;
+    }
+
+    .composer {
+      flex: 0 0 auto;
+      padding: 0 16px 16px;
+      padding-bottom: calc(16px + var(--safeBottom));
+    }
+
+    .app.chatting .composer {
+      border-top: 1px solid rgba(230, 195, 92, 0.45);
+      padding-top: 10px;
+      background: linear-gradient(180deg, rgba(142, 16, 22, 0.2), rgba(142, 16, 22, 0.55));
+    }
+
+    .identify-row {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .app.chatting .identify-row {
+      margin-top: 0;
+    }
+
+    .identify-button,
+    .send,
+    .action-button {
+      background: var(--ink);
+      color: var(--white);
+      border: 1px solid var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .identify-button {
+      flex: 1 1 0;
+      min-height: 48px;
+      font-size: 16px;
+      padding: 10px 12px;
+    }
+
+    .identify-button:hover,
+    .send:hover,
+    .action-button:hover {
+      background: #1c1c1c;
+    }
+
+    .identify-button:focus-visible,
+    .send:focus-visible,
+    .action-button:focus-visible,
+    .input:focus-visible {
+      outline: 2px solid var(--white);
+      outline-offset: 2px;
+    }
+
+    .input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .app.chatting .input-wrap {
+      margin-top: 10px;
+    }
+
+    .input {
+      flex: 1 1 auto;
+      min-width: 0;
+      min-height: 48px;
+      max-height: 160px;
+      resize: none;
+      overflow-y: auto;
+      border: 0;
+      outline: none;
+      padding: 12px;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .input::placeholder { color: #6b6b6b; }
+
+    .input:focus {
+      outline: 2px solid var(--ink);
+      outline-offset: -3px;
+    }
+
+    .send {
+      flex: 0 0 auto;
+      height: 48px;
+      padding: 0 12px;
+      font-size: 16px;
+    }
+
+    #sendButton { width: 92px; }
+
+    #photoButton {
+      width: 56px;
+      display: grid;
+      place-items: center;
+      padding: 0;
+      color: var(--gold);
+    }
+
     .action-row {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       align-self: flex-start;
-      max-width: min(760px, 88vw);
+      max-width: min(760px, 88%);
     }
 
     .action-button {
-      border: 1px solid rgba(241,194,50,0.45);
-      background: var(--panel2);
-      color: var(--text);
-      border-radius: 999px;
       padding: 9px 12px;
-      font-size: 13px;
-      cursor: pointer;
+      font-size: 14px;
     }
 
-    .action-button:hover {
-      border-color: rgba(241,194,50,0.85);
-      color: var(--accent);
+    .quick-replies,
+    .quick-helper {
+      display: none;
     }
 
+    .quick-replies.is-shown {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .quick-replies .action-button {
+      width: 100%;
+      text-align: left;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 15px;
+      line-height: 1.35;
+      padding: 10px 12px;
+    }
+
+    .quick-helper.is-shown {
+      display: block;
+      margin: 8px 0 0;
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.35;
+    }
 
     @media (max-width: 640px) {
-      .message,
-      .image-card,
-      .action-row {
-        max-width: 94vw;
+      .surround { padding: 14px 10px; }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 14px 12px 0;
       }
-
-      .subtitle {
-        display: none;
-      }
-
-      .send {
-        width: 62px;
-      }
-
-      .identify-row {
-        flex-direction: column;
-      }
-
-      .app.welcome .welcome-intro {
-        padding: 20px 16px 2px;
-      }
-
-      .welcome-greeting {
-        font-size: 15px;
-      }
+      .art { min-height: 132px; }
+      .welcome-greeting { font-size: 16px; }
+      .identify-row { flex-direction: column; }
+      #sendButton { width: 72px; }
+      .message, .image-card, .action-row { max-width: 100%; }
     }
   </style>
 </head>
 
 <body>
-  <div class="app welcome">
-    <header class="header">
-      <div class="droid-icon">🤖</div>
-      <div class="title-wrap">
-        <div class="title">SW-7885</div>
-        <div class="subtitle">Collector Companion Droid for vintage Star Wars figures and accessories</div>
-      </div>
-    </header>
+  <div class="surround">
+    <div class="gold-frame">
+      <div class="white-frame">
+        <div class="app welcome">
+          <section class="hero">
+            <div class="cover-copy">
+              <p class="aka">ESS DOUBLE U - SEVENTY EIGHT EIGHTY FIVE</p>
+              <p class="code">(SW-7885)</p>
+              <h1 class="role">COLLECTOR'S DROID</h1>
+              <p class="blurb">Holds knowledge for Star Wars figures produced between 1978 and 1985</p>
+              <p class="blurb">Includes photos and information on figure and accessory variants</p>
+            </div>
+            <div class="art-frame">
+              <div class="art-white">
+                <div class="art" role="img" aria-label="SW-7885 droid art coming soon"><span>SW-7885 droid art coming soon</span></div>
+              </div>
+            </div>
+          </section>
 
-    <div class="welcome-intro">
-      <p class="welcome-greeting" id="welcomeGreeting">Hello, I am SW-7885, vintage collector relations. And this is my counterpart, <a href="https://www.variantvillain.com/" target="_blank" rel="noopener noreferrer">Variant Villain</a>, fluent in over one thousand figures and accessories produced between 1978 and 1985. How can we be of assistance?</p>
+          <div class="welcome-intro">
+            <p class="welcome-greeting" id="welcomeGreeting">Hello, I am SW-7885, vintage collector relations. And this is my counterpart, <a href="https://www.variantvillain.com/" target="_blank" rel="noopener noreferrer">Variant Villain</a>, fluent in over one thousand figures and accessories produced between 1978 and 1985. How can we be of assistance?</p>
+          </div>
+
+          <main id="chat" class="chat"></main>
+
+          <div id="status" class="status"></div>
+
+          <footer class="composer">
+            <div id="photoPreviewWrap" class="photo-preview">
+              <div class="photo-thumb">
+                <img id="photoPreview" src="" alt="Photo selected for identification" />
+                <button type="button" id="removePhoto" class="photo-remove" aria-label="Remove photo">✕</button>
+              </div>
+            </div>
+            <div id="quickReplies" class="quick-replies"></div>
+            <p id="quickHelper" class="quick-helper">Or ask me anything, or upload another photo to identify.</p>
+            <div class="identify-row">
+              <button type="button" id="identifyFigure" class="identify-button">Identify a Figure</button>
+              <button type="button" id="identifyAccessories" class="identify-button">Identify Accessories</button>
+            </div>
+            <div class="input-wrap">
+              <input type="file" id="photoInput" accept="image/*" capture="environment" style="display:none" />
+              <button type="button" class="send" id="photoButton" aria-label="Upload a figure photo">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M9 6.5 10.2 4.5h3.6L15 6.5h3.2A1.8 1.8 0 0 1 20 8.3v8.4a1.8 1.8 0 0 1-1.8 1.8H5.8A1.8 1.8 0 0 1 4 16.7V8.3A1.8 1.8 0 0 1 5.8 6.5H9Zm3 10.2a3.4 3.4 0 1 0 0-6.8 3.4 3.4 0 0 0 0 6.8Z"/></svg>
+              </button>
+              <textarea id="input" class="input" rows="1" placeholder="Ask your question here" aria-label="Ask your question here"></textarea>
+              <button type="button" class="send" id="sendButton">Send</button>
+            </div>
+          </footer>
+        </div>
+      </div>
     </div>
-
-    <main id="chat" class="chat"></main>
-
-    <div id="status" class="status"></div>
-
-    <div id="photoPreviewWrap" style="display:none;padding:10px;border-top:1px solid #333;background:#111">
-      <img
-        id="photoPreview"
-        src=""
-        style="max-width:180px;border-radius:12px;display:block;margin-bottom:10px"
-      />
-
-      <div style="display:flex;gap:10px">
-        <button class="send" onclick="analysePhoto()">
-          Analyse
-        </button>
-
-        <button class="send" onclick="cancelPhotoPreview()">
-          Cancel
-        </button>
-      </div>
-    </div>
-
-    <footer class="composer">
-      <div class="identify-row">
-        <button type="button" id="identifyFigure" class="identify-button">Identify a Figure</button>
-        <button type="button" id="identifyAccessories" class="identify-button">Identify Accessories</button>
-      </div>
-      <div class="input-wrap">
-        <input
-          type="file"
-          id="photoInput"
-          accept="image/*"
-          capture="environment"
-          style="display:none"
-        />
-
-        <button type="button" class="send" id="photoButton" style="width:56px" aria-label="Upload a figure photo">
-          📷
-        </button>
-
-        <textarea
-          id="input"
-          class="input"
-          rows="1"
-          placeholder="Ask your question here"
-          aria-label="Ask your question here"
-        ></textarea>
-
-        <button type="button" class="send" id="sendButton">
-          Send
-        </button>
-      </div>
-    </footer>
   </div>
 
   <script type="module">
-    import { parseFollowUps, fallbackFollowUps, followTopicFor, syncLayoutClass } from "./vfcb-chat-ui.js";
+    import { parseFollowUps, fallbackFollowUps, followTopicFor, syncLayoutClass, actionIntent, askAboutPrompt } from "./vfcb-chat-ui.js";
 
     const appEl = document.querySelector(".app");
     const chatEl = document.getElementById("chat");
     const inputEl = document.getElementById("input");
     const statusEl = document.getElementById("status");
+    const defaultPlaceholder = "Ask your question here";
+    const photoPlaceholder = "Add a note or press Send to identify";
 
     const state = {
       history: [],
@@ -564,6 +675,71 @@
       (place === "after" ? vv : other).forEach(addImageCard);
     }
 
+    function resetQuestionBox() {
+      inputEl.placeholder = defaultPlaceholder;
+      inputEl.setAttribute("aria-label", defaultPlaceholder);
+    }
+
+    const quickRepliesEl = document.getElementById("quickReplies");
+    const quickHelperEl = document.getElementById("quickHelper");
+
+    function clearQuickReplies() {
+      quickRepliesEl.replaceChildren();
+      quickRepliesEl.classList.remove("is-shown");
+      quickHelperEl.classList.remove("is-shown");
+    }
+
+    function showQuickReplies(actions, helper) {
+      quickRepliesEl.replaceChildren();
+      actions.forEach((action) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "action-button";
+        button.textContent = action.label || action.value || "Select";
+        button.setAttribute("aria-label", button.textContent);
+        button.onclick = () => runAction(action);
+        quickRepliesEl.appendChild(button);
+      });
+      quickRepliesEl.classList.add("is-shown");
+      if (helper) quickHelperEl.textContent = helper;
+      quickHelperEl.classList.add("is-shown");
+    }
+
+    function promptAboutIdentified(kind) {
+      const name = state.flowState && state.flowState.displayName;
+      const prompt = askAboutPrompt(name, kind);
+      inputEl.placeholder = prompt.placeholder;
+      inputEl.setAttribute("aria-label", prompt.placeholder);
+      addMessage("assistant", prompt.prompt);
+      inputEl.focus();
+    }
+
+    function runAction(action) {
+      const intent = actionIntent(action);
+      if (intent === "ask-figure") {
+        promptAboutIdentified("figure");
+        return;
+      }
+      if (intent === "ask-accessory") {
+        promptAboutIdentified("accessory");
+        return;
+      }
+      if (intent === "identify-details" || intent === "identify-accessory") {
+        continueIdentification(action.value || "");
+        return;
+      }
+      sendMessage(action.value || action.label || "");
+    }
+
+    function presentActions(shown, data) {
+      if (data && data.quickReplies && shown.actions.length) {
+        showQuickReplies(shown.actions, data.helper || quickHelperEl.textContent);
+        return;
+      }
+      clearQuickReplies();
+      if (shown.actions.length) addActionButtons(shown.actions);
+    }
+
     function addActionButtons(actions) {
       if (!Array.isArray(actions) || actions.length === 0) return;
 
@@ -576,7 +752,7 @@
         button.className = "action-button";
         button.textContent = action.label || action.value || "Select";
         button.setAttribute("aria-label", button.textContent);
-        button.onclick = () => sendMessage(action.value || action.label || "");
+        button.onclick = () => runAction(action);
         row.appendChild(button);
       });
 
@@ -614,9 +790,14 @@
 
     async function sendMessage(prefilledText) {
       const text = String(prefilledText || inputEl.value || "").trim();
+      if (!prefilledText && pendingPhoto) {
+        await submitAttachedPhoto(text);
+        return;
+      }
       if (!text) return;
 
       addMessage("user", text);
+      resetQuestionBox();
 
       if (!prefilledText) {
         inputEl.value = "";
@@ -636,7 +817,26 @@
         addMessage("assistant", shown.reply);
         appendAnswerImages(data.images, "after");
 
-        if (shown.actions.length) addActionButtons(shown.actions);
+        presentActions(shown, data);
+      } catch (err) {
+        console.error(err);
+        addMessage("assistant", "Sorry, there was a problem getting an answer.");
+      } finally {
+        setStatus("");
+      }
+    }
+
+    async function continueIdentification(message) {
+      const text = String(message || "").trim();
+      if (!text) return;
+      clearQuickReplies();
+      setStatus("SW-7885 is checking the reference files...");
+      try {
+        const data = await askApi(text);
+        state.flowState = data.flowState || null;
+        const shown = presentReply(data, text);
+        addMessage("assistant", shown.reply);
+        presentActions(shown, data);
       } catch (err) {
         console.error(err);
         addMessage("assistant", "Sorry, there was a problem getting an answer.");
@@ -684,57 +884,76 @@
 
       input.addEventListener("change", (event) => {
         const file = event.target.files[0];
-
         if (!file) return;
-
         pendingPhoto = file;
-
         const reader = new FileReader();
-
         reader.onload = function(e) {
-          document.getElementById("photoPreview").src = e.target.result;
-          document.getElementById("photoPreviewWrap").style.display = "block";
+          showPhotoPreview(e.target.result);
         };
-
         reader.readAsDataURL(file);
       });
+
+      document.getElementById("removePhoto").addEventListener("click", clearPhoto);
     });
 
-    function cancelPhotoPreview() {
-      pendingPhoto = null;
-
-      document.getElementById("photoPreviewWrap").style.display = "none";
-      document.getElementById("photoPreview").src = "";
-      document.getElementById("photoInput").value = "";
+    function showPhotoPreview(dataUrl) {
+      document.getElementById("photoPreview").src = dataUrl;
+      document.getElementById("photoPreviewWrap").classList.add("is-shown");
+      inputEl.placeholder = photoPlaceholder;
+      inputEl.setAttribute("aria-label", photoPlaceholder);
     }
 
-    async function analysePhoto() {
-      if (!pendingPhoto) return;
+    function clearPhoto() {
+      pendingPhoto = null;
+      document.getElementById("photoPreviewWrap").classList.remove("is-shown");
+      document.getElementById("photoPreview").src = "";
+      document.getElementById("photoInput").value = "";
+      if (inputEl.placeholder === photoPlaceholder) resetQuestionBox();
+    }
 
+    async function submitAttachedPhoto(note) {
       const photoToAnalyse = pendingPhoto;
+      if (!photoToAnalyse) return;
 
-      addMessage("user", "📷 Photo uploaded for analysis");
+      let imageDataUrl = "";
+      try {
+        imageDataUrl = await fileToDataUrl(photoToAnalyse);
+      } catch (err) {
+        console.error(err);
+        addMessage("assistant", "Sorry, there was a problem reading that photo.");
+        return;
+      }
+
+      clearPhoto();
+      inputEl.value = "";
+      autoSizeInput();
+      addMessage("user", note ? "📷 " + note : "📷 Photo uploaded for analysis");
       setStatus("SW-7885 is analysing the photo...");
 
       try {
-        const imageDataUrl = await fileToDataUrl(photoToAnalyse);
-        const data = await askApi("Analyse this uploaded figure photo.", imageDataUrl);
-
+        const data = await askApi(note || "Analyse this uploaded figure photo.", imageDataUrl);
         state.flowState = data.flowState || null;
-
         appendAnswerImages(data.images, "before");
-
-        const shown = presentReply(data, "identify a figure");
+        const shown = presentReply(data, note || "identify a figure");
         addMessage("assistant", shown.reply || "I could not identify the figure from that image.");
         appendAnswerImages(data.images, "after");
+        presentActions(shown, data);
 
-        if (shown.actions.length) addActionButtons(shown.actions);
+        if (note) {
+          setStatus("SW-7885 is checking the reference files...");
+          const answer = await askApi(note);
+          state.flowState = answer.flowState || state.flowState;
+          appendAnswerImages(answer.images, "before");
+          const answered = presentReply(answer, note);
+          addMessage("assistant", answered.reply);
+          appendAnswerImages(answer.images, "after");
+          if (!answer.quickReplies && answered.actions.length) addActionButtons(answered.actions);
+        }
       } catch (err) {
         console.error(err);
         addMessage("assistant", "Sorry, there was a problem analysing the photo.");
       } finally {
         setStatus("");
-        cancelPhotoPreview();
       }
     }
 
@@ -779,8 +998,7 @@
 
     window.sendMessage = sendMessage;
     window.openPhotoPicker = openPhotoPicker;
-    window.analysePhoto = analysePhoto;
-    window.cancelPhotoPreview = cancelPhotoPreview;
+    window.clearPhoto = clearPhoto;
   </script>
 </body>
 </html>

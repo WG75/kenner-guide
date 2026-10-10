@@ -5,7 +5,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { parseFollowUps, fallbackFollowUps, layoutMode, syncLayoutClass } from "../vfcb-chat-ui.js";
+import { parseFollowUps, fallbackFollowUps, layoutMode, syncLayoutClass, actionIntent, askAboutPrompt } from "../vfcb-chat-ui.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 process.chdir(root);
@@ -316,9 +316,57 @@ await test("UNCHANGED: photo path still calls vision model and returns flowState
     json: async () => ({ choices: [{ message: { content: '{"figure_key":"jawa","display_name":"Jawa","confidence":"high","is_vintage_star_wars":true}' } }] })
   });
   const { json } = await call({ message: "", image: "data:image/png;base64,AAAA" });
-  assert.match(json.reply, /appears to be Jawa/);
+  assert.equal(json.reply, "The figure in your photo appears to be Jawa, first released in 1977 on the 12-back Star Wars cardback.");
+  assert.doesNotMatch(json.reply, /Confidence|Did you have any questions|Yes/);
+  assert.deepEqual(json.actions.map(action => action.label), [
+    "Do you have a question about this figure?",
+    "Would you like to identify his variant or either of his accessories?"
+  ]);
+  assert.deepEqual(json.actions.map(action => action.value), ["ask-about-figure", "identify-variant-or-accessories"]);
+  assert.equal(json.quickReplies, true);
+  assert.equal(json.helper, "Or ask me anything, or upload another photo to identify.");
   assert.equal(json.flowState.topic, "image_identified");
+  assert.equal(json.flowState.itemKind, "figure");
+  assert.equal(json.flowState.figure, "jawa");
+  assert.equal(json.flowState.displayName, "Jawa");
+  assert.deepEqual(json.flowState.accessories, ["cloak", "blaster"]);
+  assert.equal(json.flowState.step, "post_identification");
   assert.equal(calls[0].body.messages[1].content[1].type, "image_url");
+});
+
+await test("Lando photo reply names the debut card and visible accessories", async () => {
+  nextResponse = async () => ({
+    ok: true, status: 200,
+    json: async () => ({ choices: [{ message: { content: '{"figure_key":"lando_calrissian","display_name":"Lando Calrissian","confidence":"high","is_vintage_star_wars":true,"visible_accessories":["cape","blaster"]}' } }] })
+  });
+  const complete = await call({ message: "Analyse this uploaded figure photo.", image: "data:image/png;base64,AAAA" });
+  assert.equal(complete.json.reply, "The figure in your photo appears to be Lando Calrissian, first released in 1980 on the 31-back The Empire Strikes Back cardback. He looks complete, with his cape and blaster.");
+  assert.doesNotMatch(complete.json.reply, /Confidence/);
+
+  nextResponse = async () => ({
+    ok: true, status: 200,
+    json: async () => ({ choices: [{ message: { content: '{"figure_key":"lando","display_name":"Lando Calrissian","confidence":"high","is_vintage_star_wars":true,"visible_accessories":["cape"]}' } }] })
+  });
+  const missing = await call({ message: "", image: "data:image/png;base64,AAAA" });
+  assert.match(missing.json.reply, /He appears to be missing his blaster\./);
+  assert.equal(missing.json.actions[1].label, "Would you like to identify his variant or either of his accessories?");
+});
+
+await test("accessory photo asks about the accessory instead of Yes or No", async () => {
+  nextResponse = async () => ({
+    ok: true, status: 200,
+    json: async () => ({ choices: [{ message: { content: '{"figure_key":"jawa_blaster","display_name":"Jawa Blaster","item_kind":"accessory","confidence":"medium","is_vintage_star_wars":true}' } }] })
+  });
+  const { json } = await call({ message: "", image: "data:image/png;base64,AAAA" });
+  assert.equal(json.reply, "The accessory in your photo appears to be Jawa Blaster.");
+  assert.doesNotMatch(json.reply, /Confidence/);
+  assert.deepEqual(json.actions.map(action => action.label), [
+    "Do you have a question about this accessory?",
+    "Would you like to identify its mould, colour or markings?"
+  ]);
+  assert.equal(json.flowState.itemKind, "accessory");
+  assert.equal(json.flowState.displayName, "Jawa Blaster");
+  assert.equal(json.quickReplies, true);
 });
 
 await test("UNCHANGED: scripted flow start and continue still work with no model call", async () => {
@@ -329,7 +377,7 @@ await test("UNCHANGED: scripted flow start and continue still work with no model
   assert.equal(calls.length, 0);
 });
 
-const vaderPhotoReply = "This figure appears to be Darth Vader.\n\nConfidence: high\n\nDid you have any questions about this figure or would you like to look up another?";
+const vaderPhotoReply = "The figure in your photo appears to be Darth Vader, first released in 1977 on the 12-back Star Wars cardback. He looks complete, with his cape and lightsaber.";
 const vaderFlow = { topic: "image_identified", figure: "darth_vader", displayName: "Darth Vader", step: "post_identification" };
 
 function assertVaderAccessoryRetrieval(json) {
@@ -702,6 +750,8 @@ await test("every retrieval file is under the 7000 character cap", async () => {
       else if (/^catalog(-\d+)?\.json$/.test(entry.name)) continue;
       // The retrieval index is a topic list, not an injected reference.
       else if (entry.name === "retrieval-index.json") continue;
+      // Debut year and card are used only to write the photo-identification sentence.
+      else if (entry.name === "kenner-debut-figures.json") continue;
       else {
         const text = fs.readFileSync(full, "utf8");
         if (text.length > cap) over.push(`${path.relative(root, full)} (${text.length})`);
@@ -891,6 +941,116 @@ await test("follow-up block is parsed and a broken block uses the topic fallback
   assert.doesNotMatch(json.reply, /<<<|FOLLOWUPS/);
 });
 
+await test("photo follow-up buttons ask about the figure or start identification", async () => {
+  assert.equal(actionIntent({ value: "ask-about-figure" }), "ask-figure");
+  assert.equal(actionIntent({ value: "ask-about-accessory" }), "ask-accessory");
+  assert.equal(actionIntent({ value: "identify-variant-or-accessories" }), "identify-details");
+  assert.equal(actionIntent({ value: "identify-this-accessory" }), "identify-accessory");
+  assert.equal(actionIntent({ label: "Yes", value: "yes" }), "send");
+  const figurePrompt = askAboutPrompt("Lando Calrissian", "figure");
+  assert.equal(figurePrompt.placeholder, "Ask about Lando Calrissian");
+  assert.equal(figurePrompt.prompt, "What would you like to know about Lando Calrissian?");
+  const accessoryPrompt = askAboutPrompt("", "accessory");
+  assert.equal(accessoryPrompt.placeholder, "Ask about this accessory");
+  assert.match(accessoryPrompt.prompt, /this accessory/);
+
+  const asked = await call({ message: "ask-about-figure", flowState: vaderFlow });
+  assert.equal(calls.length, 0);
+  assert.match(asked.json.reply, /What would you like to know about Darth Vader\?/);
+  assert.equal(asked.json.flowState.topic, "image_identified");
+  assert.equal(asked.json.flowState.figure, "darth_vader");
+  assert.equal(asked.json.flowState.displayName, "Darth Vader");
+  assert.equal(asked.json.flowState.step, "post_identification");
+  assert.deepEqual(asked.json.actions, []);
+
+  const landoFlow = {
+    topic: "image_identified",
+    itemKind: "figure",
+    figure: "lando_calrissian",
+    displayName: "Lando Calrissian",
+    pronoun: "he",
+    possessive: "his",
+    accessories: ["cape", "blaster"],
+    step: "post_identification"
+  };
+  const choices = await call({ message: "identify-variant-or-accessories", flowState: landoFlow });
+  assert.equal(calls.length, 0);
+  assert.match(choices.json.reply, /Which shall we check for Lando Calrissian\?/);
+  assert.deepEqual(choices.json.actions.map(action => action.label), [
+    "Identify his variant",
+    "Identify his cape",
+    "Identify his blaster"
+  ]);
+  assert.equal(choices.json.quickReplies, true);
+  const cape = await call({ message: "identify the cape of Lando Calrissian", flowState: landoFlow });
+  assert.equal(cape.json.flowState.topic, "accessory_identify");
+  assert.match(cape.json.reply, /Let's check the cape that came with Lando Calrissian/);
+  const onlyVariant = await call({
+    message: "identify-variant-or-accessories",
+    flowState: { ...landoFlow, accessories: [], displayName: "R2-D2 (Artoo-Detoo)" }
+  });
+  assert.equal(onlyVariant.json.flowState.topic, "variant_identify");
+  assert.match(onlyVariant.json.reply, /Let's check R2-D2/);
+
+  const anotherFigure = await call({ message: "identify-another-figure", flowState: vaderFlow });
+  assert.equal(calls.length, 0);
+  assert.equal(anotherFigure.json.flowState.topic, "variant_identify");
+  assert.match(anotherFigure.json.reply, /Which figure shall we identify/);
+
+  const accessoryFlow = {
+    topic: "image_identified",
+    itemKind: "accessory",
+    figure: "jawa_blaster",
+    displayName: "Jawa Blaster",
+    step: "post_identification"
+  };
+  const askedAccessory = await call({ message: "ask-about-accessory", flowState: accessoryFlow });
+  assert.match(askedAccessory.json.reply, /What would you like to know about Jawa Blaster\?/);
+  assert.equal(askedAccessory.json.flowState.itemKind, "accessory");
+  assert.equal(askedAccessory.json.flowState.displayName, "Jawa Blaster");
+
+  const mould = await call({ message: "identify-this-accessory", flowState: accessoryFlow });
+  assert.equal(mould.json.flowState.topic, "accessory_identify");
+  assert.match(mould.json.reply, /Let's check Jawa Blaster/);
+  const anotherAccessory = await call({ message: "identify-another-accessory", flowState: accessoryFlow });
+  assert.equal(anotherAccessory.json.flowState.topic, "accessory_identify");
+  assert.match(anotherAccessory.json.reply, /Which accessory shall we look at/);
+
+  const colour = await call({
+    message: "what colour is this?",
+    history: [
+      { role: "assistant", content: "The accessory in your photo appears to be Jawa Blaster." },
+      { role: "user", content: "what colour is this?" }
+    ],
+    flowState: accessoryFlow
+  });
+  assert.equal(colour.json.reply, "MOCK ANSWER");
+  assert.match(calls[0].body.messages.at(-1).content, /the accessory in play is Jawa Blaster/);
+
+  const page = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  assert.match(page, /actionIntent/);
+  assert.match(page, /askAboutPrompt/);
+  assert.match(page, /promptAboutIdentified/);
+  assert.match(page, /inputEl\.focus\(\)/);
+  assert.match(page, /startIdentifyFigure\(\)/);
+  assert.match(page, /startIdentifyAccessories\(\)/);
+  assert.match(page, /id="quickReplies"/);
+  assert.match(page, /id="quickHelper"/);
+  assert.match(page, /Or ask me anything, or upload another photo to identify\./);
+  assert.match(page, /id="removePhoto"/);
+  assert.match(page, /Add a note or press Send to identify/);
+  assert.match(page, /submitAttachedPhoto/);
+  assert.doesNotMatch(page, />Analyse</);
+  assert.doesNotMatch(page, />Cancel</);
+  assert.doesNotMatch(page, /analysePhoto/);
+  assert.doesNotMatch(page, /Did you have any questions about this figure/);
+  const quickAt = page.indexOf('id="quickReplies"');
+  const helperAt = page.indexOf('id="quickHelper"');
+  const inputAt = page.indexOf('id="input"');
+  const photoAt = page.indexOf('id="photoPreviewWrap"');
+  assert.ok(photoAt < inputAt && quickAt < helperAt && helperAt < inputAt);
+});
+
 await test("identify buttons sit under the greeting and above the question box", async () => {
   const page = fs.readFileSync(path.join(root, "index.html"), "utf8");
   assert.match(page, /Identify a Figure/);
@@ -916,8 +1076,12 @@ await test("identify buttons sit under the greeting and above the question box",
   const greetingAt = page.indexOf('id="welcomeGreeting"');
   const buttonsAt = page.indexOf('id="identifyFigure"');
   const inputAt = page.indexOf('id="input"');
-  const headerAt = page.indexOf('class="header"');
-  assert.ok(headerAt < greetingAt && greetingAt < buttonsAt && buttonsAt < inputAt);
+  const heroAt = page.indexOf('class="hero"');
+  assert.ok(heroAt < greetingAt && greetingAt < buttonsAt && buttonsAt < inputAt);
+  assert.match(page, /ESS DOUBLE U - SEVENTY EIGHT EIGHTY FIVE/);
+  assert.match(page, /\(SW-7885\)/);
+  assert.match(page, /COLLECTOR'S DROID/);
+  assert.match(page, /SW-7885 droid art coming soon/);
   assert.match(page, /href="https:\/\/www\.variantvillain\.com\/" target="_blank" rel="noopener noreferrer">Variant Villain<\/a>/);
 });
 
