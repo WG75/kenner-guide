@@ -3,6 +3,7 @@ import path from "path";
 import { parseFollowUps, fallbackFollowUps, followTopicFor } from "../vfcb-chat-ui.js";
 import { selectVvReferencePhotos } from "./vv-reference-photos.js";
 import { composePhotoReply, PHOTO_HELPER } from "./kenner-debut.js";
+import { cooOpening, cooContinue } from "./coo-flow.js";
 
 export { tcTopicRoute, tcPalitoyIntent };
 
@@ -1627,13 +1628,6 @@ function tcCarriedFlow(flowState, identified) {
   };
 }
 
-const TC_VARIANT_QUESTIONS = [
-  "What COO stamp is on the figure (Hong Kong, Taiwan, China, Macau, No COO, Mexico, or another)? This question is not evidence.",
-  "Which head, paint or body trait do you see? This question is not evidence.",
-  "Which accessory mould or colour is with it? This question is not evidence.",
-  "If it is carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list. This question is not evidence."
-];
-
 /* Plain typed "identify the variant of Bossk". Does not match the photo-menu
    replies "identify variant" and "A", which stay on the scripted choose_help path. */
 function tcVariantTarget(message) {
@@ -1694,8 +1688,11 @@ function tcStartVariant(res, target) {
       skipFollowUps: true
     });
   }
-  return tcReply(res, `Let's check ${fig.name}. I'll stick to what the reference data supports, and where it's thin I'll say I'm not sure.\n\n${TC_VARIANT_QUESTIONS[0]}`, {
-    flowState: { topic: "variant_identify", displayName: fig.name, step: 0, answers: [] },
+  const opening = cooOpening(fig.name);
+  return tcReply(res, opening.reply, {
+    flowState: opening.flowState,
+    actions: opening.actions,
+    quickReplies: opening.quickReplies,
     skipFollowUps: true
   });
 }
@@ -1728,26 +1725,14 @@ async function handleTextChat(res, { message, history, flowState }) {
   let variantNote = "";
   if (flowState && flowState.topic === "variant_identify") {
     if (flowState.step === "need_name") return tcStartVariant(res, question);
-    const answers = Array.isArray(flowState.answers) ? [...flowState.answers, question] : [question];
-    const step = Number(flowState.step) || 0;
-    if (step < TC_VARIANT_QUESTIONS.length - 1) {
-      return tcReply(res, TC_VARIANT_QUESTIONS[step + 1], {
-        flowState: {
-          topic: "variant_identify",
-          displayName: flowState.displayName,
-          step: step + 1,
-          answers
-        },
-        skipFollowUps: true
-      });
-    }
-    const labels = ["COO", "head/paint/body", "accessory", "cardback"];
-    const observed = answers.map((answer, i) => `${labels[i] || "note"}: ${answer}`).join("; ");
-    variantNote = `Context only, not a source fact: the collector is identifying ${flowState.displayName}. Observations: ${observed}. These observations are not source facts. If the reference data does not establish one variant, say you're not sure in a plain sentence. Do not add an Evidence label.\n\n`;
-    // Rank on the figure name only. The observations stay in the note so words
-    // like "cardback" do not pull every debut file ahead of the dossier.
-    question = `${flowState.displayName} variant identification`;
-    flowState = null;
+    const stepName = flowState.step === "coo" || flowState.step === "follow" ? flowState.step : "coo";
+    const continued = cooContinue({ ...flowState, step: stepName }, question);
+    return tcReply(res, continued.reply, {
+      flowState: continued.flowState,
+      actions: continued.actions,
+      quickReplies: continued.quickReplies,
+      skipFollowUps: true
+    });
   } else if (flowState && flowState.topic === "accessory_identify") {
     const answers = Array.isArray(flowState.answers) ? [...flowState.answers, question] : [question];
     const step = Number(flowState.step) || 0;

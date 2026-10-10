@@ -3,49 +3,39 @@ Topic: Country of Origin (COO)
 Category:
 General Reference / Figure Identification
 
-Overview:
-COO stands for "Country of Origin" and is typically stamped onto a vintage Star Wars figure. It indicates where the figure was manufactured, not necessarily where it was sold.
+Source name: Variant Villain, Introduction to COOs.
+Source URL: https://www.variantvillain.com/knowledge/introduction-to-coos/
+Reliability: high. Recorded: 2026-10-10. This file is a reading of that page, not a new claim.
 
-What COO Includes:
-Most COO markings include:
-- Copyright year (e.g. 1977, 1980)
-- Country (e.g. Hong Kong, Taiwan, China, Macau)
-- Sometimes manufacturer markings
+What COO means:
+COO is short for country of origin. On a vintage figure it is the small text on the back of the legs saying where it was made. Collectors also use COO for the whole mark: the copyright, the year, and the country. The country says where the plastic was injected into the mould. It does not say where the figure was painted, assembled, packed, or sold.
 
-Key COO Regions:
+A partial or cut-off country name counts as No COO. So does a country that was ground off, scarred over, or smoothed away. If only part of "Hong Kong" or another country can still be read, call it No COO.
 
-Hong Kong (HK):
-One of the earliest and most common COO markings. Early figures are often associated with Hong Kong production.
+The three parts of the mark:
+- Copyright. The circled c, then G.M.F.G.I. (General Mills Fun Group Inc.) on the first 20 figures, C.P.G. (Consumer Product Group) on Boba Fett, or L.F.L. (Lucasfilm Ltd.) on the others. The R2-D2 sensorscope kept the early R2 mould, so it did not get a new copyright line.
+- Year. The year after the copyright is when the copyright was acquired for that character, not the year every copy was made. The mould was not recut every year. The pop-up lightsaber R2-D2 is marked 1977 and was made later. Exceptions called out on the page include a Brazilian R2-D2 marked 1985, Barada marked 1984 or 1985, and R5-D4 marked 1977 (R2 mould, COO not altered) or 1978.
+- Country. Where the figure was injected.
 
-Taiwan:
-Typically seen in mid-production figures. Often linked with specific mould changes and paint variations.
+When the stamp was applied:
+The original sculpt was copied into a hard copy, and that was cut into a steel mould (the page uses "steel-mould" even when the metal is aluminium or brass). First shots from that mould normally have no markings. After Kenner approved them, the mould was duplicated and then stamped. The page's author thinks the country letters were hammered into the softer aluminium or brass, which is why so many stamps are almost the same with one letter out of line.
 
-Macau:
-Less common. Appears on certain figures and variants.
+Country stamps named on the page:
+- Hong Kong. "Made in Hong Kong", "Hong Kong", or "H.K.". These are the unaltered original stamps.
+- Taiwan. "Made in Taiwan" or "Taiwan". Also unaltered. The page says Taiwan stamps can appear on Star Wars and Return of the Jedi characters and not on a single Empire Strikes Back character, and that Taiwan moulds were not later changed into a No COO.
+- Macau. "Macau", "Macao", or the country deleted (No COO). These are altered Hong Kong stamps.
+- China. "Made in China" or "China", always on a raised bar. A blank raised bar can also be a China figure. These are altered Hong Kong stamps.
+- No COO. Either made with no country, or altered so the country was removed. How it was removed does not prove which country made it.
 
-China:
-Later production COO. Often associated with Return of the Jedi era figures.
+The page is explicit that the country stamp is a mark of a mould, not proof of where or when a figure was sold. Moulds were duplicated and moved between factories. Overstock was packed in other countries. Rules such as "Lili Ledy is always No COO", "China figures appeared only in China baggies", "Trilogo is always No COO", "a scar is always PBP", or "Taiwan figures only appeared in Europe" are stated as wrong.
 
-No COO:
-Some figures have no COO marking. This can be due to mould wear, removal during production changes, or intentional omission.
+A vintage Kenner figure does not have the word Mexico on the legs. Do not offer Mexico as a COO choice. Mexico comes up on the page only as a place some figures were injected for the Lili Ledy licensee, not as leg text.
 
-Important Collector Notes:
+Factories and licensees the page discusses, without turning them into a leg-stamp menu:
+Hong Kong moulds later moved and were altered for China and Macau. Latin American injection is Top Toys in Argentina (new moulds, no copyright, year, or country), Glasslite in Brazil (year changed on C-3PO and R2-D2, other figures left unaltered), and Lili Ledy in Mexico (many moulds used as they were, plus some unique marks with a year and copyright but no country). European packing in the later years often used figures whose country had been replaced by a rough scar. The page says PBP in Spain is the European company that probably injected some of its own figures. Poch-era PBP more often painted and packed figures bought unpainted. A scar is not, by itself, proof of PBP.
 
-COO does NOT equal brand:
-Figures were sold under different brand names depending on country (Kenner, Palitoy, Meccano, PBP, etc.), but the COO refers only to where the figure was made.
+How to use this:
+Start with the stamp, then check the mould, paint, plastic, and accessories. The stamp alone does not identify a variant. For one figure, offer only the countries and wordings that figure's own page names. If this guide has no verified stamps for that figure, say so. Do not read out a generic list.
 
-COO helps identify variants:
-Different COO markings can indicate:
-- different factories
-- different moulds
-- different production periods
-
-COO alone is not enough:
-Accurate identification requires combining COO with:
-- sculpt details
-- paint application
-- accessory pairing
-- mould characteristics
-
-Collector Summary:
-COO markings are one of the most important starting points for identifying figure variants, but must always be used alongside other physical details.
+Collector summary:
+COO is the leg stamp that says where the figure was moulded. Read the country, and treat a partial, cut-off, scarred, or smoothed country as No COO. Then use the figure's own factory notes. The stamp is not the brand and not the card.
