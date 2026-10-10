@@ -783,28 +783,92 @@ await test("Jawa and Luke Bespin accessory menu replies use reference chat", asy
   }
 });
 
-await test("typed variant identifier asks discriminating questions then retrieves the figure", async () => {
+await test("typed variant identifier asks the figure's own COO stamps and never Mexico", async () => {
   const start = await call({ message: "identify the variant of Bossk" });
   assert.equal(calls.length, 0);
-  assert.equal(start.json.flowState.topic, "variant_identify");
-  assert.equal(start.json.flowState.displayName, "Bossk");
-  assert.match(start.json.reply, /COO stamp/);
-  let state = start.json.flowState;
-  const answers = ["Hong Kong", "dark green", "rifle", "41 back"];
-  for (let i = 0; i < answers.length - 1; i++) {
-    const next = await call({ message: answers[i], flowState: state });
-    assert.equal(calls.length, 0, `model called on question ${i + 1}`);
-    assert.equal(next.json.flowState.topic, "variant_identify");
-    state = next.json.flowState;
+  assert.doesNotMatch(start.json.reply, /Mexico/);
+  assert.doesNotMatch(start.json.reply, /This question is not evidence/);
+  assert.doesNotMatch(JSON.stringify(start.json.actions || []), /Mexico/);
+  if (start.json.flowState) {
+    assert.equal(start.json.flowState.topic, "variant_identify");
+    assert.match(start.json.reply, /country of origin \(COO\) stamp/i);
+    assert.match(start.json.reply, /small text on the back of the legs/);
+  } else {
+    assert.match(start.json.reply, /don't have verified COO details/i);
   }
-  const done = await call({ message: answers.at(-1), flowState: state });
-  assert.equal(calls.length, 1);
-  const prompt = calls.at(-1).body.messages.at(-1).content;
-  assert.match(prompt, /REFERENCE: figures\/bossk-reference\.txt/);
-  assert.match(prompt, /Figure Name: Bossk/);
-  assert.match(prompt, /not sure/);
-  assert.doesNotMatch(prompt, /Evidence:/i);
-  assert.match(prompt, /Hong Kong/);
+});
+
+await test("Lando COO choices are the 1980 stamps and the first question explains COO", async () => {
+  const start = await call({ message: "identify the variant of Lando Calrissian" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.quickReplies, true);
+  assert.match(start.json.reply, /country of origin \(COO\) stamp is the small text on the back of the legs/);
+  assert.match(start.json.reply, /partial or cut-off country name counts as No COO/);
+  assert.doesNotMatch(start.json.reply, /Mexico|Taiwan|Macau|This question is not evidence/);
+  assert.deepEqual(start.json.actions.map(action => action.label), [
+    "Made in Hong Kong (2 lines)",
+    "Hong Kong only, under the © 1980 L.F.L. mark",
+    "Made in China",
+    "No COO / scar / smoothed over"
+  ]);
+  const groups = new Set(["Hong Kong", "Hong Kong", "China", "No COO"]);
+  assert.equal(groups.size, 3);
+
+  const kader = await call({ message: "Made in Hong Kong (2 lines)", flowState: start.json.flowState });
+  assert.equal(calls.length, 0);
+  assert.match(kader.json.reply, /Kader M1/);
+  assert.match(kader.json.reply, /left leg/);
+  assert.match(kader.json.reply, /right leg/);
+  assert.equal(kader.json.flowState, null);
+
+  const shared = await call({ message: "Hong Kong only, under the © 1980 L.F.L. mark", flowState: start.json.flowState });
+  assert.match(shared.json.reply, /Smile M2/);
+  assert.match(shared.json.reply, /Unitoy M3/);
+  assert.match(shared.json.reply, /not sure/i);
+  assert.equal(shared.json.flowState, null);
+
+  const china = await call({ message: "Made in China", flowState: start.json.flowState });
+  assert.match(china.json.reply, /Kader China M1/);
+  assert.match(china.json.reply, /Lili Ledy M1/);
+  assert.match(china.json.reply, /raised bar/);
+  assert.doesNotMatch(china.json.reply, /Mexico/);
+
+  const open = await call({ message: "No COO / scar / smoothed over", flowState: start.json.flowState });
+  assert.equal(open.json.quickReplies, true);
+  assert.deepEqual(open.json.actions.map(action => action.label), [
+    "A scar under the © 1980 L.F.L. mark",
+    "Hong Kong barely visible, or smoothed over"
+  ]);
+  const scar = await call({ message: "A scar under the © 1980 L.F.L. mark", flowState: open.json.flowState });
+  assert.match(scar.json.reply, /PBP/);
+  assert.match(scar.json.reply, /Unitoy M3/);
+  assert.equal(scar.json.flowState, null);
+  const smooth = await call({ message: "Hong Kong barely visible, or smoothed over", flowState: open.json.flowState });
+  assert.match(smooth.json.reply, /No COO/);
+  assert.match(smooth.json.reply, /not sure/i);
+});
+
+await test("no figure's COO question offers Mexico", async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  assert.ok(data.figures.length >= 90, data.figures.length);
+  for (const fig of data.figures) {
+    const start = await call({ message: `identify the variant of ${fig.name}` });
+    assert.equal(calls.length, 0, fig.name);
+    assert.doesNotMatch(start.json.reply, /Mexico/, fig.name);
+    assert.doesNotMatch(JSON.stringify(start.json.actions || []), /Mexico/, fig.name);
+    assert.doesNotMatch(start.json.reply, /This question is not evidence/, fig.name);
+    if (start.json.actions && start.json.actions.length) {
+      assert.match(start.json.reply, /country of origin \(COO\) stamp/, fig.name);
+    } else if (start.json.flowState && start.json.flowState.step === "need_name") {
+      assert.match(start.json.reply, /Which figure do you mean/, fig.name);
+    } else {
+      assert.match(start.json.reply, /don't have verified COO details|haven't got a reference file/, fig.name);
+    }
+  }
+  const guide = fs.readFileSync(path.join(root, "data/references/coo-guide.txt"), "utf8");
+  assert.match(guide, /https:\/\/www\.variantvillain\.com\/knowledge\/introduction-to-coos\//);
+  assert.match(guide, /partial or cut-off country name counts as No COO/);
+  assert.match(guide, /does not have the word Mexico on the legs/);
 });
 
 await test("photo-menu identify variant stays scripted and does not call the model", async () => {
@@ -848,6 +912,8 @@ await test("every retrieval file is under the 7000 character cap", async () => {
       else if (entry.name === "retrieval-index.json") continue;
       // Debut year and card are used only to write the photo-identification sentence.
       else if (entry.name === "kenner-debut-figures.json") continue;
+      // Per-figure COO buttons are read by the scripted flow, not injected into the model.
+      else if (entry.name === "coo-figures.json") continue;
       else {
         const text = fs.readFileSync(full, "utf8");
         if (text.length > cap) over.push(`${path.relative(root, full)} (${text.length})`);
