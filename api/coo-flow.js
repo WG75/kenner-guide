@@ -5,6 +5,30 @@ const FILE = path.join(process.cwd(), "data", "coo-figures.json");
 
 export const COO_EXPLANATION = "The country of origin (COO) stamp is the small text on the back of the legs saying where it was made. A partial or cut-off country name counts as No COO.";
 
+function cooExplanation(record) {
+  const custom = record && String(record.cooExplanation || "").trim();
+  return custom ? withoutMexico(custom) : COO_EXPLANATION;
+}
+
+function stampImage(record) {
+  const image = record && record.referenceImage;
+  if (!image || !image.url) return null;
+  return {
+    url: String(image.url),
+    alt: String(image.alt || ""),
+    title: String(image.title || ""),
+    caption: String(image.caption || image.credit || ""),
+    credit: String(image.credit || image.caption || ""),
+    sourcePage: String(image.sourcePage || "")
+  };
+}
+
+function withStampImage(result, record) {
+  const image = stampImage(record);
+  if (image) result.images = [image];
+  return result;
+}
+
 let cache = null;
 
 function load() {
@@ -91,7 +115,7 @@ export function cooOpening(displayName) {
   const where = record.whereToLook;
   const ask = withoutMexico(record.ask || "Which stamp do you see?");
   const lines = [
-    COO_EXPLANATION,
+    cooExplanation(record),
     "The country stamp is the first check. When more than one factory used that stamp, the stamp alone is not the variant.",
     "",
     `Let's check ${name}. ${where}`.trim()
@@ -103,7 +127,7 @@ export function cooOpening(displayName) {
     return done(lines.join("\n"), figureMatch(record, factory));
   }
   lines.push("", ask);
-  return {
+  return withStampImage({
     reply: lines.join("\n"),
     actions: record.options.map(choice),
     quickReplies: true,
@@ -116,7 +140,7 @@ export function cooOpening(displayName) {
       photoTells: [],
       usedTells: []
     }
-  };
+  }, record);
 }
 
 const TELL_ORDER = ["hair", "paint", "plastic", "head", "mould", "date", "cavity", "assembly", "accessory", "cardback"];
@@ -297,7 +321,7 @@ export function cooContinue(flowState, message) {
     return done(`I'm not sure. That isn't one of the verified stamps for ${record.name}.`);
   }
   if (Array.isArray(option.followUps) && option.followUps.length) {
-    return {
+    return withStampImage({
       reply: `One more look at ${record.name}. ${record.whereToLook}\n\nWhich of these is it?`,
       actions: option.followUps.map(choice),
       quickReplies: true,
@@ -310,7 +334,7 @@ export function cooContinue(flowState, message) {
         photoTells: carried.photoTells,
         usedTells: carried.usedTells
       }
-    };
+    }, record);
   }
   return afterStamp(
     record,

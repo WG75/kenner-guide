@@ -17,6 +17,7 @@ Progression:
 Features:
 - Matt mid-blue legs
 - Large crimson eye
+- Cavity 1 or 2 is Kader M3. Cavity 5 or 6 is Kader M4. Cavity 3 or 4 is Kader M7.
 - Consistent sculpt and sticker layout
 
 Special Note:
@@ -24,26 +25,26 @@ Special Note:
 
 --------------------------------------------------
 
-LILI LEDY (MEXICO)
+LILI LEDY REGRESO
 
 Key Traits:
-- Unique sticker artwork
-- Light-blue legs consistent across variants
+- Same opposite Hong Kong stamp as Kader
+- Light-blue legs
+- A-type or C-type sticker
+- The torso can be hard or soft
 
-Variants:
-- Dark blue dome
-- Dull blue dome (purple hue)
-- Light blue dome (greenish tone)
-- Mid-blue dome (possible PBP-linked version)
+PBP
 
-Sticker Types:
-- Type A (blank rectangles)
-- Type B (green-grey panels)
-- Type C (light-grey panels)
+- A Regreso figure carded in Spain
+- B-type sticker, greenish-grey panels, glossier paper
+- This note does not belong on the Retorno
 
-Important:
-- Porous sticker material → poor durability
-- Some versions imported into Spain (PBP)
+LILI LEDY RETORNO
+
+- No COO. The licensing line shows 1978
+- Cavity 5 or 6
+- Dull dark blue dome, glossy light-blue legs
+- A-type or C-type sticker
 
 --------------------------------------------------
 
@@ -62,6 +63,8 @@ Features:
 
 DROID FACTORY PLAYSET
 
+Not part of the core Kenner carded line.
+
 Key Traits:
 - Completely different sculpt
 - Fully disassemblable design
@@ -74,6 +77,8 @@ Sticker:
 --------------------------------------------------
 
 TAKARA WIND-UP R2 (JAPAN)
+
+Not part of the core Kenner carded line.
 
 Key Traits:
 - Wind-up walking mechanism

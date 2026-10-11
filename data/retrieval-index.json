@@ -4300,7 +4300,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4477
+      "chars": 5407
     },
     {
       "relPath": "figures/r2-d2-reference-2.txt",
@@ -4334,7 +4334,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3126
+      "chars": 3290
     },
     {
       "relPath": "figures/r2-d2-sensorscope-reference-2.txt",
@@ -5110,6 +5110,24 @@
       ],
       "years": [],
       "chars": 3204
+    },
+    {
+      "relPath": "references/owner-verified/r2-d2.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/r2",
+        "d2"
+      ],
+      "keywords": [
+        "owner",
+        "verified/r2",
+        "d2"
+      ],
+      "years": [],
+      "chars": 3725
     },
     {
       "relPath": "references/palitoy-history.txt",
