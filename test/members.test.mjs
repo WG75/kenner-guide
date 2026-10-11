@@ -85,7 +85,10 @@ await test("local dev mode is ignored on a production deployment", () => {
 await test("a signed-out visitor cannot save, and a dev session can", async () => {
   process.env.MEMBERS_DEV = "1";
   const denied = await call({ action: "me" });
-  assert.equal(denied.statusCode, 401);
+  assert.equal(denied.statusCode, 200);
+  assert.equal(denied.body.signedIn, false);
+  const blocked = await call({ action: "save-item", figureName: "Jawa" });
+  assert.equal(blocked.statusCode, 401);
   const signIn = await call({ action: "dev-sign-in", email: "collector@example.com", provider: "google" });
   assert.equal(signIn.statusCode, 200);
   const cookie = signIn.headers["set-cookie"].split(";")[0];

@@ -83,6 +83,7 @@ export default async function handler(req, res) {
 
   const session = await signedIn(req);
   if (!session) {
+    if (action === "me") return send(res, 200, { signedIn: false });
     return send(res, 401, { error: "signed_out", message: "Sign in to save a figure." });
   }
 

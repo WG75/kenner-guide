@@ -60,7 +60,7 @@ export function mountMembers({ bar, getPhoto }) {
 
   async function refreshMember() {
     const data = await api("me");
-    state.signedIn = true;
+    state.signedIn = Boolean(data.signedIn);
     state.canSave = Boolean(data.member && data.member.canSave);
     state.email = data.member && data.member.email || "";
   }
@@ -136,6 +136,7 @@ export function mountMembers({ bar, getPhoto }) {
     }
     const form = document.createElement("form");
     form.className = "member-form";
+    form.autocomplete = "off";
     const email = field("Email", "email", "you@example.com");
     form.appendChild(email.wrap);
     const status = document.createElement("p");
@@ -484,6 +485,7 @@ export function mountMembers({ bar, getPhoto }) {
     sheet.appendChild(heading(editing ? "Edit item" : "Save to…"));
     const form = document.createElement("form");
     form.className = "member-form";
+    form.autocomplete = "off";
     const status = document.createElement("p");
     status.className = "member-status";
     const draft = editing ? existing : state.draft;
@@ -512,6 +514,10 @@ export function mountMembers({ bar, getPhoto }) {
     gradeLabel.appendChild(grade);
     form.appendChild(gradeLabel);
     const accessoryHost = document.createElement("div");
+    accessoryHost.className = "member-accessories";
+    const accessoryHeading = document.createElement("h3");
+    accessoryHeading.textContent = "Accessories";
+    accessoryHost.appendChild(accessoryHeading);
     form.appendChild(accessoryHost);
     const accessoryRows = [];
     const addAccessoryRow = (accessory) => {
@@ -681,6 +687,8 @@ function field(label, type, placeholder) {
   const input = document.createElement("input");
   input.type = type;
   input.placeholder = placeholder || "";
+  input.autocomplete = "off";
+  input.setAttribute("autocomplete", "off");
   input.setAttribute("aria-label", label);
   wrap.appendChild(input);
   return { wrap, input };
@@ -756,13 +764,14 @@ function injectStyles() {
     .member-card { border: 1px solid var(--gold); padding: 10px; margin: 0 0 10px; background: rgba(0,0,0,0.18); }
     .member-card p, .member-card ul { margin: 0 0 8px; }
     .member-photo { display: block; max-width: 180px; margin: 8px 0; background: #050505; }
-    .member-accessory { display: grid; grid-template-columns: 1fr 1fr auto auto; gap: 8px; align-items: end; }
+    .member-accessories { display: flex; flex-direction: column; gap: 8px; }
+    .member-accessory { display: flex; flex-direction: column; gap: 8px; border: 1px solid rgba(230,195,92,0.45); padding: 8px; }
     .member-checklist { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
     .member-check { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid rgba(230,195,92,0.35); }
     .member-check.is-owned span:last-child { color: var(--gold); }
     .member-checkline { display: flex; gap: 8px; align-items: center; }
     @media (max-width: 640px) {
-      .member-layout, .member-accessory { grid-template-columns: 1fr; }
+      .member-layout { grid-template-columns: 1fr; }
     }
   `;
   document.head.appendChild(style);
