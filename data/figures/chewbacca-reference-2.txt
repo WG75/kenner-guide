@@ -11,7 +11,7 @@ Variants:
 - Light yellow-brown pouch / red-brown torso
 - Mid brown pouch / yellow-brown torso
 - Mid yellow-brown pouch / red-brown torso
-- Degraded green limbs (NOT a variant)
+- Green limbs are faded pigment, not a variant
 - Grey-brown pouch (painted dot)
 
 Notes:
@@ -59,6 +59,8 @@ Notes:
 - Late production COO removal (POTF era)
 - Possibly produced in China, packaged in HK
 - Improved plastic stability, but fragile paint
+
+The POTF licensing line reads © L.F.L. 1977. The earlier Hong Kong Kader still reads © G.M.F.G.I. 1977.
 
 Kader POTF Traits:
 - Reddish brown plastic

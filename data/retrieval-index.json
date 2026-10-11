@@ -308,7 +308,7 @@
         "chewbacca"
       ],
       "years": [],
-      "chars": 3830
+      "chars": 4394
     },
     {
       "relPath": "accessories/commlink-guide.txt",
@@ -2558,7 +2558,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4491
+      "chars": 5195
     },
     {
       "relPath": "figures/chewbacca-reference-2.txt",
@@ -2584,7 +2584,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3587
+      "chars": 3700
     },
     {
       "relPath": "figures/chief-chirpa-reference.txt",
@@ -5072,6 +5072,22 @@
       ],
       "years": [],
       "chars": 4735
+    },
+    {
+      "relPath": "references/owner-verified/chewbacca.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/chewbacca"
+      ],
+      "keywords": [
+        "owner",
+        "verified/chewbacca"
+      ],
+      "years": [],
+      "chars": 2488
     },
     {
       "relPath": "references/owner-verified/luke-skywalker.md",

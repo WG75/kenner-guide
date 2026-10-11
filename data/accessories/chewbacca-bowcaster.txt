@@ -168,9 +168,16 @@ IDENTIFICATION STRATEGY
 
 MATCHING TO FIGURES
 
-- Early Chewbacca → M1 or early M2
-- Mid production → M2
-- Later production → M3
+- Unitoy Chewbacca came with the Unitoy M2 bowcaster, blue-black then blue.
+- Kader Chewbacca, including the POTF re-stamp, came with the Kader M1 bowcaster.
+- Smile Hong Kong came with Smile M4 on SW and ESB cards, then Smile M3 from the 65b/c.
+- The late No COO Smile came with Smile M3.
+- PBP came with an imported Smile M3 or Kader M1.
+- Lili Ledy came with the Lili Ledy M4 solid black bowcaster.
+- Taiwan came with the Taiwan M5 dull black-blue bowcaster.
+- Top Toys came with the Top Toys M6 dark blue bowcaster.
+- Glasslite came with a Zuckuss-style rifle, not a bowcaster.
+- The two Poch Chewbaccas can carry a Unitoy M2 or a Kader M1.
 
 --------------------------------------------------
 

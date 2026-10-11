@@ -1077,21 +1077,58 @@
       "mould": "M1",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong' on left leg under the licensing details",
-          "where": "Look at the country stamp."
+          "detail": "'© G.M.F.G.I. 1977' and 'MADE IN HONG KONG', vertical on the back of the left thigh. The M of MADE is directly under the ©, and the K of KONG is under the second 7 of 1977.",
+          "where": "Look at the country stamp on the back of the left thigh."
         },
         {
           "category": "plastic",
-          "detail": "M2 Unitoy blue-black Bowcaster",
+          "detail": "Yellow-brown plastic. Shades run from light brown to black.",
           "where": "Look at the plastic colour or shade."
         },
         {
+          "category": "paint",
+          "detail": "Small light-blue or dark-blue pupils. The pouch is sprayed soft in the SW era and brushed hard from mid to late ESB. A short run has the pouch dot painted.",
+          "where": "Look at the paint colour."
+        },
+        {
+          "category": "mould",
+          "detail": "Swollen big toe on the left foot.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "cardback",
+          "detail": "Early Bird through the 41-back.",
+          "where": "If it is still carded, which card is it on?"
+        }
+      ]
+    },
+    {
+      "id": "chewbacca--poch-unitoy",
+      "figure": "Chewbacca",
+      "factory": "Poch Unitoy",
+      "mould": "M1",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Same MADE IN HONG KONG line as Unitoy, on Unitoy parts.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
           "category": "plastic",
-          "detail": "M2 Unitoy blue Bowcaster",
+          "detail": "Light yellow-brown plastic. Melt marks on the front of the arm or shoulder. Sprue burr. Weak sonic weld.",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "paint",
+          "detail": "Large turquoise eyes. Some were overpainted in Spain.",
+          "where": "Look at the paint colour."
         }
       ]
     },
@@ -1102,121 +1139,27 @@
       "mould": "M1",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977' on left leg, no COO",
-          "where": "Look at the country stamp."
+          "detail": "No COO. The licensing line reads '© G.M.F.G.I. 1977'. Often no date or country is readable.",
+          "where": "Look at the country stamp on the back of the left thigh."
         },
         {
           "category": "plastic",
-          "detail": "PBP Mid grey-brown pouch. Light blue pupils",
+          "detail": "Reddish-brown plastic. Melt marks. Glossy pouch colours vary.",
           "where": "Look at the plastic colour or shade."
         },
         {
-          "category": "plastic",
-          "detail": "PBP Mid red-brown pouch. Mid blue pupils",
-          "where": "Look at the plastic colour or shade."
+          "category": "paint",
+          "detail": "Large eyes. Pupils are light, turquoise, or mid-blue.",
+          "where": "Look at the paint colour."
         },
         {
-          "category": "plastic",
-          "detail": "PBP Dark brown pouch. Mid blue pupils",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "PBP Very dark brown pouch. Mid blue pupils",
-          "where": "Look at the plastic colour or shade."
-        }
-      ]
-    },
-    {
-      "id": "chewbacca--kader-m2-2",
-      "figure": "Chewbacca",
-      "factory": "Kader M2.2",
-      "mould": "M2.2",
-      "source": "owner",
-      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977' on left leg, no COO",
-          "where": "Look at the country stamp."
-        },
-        {
-          "category": "plastic",
-          "detail": "M1 Kader blue-black Bowcaster",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "Kader M1 black-blue Bowcaster",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "M1 Kader black-blue Bowcaster",
-          "where": "Look at the plastic colour or shade."
-        }
-      ]
-    },
-    {
-      "id": "chewbacca--glasslite-m2",
-      "figure": "Chewbacca",
-      "factory": "Glasslite M2",
-      "mould": "M2",
-      "source": "owner",
-      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977' on left leg, no COO",
-          "where": "Look at the country stamp."
-        }
-      ]
-    },
-    {
-      "id": "chewbacca--smile-m5",
-      "figure": "Chewbacca",
-      "factory": "Smile M5",
-      "mould": "M5",
-      "source": "owner",
-      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977' on left leg, no COO",
-          "where": "Look at the country stamp."
-        },
-        {
-          "category": "plastic",
-          "detail": "Smile M3 black-blue",
-          "where": "Look at the plastic colour or shade."
-        }
-      ]
-    },
-    {
-      "id": "chewbacca--lili-ledy-m5",
-      "figure": "Chewbacca",
-      "factory": "Lili Ledy M5",
-      "mould": "M5",
-      "source": "owner",
-      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977' on left leg, no COO",
-          "where": "Look at the country stamp."
-        },
-        {
-          "category": "plastic",
-          "detail": "Lili Ledy later received this mould and produced their version of the figure over a number of production waves which explains the colour variations in the brown plastic.",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "M4 Lili Ledy solid black Bowcaster",
-          "where": "Look at the plastic colour or shade."
+          "category": "mould",
+          "detail": "Cavity 2b has a large circle under the left foot.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
         }
       ]
     },
@@ -1227,26 +1170,115 @@
       "mould": "M2.1",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details",
-          "where": "Look at the country stamp."
+          "detail": "'© G.M.F.G.I. 1977' and 'HONG KONG', vertical on the back of the left thigh. The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977.",
+          "where": "Look at the country stamp on the back of the left thigh."
         },
         {
           "category": "plastic",
-          "detail": "M1 Kader blue-black Bowcaster",
+          "detail": "Reddish or yellow-brown torso and limbs. Mixed shades are possible. Green limbs are faded pigment, not a variant.",
           "where": "Look at the plastic colour or shade."
         },
         {
-          "category": "plastic",
-          "detail": "Kader M1 black-blue Bowcaster",
-          "where": "Look at the plastic colour or shade."
+          "category": "paint",
+          "detail": "Small mid-blue pupils and small eye whites. Mid-brown pouches, some with a painted dot.",
+          "where": "Look at the paint colour."
+        },
+        {
+          "category": "mould",
+          "detail": "Swollen toe.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        }
+      ]
+    },
+    {
+      "id": "chewbacca--poch-kader",
+      "figure": "Chewbacca",
+      "factory": "Poch Kader",
+      "mould": "M2",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Kader Hong Kong layout. '© G.M.F.G.I. 1977'. The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977.",
+          "where": "Look at the country stamp on the back of the left thigh."
         },
         {
           "category": "plastic",
-          "detail": "M1 Kader black-blue Bowcaster",
+          "detail": "Reddish torso. Limbs often fade green. Green limbs are faded pigment, not a variant. Burr and a weak weld.",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "paint",
+          "detail": "Purple-brown pouch. Small dark-blue pupils.",
+          "where": "Look at the paint colour."
+        }
+      ]
+    },
+    {
+      "id": "chewbacca--kader-m2-2",
+      "figure": "Chewbacca",
+      "factory": "Kader M2.2",
+      "mould": "M2.2",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "No COO. The licensing line reads '© L.F.L. 1977'. The Hong Kong text was removed and the line was re-stamped. POTF cards and baggies.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "plastic",
+          "detail": "Reddish-brown. Darker pouches. Fragile paint. No toe defect.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "paint",
+          "detail": "Mid-blue small pupils.",
+          "where": "Look at the paint colour."
+        },
+        {
+          "category": "cardback",
+          "detail": "POTF cards and baggies only.",
+          "where": "If it is still carded, which card is it on?"
+        }
+      ]
+    },
+    {
+      "id": "chewbacca--glasslite-m2",
+      "figure": "Chewbacca",
+      "factory": "Glasslite M2",
+      "mould": "M2",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "No COO. '© L.F.L. 1977', the same re-stamped line as the POTF Kader.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "plastic",
+          "detail": "Much lighter brown than a Kenner Chewbacca. Unpainted pouch.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "paint",
+          "detail": "Light-blue small pupils.",
+          "where": "Look at the paint colour."
+        },
+        {
+          "category": "mould",
+          "detail": "Came with a Glasslite Zuckuss rifle, a Smile mould, not a bowcaster.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
         }
       ]
     },
@@ -1257,16 +1289,74 @@
       "mould": "M3",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details. Some have no COO",
-          "where": "Look at the country stamp."
+          "detail": "'© G.M.F.G.I. 1977' and 'HONG KONG', vertical on the back of the left thigh. The H of HONG starts under the middle of the ©, and the G of KONG is under the second G of G.M.F.G.I.",
+          "where": "Look at the country stamp on the back of the left thigh."
         },
         {
           "category": "plastic",
-          "detail": "Smile M3 black-blue",
+          "detail": "Reddish torso and limbs. The limbs are sometimes lighter.",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "paint",
+          "detail": "Turquoise pupils on the first ones, darker towards the Jedi era. Mid-brown pouches. The pouch can go pearlescent.",
+          "where": "Look at the paint colour."
+        }
+      ]
+    },
+    {
+      "id": "chewbacca--smile-m5",
+      "figure": "Chewbacca",
+      "factory": "Smile M5",
+      "mould": "M5",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "No COO. The licensing line reads '© G.M.F.G.I. 1977'. The sheet's family 3 No COO Smile has the same eyes.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "paint",
+          "detail": "Large almond-shaped eyes, dark-blue small pupils, dark grey-brown or grey-green pouch.",
+          "where": "Look at the paint colour."
+        },
+        {
+          "category": "cardback",
+          "detail": "65c-back.",
+          "where": "If it is still carded, which card is it on?"
+        }
+      ]
+    },
+    {
+      "id": "chewbacca--lili-ledy-m5",
+      "figure": "Chewbacca",
+      "factory": "Lili Ledy M5",
+      "mould": "M5",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "No COO. The licensing line reads '© G.M.F.G.I. 1977'.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "plastic",
+          "detail": "Much darker than a Kenner Chewbacca. Light or dark brown.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "paint",
+          "detail": "Dark-blue small eyes. The pouch is green, light, mid, or reddish brown.",
+          "where": "Look at the paint colour."
         }
       ]
     },
@@ -1277,16 +1367,32 @@
       "mould": "M4",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan' on left leg",
-          "where": "Look at the country stamp."
+          "detail": "'© G.M.F.G.I. 1977' and 'MADE IN TAIWAN', vertical on the back of the left thigh.",
+          "where": "Look at the country stamp on the back of the left thigh."
         },
         {
           "category": "plastic",
-          "detail": "M5 Taiwan dull black-blue Bowcaster.",
+          "detail": "Yellowish-brown, highly glossy, some matt.",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "paint",
+          "detail": "Mid-blue small pupils. Glossy mid-brown pouch.",
+          "where": "Look at the paint colour."
+        },
+        {
+          "category": "mould",
+          "detail": "Wider stance. Swollen toe.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "cardback",
+          "detail": "12-back and 21-back only.",
+          "where": "If it is still carded, which card is it on?"
         }
       ]
     },
@@ -1297,21 +1403,32 @@
       "mould": "M6",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/chewbacca/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/chewbacca.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© L.F.L. 1977' on left leg, no COO",
-          "where": "Look at the country stamp."
+          "detail": "No COO. The licensing line reads '© L.F.L. 1977'.",
+          "where": "Look at the country stamp on the back of the left thigh."
         },
         {
           "category": "date",
-          "detail": "Chewbacca is the ONLY Top Toys figure to have a date stamp.",
+          "detail": "Chewbacca is the only Top Toys figure to have a date stamp.",
           "where": "Look at the date stamp."
         },
         {
           "category": "plastic",
-          "detail": "M6 Top Toys dark blue Bowcaster",
+          "detail": "Hard brittle plastic. Shorter, because it was cast from a Kenner figure. Unpainted pouch. Flashing.",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "mould",
+          "detail": "No peg holes under the feet. Ejector-pin marks on all limbs.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "paint",
+          "detail": "Mid-blue eyes.",
+          "where": "Look at the paint colour."
         }
       ]
     },
@@ -9133,7 +9250,13 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "chewbacca--kader-m2-1",
+        "chewbacca--kader-m2-2",
+        "chewbacca--poch-kader",
+        "chewbacca--poch-unitoy",
+        "chewbacca--pbp-m1"
+      ]
     },
     {
       "id": "chewbacca-bowcaster--unitoy-m2",
@@ -9159,7 +9282,11 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "chewbacca--unitoy-m1",
+        "chewbacca--poch-unitoy",
+        "chewbacca--poch-kader"
+      ]
     },
     {
       "id": "chewbacca-bowcaster--smile-m3",
@@ -9180,7 +9307,11 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "chewbacca--smile-m3",
+        "chewbacca--smile-m5",
+        "chewbacca--pbp-m1"
+      ]
     },
     {
       "id": "chewbacca-bowcaster--smile-m4",
@@ -9226,7 +9357,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "chewbacca--smile-m3"
+      ]
     },
     {
       "id": "chewbacca-bowcaster--lili-ledy-m4",
@@ -9272,7 +9405,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "chewbacca--lili-ledy-m5"
+      ]
     },
     {
       "id": "chewbacca-bowcaster--taiwan-m5",
@@ -9333,7 +9468,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "chewbacca--taiwan-m4"
+      ]
     },
     {
       "id": "chewbacca-bowcaster--top-toys-m6",
@@ -9349,7 +9486,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "chewbacca--top-toys-m6"
+      ]
     },
     {
       "id": "imperial-hoth-rifle--unitoy-m1",
@@ -14150,7 +14289,9 @@
           "where": "Look at the gloss or flash."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "chewbacca--glasslite-m2"
+      ]
     },
     {
       "id": "chief-chirpa-staff--kenner-v1",
@@ -14728,5 +14869,6 @@
   ],
   "lukeOwner": "data/references/owner-verified/luke-skywalker.md",
   "leiaOwner": "data/references/owner-verified/princess-leia-organa.md",
-  "r2Owner": "data/references/owner-verified/r2-d2.md"
+  "r2Owner": "data/references/owner-verified/r2-d2.md",
+  "chewbaccaOwner": "data/references/owner-verified/chewbacca.md"
 }
