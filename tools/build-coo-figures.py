@@ -391,11 +391,14 @@ def main():
     from apply_r2_owner import sync_owner_stamps as sync_r2_stamps
     from apply_chewbacca_owner import apply_coo_figures as apply_chewbacca_coo
     from apply_chewbacca_owner import sync_owner_stamps as sync_chewbacca_stamps
+    from apply_c3po_owner import apply_coo_figures as apply_c3po_coo
+    from apply_c3po_owner import sync_owner_stamps as sync_c3po_stamps
     figures = apply_owner_records(figures)
     apply_coo_figures(figures)
     apply_leia_coo(figures)
     apply_r2_coo(figures)
     apply_chewbacca_coo(figures)
+    apply_c3po_coo(figures)
     payload = {
         "cooGuideUrl": COO_GUIDE,
         "rule": "A partial or cut-off country name counts as No COO. No vintage figure is offered a Mexico leg stamp.",
@@ -415,6 +418,9 @@ def main():
     chewie = next((fig for fig in figures if fig.get("name") == "Chewbacca"), None)
     if chewie:
         sync_chewbacca_stamps(chewie)
+    c3po = next((fig for fig in figures if fig.get("name") == "C-3PO"), None)
+    if c3po:
+        sync_c3po_stamps(c3po)
     verified = sum(1 for fig in figures if fig["verified"])
     print(f"wrote {OUT} figures={len(figures)} verified={verified} fetched_now={fetched}")
 

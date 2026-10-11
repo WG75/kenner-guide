@@ -1176,7 +1176,7 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   assert.ok(pbpFigure.tells.some(item => /pinkish hands/.test(item.detail)));
 
   const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
-  assert.match(coverage, /Figures with a tell besides the COO stamp: 20 \(was 18\/104\)/);
+  assert.match(coverage, /Figures with a tell besides the COO stamp: 21 \(was 18\/104\)/);
   assert.match(coverage, /Accessory variants with tells: 244/);
   assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 153/);
   const blaster = await call({ message: "identify the rebel blaster" });
@@ -1552,6 +1552,102 @@ await test("Chewbacca stamp is on the left thigh and the COO sheet is shown", as
   const part1 = fs.readFileSync(path.join(root, "data/figures/chewbacca-reference-1.txt"), "utf8");
   assert.match(part1, /back of the left thigh/);
   assert.match(part1, /Early Bird figures are Unitoy or Kader only/);
+});
+
+await test("C-3PO stamp is on the back of the left thigh and the COO sheet is shown", async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  const fig = data.figures.find(item => item.name === "C-3PO");
+  const owner = fs.readFileSync(path.join(root, "data/references/owner-verified/c-3po.md"), "utf8");
+  assert.match(owner, /Date: 2026-10-11/);
+  assert.match(owner, /Source: owner Warren/);
+  assert.match(owner, /back of the left thigh/);
+  assert.match(owner, /not on the shin/);
+  assert.match(owner, /no PBP C-3PO/);
+  assert.equal(fig.referenceImage.id, "c-3po-coo-guide-3.1");
+  assert.equal(fig.tells.length, 0);
+  assert.ok(fig.guide.includes("I: Kader"));
+  assert.ok(fig.guide.includes("VI: Takara"));
+  assert.doesNotMatch(fig.stamps.join("\n"), /HK Coo with dent|over 2 lines|followed by/);
+  assert.match(fig.stamps.join("\n"), /There is no PBP C-3PO/);
+  assert.match(fig.whereToLook, /back of the left thigh/);
+  assert.match(fig.whereToLook, /not the shin/);
+  assert.doesNotMatch(JSON.stringify(fig.options), /over 2 lines|over 3 lines|followed by 'Hong Kong'|left leg|near the foot/);
+  assert.match(JSON.stringify(fig.options), /side-by-side columns/);
+
+  const three = "Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', '1977', and 'HONG KONG'";
+  const two = "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'";
+  const takara = "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'";
+  const start = await call({ message: "identify the variant of C-3PO" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.flowState.displayName, "C-3PO");
+  assert.equal(start.json.flowState.step, "coo");
+  assert.match(start.json.reply, /back of the left thigh/);
+  assert.match(start.json.reply, /not the shin/);
+  assert.match(start.json.reply, /not near the foot/);
+  assert.doesNotMatch(start.json.reply, /small text on the back of the legs/);
+  assert.equal(start.json.images[0].url, "/images/variant-villain/c-3po-coo-guide-3.1.jpg");
+  assert.equal(start.json.images[0].credit, "COO guide 3.1 © WBobaFett / variantvillain.com");
+  assert.equal(start.json.images[0].sourcePage, "");
+  assert.deepEqual(start.json.actions.map(action => action.label), [three, two, takara]);
+
+  const threeStep = await call({ message: three, flowState: start.json.flowState });
+  assert.equal(threeStep.json.flowState.step, "follow");
+  assert.equal(threeStep.json.images[0].url, "/images/variant-villain/c-3po-coo-guide-3.1.jpg");
+  const kader = await call({
+    message: "'1977' starts on the second column, just to the right of the ©",
+    flowState: threeStep.json.flowState
+  });
+  assert.match(kader.json.reply, /Kader M1/);
+  assert.match(kader.json.reply, /just to the right of the ©/);
+  assert.equal(kader.json.flowState, null);
+  assert.doesNotMatch(kader.json.reply, /Shall I check/);
+
+  const lili = await call({
+    message: "'1977' is level with the ©, with a dent or a hole beside the stamp, or a dull gold, shiny gold or silver finish",
+    flowState: threeStep.json.flowState
+  });
+  assert.match(lili.json.reply, /Lili Ledy Retorno/);
+  assert.match(lili.json.reply, /no PBP C-3PO/);
+  assert.equal(lili.json.flowState, null);
+  assert.doesNotMatch(lili.json.reply, /\bMexico\b/);
+
+  const twoStep = await call({ message: two, flowState: start.json.flowState });
+  assert.equal(twoStep.json.flowState.step, "follow");
+  const kaderM5 = await call({
+    message: "The H of HONG starts under the middle of the ©",
+    flowState: twoStep.json.flowState
+  });
+  assert.match(kaderM5.json.reply, /Kader M5/);
+  assert.match(kaderM5.json.reply, /middle of the ©/);
+  assert.equal(kaderM5.json.flowState, null);
+  const unitoy = await call({
+    message: "It matches family IV on the guide",
+    flowState: twoStep.json.flowState
+  });
+  assert.match(unitoy.json.reply, /Unitoy M4/);
+  assert.match(unitoy.json.reply, /family IV/);
+
+  const takaraReply = await call({ message: takara, flowState: start.json.flowState });
+  assert.match(takaraReply.json.reply, /Takara M6/);
+  assert.match(takaraReply.json.reply, /1978/);
+  assert.match(takaraReply.json.reply, /JAPAN/);
+  assert.match(takaraReply.json.reply, /reversed/);
+  assert.equal(takaraReply.json.flowState, null);
+
+  const match = JSON.parse(fs.readFileSync(path.join(root, "data/factory-match.json"), "utf8"));
+  assert.equal(match.figureVariants.some(item => item.id === "c-3po--pbp"), false);
+  const byId = Object.fromEntries(match.figureVariants.filter(item => item.figure === "C-3PO").map(item => [item.id, item]));
+  assert.match(JSON.stringify(byId["c-3po--lili-ledy-m2"].tells), /dent or a hole/);
+  assert.match(JSON.stringify(byId["c-3po--lili-ledy-m3"].tells), /bronze-sprayed/);
+  assert.match(JSON.stringify(byId["c-3po--lili-ledy-m2"].tells), /fat head/);
+  assert.doesNotMatch(JSON.stringify(byId["c-3po--kader-m1"].tells), /dent or a hole|bronze-sprayed|fat head/);
+
+  const text = fs.readFileSync(path.join(root, "data/figures/c-3po-reference.txt"), "utf8");
+  assert.match(text, /not on the shin/);
+  assert.match(text, /There is no PBP C-3PO/);
+  assert.match(text, /No C-3PO is stamped Mexico/);
+  assert.match(text, /JAPAN is reversed/);
+  assert.ok(text.length <= 7000, text.length);
 });
 
 function loadCatalog() {
