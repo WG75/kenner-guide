@@ -56,10 +56,7 @@ function accessoriesForFigure(figureName) {
 
 function variantsOf(accessory) {
   const want = norm(accessory);
-  return (load().accessoryVariants || []).filter(variant => {
-    const name = norm(variant.accessory);
-    return name === want || name.includes(want) || want.includes(name);
-  });
+  return (load().accessoryVariants || []).filter(variant => norm(variant.accessory) === want);
 }
 
 function findAccessory(name) {

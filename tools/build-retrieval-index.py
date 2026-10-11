@@ -171,13 +171,22 @@ def collect():
         folder_path = DATA / folder
         if not folder_path.is_dir():
             continue
-        for path in sorted(folder_path.iterdir()):
-            if not path.is_file() or path.suffix.lower() not in {".txt", ".json"}:
-                continue
+        if folder == "references":
+            paths = [
+                path for path in folder_path.rglob("*")
+                if path.is_file() and path.suffix.lower() in {".txt", ".json", ".md"}
+            ]
+        else:
+            paths = [
+                path for path in folder_path.iterdir()
+                if path.is_file() and path.suffix.lower() in {".txt", ".json"}
+            ]
+        for path in sorted(paths):
             text = path.read_text(encoding="utf-8")
             if not text.strip():
                 continue
-            files.append(index_file(folder, path.name, text))
+            name = path.relative_to(folder_path).as_posix()
+            files.append(index_file(folder, name, text))
     factories = DATA / "factories.json"
     if factories.is_file():
         text = factories.read_text(encoding="utf-8")

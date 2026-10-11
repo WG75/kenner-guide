@@ -1650,145 +1650,6 @@
       "missing": "Only Lili Ledy M1 is described, and only as No COO. Licensing location is not stated."
     },
     {
-      "name": "Luke Skywalker",
-      "recorded": "2026-10-11",
-      "source": "owner",
-      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
-      "ask": "Which stamp do you see?",
-      "stamps": [
-        "Kader M1 = 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'.",
-        "Kader China M1 = 'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'.",
-        "Meccano M1: No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'.",
-        "Glasslite M1: No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'. Licensing details are less defined.",
-        "Unitoy M2: 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'.",
-        "PBP M2: COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'.",
-        "Taiwan M3 = Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'.",
-        "Smile M4 = 'Hong Kong' or no COO on left leg. '© G.M.F.G.I. 1977'."
-      ],
-      "options": [
-        {
-          "id": "hong-kong-on-left-leg-under-licensing-details-g-",
-          "label": "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
-          "coo": "Hong Kong",
-          "factories": [
-            "Kader M1",
-            "Unitoy M2"
-          ],
-          "examples": [
-            "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'"
-          ],
-          "conclusion": "That stamp is shared by the Kader M1 and the Unitoy M2. 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'. I'm not sure which of those it is from the stamp alone.",
-          "sure": false,
-          "followUps": []
-        },
-        {
-          "id": "china-on-a-raised-bar-under-licensing-details-on",
-          "label": "'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'",
-          "coo": "China",
-          "factories": [
-            "Kader China M1"
-          ],
-          "examples": [
-            "'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'"
-          ],
-          "conclusion": "That is the Kader China M1. 'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "no-coo-blank-raised-bar-under-licensing-details-",
-          "label": "No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'",
-          "coo": "No COO",
-          "factories": [
-            "Meccano M1",
-            "Glasslite M1"
-          ],
-          "examples": [
-            "No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'"
-          ],
-          "conclusion": "",
-          "sure": false,
-          "followUps": [
-            {
-              "id": "less-defined",
-              "label": "The licensing details are less defined",
-              "factories": [
-                "Glasslite M1"
-              ],
-              "conclusion": "That is the Glasslite M1. The licensing details are less defined.",
-              "sure": true
-            },
-            {
-              "id": "ordinary-licensing",
-              "label": "The licensing details look ordinary",
-              "factories": [
-                "Meccano M1"
-              ],
-              "conclusion": "That is the Meccano M1. The licensing line is the ordinary one.",
-              "sure": true
-            }
-          ]
-        },
-        {
-          "id": "coo-scar-on-left-leg-under-licensing-details-g-m",
-          "label": "COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'",
-          "coo": "No COO",
-          "factories": [
-            "PBP M2"
-          ],
-          "examples": [
-            "COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'"
-          ],
-          "conclusion": "That is the PBP M2. COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "taiwan-on-left-leg-under-licensing-details-g-m-f",
-          "label": "Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'",
-          "coo": "Taiwan",
-          "factories": [
-            "Taiwan M3"
-          ],
-          "examples": [
-            "Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'"
-          ],
-          "conclusion": "That is the Taiwan M3. Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "hong-kong-on-left-leg-g-m-f-g-i-1977",
-          "label": "'Hong Kong' on left leg. '© G.M.F.G.I. 1977'",
-          "coo": "Hong Kong",
-          "factories": [
-            "Smile M4"
-          ],
-          "examples": [
-            "'Hong Kong' on left leg. '© G.M.F.G.I. 1977'"
-          ],
-          "conclusion": "That is the Smile M4. 'Hong Kong' on left leg. '© G.M.F.G.I. 1977'.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "no-coo-on-left-leg-g-m-f-g-i-1977",
-          "label": "no COO on left leg. '© G.M.F.G.I. 1977'",
-          "coo": "No COO",
-          "factories": [
-            "Smile M4"
-          ],
-          "examples": [
-            "no COO on left leg. '© G.M.F.G.I. 1977'"
-          ],
-          "conclusion": "That is the Smile M4. no COO on left leg. '© G.M.F.G.I. 1977'.",
-          "sure": true,
-          "followUps": []
-        }
-      ],
-      "missing": ""
-    },
-    {
       "name": "Princess Leia Organa",
       "recorded": "2026-10-11",
       "source": "owner",
@@ -2352,7 +2213,150 @@
         }
       ],
       "missing": ""
+    },
+    {
+      "name": "Luke Skywalker",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look on the back of the left leg, under '© G.M.F.G.I. 1977'. A partial or cut-off country name counts as No COO.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Kader M1 = 'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Kader China M1 = 'China' on a raised bar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Meccano M1: blank raised bar, No COO, ordinary licensing details. '© G.M.F.G.I. 1977'.",
+        "Glasslite M1: blank raised bar, No COO. Licensing details are less defined. '© G.M.F.G.I. 1977'.",
+        "Unitoy M2: 'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Poch blonde = Kader COO. Pale cream hands, darker greyish blotchy trousers and boots, higher left eyebrow, melt marks on the back.",
+        "Poch brown-hair = Unitoy COO. Dark trousers and boots, pale cream or pinkish hands and neck.",
+        "Poch mixed = Unitoy head on Kader-COO legs.",
+        "PBP M2: COO scar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'. Bright blonde hair, pinkish hands and neck, scarred Unitoy COO.",
+        "Taiwan M3 = Taiwan on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Smile M4 = 'Hong Kong' on the back of the left leg. '© G.M.F.G.I. 1977'.",
+        "Smile No COO = no raised bar. A No COO Luke with no bar is Smile."
+      ],
+      "options": [
+        {
+          "id": "hong-kong-on-left-leg-under-licensing-details-g-",
+          "label": "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1",
+            "Unitoy M2",
+            "Poch blonde",
+            "Poch brown-hair",
+            "Poch mixed"
+          ],
+          "examples": [
+            "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That stamp is shared by the Kader M1, the Unitoy M2, the Poch blonde, the Poch brown-hair, and the Poch mixed. 'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "china-on-a-raised-bar-under-licensing-details-on",
+          "label": "'China' on a raised bar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "China",
+          "factories": [
+            "Kader China M1"
+          ],
+          "examples": [
+            "'China' on a raised bar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Kader China M1. 'China' on a raised bar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo-on-the-back-of-the-left-leg",
+          "label": "No COO on the back of the left leg. '© G.M.F.G.I. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "Meccano M1",
+            "Glasslite M1",
+            "Smile No COO"
+          ],
+          "examples": [
+            "No COO on the back of the left leg. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "blank-bar-less-defined",
+              "label": "Blank raised bar, and the licensing details are less defined",
+              "factories": [
+                "Glasslite M1"
+              ],
+              "conclusion": "That is the Glasslite M1. Glasslite and Meccano have a blank raised bar, and the licensing details are less defined.",
+              "sure": true
+            },
+            {
+              "id": "blank-bar-ordinary",
+              "label": "Blank raised bar, and the licensing details look ordinary",
+              "factories": [
+                "Meccano M1"
+              ],
+              "conclusion": "That is the Meccano M1. Glasslite and Meccano have a blank raised bar, and the licensing line is the ordinary one.",
+              "sure": true
+            },
+            {
+              "id": "no-bar",
+              "label": "No raised bar",
+              "factories": [
+                "Smile No COO"
+              ],
+              "conclusion": "That is the Smile No COO. A No COO Luke with no bar is Smile.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "coo-scar-on-left-leg-under-licensing-details-g-m",
+          "label": "COO scar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "PBP M2"
+          ],
+          "examples": [
+            "COO scar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the PBP M2. COO scar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "taiwan-on-left-leg-under-licensing-details-g-m-f",
+          "label": "Taiwan on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "Taiwan",
+          "factories": [
+            "Taiwan M3"
+          ],
+          "examples": [
+            "Taiwan on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Taiwan M3. Taiwan on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "hong-kong-on-left-leg-g-m-f-g-i-1977",
+          "label": "'Hong Kong' on the back of the left leg. '© G.M.F.G.I. 1977'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Smile M4"
+          ],
+          "examples": [
+            "'Hong Kong' on the back of the left leg. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Smile M4. 'Hong Kong' on the back of the left leg. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
+      "missing": ""
     }
   ],
-  "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported."
+  "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported.",
+  "lukeNote": "Luke Skywalker stamps follow data/references/owner-verified/luke-skywalker.md (owner Warren, 2026-10-11)."
 }

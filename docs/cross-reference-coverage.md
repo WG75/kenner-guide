@@ -1,20 +1,20 @@
 # Factory-match cross-reference coverage
 
-Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps and the Skiff Vibro Staff override the scrape.
+Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps and the Skiff Vibro Staff override the scrape. Owner-verified Luke Skywalker rulings in data/references/owner-verified/luke-skywalker.md override the scrape.
 
 - Figure records: 104
 - Figures with a tell besides the COO stamp: 20 (was 18/104)
 - Figures with only COO data: 84
-- Accessory variants: 316
-- Accessory variants with tells: 239
+- Accessory variants: 313
+- Accessory variants with tells: 236
 - Accessory variants with no tells: 77
-- Factory-match links (accessory variant to figure variant): 123
+- Factory-match links (accessory variant to figure variant): 118
 - Character pages fetched: 104
 - Accessory guide pages fetched: 64
 
 ## Figures with tells besides the COO stamp
 
-- Luke Skywalker: paint, hair, mould, cardback
+- Luke Skywalker: paint, hair
 - R2-D2: plastic, cardback
 - Chewbacca: plastic, date
 - Darth Vader: head
