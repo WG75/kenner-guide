@@ -1613,11 +1613,12 @@
       "mould": "M1",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. The H of HONG starts under the ©. Family I on COO guide 3.2.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
@@ -1628,11 +1629,33 @@
       "mould": "M2",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. The H of HONG starts under the ©. Family II on COO guide 3.2. No gate scar.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        }
+      ]
+    },
+    {
+      "id": "darth-vader--poch-m2",
+      "figure": "Darth Vader",
+      "factory": "Poch",
+      "mould": "M2",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family II, the same stamp as Kader M2.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "A big leftover gate scar by the stamp.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
         }
       ]
     },
@@ -1643,71 +1666,44 @@
       "mould": "M3",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. The H of HONG starts under the ©. Family III on COO guide 3.2.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
     {
-      "id": "darth-vader--smile-m4",
+      "id": "darth-vader--kader-china",
       "figure": "Darth Vader",
-      "factory": "Smile M4",
-      "mould": "M4",
+      "factory": "Kader China",
+      "mould": "",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and a blank raised bar. This is Kader China, not Kader M1.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
     {
-      "id": "darth-vader--unitoy-m6",
+      "id": "darth-vader--kader-m3-no-coo",
       "figure": "Darth Vader",
-      "factory": "Unitoy M6",
-      "mould": "M6",
+      "factory": "Kader M3 No COO",
+      "mould": "M3",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
-          "where": "Look at the country stamp."
-        }
-      ]
-    },
-    {
-      "id": "darth-vader--unitoy-m7",
-      "figure": "Darth Vader",
-      "factory": "Unitoy M7",
-      "mould": "M7",
-      "source": "owner",
-      "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
-          "where": "Look at the country stamp."
-        }
-      ]
-    },
-    {
-      "id": "darth-vader--unitoy-m8",
-      "figure": "Darth Vader",
-      "factory": "Unitoy M8",
-      "mould": "M8",
-      "source": "owner",
-      "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Only the licensing line on the back of the left thigh: '© G.M.F.G.I. 1977', with no country and no raised bar. This is Kader family III No COO, not the blank raised bar and not Kader M1.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
@@ -1718,16 +1714,65 @@
       "mould": "M3",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' without the COO",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Only the licensing line on the back of the left thigh: '© G.M.F.G.I. 1977', with no country and no raised bar.",
+          "where": "Look at the country stamp on the back of the left thigh."
         },
         {
-          "category": "head",
-          "detail": "Torso M2, Red, Head M3 (GLASSLITE)",
-          "where": "Look at the head."
+          "category": "paint",
+          "detail": "The belt-buckle circle is not painted white.",
+          "where": "Look at the paint colour."
+        }
+      ]
+    },
+    {
+      "id": "darth-vader--smile-m4",
+      "figure": "Darth Vader",
+      "factory": "Smile M4",
+      "mould": "M4",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. Smile Vader is always HONG KONG. Family IV on COO guide 3.2.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        }
+      ]
+    },
+    {
+      "id": "darth-vader--lili-ledy-m4",
+      "figure": "Darth Vader",
+      "factory": "Lili Ledy M4",
+      "mould": "M4",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Clear remnants of HONG KONG beside the licensing line. A partly visible country counts as No COO. VV calls this the Retorno version.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        }
+      ]
+    },
+    {
+      "id": "darth-vader--lili-ledy-m4-no-coo",
+      "figure": "Darth Vader",
+      "factory": "Lili Ledy M4 No COO",
+      "mould": "M4",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Only the licensing line on the back of the left thigh: '© G.M.F.G.I. 1977', with no country and no raised bar. Lili Ledy family IV. VV calls this the Regreso version.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
@@ -1738,11 +1783,70 @@
       "mould": "M5",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Made in Hong Kong' on left leg over 2 lines",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG'.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        }
+      ]
+    },
+    {
+      "id": "darth-vader--unitoy-m6",
+      "figure": "Darth Vader",
+      "factory": "Unitoy M6",
+      "mould": "M6",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. The stamp text matches Unitoy M7.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "Two dots on each foot sole, one in the middle of the sole and one on the toes.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        }
+      ]
+    },
+    {
+      "id": "darth-vader--unitoy-m7",
+      "figure": "Darth Vader",
+      "factory": "Unitoy M7",
+      "mould": "M7",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. The stamp text matches Unitoy M6.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "No dots on the foot soles.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        }
+      ]
+    },
+    {
+      "id": "darth-vader--unitoy-m8",
+      "figure": "Darth Vader",
+      "factory": "Unitoy M8",
+      "mould": "M8",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family VIII on COO guide 3.2.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
@@ -1753,11 +1857,12 @@
       "mould": "M8",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' without the COO on left leg",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. The country is scarred out on the back of the left thigh, beside '© G.M.F.G.I. 1977'.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
@@ -1768,11 +1873,12 @@
       "mould": "M9",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "No COO",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. No markings at all on the back of the left thigh: no copyright line and no country.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
@@ -1783,11 +1889,12 @@
       "mould": "M10",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Made in Taiwan' on left leg over 2 lines",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'MADE IN TAIWAN'. Family X.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
@@ -1798,11 +1905,12 @@
       "mould": "M11",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1977' followed by 'Taiwan' on left leg over 2 lines",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'TAIWAN'. Family XI.",
+          "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
     },
@@ -1813,11 +1921,17 @@
       "mould": "M12",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/darth-vader/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "'© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "assembly",
+          "detail": "A cross-slot screw is in the back.",
+          "where": "Look at how the figure is put together."
         }
       ]
     },
@@ -6194,11 +6308,10 @@
       ],
       "cardedWith": [
         "luke-skywalker--unitoy-m2",
+        "darth-vader--unitoy-m5",
         "darth-vader--unitoy-m6",
         "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8"
+        "darth-vader--unitoy-m8"
       ]
     },
     {
@@ -6261,11 +6374,11 @@
         }
       ],
       "cardedWith": [
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--smile-m4",
-        "luke-skywalker--unitoy-m2"
+        "luke-skywalker--unitoy-m2",
+        "darth-vader--unitoy-m5",
+        "darth-vader--unitoy-m6",
+        "darth-vader--unitoy-m7",
+        "darth-vader--unitoy-m8"
       ]
     },
     {
@@ -6323,10 +6436,7 @@
         }
       ],
       "cardedWith": [
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--smile-m4"
+        "darth-vader--lili-ledy-m4"
       ]
     },
     {
@@ -6343,7 +6453,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "darth-vader--takara-m12"
+      ]
     },
     {
       "id": "telescoping-lightsaber--kader-m5",
@@ -6427,19 +6539,14 @@
       "cardedWith": [
         "luke-skywalker--kader-china-m1",
         "luke-skywalker--meccano-m1",
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8",
         "luke-skywalker--kader-m1",
         "luke-skywalker--smile-m4",
         "luke-skywalker--pbp-m2",
         "luke-skywalker--poch-blonde",
-        "luke-skywalker--poch-brown-hair"
+        "luke-skywalker--poch-brown-hair",
+        "darth-vader--kader-m1",
+        "darth-vader--kader-m3",
+        "darth-vader--poch-m2"
       ]
     },
     {
@@ -6524,19 +6631,12 @@
       "cardedWith": [
         "luke-skywalker--kader-china-m1",
         "luke-skywalker--meccano-m1",
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8",
         "luke-skywalker--kader-m1",
         "luke-skywalker--smile-m4",
         "luke-skywalker--pbp-m2",
         "luke-skywalker--poch-blonde",
-        "luke-skywalker--poch-brown-hair"
+        "luke-skywalker--poch-brown-hair",
+        "darth-vader--smile-m4"
       ]
     },
     {
@@ -6621,19 +6721,12 @@
       "cardedWith": [
         "luke-skywalker--kader-china-m1",
         "luke-skywalker--meccano-m1",
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8",
         "luke-skywalker--kader-m1",
         "luke-skywalker--smile-m4",
         "luke-skywalker--pbp-m2",
         "luke-skywalker--poch-blonde",
-        "luke-skywalker--poch-brown-hair"
+        "luke-skywalker--poch-brown-hair",
+        "darth-vader--pbp-m8"
       ]
     },
     {
@@ -6681,12 +6774,8 @@
         }
       ],
       "cardedWith": [
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8",
-        "luke-skywalker--smile-no-coo"
+        "luke-skywalker--smile-no-coo",
+        "darth-vader--pbp-m8"
       ]
     },
     {
@@ -6740,11 +6829,8 @@
       ],
       "cardedWith": [
         "luke-skywalker--taiwan-m3",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8"
+        "darth-vader--taiwan-m10",
+        "darth-vader--taiwan-m11"
       ]
     },
     {
@@ -6773,11 +6859,7 @@
       ],
       "cardedWith": [
         "luke-skywalker--glasslite-m1",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8"
+        "darth-vader--glasslite-m3"
       ]
     },
     {
@@ -6815,11 +6897,7 @@
         }
       ],
       "cardedWith": [
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8"
+        "darth-vader--lili-ledy-m4-no-coo"
       ]
     },
     {
@@ -6837,10 +6915,7 @@
         }
       ],
       "cardedWith": [
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5"
+        "darth-vader--top-toys-m9"
       ]
     },
     {
@@ -12643,7 +12718,9 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/darth-vader-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "darth-vader--poch-m2"
+      ]
     },
     {
       "id": "darth-vader-cape--pbp-m18",
@@ -14892,17 +14969,19 @@
         }
       ],
       "cardedWith": [
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5",
         "luke-skywalker--kader-m1",
         "luke-skywalker--unitoy-m2",
         "luke-skywalker--smile-m4",
-        "luke-skywalker--taiwan-m3"
+        "luke-skywalker--taiwan-m3",
+        "darth-vader--kader-m1",
+        "darth-vader--kader-m2",
+        "darth-vader--kader-m3",
+        "darth-vader--smile-m4",
+        "darth-vader--unitoy-m5",
+        "darth-vader--unitoy-m6",
+        "darth-vader--unitoy-m7",
+        "darth-vader--unitoy-m8",
+        "darth-vader--taiwan-m10"
       ]
     }
   ],
@@ -14910,5 +14989,6 @@
   "leiaOwner": "data/references/owner-verified/princess-leia-organa.md",
   "r2Owner": "data/references/owner-verified/r2-d2.md",
   "chewbaccaOwner": "data/references/owner-verified/chewbacca.md",
-  "c3poOwner": "data/references/owner-verified/c-3po.md"
+  "c3poOwner": "data/references/owner-verified/c-3po.md",
+  "vaderOwner": "data/references/owner-verified/darth-vader.md"
 }

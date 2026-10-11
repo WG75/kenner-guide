@@ -1178,7 +1178,7 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
   assert.match(coverage, /Figures with a tell besides the COO stamp: 21 \(was 18\/104\)/);
   assert.match(coverage, /Accessory variants with tells: 244/);
-  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 153/);
+  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 116/);
   const blaster = await call({ message: "identify the rebel blaster" });
   assert.equal(blaster.json.flowState.topic, "accessory_factory");
   assert.match(blaster.json.reply, /Let's check Rebel Blaster/);
@@ -1647,6 +1647,136 @@ await test("C-3PO stamp is on the back of the left thigh and the COO sheet is sh
   assert.match(text, /There is no PBP C-3PO/);
   assert.match(text, /No C-3PO is stamped Mexico/);
   assert.match(text, /JAPAN is reversed/);
+  assert.ok(text.length <= 7000, text.length);
+});
+
+await test("Darth Vader stamp is on the left thigh and the COO sheet is shown", async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  const fig = data.figures.find(item => item.name === "Darth Vader");
+  const owner = fs.readFileSync(path.join(root, "data/references/owner-verified/darth-vader.md"), "utf8");
+  assert.match(owner, /Date: 2026-10-11/);
+  assert.match(owner, /Source: owner Warren/);
+  assert.match(owner, /back of the left thigh/);
+  assert.match(owner, /H of HONG starts under the ©/);
+  assert.match(owner, /Kader China is not named on the sabre guide/);
+  assert.equal(fig.referenceImage.id, "darth-vader-coo-guide-3.2");
+  assert.equal(fig.tells.length, 0);
+  assert.ok(fig.guide.includes("I: Kader/ Kader China"));
+  assert.ok(fig.guide.includes("XII: Takara"));
+  assert.doesNotMatch(fig.stamps.join("\n"), /Fam I No COO is usually paired with|NO COO:|over 2 lines|followed by/);
+  assert.match(fig.stamps.join("\n"), /blank raised bar/);
+  assert.match(fig.stamps.join("\n"), /no markings at all/);
+  assert.doesNotMatch(JSON.stringify(fig.options), /over 2 lines|followed by 'Hong Kong'|Smile M4",\s*"Glasslite/);
+  const lineOnly = fig.options.find(item => item.id === "licensing-line");
+  assert.deepEqual(lineOnly.factories, ["Kader M3 No COO", "Glasslite M3", "Lili Ledy M4 No COO"]);
+  assert.equal(fig.options.some(item => (item.factories || []).includes("Smile M4") && /without the COO/.test(item.label)), false);
+
+  const hongKong = "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'";
+  const bar = "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and a blank raised bar";
+  const remnants = "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and clear remnants of 'HONG KONG'. A partly visible country counts as No COO";
+  const bare = "No markings at all on the back of the left thigh: no copyright line and no country";
+  const japan = "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'";
+  const start = await call({ message: "identify the variant of Darth Vader" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.flowState.displayName, "Darth Vader");
+  assert.equal(start.json.flowState.step, "coo");
+  assert.match(start.json.reply, /back of the left thigh/);
+  assert.doesNotMatch(start.json.reply, /small text on the back of the legs/);
+  assert.equal(start.json.images[0].url, "/images/variant-villain/darth-vader-coo-guide-3.2.jpg");
+  assert.equal(start.json.images[0].credit, "COO guide 3.2 © WBobaFett / variantvillain.com");
+  assert.equal(start.json.images[0].sourcePage, "");
+  assert.ok(start.json.actions.some(action => action.label === hongKong));
+  assert.ok(start.json.actions.some(action => action.label === bar));
+  assert.ok(start.json.actions.some(action => action.label === remnants));
+  assert.ok(start.json.actions.some(action => action.label === bare));
+  assert.doesNotMatch(JSON.stringify(start.json.actions), /Mexico/);
+
+  const china = await call({ message: bar, flowState: start.json.flowState });
+  assert.match(china.json.reply, /Kader China/);
+  assert.match(china.json.reply, /not Kader M1/);
+  assert.match(china.json.reply, /blank raised bar/);
+  assert.equal(china.json.flowState, null);
+  assert.doesNotMatch(china.json.reply, /Shall I check/);
+
+  const hk = await call({ message: hongKong, flowState: start.json.flowState });
+  assert.equal(hk.json.flowState.step, "follow");
+  assert.equal(hk.json.images[0].url, "/images/variant-villain/darth-vader-coo-guide-3.2.jpg");
+  assert.ok(hk.json.actions.some(action => action.label === "The H of HONG starts under the ©, and it matches family I on the guide"));
+  assert.ok(hk.json.actions.some(action => action.label === "Two dots on each foot sole, one in the middle of the sole and one on the toes"));
+  const kader = await call({
+    message: "The H of HONG starts under the ©, and it matches family I on the guide",
+    flowState: hk.json.flowState
+  });
+  assert.match(kader.json.reply, /Kader M1/);
+  assert.match(kader.json.reply, /under the ©/);
+  assert.match(kader.json.reply, /Telescoping Lightsaber/);
+  assert.equal(kader.json.flowState.step, "offer");
+  const dots = await call({
+    message: "Two dots on each foot sole, one in the middle of the sole and one on the toes",
+    flowState: hk.json.flowState
+  });
+  assert.match(dots.json.reply, /Unitoy M6/);
+  assert.match(dots.json.reply, /two dots/);
+  const poch = await call({
+    message: "The H of HONG starts under the ©, and it matches family II on the guide, with a big leftover gate scar by the stamp",
+    flowState: hk.json.flowState
+  });
+  assert.match(poch.json.reply, /Poch/);
+  assert.match(poch.json.reply, /gate scar/);
+  assert.match(poch.json.reply, /M17/);
+
+  const lili = await call({ message: remnants, flowState: start.json.flowState });
+  assert.match(lili.json.reply, /Lili Ledy/);
+  assert.match(lili.json.reply, /remnants of HONG KONG/);
+  assert.match(lili.json.reply, /counts as No COO/);
+  assert.doesNotMatch(lili.json.reply, /\bMexico\b/);
+  const toys = await call({ message: bare, flowState: start.json.flowState });
+  assert.match(toys.json.reply, /Top Toys/);
+  assert.match(toys.json.reply, /no markings at all/);
+  assert.doesNotMatch(toys.json.reply, /No COO/);
+  const takara = await call({ message: japan, flowState: start.json.flowState });
+  assert.match(takara.json.reply, /Takara M12/);
+  assert.match(takara.json.reply, /1978/);
+  assert.match(takara.json.reply, /cross-slot screw/);
+
+  const match = JSON.parse(fs.readFileSync(path.join(root, "data/factory-match.json"), "utf8"));
+  const byId = Object.fromEntries(match.figureVariants.filter(item => item.figure === "Darth Vader").map(item => [item.id, item]));
+  assert.ok(byId["darth-vader--kader-china"]);
+  assert.equal(byId["darth-vader--kader-m1"].factory, "Kader M1");
+  assert.match(JSON.stringify(byId["darth-vader--glasslite-m3"].tells), /belt-buckle circle is not painted white/);
+  assert.doesNotMatch(JSON.stringify(byId["darth-vader--glasslite-m3"].tells), /Torso M2, Red, Head M3/);
+  assert.match(JSON.stringify(byId["darth-vader--takara-m12"].tells), /cross-slot screw/);
+  assert.match(JSON.stringify(byId["darth-vader--unitoy-m6"].tells), /Two dots/);
+  assert.match(JSON.stringify(byId["darth-vader--lili-ledy-m4"].tells), /remnants of HONG KONG/);
+  const sabres = Object.fromEntries(match.accessoryVariants.map(item => [item.id, item]));
+  assert.ok(sabres["telescoping-lightsaber--unknown-m1"].cardedWith.includes("darth-vader--kader-m2"));
+  assert.ok(sabres["telescoping-lightsaber--unknown-m1"].cardedWith.includes("darth-vader--smile-m4"));
+  assert.equal(sabres["telescoping-lightsaber--unitoy-m3"].cardedWith.includes("darth-vader--kader-m1"), false);
+  assert.ok(sabres["telescoping-lightsaber--unitoy-m3"].cardedWith.includes("darth-vader--unitoy-m6"));
+  assert.ok(sabres["telescoping-lightsaber--unitoy-m3"].cardedWith.includes("luke-skywalker--unitoy-m2"));
+  assert.deepEqual(sabres["telescoping-lightsaber--lili-ledy-m3"].cardedWith, ["darth-vader--lili-ledy-m4"]);
+  assert.ok(sabres["telescoping-lightsaber--kader-m5"].cardedWith.includes("darth-vader--kader-m1"));
+  assert.equal(sabres["telescoping-lightsaber--kader-m5"].cardedWith.includes("darth-vader--kader-m2"), false);
+  assert.ok(sabres["telescoping-lightsaber--kader-m5"].cardedWith.includes("darth-vader--poch-m2"));
+  assert.ok(sabres["telescoping-lightsaber--kader-m5"].cardedWith.includes("luke-skywalker--poch-blonde"));
+  assert.deepEqual(sabres["telescoping-lightsaber--smile-m5"].cardedWith.filter(id => id.startsWith("darth-vader")), ["darth-vader--smile-m4"]);
+  assert.deepEqual(sabres["telescoping-lightsaber--pbp-m6"].cardedWith.filter(id => id.startsWith("darth-vader")), ["darth-vader--pbp-m8"]);
+  assert.ok(sabres["telescoping-lightsaber--pbp-m6"].cardedWith.includes("luke-skywalker--smile-no-coo"));
+  assert.ok(sabres["telescoping-lightsaber--taiwan-m7"].cardedWith.includes("darth-vader--taiwan-m11"));
+  assert.equal(sabres["telescoping-lightsaber--taiwan-m7"].cardedWith.includes("darth-vader--unitoy-m5"), false);
+  assert.deepEqual(sabres["telescoping-lightsaber--glasslite-m8"].cardedWith.filter(id => id.startsWith("darth-vader")), ["darth-vader--glasslite-m3"]);
+  assert.ok(sabres["telescoping-lightsaber--glasslite-m8"].cardedWith.includes("luke-skywalker--glasslite-m1"));
+  assert.deepEqual(sabres["telescoping-lightsaber--lili-ledy-m9"].cardedWith, ["darth-vader--lili-ledy-m4-no-coo"]);
+  assert.deepEqual(sabres["telescoping-lightsaber--top-toys-m10"].cardedWith, ["darth-vader--top-toys-m9"]);
+  assert.deepEqual(sabres["telescoping-lightsaber--takara-m4"].cardedWith, ["darth-vader--takara-m12"]);
+  assert.deepEqual(sabres["darth-vader-cape--poch-m17"].cardedWith, ["darth-vader--poch-m2"]);
+  assert.equal(match.accessoryVariants.some(item => (item.cardedWith || []).includes("darth-vader--kader-china")), false);
+  assert.equal(match.accessoryVariants.some(item => (item.cardedWith || []).includes("darth-vader--kader-m3-no-coo")), false);
+
+  const text = fs.readFileSync(path.join(root, "data/figures/darth-vader-reference.txt"), "utf8");
+  assert.match(text, /back of the left thigh/);
+  assert.match(text, /Smile Vader is always HONG KONG/);
+  assert.match(text, /no markings at all/);
   assert.ok(text.length <= 7000, text.length);
 });
 
