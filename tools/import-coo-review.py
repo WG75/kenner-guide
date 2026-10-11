@@ -449,10 +449,12 @@ def main():
     from apply_leia_owner import apply_coo_figures as apply_leia_coo
     from apply_r2_owner import apply_coo_figures as apply_r2_coo
     from apply_chewbacca_owner import apply_coo_figures as apply_chewbacca_coo
+    from apply_c3po_owner import apply_coo_figures as apply_c3po_coo
     apply_coo_figures(payload["figures"])
     apply_leia_coo(payload["figures"])
     apply_r2_coo(payload["figures"])
     apply_chewbacca_coo(payload["figures"])
+    apply_c3po_coo(payload["figures"])
     payload["ownerStampNote"] = (
         "Six figures were revised by the owner on 11 Oct 2026. "
         "Unchanged rows keep source variantvillain.com, or the earlier owner sheet where that row was already owner-verified."
@@ -479,6 +481,7 @@ def main():
     from apply_leia_owner import sync_owner_stamps as sync_leia_stamps
     from apply_r2_owner import sync_owner_stamps as sync_r2_stamps
     from apply_chewbacca_owner import sync_owner_stamps as sync_chewbacca_stamps
+    from apply_c3po_owner import sync_owner_stamps as sync_c3po_stamps
     luke = next((fig for fig in payload["figures"] if fig.get("name") == "Luke Skywalker"), None)
     if luke:
         sync_owner_stamps(luke)
@@ -491,6 +494,9 @@ def main():
     chewie = next((fig for fig in payload["figures"] if fig.get("name") == "Chewbacca"), None)
     if chewie:
         sync_chewbacca_stamps(chewie)
+    c3po = next((fig for fig in payload["figures"] if fig.get("name") == "C-3PO"), None)
+    if c3po:
+        sync_c3po_stamps(c3po)
     write_report(payload["figures"], edited)
     print("edited", ", ".join(edited))
 

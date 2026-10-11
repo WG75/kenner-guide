@@ -1650,75 +1650,6 @@
       "missing": "Only Lili Ledy M1 is described, and only as No COO. Licensing location is not stated."
     },
     {
-      "name": "C-3PO",
-      "recorded": "2026-10-11",
-      "source": "owner",
-      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
-      "ask": "Which stamp do you see?",
-      "stamps": [
-        "Kader M1 = '© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines.",
-        "Unitoy M2 = '© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines.",
-        "Lili Ledy M2 = '© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines.",
-        "Kader M3 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
-        "Lili Ledy M3 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
-        "Unitoy M4 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
-        "Kader M5 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
-        "Takara M6 = '© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines.",
-        "Unitoy M7 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines."
-      ],
-      "options": [
-        {
-          "id": "g-m-f-g-i-with-1977-followed-by-hong-kong-on-lef",
-          "label": "'© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines",
-          "coo": "Hong Kong",
-          "factories": [
-            "Kader M1",
-            "Unitoy M2",
-            "Lili Ledy M2"
-          ],
-          "examples": [
-            "'© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines"
-          ],
-          "conclusion": "That stamp is shared by the Kader M1, the Unitoy M2, and the Lili Ledy M2. '© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines. I'm not sure which of those it is from the stamp alone.",
-          "sure": false,
-          "followUps": []
-        },
-        {
-          "id": "g-m-f-g-i-1977-followed-by-hong-kong-on-left-leg",
-          "label": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
-          "coo": "Hong Kong",
-          "factories": [
-            "Kader M3",
-            "Lili Ledy M3",
-            "Unitoy M4",
-            "Kader M5",
-            "Unitoy M7"
-          ],
-          "examples": [
-            "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines"
-          ],
-          "conclusion": "That stamp is shared by the Kader M3, the Lili Ledy M3, the Unitoy M4, the Kader M5, and the Unitoy M7. '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines. I'm not sure which of those it is from the stamp alone.",
-          "sure": false,
-          "followUps": []
-        },
-        {
-          "id": "g-m-f-g-i-1978-followed-by-japan-on-left-leg-ove",
-          "label": "'© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines",
-          "coo": "Japan",
-          "factories": [
-            "Takara M6"
-          ],
-          "examples": [
-            "'© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines"
-          ],
-          "conclusion": "That is the Takara M6. '© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines.",
-          "sure": true,
-          "followUps": []
-        }
-      ],
-      "missing": ""
-    },
-    {
       "name": "Darth Vader",
       "recorded": "2026-10-11",
       "source": "owner",
@@ -2642,11 +2573,159 @@
         "id": "chewbacca-coo-guide-3.2"
       },
       "missing": ""
+    },
+    {
+      "name": "C-3PO",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look on the back of the left thigh, not the shin and not near the foot. The stamp runs vertically in side-by-side columns. A partial or cut-off country name counts as No COO. The picture is COO guide 3.1.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Kader M1 = Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', '1977', and 'HONG KONG'. '1977' starts on the second column, just to the right of the ©.",
+        "Unitoy M2 = Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', '1977', and 'HONG KONG'. 1977 is level with the ©.",
+        "Lili Ledy Retorno (M2) = the same three columns as Unitoy M2. 1977 is level with the ©.",
+        "Kader M3 = Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. Fairly similar to Unitoy M4 and Unitoy M7. Compare family III on the guide.",
+        "Lili Ledy Regreso (M3) = the same two columns as Kader M3.",
+        "Unitoy M4 = Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. Alignment similar to Kader M3. Compare family IV on the guide.",
+        "Kader M5 = Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. The H of HONG starts under the middle of the ©.",
+        "Unitoy M7 = Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. Alignment similar to Kader M3. Compare family VII on the guide.",
+        "Takara M6 = Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'. On cavity 1b, JAPAN is reversed.",
+        "There is no PBP C-3PO. No C-3PO is stamped Mexico."
+      ],
+      "options": [
+        {
+          "id": "three-columns",
+          "label": "Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', '1977', and 'HONG KONG'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1",
+            "Unitoy M2",
+            "Lili Ledy M2"
+          ],
+          "examples": [
+            "Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', '1977', and 'HONG KONG'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "kader-m1-1977",
+              "label": "'1977' starts on the second column, just to the right of the ©",
+              "factories": [
+                "Kader M1"
+              ],
+              "conclusion": "That is the Kader M1. Three side-by-side columns on the back of the left thigh. 1977 starts on the second column, just to the right of the ©.",
+              "sure": true
+            },
+            {
+              "id": "unitoy-m2-level",
+              "label": "'1977' is level with the ©, and there is no dent or hole beside the stamp",
+              "factories": [
+                "Unitoy M2"
+              ],
+              "conclusion": "That is the Unitoy M2. Three side-by-side columns, and 1977 is level with the ©. There is no dent or hole beside the stamp.",
+              "sure": true
+            },
+            {
+              "id": "ll-retorno",
+              "label": "'1977' is level with the ©, with a dent or a hole beside the stamp, or a dull gold, shiny gold or silver finish",
+              "factories": [
+                "Lili Ledy M2"
+              ],
+              "conclusion": "That is the Lili Ledy Retorno (M2). 1977 is level with the ©. A dent or a hole beside the stamp, and a dull gold, shiny gold or silver finish, are Lili Ledy tells. The seat is bronze-sprayed. A fat head is a Removable Limbs head mixed onto this body. There is no PBP C-3PO.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "two-columns",
+          "label": "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M3",
+            "Lili Ledy M3",
+            "Unitoy M4",
+            "Kader M5",
+            "Unitoy M7"
+          ],
+          "examples": [
+            "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "kader-m5-h",
+              "label": "The H of HONG starts under the middle of the ©",
+              "factories": [
+                "Kader M5"
+              ],
+              "conclusion": "That is the Kader M5. Two side-by-side columns on the back of the left thigh. The H of HONG starts under the middle of the ©.",
+              "sure": true
+            },
+            {
+              "id": "ll-regreso",
+              "label": "A dent or a hole beside the stamp, or dull gold, shiny gold or silver, or a bronze-sprayed seat",
+              "factories": [
+                "Lili Ledy M3"
+              ],
+              "conclusion": "That is the Lili Ledy Regreso (M3). Two side-by-side columns. A dent or a hole beside the stamp, dull gold, shiny gold or silver, and a bronze-sprayed seat are Lili Ledy tells. A fat head is a Removable Limbs head mixed onto this body. There is no PBP C-3PO.",
+              "sure": true
+            },
+            {
+              "id": "kader-m3-guide",
+              "label": "It matches family III on the guide, with no dent or hole beside the stamp",
+              "factories": [
+                "Kader M3"
+              ],
+              "conclusion": "That is the Kader M3. Two side-by-side columns. The alignment is similar to Unitoy M4 and Unitoy M7, so match it to family III on COO guide 3.1. There is no separate letter tell.",
+              "sure": true
+            },
+            {
+              "id": "unitoy-m4-guide",
+              "label": "It matches family IV on the guide",
+              "factories": [
+                "Unitoy M4"
+              ],
+              "conclusion": "That is the Unitoy M4. The stamp is on the back of the left thigh, and the alignment is similar to Kader M3. Match it to family IV on COO guide 3.1.",
+              "sure": true
+            },
+            {
+              "id": "unitoy-m7-guide",
+              "label": "It matches family VII on the guide",
+              "factories": [
+                "Unitoy M7"
+              ],
+              "conclusion": "That is the Unitoy M7. The stamp is on the back of the left thigh, and the alignment is similar to Kader M3. Match it to family VII on COO guide 3.1.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "takara-1978",
+          "label": "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'",
+          "coo": "Japan",
+          "factories": [
+            "Takara M6"
+          ],
+          "examples": [
+            "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'"
+          ],
+          "conclusion": "That is the Takara M6. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'. On cavity 1b, JAPAN is reversed.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
+      "referenceImage": {
+        "id": "c-3po-coo-guide-3.1"
+      },
+      "missing": ""
     }
   ],
   "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported.",
   "lukeNote": "Luke Skywalker stamps follow data/references/owner-verified/luke-skywalker.md (owner Warren, 2026-10-11).",
   "leiaNote": "Princess Leia Organa stamps follow data/references/owner-verified/princess-leia-organa.md (owner Warren, 2026-10-11).",
   "r2Note": "R2-D2 stamps follow data/references/owner-verified/r2-d2.md (owner Warren, 2026-10-11).",
-  "chewbaccaNote": "Chewbacca stamps follow data/references/owner-verified/chewbacca.md (owner Warren, 2026-10-11)."
+  "chewbaccaNote": "Chewbacca stamps follow data/references/owner-verified/chewbacca.md (owner Warren, 2026-10-11).",
+  "c3poNote": "C-3PO stamps follow data/references/owner-verified/c-3po.md (owner Warren, 2026-10-11)."
 }

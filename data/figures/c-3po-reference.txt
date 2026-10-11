@@ -27,6 +27,18 @@ Collector Note:
 
 --------------------------------------------------
 
+STAMP
+
+Every C-3PO stamp is on the back of the left thigh, running vertically. It is not on the shin and not near the foot.
+
+Only M1 and M2 use three side-by-side columns, "© G.M.F.G.I.", "1977", and "HONG KONG". On Kader M1, 1977 starts on the second column just to the right of the ©. On Unitoy M2 and Lili Ledy Retorno, 1977 is level with the ©.
+
+The other Hong Kong families use two side-by-side columns, "© G.M.F.G.I. 1977" and "HONG KONG". On Kader M5, the H of HONG starts under the middle of the ©. Kader M3, Unitoy M4 and Unitoy M7 are similar, so compare them with COO guide 3.1.
+
+Takara M6 reads "© G.M.F.G.I. 1978" and "JAPAN" in two side-by-side columns. On cavity 1b, JAPAN is reversed.
+
+There is no PBP C-3PO. Lili Ledy was made in Mexico. No C-3PO is stamped Mexico.
+
 FIGURE VARIANT FAMILIES
 
 COO Family 1: Kader  
@@ -125,6 +137,10 @@ Head Variants:
 
 Collector Insight:
 - Lili Ledy C-3PO is one of the most visually varied figures in the entire line
+- A dent or a hole beside the stamp is a Lili Ledy mark only.
+- Finishes are dull gold, shiny gold, or silver. The seat is bronze-sprayed because it has no chrome.
+- A fat head is a C-3PO (Removable Limbs) head mixed onto this body.
+- There is no PBP C-3PO. No C-3PO is stamped Mexico.
 
 --------------------------------------------------
 
@@ -138,6 +154,7 @@ Traits:
 - Different internal construction (screw assembly)
 - Distinct chrome tone
 - High-quality finish compared to Kenner
+- Licensing line is © G.M.F.G.I. 1978, with JAPAN beside it. On cavity 1b, JAPAN is reversed.
 
 --------------------------------------------------
 

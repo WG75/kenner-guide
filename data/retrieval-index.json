@@ -2506,7 +2506,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4042
+      "chars": 5206
     },
     {
       "relPath": "figures/c-3po-removable-limbs-reference.txt",
@@ -5072,6 +5072,24 @@
       ],
       "years": [],
       "chars": 4735
+    },
+    {
+      "relPath": "references/owner-verified/c-3po.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/c",
+        "3po"
+      ],
+      "keywords": [
+        "owner",
+        "verified/c",
+        "3po"
+      ],
+      "years": [],
+      "chars": 2017
     },
     {
       "relPath": "references/owner-verified/chewbacca.md",

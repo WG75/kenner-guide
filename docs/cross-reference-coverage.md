@@ -1,10 +1,10 @@
 # Factory-match cross-reference coverage
 
-Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, data/references/owner-verified/r2-d2.md, and data/references/owner-verified/chewbacca.md override the scrape.
+Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, data/references/owner-verified/r2-d2.md, data/references/owner-verified/chewbacca.md, and data/references/owner-verified/c-3po.md override the scrape.
 
 - Figure records: 104
-- Figures with a tell besides the COO stamp: 20 (was 18/104)
-- Figures with only COO data: 84
+- Figures with a tell besides the COO stamp: 21 (was 18/104)
+- Figures with only COO data: 83
 - Accessory variants: 313
 - Accessory variants with tells: 244
 - Accessory variants with no tells: 69
@@ -17,6 +17,7 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 - Luke Skywalker: paint, hair
 - R2-D2: plastic, accessory, paint, mould, cardback, cavity
 - Chewbacca: plastic, paint, mould, cardback, date
+- C-3PO: mould, paint, head
 - Darth Vader: head
 - Jawa: plastic
 - Sand People: head
@@ -38,7 +39,6 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 ## Figures with only COO data
 
 - Princess Leia Organa
-- C-3PO
 - Stormtrooper
 - Ben (Obi-Wan) Kenobi
 - Han Solo
