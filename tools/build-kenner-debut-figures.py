@@ -23,8 +23,9 @@ from pathlib import Path
 # Villain page says he was never packaged with one. The sensorscope is built
 # into R2-D2 (Sensorscope), not a loose piece. 4-LOM and Zuckuss have rifles.
 # The Rancor Keeper weapon is a staff. Barada's weapon is a staff. Lando
-# Calrissian (Skiff Guard Disguise) has no cape. Other names follow the
-# Variant Villain page headings.
+# Calrissian (Skiff Guard Disguise) has no cape. Nikto's weapon is the
+# Skiff Vibro Staff, owner-verified, the same piece as Barada and Yak Face.
+# Other names follow the Variant Villain page headings.
 EXTRAS = {
     "38180": ("Luke Skywalker", "he", ["lightsaber"]),
     "38190": ("Princess Leia Organa", "she", ["cape", "blaster"]),
@@ -93,7 +94,7 @@ EXTRAS = {
     "70820": ("Biker Scout", "he", ["blaster"]),
     "70830": ("Lando Calrissian (Skiff Guard Disguise)", "he", ["helmet", "vibro axe"]),
     "70840": ("Nien Nunb", "he", ["blaster"]),
-    "71190": ("Nikto", "he", ["vibro axe"]),
+    "71190": ("Nikto", "he", ["skiff vibro staff"]),
     "71210": ("8D8", "it", []),
     "71220": ("Princess Leia Organa (in Combat Poncho)", "she", ["leia endor helmet", "endor blaster", "leia blaster", "leia endor belt"]),
     "71230": ("Wicket W. Warrick", "he", ["spear"]),

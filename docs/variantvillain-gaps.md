@@ -14,10 +14,10 @@ A figure page "has COO/factory/mould details" when the fetched character page na
 - Figures with verified COO choices in the bot: 96
 - (a) Figures with no Variant Villain page: 0
 - (b) Figures with a page but no COO/factory/mould details: 0
-- Accessories checked: 90
+- Accessories checked: 91
 - Accessories with a page: 64
 - Accessories whose page has mould/factory/COO details: 64
-- (c) Accessories with no page or no details: 26
+- (c) Accessories with no page or no details: 27
 
 ## (a) Figures with no Variant Villain page
 
@@ -36,6 +36,7 @@ None.
 - Chief Chirpa — staff — no page — no page
 - Logray (Ewok Medicine Man) — staff — no page — no page
 - Squid Head — cape — no page — no page
+- Nikto — skiff vibro staff — no page — no page
 - Princess Leia Organa (in Combat Poncho) — leia endor helmet — no page — no page
 - Princess Leia Organa (in Combat Poncho) — leia endor belt — no page — no page
 - Klaatu (in Skiff Guard Outfit) — skiff vibro staff — no page — no page
@@ -67,6 +68,7 @@ These notes are from https://imperialgunnery.com/ (robots.txt fetched 11 Oct 202
 - Chief Chirpa — staff — Imperial Gunnery documents the Chief Chirpa Staff in brown, including a Lili Ledy staff with a moulded letter L and a Top Toys staff. https://imperialgunnery.com/staffs-axes.htm
 - Logray (Ewok Medicine Man) — staff — Imperial Gunnery documents the Logray Staff: V1 has three ejector-pin marks, V3 has two, and V4 has none. https://imperialgunnery.com/staffs-axes.htm
 - Squid Head — cape — Imperial Gunnery documents the Squid Head Cloak, including a Lili Ledy burgundy cloak. https://imperialgunnery.com/clothcapesskirts.htm
+- Nikto — skiff vibro staff — Owner-verified, 11 Oct 2026: Nikto's weapon is the Skiff Vibro Staff, the same piece as Barada and Yak Face. This overrides the Variant Villain Vibro Axe heading. Imperial Gunnery lists that staff with Barada, Nikto and the Yak Face Canadian Power of the Force release. https://imperialgunnery.com/staffs-axes.htm
 - Princess Leia Organa (in Combat Poncho) — leia endor helmet — Imperial Gunnery documents the Princess Leia Poncho Helmet. Numbers 1 with a dot, 2, 3 and 4 are recorded inside. https://imperialgunnery.com/helmets-hoods.htm
 - Princess Leia Organa (in Combat Poncho) — leia endor belt — Imperial Gunnery documents the Princess Leia Poncho Belt: two notches, shorter than the Luke poncho belt. https://imperialgunnery.com/belts.htm
 - Klaatu (in Skiff Guard Outfit) — skiff vibro staff — Imperial Gunnery documents a Klaatu Skiff Force Pike separately from the Skiff Vibro Staff. The staff page names Barada, Nikto and Yak Face, not this Klaatu. https://imperialgunnery.com/staffs-axes.htm
