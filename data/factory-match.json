@@ -565,36 +565,32 @@
       "mould": "M1",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'",
-          "where": "Look at the country stamp."
+          "detail": "One continuous line along the top of the underside: '© G.M.F.G.I. 1977 MADE IN HONG KONG'. The red marks on COO guide 3.7 show the line spacing. The words alone do not separate Unitoy from Smile.",
+          "where": "Look at the country stamp on the underside of the body."
         },
         {
           "category": "plastic",
-          "detail": "Unitoy very dark-blue w/halftone sticker (Early bird era)",
+          "detail": "Very dark blue dome, 2-part halftone sticker, mid-blue legs. Early Bird era and 12-backs.",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "Unitoy mid-blue dome (ESB era)",
+          "detail": "Dark blue dome with a 1-part sticker and no halftone.",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "Unitoy mid-blue dome",
+          "detail": "Mid-blue dome and mid-blue legs on the ESB 41-back.",
           "where": "Look at the plastic colour or shade."
         },
         {
-          "category": "plastic",
-          "detail": "Unitoy light-blue/green dome (ESB era)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "Subsequent Unitoy stickers were a single application. They progressively printed in a darker shades of grey. These are the versions that were predominantly used for the",
-          "where": "Look at the plastic colour or shade."
+          "category": "accessory",
+          "detail": "Small-wedge Sensorscope sticker on the transition figure, with darker legs.",
+          "where": "Look at the sticker."
         }
       ]
     },
@@ -605,25 +601,36 @@
       "mould": "M2",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'",
-          "where": "Look at the country stamp."
+          "detail": "One continuous line along the top of the underside: '© G.M.F.G.I. 1977 MADE IN HONG KONG'. The red marks on COO guide 3.7 show the line spacing. The words alone do not separate Unitoy from Smile.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "paint",
+          "detail": "Large crimson eye.",
+          "where": "Look at the paint colour."
+        },
+        {
+          "category": "accessory",
+          "detail": "Darker wedge. The grey darkens over the run.",
+          "where": "Look at the sticker."
         },
         {
           "category": "plastic",
-          "detail": "Smile dark blue dome (early SW era)",
+          "detail": "Dark blue dome and glossy darker legs, the early figure.",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "Smile mid-blue dome (SW era)",
+          "detail": "Electric mid-blue dome and lighter legs on 12-backs.",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "Smile mid-blue dome (ESB era)",
+          "detail": "ESB legs return to a darker shade, and the wedge is almost gone.",
           "where": "Look at the plastic colour or shade."
         }
       ]
@@ -635,35 +642,62 @@
       "mould": "M5",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'",
-          "where": "Look at the country stamp."
+          "detail": "One continuous line along the top of the underside: '© G.M.F.G.I. 1977 MADE IN HONG KONG'. The red marks on COO guide 3.7 show the line spacing. The words alone do not separate Unitoy from Smile. Family 5 is Unitoy, not Kader.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "mould",
+          "detail": "Loose dome with gaps around the underside. Poorly made, messy paint.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
         },
         {
           "category": "plastic",
-          "detail": "Unitoy very dark-blue w/halftone sticker (Early bird era)",
+          "detail": "Mid-blue or light-blue dome and legs.",
           "where": "Look at the plastic colour or shade."
         },
         {
-          "category": "plastic",
-          "detail": "Unitoy mid-blue dome (ESB era)",
-          "where": "Look at the plastic colour or shade."
+          "category": "paint",
+          "detail": "Very small red eye, or a larger crimson eye with a double blue paint pass.",
+          "where": "Look at the paint colour."
+        },
+        {
+          "category": "cardback",
+          "detail": "Seen on the 41-back.",
+          "where": "If it is still carded, which card is it on?"
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--poch",
+      "figure": "R2-D2",
+      "factory": "Poch",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Built from Unitoy or Kader parts. The Hong Kong line is the continuous Unitoy line on the underside.",
+          "where": "Look at the country stamp on the underside of the body."
         },
         {
           "category": "plastic",
-          "detail": "Unitoy mid-blue dome",
+          "detail": "Bright blue dull-chrome dome. Glossy mid-blue legs, sometimes with a misty spray.",
           "where": "Look at the plastic colour or shade."
         },
         {
-          "category": "plastic",
-          "detail": "Unitoy light-blue/green dome (ESB era)",
-          "where": "Look at the plastic colour or shade."
+          "category": "paint",
+          "detail": "Crimson eye that can look purple where paint pooled. Messy paint, burrs, flashing, crooked stickers.",
+          "where": "Look at the paint colour."
         },
         {
           "category": "plastic",
-          "detail": "Subsequent Unitoy stickers were a single application. They progressively printed in a darker shades of grey. These are the versions that were predominantly used for the",
+          "detail": "Late Jedi-era figure: very light-blue dull dome and a small red eye, on Meccano 65-back and French Trilogo.",
           "where": "Look at the plastic colour or shade."
         }
       ]
@@ -675,31 +709,32 @@
       "mould": "M3",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 1 or 2 visible near the screw",
-          "where": "Look at the country stamp."
+          "detail": "'© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "cavity",
+          "detail": "Cavity 1 or 2 near the screw. The number is not visible from the other side.",
+          "where": "Look for a cavity mark or a mark by the screw."
         },
         {
           "category": "plastic",
-          "detail": "F4 Kader R2-D2 with dark and light blue domes are added to the accompanying graphic.",
+          "detail": "Dark blue dome, then a mid-blue dome. Matt mid-blue legs.",
           "where": "Look at the plastic colour or shade."
         },
         {
-          "category": "plastic",
-          "detail": "Kader dark blue dome (early SW era)",
-          "where": "Look at the plastic colour or shade."
+          "category": "paint",
+          "detail": "Large crimson-red eye.",
+          "where": "Look at the paint colour."
         },
         {
-          "category": "plastic",
-          "detail": "Kader mid-blue dome (SW & ESB era)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "Kader mid-blue dome (SW era)",
-          "where": "Look at the plastic colour or shade."
+          "category": "cardback",
+          "detail": "Made through the 32-back.",
+          "where": "If it is still carded, which card is it on?"
         }
       ]
     },
@@ -710,81 +745,27 @@
       "mould": "M4",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 5 or 6 visible near the screw",
-          "where": "Look at the country stamp."
+          "detail": "'© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side. Minor COO variation beside Kader M3 and Kader M7.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "cavity",
+          "detail": "Cavity 5 or 6.",
+          "where": "Look for a cavity mark or a mark by the screw."
         },
         {
           "category": "plastic",
-          "detail": "F4 Kader R2-D2 with dark and light blue domes are added to the accompanying graphic.",
+          "detail": "Dark blue or mid-blue dome. Short run. Matt mid-blue legs.",
           "where": "Look at the plastic colour or shade."
         },
         {
-          "category": "plastic",
-          "detail": "Kader dark blue dome (early SW era)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "Kader mid-blue dome (SW & ESB era)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "Kader mid-blue dome (SW era)",
-          "where": "Look at the plastic colour or shade."
-        }
-      ]
-    },
-    {
-      "id": "r2-d2--lili-ledy-m4",
-      "figure": "R2-D2",
-      "factory": "Lili Ledy M4",
-      "mould": "M4",
-      "source": "owner",
-      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977' only, no COO. These can have a 5 or 6 visible near the screw",
-          "where": "Look at the country stamp."
-        },
-        {
-          "category": "cardback",
-          "detail": "released R2 is a Lili Ledy made figure which was imported from Mexico and carded in Spain.",
-          "where": "If it is still carded, which card is it on?"
-        }
-      ]
-    },
-    {
-      "id": "r2-d2--taiwan-m6",
-      "figure": "R2-D2",
-      "factory": "Taiwan M6",
-      "mould": "M6",
-      "source": "owner",
-      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan'",
-          "where": "Look at the country stamp."
-        },
-        {
-          "category": "plastic",
-          "detail": "Taiwan dark-blue dome",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "Taiwan mid-blue dome",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "Taiwan green-blue dome",
-          "where": "Look at the plastic colour or shade."
+          "category": "mould",
+          "detail": "This 1977 torso mould was later used for R5-D4.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
         }
       ]
     },
@@ -795,31 +776,297 @@
       "mould": "M7",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong'",
-          "where": "Look at the country stamp."
+          "detail": "'© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "cavity",
+          "detail": "Cavity 3 or 4.",
+          "where": "Look for a cavity mark or a mark by the screw."
         },
         {
           "category": "plastic",
-          "detail": "F4 Kader R2-D2 with dark and light blue domes are added to the accompanying graphic.",
+          "detail": "Same paint as Kader M3: dark blue dome, then mid-blue, matt mid-blue legs. Made alongside Kader M3.",
           "where": "Look at the plastic colour or shade."
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--lili-ledy-regreso",
+      "figure": "R2-D2",
+      "factory": "Lili Ledy Regreso",
+      "mould": "M3",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "'© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side. Lili Ledy Regreso uses this Kader layout.",
+          "where": "Look at the country stamp on the underside of the body."
         },
         {
           "category": "plastic",
-          "detail": "Kader dark blue dome (early SW era)",
+          "detail": "Light-blue legs throughout. Dome can be vibrant dark blue, dull purplish dark blue, or greenish light blue.",
           "where": "Look at the plastic colour or shade."
         },
         {
-          "category": "plastic",
-          "detail": "Kader mid-blue dome (SW & ESB era)",
-          "where": "Look at the plastic colour or shade."
+          "category": "accessory",
+          "detail": "A-type or C-type Lili Ledy sticker.",
+          "where": "Look at the sticker."
+        },
+        {
+          "category": "mould",
+          "detail": "The torso can be hard or soft on both Lili Ledy COOs.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--pbp",
+      "figure": "R2-D2",
+      "factory": "PBP",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "'© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side. The figure is a Lili Ledy Regreso.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "accessory",
+          "detail": "B-type sticker. Greenish-grey panels on glossier paper.",
+          "where": "Look at the sticker."
         },
         {
           "category": "plastic",
-          "detail": "Kader mid-blue dome (SW era)",
+          "detail": "Mid-blue dome and light-blue legs.",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "cardback",
+          "detail": "Lili Ledy Regreso figure imported and carded in Spain.",
+          "where": "If it is still carded, which card is it on?"
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--lili-ledy-retorno",
+      "figure": "R2-D2",
+      "factory": "Lili Ledy Retorno",
+      "mould": "M4",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "No COO. The licensing line shows 1978. This is not a No-COO Kenner solid dome.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "cavity",
+          "detail": "Cavity 5 or 6.",
+          "where": "Look for a cavity mark or a mark by the screw."
+        },
+        {
+          "category": "plastic",
+          "detail": "Dull dark blue dome, large crimson eye, glossy light-blue legs.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "accessory",
+          "detail": "A-type or C-type Lili Ledy sticker.",
+          "where": "Look at the sticker."
+        },
+        {
+          "category": "mould",
+          "detail": "The torso can be hard or soft on both Lili Ledy COOs.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--taiwan-m6",
+      "figure": "R2-D2",
+      "factory": "Taiwan M6",
+      "mould": "M6",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "One continuous line along the top of the underside: '© G.M.F.G.I. 1977 MADE IN TAIWAN'. The red circle and arrows on COO guide 3.7 mark this line.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "plastic",
+          "detail": "Dark blue, mid-blue, or green-blue dome. Light-blue legs.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "paint",
+          "detail": "Large orange-red eye.",
+          "where": "Look at the paint colour."
+        },
+        {
+          "category": "accessory",
+          "detail": "Three-colour sticker with a halftone grid on the wedge.",
+          "where": "Look at the sticker."
+        },
+        {
+          "category": "cardback",
+          "detail": "12-back only.",
+          "where": "If it is still carded, which card is it on?"
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--takara-1-1",
+      "figure": "R2-D2",
+      "factory": "Takara 1-1",
+      "mould": "1-1",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md. Not part of the core Kenner carded line.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "JAPAN COO. No Takara stamp.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "mould",
+          "detail": "Not part of the core Kenner carded line. Smaller dome rim. Larger chrome buttons.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "accessory",
+          "detail": "Clear sticker, with or without TM.",
+          "where": "Look at the sticker."
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--takara-1-2",
+      "figure": "R2-D2",
+      "factory": "Takara 1-2",
+      "mould": "1-2",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md. Not part of the core Kenner carded line.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "JAPAN COO, with Takara on the back of the torso.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "mould",
+          "detail": "Not part of the core Kenner carded line. Smaller dome rim. Larger chrome buttons.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "accessory",
+          "detail": "Clear sticker, with or without TM.",
+          "where": "Look at the sticker."
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--takara-2",
+      "figure": "R2-D2",
+      "factory": "Takara 2",
+      "mould": "2",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md. Not part of the core Kenner carded line.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "No COO and no Takara stamp.",
+          "where": "Look at the country stamp on the underside of the body."
+        },
+        {
+          "category": "mould",
+          "detail": "Not part of the core Kenner carded line. Larger dome rim. Smaller chrome buttons.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "accessory",
+          "detail": "Clear sticker, with or without TM.",
+          "where": "Look at the sticker."
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--droid-factory-kenner-wavy",
+      "figure": "R2-D2",
+      "factory": "Droid Factory Kenner wavy",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md. Not part of the core Kenner carded line.",
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Not part of the core Kenner carded line. Unique sculpt with a removable third leg.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "accessory",
+          "detail": "Kenner sticker drafted in reverse. Wavy top line on the central blue rectangle.",
+          "where": "Look at the sticker."
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--droid-factory-kenner-straight",
+      "figure": "R2-D2",
+      "factory": "Droid Factory Kenner straight",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md. Not part of the core Kenner carded line.",
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Not part of the core Kenner carded line. Unique sculpt with a removable third leg.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "accessory",
+          "detail": "Kenner sticker drafted in reverse. Straight top line on the central blue rectangle.",
+          "where": "Look at the sticker."
+        }
+      ]
+    },
+    {
+      "id": "r2-d2--droid-factory-palitoy",
+      "figure": "R2-D2",
+      "factory": "Droid Factory Palitoy",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/r2-d2/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md. Not part of the core Kenner carded line.",
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Not part of the core Kenner carded line. Unique sculpt with a removable third leg.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "accessory",
+          "detail": "Palitoy sticker. The top line is very wavy.",
+          "where": "Look at the sticker."
         }
       ]
     },
@@ -14480,5 +14727,6 @@
     }
   ],
   "lukeOwner": "data/references/owner-verified/luke-skywalker.md",
-  "leiaOwner": "data/references/owner-verified/princess-leia-organa.md"
+  "leiaOwner": "data/references/owner-verified/princess-leia-organa.md",
+  "r2Owner": "data/references/owner-verified/r2-d2.md"
 }

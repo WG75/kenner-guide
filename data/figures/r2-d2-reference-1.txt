@@ -63,8 +63,19 @@ COMMON MYTHS (IMPORTANT)
 
 - “No COO solid dome R2 exists” → FALSE  
   → These are body swaps from Sensorscope figures
+- A 1978 No COO figure is the Lili Ledy Retorno. That is a real figure, not this myth.
 
 --------------------------------------------------
+
+STAMP
+
+The licensing line and the country stamp are on the underside of the body, around the base hole, not on the legs.
+
+Unitoy M1, Smile M2 and Unitoy M5 share one continuous line, "© G.M.F.G.I. 1977 MADE IN HONG KONG". The red marks on COO guide 3.7 show the line spacing. Taiwan is one continuous line, "© G.M.F.G.I. 1977 MADE IN TAIWAN", marked with a red circle and arrows.
+
+Kader M3, M4 and M7 have "© G.M.F.G.I. 1977" at the top and "HONG KONG" at the bottom, on the opposite side. Cavity 1 or 2 is M3, cavity 5 or 6 is M4, and cavity 3 or 4 is M7. Family 5 is Unitoy. A Kader M5 was mentioned, and that family stays Unitoy.
+
+Lili Ledy Regreso uses the Kader layout. Lili Ledy Retorno is No COO and the licensing line shows 1978.
 
 FIGURE VARIANT FAMILIES
 
@@ -112,8 +123,8 @@ Variants:
 - Small wedge sticker transition figures
 
 Notes:
-- Some late figures appear rushed or inconsistent
-- M5 family appears briefly with unclear production reasoning
+- M1 is the early halftone sticker and the later 1-part sticker. Do not put the loose-dome tells on M1.
+- M5 is a different Unitoy family. Loose dome, gaps underneath, 41-back, small red eye or a double-painted eye.
 
 --------------------------------------------------
 

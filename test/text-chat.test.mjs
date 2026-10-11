@@ -1297,6 +1297,134 @@ await test("Princess Leia stamp position separates Kader and Smile, and Glasslit
   assert.doesNotMatch(blasterFile, /same mould family as the Jawa blaster/);
 });
 
+await test("R2-D2 solid dome stamp is on the underside and the COO guide is shown", async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  const r2 = data.figures.find(fig => fig.name === "R2-D2");
+  const owner = fs.readFileSync(path.join(root, "data/references/owner-verified/r2-d2.md"), "utf8");
+  assert.match(owner, /Date: 2026-10-11/);
+  assert.match(owner, /Source: owner Warren/);
+  assert.match(owner, /underside of the body/);
+  assert.match(owner, /no golden dome/i);
+  assert.match(owner, /no dimple dome/i);
+  assert.match(owner, /no No-COO solid-dome/);
+  assert.match(r2.sourceNote, /11 Oct 2026/);
+  assert.match(r2.sourceNote, /owner-verified\/r2-d2\.md/);
+  assert.equal(r2.stamps.includes("VI: Taiwan"), false);
+  assert.ok(r2.guide.includes("VI: Taiwan"));
+  assert.doesNotMatch(r2.stamps.join("\n"), /REGRESO 1977|Family 2: No COO/);
+  assert.match(r2.whereToLook, /underside of the body/);
+  assert.match(r2.whereToLook, /not on the legs/);
+  assert.doesNotMatch(r2.whereToLook, /back of the legs/);
+  assert.equal(r2.tells.length, 0);
+  assert.equal(r2.referenceImage.url, "/images/r2-d2-coo-guide-3.7.png");
+  assert.equal(r2.referenceImage.credit, "COO guide 3.7 © wdobafett / variantvillain.com");
+  assert.equal(r2.referenceImage.caption, r2.referenceImage.credit);
+  assert.equal(fs.existsSync(path.join(root, "images/r2-d2-coo-guide-3.7.png")), true);
+
+  const start = await call({ message: "identify the variant of R2-D2" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.flowState.displayName, "R2-D2");
+  assert.equal(start.json.flowState.step, "coo");
+  assert.match(start.json.reply, /underside of the body/);
+  assert.match(start.json.reply, /around the base hole/);
+  assert.doesNotMatch(start.json.reply, /back of the legs/);
+  assert.equal(start.json.images.length, 1);
+  assert.equal(start.json.images[0].url, "/images/r2-d2-coo-guide-3.7.png");
+  assert.equal(start.json.images[0].credit, "COO guide 3.7 © wdobafett / variantvillain.com");
+  assert.equal(start.json.images[0].caption, "COO guide 3.7 © wdobafett / variantvillain.com");
+  assert.equal(start.json.images[0].sourcePage, "");
+  assert.deepEqual(start.json.actions.map(action => action.label), [
+    "'© G.M.F.G.I. 1977 MADE IN HONG KONG' in one continuous line along the top of the underside",
+    "'© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side",
+    "'© G.M.F.G.I. 1977 MADE IN TAIWAN' in one continuous line along the top of the underside",
+    "No COO. The licensing line shows 1978. Cavity 5 or 6",
+    "Not part of the core Kenner carded line: Takara wind-up",
+    "Not part of the core Kenner carded line: Droid Factory playset"
+  ]);
+
+  const hongKong = await call({
+    message: "'© G.M.F.G.I. 1977 MADE IN HONG KONG' in one continuous line along the top of the underside",
+    flowState: start.json.flowState
+  });
+  assert.equal(hongKong.json.flowState.step, "follow");
+  assert.equal(hongKong.json.images[0].url, "/images/r2-d2-coo-guide-3.7.png");
+  assert.deepEqual(hongKong.json.actions.map(action => action.label), [
+    "Large crimson eye and a darker wedge",
+    "Halftone two-part sticker, or a Unitoy dome from very dark blue to mid-blue",
+    "Loose dome with gaps underneath, on a 41-back, small red eye or a double-painted eye",
+    "Bright blue dull-chrome dome, messy paint, burrs or a crooked sticker"
+  ]);
+  const smile = await call({
+    message: "Large crimson eye and a darker wedge",
+    flowState: hongKong.json.flowState
+  });
+  assert.match(smile.json.reply, /Smile M2/);
+  assert.equal(smile.json.flowState, null);
+
+  const opposite = await call({
+    message: "'© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side",
+    flowState: start.json.flowState
+  });
+  assert.equal(opposite.json.flowState.step, "follow");
+  assert.equal(opposite.json.images[0].credit, "COO guide 3.7 © wdobafett / variantvillain.com");
+  const kader = await call({
+    message: "Cavity 3 or 4, matt mid-blue legs",
+    flowState: opposite.json.flowState
+  });
+  assert.match(kader.json.reply, /Kader M7/);
+  assert.match(kader.json.reply, /Cavity 3 or 4/);
+  assert.equal(kader.json.flowState, null);
+
+  const retorno = await call({
+    message: "No COO. The licensing line shows 1978. Cavity 5 or 6",
+    flowState: start.json.flowState
+  });
+  assert.match(retorno.json.reply, /Lili Ledy Retorno/);
+  assert.match(retorno.json.reply, /1978/);
+  assert.match(retorno.json.reply, /not the myth of a No-COO Kenner solid dome/);
+  assert.equal(retorno.json.flowState, null);
+
+  const taiwan = await call({
+    message: "'© G.M.F.G.I. 1977 MADE IN TAIWAN' in one continuous line along the top of the underside",
+    flowState: start.json.flowState
+  });
+  assert.match(taiwan.json.reply, /Taiwan M6/);
+  assert.match(taiwan.json.reply, /one continuous line/);
+
+  const match = JSON.parse(fs.readFileSync(path.join(root, "data/factory-match.json"), "utf8"));
+  const variants = match.figureVariants.filter(item => item.figure === "R2-D2");
+  const byId = Object.fromEntries(variants.map(item => [item.id, item]));
+  assert.equal(byId["r2-d2--kader-m5"], undefined);
+  assert.equal(byId["r2-d2--lili-ledy-m4"], undefined);
+  assert.ok(byId["r2-d2--lili-ledy-regreso"]);
+  assert.ok(byId["r2-d2--pbp"]);
+  assert.ok(byId["r2-d2--poch"]);
+  assert.ok(byId["r2-d2--takara-1-1"]);
+  assert.ok(byId["r2-d2--droid-factory-palitoy"]);
+  assert.doesNotMatch(JSON.stringify(variants), /dark and light blue domes are added/);
+  assert.doesNotMatch(JSON.stringify(byId["r2-d2--unitoy-m5"].tells), /halftone|Early Bird/);
+  assert.doesNotMatch(JSON.stringify(byId["r2-d2--unitoy-m1"].tells), /Loose dome|loose dome/);
+  assert.match(JSON.stringify(byId["r2-d2--unitoy-m5"].tells), /Family 5 is Unitoy, not Kader/);
+  assert.doesNotMatch(JSON.stringify(byId["r2-d2--lili-ledy-retorno"].tells), /Spain|PBP|carded/);
+  assert.match(JSON.stringify(byId["r2-d2--pbp"].tells), /carded in Spain/);
+  assert.match(JSON.stringify(byId["r2-d2--kader-m3"].tells), /Cavity 1 or 2/);
+  assert.match(JSON.stringify(byId["r2-d2--kader-m4"].tells), /Cavity 5 or 6/);
+  assert.match(JSON.stringify(byId["r2-d2--kader-m7"].tells), /Cavity 3 or 4/);
+  assert.match(byId["r2-d2--takara-2"].sourceNote, /Not part of the core Kenner carded line/);
+  assert.match(byId["r2-d2--droid-factory-kenner-wavy"].sourceNote, /Not part of the core Kenner carded line/);
+
+  const part1 = fs.readFileSync(path.join(root, "data/figures/r2-d2-reference-1.txt"), "utf8");
+  assert.match(part1, /underside of the body/);
+  assert.match(part1, /1978 No COO figure is the Lili Ledy Retorno/);
+  assert.match(part1, /Early Bird figures are Unitoy or Kader only/);
+  assert.match(part1, /No Taiwan Early Bird/);
+  const part2 = fs.readFileSync(path.join(root, "data/figures/r2-d2-reference-2.txt"), "utf8");
+  assert.match(part2, /LILI LEDY REGRESO/);
+  assert.match(part2, /TAKARA WIND-UP R2/);
+  assert.match(part2, /Not part of the core Kenner carded line/);
+  assert.doesNotMatch(part2, /Some versions imported into Spain/);
+});
+
 function loadCatalog() {
   const index = JSON.parse(fs.readFileSync(path.join(root, "data/catalog.json"), "utf8"));
   if (!Array.isArray(index.parts)) return index;

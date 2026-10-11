@@ -1650,112 +1650,6 @@
       "missing": "Only Lili Ledy M1 is described, and only as No COO. Licensing location is not stated."
     },
     {
-      "name": "R2-D2",
-      "recorded": "2026-10-11",
-      "source": "owner",
-      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
-      "ask": "Which stamp do you see?",
-      "stamps": [
-        "Unitoy M1 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'.",
-        "Smile M2 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'.",
-        "Kader M3 = Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 1 or 2 visible near the screw.",
-        "Kader M4 = Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 5 or 6 visible near the screw.",
-        "Lili Ledy M4 = Licensing details '© G.M.F.G.I. 1977' only, no COO. These can have a 5 or 6 visible near the screw.",
-        "Unitoy M5 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'.",
-        "Taiwan M6 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan'.",
-        "Kader M7 = Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong'."
-      ],
-      "options": [
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-followed-by-mad",
-          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'",
-          "coo": "Hong Kong",
-          "factories": [
-            "Unitoy M1",
-            "Smile M2",
-            "Unitoy M5"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'"
-          ],
-          "conclusion": "That stamp is shared by the Unitoy M1, the Smile M2, and the Unitoy M5. Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'. I'm not sure which of those it is from the stamp alone.",
-          "sure": false,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-with-hong-kong-",
-          "label": "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 1 or 2 visible near the screw",
-          "coo": "Hong Kong",
-          "factories": [
-            "Kader M3"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 1 or 2 visible near the screw"
-          ],
-          "conclusion": "That is the Kader M3. Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 1 or 2 visible near the screw.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-with-hong-kong--2",
-          "label": "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 5 or 6 visible near the screw",
-          "coo": "Hong Kong",
-          "factories": [
-            "Kader M4"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 5 or 6 visible near the screw"
-          ],
-          "conclusion": "That is the Kader M4. Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 5 or 6 visible near the screw.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-only-no-coo-the",
-          "label": "Licensing details '© G.M.F.G.I. 1977' only, no COO. These can have a 5 or 6 visible near the screw",
-          "coo": "No COO",
-          "factories": [
-            "Lili Ledy M4"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977' only, no COO. These can have a 5 or 6 visible near the screw"
-          ],
-          "conclusion": "That is the Lili Ledy M4. Licensing details '© G.M.F.G.I. 1977' only, no COO. These can have a 5 or 6 visible near the screw.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-followed-by-mad-2",
-          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan'",
-          "coo": "Taiwan",
-          "factories": [
-            "Taiwan M6"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan'"
-          ],
-          "conclusion": "That is the Taiwan M6. Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan'.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-followed-by-hon",
-          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong'",
-          "coo": "Hong Kong",
-          "factories": [
-            "Kader M7"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong'"
-          ],
-          "conclusion": "That is the Kader M7. Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong'.",
-          "sure": true,
-          "followUps": []
-        }
-      ],
-      "missing": ""
-    },
-    {
       "name": "Chewbacca",
       "recorded": "2026-10-11",
       "source": "owner",
@@ -2389,9 +2283,275 @@
         }
       ],
       "missing": ""
+    },
+    {
+      "name": "R2-D2",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look on the underside of the body, around the base hole, not on the legs. A partial or cut-off country name counts as No COO. The picture is COO guide 3.7. Unitoy, Smile and the second Unitoy family share one continuous Hong Kong line, and the red marks show the line spacing.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Unitoy M1 = '© G.M.F.G.I. 1977 MADE IN HONG KONG' in one continuous line along the top of the underside.",
+        "Smile M2 = '© G.M.F.G.I. 1977 MADE IN HONG KONG' in one continuous line along the top of the underside. The red marks show the line spacing.",
+        "Unitoy M5 = '© G.M.F.G.I. 1977 MADE IN HONG KONG' in one continuous line along the top of the underside. Family 5 is Unitoy.",
+        "Poch = Unitoy or Kader parts, with the continuous Hong Kong line.",
+        "Kader M3 = '© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side. Cavity 1 or 2.",
+        "Kader M4 = '© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side. Cavity 5 or 6.",
+        "Kader M7 = '© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side. Cavity 3 or 4.",
+        "Lili Ledy Regreso = the same opposite Kader layout.",
+        "PBP = a Lili Ledy Regreso figure with a B-type sticker, carded in Spain.",
+        "Taiwan M6 = '© G.M.F.G.I. 1977 MADE IN TAIWAN' in one continuous line along the top of the underside.",
+        "Lili Ledy Retorno = No COO. The licensing line shows 1978. Cavity 5 or 6.",
+        "Takara wind-up and Droid Factory are not part of the core Kenner carded line."
+      ],
+      "options": [
+        {
+          "id": "hong-kong-continuous",
+          "label": "'© G.M.F.G.I. 1977 MADE IN HONG KONG' in one continuous line along the top of the underside",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1",
+            "Smile M2",
+            "Unitoy M5",
+            "Poch"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977 MADE IN HONG KONG' in one continuous line along the top of the underside"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "smile-eye",
+              "label": "Large crimson eye and a darker wedge",
+              "factories": [
+                "Smile M2"
+              ],
+              "conclusion": "That is the Smile M2. Smile has a large crimson eye and a darker wedge. The continuous Hong Kong line is shared with Unitoy, and the guide's red marks show the line spacing.",
+              "sure": true
+            },
+            {
+              "id": "unitoy-m1-sticker",
+              "label": "Halftone two-part sticker, or a Unitoy dome from very dark blue to mid-blue",
+              "factories": [
+                "Unitoy M1"
+              ],
+              "conclusion": "That is the Unitoy M1. Early figures have a 2-part halftone sticker. Later ones have a 1-part sticker and a mid-blue dome.",
+              "sure": true
+            },
+            {
+              "id": "unitoy-m5-dome",
+              "label": "Loose dome with gaps underneath, on a 41-back, small red eye or a double-painted eye",
+              "factories": [
+                "Unitoy M5"
+              ],
+              "conclusion": "That is the Unitoy M5. Family 5 is Unitoy, not Kader. The dome is loose, with gaps underneath.",
+              "sure": true
+            },
+            {
+              "id": "poch-dome",
+              "label": "Bright blue dull-chrome dome, messy paint, burrs or a crooked sticker",
+              "factories": [
+                "Poch"
+              ],
+              "conclusion": "That is the Poch. It is built from Unitoy or Kader parts, with a dull-chrome dome and messy paint.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "hong-kong-opposite",
+          "label": "'© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M3",
+            "Kader M4",
+            "Kader M7",
+            "Lili Ledy Regreso",
+            "PBP"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' at the top of the underside and 'HONG KONG' at the bottom, on the opposite side"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "kader-m3-cavity",
+              "label": "Cavity 1 or 2, matt mid-blue legs",
+              "factories": [
+                "Kader M3"
+              ],
+              "conclusion": "That is the Kader M3. Cavity 1 or 2. The number is not visible from the other side.",
+              "sure": true
+            },
+            {
+              "id": "kader-m4-cavity",
+              "label": "Cavity 5 or 6, matt mid-blue legs, a short run",
+              "factories": [
+                "Kader M4"
+              ],
+              "conclusion": "That is the Kader M4. Cavity 5 or 6. It is a short run, with a minor COO variation beside Kader M3 and Kader M7.",
+              "sure": true
+            },
+            {
+              "id": "kader-m7-cavity",
+              "label": "Cavity 3 or 4, matt mid-blue legs",
+              "factories": [
+                "Kader M7"
+              ],
+              "conclusion": "That is the Kader M7. Cavity 3 or 4. The paint matches Kader M3, and the two were made alongside each other.",
+              "sure": true
+            },
+            {
+              "id": "ll-regreso",
+              "label": "Light-blue legs and an A-type or C-type Lili Ledy sticker",
+              "factories": [
+                "Lili Ledy Regreso"
+              ],
+              "conclusion": "That is the Lili Ledy Regreso. It uses the Kader stamp, with light-blue legs. The torso can be hard or soft.",
+              "sure": true
+            },
+            {
+              "id": "pbp-sticker",
+              "label": "B-type Lili Ledy sticker, greenish-grey panels, carded in Spain",
+              "factories": [
+                "PBP"
+              ],
+              "conclusion": "That is the PBP. It is a Lili Ledy Regreso figure carded in Spain, with a B-type sticker.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "taiwan-continuous",
+          "label": "'© G.M.F.G.I. 1977 MADE IN TAIWAN' in one continuous line along the top of the underside",
+          "coo": "Taiwan",
+          "factories": [
+            "Taiwan M6"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977 MADE IN TAIWAN' in one continuous line along the top of the underside"
+          ],
+          "conclusion": "That is the Taiwan M6. '© G.M.F.G.I. 1977 MADE IN TAIWAN' is one continuous line. The red circle and arrows on COO guide 3.7 mark that line.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "retorno-1978",
+          "label": "No COO. The licensing line shows 1978. Cavity 5 or 6",
+          "coo": "No COO",
+          "factories": [
+            "Lili Ledy Retorno"
+          ],
+          "examples": [
+            "No COO. The licensing line shows 1978. Cavity 5 or 6"
+          ],
+          "conclusion": "That is the Lili Ledy Retorno. No COO, and the licensing line shows 1978. Cavity 5 or 6. This is not the myth of a No-COO Kenner solid dome.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "takara-wind-up",
+          "label": "Not part of the core Kenner carded line: Takara wind-up",
+          "coo": "Japan",
+          "factories": [
+            "Takara 1-1",
+            "Takara 1-2",
+            "Takara 2"
+          ],
+          "examples": [
+            "Not part of the core Kenner carded line: Takara wind-up"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "takara-1-1",
+              "label": "JAPAN COO, no Takara stamp. Smaller dome rim, larger chrome buttons",
+              "factories": [
+                "Takara 1-1"
+              ],
+              "conclusion": "That is the Takara 1-1. Not part of the core Kenner carded line. JAPAN COO, no Takara stamp.",
+              "sure": true
+            },
+            {
+              "id": "takara-1-2",
+              "label": "JAPAN COO with Takara on the back of the torso. Smaller dome rim, larger chrome buttons",
+              "factories": [
+                "Takara 1-2"
+              ],
+              "conclusion": "That is the Takara 1-2. Not part of the core Kenner carded line. JAPAN COO with Takara on the back of the torso.",
+              "sure": true
+            },
+            {
+              "id": "takara-2",
+              "label": "No COO and no Takara stamp. Larger dome rim, smaller chrome buttons",
+              "factories": [
+                "Takara 2"
+              ],
+              "conclusion": "That is the Takara 2. Not part of the core Kenner carded line. No COO and no Takara stamp.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "droid-factory",
+          "label": "Not part of the core Kenner carded line: Droid Factory playset",
+          "coo": "No COO",
+          "factories": [
+            "Droid Factory Kenner wavy",
+            "Droid Factory Kenner straight",
+            "Droid Factory Palitoy"
+          ],
+          "examples": [
+            "Not part of the core Kenner carded line: Droid Factory playset"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "df-wavy",
+              "label": "Kenner sticker, wavy top line, removable third leg",
+              "factories": [
+                "Droid Factory Kenner wavy"
+              ],
+              "conclusion": "That is the Droid Factory Kenner wavy sticker. Not part of the core Kenner carded line. Unique sculpt, removable third leg, reversed artwork.",
+              "sure": true
+            },
+            {
+              "id": "df-straight",
+              "label": "Kenner sticker, straight top line, removable third leg",
+              "factories": [
+                "Droid Factory Kenner straight"
+              ],
+              "conclusion": "That is the Droid Factory Kenner straight sticker. Not part of the core Kenner carded line. Unique sculpt, removable third leg, reversed artwork.",
+              "sure": true
+            },
+            {
+              "id": "df-palitoy",
+              "label": "Palitoy sticker, very wavy top line, removable third leg",
+              "factories": [
+                "Droid Factory Palitoy"
+              ],
+              "conclusion": "That is the Droid Factory Palitoy sticker. Not part of the core Kenner carded line. The top line is very wavy.",
+              "sure": true
+            }
+          ]
+        }
+      ],
+      "referenceImage": {
+        "url": "/images/r2-d2-coo-guide-3.7.png",
+        "alt": "R2-D2 underside COO stamps by family",
+        "title": "R2-D2 COO guide",
+        "caption": "COO guide 3.7 © wdobafett / variantvillain.com",
+        "credit": "COO guide 3.7 © wdobafett / variantvillain.com"
+      },
+      "missing": ""
     }
   ],
   "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported.",
   "lukeNote": "Luke Skywalker stamps follow data/references/owner-verified/luke-skywalker.md (owner Warren, 2026-10-11).",
-  "leiaNote": "Princess Leia Organa stamps follow data/references/owner-verified/princess-leia-organa.md (owner Warren, 2026-10-11)."
+  "leiaNote": "Princess Leia Organa stamps follow data/references/owner-verified/princess-leia-organa.md (owner Warren, 2026-10-11).",
+  "r2Note": "R2-D2 stamps follow data/references/owner-verified/r2-d2.md (owner Warren, 2026-10-11)."
 }

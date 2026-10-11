@@ -1649,6 +1649,26 @@ function tcVariantTarget(message) {
   return match[1].trim().replace(/[?.!]+$/g, "");
 }
 
+function tcBareName(name) {
+  return String(name || "").replace(/\s*\([^)]*\)\s*$/, "").trim();
+}
+
+function tcFileSlug(relPath) {
+  return tcSlug(String(relPath || "").split("/").pop() || "");
+}
+
+/* figures/r2-d2-reference-1.txt is the solid-dome dossier. Its recorded name
+   is "R2-D2 (Artoo-Detoo)", so a typed "R2-D2" does not match the title.
+   The pop-up figure only lists "R2-D2" as an alias and must not take that question. */
+function tcPlainDossier(fig, want) {
+  const bare = tcBareName(fig.name);
+  if (!bare || tcNormName(bare) !== tcNormName(want)) return false;
+  const stem = tcSlug(bare);
+  if (!stem) return false;
+  const slug = tcFileSlug(fig.relPath);
+  return slug === `${stem}-reference` || slug.startsWith(`${stem}-reference-`);
+}
+
 function tcPickVariantFigure(target) {
   const want = tcNormName(target);
   const pool = [];
@@ -1657,12 +1677,14 @@ function tcPickVariantFigure(target) {
     const key = tcNormName(fig.name);
     if (seen.has(key)) continue;
     const labels = [fig.name, ...(fig.aliases || [])].map(tcNormName).filter(Boolean);
-    const named = labels.includes(want) || tcPhraseIn(target, fig.name);
+    const named = labels.includes(want) || tcPhraseIn(target, fig.name) || tcPlainDossier(fig, want);
     if (!named) continue;
     seen.add(key);
     pool.push(fig);
   }
   if (!pool.length) return null;
+  const plain = pool.filter(fig => tcPlainDossier(fig, want));
+  if (plain.length === 1) return { name: plain[0].name };
   const exact = pool.filter(fig => tcNormName(fig.name) === want || (fig.aliases || []).some(label => tcNormName(label) === want));
   if (exact.length === 1) return { name: exact[0].name };
   const contained = pool.filter(fig => tcPhraseIn(target, fig.name));
@@ -1713,6 +1735,7 @@ function tcStartVariant(res, target, photoTells) {
       flowState: offered.flowState,
       actions: offered.actions,
       quickReplies: offered.quickReplies,
+      images: opening.images,
       skipFollowUps: true
     });
   }
@@ -1720,6 +1743,7 @@ function tcStartVariant(res, target, photoTells) {
     flowState: opening.flowState,
     actions: opening.actions,
     quickReplies: opening.quickReplies,
+    images: opening.images,
     skipFollowUps: true
   });
 }
@@ -1762,11 +1786,13 @@ async function handleTextChat(res, { message, history, flowState }) {
         flowState: offered.flowState,
         actions: offered.actions,
         quickReplies: offered.quickReplies,
+        images: continued.images,
         skipFollowUps: true
       });
     }
     return tcReply(res, continued.reply, {
       flowState: continued.flowState,
+      images: continued.images,
       actions: continued.actions,
       quickReplies: continued.quickReplies,
       skipFollowUps: true
