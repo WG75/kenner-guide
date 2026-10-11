@@ -1,6 +1,6 @@
 {
   "source": "https://en.wikipedia.org/wiki/List_of_Kenner_Star_Wars_action_figures",
-  "sourceNote": "Debut card and year are that page's debut-package table. The year column is production year and is used here as the first-release year in the photo reply. Wikipedia has no accessory column. Accessories are the photo completeness list in tools/build-kenner-debut-figures.py. Han Solo (Bespin Outfit) has no cape, Romba has no bow, and Paploo has no spear. Anakin Skywalker has no accessory. The sensorscope is built into R2-D2 (Sensorscope). 4-LOM and Zuckuss have rifles. The Rancor Keeper weapon is a staff. Barada's weapon is a staff. Lando Calrissian (Skiff Guard Disguise) has no cape. Other names follow the Variant Villain page headings. This file is not reference evidence for variant answers.",
+  "sourceNote": "Debut card and year are that page's debut-package table. The year column is production year and is used here as the first-release year in the photo reply. Wikipedia has no accessory column. Accessories are the photo completeness list in tools/build-kenner-debut-figures.py. Han Solo (Bespin Outfit) has no cape, Romba has no bow, and Paploo has no spear. Anakin Skywalker has no accessory. The sensorscope is built into R2-D2 (Sensorscope). 4-LOM and Zuckuss have rifles. The Rancor Keeper weapon is a staff. Barada's weapon is a staff. Lando Calrissian (Skiff Guard Disguise) has no cape. Nikto's weapon is the Skiff Vibro Staff, owner-verified, the same piece as Barada and Yak Face. Other names follow the Variant Villain page headings. This file is not reference evidence for variant answers.",
   "figures": [
     {
       "product": "38180",
@@ -1204,7 +1204,7 @@
       "pronoun": "he",
       "possessive": "his",
       "accessories": [
-        "vibro axe"
+        "skiff vibro staff"
       ]
     },
     {

@@ -176,6 +176,7 @@ IG_NOTES = {
     ("lumat", "hood"): "Imperial Gunnery documents the Lumat Hood. https://imperialgunnery.com/helmets-hoods.htm",
     ("lumat", "quiver"): "Imperial Gunnery lists a Lumat Quiver on the other-accessories page. https://imperialgunnery.com/other-accessories.htm",
     ("barada", "skiff vibro staff"): "Imperial Gunnery says the Skiff Vibro Staff came with Barada, Nikto and the Yak Face Canadian Power of the Force release. The Lili Ledy staff is a darker grey than the Kenner. https://imperialgunnery.com/staffs-axes.htm",
+    ("nikto", "skiff vibro staff"): "Owner-verified, 11 Oct 2026: Nikto's weapon is the Skiff Vibro Staff, the same piece as Barada and Yak Face. This overrides the Variant Villain Vibro Axe heading. Imperial Gunnery lists that staff with Barada, Nikto and the Yak Face Canadian Power of the Force release. https://imperialgunnery.com/staffs-axes.htm",
     ("warok", "bow"): "Imperial Gunnery documents the Warok Bow as the dark brown Ewok bow. https://imperialgunnery.com/otherweapons.htm",
     ("warok", "hood"): "Imperial Gunnery documents the Warok Hood. https://imperialgunnery.com/helmets-hoods.htm",
     ("warok", "quiver"): "Imperial Gunnery lists a Warok Quiver on the other-accessories page. https://imperialgunnery.com/other-accessories.htm",

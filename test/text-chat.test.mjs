@@ -1866,7 +1866,9 @@ await test("owner VF-CB reference pack rules stay on the accessory files", async
   assert.equal(variant.id, "accvar_dt_lightsaber_m2_yellow");
   assert.equal(variant.variant_code, "M1");
   const gaps = read("docs/variantvillain-gaps.md");
-  assert.match(gaps, /\(c\) Accessories with no page or no details: 26/);
+  assert.match(gaps, /\(c\) Accessories with no page or no details: 27/);
+  assert.match(gaps, /Nikto — skiff vibro staff/);
+  assert.match(gaps, /Owner-verified, 11 Oct 2026: Nikto's weapon is the Skiff Vibro Staff/);
   assert.match(gaps, /Luke Skywalker — lightsaber — Telescoping Lightsaber/);
   assert.match(gaps, /4-LOM — 4-lom rifle/);
   assert.match(gaps, /Zuckuss — zuckuss rifle/);
@@ -1920,7 +1922,12 @@ await test("Han Bespin, Romba and Paploo have no cape, bow or spear", async () =
   assert.deepEqual(byProduct["93750"].accessories, ["skiff vibro staff"]);
   assert.deepEqual(byProduct["70830"].accessories, ["helmet", "vibro axe"]);
   assert.deepEqual(byProduct["70760"].accessories, ["vibro axe"]);
-  assert.deepEqual(byProduct["71190"].accessories, ["vibro axe"]);
+  assert.deepEqual(byProduct["71190"].accessories, ["skiff vibro staff"]);
+  assert.equal(completenessLine(byProduct["71190"], ["skiff vibro staff"]), "He looks complete, with his skiff vibro staff.");
+  assert.equal(completenessLine(byProduct["71190"], ["vibro axe"]), "He appears to be missing his skiff vibro staff.");
+  const niktoFile = fs.readFileSync(path.join(root, "data/figures/nikto-reference.txt"), "utf8");
+  assert.match(niktoFile, /Owner-verified, 11 Oct 2026: Nikto's weapon is the Skiff Vibro Staff/);
+  assert.match(builder, /"71190": \("Nikto", "he", \["skiff vibro staff"\]\)/);
   assert.deepEqual(byProduct["39030"].accessories, ["imperial blaster"]);
   assert.equal(completenessLine(byProduct["69420"], ["sensorscope"]), "");
   assert.equal(completenessLine(byProduct["70830"], ["helmet", "vibro axe"]), "He looks complete, with his helmet and vibro axe.");
