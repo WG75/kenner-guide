@@ -1,6 +1,6 @@
 # Factory-match cross-reference coverage
 
-Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, and data/references/owner-verified/r2-d2.md override the scrape.
+Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, data/references/owner-verified/r2-d2.md, and data/references/owner-verified/chewbacca.md override the scrape.
 
 - Figure records: 104
 - Figures with a tell besides the COO stamp: 20 (was 18/104)
@@ -8,7 +8,7 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 - Accessory variants: 313
 - Accessory variants with tells: 244
 - Accessory variants with no tells: 69
-- Factory-match links (accessory variant to figure variant): 137
+- Factory-match links (accessory variant to figure variant): 153
 - Character pages fetched: 104
 - Accessory guide pages fetched: 64
 
@@ -16,7 +16,7 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 
 - Luke Skywalker: paint, hair
 - R2-D2: plastic, accessory, paint, mould, cardback, cavity
-- Chewbacca: plastic, date
+- Chewbacca: plastic, paint, mould, cardback, date
 - Darth Vader: head
 - Jawa: plastic
 - Sand People: head

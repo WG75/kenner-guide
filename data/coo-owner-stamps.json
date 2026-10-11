@@ -1650,116 +1650,6 @@
       "missing": "Only Lili Ledy M1 is described, and only as No COO. Licensing location is not stated."
     },
     {
-      "name": "Chewbacca",
-      "recorded": "2026-10-11",
-      "source": "owner",
-      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
-      "ask": "Which stamp do you see?",
-      "stamps": [
-        "Unitoy M1 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong' on left leg under the licensing details.",
-        "PBP M1 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
-        "Kader M2.1 = Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details.",
-        "Kader M2.2 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
-        "Glasslite M2 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
-        "Smile M3 = Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details. Some have no COO.",
-        "Taiwan M4 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan' on left leg.",
-        "Smile M5 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
-        "Lili Ledy M5 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
-        "Top Toys M6 = Licensing details '© L.F.L. 1977' on left leg, no COO."
-      ],
-      "options": [
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-followed-by-mad",
-          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong' on left leg under the licensing details",
-          "coo": "Hong Kong",
-          "factories": [
-            "Unitoy M1"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong' on left leg under the licensing details"
-          ],
-          "conclusion": "That is the Unitoy M1. Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong' on left leg under the licensing details.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-on-left-leg-no-",
-          "label": "Licensing details '© G.M.F.G.I. 1977' on left leg, no COO",
-          "coo": "No COO",
-          "factories": [
-            "PBP M1",
-            "Kader M2.2",
-            "Glasslite M2",
-            "Smile M5",
-            "Lili Ledy M5"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977' on left leg, no COO"
-          ],
-          "conclusion": "That stamp is shared by the PBP M1, the Kader M2.2, the Glasslite M2, the Smile M5, and the Lili Ledy M5. Licensing details '© G.M.F.G.I. 1977' on left leg, no COO. I'm not sure which of those it is from the stamp alone.",
-          "sure": false,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-followed-by-hon",
-          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details",
-          "coo": "Hong Kong",
-          "factories": [
-            "Kader M2.1"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details"
-          ],
-          "conclusion": "That is the Kader M2.1. Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-followed-by-hon-2",
-          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details. Some have no COO",
-          "coo": "No COO",
-          "factories": [
-            "Smile M3"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details. Some have no COO"
-          ],
-          "conclusion": "That is the Smile M3. Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details. Some have no COO.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-g-m-f-g-i-1977-followed-by-mad-2",
-          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan' on left leg",
-          "coo": "Taiwan",
-          "factories": [
-            "Taiwan M4"
-          ],
-          "examples": [
-            "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan' on left leg"
-          ],
-          "conclusion": "That is the Taiwan M4. Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan' on left leg.",
-          "sure": true,
-          "followUps": []
-        },
-        {
-          "id": "licensing-details-l-f-l-1977-on-left-leg-no-coo",
-          "label": "Licensing details '© L.F.L. 1977' on left leg, no COO",
-          "coo": "No COO",
-          "factories": [
-            "Top Toys M6"
-          ],
-          "examples": [
-            "Licensing details '© L.F.L. 1977' on left leg, no COO"
-          ],
-          "conclusion": "That is the Top Toys M6. Licensing details '© L.F.L. 1977' on left leg, no COO.",
-          "sure": true,
-          "followUps": []
-        }
-      ],
-      "missing": ""
-    },
-    {
       "name": "C-3PO",
       "recorded": "2026-10-11",
       "source": "owner",
@@ -2541,11 +2431,215 @@
         }
       ],
       "referenceImage": {
-        "url": "/images/r2-d2-coo-guide-3.7.png",
-        "alt": "R2-D2 underside COO stamps by family",
-        "title": "R2-D2 COO guide",
-        "caption": "COO guide 3.7 © wdobafett / variantvillain.com",
-        "credit": "COO guide 3.7 © wdobafett / variantvillain.com"
+        "id": "r2-d2-coo-guide-3.7"
+      },
+      "missing": ""
+    },
+    {
+      "name": "Chewbacca",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look on the back of the left thigh. The stamp runs vertically. The licensing line is the first column, and the country text is beside it. A partial or cut-off country name counts as No COO. The picture is COO guide 3.2.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Unitoy M1 = '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG' on the back of the left thigh. The M of MADE is directly under the ©, and the K of KONG is under the second 7 of 1977.",
+        "Poch Unitoy = the same MADE IN HONG KONG line, on Unitoy parts. Large turquoise eyes.",
+        "Kader M2.1 = '© G.M.F.G.I. 1977' and 'HONG KONG' on the back of the left thigh. The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977. The licensing line reads G.M.F.G.I. 1977.",
+        "Poch Kader = the Kader Hong Kong line. Purple-brown pouch.",
+        "Smile M3 = '© G.M.F.G.I. 1977' and 'HONG KONG' on the back of the left thigh. The H of HONG starts under the middle of the ©, and the G of KONG is under the second G of G.M.F.G.I.",
+        "Taiwan M4 = '© G.M.F.G.I. 1977' and 'MADE IN TAIWAN' on the back of the left thigh.",
+        "PBP M1 = No COO. The licensing line reads G.M.F.G.I. 1977. Circle under the left foot on cavity 2b.",
+        "Smile M5 = No COO. The licensing line reads G.M.F.G.I. 1977. Large almond-shaped eyes.",
+        "Lili Ledy M5 = No COO. The licensing line reads G.M.F.G.I. 1977. Much darker plastic.",
+        "Kader M2.2 = No COO. The licensing line reads L.F.L. 1977. POTF re-stamp.",
+        "Glasslite M2 = No COO. The licensing line reads L.F.L. 1977. Unpainted pouch.",
+        "Top Toys M6 = No COO. The licensing line reads L.F.L. 1977. The only Top Toys figure with a date.",
+        "Green limbs are faded pigment, not a variant."
+      ],
+      "options": [
+        {
+          "id": "made-in-hong-kong",
+          "label": "'© G.M.F.G.I. 1977' and 'MADE IN HONG KONG' on the back of the left thigh. The M of MADE is directly under the ©, and the K of KONG is under the second 7 of 1977",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1",
+            "Poch Unitoy"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' and 'MADE IN HONG KONG' on the back of the left thigh. The M of MADE is directly under the ©, and the K of KONG is under the second 7 of 1977"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "unitoy-toe",
+              "label": "Small blue pupils and a swollen big toe on the left foot",
+              "factories": [
+                "Unitoy M1"
+              ],
+              "conclusion": "That is the Unitoy M1. The M of MADE is directly under the ©, and the K of KONG is under the second 7 of 1977. Small blue pupils and a swollen big toe on the left foot.",
+              "sure": true
+            },
+            {
+              "id": "poch-unitoy",
+              "label": "Large turquoise eyes, or melt marks on the arm or shoulder",
+              "factories": [
+                "Poch Unitoy"
+              ],
+              "conclusion": "That is the Poch built from Unitoy parts. Large turquoise eyes. Melt marks on the arm or shoulder. The Hong Kong line matches Unitoy.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "hong-kong",
+          "label": "'© G.M.F.G.I. 1977' and 'HONG KONG' on the back of the left thigh",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M2.1",
+            "Smile M3",
+            "Poch Kader"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' and 'HONG KONG' on the back of the left thigh"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "kader-position",
+              "label": "The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977. Small mid-blue pupils",
+              "factories": [
+                "Kader M2.1"
+              ],
+              "conclusion": "That is the Kader M2.1. The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977. Small mid-blue pupils and small eye whites. The licensing line reads G.M.F.G.I. 1977. Green limbs are faded pigment, not a variant.",
+              "sure": true
+            },
+            {
+              "id": "poch-kader",
+              "label": "The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977. The pouch is purple-brown",
+              "factories": [
+                "Poch Kader"
+              ],
+              "conclusion": "That is the Poch built from Kader parts. The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977. The pouch is purple-brown. Green limbs are faded pigment, not a variant.",
+              "sure": true
+            },
+            {
+              "id": "smile-position",
+              "label": "The H of HONG starts under the middle of the ©, and the G of KONG is under the second G of G.M.F.G.I.",
+              "factories": [
+                "Smile M3"
+              ],
+              "conclusion": "That is the Smile M3. The H of HONG starts under the middle of the ©, and the G of KONG is under the second G of G.M.F.G.I. The bowcaster is Smile M4 on SW and ESB cards, then Smile M3 from the 65b/c.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "made-in-taiwan",
+          "label": "'© G.M.F.G.I. 1977' and 'MADE IN TAIWAN' on the back of the left thigh",
+          "coo": "Taiwan",
+          "factories": [
+            "Taiwan M4"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' and 'MADE IN TAIWAN' on the back of the left thigh"
+          ],
+          "conclusion": "That is the Taiwan M4. '© G.M.F.G.I. 1977' and 'MADE IN TAIWAN' run vertically on the back of the left thigh. 12-back and 21-back only.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo-gmfgi",
+          "label": "No COO. The licensing line reads '© G.M.F.G.I. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "Lili Ledy M5",
+            "PBP M1",
+            "Smile M5"
+          ],
+          "examples": [
+            "No COO. The licensing line reads '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "lili-ledy-dark",
+              "label": "Much darker plastic than a Kenner Chewbacca",
+              "factories": [
+                "Lili Ledy M5"
+              ],
+              "conclusion": "That is the Lili Ledy M5. No COO, and the licensing line reads G.M.F.G.I. 1977. The plastic is much darker than a Kenner Chewbacca.",
+              "sure": true
+            },
+            {
+              "id": "pbp-foot",
+              "label": "A circle under the left foot, or reddish plastic with melt marks",
+              "factories": [
+                "PBP M1"
+              ],
+              "conclusion": "That is the PBP M1. No COO. Reddish plastic with melt marks. Cavity 2b has a large circle under the left foot.",
+              "sure": true
+            },
+            {
+              "id": "smile-almond",
+              "label": "Large almond-shaped eyes",
+              "factories": [
+                "Smile M5"
+              ],
+              "conclusion": "That is the Smile M5. No COO, and the licensing line reads G.M.F.G.I. 1977. Large almond-shaped eyes. The sheet's family 3 No COO Smile has the same eyes. The bowcaster is Smile M3.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "no-coo-lfl",
+          "label": "No COO. The licensing line reads '© L.F.L. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "Glasslite M2",
+            "Top Toys M6",
+            "Kader M2.2"
+          ],
+          "examples": [
+            "No COO. The licensing line reads '© L.F.L. 1977'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "glasslite-light",
+              "label": "Unpainted pouch and much lighter brown plastic",
+              "factories": [
+                "Glasslite M2"
+              ],
+              "conclusion": "That is the Glasslite M2. No COO, and the licensing line reads L.F.L. 1977. Much lighter brown than a Kenner Chewbacca, with an unpainted pouch. It came with a Zuckuss-style rifle, not a bowcaster.",
+              "sure": true
+            },
+            {
+              "id": "top-toys-short",
+              "label": "Unpainted pouch, a shorter figure, and no peg holes under the feet",
+              "factories": [
+                "Top Toys M6"
+              ],
+              "conclusion": "That is the Top Toys M6. No COO, and the licensing line reads L.F.L. 1977. It is shorter, with no peg holes under the feet, and an unpainted pouch. This is the only Top Toys figure with a date.",
+              "sure": true
+            },
+            {
+              "id": "kader-potf",
+              "label": "A painted pouch on reddish-brown plastic",
+              "factories": [
+                "Kader M2.2"
+              ],
+              "conclusion": "That is the Kader M2.2. No COO. The Hong Kong text was removed and the line was re-stamped '© L.F.L. 1977'. POTF cards and baggies. The earlier Hong Kong Kader still reads G.M.F.G.I. 1977.",
+              "sure": true
+            }
+          ]
+        }
+      ],
+      "referenceImage": {
+        "id": "chewbacca-coo-guide-3.2"
       },
       "missing": ""
     }
@@ -2553,5 +2647,6 @@
   "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported.",
   "lukeNote": "Luke Skywalker stamps follow data/references/owner-verified/luke-skywalker.md (owner Warren, 2026-10-11).",
   "leiaNote": "Princess Leia Organa stamps follow data/references/owner-verified/princess-leia-organa.md (owner Warren, 2026-10-11).",
-  "r2Note": "R2-D2 stamps follow data/references/owner-verified/r2-d2.md (owner Warren, 2026-10-11)."
+  "r2Note": "R2-D2 stamps follow data/references/owner-verified/r2-d2.md (owner Warren, 2026-10-11).",
+  "chewbaccaNote": "Chewbacca stamps follow data/references/owner-verified/chewbacca.md (owner Warren, 2026-10-11)."
 }

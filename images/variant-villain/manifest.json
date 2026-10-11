@@ -1,0 +1,22 @@
+{
+  "show": true,
+  "remove": "Set show to false, or delete the images/variant-villain folder, to hide every Variant Villain guide image from the identify flow.",
+  "images": [
+    {
+      "id": "r2-d2-coo-guide-3.7",
+      "file": "r2-d2-coo-guide-3.7.png",
+      "figure": "R2-D2",
+      "alt": "R2-D2 underside COO stamps by family",
+      "title": "R2-D2 COO guide",
+      "credit": "COO guide 3.7 © wdobafett / variantvillain.com"
+    },
+    {
+      "id": "chewbacca-coo-guide-3.2",
+      "file": "chewbacca-coo-guide-3.2.jpg",
+      "figure": "Chewbacca",
+      "alt": "Chewbacca left-thigh COO stamps by family",
+      "title": "Chewbacca COO guide",
+      "credit": "COO guide 3.2 © WBobaFett / variantvillain.com"
+    }
+  ]
+}

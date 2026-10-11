@@ -1178,7 +1178,7 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
   assert.match(coverage, /Figures with a tell besides the COO stamp: 20 \(was 18\/104\)/);
   assert.match(coverage, /Accessory variants with tells: 244/);
-  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 137/);
+  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 153/);
   const blaster = await call({ message: "identify the rebel blaster" });
   assert.equal(blaster.json.flowState.topic, "accessory_factory");
   assert.match(blaster.json.reply, /Let's check Rebel Blaster/);
@@ -1316,10 +1316,8 @@ await test("R2-D2 solid dome stamp is on the underside and the COO guide is show
   assert.match(r2.whereToLook, /not on the legs/);
   assert.doesNotMatch(r2.whereToLook, /back of the legs/);
   assert.equal(r2.tells.length, 0);
-  assert.equal(r2.referenceImage.url, "/images/r2-d2-coo-guide-3.7.png");
-  assert.equal(r2.referenceImage.credit, "COO guide 3.7 © wdobafett / variantvillain.com");
-  assert.equal(r2.referenceImage.caption, r2.referenceImage.credit);
-  assert.equal(fs.existsSync(path.join(root, "images/r2-d2-coo-guide-3.7.png")), true);
+  assert.equal(r2.referenceImage.id, "r2-d2-coo-guide-3.7");
+  assert.equal(fs.existsSync(path.join(root, "images/variant-villain/r2-d2-coo-guide-3.7.png")), true);
 
   const start = await call({ message: "identify the variant of R2-D2" });
   assert.equal(calls.length, 0);
@@ -1329,7 +1327,7 @@ await test("R2-D2 solid dome stamp is on the underside and the COO guide is show
   assert.match(start.json.reply, /around the base hole/);
   assert.doesNotMatch(start.json.reply, /back of the legs/);
   assert.equal(start.json.images.length, 1);
-  assert.equal(start.json.images[0].url, "/images/r2-d2-coo-guide-3.7.png");
+  assert.equal(start.json.images[0].url, "/images/variant-villain/r2-d2-coo-guide-3.7.png");
   assert.equal(start.json.images[0].credit, "COO guide 3.7 © wdobafett / variantvillain.com");
   assert.equal(start.json.images[0].caption, "COO guide 3.7 © wdobafett / variantvillain.com");
   assert.equal(start.json.images[0].sourcePage, "");
@@ -1347,7 +1345,7 @@ await test("R2-D2 solid dome stamp is on the underside and the COO guide is show
     flowState: start.json.flowState
   });
   assert.equal(hongKong.json.flowState.step, "follow");
-  assert.equal(hongKong.json.images[0].url, "/images/r2-d2-coo-guide-3.7.png");
+  assert.equal(hongKong.json.images[0].url, "/images/variant-villain/r2-d2-coo-guide-3.7.png");
   assert.deepEqual(hongKong.json.actions.map(action => action.label), [
     "Large crimson eye and a darker wedge",
     "Halftone two-part sticker, or a Unitoy dome from very dark blue to mid-blue",
@@ -1423,6 +1421,137 @@ await test("R2-D2 solid dome stamp is on the underside and the COO guide is show
   assert.match(part2, /TAKARA WIND-UP R2/);
   assert.match(part2, /Not part of the core Kenner carded line/);
   assert.doesNotMatch(part2, /Some versions imported into Spain/);
+});
+
+await test("Chewbacca stamp is on the left thigh and the COO sheet is shown", async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  const chewie = data.figures.find(fig => fig.name === "Chewbacca");
+  const owner = fs.readFileSync(path.join(root, "data/references/owner-verified/chewbacca.md"), "utf8");
+  const manifest = JSON.parse(fs.readFileSync(path.join(root, "images/variant-villain/manifest.json"), "utf8"));
+  assert.match(owner, /Date: 2026-10-11/);
+  assert.match(owner, /Source: owner Warren/);
+  assert.match(owner, /back of the left thigh/);
+  assert.match(owner, /faded pigment, not a variant/);
+  assert.equal(chewie.referenceImage.id, "chewbacca-coo-guide-3.2");
+  assert.equal(chewie.tells.length, 0);
+  assert.equal(chewie.stamps.includes("IV: Taiwan"), false);
+  assert.ok(chewie.guide.includes("IV: Taiwan"));
+  assert.doesNotMatch(chewie.stamps.join("\n"), /Taiwan Chewbacca was paired|IV: Taiwan/);
+  assert.match(chewie.whereToLook, /back of the left thigh/);
+  assert.match(chewie.whereToLook, /vertically/);
+  assert.equal(manifest.show, true);
+  assert.ok(manifest.images.some(image => image.id === "r2-d2-coo-guide-3.7" && image.file === "r2-d2-coo-guide-3.7.png"));
+  assert.ok(manifest.images.some(image => image.credit === "COO guide 3.2 © WBobaFett / variantvillain.com"));
+
+  const mihk = "'© G.M.F.G.I. 1977' and 'MADE IN HONG KONG' on the back of the left thigh. The M of MADE is directly under the ©, and the K of KONG is under the second 7 of 1977";
+  const hk = "'© G.M.F.G.I. 1977' and 'HONG KONG' on the back of the left thigh";
+  const taiwanLabel = "'© G.M.F.G.I. 1977' and 'MADE IN TAIWAN' on the back of the left thigh";
+  const noGmfgi = "No COO. The licensing line reads '© G.M.F.G.I. 1977'";
+  const noLfl = "No COO. The licensing line reads '© L.F.L. 1977'";
+
+  const start = await call({ message: "identify the variant of Chewbacca" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.flowState.displayName, "Chewbacca");
+  assert.equal(start.json.flowState.step, "coo");
+  assert.match(start.json.reply, /back of the left thigh/);
+  assert.match(start.json.reply, /running vertically/);
+  assert.doesNotMatch(start.json.reply, /small text on the back of the legs/);
+  assert.equal(start.json.images[0].url, "/images/variant-villain/chewbacca-coo-guide-3.2.jpg");
+  assert.equal(start.json.images[0].credit, "COO guide 3.2 © WBobaFett / variantvillain.com");
+  assert.equal(start.json.images[0].sourcePage, "");
+  assert.deepEqual(start.json.actions.map(action => action.label), [mihk, hk, taiwanLabel, noGmfgi, noLfl]);
+
+  const hongKong = await call({ message: hk, flowState: start.json.flowState });
+  assert.equal(hongKong.json.flowState.step, "follow");
+  assert.equal(hongKong.json.images[0].url, "/images/variant-villain/chewbacca-coo-guide-3.2.jpg");
+  assert.deepEqual(hongKong.json.actions.map(action => action.label), [
+    "The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977. Small mid-blue pupils",
+    "The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977. The pouch is purple-brown",
+    "The H of HONG starts under the middle of the ©, and the G of KONG is under the second G of G.M.F.G.I."
+  ]);
+  const kader = await call({
+    message: "The H of HONG starts under the ©, to its right, and the G of KONG ends under the second 7 of 1977. Small mid-blue pupils",
+    flowState: hongKong.json.flowState
+  });
+  assert.match(kader.json.reply, /Kader M2\.1/);
+  assert.match(kader.json.reply, /G\.M\.F\.G\.I\. 1977/);
+  assert.match(kader.json.reply, /faded pigment, not a variant/);
+  assert.match(kader.json.reply, /Chewbacca Bowcaster/);
+  assert.equal(kader.json.flowState.step, "offer");
+
+  const noCoo = await call({ message: noGmfgi, flowState: start.json.flowState });
+  assert.deepEqual(noCoo.json.actions.map(action => action.label), [
+    "Much darker plastic than a Kenner Chewbacca",
+    "A circle under the left foot, or reddish plastic with melt marks",
+    "Large almond-shaped eyes"
+  ]);
+  const lili = await call({
+    message: "Much darker plastic than a Kenner Chewbacca",
+    flowState: noCoo.json.flowState
+  });
+  assert.match(lili.json.reply, /Lili Ledy M5/);
+  assert.match(lili.json.reply, /much darker/);
+
+  const lfl = await call({ message: noLfl, flowState: start.json.flowState });
+  assert.deepEqual(lfl.json.actions.map(action => action.label), [
+    "Unpainted pouch and much lighter brown plastic",
+    "Unpainted pouch, a shorter figure, and no peg holes under the feet",
+    "A painted pouch on reddish-brown plastic"
+  ]);
+  const glass = await call({
+    message: "Unpainted pouch and much lighter brown plastic",
+    flowState: lfl.json.flowState
+  });
+  assert.match(glass.json.reply, /Glasslite M2/);
+  assert.match(glass.json.reply, /L\.F\.L\. 1977/);
+  assert.match(glass.json.reply, /Zuckuss Rifle/);
+  assert.doesNotMatch(glass.json.reply, /Chewbacca Bowcaster/);
+  const potf = await call({
+    message: "A painted pouch on reddish-brown plastic",
+    flowState: lfl.json.flowState
+  });
+  assert.match(potf.json.reply, /Kader M2\.2/);
+  assert.match(potf.json.reply, /L\.F\.L\. 1977/);
+  assert.match(potf.json.reply, /G\.M\.F\.G\.I\. 1977/);
+
+  const manifestPath = path.join(root, "images/variant-villain/manifest.json");
+  const original = fs.readFileSync(manifestPath, "utf8");
+  try {
+    const hiddenManifest = JSON.parse(original);
+    hiddenManifest.show = false;
+    fs.writeFileSync(manifestPath, JSON.stringify(hiddenManifest, null, 2) + "\n");
+    const hidden = await call({ message: "identify the variant of Chewbacca" });
+    assert.equal(hidden.json.images, undefined);
+    assert.match(hidden.json.reply, /back of the left thigh/);
+  } finally {
+    fs.writeFileSync(manifestPath, original);
+  }
+
+  const match = JSON.parse(fs.readFileSync(path.join(root, "data/factory-match.json"), "utf8"));
+  const variants = match.figureVariants.filter(item => item.figure === "Chewbacca");
+  const byId = Object.fromEntries(variants.map(item => [item.id, item]));
+  assert.ok(byId["chewbacca--poch-unitoy"]);
+  assert.ok(byId["chewbacca--poch-kader"]);
+  assert.doesNotMatch(JSON.stringify(byId["chewbacca--unitoy-m1"].tells), /Bowcaster/);
+  assert.match(JSON.stringify(byId["chewbacca--kader-m2-1"].tells), /faded pigment, not a variant/);
+  assert.match(JSON.stringify(byId["chewbacca--kader-m2-2"].tells), /L\.F\.L\. 1977/);
+  assert.match(JSON.stringify(byId["chewbacca--kader-m2-1"].tells), /G\.M\.F\.G\.I\. 1977/);
+  const accessories = Object.fromEntries(match.accessoryVariants.map(item => [item.id, item]));
+  assert.deepEqual(accessories["chewbacca-bowcaster--smile-m4"].cardedWith, ["chewbacca--smile-m3"]);
+  assert.deepEqual(accessories["chewbacca-bowcaster--smile-m3"].cardedWith, [
+    "chewbacca--smile-m3",
+    "chewbacca--smile-m5",
+    "chewbacca--pbp-m1"
+  ]);
+  assert.deepEqual(accessories["zuckuss-rifle--glasslite-v4"].cardedWith, ["chewbacca--glasslite-m2"]);
+  assert.equal(accessories["chewbacca-bowcaster--kader-m1"].cardedWith.includes("chewbacca--glasslite-m2"), false);
+
+  const part2 = fs.readFileSync(path.join(root, "data/figures/chewbacca-reference-2.txt"), "utf8");
+  assert.match(part2, /Green limbs are faded pigment, not a variant/);
+  assert.match(part2, /Large almond eyes/);
+  const part1 = fs.readFileSync(path.join(root, "data/figures/chewbacca-reference-1.txt"), "utf8");
+  assert.match(part1, /back of the left thigh/);
+  assert.match(part1, /Early Bird figures are Unitoy or Kader only/);
 });
 
 function loadCatalog() {

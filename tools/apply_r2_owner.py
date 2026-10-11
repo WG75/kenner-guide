@@ -17,7 +17,6 @@ MATCH = ROOT / "data" / "factory-match.json"
 PART1 = ROOT / "data" / "figures" / "r2-d2-reference-1.txt"
 PART2 = ROOT / "data" / "figures" / "r2-d2-reference-2.txt"
 VV = "https://www.variantvillain.com/characters/sw/r2-d2/"
-CREDIT = "COO guide 3.7 © wdobafett / variantvillain.com"
 NOTE = "Owner Warren, 11 Oct 2026. data/references/owner-verified/r2-d2.md."
 
 REQUIRED = [
@@ -271,13 +270,7 @@ def r2_stamps():
 
 
 def reference_image():
-    return {
-        "url": "/images/r2-d2-coo-guide-3.7.png",
-        "alt": "R2-D2 underside COO stamps by family",
-        "title": "R2-D2 COO guide",
-        "caption": CREDIT,
-        "credit": CREDIT,
-    }
+    return {"id": "r2-d2-coo-guide-3.7"}
 
 
 def apply_coo_figures(figures):

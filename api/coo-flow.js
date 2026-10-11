@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 
 const FILE = path.join(process.cwd(), "data", "coo-figures.json");
+const VV_MANIFEST = path.join(process.cwd(), "images", "variant-villain", "manifest.json");
 
 export const COO_EXPLANATION = "The country of origin (COO) stamp is the small text on the back of the legs saying where it was made. A partial or cut-off country name counts as No COO.";
 
@@ -10,16 +11,31 @@ function cooExplanation(record) {
   return custom ? withoutMexico(custom) : COO_EXPLANATION;
 }
 
+function vvManifest() {
+  try {
+    return JSON.parse(fs.readFileSync(VV_MANIFEST, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
 function stampImage(record) {
   const image = record && record.referenceImage;
-  if (!image || !image.url) return null;
+  const id = image && String(image.id || "").trim();
+  if (!id) return null;
+  const manifest = vvManifest();
+  if (!manifest || manifest.show !== true) return null;
+  const entries = Array.isArray(manifest.images) ? manifest.images : [];
+  const entry = entries.find(item => item && String(item.id || "") === id);
+  if (!entry || !entry.file) return null;
+  const credit = String(entry.credit || "");
   return {
-    url: String(image.url),
-    alt: String(image.alt || ""),
-    title: String(image.title || ""),
-    caption: String(image.caption || image.credit || ""),
-    credit: String(image.credit || image.caption || ""),
-    sourcePage: String(image.sourcePage || "")
+    url: `/images/variant-villain/${entry.file}`,
+    alt: String(entry.alt || ""),
+    title: String(entry.title || ""),
+    caption: credit,
+    credit,
+    sourcePage: ""
   };
 }
 
