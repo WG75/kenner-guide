@@ -931,17 +931,20 @@ await test("single-factory figures confirm Smile, and Barada uses the date stamp
   const early = await call({ message: "1984 date stamp, dark red head scarf, dull red trousers", flowState: barada.json.flowState });
   assert.match(early.json.reply, /second-issue Sears/);
   assert.match(early.json.reply, /Smile M1 Skiff Vibro Staff/);
-  assert.equal(early.json.flowState, null);
+  assert.equal(early.json.flowState.step, "offer");
+  assert.match(early.json.reply, /Skiff Vibro Staff/);
+  const earlyStop = await call({ message: "No thanks", flowState: early.json.flowState });
+  assert.equal(earlyStop.json.flowState, null);
   const later = await call({ message: "1985 date stamp, bright red head scarf, brighter red trousers", flowState: barada.json.flowState });
   assert.match(later.json.reply, /Trilogo/);
   assert.match(later.json.reply, /92-back/);
   assert.match(later.json.reply, /Smile M1 Skiff Vibro Staff/);
-  assert.equal(later.json.flowState, null);
+  assert.equal(later.json.flowState.step, "offer");
 
   const yak = await call({ message: "identify the variant of Yak Face" });
   assert.equal(calls.length, 0);
-  assert.deepEqual(yak.json.actions, []);
-  assert.equal(yak.json.flowState, null);
+  assert.equal(yak.json.flowState.step, "offer");
+  assert.match(yak.json.reply, /Skiff Vibro Staff/);
   assert.match(yak.json.reply, /made only by Smile/);
   assert.match(yak.json.reply, /date stamp and no country of origin stamp/);
   assert.match(yak.json.reply, /Trilogo/);
@@ -1035,7 +1038,8 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
     flowState: start.json.flowState
   });
   assert.match(china.json.reply, /Kader China M1/);
-  assert.equal(china.json.flowState, null);
+  assert.equal(china.json.flowState.step, "offer");
+  assert.match(china.json.reply, /Telescoping Lightsaber/);
 
   const shared = await call({
     message: "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
@@ -1053,7 +1057,11 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   const unitoy = await call({ message: orange.label, flowState: shared.json.flowState });
   assert.match(unitoy.json.reply, /Unitoy M2/);
   assert.doesNotMatch(unitoy.json.reply, /Kader M1/);
-  assert.equal(unitoy.json.flowState, null);
+  assert.equal(unitoy.json.flowState.step, "offer");
+  const check = await call({ message: "Check the accessory", flowState: unitoy.json.flowState });
+  assert.equal(check.json.flowState.step, "tell");
+  assert.match(check.json.reply, /Telescoping Lightsaber/);
+  assert.match(check.json.reply, /Look at the plastic colour/);
 
   const unsure = await call({ message: "I'm not sure", flowState: shared.json.flowState });
   assert.match(unsure.json.reply, /Kader M1/);
@@ -1081,7 +1089,19 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   });
   assert.match(fromPhoto.json.reply, /Unitoy M2/);
   assert.match(fromPhoto.json.reply, /photo/i);
-  assert.equal(fromPhoto.json.flowState, null);
+  assert.equal(fromPhoto.json.flowState.step, "offer");
+
+  const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
+  assert.match(coverage, /Figures with a tell besides the COO stamp: 20 \(was 18\/104\)/);
+  assert.match(coverage, /Accessory variants with tells: 239/);
+  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 123/);
+  const blaster = await call({ message: "identify the rebel blaster" });
+  assert.equal(blaster.json.flowState.topic, "accessory_factory");
+  assert.match(blaster.json.reply, /Let's check Rebel Blaster/);
+  const smile = await call({ message: "light silverish black-blue", flowState: blaster.json.flowState });
+  assert.match(smile.json.reply, /Smile M1 Rebel Blaster/);
+  assert.match(smile.json.reply, /card it with/);
+  assert.equal(smile.json.flowState, null);
 });
 
 function loadCatalog() {
@@ -1116,7 +1136,7 @@ await test("every retrieval file is under the 7000 character cap", async () => {
       // Debut year and card are used only to write the photo-identification sentence.
       else if (entry.name === "kenner-debut-figures.json") continue;
       // Per-figure COO buttons are read by the scripted flow, not injected into the model.
-      else if (entry.name === "coo-figures.json" || entry.name === "coo-owner-stamps.json") continue;
+      else if (entry.name === "coo-figures.json" || entry.name === "coo-owner-stamps.json" || entry.name === "factory-match.json") continue;
       else {
         const text = fs.readFileSync(full, "utf8");
         if (text.length > cap) over.push(`${path.relative(root, full)} (${text.length})`);
@@ -1375,7 +1395,7 @@ await test("photo follow-up buttons ask about the figure or start identification
   assert.equal(askedAccessory.json.flowState.displayName, "Jawa Blaster");
 
   const mould = await call({ message: "identify-this-accessory", flowState: accessoryFlow });
-  assert.equal(mould.json.flowState.topic, "accessory_identify");
+  assert.equal(mould.json.flowState.topic, "accessory_factory");
   assert.match(mould.json.reply, /Let's check Jawa Blaster/);
   const anotherAccessory = await call({ message: "identify-another-accessory", flowState: accessoryFlow });
   assert.equal(anotherAccessory.json.flowState.topic, "accessory_identify");
