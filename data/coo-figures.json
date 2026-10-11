@@ -6846,19 +6846,35 @@
       "sourceUrl": "https://www.variantvillain.com/characters/potf/barada/",
       "file": "figures/barada-reference.txt",
       "verified": true,
-      "whereToLook": "Look at the small text on the back of the legs. These are the stamps this figure's page names.",
+      "singleFactory": "Smile",
+      "whereToLook": "Barada was made only by Smile, in Hong Kong. The production figure has a date stamp and no country of origin stamp. A 1985 stamp can be a 5 restamped over the 4 of 1984. The staff is the Smile M1 Skiff Vibro Staff. https://www.variantvillain.com/characters/potf/barada/",
+      "ask": "Which date stamp and paint do you see?",
       "options": [
         {
-          "id": "hong-kong-only",
-          "label": "Hong Kong only",
-          "coo": "Hong Kong",
+          "id": "1984",
+          "label": "1984 date stamp, dark red head scarf, dull red trousers",
+          "coo": "No COO",
           "factories": [
-            "SMILE"
+            "Smile"
           ],
           "examples": [
-            "in Hong Kong"
+            "1984 date stamp. Dark red head scarf, dull red trousers"
           ],
-          "conclusion": "That matches SMILE on this figure's Variant Villain page (in Hong Kong).",
+          "conclusion": "That is the 1984 Smile Barada. No country stamp, only the date. Dark red head scarf and dull red trousers. It was sometimes packed in the second-issue Sears Jabba the Hutt Dungeon playset. The staff is the Smile M1 Skiff Vibro Staff.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "1985",
+          "label": "1985 date stamp, bright red head scarf, brighter red trousers",
+          "coo": "No COO",
+          "factories": [
+            "Smile"
+          ],
+          "examples": [
+            "1985 date stamp. Bright red head scarf, brighter red trousers"
+          ],
+          "conclusion": "That is the 1985 Smile Barada. No country stamp, only the date. A 5 can be restamped over the 4. Bright red head scarf and brighter red trousers. It was packed in that playset, and on Trilogo and 92-back Power of the Force cards. The staff is the Smile M1 Skiff Vibro Staff.",
           "sure": true,
           "followUps": []
         }
@@ -7382,23 +7398,10 @@
       "sourceUrl": "https://www.variantvillain.com/characters/potf/yak-face/",
       "file": "figures/yak-face-reference.txt",
       "verified": true,
-      "whereToLook": "Look at the small text on the back of the legs. These are the stamps this figure's page names.",
-      "options": [
-        {
-          "id": "hong-kong-only",
-          "label": "Hong Kong only",
-          "coo": "Hong Kong",
-          "factories": [
-            "SMILE"
-          ],
-          "examples": [
-            "in Hong Kong"
-          ],
-          "conclusion": "That matches SMILE on this figure's Variant Villain page (in Hong Kong).",
-          "sure": true,
-          "followUps": []
-        }
-      ],
+      "singleFactory": "Smile",
+      "whereToLook": "Yak Face was made only by Smile, in Hong Kong. The production figure has a date stamp and no country of origin stamp. It was released on Trilogo and 92-back Power of the Force cards. The head plastic is tanned, or lighter, and the lighter head may be degradation. A Trilogo card was sometimes packed with a black M1 Palace Blaster, and often with no accessory. The staff is the Smile M1 Skiff Vibro Staff. https://www.variantvillain.com/characters/potf/yak-face/",
+      "ask": "",
+      "options": [],
       "families": [
         {
           "title": "COO Family I:",

@@ -73,7 +73,8 @@ export function cooOpening(displayName) {
   const name = String(displayName || "").trim();
   const record = cooRecordFor(name);
   const options = record && Array.isArray(record.options) ? record.options.map(speakable).filter(Boolean) : [];
-  const verified = record && record.verified && options.length > 0;
+  const factory = record && String(record.singleFactory || "").trim();
+  const verified = record && record.verified && (options.length > 0 || factory);
   if (!verified) {
     return done(`Let's check ${name}. I don't have verified COO details for that figure, so I won't guess a country list.`);
   }
@@ -81,15 +82,20 @@ export function cooOpening(displayName) {
   record.whereToLook = withoutMexico(record.whereToLook);
   const where = record.whereToLook;
   const ask = withoutMexico(record.ask || "Which stamp do you see?");
-  const reply = [
+  const lines = [
     COO_EXPLANATION,
     "",
-    `Let's check ${name}. ${where}`.trim(),
-    "",
-    ask
-  ].join("\n");
+    `Let's check ${name}. ${where}`.trim()
+  ];
+  if (factory) {
+    lines.push("", `This figure was made only by ${factory}. There is no factory choice to make.`);
+  }
+  if (!options.length) {
+    return done(lines.join("\n"));
+  }
+  lines.push("", ask);
   return {
-    reply,
+    reply: lines.join("\n"),
     actions: record.options.map(choice),
     quickReplies: true,
     flowState: {

@@ -42,10 +42,11 @@ Variant questions:
 4. If carded, which cardback family (12, 20, 21, 31, 32, 41, 45, 47, 65, 77, 79, 92)? 48-back and regional numbers 14, 17, 18, 30, 37, 50 and 70 are not on that list.
 
 Accessory factory:
-- The figure guide lists one family, I: Smile. Smile in Hong Kong produced the figure and accessories, so the skiff vibro staff is the Smile mould.
-- On the Vibro Axe page the Smile mould is M2. That page does not name Yak Face. This figure page says the staff is yet to be documented, and it does not link the Vibro Axe page.
-- The same page says a Trilogo Yak Face was occasionally packed with a black M1 Palace blaster, and often with no accessory at all. That occasional blaster is not the completeness piece. The completeness piece is the skiff vibro staff. Imperial Gunnery lists that staff with Barada, Nikto and the Yak Face Canadian Power of the Force release. https://imperialgunnery.com/staffs-axes.htm
-- Source: https://www.variantvillain.com/characters/potf/yak-face/ and https://www.variantvillain.com/accessory-guide/vibro-axe/ and https://www.variantvillain.com/accessory-guide/palace-blaster/#m1 Reliability: high. Recorded: 2026-10-05.
+- The figure guide lists one family, I: Smile. Yak Face was made only by Smile, in Hong Kong, so the skiff vibro staff is the Smile mould.
+- Owner-verified, 11 Oct 2026: that staff is the Smile M1 Skiff Vibro Staff. The Lili Ledy M2 is a darker grey and is not Yak Face's. https://imperialgunnery.com/staffs-axes.htm
+- The Vibro Axe page does not name Yak Face. Its Smile mould is the axe, and that is a different weapon. This figure page says the staff is yet to be documented on Variant Villain.
+- The same page says a Trilogo Yak Face was occasionally packed with a black M1 Palace blaster, and often with no accessory at all. That occasional blaster is not the completeness piece. The completeness piece is the Smile M1 Skiff Vibro Staff. Imperial Gunnery lists that staff with Barada, Nikto and the Yak Face Canadian Power of the Force release. https://imperialgunnery.com/staffs-axes.htm
+- Source: https://www.variantvillain.com/characters/potf/yak-face/ and https://imperialgunnery.com/staffs-axes.htm and https://www.variantvillain.com/accessory-guide/palace-blaster/#m1 Reliability: high. Recorded: 2026-10-11.
 
 Sources:
 https://www.variantvillain.com/characters/potf/yak-face/

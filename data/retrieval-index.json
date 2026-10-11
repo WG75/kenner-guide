@@ -1053,6 +1053,26 @@
       "chars": 1569
     },
     {
+      "relPath": "accessories/skiff-vibro-staff.txt",
+      "folder": "accessories",
+      "topic": "accessory",
+      "role": "",
+      "name": "Skiff Vibro Staff",
+      "aliases": [
+        "skiff",
+        "vibro",
+        "staff"
+      ],
+      "keywords": [
+        "Skiff Vibro Staff",
+        "skiff",
+        "vibro",
+        "staff"
+      ],
+      "years": [],
+      "chars": 2929
+    },
+    {
       "relPath": "accessories/squid-head-belt.txt",
       "folder": "accessories",
       "topic": "accessory",
@@ -1238,7 +1258,7 @@
         "axe"
       ],
       "years": [],
-      "chars": 2885
+      "chars": 2836
     },
     {
       "relPath": "accessories/yoda-belt.txt",
@@ -2260,7 +2280,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4557
+      "chars": 4646
     },
     {
       "relPath": "figures/ben-obi-wan-kenobi-reference.txt",
@@ -4080,7 +4100,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4702
+      "chars": 4768
     },
     {
       "relPath": "figures/paploo-reference.txt",
@@ -4850,7 +4870,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4955
+      "chars": 5121
     },
     {
       "relPath": "figures/yoda-reference-2.txt",
@@ -4948,7 +4968,7 @@
         "corrections"
       ],
       "years": [],
-      "chars": 4842
+      "chars": 5027
     },
     {
       "relPath": "references/accessory-production.txt",
@@ -5047,7 +5067,7 @@
         "notes"
       ],
       "years": [],
-      "chars": 4501
+      "chars": 4735
     },
     {
       "relPath": "references/palitoy-history.txt",

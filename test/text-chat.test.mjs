@@ -916,6 +916,47 @@ await test("owner stamp sheet gives Han, Snaggletooth, Chirpa, and Nikto their o
   assert.equal(calls.length, 0);
 });
 
+await test("single-factory figures confirm Smile, and Barada uses the date stamp", async () => {
+  const barada = await call({ message: "identify the variant of Barada" });
+  assert.equal(calls.length, 0);
+  assert.match(barada.json.reply, /country of origin \(COO\) stamp/);
+  assert.match(barada.json.reply, /made only by Smile/);
+  assert.match(barada.json.reply, /no country of origin stamp/);
+  assert.match(barada.json.reply, /variantvillain.com\/characters\/potf\/barada/);
+  assert.doesNotMatch(JSON.stringify(barada.json.actions), /Hong Kong only/);
+  assert.deepEqual(barada.json.actions.map(action => action.label), [
+    "1984 date stamp, dark red head scarf, dull red trousers",
+    "1985 date stamp, bright red head scarf, brighter red trousers"
+  ]);
+  const early = await call({ message: "1984 date stamp, dark red head scarf, dull red trousers", flowState: barada.json.flowState });
+  assert.match(early.json.reply, /second-issue Sears/);
+  assert.match(early.json.reply, /Smile M1 Skiff Vibro Staff/);
+  assert.equal(early.json.flowState, null);
+  const later = await call({ message: "1985 date stamp, bright red head scarf, brighter red trousers", flowState: barada.json.flowState });
+  assert.match(later.json.reply, /Trilogo/);
+  assert.match(later.json.reply, /92-back/);
+  assert.match(later.json.reply, /Smile M1 Skiff Vibro Staff/);
+  assert.equal(later.json.flowState, null);
+
+  const yak = await call({ message: "identify the variant of Yak Face" });
+  assert.equal(calls.length, 0);
+  assert.deepEqual(yak.json.actions, []);
+  assert.equal(yak.json.flowState, null);
+  assert.match(yak.json.reply, /made only by Smile/);
+  assert.match(yak.json.reply, /date stamp and no country of origin stamp/);
+  assert.match(yak.json.reply, /Trilogo/);
+  assert.match(yak.json.reply, /92-back/);
+  assert.match(yak.json.reply, /degradation/);
+  assert.match(yak.json.reply, /Palace Blaster/);
+  assert.match(yak.json.reply, /Smile M1 Skiff Vibro Staff/);
+  assert.match(yak.json.reply, /variantvillain.com\/characters\/potf\/yak-face/);
+  assert.doesNotMatch(yak.json.reply, /Hong Kong only/);
+
+  const nikto = await call({ message: "identify the variant of Nikto" });
+  assert.deepEqual(nikto.json.actions.map(action => action.label), ["No COO"]);
+  assert.doesNotMatch(nikto.json.reply, /made only by Smile/);
+});
+
 await test("no figure's COO question offers Mexico", async () => {
   const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
   assert.ok(data.figures.length >= 90, data.figures.length);
@@ -930,7 +971,7 @@ await test("no figure's COO question offers Mexico", async () => {
     } else if (start.json.flowState && start.json.flowState.step === "need_name") {
       assert.match(start.json.reply, /Which figure do you mean/, fig.name);
     } else {
-      assert.match(start.json.reply, /don't have verified COO details|haven't got a reference file/, fig.name);
+      assert.match(start.json.reply, /don't have verified COO details|haven't got a reference file|made only by/, fig.name);
     }
   }
   const guide = fs.readFileSync(path.join(root, "data/references/coo-guide.txt"), "utf8");
@@ -1776,29 +1817,55 @@ await test("Variant Villain photos stay out of the model and can be switched off
 await test("a one-factory figure's accessory uses that factory's Variant Villain mould", async () => {
   const barada = fs.readFileSync(path.join(root, "data/figures/barada-reference.txt"), "utf8");
   assert.match(barada, /one family, I: Smile/);
-  assert.match(barada, /Smile mould is M2/);
-  assert.match(barada, /accessory-guide\/vibro-axe\//);
+  assert.match(barada, /made only by Smile/);
+  assert.match(barada, /Smile M1 Skiff Vibro Staff/);
+  assert.match(barada, /imperialgunnery.com\/staffs-axes.htm/);
+  assert.doesNotMatch(barada, /Smile mould is M2/);
+  const yak = fs.readFileSync(path.join(root, "data/figures/yak-face-reference.txt"), "utf8");
+  assert.match(yak, /Smile M1 Skiff Vibro Staff/);
+  assert.doesNotMatch(yak, /Smile mould is M2/);
   const nikto = fs.readFileSync(path.join(root, "data/figures/nikto-reference.txt"), "utf8");
   assert.match(nikto, /I: Smile\/ Lili Ledy/);
   assert.match(nikto, /not determinable/);
+  assert.match(nikto, /Smile M1 Skiff Vibro Staff/);
+  assert.match(nikto, /Lili Ledy M2 Skiff Vibro Staff/);
   assert.doesNotMatch(nikto, /made only by Smile/);
   const axe = fs.readFileSync(path.join(root, "data/accessories/vibro-axe.txt"), "utf8");
   assert.match(axe, /M1, Unitoy/);
   assert.match(axe, /M2, Smile/);
   assert.match(axe, /M3, Lili Ledy/);
   assert.doesNotMatch(axe, /M1, Smile/);
+  assert.match(axe, /Skiff Vibro Staff, not this axe/);
+  const staff = fs.readFileSync(path.join(root, "data/accessories/skiff-vibro-staff.txt"), "utf8");
+  assert.match(staff, /Accessory Name: Skiff Vibro Staff/);
+  assert.match(staff, /Smile M1 Skiff Vibro Staff/);
+  assert.match(staff, /Lili Ledy M2 Skiff Vibro Staff/);
+  assert.match(staff, /darker grey than the Kenner\/Smile/);
+  assert.match(staff, /https:\/\/imperialgunnery.com\/staffs-axes.htm/);
+  assert.match(staff, /Owner-verified, 11 Oct 2026/);
+  assert.match(staff, /https:\/\/www\.variantvillain\.com\/characters\/potf\/barada\//);
+  assert.match(staff, /https:\/\/www\.variantvillain\.com\/characters\/potf\/yak-face\//);
+  assert.match(staff, /https:\/\/www\.variantvillain\.com\/characters\/rotj\/nikto\//);
+  assert.doesNotMatch(staff, /\bM3\b/);
+  const catalog = JSON.parse(fs.readFileSync(path.join(root, "data/catalog-5.json"), "utf8"));
+  const entry = catalog.accessories.find(item => item.name === "Skiff Vibro Staff");
+  assert.equal(entry.file, "accessories/skiff-vibro-staff.txt");
+  assert.equal(entry.status, "owner");
+  assert.equal(entry.url, "");
 
   const asked = await call({ message: "What staff did Barada come with?" });
-  assert.ok(asked.json.sources.includes("figures/barada-reference.txt"), asked.json.sources.join(", "));
+  assert.ok(asked.json.sources.includes("figures/barada-reference.txt") || asked.json.sources.includes("accessories/skiff-vibro-staff.txt"), asked.json.sources.join(", "));
   const prompt = calls.at(-1).body.messages.at(-1).content;
-  assert.match(prompt, /Smile mould is M2/);
-  assert.match(prompt, /https:\/\/www\.variantvillain\.com\/accessory-guide\/vibro-axe\//);
+  assert.match(prompt, /Smile M1 Skiff Vibro Staff/);
+  assert.match(prompt, /https:\/\/imperialgunnery.com\/staffs-axes.htm/);
+  assert.doesNotMatch(prompt, /Smile mould is M2/);
 
   const nik = await call({ message: "What weapon did Nikto come with?" });
   assert.ok(nik.json.sources.includes("figures/nikto-reference.txt"), nik.json.sources.join(", "));
   const nikPrompt = calls.at(-1).body.messages.at(-1).content;
   assert.match(nikPrompt, /Smile\/ Lili Ledy/);
   assert.match(nikPrompt, /not determinable/);
+  assert.match(nikPrompt, /Lili Ledy M2 Skiff Vibro Staff/);
 });
 
 await test("mocked model answers Cloud Car Pilot and identify a figure without crashing the function", async () => {
@@ -1866,14 +1933,18 @@ await test("owner VF-CB reference pack rules stay on the accessory files", async
   assert.equal(variant.id, "accvar_dt_lightsaber_m2_yellow");
   assert.equal(variant.variant_code, "M1");
   const gaps = read("docs/variantvillain-gaps.md");
-  assert.match(gaps, /\(c\) Accessories with no page or no details: 27/);
-  assert.match(gaps, /Nikto — skiff vibro staff/);
-  assert.match(gaps, /Owner-verified, 11 Oct 2026: Nikto's weapon is the Skiff Vibro Staff/);
+  assert.match(gaps, /\(c\) Accessories with no page or no details: 24/);
+  assert.match(gaps, /Nikto — skiff vibro staff — Skiff Vibro Staff/);
+  assert.match(gaps, /Barada — skiff vibro staff — Skiff Vibro Staff/);
+  assert.match(gaps, /Yak Face — skiff vibro staff — Skiff Vibro Staff/);
+  assert.doesNotMatch(gaps, /Nikto — skiff vibro staff — no page/);
+  assert.doesNotMatch(gaps, /Barada — skiff vibro staff — no page/);
+  assert.doesNotMatch(gaps, /Yak Face — skiff vibro staff — no page/);
+  assert.match(gaps, /Klaatu \(in Skiff Guard Outfit\) — skiff vibro staff/);
   assert.match(gaps, /Luke Skywalker — lightsaber — Telescoping Lightsaber/);
   assert.match(gaps, /4-LOM — 4-lom rifle/);
   assert.match(gaps, /Zuckuss — zuckuss rifle/);
   assert.match(gaps, /Rancor Keeper — staff/);
-  assert.match(gaps, /Barada — skiff vibro staff/);
   assert.match(gaps, /Lando Calrissian \(General Pilot\) — cape/);
   assert.match(gaps, /https:\/\/imperialgunnery\.com\/rifles\.htm/);
   assert.doesNotMatch(gaps, /Han Solo \(Bespin Outfit\) — cape/);
