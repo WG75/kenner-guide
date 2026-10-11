@@ -1,44 +1,52 @@
 Topic: Accessory list corrections
-Source: owner correction, authoritative. Where a later conflict is not one of the three corrections below, variantvillain.com stays the authority and the stored page text is kept.
+Source: owner correction, authoritative. Where a later conflict is not one of these corrections, variantvillain.com stays the authority and the stored page text is kept.
 
-Where the three false pieces came from:
-The photo completeness list is tools/build-kenner-debut-figures.py, copied into data/kenner-debut-figures.json. It is not a Wikipedia accessory column. The Wikipedia Kenner table columns are wave, debut package card, action figure, product number and debut year. That page does not name accessories. The cape, bow and spear were typed into the completeness list by hand.
+Where the false pieces came from:
+The photo completeness list is tools/build-kenner-debut-figures.py, copied into data/kenner-debut-figures.json. It is not a Wikipedia accessory column. The Wikipedia Kenner table columns are wave, debut package card, action figure, product number and debut year. That page does not name accessories.
 
-Removed from the completeness list, the "He looks complete, with his..." line, and the gap report:
-- Han Solo (Bespin Outfit) has no cape. His Variant Villain page names a Bespin Blaster and no cape. The blaster stays.
-- Romba has no bow. His Variant Villain page says he was packed with his own hood and a spear shared with Wicket. Those two are not added to the completeness list here.
-- Paploo has no spear. His page headings are a staff and a hood, and one sentence on that page says hood, quiver and spear. The owner correction is that he has no spear. The guide does not give him one. The hood, quiver and staff named on the page are not added to the completeness list here.
-- Anakin Skywalker had a lightsaber on the completeness list. His Variant Villain page says he was never packaged with an accessory, so that lightsaber was removed. This is the same kind of error, and the page states it directly.
+Removed from the completeness list and the gap report:
+- Han Solo (Bespin Outfit) has no cape. His blaster stays.
+- Romba has no bow. His hood and spear stay on the character page and are not on the completeness list.
+- Paploo has no spear. His hood, quiver and staff stay on the character page and are not on the completeness list.
+- Anakin Skywalker was never packaged with an accessory.
+- R2-D2 (Sensorscope). The sensorscope is built into the figure, not a loose accessory. The figure notes still describe the extending sensorscope.
+- Lando Calrissian (Skiff Guard Disguise) has no cape. The list is the Lando Skiff Helmet and the Vibro Axe.
+- Teebo has no lightsaber. The round-tip saber sentence, and the lettered-lightsaber sentence copied with it, were removed from his figure file. His list stays hood, axe and horn.
 
-Other mismatches, left as they are:
-The completeness word is often a generic name for a weapon the character page does name. Those were not renamed. A page that names an extra piece was not used to add that piece. Variant Villain remains the authority for these.
+Renamed to the owner's word or the Variant Villain heading:
+- 4-LOM blaster is the 4-LOM Rifle. The page also heads 4-LOM Cloak, so the cloak is on the list.
+- Zuckuss blaster is the Zuckuss Rifle.
+- Rancor Keeper axe is a staff. The page also heads the hood, so the hood is on the list.
+- Barada polearm is the skiff vibro staff.
+- Weequay pike is the Vibro Axe.
+- Nikto staff is the Vibro Axe. The page heading is Skiff Vibro Axe. Imperial Gunnery instead lists Nikto with the Skiff Vibro Staff. Variant Villain wins.
+- Hammerhead's empty list is the Imperial Blaster.
+- Rebel Soldier rifle is the Bespin Blaster.
+- Rebel Commander blaster is the Hoth Rebel Rifle.
+- IG-88 also has an Imperial Blaster. The rifle is named IG-88 Rifle.
+- Klaatu also has a Vibro Axe. The skirt stays.
+- Klaatu (in Skiff Guard Outfit) is the skiff vibro staff and the Vibro Axe. The skirt was the other Klaatu's piece. The painted hood on that page is part of the figure, not a loose accessory.
+- Squid Head rifle is the Bespin Blaster. The skirt and belt stay, and the cape heading is now on the list.
+- Emperor's Royal Guard pike is listed as a staff, which is the page heading. That heading links to the Emperor's Royal Guard Pike guide, so it is not a gap.
+- Luke Skywalker (Bespin Fatigues) is the Rebel Blaster and the handheld lightsaber.
+- Luke Skywalker (Jedi Knight Outfit) is the handheld lightsaber, the cloak and the Palace Blaster.
+- Luke Skywalker (X-Wing Pilot) is the Rebel Blaster. That page's accessory heading is the Rebel Blaster guide, not a lightsaber.
+- Luke Skywalker (in Battle Poncho) is the endor helmet, poncho, belt and Palace Blaster.
+- Luke Skywalker (Imperial Stormtrooper Outfit) is the Imperial Blaster and the helmet.
+- Princess Leia Organa (in Combat Poncho) is the Leia Endor helmet, Endor blaster, Leia blaster and Leia Endor belt.
+- Prune Face rifle is the Prune Face Rifle, and the cloak heading is on the list.
+- Dengar rifle is the Imperial Hoth Rifle.
+- At-At Commander blaster is the Bespin Blaster.
+- (Twin-Pod) Cloud Car Pilot is the Pilot Blaster and the commlink. The commlink is the Commlink Guide.
+- Yoda also has the cloak heading. The cane, snake and belt stay.
+- Bib Fortuna also has the belt. The cloak and staff stay.
+- C-3PO (Removable Limbs) has the net.
+- Amanaman staff is the Amanaman Staff.
+- Lando Calrissian (General Pilot) blaster is the Palace Blaster. His own cape stays, and it is still not the Bespin Lando cape.
+- Yak Face staff is the skiff vibro staff. A Trilogo example was occasionally packed with a Palace blaster, or with nothing. That occasional blaster is not the completeness piece.
+- Lumat and Warok keep the bow, and the page headings add the hood and the quiver.
 
-- Rebel Soldier (Hoth Battle Gear): list says rifle. The page heading is Bespin Blaster.
-- Rebel Commander: list says blaster. The page heading is Hoth Rebel Rifle.
-- Luke Skywalker (Hoth Battle Gear): list says blaster. The stored Rebelscum line says Rebel Rifle. The character page extract has no weapon heading.
-- Luke Skywalker (X-Wing Pilot): list says lightsaber. The page heading in the extract is Rebel Blaster.
-- Luke Skywalker (Bespin Fatigues): list says blaster. The page also has a handheld sabre.
-- Luke Skywalker (Jedi Knight Outfit): list says lightsaber and cloak. The page also has a Palace Blaster.
-- 4-LOM: list says blaster. The page headings are 4-LOM Rifle and 4-LOM Cloak.
-- Zuckuss: list says blaster. The page heading is Zuckuss Rifle.
-- IG-88: list says rifle. The page also has an Imperial Blaster.
-- Weequay: list says pike. The page heading is Vibro Axe.
-- Nikto: list says staff. The page heading is Skiff Vibro Axe.
-- Emperor's Royal Guard: list says pike. The page heading is a staff, and the page also discusses cloaks.
-- Klaatu: list says skirt. The page also has a Vibro Axe.
-- Klaatu (in Skiff Guard Outfit): list says skirt. The page headings are a skiff vibro staff and a vibro axe, and the text mentions a hood.
-- Squid Head: list says rifle and skirt. The page headings are Bespin Blaster, skirt, belt and cape.
-- Lando Calrissian (Skiff Guard Disguise): list says helmet and cape. The page headings are Lando Skiff Helmet and Vibro Axe. No cape heading was found.
-- Princess Leia Organa (in Combat Poncho): list says blaster. The page headings include a helmet, an Endor blaster, a Leia blaster and a belt.
-- Luke Skywalker (in Battle Poncho): list says blaster. The page also names a helmet, a poncho and a belt.
-- Luke Skywalker (Imperial Stormtrooper Outfit): list says blaster. The page also names a helmet.
-- Prune Face: list says rifle. The page also has a cloak.
-- Rancor Keeper: list says axe. The page heading in the extract is the hood.
-- Yoda: list says cane, snake and belt. The page also has a cloak.
-- Bib Fortuna: list says cloak and staff. The page also has a belt.
-- (Twin-Pod) Cloud Car Pilot: list says blaster. The page also has a commlink.
-- Hammerhead: list is empty. The page heading is Imperial Blaster.
-- C-3PO (Removable Limbs): list is empty. The page heading is the net.
-- Teebo: list says hood, axe and horn. The page headings are the axe and the battle horn. The page also contains a "round tip saber" sentence that reads as copied from another figure. That sentence was not used to change Teebo.
-- Lando Calrissian (General Pilot): list says cape and blaster. The page says he was packed with his own cape and a black Palace blaster. That cape stays. The accessory-guide page for it is still unfinished.
-- Romba's hood and spear, and Paploo's hood, quiver and staff, stay on the character pages and are not on the completeness list.
+Left as it was, because the page does not make the weapon clear:
+- Luke Skywalker (Hoth Battle Gear) still says blaster. The stored extract has no weapon heading. The page does link the Hoth Rebel Rifle guide, and the gap matcher still treats the blaster as that rifle.
+
+Imperial Gunnery, https://imperialgunnery.com/, was read on 11 Oct 2026. robots.txt is a comment about content signals. It sets no Disallow and no content-signal directive. Facts taken from it are cited on the figure files and in docs/variantvillain-gaps.md. They do not remove a piece from the gap list, because that list is Variant Villain coverage.

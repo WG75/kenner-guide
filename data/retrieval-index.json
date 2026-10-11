@@ -1960,7 +1960,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4348
+      "chars": 4596
     },
     {
       "relPath": "figures/8d8-reference.txt",
@@ -2260,7 +2260,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4370
+      "chars": 4557
     },
     {
       "relPath": "figures/ben-obi-wan-kenobi-reference.txt",
@@ -3488,7 +3488,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5093
+      "chars": 5266
     },
     {
       "relPath": "figures/klaatu-reference-2.txt",
@@ -3546,7 +3546,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4311
+      "chars": 4465
     },
     {
       "relPath": "figures/lando-calrissian-reference.txt",
@@ -3692,7 +3692,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5072
+      "chars": 5116
     },
     {
       "relPath": "figures/logray-ewoks-reference.txt",
@@ -3830,7 +3830,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 6023
+      "chars": 6020
     },
     {
       "relPath": "figures/luke-skywalker-in-battle-poncho-reference.txt",
@@ -3858,7 +3858,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 6075
+      "chars": 6262
     },
     {
       "relPath": "figures/luke-skywalker-jedi-knight-outfit-reference-2.txt",
@@ -4044,7 +4044,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3860
+      "chars": 4025
     },
     {
       "relPath": "figures/nien-nunb-reference.txt",
@@ -4080,7 +4080,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4375
+      "chars": 4640
     },
     {
       "relPath": "figures/paploo-reference.txt",
@@ -4184,7 +4184,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5802
+      "chars": 6006
     },
     {
       "relPath": "figures/princess-leia-organa-reference.txt",
@@ -4242,7 +4242,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4091
+      "chars": 4152
     },
     {
       "relPath": "figures/r2-d2-reference-1.txt",
@@ -4358,7 +4358,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 6243
+      "chars": 6363
     },
     {
       "relPath": "figures/r5-d4-reference-2.txt",
@@ -4460,7 +4460,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4993
+      "chars": 5224
     },
     {
       "relPath": "figures/rebel-commander-reference.txt",
@@ -4646,7 +4646,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 6353
+      "chars": 6489
     },
     {
       "relPath": "figures/stormtrooper-reference.txt",
@@ -4690,7 +4690,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5223
+      "chars": 4683
     },
     {
       "relPath": "figures/the-emperor-reference.txt",
@@ -4788,7 +4788,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5847
+      "chars": 6001
     },
     {
       "relPath": "figures/weequay-reference.txt",
@@ -4850,7 +4850,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4700
+      "chars": 4955
     },
     {
       "relPath": "figures/yoda-reference-2.txt",
@@ -4914,7 +4914,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5138
+      "chars": 5265
     },
     {
       "relPath": "figures/zuckuss-reference.txt",
@@ -4930,7 +4930,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4077
+      "chars": 4110
     },
     {
       "relPath": "references/accessory-list-corrections.txt",
@@ -4948,7 +4948,7 @@
         "corrections"
       ],
       "years": [],
-      "chars": 4709
+      "chars": 4719
     },
     {
       "relPath": "references/accessory-production.txt",
@@ -5030,6 +5030,24 @@
       ],
       "years": [],
       "chars": 3807
+    },
+    {
+      "relPath": "references/imperial-gunnery-notes.txt",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "imperial",
+      "aliases": [
+        "gunnery",
+        "notes"
+      ],
+      "keywords": [
+        "imperial",
+        "gunnery",
+        "notes"
+      ],
+      "years": [],
+      "chars": 4469
     },
     {
       "relPath": "references/palitoy-history.txt",
