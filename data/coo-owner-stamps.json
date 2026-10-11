@@ -1648,6 +1648,711 @@
         }
       ],
       "missing": "Only Lili Ledy M1 is described, and only as No COO. Licensing location is not stated."
+    },
+    {
+      "name": "Luke Skywalker",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Kader M1 = 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Kader China M1 = 'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'.",
+        "Meccano M1: No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'.",
+        "Glasslite M1: No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'. Licensing details are less defined.",
+        "Unitoy M2: 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "PBP M2: COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Taiwan M3 = Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Smile M4 = 'Hong Kong' or no COO on left leg. '© G.M.F.G.I. 1977'."
+      ],
+      "options": [
+        {
+          "id": "hong-kong-on-left-leg-under-licensing-details-g-",
+          "label": "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1",
+            "Unitoy M2"
+          ],
+          "examples": [
+            "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That stamp is shared by the Kader M1 and the Unitoy M2. 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "china-on-a-raised-bar-under-licensing-details-on",
+          "label": "'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'",
+          "coo": "China",
+          "factories": [
+            "Kader China M1"
+          ],
+          "examples": [
+            "'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Kader China M1. 'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo-blank-raised-bar-under-licensing-details-",
+          "label": "No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "Meccano M1",
+            "Glasslite M1"
+          ],
+          "examples": [
+            "No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "less-defined",
+              "label": "The licensing details are less defined",
+              "factories": [
+                "Glasslite M1"
+              ],
+              "conclusion": "That is the Glasslite M1. The licensing details are less defined.",
+              "sure": true
+            },
+            {
+              "id": "ordinary-licensing",
+              "label": "The licensing details look ordinary",
+              "factories": [
+                "Meccano M1"
+              ],
+              "conclusion": "That is the Meccano M1. The licensing line is the ordinary one.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "coo-scar-on-left-leg-under-licensing-details-g-m",
+          "label": "COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "PBP M2"
+          ],
+          "examples": [
+            "COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the PBP M2. COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "taiwan-on-left-leg-under-licensing-details-g-m-f",
+          "label": "Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "Taiwan",
+          "factories": [
+            "Taiwan M3"
+          ],
+          "examples": [
+            "Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Taiwan M3. Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "hong-kong-on-left-leg-g-m-f-g-i-1977",
+          "label": "'Hong Kong' on left leg. '© G.M.F.G.I. 1977'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Smile M4"
+          ],
+          "examples": [
+            "'Hong Kong' on left leg. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Smile M4. 'Hong Kong' on left leg. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo-on-left-leg-g-m-f-g-i-1977",
+          "label": "no COO on left leg. '© G.M.F.G.I. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "Smile M4"
+          ],
+          "examples": [
+            "no COO on left leg. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Smile M4. no COO on left leg. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
+      "missing": ""
+    },
+    {
+      "name": "Princess Leia Organa",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Kader M1 = 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Glasslite = No COO. Licensing details only on left leg. '© G.M.F.G.I. 1977'.",
+        "Unitoy M2 = 'Made in Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Kader M3 = 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+        "Glasslite M3 = No COO. Licensing details. '© G.M.F.G.I. 1977' on left leg only.",
+        "Smile M4 = 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'. Or no COO under licensing details.",
+        "Taiwan M5: 'Made in Taiwan' under licensing details. '© G.M.F.G.I. 1977'."
+      ],
+      "options": [
+        {
+          "id": "hong-kong-on-left-leg-under-licensing-details-g-",
+          "label": "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1",
+            "Kader M3",
+            "Smile M4"
+          ],
+          "examples": [
+            "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That stamp is shared by the Kader M1, the Kader M3, and the Smile M4. 'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "no-coo-licensing-details-only-on-left-leg-g-m-f-",
+          "label": "No COO. Licensing details only on left leg. '© G.M.F.G.I. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "Glasslite"
+          ],
+          "examples": [
+            "No COO. Licensing details only on left leg. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Glasslite. No COO. Licensing details only on left leg. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "made-in-hong-kong-on-left-leg-under-licensing-de",
+          "label": "'Made in Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M2"
+          ],
+          "examples": [
+            "'Made in Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Unitoy M2. 'Made in Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo-licensing-details-g-m-f-g-i-1977-on-left-",
+          "label": "No COO. Licensing details. '© G.M.F.G.I. 1977' on left leg only",
+          "coo": "No COO",
+          "factories": [
+            "Glasslite M3"
+          ],
+          "examples": [
+            "No COO. Licensing details. '© G.M.F.G.I. 1977' on left leg only"
+          ],
+          "conclusion": "That is the Glasslite M3. No COO. Licensing details. '© G.M.F.G.I. 1977' on left leg only.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo-under-licensing-details-g-m-f-g-i-1977",
+          "label": "no COO under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "Smile M4"
+          ],
+          "examples": [
+            "no COO under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Smile M4. no COO under licensing details. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "made-in-taiwan-under-licensing-details-g-m-f-g-i",
+          "label": "'Made in Taiwan' under licensing details. '© G.M.F.G.I. 1977'",
+          "coo": "Taiwan",
+          "factories": [
+            "Taiwan M5"
+          ],
+          "examples": [
+            "'Made in Taiwan' under licensing details. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Taiwan M5. 'Made in Taiwan' under licensing details. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
+      "missing": ""
+    },
+    {
+      "name": "R2-D2",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Unitoy M1 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'.",
+        "Smile M2 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'.",
+        "Kader M3 = Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 1 or 2 visible near the screw.",
+        "Kader M4 = Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 5 or 6 visible near the screw.",
+        "Lili Ledy M4 = Licensing details '© G.M.F.G.I. 1977' only, no COO. These can have a 5 or 6 visible near the screw.",
+        "Unitoy M5 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'.",
+        "Taiwan M6 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan'.",
+        "Kader M7 = Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong'."
+      ],
+      "options": [
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-followed-by-mad",
+          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1",
+            "Smile M2",
+            "Unitoy M5"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'"
+          ],
+          "conclusion": "That stamp is shared by the Unitoy M1, the Smile M2, and the Unitoy M5. Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong'. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-with-hong-kong-",
+          "label": "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 1 or 2 visible near the screw",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M3"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 1 or 2 visible near the screw"
+          ],
+          "conclusion": "That is the Kader M3. Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 1 or 2 visible near the screw.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-with-hong-kong--2",
+          "label": "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 5 or 6 visible near the screw",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M4"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 5 or 6 visible near the screw"
+          ],
+          "conclusion": "That is the Kader M4. Licensing details '© G.M.F.G.I. 1977', with 'Hong Kong' opposite. These can have a 5 or 6 visible near the screw.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-only-no-coo-the",
+          "label": "Licensing details '© G.M.F.G.I. 1977' only, no COO. These can have a 5 or 6 visible near the screw",
+          "coo": "No COO",
+          "factories": [
+            "Lili Ledy M4"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977' only, no COO. These can have a 5 or 6 visible near the screw"
+          ],
+          "conclusion": "That is the Lili Ledy M4. Licensing details '© G.M.F.G.I. 1977' only, no COO. These can have a 5 or 6 visible near the screw.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-followed-by-mad-2",
+          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan'",
+          "coo": "Taiwan",
+          "factories": [
+            "Taiwan M6"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan'"
+          ],
+          "conclusion": "That is the Taiwan M6. Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-followed-by-hon",
+          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M7"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong'"
+          ],
+          "conclusion": "That is the Kader M7. Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong'.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
+      "missing": ""
+    },
+    {
+      "name": "Chewbacca",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Unitoy M1 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong' on left leg under the licensing details.",
+        "PBP M1 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
+        "Kader M2.1 = Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details.",
+        "Kader M2.2 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
+        "Glasslite M2 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
+        "Smile M3 = Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details. Some have no COO.",
+        "Taiwan M4 = Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan' on left leg.",
+        "Smile M5 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
+        "Lili Ledy M5 = Licensing details '© G.M.F.G.I. 1977' on left leg, no COO.",
+        "Top Toys M6 = Licensing details '© L.F.L. 1977' on left leg, no COO."
+      ],
+      "options": [
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-followed-by-mad",
+          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong' on left leg under the licensing details",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M1"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong' on left leg under the licensing details"
+          ],
+          "conclusion": "That is the Unitoy M1. Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Hong Kong' on left leg under the licensing details.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-on-left-leg-no-",
+          "label": "Licensing details '© G.M.F.G.I. 1977' on left leg, no COO",
+          "coo": "No COO",
+          "factories": [
+            "PBP M1",
+            "Kader M2.2",
+            "Glasslite M2",
+            "Smile M5",
+            "Lili Ledy M5"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977' on left leg, no COO"
+          ],
+          "conclusion": "That stamp is shared by the PBP M1, the Kader M2.2, the Glasslite M2, the Smile M5, and the Lili Ledy M5. Licensing details '© G.M.F.G.I. 1977' on left leg, no COO. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-followed-by-hon",
+          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M2.1"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details"
+          ],
+          "conclusion": "That is the Kader M2.1. Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-followed-by-hon-2",
+          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details. Some have no COO",
+          "coo": "No COO",
+          "factories": [
+            "Smile M3"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details. Some have no COO"
+          ],
+          "conclusion": "That is the Smile M3. Licensing details '© G.M.F.G.I. 1977', followed by 'Hong Kong' on left leg under the licensing details. Some have no COO.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-g-m-f-g-i-1977-followed-by-mad-2",
+          "label": "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan' on left leg",
+          "coo": "Taiwan",
+          "factories": [
+            "Taiwan M4"
+          ],
+          "examples": [
+            "Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan' on left leg"
+          ],
+          "conclusion": "That is the Taiwan M4. Licensing details '© G.M.F.G.I. 1977', followed by 'Made in Taiwan' on left leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "licensing-details-l-f-l-1977-on-left-leg-no-coo",
+          "label": "Licensing details '© L.F.L. 1977' on left leg, no COO",
+          "coo": "No COO",
+          "factories": [
+            "Top Toys M6"
+          ],
+          "examples": [
+            "Licensing details '© L.F.L. 1977' on left leg, no COO"
+          ],
+          "conclusion": "That is the Top Toys M6. Licensing details '© L.F.L. 1977' on left leg, no COO.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
+      "missing": ""
+    },
+    {
+      "name": "C-3PO",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Kader M1 = '© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines.",
+        "Unitoy M2 = '© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines.",
+        "Lili Ledy M2 = '© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines.",
+        "Kader M3 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "Lili Ledy M3 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "Unitoy M4 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "Kader M5 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "Takara M6 = '© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines.",
+        "Unitoy M7 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines."
+      ],
+      "options": [
+        {
+          "id": "g-m-f-g-i-with-1977-followed-by-hong-kong-on-lef",
+          "label": "'© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1",
+            "Unitoy M2",
+            "Lili Ledy M2"
+          ],
+          "examples": [
+            "'© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines"
+          ],
+          "conclusion": "That stamp is shared by the Kader M1, the Unitoy M2, and the Lili Ledy M2. '© G.M.F.G.I.' with '1977' followed by 'Hong Kong' on left leg over 3 lines. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "g-m-f-g-i-1977-followed-by-hong-kong-on-left-leg",
+          "label": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M3",
+            "Lili Ledy M3",
+            "Unitoy M4",
+            "Kader M5",
+            "Unitoy M7"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines"
+          ],
+          "conclusion": "That stamp is shared by the Kader M3, the Lili Ledy M3, the Unitoy M4, the Kader M5, and the Unitoy M7. '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "g-m-f-g-i-1978-followed-by-japan-on-left-leg-ove",
+          "label": "'© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines",
+          "coo": "Japan",
+          "factories": [
+            "Takara M6"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines"
+          ],
+          "conclusion": "That is the Takara M6. '© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
+      "missing": ""
+    },
+    {
+      "name": "Darth Vader",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look at the country stamp and the licensing line beside it. A partial or cut-off country name counts as No COO.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Kader M1 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "Kader M1 = '© G.M.F.G.I. 1977' followed by blank raised bar on left leg over 2 lines.",
+        "Kader M2 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "Kader M3 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines. Or without the COO.",
+        "Glasslite M3 = '© G.M.F.G.I. 1977' without the COO.",
+        "Smile M4 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "Smile M4 = '© G.M.F.G.I. 1977' without the COO.",
+        "Unitoy M5 = '© G.M.F.G.I. 1977' followed by 'Made in Hong Kong' on left leg over 2 lines.",
+        "Unitoy M6 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "Unitoy M7 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "Unitoy M8 = '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines.",
+        "PBP M8 = '© G.M.F.G.I. 1977' without the COO on left leg.",
+        "Top Toys M9 = No COO",
+        "Taiwan M10 = '© G.M.F.G.I. 1977' followed by 'Made in Taiwan' on left leg over 2 lines.",
+        "Taiwan M11 = '© G.M.F.G.I. 1977' followed by 'Taiwan' on left leg over 2 lines.",
+        "Takara M12 = '© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines."
+      ],
+      "options": [
+        {
+          "id": "g-m-f-g-i-1977-followed-by-hong-kong-on-left-leg",
+          "label": "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1",
+            "Kader M2",
+            "Kader M3",
+            "Smile M4",
+            "Unitoy M6",
+            "Unitoy M7",
+            "Unitoy M8"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines"
+          ],
+          "conclusion": "That stamp is shared by the Kader M1, the Kader M2, the Kader M3, the Smile M4, the Unitoy M6, the Unitoy M7, and the Unitoy M8. '© G.M.F.G.I. 1977' followed by 'Hong Kong' on left leg over 2 lines. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "g-m-f-g-i-1977-followed-by-blank-raised-bar-on-l",
+          "label": "'© G.M.F.G.I. 1977' followed by blank raised bar on left leg over 2 lines",
+          "coo": "",
+          "factories": [
+            "Kader M1"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' followed by blank raised bar on left leg over 2 lines"
+          ],
+          "conclusion": "That is the Kader M1. '© G.M.F.G.I. 1977' followed by blank raised bar on left leg over 2 lines.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo-on-left-leg-g-m-f-g-i-1977",
+          "label": "no COO on left leg. '© G.M.F.G.I. 1977'",
+          "coo": "No COO",
+          "factories": [
+            "Kader M3"
+          ],
+          "examples": [
+            "no COO on left leg. '© G.M.F.G.I. 1977'"
+          ],
+          "conclusion": "That is the Kader M3. no COO on left leg. '© G.M.F.G.I. 1977'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "g-m-f-g-i-1977-without-the-coo",
+          "label": "'© G.M.F.G.I. 1977' without the COO",
+          "coo": "",
+          "factories": [
+            "Glasslite M3",
+            "Smile M4"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' without the COO"
+          ],
+          "conclusion": "That stamp is shared by the Glasslite M3 and the Smile M4. '© G.M.F.G.I. 1977' without the COO. I'm not sure which of those it is from the stamp alone.",
+          "sure": false,
+          "followUps": []
+        },
+        {
+          "id": "g-m-f-g-i-1977-followed-by-made-in-hong-kong-on-",
+          "label": "'© G.M.F.G.I. 1977' followed by 'Made in Hong Kong' on left leg over 2 lines",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy M5"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' followed by 'Made in Hong Kong' on left leg over 2 lines"
+          ],
+          "conclusion": "That is the Unitoy M5. '© G.M.F.G.I. 1977' followed by 'Made in Hong Kong' on left leg over 2 lines.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "g-m-f-g-i-1977-without-the-coo-on-left-leg",
+          "label": "'© G.M.F.G.I. 1977' without the COO on left leg",
+          "coo": "",
+          "factories": [
+            "PBP M8"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' without the COO on left leg"
+          ],
+          "conclusion": "That is the PBP M8. '© G.M.F.G.I. 1977' without the COO on left leg.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "no-coo",
+          "label": "No COO",
+          "coo": "No COO",
+          "factories": [
+            "Top Toys M9"
+          ],
+          "examples": [
+            "No COO"
+          ],
+          "conclusion": "That is the Top Toys M9. No COO.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "g-m-f-g-i-1977-followed-by-made-in-taiwan-on-lef",
+          "label": "'© G.M.F.G.I. 1977' followed by 'Made in Taiwan' on left leg over 2 lines",
+          "coo": "Taiwan",
+          "factories": [
+            "Taiwan M10"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' followed by 'Made in Taiwan' on left leg over 2 lines"
+          ],
+          "conclusion": "That is the Taiwan M10. '© G.M.F.G.I. 1977' followed by 'Made in Taiwan' on left leg over 2 lines.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "g-m-f-g-i-1977-followed-by-taiwan-on-left-leg-ov",
+          "label": "'© G.M.F.G.I. 1977' followed by 'Taiwan' on left leg over 2 lines",
+          "coo": "Taiwan",
+          "factories": [
+            "Taiwan M11"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1977' followed by 'Taiwan' on left leg over 2 lines"
+          ],
+          "conclusion": "That is the Taiwan M11. '© G.M.F.G.I. 1977' followed by 'Taiwan' on left leg over 2 lines.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "g-m-f-g-i-1978-followed-by-japan-on-left-leg-ove",
+          "label": "'© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines",
+          "coo": "Japan",
+          "factories": [
+            "Takara M12"
+          ],
+          "examples": [
+            "'© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines"
+          ],
+          "conclusion": "That is the Takara M12. '© G.M.F.G.I. 1978' followed by 'Japan' on left leg over 2 lines.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
+      "missing": ""
     }
-  ]
+  ],
+  "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported."
 }
