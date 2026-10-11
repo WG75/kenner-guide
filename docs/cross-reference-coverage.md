@@ -1,0 +1,300 @@
+# Factory-match cross-reference coverage
+
+Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps and the Skiff Vibro Staff override the scrape.
+
+- Figure records: 104
+- Figures with a tell besides the COO stamp: 20 (was 18/104)
+- Figures with only COO data: 84
+- Accessory variants: 316
+- Accessory variants with tells: 239
+- Accessory variants with no tells: 77
+- Factory-match links (accessory variant to figure variant): 123
+- Character pages fetched: 104
+- Accessory guide pages fetched: 64
+
+## Figures with tells besides the COO stamp
+
+- Luke Skywalker: paint, hair, mould, cardback
+- R2-D2: plastic, cardback
+- Chewbacca: plastic, date
+- Darth Vader: head
+- Jawa: plastic
+- Sand People: head
+- R5-D4: assembly, paint
+- IG-88: plastic, head, mould, cardback
+- Han Solo (Hoth Outfit): paint, plastic
+- Yoda: paint, plastic
+- AT-AT Driver: plastic
+- Imperial Tie Fighter Pilot: plastic
+- Luke Skywalker (Jedi Knight Outfit): plastic, cardback, head
+- Gamorrean Guard: cavity
+- Emperor’s Royal Guard: mould
+- Chief Chirpa: plastic
+- Klaatu: paint, plastic
+- Teebo: plastic
+- Lumat: cardback
+- Paploo: cardback
+
+## Figures with only COO data
+
+- Princess Leia Organa
+- C-3PO
+- Stormtrooper
+- Ben (Obi-Wan) Kenobi
+- Han Solo
+- Death Squad Commander
+- Greedo
+- Hammerhead
+- Snaggletooth
+- Walrus Man
+- Luke Skywalker (X-Wing Pilot)
+- Death Star Droid
+- Power Droid
+- Boba Fett
+- Leia Organa (Bespin Gown)
+- FX-7
+- Imperial Stormtrooper (Hoth Battle Gear)
+- Rebel Soldier (Hoth Battle Gear)
+- Bossk
+- Luke Skywalker (Bespin Fatigues)
+- Lando Calrissian
+- Bespin Security Guard (White)
+- Ugnaught
+- Dengar
+- Han Solo (Bespin Outfit)
+- Lobot
+- Leia (Hoth Outfit)
+- Rebel Commander
+- Imperial Commander
+- 2-1B
+- R2-D2 (Sensorscope)
+- C-3PO (Removable Limbs)
+- Luke Skywalker (Hoth Battle Gear)
+- At-At Commander
+- (Twin-Pod) Cloud Car Pilot
+- Bespin Security Guard (Black)
+- Zuckuss
+- 4-LOM
+- Admiral Ackbar
+- Princess Leia Organa (Boushh Disguise)
+- Logray (Ewok Medicine Man)
+- Rebel Commando
+- Weequay
+- Squid Head
+- General Madine
+- Bib Fortuna
+- Ree Yees
+- Biker Scout
+- Lando Calrissian (Skiff Guard Disguise)
+- Nien Nunb
+- Nikto
+- 8D8
+- Princess Leia Organa (in Combat Poncho)
+- Wicket W. Warrick
+- The Emperor
+- B-Wing Pilot
+- Klaatu (in Skiff Guard Outfit)
+- Han Solo (in Trench Coat)
+- Prune Face
+- AT-ST Driver
+- Rancor Keeper
+- Luke Skywalker (in Battle Poncho)
+- Artoo-Detoo (R2-D2) with pop-up Lightsaber
+- Romba
+- Amanaman
+- Barada
+- Imperial Gunner
+- Han Solo (in Carbonite Chamber)
+- Luke Skywalker (Imperial Stormtrooper Outfit)
+- Anakin Skywalker
+- EV-9D9
+- Warok
+- Lando Calrissian (General Pilot)
+- A-Wing Pilot
+- Imperial Dignitary
+- Yak Face
+- Droids C-3PO
+- Droids R2-D2
+- Wicket W.Warrick (Ewoks)
+- Logray (Ewoks)
+- King Gorneesh
+- Urgah Lady Gorneesh
+- Dulok Scout
+- Dulok Shaman
+
+## Accessory variants still lacking tells
+
+- Palace Blaster Top Toys M4
+- Endor Blaster Unitoy M1
+- Endor Blaster Smile M3
+- Endor Blaster Kader M4
+- Gamorrean Axe Smile M2
+- Gamorrean Axe Lili Ledy M4
+- Gaderffii Stick Kader M3
+- Ackbar Staff Unitoy M2
+- Ackbar Staff Lili Ledy M2
+- Emperor Cane Smile M1
+- Emperor Cane Unitoy M2
+- Yoda Cane Unitoy M2
+- Yoda Cane Kader China M2
+- Yoda Cane Smile M3
+- Yoda Cane Top Toys M4
+- Yoda Belt Top Toys M4
+- Ben (Obi-Wan) Kenobi Cape Kader M1
+- Ben (Obi-Wan) Kenobi Cape Kader M2
+- Ben (Obi-Wan) Kenobi Cape Kader M3
+- Ben (Obi-Wan) Kenobi Cape Kader M4
+- Ben (Obi-Wan) Kenobi Cape Kader China M4
+- Ben (Obi-Wan) Kenobi Cape Unitoy M5
+- Ben (Obi-Wan) Kenobi Cape Unitoy M6
+- Ben (Obi-Wan) Kenobi Cape Unitoy M7
+- Ben (Obi-Wan) Kenobi Cape Unitoy M8
+- Ben (Obi-Wan) Kenobi Cape Lili Ledy M9
+- Tusken Raider Cape Unitoy M1
+- Tusken Raider Cape Unitoy M3
+- Tusken Raider Cape Kader M4
+- Tusken Raider Cape Kader M5
+- Tusken Raider Cape Kader M6
+- Tusken Raider Cape Kader M7
+- Darth Vader Cape Kader M1
+- Darth Vader Cape Kader M2
+- Darth Vader Cape Kader M3
+- Darth Vader Cape Kader M4
+- Darth Vader Cape Kader M5
+- Darth Vader Cape Unitoy M6
+- Darth Vader Cape Unitoy M7
+- Darth Vader Cape Unitoy M8
+- Darth Vader Cape Unitoy M9
+- Darth Vader Cape Unitoy M10
+- Darth Vader Cape Unitoy M11
+- Darth Vader Cape Taiwan M12
+- Darth Vader Cape Glasslite M13
+- Darth Vader Cape Top Toys M14
+- Darth Vader Cape Takara M15
+- Darth Vader Cape Lili Ledy M16
+- Darth Vader Cape Poch M17
+- Darth Vader Cape PBP M18
+- Jawa Cloak Kader M1
+- Jawa Cloak Kader China M2
+- Jawa Cloak Kader M2
+- Jawa Cloak Poch M4
+- Jawa Cloak Lili Ledy M5
+- Princess Leia Organa Cape Kader M1
+- Princess Leia Organa Cape Kader M2
+- Princess Leia Organa Cape Smile M3
+- Princess Leia Organa Cape Unitoy M4
+- Princess Leia Organa Cape Unitoy M5
+- Princess Leia Organa Cape Taiwan M6
+- Princess Leia Organa Cape Taiwan M7
+- Princess Leia Organa Cape Glasslite M8
+- Hoth Trooper Skirt Smile M1
+- Hoth Trooper Skirt Smile M2
+- Hoth Trooper Skirt Poch M3
+- Hoth Trooper Skirt Kader M4
+- Hoth Trooper Skirt Unitoy M5
+- Hoth Trooper Skirt PBP M6
+- Lando Calrissian Cape PBP M2
+- Lando Calrissian Cape Smile M3
+- Lando Calrissian Cape Lili Ledy M4
+- 2-1B Mouthpiece Unitoy M2
+- Yoda Snake Unitoy M2
+- Yoda Snake Kader China M2
+- Yoda Snake Smile M3
+- Yoda Snake Top Toys M4
+
+## Accessories with no variant record
+
+- Leia Boushh Rifle
+- Ewok Spear
+- Emperor’s Royal Guard Pike
+- 2-1B Probe
+- Squid Head Belt
+- Leia Boushh Helmet
+- Lando Skiff Helmet
+- Ugnaught Smock
+- Squid Head Skirt
+- Luke Jedi Cloak
+- Ugnaught Case
+- C-3PO (Removable Limbs) Net
+- Carbonite Chamber
+
+## Accessories whose variants have tells
+
+- 2-1B Mouthpiece: 2
+- 4-LOM Cloak: 2
+- 4-LOM Rifle: 2
+- AT-AT Driver Rifle: 4
+- Ackbar Staff: 3
+- Amanaman Staff: 1
+- Bespin Blaster: 8
+- Bib Fortuna Belt: 4
+- Bib Fortuna Cloak: 4
+- Bib Fortuna Staff: 4
+- Biker Scout Blaster: 5
+- Bossk Rifle: 3
+- Chewbacca Bowcaster: 7
+- Chief Chirpa Staff: 3
+- Commlink Guide: 4
+- Double-Telescoping Lightsaber: 4
+- Endor Blaster: 1
+- Gaderffii Stick: 2
+- Gamorrean Axe: 3
+- General Madine Staff: 4
+- Handheld Lightsaber: 6
+- Hoth Rebel Rifle: 4
+- IG-88 Rifle: 5
+- Imperial Blaster: 12
+- Imperial Hoth Rifle: 5
+- Jawa Blaster: 5
+- Jawa Cloak: 1
+- Jawa Vinyl Cape: 2
+- Klaatu Skiff Force Pike: 1
+- Klaatu Skirt: 3
+- Lando Calrissian Cape: 4
+- Lando Calrissian General Cape: 1
+- Leia Bespin Cape: 9
+- Leia Blaster: 6
+- Logray Staff: 4
+- Luke Skywalker Battle Poncho: 1
+- Luke Skywalker Poncho Belt: 1
+- Luke Stormtrooper Helmet: 1
+- Lumat Bow: 1
+- Lumat Hood: 1
+- Lumat Quiver: 1
+- Palace Blaster: 4
+- Pilot Blaster: 8
+- Pop-Up Saber: 3
+- Princess Leia Poncho Belt: 1
+- Princess Leia Poncho Helmet: 1
+- Prune Face Cape: 1
+- Prune Face Rifle: 3
+- Rancor Keeper Hood: 2
+- Rancor Keeper Staff: 2
+- Rebel Blaster: 7
+- Ree Yees Rifle: 3
+- SA80 Rifle: 1
+- Skiff Vibro Staff: 2
+- Squid Head Cape: 1
+- Teebo Axe: 3
+- Teebo Battle Horn: 3
+- Teebo Headpiece: 3
+- Telescoping Lightsaber: 16
+- Trench Coat (Han Endor): 5
+- Tusken Raider Cape: 1
+- Vibro Axe: 3
+- Warok Bow: 1
+- Warok Hood: 1
+- Warok Quiver: 1
+- Yoda Belt: 8
+- Yoda Cane: 3
+- Yoda Cloak: 1
+- Yoda Snake: 3
+- Zuckuss Rifle: 4
+
+## Accessory names with a record but no tells
+
+- Ben (Obi-Wan) Kenobi Cape
+- Darth Vader Cape
+- Emperor Cane
+- Hoth Trooper Skirt
+- Princess Leia Organa Cape

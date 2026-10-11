@@ -4,6 +4,7 @@ import { parseFollowUps, fallbackFollowUps, followTopicFor } from "../vfcb-chat-
 import { selectVvReferencePhotos } from "./vv-reference-photos.js";
 import { composePhotoReply, PHOTO_HELPER } from "./kenner-debut.js";
 import { cooOpening, cooContinue } from "./coo-flow.js";
+import { accessoryOffer, accessoryContinue, startAccessoryIdentify } from "./accessory-match.js";
 
 export { tcTopicRoute, tcPalitoyIntent };
 
@@ -17,6 +18,16 @@ export default async function handler(req, res) {
 
   try {
     const { message, image, flowState, history } = req.body || {};
+
+    if (flowState?.topic === "accessory_factory") {
+      const continued = accessoryContinue(flowState, String(message || ""));
+      return tcReply(res, continued.reply, {
+        flowState: continued.flowState,
+        actions: continued.actions,
+        quickReplies: continued.quickReplies,
+        skipFollowUps: true
+      });
+    }
 
     if (flowState?.topic === "data_flow") {
       const dataFlowReply = continueDataFlow(String(message || ""), flowState);
@@ -63,6 +74,17 @@ export default async function handler(req, res) {
       }
 
       if (normalisedMessage === "identify-this-accessory") {
+        const started = startAccessoryIdentify(identifiedName, photoTellsFrom(flowState));
+        if (started && started.flowState && started.flowState.step !== "need_name") {
+          const lead = `Let's check ${started.flowState.accessory || identifiedName}.`;
+          const reply = started.reply.startsWith("Let's check") ? started.reply : `${lead}\n\n${started.reply}`;
+          return tcReply(res, reply, {
+            flowState: started.flowState,
+            actions: started.actions,
+            quickReplies: started.quickReplies,
+            skipFollowUps: true
+          });
+        }
         return tcStartNamedAccessory(res, identifiedName || "this accessory", "");
       }
 
@@ -1685,6 +1707,15 @@ function tcStartVariant(res, target, photoTells) {
   if (opening.flowState && Array.isArray(photoTells) && photoTells.length) {
     opening.flowState.photoTells = photoTells;
   }
+  const offered = opening.match ? accessoryOffer(opening.match) : null;
+  if (offered) {
+    return tcReply(res, `${opening.reply}\n\n${offered.reply}`, {
+      flowState: offered.flowState,
+      actions: offered.actions,
+      quickReplies: offered.quickReplies,
+      skipFollowUps: true
+    });
+  }
   return tcReply(res, opening.reply, {
     flowState: opening.flowState,
     actions: opening.actions,
@@ -1725,6 +1756,15 @@ async function handleTextChat(res, { message, history, flowState }) {
       ? flowState.step
       : "coo";
     const continued = cooContinue({ ...flowState, step: stepName }, question);
+    const offered = continued.match ? accessoryOffer(continued.match) : null;
+    if (offered) {
+      return tcReply(res, `${continued.reply}\n\n${offered.reply}`, {
+        flowState: offered.flowState,
+        actions: offered.actions,
+        quickReplies: offered.quickReplies,
+        skipFollowUps: true
+      });
+    }
     return tcReply(res, continued.reply, {
       flowState: continued.flowState,
       actions: continued.actions,
@@ -1761,8 +1801,29 @@ async function handleTextChat(res, { message, history, flowState }) {
     ) {
       return tcStartAccessory(res);
     }
+    if (opened === "identify this accessory" || opened === "identify-this-accessory") {
+      const started = startAccessoryIdentify("", []);
+      return tcReply(res, started.reply, {
+        flowState: started.flowState,
+        actions: started.actions,
+        quickReplies: started.quickReplies,
+        skipFollowUps: true
+      });
+    }
     const variantTarget = tcVariantTarget(question);
     if (variantTarget !== null) return tcStartVariant(res, variantTarget);
+    const bareAccessory = opened.match(/^identify (?:the )?(.+)$/);
+    if (bareAccessory && !/^variant\b/.test(bareAccessory[1]) && !opened.includes(" of ")) {
+      const started = startAccessoryIdentify(bareAccessory[1], []);
+      if (started && started.flowState && started.flowState.step !== "need_name") {
+        return tcReply(res, started.reply, {
+          flowState: started.flowState,
+          actions: started.actions,
+          quickReplies: started.quickReplies,
+          skipFollowUps: true
+        });
+      }
+    }
     const namedAccessory = question.match(/^identify the (.+) of (.+)$/i);
     if (namedAccessory && !/^variant\b/i.test(namedAccessory[1].trim())) {
       return tcStartNamedAccessory(

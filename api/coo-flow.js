@@ -60,13 +60,21 @@ function choice(option) {
   return { label: option.label, value: option.label };
 }
 
-function done(reply) {
-  return {
+function done(reply, match) {
+  const result = {
     reply,
     actions: [],
     quickReplies: false,
     flowState: null
   };
+  if (match) result.match = match;
+  return result;
+}
+
+function figureMatch(record, factory) {
+  const name = String(factory || "").trim();
+  if (!record || !name) return null;
+  return { figure: record.name, factory: name, sourceUrl: record.sourceUrl || "" };
 }
 
 export function cooOpening(displayName) {
@@ -92,7 +100,7 @@ export function cooOpening(displayName) {
     lines.push("", `This figure was made only by ${factory}. There is no factory choice to make.`);
   }
   if (!options.length) {
-    return done(lines.join("\n"));
+    return done(lines.join("\n"), figureMatch(record, factory));
   }
   lines.push("", ask);
   return {
@@ -176,8 +184,8 @@ function finishShared(record, candidates, used, conclusion) {
   return done(base.includes(extra) ? base : `${base} ${extra}`);
 }
 
-function concludeOne(factory, because) {
-  return done(`That is the ${factory}. ${because}`.trim());
+function concludeOne(record, factory, because) {
+  return done(`That is the ${factory}. ${because}`.trim(), figureMatch(record, factory));
 }
 
 function askTell(record, candidates, flowState, answers, conclusion) {
@@ -195,7 +203,7 @@ function askTell(record, candidates, flowState, answers, conclusion) {
   if (seen.length && seenSets.size === 1) {
     const next = tellHits(seen[0], candidates);
     const note = `The photo shows a match for “${seen[0].detail}”.`;
-    if (next.length === 1) return concludeOne(next[0], `${note} The country stamp was shared, and that tell matches this mould.`);
+    if (next.length === 1) return concludeOne(record, next[0], `${note} The country stamp was shared, and that tell matches this mould.`);
     if (next.length > 1 && next.length < candidates.length) {
       return askTell(record, next, { ...flowState, usedTells: [...used, picked.category], photoTells: [] }, answers.concat(note));
     }
@@ -231,7 +239,7 @@ function askTell(record, candidates, flowState, answers, conclusion) {
 
 function afterStamp(record, factories, conclusion, sure, flowState, answers) {
   const names = (factories || []).filter(Boolean);
-  if (sure || names.length <= 1) return done(conclusion);
+  if (sure || names.length <= 1) return done(conclusion, names.length === 1 ? figureMatch(record, names[0]) : null);
   return askTell(record, names, flowState, answers, conclusion);
 }
 
@@ -268,7 +276,7 @@ export function cooContinue(flowState, message) {
     if (!tell) return done(`I'm not sure. That isn't one of the verified tells for ${record.name}.`);
     const next = tellHits(tell, candidates);
     if (next.length === 1) {
-      return concludeOne(next[0], `The country stamp was shared, and “${tell.detail}” matches this mould.`);
+      return concludeOne(record, next[0], `The country stamp was shared, and “${tell.detail}” matches this mould.`);
     }
     if (!next.length) return remain(record, candidates, used);
     return askTell(record, next, { ...flowState, photoTells: [] }, answers);
