@@ -1177,7 +1177,7 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
   assert.match(coverage, /Figures with a tell besides the COO stamp: 22 \(was 18\/104\)/);
   assert.match(coverage, /Accessory variants with tells: 244/);
-  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 130/);
+  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 131/);
   const blaster = await call({ message: "identify the rebel blaster" });
   assert.equal(blaster.json.flowState.topic, "accessory_factory");
   assert.match(blaster.json.reply, /Let's check Rebel Blaster/);
@@ -1765,7 +1765,12 @@ await test("Darth Vader stamp is on the left thigh and the COO sheet is shown", 
   assert.equal(sabres["telescoping-lightsaber--taiwan-m7"].cardedWith.includes("darth-vader--unitoy-m5"), false);
   assert.deepEqual(sabres["telescoping-lightsaber--glasslite-m8"].cardedWith.filter(id => id.startsWith("darth-vader")), ["darth-vader--glasslite-m3"]);
   assert.ok(sabres["telescoping-lightsaber--glasslite-m8"].cardedWith.includes("luke-skywalker--glasslite-m1"));
-  assert.deepEqual(sabres["telescoping-lightsaber--lili-ledy-m9"].cardedWith, ["darth-vader--lili-ledy-m4-no-coo"]);
+  assert.deepEqual(sabres["telescoping-lightsaber--lili-ledy-m9"].cardedWith, [
+    "darth-vader--lili-ledy-m4-no-coo",
+    "ben-obi-wan-kenobi--lili-ledy"
+  ]);
+  assert.equal(match.figureVariants.find(item => item.id === "ben-obi-wan-kenobi--lili-ledy").factory, "Lili Ledy");
+  assert.match(owner, /Lili Ledy Ben/);
   assert.deepEqual(sabres["telescoping-lightsaber--top-toys-m10"].cardedWith, ["darth-vader--top-toys-m9"]);
   assert.deepEqual(sabres["telescoping-lightsaber--takara-m4"].cardedWith, ["darth-vader--takara-m12"]);
   assert.deepEqual(sabres["darth-vader-cape--poch-m17"].cardedWith, ["darth-vader--poch-m2"]);
@@ -1786,7 +1791,9 @@ await test("Stormtrooper stamp is on the left thigh and the COO sheet is shown",
   assert.match(owner, /Date: 2026-10-11/);
   assert.match(owner, /Source: owner Warren/);
   assert.match(owner, /back of the left thigh/);
-  assert.match(owner, /Kader M8/);
+  assert.match(owner, /Kader M8 is Kader M7/);
+  assert.match(owner, /Warren confirmed the year/);
+  assert.doesNotMatch(owner, /another figure|did not confirm/);
   assert.match(owner, /Poch M2 has a HONG KONG COO/);
   assert.match(owner, /Boba Fett only/);
   assert.match(owner, /Survival Kit only/);
@@ -1844,7 +1851,7 @@ await test("Stormtrooper stamp is on the left thigh and the COO sheet is shown",
     flowState: hk.json.flowState
   });
   assert.match(kader7.json.reply, /Kader M7/);
-  assert.match(kader7.json.reply, /Kader M8/);
+  assert.match(kader7.json.reply, /Kader M8 is this Kader M7/);
   assert.match(kader7.json.reply, /family VII/);
   const poch1 = await call({ message: "Extra mouthpiece flaps", flowState: hk.json.flowState });
   assert.match(poch1.json.reply, /Poch M1/);
@@ -1883,6 +1890,8 @@ await test("Stormtrooper stamp is on the left thigh and the COO sheet is shown",
   assert.match(takara.json.reply, /JAPAN/);
   assert.match(takara.json.reply, /cross-slot screw/);
   assert.match(takara.json.reply, /no 'MADE IN'/);
+  assert.match(takara.json.reply, /Warren confirmed/);
+  assert.doesNotMatch(takara.json.reply, /year on COO guide/);
   const toys = await call({ message: bare, flowState: start.json.flowState });
   assert.match(toys.json.reply, /Top Toys/);
   assert.match(toys.json.reply, /no markings at all/);

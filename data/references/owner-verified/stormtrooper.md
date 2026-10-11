@@ -22,13 +22,13 @@ On Kader M1 and Kader M7, the H of HONG starts under the ©. Do not invent a dif
 
 COO guide 3.1 family I is Kader M1. Family VII is Kader M7. Both are three side-by-side columns of HONG KONG. Separate them with the guide.
 
-Warren also named a 3-line Kader M8. The sheet shows only two Hong Kong Kader families, I and VII. Kader M8 is not stored as a third variant. It may be Warren's number for family VII, which is stored as Kader M7, or it may belong to another figure.
+Warren's Kader M8 is Kader M7, family VII. It is the same stamp, not a separate variant. Nothing further was added.
 
 ## Kader China and Takara
 
 Kader China is just 'CHINA' on a raised bar. There is no 'MADE IN'. The old 'Made in China' entries are wrong. The merged Kader/Poch/China variant is removed.
 
-Takara is just 'JAPAN'. There is no 'MADE IN' and no raised bar. COO guide 3.1 shows 1978 beside 'JAPAN'. Warren said to keep the licensing year on the sheet. He did not confirm 1978 in a separate sentence, so the year stays flagged as the sheet year.
+Takara licensing is '© G.M.F.G.I. 1978' with 'JAPAN'. There is no 'MADE IN' and no raised bar. Warren confirmed the year.
 
 ## No COO
 

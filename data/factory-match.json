@@ -1972,7 +1972,7 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "The stamp is on the back of the left thigh. Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'. The H of HONG starts under the ©. Family VII on COO guide 3.1. Warren's Kader M8 is not stored as a third Hong Kong Kader.",
+          "detail": "The stamp is on the back of the left thigh. Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'. The H of HONG starts under the ©. Family VII on COO guide 3.1. Warren's Kader M8 is this Kader M7.",
           "where": "Look at the country stamp on the back of the left thigh."
         }
       ]
@@ -2233,7 +2233,7 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'. No 'MADE IN' and no raised bar. The year is the year on COO guide 3.1.",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'. No 'MADE IN' and no raised bar. Warren confirmed 1978.",
           "where": "Look at the country stamp on the back of the left thigh."
         },
         {
@@ -2271,6 +2271,16 @@
       "mould": "",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "tells": []
+    },
+    {
+      "id": "ben-obi-wan-kenobi--lili-ledy",
+      "figure": "Ben (Obi-Wan) Kenobi",
+      "factory": "Lili Ledy",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md. Telescoping Lightsaber M9 is this Lili Ledy Ben.",
       "tells": []
     },
     {
@@ -7196,7 +7206,8 @@
         }
       ],
       "cardedWith": [
-        "darth-vader--lili-ledy-m4-no-coo"
+        "darth-vader--lili-ledy-m4-no-coo",
+        "ben-obi-wan-kenobi--lili-ledy"
       ]
     },
     {

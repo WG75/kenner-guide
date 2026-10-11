@@ -54,7 +54,7 @@ Checked live 11 Oct 2026. Red Vader links follow that page.
 - M6: late PBP Vader. The Luke No COO link is left as it was.
 - M7: Darth Vader marked Taiwan. Linked to Taiwan M10 and Taiwan M11.
 - M8: Glasslite Vader. The Luke Glasslite link is left as it was.
-- M9: Lili Ledy Regreso Vader. The guide also names Ben Kenobi. No Ben figure was linked, because the page does not name which Ben variant.
+- M9: Lili Ledy Regreso Vader, and the Lili Ledy Ben. Warren confirmed the M9 sabre is the Lili Ledy Ben's. It is linked to that Ben as well as the Lili Ledy No COO Vader.
 - M10: Top Toys Vader.
 
 Kader China is not named on the sabre guide. Kader family III No COO is not named on the sabre guide. Neither is given a sabre link. The figure page says M5 for those two. That was not copied across.
