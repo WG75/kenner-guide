@@ -1,14 +1,14 @@
 # Factory-match cross-reference coverage
 
-Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps and the Skiff Vibro Staff override the scrape. Owner-verified Luke Skywalker rulings in data/references/owner-verified/luke-skywalker.md override the scrape.
+Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, and data/references/owner-verified/princess-leia-organa.md override the scrape.
 
 - Figure records: 104
 - Figures with a tell besides the COO stamp: 20 (was 18/104)
 - Figures with only COO data: 84
 - Accessory variants: 313
-- Accessory variants with tells: 236
-- Accessory variants with no tells: 77
-- Factory-match links (accessory variant to figure variant): 118
+- Accessory variants with tells: 244
+- Accessory variants with no tells: 69
+- Factory-match links (accessory variant to figure variant): 137
 - Character pages fetched: 104
 - Accessory guide pages fetched: 64
 
@@ -179,14 +179,6 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 - Jawa Cloak Kader M2
 - Jawa Cloak Poch M4
 - Jawa Cloak Lili Ledy M5
-- Princess Leia Organa Cape Kader M1
-- Princess Leia Organa Cape Kader M2
-- Princess Leia Organa Cape Smile M3
-- Princess Leia Organa Cape Unitoy M4
-- Princess Leia Organa Cape Unitoy M5
-- Princess Leia Organa Cape Taiwan M6
-- Princess Leia Organa Cape Taiwan M7
-- Princess Leia Organa Cape Glasslite M8
 - Hoth Trooper Skirt Smile M1
 - Hoth Trooper Skirt Smile M2
 - Hoth Trooper Skirt Poch M3
@@ -264,6 +256,7 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 - Palace Blaster: 4
 - Pilot Blaster: 8
 - Pop-Up Saber: 3
+- Princess Leia Organa Cape: 8
 - Princess Leia Poncho Belt: 1
 - Princess Leia Poncho Helmet: 1
 - Prune Face Cape: 1
@@ -278,7 +271,7 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 - Teebo Axe: 3
 - Teebo Battle Horn: 3
 - Teebo Headpiece: 3
-- Telescoping Lightsaber: 16
+- Telescoping Lightsaber: 13
 - Trench Coat (Han Endor): 5
 - Tusken Raider Cape: 1
 - Vibro Axe: 3
@@ -297,4 +290,3 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 - Darth Vader Cape
 - Emperor Cane
 - Hoth Trooper Skirt
-- Princess Leia Organa Cape

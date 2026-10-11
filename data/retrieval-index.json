@@ -811,16 +811,18 @@
       "role": "",
       "name": "Princess Leia Blaster",
       "aliases": [
+        "Leia Blaster",
         "leia",
         "blaster"
       ],
       "keywords": [
         "Princess Leia Blaster",
+        "Leia Blaster",
         "leia",
         "blaster"
       ],
       "years": [],
-      "chars": 2906
+      "chars": 2016
     },
     {
       "relPath": "accessories/leia-boushh-helmet.txt",
@@ -961,6 +963,7 @@
       "role": "",
       "name": "Princess Leia Organa Cape",
       "aliases": [
+        "Leia cape",
         "princess",
         "leia",
         "organa",
@@ -968,13 +971,14 @@
       ],
       "keywords": [
         "Princess Leia Organa Cape",
+        "Leia cape",
         "princess",
         "leia",
         "organa",
         "cape"
       ],
       "years": [],
-      "chars": 4475
+      "chars": 2543
     },
     {
       "relPath": "accessories/prune-face-rifle.txt",
@@ -4240,7 +4244,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 2766
+      "chars": 4113
     },
     {
       "relPath": "figures/prune-face-reference.txt",
@@ -5086,6 +5090,26 @@
       ],
       "years": [],
       "chars": 3197
+    },
+    {
+      "relPath": "references/owner-verified/princess-leia-organa.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/princess",
+        "leia",
+        "organa"
+      ],
+      "keywords": [
+        "owner",
+        "verified/princess",
+        "leia",
+        "organa"
+      ],
+      "years": [],
+      "chars": 3204
     },
     {
       "relPath": "references/palitoy-history.txt",

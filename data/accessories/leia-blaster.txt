@@ -1,124 +1,41 @@
 Accessory Name: Princess Leia Blaster
 
+Aliases: Leia Blaster
+
 Category:
 Primary Weapon – Small Blaster
 
 Used With:
-- Princess Leia Organa (Kenner)
-- Princess Leia Organa (Glasslite – Brazil)
+- Princess Leia Organa
+- The grey Lili Ledy copy with Princess Leia (Endor Poncho), not this figure
 
---------------------------------------------------
+Variant Villain documents five Leia blaster moulds. Black-blue is the usual colour on the original Princess Leia Organa. These mould numbers are a different series from the figure mould numbers and from the Jawa blaster.
 
-OVERVIEW
+M1 is Kader, made in Hong Kong. The mould was also used by Lili Ledy in Mexico.
+- Black-blue dull, dark-blue, translucent blue-green, blue, and translucent blue.
+- Light grey and dark grey are the Lili Ledy colours. That grey blaster belongs to Endor Poncho Leia. Do not pair it with this Princess Leia Organa.
 
-Princess Leia does not have a uniquely sculpted blaster in the vintage Kenner line.
+M2 is Smile, the early Smile mould, later replaced by M3.
+- Black-blue, translucent black-blue, translucent blue-green, and blue.
 
-Instead, she is issued a small blaster that shares the same base mould family as the Jawa blaster, but must be identified and matched correctly depending on factory and region.
+M3 is Smile, the later Smile mould.
+- Translucent light-blue, translucent greenish-blue, translucent blue, dark-blue, and black-blue.
 
---------------------------------------------------
+M4 is Unitoy. It seems to be a copied and retooled mould from the Taiwan M5.
+- Black-blue, blue, translucent blue, and blue with a rough surface.
 
-CRITICAL COLLECTOR NOTE
+M5 is an unknown factory in Taiwan. It is a very early mould, probably shot on one sprue with the Taiwan crossbow, and retooled at least three times.
+- Dull black-blue, dull black, and blue.
 
-👉 Leia’s blaster is NOT a unique sculpt  
-👉 It is part of the same mould family as the Jawa blaster  
-👉 Correct version depends heavily on factory (Kenner vs Glasslite)
+Factory links for this Princess Leia Organa. Checked on 11 Oct 2026 against the Variant Villain leia-blaster guide. Variant Villain agreed.
+- Kader figures take blaster M1.
+- Smile figures take blaster M2 and M3.
+- Unitoy figures take blaster M4.
+- Taiwan figures take blaster M5.
 
---------------------------------------------------
+Glasslite (Brazil) Leia did not come with a Leia blaster. She came with a silver Jawa blaster. The Variant Villain Leia blaster guide lists no Glasslite mould. Owner Warren keeps the silver Jawa pairing.
 
-STANDARD KENNER VERSION
+A Hungary bootleg exists for the Csillagok Háborúja line. It is not the blaster for this Kenner figure.
 
-Mould:
-- Same mould family as Jawa blaster (typically M2 variants)
-
-Traits:
-- Compact pistol shape
-- Consistent with Jawa-issued blaster sculpt
-- Clean mould detail depending on production run
-
-Colours:
-- Black
-- Dark blue
-- Blue-grey
-
-Notes:
-- This is the correct pairing for standard Kenner Leia
-- No silver version used in standard Kenner production
-
---------------------------------------------------
-
-GLASSLITE (BRAZIL) VERSION
-
-Mould:
-- Same base mould as Jawa blaster
-
-Traits:
-- Often softer detail
-- Slightly different plastic finish
-- Can appear lighter in tone
-
-Colours:
-- Silver (key identifier)
-- Occasionally lighter plastic tones
-
-Notes:
-- Silver Leia blaster is specific to Glasslite production
-- Often confused with incorrect pairings or repros
-
---------------------------------------------------
-
-IDENTIFICATION STRATEGY
-
-1. Identify figure origin:
-   - Kenner → standard dark blaster
-   - Glasslite → possible silver blaster
-
-2. Check colour:
-   - Black / dark blue → Kenner
-   - Silver → Glasslite only
-
-3. Confirm mould:
-   - Should match Jawa blaster mould family
-
---------------------------------------------------
-
-MATCHING TO FIGURES
-
-Kenner Leia:
-- Black / dark blue small blaster (Jawa mould type)
-
-Glasslite Leia:
-- Silver Jawa-style blaster
-
---------------------------------------------------
-
-COMMON MISTAKES
-
-- Assuming all Leia blasters are silver
-- Assigning Glasslite accessories to Kenner figures
-- Treating Leia blaster as a unique sculpt
-- Matching by colour without checking origin
-
---------------------------------------------------
-
-REPRODUCTION WARNING
-
-Repro Leia blasters often:
-
-- Use incorrect plastic tone
-- Have overly smooth finish
-- Lack proper mould definition
-
-Silver repros are especially common
-
---------------------------------------------------
-
-COLLECTOR INSIGHT
-
-- Leia’s blaster is simple, but often mismatched
-- Correct factory pairing matters more than mould variation
-- Glasslite versions are distinct and should be treated separately
-
---------------------------------------------------
-
-SOURCES:
-https://www.variantvillain.com/
+Source:
+https://www.variantvillain.com/accessory-guide/leia-blaster/

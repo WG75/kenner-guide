@@ -385,8 +385,11 @@ def main():
 
     from apply_owner_coo import apply_owner_records
     from apply_luke_owner import apply_coo_figures, sync_owner_stamps
+    from apply_leia_owner import apply_coo_figures as apply_leia_coo
+    from apply_leia_owner import sync_owner_stamps as sync_leia_stamps
     figures = apply_owner_records(figures)
     apply_coo_figures(figures)
+    apply_leia_coo(figures)
     payload = {
         "cooGuideUrl": COO_GUIDE,
         "rule": "A partial or cut-off country name counts as No COO. No vintage figure is offered a Mexico leg stamp.",
@@ -397,6 +400,9 @@ def main():
     luke = next((fig for fig in figures if fig.get("name") == "Luke Skywalker"), None)
     if luke:
         sync_owner_stamps(luke)
+    leia = next((fig for fig in figures if fig.get("name") == "Princess Leia Organa"), None)
+    if leia:
+        sync_leia_stamps(leia)
     verified = sum(1 for fig in figures if fig["verified"])
     print(f"wrote {OUT} figures={len(figures)} verified={verified} fetched_now={fetched}")
 
