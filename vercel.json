@@ -3,6 +3,9 @@
   "functions": {
     "api/chat.js": {
       "includeFiles": "{data/**,data-source/vv-images.json}"
+    },
+    "api/members.js": {
+      "includeFiles": "data/kenner-debut-figures.json"
     }
   }
 }

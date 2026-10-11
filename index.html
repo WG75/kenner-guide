@@ -531,6 +531,7 @@
             </div>
             <div id="quickReplies" class="quick-replies"></div>
             <p id="quickHelper" class="quick-helper">Or ask me anything, or upload another photo to identify.</p>
+            <div id="memberBar" class="member-bar" hidden></div>
             <div class="identify-row">
               <button type="button" id="identifyFigure" class="identify-button">Identify a Figure</button>
               <button type="button" id="identifyAccessories" class="identify-button">Identify Accessories</button>
@@ -551,6 +552,10 @@
 
   <script type="module">
     import { parseFollowUps, fallbackFollowUps, followTopicFor, syncLayoutClass, actionIntent, askAboutPrompt, appendTranscriptEntry, loadTranscript, saveTranscript } from "./vfcb-chat-ui.js";
+    import { preparePhotoForUpload } from "./photo-upload.js";
+    import { mountMembers } from "./members-ui.js";
+
+    let membersApi = { noteIdentification() {} };
 
     const appEl = document.querySelector(".app");
     const chatEl = document.getElementById("chat");
@@ -847,6 +852,7 @@
         const data = await askApi(text);
 
         state.flowState = data.flowState || null;
+        membersApi.noteIdentification(data.flowState);
 
         appendAnswerImages(data.images, "before");
 
@@ -871,6 +877,7 @@
       try {
         const data = await askApi(text);
         state.flowState = data.flowState || null;
+        membersApi.noteIdentification(data.flowState);
         const shown = presentReply(data, text);
         addMessage("assistant", shown.reply);
         presentActions(shown, data);
@@ -964,9 +971,13 @@
       clearPhoto();
       inputEl.value = "";
       autoSizeInput();
-      const shownPhoto = await compressPhoto(imageDataUrl);
+      const prepared = await preparePhotoForUpload(imageDataUrl);
+      if (!prepared.ok) {
+        addMessage("assistant", prepared.message);
+        return;
+      }
       addImageCard({
-        url: shownPhoto,
+        url: prepared.dataUrl,
         alt: "Uploaded photo",
         userPhoto: true,
         historyText: note ? "" : "📷 Photo uploaded for analysis"
@@ -979,8 +990,9 @@
       setStatus("SW-7885 is analysing the photo...");
 
       try {
-        const data = await askApi(note || "Analyse this uploaded figure photo.", imageDataUrl);
+        const data = await askApi(note || "Analyse this uploaded figure photo.", prepared.dataUrl);
         state.flowState = data.flowState || null;
+        membersApi.noteIdentification(data.flowState);
         appendAnswerImages(data.images, "before");
         const shown = presentReply(data, note || "identify a figure");
         addMessage("assistant", shown.reply || "I could not identify the figure from that image.");
@@ -991,6 +1003,7 @@
           setStatus("SW-7885 is checking the reference files...");
           const answer = await askApi(note);
           state.flowState = answer.flowState || state.flowState;
+          membersApi.noteIdentification(answer.flowState);
           appendAnswerImages(answer.images, "before");
           const answered = presentReply(answer, note);
           addMessage("assistant", answered.reply);
@@ -1003,32 +1016,6 @@
       } finally {
         setStatus("");
       }
-    }
-
-    function compressPhoto(dataUrl) {
-      return new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => {
-          const max = 720;
-          const scale = Math.min(1, max / Math.max(img.width, img.height, 1));
-          const canvas = document.createElement("canvas");
-          canvas.width = Math.max(1, Math.round(img.width * scale));
-          canvas.height = Math.max(1, Math.round(img.height * scale));
-          const ctx = canvas.getContext("2d");
-          if (!ctx) {
-            resolve(dataUrl);
-            return;
-          }
-          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-          try {
-            resolve(canvas.toDataURL("image/jpeg", 0.72));
-          } catch (err) {
-            resolve(dataUrl);
-          }
-        };
-        img.onerror = () => resolve(dataUrl);
-        img.src = dataUrl;
-      });
     }
 
     function fileToDataUrl(file) {
@@ -1102,6 +1089,13 @@
 
     if (!restoreTranscript()) state.history.push(greetingTurn);
     persistEnabled = true;
+    membersApi = mountMembers({
+      bar: document.getElementById("memberBar"),
+      getPhoto() {
+        const entry = [...state.entries].reverse().find((item) => item && item.userPhoto && item.url);
+        return entry ? entry.url : "";
+      }
+    });
 
     window.sendMessage = sendMessage;
     window.openPhotoPicker = openPhotoPicker;
