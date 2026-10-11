@@ -42,7 +42,7 @@ export default async function handler(req, res) {
         const accessories = Array.isArray(flowState.accessories) ? flowState.accessories : [];
         const possessive = flowState.possessive || "his";
         if (!accessories.length) {
-          return tcStartVariant(res, identifiedName);
+          return tcStartVariant(res, identifiedName, photoTellsFrom(flowState));
         }
         return res.status(200).json({
           reply: `Which shall we check for ${identifiedName || "this figure"}?`,
@@ -109,6 +109,8 @@ export default async function handler(req, res) {
             ...(typeof flowState.displayName === "string" && flowState.displayName.trim()
               ? { displayName: flowState.displayName.trim() }
               : {}),
+            ...(Array.isArray(flowState.visibleAccessories) ? { visibleAccessories: flowState.visibleAccessories } : {}),
+            ...(Array.isArray(flowState.costumeCues) ? { costumeCues: flowState.costumeCues } : {}),
             step: "choose_help"
           },
           actions: [
@@ -130,25 +132,7 @@ export default async function handler(req, res) {
           return res.status(200).json(startDataFlow("jawa.figure"));
         }
 
-        if (figure === "luke_bespin") {
-          return res.status(200).json({
-            reply:
-              "Luke Skywalker in Bespin Fatigues has been recognised, but the detailed variant flow is not built yet.\n\nFor now, I can:\n\n1 Tell you the accessories this figure normally came with\n2 Help with a different figure\n3 Let you upload another photo",
-            flowState: null,
-            actions: [
-              { label: "Accessories", value: "show accessories" },
-              { label: "Another figure", value: "another figure" },
-              { label: "Upload another photo", value: "upload another photo" }
-            ]
-          });
-        }
-
-        return res.status(200).json({
-          reply:
-            "Variant identification for this figure type is not fully built yet.\n\nFor now, describe the COO marking, paint details and accessories and I’ll help as best I can.",
-          flowState: null,
-          actions: []
-        });
+        return tcStartVariant(res, identifiedName, photoTellsFrom(flowState));
       }
 
       // Short accessory replies ("show accessories", "B") fall through to
@@ -329,6 +313,8 @@ function photoIdentificationReply({ itemKind, displayName, figureKey, visibleAcc
       pronoun: composed.pronoun,
       possessive: composed.possessive,
       accessories: composed.accessories,
+      visibleAccessories: Array.isArray(visibleAccessories) ? visibleAccessories : [],
+      costumeCues: Array.isArray(costumeCues) ? costumeCues : [],
       step: "post_identification"
     },
     actions: composed.actions,
@@ -1670,7 +1656,14 @@ function tcPickVariantFigure(target) {
   return { ambiguous: true, names: pool.map(fig => fig.name).slice(0, 8) };
 }
 
-function tcStartVariant(res, target) {
+function photoTellsFrom(flowState) {
+  return [
+    ...(Array.isArray(flowState && flowState.visibleAccessories) ? flowState.visibleAccessories : []),
+    ...(Array.isArray(flowState && flowState.costumeCues) ? flowState.costumeCues : [])
+  ].filter(item => typeof item === "string" && item.trim());
+}
+
+function tcStartVariant(res, target, photoTells) {
   const name = String(target || "").trim();
   if (!name) {
     return tcReply(res, "There are two ways to do this. Press the camera icon to upload a photo of the figure, or type the figure's name. If you don't know the name, describe it to me.", {
@@ -1689,6 +1682,9 @@ function tcStartVariant(res, target) {
     });
   }
   const opening = cooOpening(fig.name);
+  if (opening.flowState && Array.isArray(photoTells) && photoTells.length) {
+    opening.flowState.photoTells = photoTells;
+  }
   return tcReply(res, opening.reply, {
     flowState: opening.flowState,
     actions: opening.actions,
@@ -1725,7 +1721,9 @@ async function handleTextChat(res, { message, history, flowState }) {
   let variantNote = "";
   if (flowState && flowState.topic === "variant_identify") {
     if (flowState.step === "need_name") return tcStartVariant(res, question);
-    const stepName = flowState.step === "coo" || flowState.step === "follow" ? flowState.step : "coo";
+    const stepName = flowState.step === "coo" || flowState.step === "follow" || flowState.step === "tell"
+      ? flowState.step
+      : "coo";
     const continued = cooContinue({ ...flowState, step: stepName }, question);
     return tcReply(res, continued.reply, {
       flowState: continued.flowState,

@@ -980,14 +980,108 @@ await test("no figure's COO question offers Mexico", async () => {
   assert.match(guide, /does not have the word Mexico on the legs/);
 });
 
-await test("photo-menu identify variant stays scripted and does not call the model", async () => {
+await test("photo-menu identify variant starts that figure's COO stamps", async () => {
   const a = await call({ message: "A", flowState: { ...vaderFlow, step: "choose_help" } });
   const variant = await call({ message: "identify variant", flowState: { ...vaderFlow, step: "choose_help" } });
   assert.equal(calls.length, 0);
-  assert.match(a.json.reply, /Variant identification for this figure type is not fully built yet/);
-  assert.match(variant.json.reply, /Variant identification for this figure type is not fully built yet/);
-  assert.equal(a.json.flowState, null);
-  assert.equal(variant.json.flowState, null);
+  assert.match(a.json.reply, /country of origin \(COO\) stamp/);
+  assert.match(a.json.reply, /stamp alone is not the variant/);
+  assert.match(variant.json.reply, /Let's check Darth Vader/);
+  assert.equal(a.json.flowState.step, "coo");
+  assert.equal(variant.json.flowState.displayName, "Darth Vader");
+  assert.ok(a.json.actions.length > 1);
+  assert.doesNotMatch(a.json.reply, /not fully built yet/);
+});
+
+await test("Luke farmboy COO is checked first, then hair separates the shared Hong Kong stamp", async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  const byName = Object.fromEntries(data.figures.map(fig => [fig.name, fig]));
+  for (const name of ["Luke Skywalker", "Princess Leia Organa", "R2-D2", "Chewbacca", "C-3PO", "Darth Vader"]) {
+    assert.equal(byName[name].source, "owner", name);
+    assert.match(byName[name].sourceNote, /11 Oct 2026/);
+  }
+  assert.equal(byName["Han Solo"].source, "owner");
+  assert.match(byName["Han Solo"].sourceNote, /10 Oct 2026/);
+  assert.equal(byName["Stormtrooper"].source, "variantvillain.com");
+  assert.doesNotMatch(JSON.stringify(byName["R2-D2"].options), /Lili Lefy|left left leg/);
+  assert.match(JSON.stringify(byName["R2-D2"].options), /Lili Ledy/);
+  assert.match(JSON.stringify(byName["Luke Skywalker"].options), /raised bar/);
+  assert.doesNotMatch(JSON.stringify(byName["Luke Skywalker"].options), /\braise bar\b/);
+
+  const report = fs.readFileSync(path.join(root, "docs/coo-cross-tells.md"), "utf8");
+  assert.match(report, /Figures: 104/);
+  assert.match(report, /Figures with a tell besides the COO stamp: 18/);
+  assert.match(report, /Figures with only COO data: 86/);
+  assert.match(report, /Rows the owner edited on 11 Oct 2026: 6/);
+  assert.match(report, /Luke Skywalker: paint, hair/);
+  assert.match(report, /- Princess Leia Organa\n/);
+
+  const start = await call({ message: "identify the variant of Luke Skywalker" });
+  assert.equal(calls.length, 0);
+  assert.match(start.json.reply, /country of origin \(COO\) stamp/);
+  assert.match(start.json.reply, /stamp alone is not the variant/);
+  assert.deepEqual(start.json.actions.map(action => action.label), [
+    "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+    "'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'",
+    "No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'",
+    "COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'",
+    "Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'",
+    "'Hong Kong' on left leg. '© G.M.F.G.I. 1977'",
+    "no COO on left leg. '© G.M.F.G.I. 1977'"
+  ]);
+
+  const china = await call({
+    message: "'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'",
+    flowState: start.json.flowState
+  });
+  assert.match(china.json.reply, /Kader China M1/);
+  assert.equal(china.json.flowState, null);
+
+  const shared = await call({
+    message: "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+    flowState: start.json.flowState
+  });
+  assert.equal(shared.json.flowState.step, "tell");
+  assert.match(shared.json.reply, /Kader M1/);
+  assert.match(shared.json.reply, /Unitoy M2/);
+  assert.match(shared.json.reply, /country stamp alone cannot separate them/);
+  assert.match(shared.json.reply, /Look at the hair colour/);
+  assert.ok(shared.json.actions.some(action => /orange hair/i.test(action.label)));
+  assert.ok(shared.json.actions.some(action => /dull light yellow hair/i.test(action.label)));
+
+  const orange = shared.json.actions.find(action => /orange hair \(dull/i.test(action.label));
+  const unitoy = await call({ message: orange.label, flowState: shared.json.flowState });
+  assert.match(unitoy.json.reply, /Unitoy M2/);
+  assert.doesNotMatch(unitoy.json.reply, /Kader M1/);
+  assert.equal(unitoy.json.flowState, null);
+
+  const unsure = await call({ message: "I'm not sure", flowState: shared.json.flowState });
+  assert.match(unsure.json.reply, /Kader M1/);
+  assert.match(unsure.json.reply, /Unitoy M2/);
+  assert.match(unsure.json.reply, /not sure/i);
+  assert.equal(unsure.json.flowState, null);
+
+  const photoYes = await call({
+    message: "yes",
+    flowState: {
+      topic: "image_identified",
+      figure: "luke_skywalker",
+      displayName: "Luke Skywalker",
+      step: "post_identification",
+      visibleAccessories: ["lightsaber"],
+      costumeCues: ["orange hair"]
+    }
+  });
+  assert.deepEqual(photoYes.json.flowState.costumeCues, ["orange hair"]);
+  const photoStart = await call({ message: "A", flowState: photoYes.json.flowState });
+  assert.equal(photoStart.json.flowState.photoTells.join(" "), "lightsaber orange hair");
+  const fromPhoto = await call({
+    message: "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+    flowState: photoStart.json.flowState
+  });
+  assert.match(fromPhoto.json.reply, /Unitoy M2/);
+  assert.match(fromPhoto.json.reply, /photo/i);
+  assert.equal(fromPhoto.json.flowState, null);
 });
 
 function loadCatalog() {
