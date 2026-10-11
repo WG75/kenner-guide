@@ -149,7 +149,7 @@ def trooper_options():
                     KADER_VII,
                     ["Kader M7"],
                     f"That is the Kader M7, family VII. {THIGH} {H_UNDER}. "
-                    "Warren's Kader M8 is not stored as a third Hong Kong Kader. "
+                    "Warren's Kader M8 is this Kader M7. "
                     "Figure family VII is not Imperial Blaster M7. Compare family VII on COO guide 3.1.",
                 ),
                 follow(
@@ -247,7 +247,7 @@ def trooper_options():
             "Japan",
             ["Takara"],
             "That is the Takara. '© G.M.F.G.I. 1978' and 'JAPAN', with no 'MADE IN' and no raised bar. "
-            "A cross-slot screw is in the back. The year is the year on COO guide 3.1.",
+            "A cross-slot screw is in the back. Warren confirmed '© G.M.F.G.I. 1978' and 'JAPAN'.",
             True,
         ),
         option(
@@ -264,7 +264,7 @@ def trooper_options():
 def trooper_stamps():
     return [
         f"Kader M1 = {THREE}. {H_UNDER}. Family I on the guide.",
-        f"Kader M7 = {THREE}. {H_UNDER}. Family VII on the guide. Warren's Kader M8 is not a third variant.",
+        f"Kader M7 = {THREE}. {H_UNDER}. Family VII on the guide. Warren's Kader M8 is this Kader M7.",
         "Poch M1 = the family I three-column HONG KONG stamp, with extra mouthpiece flaps.",
         "Kader China = 'CHINA' on a raised bar. No 'MADE IN'. Not 'Made in China'.",
         f"Unitoy family II = {TWO}.",
@@ -376,7 +376,7 @@ def trooper_variants():
         ]),
         variant("stormtrooper--kader-m7", "Kader M7", "M7", [
             coo(f"{THIGH} {THREE}. {H_UNDER}. Family VII on COO guide 3.1. "
-                "Warren's Kader M8 is not stored as a third Hong Kong Kader."),
+                "Warren's Kader M8 is this Kader M7."),
         ]),
         variant("stormtrooper--poch-m1", "Poch M1", "M1", [
             coo(f"{THIGH} {THREE}. Family I, the same stamp as Kader M1."),
@@ -426,7 +426,7 @@ def trooper_variants():
             paint(FLAPS),
         ]),
         variant("stormtrooper--takara", "Takara", "", [
-            coo(f"{THIGH} {JAPAN}. No 'MADE IN' and no raised bar. The year is the year on COO guide 3.1."),
+            coo(f"{THIGH} {JAPAN}. No 'MADE IN' and no raised bar. Warren confirmed 1978."),
             assembly("A cross-slot screw is in the back."),
         ]),
         variant("stormtrooper--top-toys", "Top Toys", "", [
@@ -503,9 +503,9 @@ FAMILIES = """FIGURE VARIANT FAMILIES
 - Family II: Unitoy, and Poch M2. Poch M2 has a HONG KONG COO. Line mouth. Extra mouthpiece flaps mark Poch.
 - Family III with HONG KONG is Unitoy. With no country, a hard torso and a very wide mouth is Lili Ledy, a thin or small mouth is PBP, and extra mouthpiece flaps is Poch.
 - Family IV: Smile. With the COO it is three side-by-side columns. Without the COO it is two columns and a soft torso. Helmet back A or B tells the torso moulds apart.
-- Family V: Takara. Just 'JAPAN', no 'MADE IN', and a cross-slot screw. COO guide 3.1 shows 1978.
+- Family V: Takara. Just 'JAPAN', no 'MADE IN', and a cross-slot screw. Warren confirmed '© G.M.F.G.I. 1978' with 'JAPAN'.
 - Family VI: Top Toys. No markings at all, and no peg holes.
-- Family VII: Kader M7. Three side-by-side columns. The H of HONG starts under the ©. Warren's Kader M8 is not a third variant on this sheet.
+- Family VII: Kader M7. Three side-by-side columns. The H of HONG starts under the ©. Warren's Kader M8 is this Kader M7.
 
 --------------------------------------------------
 
@@ -558,6 +558,14 @@ def apply_guides():
         text = text[:start] + FAMILIES + text[end:]
     if "back of the left thigh" not in text:
         text = text.replace("\nFIGURE VARIANT FAMILIES\n", "\n" + STAMP_BLOCK + "FIGURE VARIANT FAMILIES\n", 1)
+    text = text.replace(
+        "Warren's Kader M8 is not a third variant on this sheet.",
+        "Warren's Kader M8 is this Kader M7.",
+    )
+    text = text.replace(
+        "COO guide 3.1 shows 1978.",
+        "Warren confirmed '© G.M.F.G.I. 1978' with 'JAPAN'.",
+    )
     if "Poon is a reproduction" not in text:
         text = text.replace("\nSources:\n", "\n" + EXTRA + "Sources:\n", 1)
     FIGURE.write_bytes(text.replace("\n", newline).encode("utf-8"))

@@ -8,7 +8,7 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 - Accessory variants: 313
 - Accessory variants with tells: 244
 - Accessory variants with no tells: 69
-- Factory-match links (accessory variant to figure variant): 130
+- Factory-match links (accessory variant to figure variant): 131
 - Character pages fetched: 104
 - Accessory guide pages fetched: 64
 

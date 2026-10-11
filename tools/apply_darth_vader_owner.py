@@ -39,6 +39,7 @@ REQUIRED = [
     "cape M17",
     "Never use Mint as a grade",
     "Kader China is not named on the sabre guide",
+    "Lili Ledy Ben",
     "Telescoping Lightsaber",
 ]
 
@@ -404,7 +405,10 @@ VADER_LINKS = {
         "darth-vader--taiwan-m11",
     ],
     "telescoping-lightsaber--glasslite-m8": ["darth-vader--glasslite-m3"],
-    "telescoping-lightsaber--lili-ledy-m9": ["darth-vader--lili-ledy-m4-no-coo"],
+    "telescoping-lightsaber--lili-ledy-m9": [
+        "darth-vader--lili-ledy-m4-no-coo",
+        "ben-obi-wan-kenobi--lili-ledy",
+    ],
     "telescoping-lightsaber--top-toys-m10": ["darth-vader--top-toys-m9"],
     "darth-vader-cape--poch-m17": ["darth-vader--poch-m2"],
 }
@@ -419,8 +423,39 @@ def apply_sabre_links(payload):
             continue
         if not touched:
             continue
-        others = [item for item in current if not str(item).startswith("darth-vader--")]
-        row["cardedWith"] = others + (extra or [])
+        extra_ids = list(extra or [])
+        others = [
+            item for item in current
+            if item not in extra_ids and not str(item).startswith("darth-vader--")
+        ]
+        row["cardedWith"] = others + extra_ids
+
+
+BEN_LILI = {
+    "id": "ben-obi-wan-kenobi--lili-ledy",
+    "figure": "Ben (Obi-Wan) Kenobi",
+    "factory": "Lili Ledy",
+    "mould": "",
+    "source": "owner",
+    "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+    "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md. Telescoping Lightsaber M9 is this Lili Ledy Ben.",
+    "tells": [],
+}
+
+
+def ensure_lili_ledy_ben(payload):
+    rows = payload.get("figureVariants") or []
+    kept = [row for row in rows if row.get("id") != BEN_LILI["id"]]
+    out = []
+    inserted = False
+    for row in kept:
+        out.append(row)
+        if row.get("id") == "ben-obi-wan-kenobi--unspecified":
+            out.append(dict(BEN_LILI))
+            inserted = True
+    if not inserted:
+        out.append(dict(BEN_LILI))
+    payload["figureVariants"] = out
 
 
 def apply_factory_match(payload):
@@ -438,6 +473,7 @@ def apply_factory_match(payload):
     if not inserted:
         out.extend(fresh)
     payload["figureVariants"] = out
+    ensure_lili_ledy_ben(payload)
     apply_sabre_links(payload)
     payload["vaderOwner"] = "data/references/owner-verified/darth-vader.md"
     return payload
