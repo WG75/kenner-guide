@@ -149,6 +149,9 @@ SAME_ACCESSORY = {
     ("nien nunb", "blaster"): "Pilot Blaster",
     ("at st driver", "blaster"): "Endor Blaster",
     ("emperor s royal guard", "staff"): "Emperor’s Royal Guard Pike",
+    ("barada", "skiff vibro staff"): "Skiff Vibro Staff",
+    ("nikto", "skiff vibro staff"): "Skiff Vibro Staff",
+    ("yak face", "skiff vibro staff"): "Skiff Vibro Staff",
     ("wicket w warrick", "spear"): "Ewok Spear",
     ("teebo", "hood"): "Teebo Headpiece",
 }
@@ -156,6 +159,7 @@ SAME_ACCESSORY = {
 # The loose name match would treat this as the Bespin Lando cape. It is not.
 NOT_THE_SAME = {
     ("lando calrissian general pilot", "cape"): "Lando Calrissian Cape is the Bespin cape. The General Pilot cape is his own and is not on that page.",
+    ("klaatu in skiff guard outfit", "skiff vibro staff"): "This is not the Skiff Vibro Staff. Imperial Gunnery documents a separate Klaatu Skiff Force Pike. The staff figure list names Barada, Nikto and Yak Face.",
 }
 
 # Wikipedia lists a lightsaber. Variant Villain and Rebelscum say he was never packed with one.
@@ -277,7 +281,12 @@ def main():
                 has_details, note = page_has_details(raw)
             except Exception as err:
                 error = str(err)
-        if not url:
+        if (acc.get("status") or "") == "owner":
+            # An owner-verified local guide has no Variant Villain URL. It is
+            # covered, so it is not a (c) row, and it is not counted as a page.
+            gap = "ok"
+            note = "Owner-verified local guide. Not a Variant Villain page."
+        elif not url:
             gap = "accessory-no-page"
         elif not has_details:
             gap = "accessory-page-missing-details"

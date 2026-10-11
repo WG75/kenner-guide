@@ -201,6 +201,12 @@
       "file": "accessories/vibro-axe.txt",
       "url": "https://www.variantvillain.com/accessory-guide/vibro-axe/",
       "status": "created"
+    },
+    {
+      "name": "Skiff Vibro Staff",
+      "file": "accessories/skiff-vibro-staff.txt",
+      "url": "",
+      "status": "owner"
     }
   ]
 }
