@@ -451,10 +451,11 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "detail": "'HONG KONG' on the back of the left leg under '© G.M.F.G.I. 1977'. The H of HONG starts under the first G of G.M.F.G.I., and the G of KONG sits under the 77 of 1977.",
           "where": "Look at the country stamp."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa--kader-m3",
@@ -466,10 +467,11 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "detail": "'HONG KONG' on the back of the left leg under '© G.M.F.G.I. 1977'. The H of HONG starts under the ©, and the G of KONG ends under the 9 of 1977.",
           "where": "Look at the country stamp."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa--smile-m4",
@@ -481,25 +483,32 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "detail": "'HONG KONG' on the back of the left leg under '© G.M.F.G.I. 1977'. The H of HONG starts under the first G of the licensing line, and the word ends before the first 1 of 1977 (shorter than Kader M1).",
+          "where": "Look at the country stamp."
+        },
+        {
+          "category": "coo",
+          "detail": "No COO under the licensing line on the back of the left leg. '© G.M.F.G.I. 1977'. Smile can also be No COO.",
           "where": "Look at the country stamp."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
-      "id": "princess-leia-organa--glasslite",
+      "id": "princess-leia-organa--glasslite-m1",
       "figure": "Princess Leia Organa",
-      "factory": "Glasslite",
-      "mould": "",
+      "factory": "Glasslite M1",
+      "mould": "M1",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/princess-leia-organa/",
       "tells": [
         {
           "category": "coo",
-          "detail": "No COO. Licensing details only on left leg. '© G.M.F.G.I. 1977'",
+          "detail": "No COO. Licensing line only on the back of the left leg. '© G.M.F.G.I. 1977'. Shares the Kader M1 mould.",
           "where": "Look at the country stamp."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa--unitoy-m2",
@@ -511,10 +520,11 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "'Made in Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "detail": "'MADE IN HONG KONG' on the back of the left leg under '© G.M.F.G.I. 1977'.",
           "where": "Look at the country stamp."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa--glasslite-m3",
@@ -526,10 +536,11 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "No COO. Licensing details. '© G.M.F.G.I. 1977' on left leg only",
+          "detail": "No COO. Licensing line only on the back of the left leg. '© G.M.F.G.I. 1977'. Shares the Kader M3 mould.",
           "where": "Look at the country stamp."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa--taiwan-m5",
@@ -541,10 +552,11 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "'Made in Taiwan' under licensing details. '© G.M.F.G.I. 1977'",
+          "detail": "'MADE IN TAIWAN' on the back of the left leg under '© G.M.F.G.I. 1977'.",
           "where": "Look at the country stamp."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "r2-d2--unitoy-m1",
@@ -2645,46 +2657,6 @@
       ]
     },
     {
-      "id": "yoda--kader-hk",
-      "figure": "Yoda",
-      "factory": "Kader (HK)",
-      "mould": "",
-      "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/characters/esb/yoda/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Hong Kong only",
-          "where": "Look at the country stamp."
-        },
-        {
-          "category": "paint",
-          "detail": "\" due to Kader HK plastic's propensity to degrade from green to grey. Dark brown Pacman eyes",
-          "where": "Look at the paint colour."
-        },
-        {
-          "category": "plastic",
-          "detail": "M1 Kader very soft plastic, light brown w/EPM. Kader plastic pigmentation often degrades from brown to green.",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "M1 Kader softer plastic, mid brown or reddish-brown plastic w/EPM.",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "M1 Kader harder plastic, mid brown w/EPM on the front of the lightsaber",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "Kader HK used a light brown fabric which has deep ribs and isn't fluffy. Earliest cloak has a MIHK cloth tag. The \"Palitoy\" Yoda has a cloak in a lighter shade of brown.",
-          "where": "Look at the plastic colour or shade."
-        }
-      ]
-    },
-    {
       "id": "yoda--kader",
       "figure": "Yoda",
       "factory": "KADER",
@@ -3283,21 +3255,6 @@
       "id": "at-at-driver--kader",
       "figure": "AT-AT Driver",
       "factory": "KADER",
-      "mould": "",
-      "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/characters/esb/at-at-driver/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Made in Hong Kong",
-          "where": "Look at the country stamp."
-        }
-      ]
-    },
-    {
-      "id": "at-at-driver--unitoy",
-      "figure": "AT-AT Driver",
-      "factory": "UNITOY",
       "mould": "",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/characters/esb/at-at-driver/",
@@ -4020,21 +3977,6 @@
       ]
     },
     {
-      "id": "luke-skywalker-jedi-knight-outfit--universal-manufacturers-taiwan",
-      "figure": "Luke Skywalker (Jedi Knight Outfit)",
-      "factory": "UNIVERSAL MANUFACTURERS (TAIWAN)",
-      "mould": "",
-      "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/characters/rotj/luke-skywalker-jedi-knight-outfit/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Taiwan",
-          "where": "Look at the country stamp."
-        }
-      ]
-    },
-    {
       "id": "luke-skywalker-jedi-knight-outfit--universal-manufacturers",
       "figure": "Luke Skywalker (Jedi Knight Outfit)",
       "factory": "UNIVERSAL MANUFACTURERS",
@@ -4160,21 +4102,6 @@
         {
           "category": "coo",
           "detail": "Taiwan",
-          "where": "Look at the country stamp."
-        }
-      ]
-    },
-    {
-      "id": "princess-leia-organa-boushh-disguise--unitoy-lili-ledy",
-      "figure": "Princess Leia Organa (Boushh Disguise)",
-      "factory": "UNITOY / LILI LEDY",
-      "mould": "",
-      "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/characters/rotj/princess-leia-organa-boussh-disguise/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Hong Kong only",
           "where": "Look at the country stamp."
         }
       ]
@@ -4662,21 +4589,6 @@
       "id": "weequay--smile",
       "figure": "Weequay",
       "factory": "Smile",
-      "mould": "",
-      "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/characters/rotj/weequay/",
-      "tells": [
-        {
-          "category": "coo",
-          "detail": "Hong Kong only",
-          "where": "Look at the country stamp."
-        }
-      ]
-    },
-    {
-      "id": "weequay--unitoy",
-      "figure": "Weequay",
-      "factory": "UNITOY",
       "mould": "",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/characters/rotj/weequay/",
@@ -6811,7 +6723,10 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "princess-leia-organa--kader-m1",
+        "princess-leia-organa--kader-m3"
+      ]
     },
     {
       "id": "leia-blaster--lili-ledy-m1",
@@ -6865,6 +6780,11 @@
           "category": "plastic",
           "detail": "Dark grey",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "mould",
+          "detail": "Grey M1 is the Lili Ledy blaster for Endor Poncho Leia. Do not pair it with this Princess Leia Organa.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
         }
       ],
       "cardedWith": []
@@ -6903,7 +6823,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "princess-leia-organa--smile-m4"
+      ]
     },
     {
       "id": "leia-blaster--smile-m3",
@@ -6944,7 +6866,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "princess-leia-organa--smile-m4"
+      ]
     },
     {
       "id": "leia-blaster--unitoy-m4",
@@ -6975,7 +6899,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "princess-leia-organa--unitoy-m2"
+      ]
     },
     {
       "id": "leia-blaster--taiwan-m5",
@@ -7041,7 +6967,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "princess-leia-organa--taiwan-m5"
+      ]
     },
     {
       "id": "imperial-blaster--unitoy-m1",
@@ -7900,9 +7828,17 @@
           "category": "plastic",
           "detail": "black (GLASSLITE)",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "cardback",
+          "detail": "Silver Jawa blaster packed with Glasslite Brazil Princess Leia Organa, in place of a Leia blaster.",
+          "where": "If it is still carded, which card is it on?"
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "princess-leia-organa--glasslite-m1",
+        "princess-leia-organa--glasslite-m3"
+      ]
     },
     {
       "id": "jawa-blaster--kader-m3",
@@ -12582,8 +12518,33 @@
       "mould": "M1",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
-      "tells": [],
-      "cardedWith": []
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Very round collar. The armholes are usually not in line.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "plastic",
+          "detail": "M1a is smooth or faint, with no crosshatch. Also seen from a damaged cutting tool.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "M1b is rough, with crosshatch.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "M1c has lines and crosshatch.",
+          "where": "Look at the plastic colour or shade."
+        }
+      ],
+      "cardedWith": [
+        "princess-leia-organa--kader-m1",
+        "princess-leia-organa--kader-m3"
+      ],
+      "sourceNote": "Cape tells from the Variant Villain princess-leia-organa-cape guide. Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa-cape--kader-m2",
@@ -12592,8 +12553,23 @@
       "mould": "M2",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
-      "tells": [],
-      "cardedWith": []
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Later Kader cape. The armholes moved down and the gap between them is wider.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "plastic",
+          "detail": "Faint lines and crosshatch.",
+          "where": "Look at the plastic colour or shade."
+        }
+      ],
+      "cardedWith": [
+        "princess-leia-organa--kader-m1",
+        "princess-leia-organa--kader-m3"
+      ],
+      "sourceNote": "Cape tells from the Variant Villain princess-leia-organa-cape guide. Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa-cape--smile-m3",
@@ -12602,8 +12578,37 @@
       "mould": "M3",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
-      "tells": [],
-      "cardedWith": []
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Smile cape, not Lili Ledy. Pointed top to the collar. Early capes have smaller armholes.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "plastic",
+          "detail": "M3a has faint lines and crosshatch, with small holes.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "M3b is rough, with crosshatch and small holes.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "M3c is faint, with crosshatch.",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "M3d is smooth, with crosshatch.",
+          "where": "Look at the plastic colour or shade."
+        }
+      ],
+      "cardedWith": [
+        "princess-leia-organa--smile-m4"
+      ],
+      "sourceNote": "Cape tells from the Variant Villain princess-leia-organa-cape guide. Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa-cape--unitoy-m4",
@@ -12612,8 +12617,22 @@
       "mould": "M4",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
-      "tells": [],
-      "cardedWith": []
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Bulgy top and sides of the collar. Very early narrow armholes.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "plastic",
+          "detail": "Crosshatch on one side and smooth on the other.",
+          "where": "Look at the plastic colour or shade."
+        }
+      ],
+      "cardedWith": [
+        "princess-leia-organa--unitoy-m2"
+      ],
+      "sourceNote": "Cape tells from the Variant Villain princess-leia-organa-cape guide. Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa-cape--unitoy-m5",
@@ -12622,8 +12641,22 @@
       "mould": "M5",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
-      "tells": [],
-      "cardedWith": []
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Unitoy cape later than the narrow-armhole M4.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "plastic",
+          "detail": "Crosshatch on one side and smooth on the other.",
+          "where": "Look at the plastic colour or shade."
+        }
+      ],
+      "cardedWith": [
+        "princess-leia-organa--unitoy-m2"
+      ],
+      "sourceNote": "Cape tells from the Variant Villain princess-leia-organa-cape guide. Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa-cape--taiwan-m6",
@@ -12632,8 +12665,22 @@
       "mould": "M6",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
-      "tells": [],
-      "cardedWith": []
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Long and very slim, with narrow armholes and bulgy corners.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "plastic",
+          "detail": "Smooth or faint, with no crosshatch.",
+          "where": "Look at the plastic colour or shade."
+        }
+      ],
+      "cardedWith": [
+        "princess-leia-organa--taiwan-m5"
+      ],
+      "sourceNote": "Cape tells from the Variant Villain princess-leia-organa-cape guide. Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa-cape--taiwan-m7",
@@ -12642,8 +12689,22 @@
       "mould": "M7",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
-      "tells": [],
-      "cardedWith": []
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Shorter than the M6 cape, still slim, with narrow armholes.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "plastic",
+          "detail": "Faint on both sides, with no crosshatch.",
+          "where": "Look at the plastic colour or shade."
+        }
+      ],
+      "cardedWith": [
+        "princess-leia-organa--taiwan-m5"
+      ],
+      "sourceNote": "Cape tells from the Variant Villain princess-leia-organa-cape guide. Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "princess-leia-organa-cape--glasslite-m8",
@@ -12652,8 +12713,23 @@
       "mould": "M8",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/princess-leia-organa-cape/",
-      "tells": [],
-      "cardedWith": []
+      "tells": [
+        {
+          "category": "mould",
+          "detail": "Glasslite cape made in Brazil. Very distinctive shape that curves inwards on both sides under the armholes.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "plastic",
+          "detail": "White vinyl. Faint or smooth.",
+          "where": "Look at the plastic colour or shade."
+        }
+      ],
+      "cardedWith": [
+        "princess-leia-organa--glasslite-m1",
+        "princess-leia-organa--glasslite-m3"
+      ],
+      "sourceNote": "Cape tells from the Variant Villain princess-leia-organa-cape guide. Owner Warren, 11 Oct 2026. data/references/owner-verified/princess-leia-organa.md."
     },
     {
       "id": "leia-bespin-cape--kader-m1",
@@ -14403,5 +14479,6 @@
       ]
     }
   ],
-  "lukeOwner": "data/references/owner-verified/luke-skywalker.md"
+  "lukeOwner": "data/references/owner-verified/luke-skywalker.md",
+  "leiaOwner": "data/references/owner-verified/princess-leia-organa.md"
 }

@@ -38,11 +38,13 @@ Mould Variants:
 M1 – Kader / Lili Ledy  
 M2 – Smile  
 M3 – Smile  
-M4 – Unitoy / Lili Ledy  
+M4 – Unitoy  
 M5 – Taiwan  
 
 Notes:
 - 5 main moulds + subvariants
+- The grey Lili Ledy blaster is M1, for Endor Poncho Leia. Do not pair it with this figure.
+- Glasslite (Brazil) Leia came with a silver Jawa blaster instead of a Leia blaster, and with the M8 cape.
 - Produced in high-volume sprue trees
 - Variation influenced by mould differences and production conditions
 
@@ -89,6 +91,21 @@ COO Family 4: Smile
 COO Family 5: Taiwan  
 
 --------------------------------------------------
+
+Owner-verified COO (Warren, 11 Oct 2026):
+
+The country stamp is on the back of the left leg, under "© G.M.F.G.I. 1977". A partial or cut-off country name counts as No COO.
+
+Kader M1 and Kader M3 both read HONG KONG. They differ by paint and sculpt, and by where the stamp sits. On Kader M1 the H of HONG starts under the first G of G.M.F.G.I., and the G of KONG sits under the 77 of 1977. On Kader M3 the H of HONG starts under the ©, and the G of KONG ends under the 9 of 1977.
+
+Smile M4 reads HONG KONG with the H of HONG under the first G of the licensing line, and the word ends before the first 1 of 1977. That stamp is shorter than Kader M1. Smile can also be No COO.
+
+'MADE IN TAIWAN' is on the back of the left leg under the licensing line.
+
+Glasslite M1 and Glasslite M3 are both No COO. They share the Kader M1 and Kader M3 moulds respectively. Glasslite (Brazil) came with a silver Jawa blaster instead of a Leia blaster, and with the M8 cape. The M8 cape is white vinyl and curves inwards on both sides under the armholes.
+
+The grey Lili Ledy blaster is M1 for Endor Poncho Leia. Do not pair it with this figure. Cape M3 is Smile, not Lili Ledy.
+
 
 Sources:
 https://www.variantvillain.com/characters/sw/princess-leia-organa/

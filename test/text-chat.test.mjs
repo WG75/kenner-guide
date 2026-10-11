@@ -1177,8 +1177,8 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
 
   const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
   assert.match(coverage, /Figures with a tell besides the COO stamp: 20 \(was 18\/104\)/);
-  assert.match(coverage, /Accessory variants with tells: 236/);
-  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 118/);
+  assert.match(coverage, /Accessory variants with tells: 244/);
+  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 137/);
   const blaster = await call({ message: "identify the rebel blaster" });
   assert.equal(blaster.json.flowState.topic, "accessory_factory");
   assert.match(blaster.json.reply, /Let's check Rebel Blaster/);
@@ -1186,6 +1186,115 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   assert.match(smile.json.reply, /Smile M1 Rebel Blaster/);
   assert.match(smile.json.reply, /card it with/);
   assert.equal(smile.json.flowState, null);
+});
+
+await test("Princess Leia stamp position separates Kader and Smile, and Glasslite keeps the silver Jawa", async () => {
+  const owner = fs.readFileSync(path.join(root, "data/references/owner-verified/princess-leia-organa.md"), "utf8");
+  assert.match(owner, /Date: 2026-10-11/);
+  assert.match(owner, /Source: owner Warren/);
+  assert.match(owner, /Variant Villain agreed/);
+  assert.match(owner, /silver Jawa blaster/);
+  assert.match(owner, /curves inwards on both sides under the armholes/);
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  const leia = data.figures.find(fig => fig.name === "Princess Leia Organa");
+  assert.equal(leia.stamps.includes("V: Taiwan"), false);
+  assert.ok(leia.guide.includes("V: Taiwan"));
+  assert.match(leia.whereToLook, /back of the left leg/);
+  assert.match(leia.whereToLook, /partial or cut-off country name counts as No COO/);
+  assert.equal(leia.tells.length, 0);
+
+  const start = await call({ message: "identify the variant of Princess Leia Organa" });
+  assert.equal(start.json.flowState.step, "coo");
+  assert.match(start.json.reply, /back of the left leg/);
+  assert.deepEqual(start.json.actions.map(action => action.label), [
+    "'HONG KONG' on the back of the left leg under '© G.M.F.G.I. 1977'",
+    "'MADE IN HONG KONG' on the back of the left leg under '© G.M.F.G.I. 1977'",
+    "'MADE IN TAIWAN' on the back of the left leg under '© G.M.F.G.I. 1977'",
+    "No COO. Licensing line only on the back of the left leg. '© G.M.F.G.I. 1977'",
+    "No COO under the licensing line on the back of the left leg. '© G.M.F.G.I. 1977'"
+  ]);
+
+  const hongKong = await call({
+    message: "'HONG KONG' on the back of the left leg under '© G.M.F.G.I. 1977'",
+    flowState: start.json.flowState
+  });
+  assert.equal(hongKong.json.flowState.step, "follow");
+  assert.deepEqual(hongKong.json.actions.map(action => action.label), [
+    "The H of HONG starts under the first G of G.M.F.G.I., and the G of KONG sits under the 77 of 1977",
+    "The H of HONG starts under the ©, and the G of KONG ends under the 9 of 1977",
+    "The H of HONG starts under the first G of the licensing line, and the word ends before the first 1 of 1977 (shorter than Kader M1)"
+  ]);
+  const kader = await call({
+    message: "The H of HONG starts under the first G of G.M.F.G.I., and the G of KONG sits under the 77 of 1977",
+    flowState: hongKong.json.flowState
+  });
+  assert.match(kader.json.reply, /Kader M1/);
+  assert.equal(kader.json.flowState.step, "which");
+  assert.deepEqual(kader.json.actions.map(action => action.label), ["Leia Blaster", "Princess Leia Organa Cape"]);
+
+  const noCoo = await call({
+    message: "No COO. Licensing line only on the back of the left leg. '© G.M.F.G.I. 1977'",
+    flowState: start.json.flowState
+  });
+  assert.equal(noCoo.json.flowState.step, "follow");
+  assert.deepEqual(noCoo.json.actions.map(action => action.label), [
+    "Same sculpt as the Kader M1",
+    "Same sculpt as the Kader M3"
+  ]);
+  const glasslite = await call({
+    message: "Same sculpt as the Kader M1",
+    flowState: noCoo.json.flowState
+  });
+  assert.match(glasslite.json.reply, /Glasslite M1/);
+  assert.match(glasslite.json.reply, /shares the Kader M1 mould/);
+  assert.equal(glasslite.json.flowState.step, "which");
+  assert.deepEqual(glasslite.json.actions.map(action => action.label), ["Jawa Blaster", "Princess Leia Organa Cape"]);
+
+  const smile = await call({
+    message: "No COO under the licensing line on the back of the left leg. '© G.M.F.G.I. 1977'",
+    flowState: start.json.flowState
+  });
+  assert.match(smile.json.reply, /Smile M4/);
+  assert.equal(smile.json.flowState.step, "which");
+  assert.deepEqual(smile.json.actions.map(action => action.label), ["Leia Blaster", "Princess Leia Organa Cape"]);
+
+  const taiwan = await call({
+    message: "'MADE IN TAIWAN' on the back of the left leg under '© G.M.F.G.I. 1977'",
+    flowState: start.json.flowState
+  });
+  assert.match(taiwan.json.reply, /Taiwan M5/);
+  assert.match(taiwan.json.reply, /back of the left leg/);
+
+  const match = JSON.parse(fs.readFileSync(path.join(root, "data/factory-match.json"), "utf8"));
+  const byId = Object.fromEntries(match.accessoryVariants.map(item => [item.id, item]));
+  assert.deepEqual(byId["leia-blaster--kader-m1"].cardedWith, [
+    "princess-leia-organa--kader-m1",
+    "princess-leia-organa--kader-m3"
+  ]);
+  assert.deepEqual(byId["leia-blaster--lili-ledy-m1"].cardedWith, []);
+  assert.match(JSON.stringify(byId["leia-blaster--lili-ledy-m1"].tells), /Endor Poncho Leia/);
+  assert.deepEqual(byId["leia-blaster--smile-m2"].cardedWith, ["princess-leia-organa--smile-m4"]);
+  assert.deepEqual(byId["leia-blaster--smile-m3"].cardedWith, ["princess-leia-organa--smile-m4"]);
+  assert.deepEqual(byId["leia-blaster--unitoy-m4"].cardedWith, ["princess-leia-organa--unitoy-m2"]);
+  assert.deepEqual(byId["leia-blaster--taiwan-m5"].cardedWith, ["princess-leia-organa--taiwan-m5"]);
+  assert.deepEqual(byId["princess-leia-organa-cape--smile-m3"].cardedWith, ["princess-leia-organa--smile-m4"]);
+  assert.match(JSON.stringify(byId["princess-leia-organa-cape--smile-m3"].tells), /not Lili Ledy/);
+  assert.match(JSON.stringify(byId["princess-leia-organa-cape--kader-m1"].tells), /round collar/);
+  assert.match(JSON.stringify(byId["princess-leia-organa-cape--glasslite-m8"].tells), /curves inwards on both sides under the armholes/);
+  assert.deepEqual(byId["jawa-blaster--glasslite-m2"].cardedWith, [
+    "princess-leia-organa--glasslite-m1",
+    "princess-leia-organa--glasslite-m3"
+  ]);
+  const glass = match.figureVariants.find(item => item.id === "princess-leia-organa--glasslite-m1");
+  assert.equal(glass.factory, "Glasslite M1");
+  assert.equal(glass.mould, "M1");
+  const cape = fs.readFileSync(path.join(root, "data/accessories/princess-leia-organa-cape.txt"), "utf8");
+  assert.match(cape, /M3 is Smile, not Lili Ledy/);
+  assert.doesNotMatch(cape, /M3 \(LILI LEDY\)/);
+  const blasterFile = fs.readFileSync(path.join(root, "data/accessories/leia-blaster.txt"), "utf8");
+  assert.match(blasterFile, /five Leia blaster moulds/);
+  assert.match(blasterFile, /silver Jawa blaster/);
+  assert.doesNotMatch(blasterFile, /same mould family as the Jawa blaster/);
 });
 
 function loadCatalog() {
