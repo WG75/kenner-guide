@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Signing in…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+  <p>Signing in…</p>
+  <script type="module">
+    const config = await fetch("/api/members").then((res) => res.json()).catch(() => ({}));
+    if (!config.publishableKey) {
+      location.replace("/");
+    } else {
+      const mod = await import("https://esm.sh/@clerk/clerk-js@5.128.0");
+      const Clerk = mod.Clerk || mod.default;
+      const clerk = new Clerk(config.publishableKey);
+      await clerk.load();
+      await clerk.handleRedirectCallback({
+        signInForceRedirectUrl: "/",
+        signUpForceRedirectUrl: "/"
+      });
+    }
+  </script>
+</body>
+</html>
