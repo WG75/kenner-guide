@@ -445,6 +445,8 @@ def main():
         if not record.get("source"):
             record["source"] = "variantvillain.com"
         record["tells"] = extract_tells(record)
+    from apply_luke_owner import apply_coo_figures
+    apply_coo_figures(payload["figures"])
     payload["ownerStampNote"] = (
         "Six figures were revised by the owner on 11 Oct 2026. "
         "Unchanged rows keep source variantvillain.com, or the earlier owner sheet where that row was already owner-verified."
@@ -467,6 +469,10 @@ def main():
     owner["figures"] = kept
     owner["reviewNote"] = "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported."
     OWNER_JSON.write_text(json.dumps(owner, indent=2, ensure_ascii=False) + "\n")
+    from apply_luke_owner import sync_owner_stamps
+    luke = next((fig for fig in payload["figures"] if fig.get("name") == "Luke Skywalker"), None)
+    if luke:
+        sync_owner_stamps(luke)
     write_report(payload["figures"], edited)
     print("edited", ", ".join(edited))
 

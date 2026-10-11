@@ -1019,49 +1019,97 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   assert.match(report, /Luke Skywalker: paint, hair/);
   assert.match(report, /- Princess Leia Organa\n/);
 
+  const owner = fs.readFileSync(path.join(root, "data/references/owner-verified/luke-skywalker.md"), "utf8");
+  assert.match(owner, /Date: 2026-10-11/);
+  assert.match(owner, /Source: owner Warren/);
+  assert.match(owner, /back of the left leg/);
+  assert.match(owner, /Never use Mint as a grade/);
+  assert.match(byName["Luke Skywalker"].whereToLook, /back of the left leg/);
+  assert.match(byName["Luke Skywalker"].whereToLook, /© G\.M\.F\.G\.I\. 1977/);
+  assert.match(byName["Luke Skywalker"].whereToLook, /partial or cut-off country name counts as No COO/);
+
   const start = await call({ message: "identify the variant of Luke Skywalker" });
   assert.equal(calls.length, 0);
   assert.match(start.json.reply, /country of origin \(COO\) stamp/);
   assert.match(start.json.reply, /stamp alone is not the variant/);
+  assert.match(start.json.reply, /back of the left leg/);
   assert.deepEqual(start.json.actions.map(action => action.label), [
-    "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
-    "'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'",
-    "No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'",
-    "COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'",
-    "Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'",
-    "'Hong Kong' on left leg. '© G.M.F.G.I. 1977'",
-    "no COO on left leg. '© G.M.F.G.I. 1977'"
+    "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+    "'China' on a raised bar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+    "No COO on the back of the left leg. '© G.M.F.G.I. 1977'",
+    "COO scar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+    "Taiwan on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+    "'Hong Kong' on the back of the left leg. '© G.M.F.G.I. 1977'"
   ]);
 
   const china = await call({
-    message: "'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'",
+    message: "'China' on a raised bar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
     flowState: start.json.flowState
   });
   assert.match(china.json.reply, /Kader China M1/);
   assert.equal(china.json.flowState.step, "offer");
   assert.match(china.json.reply, /Telescoping Lightsaber/);
 
+  const noCoo = await call({
+    message: "No COO on the back of the left leg. '© G.M.F.G.I. 1977'",
+    flowState: start.json.flowState
+  });
+  assert.equal(noCoo.json.flowState.step, "follow");
+  assert.deepEqual(noCoo.json.actions.map(action => action.label), [
+    "Blank raised bar, and the licensing details are less defined",
+    "Blank raised bar, and the licensing details look ordinary",
+    "No raised bar"
+  ]);
+  const glasslite = await call({
+    message: "Blank raised bar, and the licensing details are less defined",
+    flowState: noCoo.json.flowState
+  });
+  assert.match(glasslite.json.reply, /Glasslite M1/);
+  assert.match(glasslite.json.reply, /blank raised bar/);
+  const meccano = await call({
+    message: "Blank raised bar, and the licensing details look ordinary",
+    flowState: noCoo.json.flowState
+  });
+  assert.match(meccano.json.reply, /Meccano M1/);
+  const smileNoBar = await call({
+    message: "No raised bar",
+    flowState: noCoo.json.flowState
+  });
+  assert.match(smileNoBar.json.reply, /Smile No COO/);
+  assert.match(smileNoBar.json.reply, /no bar is Smile/);
+
   const shared = await call({
-    message: "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+    message: "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
     flowState: start.json.flowState
   });
   assert.equal(shared.json.flowState.step, "tell");
   assert.match(shared.json.reply, /Kader M1/);
   assert.match(shared.json.reply, /Unitoy M2/);
+  assert.match(shared.json.reply, /Poch blonde/);
   assert.match(shared.json.reply, /country stamp alone cannot separate them/);
   assert.match(shared.json.reply, /Look at the hair colour/);
   assert.ok(shared.json.actions.some(action => /orange hair/i.test(action.label)));
   assert.ok(shared.json.actions.some(action => /dull light yellow hair/i.test(action.label)));
+  assert.ok(shared.json.actions.some(action => /Poch blonde hair/i.test(action.label)));
+  assert.ok(shared.json.actions.some(action => /Poch brown hair/i.test(action.label)));
+  assert.ok(shared.json.actions.some(action => /Poch mixed/i.test(action.label)));
 
   const orange = shared.json.actions.find(action => /orange hair \(dull/i.test(action.label));
   const unitoy = await call({ message: orange.label, flowState: shared.json.flowState });
   assert.match(unitoy.json.reply, /Unitoy M2/);
   assert.doesNotMatch(unitoy.json.reply, /Kader M1/);
-  assert.equal(unitoy.json.flowState.step, "offer");
-  const check = await call({ message: "Check the accessory", flowState: unitoy.json.flowState });
+  assert.equal(unitoy.json.flowState.step, "which");
+  assert.ok(unitoy.json.actions.some(action => action.label === "Telescoping Lightsaber"));
+  assert.ok(unitoy.json.actions.some(action => action.label === "Double-Telescoping Lightsaber"));
+  const check = await call({ message: "Telescoping Lightsaber", flowState: unitoy.json.flowState });
   assert.equal(check.json.flowState.step, "tell");
   assert.match(check.json.reply, /Telescoping Lightsaber/);
   assert.match(check.json.reply, /Look at the plastic colour/);
+
+  const poch = shared.json.actions.find(action => /Poch blonde hair/i.test(action.label));
+  const pochReply = await call({ message: poch.label, flowState: shared.json.flowState });
+  assert.match(pochReply.json.reply, /Poch blonde/);
+  assert.doesNotMatch(pochReply.json.reply, /Unitoy M2/);
 
   const unsure = await call({ message: "I'm not sure", flowState: shared.json.flowState });
   assert.match(unsure.json.reply, /Kader M1/);
@@ -1084,17 +1132,53 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   const photoStart = await call({ message: "A", flowState: photoYes.json.flowState });
   assert.equal(photoStart.json.flowState.photoTells.join(" "), "lightsaber orange hair");
   const fromPhoto = await call({
-    message: "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+    message: "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
     flowState: photoStart.json.flowState
   });
   assert.match(fromPhoto.json.reply, /Unitoy M2/);
   assert.match(fromPhoto.json.reply, /photo/i);
-  assert.equal(fromPhoto.json.flowState.step, "offer");
+  assert.equal(fromPhoto.json.flowState.step, "which");
+
+  const factories = JSON.parse(fs.readFileSync(path.join(root, "data/factories.json"), "utf8"));
+  const factoryCountries = Object.fromEntries(factories.map(item => [item.name, item.country]));
+  assert.equal(factoryCountries.Poch, "Spain");
+  assert.equal(factoryCountries.PBP, "Spain");
+  assert.equal(factoryCountries["Kader China"], "China");
+  assert.equal(factoryCountries.Meccano, "France");
+  assert.equal(factoryCountries.Glasslite, "Brazil");
+  assert.equal(factoryCountries["Lili Ledy"], "Mexico");
+  assert.equal(factoryCountries.Takara, "Japan");
+  assert.equal(factoryCountries["Top Toys"], "Argentina");
+
+  const match = JSON.parse(fs.readFileSync(path.join(root, "data/factory-match.json"), "utf8"));
+  const sabre = Object.fromEntries(match.accessoryVariants.map(item => [item.id, item]));
+  assert.equal(sabre["telescoping-lightsaber--kader-m1"], undefined);
+  assert.equal(sabre["telescoping-lightsaber--unknown-m1"].factory, "Unknown");
+  assert.equal(sabre["telescoping-lightsaber--unknown-m1"].mould, "M1");
+  assert.ok(sabre["telescoping-lightsaber--unknown-m1"].tells.some(item => item.detail === "sinks in water"));
+  for (const id of ["luke-skywalker--kader-m1", "luke-skywalker--unitoy-m2", "luke-skywalker--smile-m4", "luke-skywalker--taiwan-m3"]) {
+    assert.ok(sabre["telescoping-lightsaber--unknown-m1"].cardedWith.includes(id), id);
+  }
+  assert.equal(sabre["double-telescoping-lightsaber--kader-m2"], undefined);
+  assert.equal(sabre["double-telescoping-lightsaber--kader-m1"].mould, "M1");
+  assert.equal(sabre["double-telescoping-lightsaber--unitoy-m1"].mould, "M1");
+  assert.ok(sabre["double-telescoping-lightsaber--unitoy-circled"].cardedWith.includes("luke-skywalker--unitoy-m2"));
+  assert.ok(sabre["telescoping-lightsaber--unitoy-m3"].cardedWith.includes("luke-skywalker--unitoy-m2"));
+  assert.equal(sabre["telescoping-lightsaber--unitoy-m3"].cardedWith.includes("luke-skywalker--smile-m4"), false);
+  assert.ok(sabre["telescoping-lightsaber--kader-m5"].cardedWith.includes("luke-skywalker--poch-blonde"));
+  assert.ok(sabre["telescoping-lightsaber--pbp-m6"].cardedWith.includes("luke-skywalker--smile-no-coo"));
+  assert.ok(sabre["telescoping-lightsaber--taiwan-m7"].cardedWith.includes("luke-skywalker--taiwan-m3"));
+  assert.ok(sabre["telescoping-lightsaber--glasslite-m8"].cardedWith.includes("luke-skywalker--glasslite-m1"));
+  const meccanoFigure = match.figureVariants.find(item => item.id === "luke-skywalker--meccano-m1");
+  assert.ok(meccanoFigure.tells.every(item => item.category === "coo"));
+  const pbpFigure = match.figureVariants.find(item => item.id === "luke-skywalker--pbp-m2");
+  assert.ok(pbpFigure.tells.some(item => /bright blonde hair/.test(item.detail)));
+  assert.ok(pbpFigure.tells.some(item => /pinkish hands/.test(item.detail)));
 
   const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
   assert.match(coverage, /Figures with a tell besides the COO stamp: 20 \(was 18\/104\)/);
-  assert.match(coverage, /Accessory variants with tells: 239/);
-  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 123/);
+  assert.match(coverage, /Accessory variants with tells: 236/);
+  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 118/);
   const blaster = await call({ message: "identify the rebel blaster" });
   assert.equal(blaster.json.flowState.topic, "accessory_factory");
   assert.match(blaster.json.reply, /Let's check Rebel Blaster/);

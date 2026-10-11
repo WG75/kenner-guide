@@ -18,5 +18,55 @@
     "id": "factory_taiwan",
     "name": "Taiwan",
     "country": "Taiwan"
+  },
+  {
+    "id": "factory_kader_china",
+    "name": "Kader China",
+    "country": "China"
+  },
+  {
+    "id": "factory_meccano",
+    "name": "Meccano",
+    "country": "France"
+  },
+  {
+    "id": "factory_glasslite",
+    "name": "Glasslite",
+    "country": "Brazil"
+  },
+  {
+    "id": "factory_pbp",
+    "name": "PBP",
+    "country": "Spain"
+  },
+  {
+    "id": "factory_poch",
+    "name": "Poch",
+    "country": "Spain"
+  },
+  {
+    "id": "factory_lili_ledy",
+    "name": "Lili Ledy",
+    "country": "Mexico"
+  },
+  {
+    "id": "factory_takara",
+    "name": "Takara",
+    "country": "Japan"
+  },
+  {
+    "id": "factory_top_toys",
+    "name": "Top Toys",
+    "country": "Argentina"
+  },
+  {
+    "id": "factory_kenner",
+    "name": "Kenner",
+    "country": "United States"
+  },
+  {
+    "id": "factory_universal",
+    "name": "Universal Manufacturers",
+    "country": "Taiwan"
   }
 ]

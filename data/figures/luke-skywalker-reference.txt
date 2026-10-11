@@ -151,6 +151,14 @@ DT sabers should NEVER be paired with later COO figures.
 
 ---
 
+Owner-verified COO (Warren, 11 Oct 2026):
+
+The country stamp is on the back of the left leg, under "© G.M.F.G.I. 1977". A partial or cut-off country name counts as No COO.
+
+Poch is the Spanish factory later renamed PBP. It made figures in Spain from older moulds received from Kader, Unitoy or Smile. Blonde Poch uses the Kader COO. Brown-hair Poch uses the Unitoy COO. A mixed figure has a Unitoy head on Kader-COO legs.
+
+Glasslite and Meccano have a blank raised bar. A No COO Luke with no bar is Smile.
+
 Related reference files:
 - double-telescoping-lightsaber.txt
 - telescoping-lightsaber.txt

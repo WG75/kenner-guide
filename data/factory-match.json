@@ -84,12 +84,12 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "detail": "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
           "where": "Look at the country stamp."
         },
         {
           "category": "paint",
-          "detail": "Kader with DT (lettered) saber, brown eyes (which is assumed to be the earliest Kader figure)",
+          "detail": "Kader with brown eyes (the earliest Kader figure)",
           "where": "Look at the paint colour."
         },
         {
@@ -107,7 +107,8 @@
           "detail": "Kader with dull light yellow hair, transition face spray-mask to china, and light flesh hands",
           "where": "Look at the hair colour."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md."
     },
     {
       "id": "luke-skywalker--unitoy-m2",
@@ -119,12 +120,12 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "'Hong Kong' on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "detail": "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
           "where": "Look at the country stamp."
         },
         {
           "category": "paint",
-          "detail": "Unitoy with DT (circled) saber, brown eyes and opaque body which is the earliest Unitoy figure. Sadly the opaque material tends to yellow quite easily.",
+          "detail": "Unitoy with brown eyes and an opaque body, the earliest Unitoy figure. The opaque material tends to yellow.",
           "where": "Look at the paint colour."
         },
         {
@@ -148,11 +149,6 @@
           "where": "Look at the hair colour."
         },
         {
-          "category": "mould",
-          "detail": "Unitoy changed from lettered to flat tip transition",
-          "where": "Look at the mould: shape, proportions, tip or hilt."
-        },
-        {
           "category": "hair",
           "detail": "Unitoy with yellowish dark brown hair",
           "where": "Look at the hair colour."
@@ -171,13 +167,9 @@
           "category": "hair",
           "detail": "Unitoy with very dark brown hair",
           "where": "Look at the hair colour."
-        },
-        {
-          "category": "mould",
-          "detail": "The brown haired Unitoy Lukes came (nearly) all with \"thin tip, flat transition\"",
-          "where": "Look at the mould: shape, proportions, tip or hilt."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md."
     },
     {
       "id": "luke-skywalker--kader-china-m1",
@@ -189,15 +181,11 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "'China' on a raised bar under licensing details on left leg. '© G.M.F.G.I. 1977'",
+          "detail": "'China' on a raised bar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
           "where": "Look at the country stamp."
-        },
-        {
-          "category": "mould",
-          "detail": "The Kader China and the French Trilogo figures came with \"round tip\" saber",
-          "where": "Look at the mould: shape, proportions, tip or hilt."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md."
     },
     {
       "id": "luke-skywalker--meccano-m1",
@@ -213,16 +201,17 @@
           "where": "Look at the country stamp."
         },
         {
-          "category": "cardback",
+          "category": "coo",
           "detail": "French Trilogo (Meccano) double raised bar",
-          "where": "If it is still carded, which card is it on?"
+          "where": "Look at the country stamp."
         },
         {
-          "category": "cardback",
+          "category": "coo",
           "detail": "French Trilogo (Meccano) scarred raised bar",
-          "where": "If it is still carded, which card is it on?"
+          "where": "Look at the country stamp."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md."
     },
     {
       "id": "luke-skywalker--glasslite-m1",
@@ -236,8 +225,14 @@
           "category": "coo",
           "detail": "No COO blank raised bar under licensing details. '© G.M.F.G.I. 1977'",
           "where": "Look at the country stamp."
+        },
+        {
+          "category": "coo",
+          "detail": "Glasslite licensing details are less defined",
+          "where": "Look at the country stamp."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md."
     },
     {
       "id": "luke-skywalker--pbp-m2",
@@ -249,10 +244,26 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "COO scar on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "detail": "COO scar on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
           "where": "Look at the country stamp."
+        },
+        {
+          "category": "coo",
+          "detail": "PBP with a scarred Unitoy COO",
+          "where": "Look at the country stamp."
+        },
+        {
+          "category": "hair",
+          "detail": "PBP with bright blonde hair",
+          "where": "Look at the hair colour."
+        },
+        {
+          "category": "paint",
+          "detail": "PBP with pinkish hands and neck",
+          "where": "Look at the paint colour."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md."
     },
     {
       "id": "luke-skywalker--taiwan-m3",
@@ -264,7 +275,7 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "Taiwan on left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "detail": "Taiwan on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
           "where": "Look at the country stamp."
         },
         {
@@ -292,7 +303,8 @@
           "detail": "Taiwan with black eyes and dark grey trousers/boots",
           "where": "Look at the paint colour."
         }
-      ]
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md."
     },
     {
       "id": "luke-skywalker--smile-m4",
@@ -304,7 +316,7 @@
       "tells": [
         {
           "category": "coo",
-          "detail": "'Hong Kong' on left leg. '© G.M.F.G.I. 1977'",
+          "detail": "'Hong Kong' on the back of the left leg. '© G.M.F.G.I. 1977'",
           "where": "Look at the country stamp."
         },
         {
@@ -330,6 +342,101 @@
         {
           "category": "hair",
           "detail": "Smile No Coo with greenish light brown hair (appeared on HK and No Coo)",
+          "where": "Look at the hair colour."
+        }
+      ],
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md."
+    },
+    {
+      "id": "luke-skywalker--smile-no-coo",
+      "figure": "Luke Skywalker",
+      "factory": "Smile No COO",
+      "mould": "M4",
+      "source": "owner",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md.",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "No COO on the back of the left leg, no raised bar. '© G.M.F.G.I. 1977'",
+          "where": "Look at the country stamp."
+        },
+        {
+          "category": "hair",
+          "detail": "Smile No COO with brown hair on a Trilogo card",
+          "where": "Look at the hair colour."
+        },
+        {
+          "category": "hair",
+          "detail": "Smile No Coo with greenish light brown hair (appeared on HK and No Coo)",
+          "where": "Look at the hair colour."
+        }
+      ]
+    },
+    {
+      "id": "luke-skywalker--poch-blonde",
+      "figure": "Luke Skywalker",
+      "factory": "Poch blonde",
+      "mould": "",
+      "source": "owner",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md.",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "where": "Look at the country stamp."
+        },
+        {
+          "category": "hair",
+          "detail": "Poch blonde hair, pale cream hands, greyish blotchy trousers and boots, higher left eyebrow, melt marks on the back",
+          "where": "Look at the hair colour."
+        },
+        {
+          "category": "paint",
+          "detail": "Poch with pale cream hands and darker greyish blotchy trousers and boots",
+          "where": "Look at the paint colour."
+        }
+      ]
+    },
+    {
+      "id": "luke-skywalker--poch-brown-hair",
+      "figure": "Luke Skywalker",
+      "factory": "Poch brown-hair",
+      "mould": "",
+      "source": "owner",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md.",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "where": "Look at the country stamp."
+        },
+        {
+          "category": "hair",
+          "detail": "Poch brown hair, dark trousers and boots, pale cream or pinkish hands and neck",
+          "where": "Look at the hair colour."
+        }
+      ]
+    },
+    {
+      "id": "luke-skywalker--poch-mixed",
+      "figure": "Luke Skywalker",
+      "factory": "Poch mixed",
+      "mould": "",
+      "source": "owner",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/luke-skywalker.md.",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/luke-skywalker/",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "'Hong Kong' on the back of the left leg under licensing details. '© G.M.F.G.I. 1977'",
+          "where": "Look at the country stamp."
+        },
+        {
+          "category": "hair",
+          "detail": "Poch mixed, a Unitoy head on Kader-COO legs",
           "where": "Look at the hair colour."
         }
       ]
@@ -5597,10 +5704,10 @@
       "cardedWith": []
     },
     {
-      "id": "double-telescoping-lightsaber--unitoy-m1",
+      "id": "double-telescoping-lightsaber--unitoy-circled",
       "accessory": "Double-Telescoping Lightsaber",
       "factory": "Unitoy",
-      "mould": "M1",
+      "mould": "circled",
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
       "tells": [
@@ -5618,422 +5725,113 @@
           "category": "plastic",
           "detail": "circled: yellow",
           "where": "Look at the plastic colour or shade."
-        }
-      ],
-      "cardedWith": []
-    },
-    {
-      "id": "double-telescoping-lightsaber--kader-m2",
-      "accessory": "Double-Telescoping Lightsaber",
-      "factory": "Kader",
-      "mould": "M2",
-      "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
-      "tells": [
-        {
-          "category": "plastic",
-          "detail": "pale yellow",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "red (no picture)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale blue (no picture)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "lettered: yellow",
-          "where": "Look at the plastic colour or shade."
-        }
-      ],
-      "cardedWith": []
-    },
-    {
-      "id": "double-telescoping-lightsaber--smile-m2",
-      "accessory": "Double-Telescoping Lightsaber",
-      "factory": "Smile",
-      "mould": "M2",
-      "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
-      "tells": [
-        {
-          "category": "plastic",
-          "detail": "pale yellow",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "red (no picture)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale blue (no picture)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "lettered: yellow",
-          "where": "Look at the plastic colour or shade."
-        }
-      ],
-      "cardedWith": []
-    },
-    {
-      "id": "double-telescoping-lightsaber--unitoy-m2",
-      "accessory": "Double-Telescoping Lightsaber",
-      "factory": "Unitoy",
-      "mould": "M2",
-      "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
-      "tells": [
-        {
-          "category": "plastic",
-          "detail": "pale yellow",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "red (no picture)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale blue (no picture)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "lettered: yellow",
-          "where": "Look at the plastic colour or shade."
-        }
-      ],
-      "cardedWith": []
-    },
-    {
-      "id": "telescoping-lightsaber--kader-m1",
-      "accessory": "Telescoping Lightsaber",
-      "factory": "Kader",
-      "mould": "M1",
-      "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
-      "tells": [
-        {
-          "category": "plastic",
-          "detail": "pale light blue (LL)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale blue (X)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "blue (M)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "orange red (\"three dots\")",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale red (CC)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "red (T)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale light yellow (N)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale yellow (FF)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "reddish yellow (H)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "yellow (V)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "orange red (...)",
-          "where": "Look at the plastic colour or shade."
         },
         {
           "category": "cardback",
-          "detail": "(12A) figures on 12-backs .These sabers do",
+          "detail": "Circled unlettered DT, carded with the earliest Unitoy Luke",
           "where": "If it is still carded, which card is it on?"
         }
       ],
       "cardedWith": [
-        "luke-skywalker--taiwan-m3",
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5"
-      ]
+        "luke-skywalker--unitoy-m2"
+      ],
+      "sourceNote": "Unlettered circled DT. A lettered hilt is M1, so this sabre is not M1. Owner Warren, 11 Oct 2026."
     },
     {
-      "id": "telescoping-lightsaber--unitoy-m1",
-      "accessory": "Telescoping Lightsaber",
-      "factory": "Unitoy",
+      "id": "double-telescoping-lightsaber--kader-m1",
+      "accessory": "Double-Telescoping Lightsaber",
+      "factory": "Kader",
       "mould": "M1",
       "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
+      "sourceUrl": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
       "tells": [
         {
           "category": "plastic",
-          "detail": "pale light blue (LL)",
+          "detail": "pale yellow",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "pale blue (X)",
+          "detail": "red (no picture)",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "blue (M)",
+          "detail": "pale blue (no picture)",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "orange red (\"three dots\")",
+          "detail": "lettered: yellow",
           "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale red (CC)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "red (T)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale light yellow (N)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale yellow (FF)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "reddish yellow (H)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "yellow (V)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "orange red (...)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "cardback",
-          "detail": "(12A) figures on 12-backs .These sabers do",
-          "where": "If it is still carded, which card is it on?"
         }
       ],
-      "cardedWith": [
-        "luke-skywalker--taiwan-m3",
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5"
-      ]
+      "cardedWith": [],
+      "sourceNote": "Lettered sabres are always M1. Owner Warren, 11 Oct 2026."
     },
     {
-      "id": "telescoping-lightsaber--smile-m1",
-      "accessory": "Telescoping Lightsaber",
+      "id": "double-telescoping-lightsaber--smile-m1",
+      "accessory": "Double-Telescoping Lightsaber",
       "factory": "Smile",
       "mould": "M1",
       "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
+      "sourceUrl": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
       "tells": [
         {
           "category": "plastic",
-          "detail": "pale light blue (LL)",
+          "detail": "pale yellow",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "pale blue (X)",
+          "detail": "red (no picture)",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "blue (M)",
+          "detail": "pale blue (no picture)",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "orange red (\"three dots\")",
+          "detail": "lettered: yellow",
           "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale red (CC)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "red (T)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale light yellow (N)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale yellow (FF)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "reddish yellow (H)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "yellow (V)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "orange red (...)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "cardback",
-          "detail": "(12A) figures on 12-backs .These sabers do",
-          "where": "If it is still carded, which card is it on?"
         }
       ],
-      "cardedWith": [
-        "luke-skywalker--taiwan-m3",
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5"
-      ]
+      "cardedWith": [],
+      "sourceNote": "Lettered sabres are always M1. Owner Warren, 11 Oct 2026."
     },
     {
-      "id": "telescoping-lightsaber--taiwan-m1",
-      "accessory": "Telescoping Lightsaber",
-      "factory": "Taiwan",
+      "id": "double-telescoping-lightsaber--unitoy-m1",
+      "accessory": "Double-Telescoping Lightsaber",
+      "factory": "Unitoy",
       "mould": "M1",
       "source": "variantvillain.com",
-      "sourceUrl": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
+      "sourceUrl": "https://www.variantvillain.com/accessory-guide/double-telescoping-lightsaber/",
       "tells": [
         {
           "category": "plastic",
-          "detail": "pale light blue (LL)",
+          "detail": "pale yellow",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "pale blue (X)",
+          "detail": "red (no picture)",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "blue (M)",
+          "detail": "pale blue (no picture)",
           "where": "Look at the plastic colour or shade."
         },
         {
           "category": "plastic",
-          "detail": "orange red (\"three dots\")",
+          "detail": "lettered: yellow",
           "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale red (CC)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "red (T)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale light yellow (N)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "pale yellow (FF)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "reddish yellow (H)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "yellow (V)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "plastic",
-          "detail": "orange red (...)",
-          "where": "Look at the plastic colour or shade."
-        },
-        {
-          "category": "cardback",
-          "detail": "(12A) figures on 12-backs .These sabers do",
-          "where": "If it is still carded, which card is it on?"
         }
       ],
-      "cardedWith": [
-        "luke-skywalker--taiwan-m3",
-        "darth-vader--kader-m1",
-        "darth-vader--kader-m2",
-        "darth-vader--kader-m3",
-        "darth-vader--unitoy-m6",
-        "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8",
-        "darth-vader--unitoy-m5"
-      ]
+      "cardedWith": [],
+      "sourceNote": "Lettered sabres are always M1. Owner Warren, 11 Oct 2026."
     },
     {
       "id": "telescoping-lightsaber--unitoy-m2",
@@ -6140,14 +5938,19 @@
           "category": "cardback",
           "detail": "in Hong Kong. They were packed on UNITOY cards not before 21-backs. The moulds were also used by",
           "where": "If it is still carded, which card is it on?"
+        },
+        {
+          "category": "cardback",
+          "detail": "Brown-hair Unitoy Luke from the 21-back, not Smile Luke",
+          "where": "If it is still carded, which card is it on?"
         }
       ],
       "cardedWith": [
-        "luke-skywalker--smile-m4",
         "darth-vader--kader-m1",
         "darth-vader--kader-m2",
         "darth-vader--kader-m3",
-        "darth-vader--smile-m4"
+        "darth-vader--smile-m4",
+        "luke-skywalker--unitoy-m2"
       ]
     },
     {
@@ -6205,7 +6008,6 @@
         }
       ],
       "cardedWith": [
-        "luke-skywalker--smile-m4",
         "darth-vader--kader-m1",
         "darth-vader--kader-m2",
         "darth-vader--kader-m3",
@@ -6317,7 +6119,12 @@
         "darth-vader--unitoy-m7",
         "darth-vader--unitoy-m8",
         "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8"
+        "darth-vader--pbp-m8",
+        "luke-skywalker--kader-m1",
+        "luke-skywalker--smile-m4",
+        "luke-skywalker--pbp-m2",
+        "luke-skywalker--poch-blonde",
+        "luke-skywalker--poch-brown-hair"
       ]
     },
     {
@@ -6409,7 +6216,12 @@
         "darth-vader--unitoy-m7",
         "darth-vader--unitoy-m8",
         "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8"
+        "darth-vader--pbp-m8",
+        "luke-skywalker--kader-m1",
+        "luke-skywalker--smile-m4",
+        "luke-skywalker--pbp-m2",
+        "luke-skywalker--poch-blonde",
+        "luke-skywalker--poch-brown-hair"
       ]
     },
     {
@@ -6501,7 +6313,12 @@
         "darth-vader--unitoy-m7",
         "darth-vader--unitoy-m8",
         "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8"
+        "darth-vader--pbp-m8",
+        "luke-skywalker--kader-m1",
+        "luke-skywalker--smile-m4",
+        "luke-skywalker--pbp-m2",
+        "luke-skywalker--poch-blonde",
+        "luke-skywalker--poch-brown-hair"
       ]
     },
     {
@@ -6541,6 +6358,11 @@
           "category": "plastic",
           "detail": "bright yellow",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "cardback",
+          "detail": "Yellow M6 carded with the No COO Smile brown-hair Luke on Trilogo cards",
+          "where": "If it is still carded, which card is it on?"
         }
       ],
       "cardedWith": [
@@ -6548,7 +6370,8 @@
         "darth-vader--unitoy-m7",
         "darth-vader--unitoy-m8",
         "darth-vader--unitoy-m5",
-        "darth-vader--pbp-m8"
+        "darth-vader--pbp-m8",
+        "luke-skywalker--smile-no-coo"
       ]
     },
     {
@@ -14479,6 +14302,106 @@
         }
       ],
       "cardedWith": []
+    },
+    {
+      "id": "telescoping-lightsaber--unknown-m1",
+      "accessory": "Telescoping Lightsaber",
+      "factory": "Unknown",
+      "mould": "M1",
+      "source": "owner",
+      "sourceNote": "One M1, made by an unknown company for Kader, Unitoy, Smile and Taiwan. Owner Warren, 11 Oct 2026.",
+      "sourceUrl": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
+      "tells": [
+        {
+          "category": "plastic",
+          "detail": "pale light blue (LL)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "pale blue (X)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "blue (M)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "orange red (\"three dots\")",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "pale red (CC)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "red (T)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "pale light yellow (N)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "pale yellow (FF)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "reddish yellow (H)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "yellow (V)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "plastic",
+          "detail": "orange red (...)",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "cardback",
+          "detail": "(12A) figures on 12-backs .These sabers do",
+          "where": "If it is still carded, which card is it on?"
+        },
+        {
+          "category": "plastic",
+          "detail": "sinks in water",
+          "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "mould",
+          "detail": "Made by an unknown company for Kader, Unitoy, Smile and Taiwan",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "cardback",
+          "detail": "Packed with Kader, Unitoy and Smile Luke on 12A, 12B and 12C, and with Taiwan Luke on 12A only",
+          "where": "If it is still carded, which card is it on?"
+        }
+      ],
+      "cardedWith": [
+        "darth-vader--kader-m1",
+        "darth-vader--kader-m2",
+        "darth-vader--kader-m3",
+        "darth-vader--unitoy-m6",
+        "darth-vader--unitoy-m7",
+        "darth-vader--unitoy-m8",
+        "darth-vader--unitoy-m5",
+        "luke-skywalker--kader-m1",
+        "luke-skywalker--unitoy-m2",
+        "luke-skywalker--smile-m4",
+        "luke-skywalker--taiwan-m3"
+      ]
     }
-  ]
+  ],
+  "lukeOwner": "data/references/owner-verified/luke-skywalker.md"
 }

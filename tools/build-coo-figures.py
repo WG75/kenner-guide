@@ -384,7 +384,9 @@ def main():
         print(("OK " if record["verified"] else "-- "), fig["name"], "opts", len(record["options"]), "details", record["hasDetails"])
 
     from apply_owner_coo import apply_owner_records
+    from apply_luke_owner import apply_coo_figures, sync_owner_stamps
     figures = apply_owner_records(figures)
+    apply_coo_figures(figures)
     payload = {
         "cooGuideUrl": COO_GUIDE,
         "rule": "A partial or cut-off country name counts as No COO. No vintage figure is offered a Mexico leg stamp.",
@@ -392,6 +394,9 @@ def main():
         "figures": figures
     }
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+    luke = next((fig for fig in figures if fig.get("name") == "Luke Skywalker"), None)
+    if luke:
+        sync_owner_stamps(luke)
     verified = sum(1 for fig in figures if fig["verified"])
     print(f"wrote {OUT} figures={len(figures)} verified={verified} fetched_now={fetched}")
 

@@ -372,7 +372,7 @@
         "lightsaber"
       ],
       "years": [],
-      "chars": 3754
+      "chars": 3824
     },
     {
       "relPath": "accessories/emperor-cane.txt",
@@ -1182,7 +1182,7 @@
         "lightsaber"
       ],
       "years": [],
-      "chars": 3839
+      "chars": 4152
     },
     {
       "relPath": "accessories/tusken-raider-cape.txt",
@@ -1944,7 +1944,7 @@
         "factories"
       ],
       "years": [],
-      "chars": 339
+      "chars": 1214
     },
     {
       "relPath": "figures/2-1b-reference.txt",
@@ -4018,7 +4018,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3815
+      "chars": 4322
     },
     {
       "relPath": "figures/luke-skywalker-x-wing-pilot-reference.txt",
@@ -5068,6 +5068,24 @@
       ],
       "years": [],
       "chars": 4735
+    },
+    {
+      "relPath": "references/owner-verified/luke-skywalker.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/luke",
+        "skywalker"
+      ],
+      "keywords": [
+        "owner",
+        "verified/luke",
+        "skywalker"
+      ],
+      "years": [],
+      "chars": 3197
     },
     {
       "relPath": "references/palitoy-history.txt",
@@ -6797,7 +6815,7 @@
         "accvar_st_lightsaber_m1_yellow"
       ],
       "years": [],
-      "chars": 790
+      "chars": 981
     }
   ]
 }
