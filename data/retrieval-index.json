@@ -2652,7 +2652,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5748
+      "chars": 5985
     },
     {
       "relPath": "figures/death-squad-commander-reference.txt",
@@ -5106,6 +5106,24 @@
       ],
       "years": [],
       "chars": 2488
+    },
+    {
+      "relPath": "references/owner-verified/darth-vader.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/darth",
+        "vader"
+      ],
+      "keywords": [
+        "owner",
+        "verified/darth",
+        "vader"
+      ],
+      "years": [],
+      "chars": 3641
     },
     {
       "relPath": "references/owner-verified/luke-skywalker.md",
