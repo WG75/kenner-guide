@@ -384,8 +384,8 @@ await test("same-name photos stay on the original figure unless the later outfit
   assert.equal(lando.flowState.figure, "lando_calrissian");
   assert.doesNotMatch(lando.reply, /Skiff|General Pilot/);
 
-  const skiff = await identify("Lando Calrissian", { visible: ["helmet", "cape"], cues: ["skiff outfit", "helmet"] });
-  assert.equal(skiff.reply, "The figure in your photo appears to be Lando Calrissian (Skiff Guard Disguise), first released in 1983 on the 65-back Return of the Jedi cardback. He looks complete, with his helmet and cape.");
+  const skiff = await identify("Lando Calrissian", { visible: ["helmet", "vibro axe"], cues: ["skiff outfit", "helmet"] });
+  assert.equal(skiff.reply, "The figure in your photo appears to be Lando Calrissian (Skiff Guard Disguise), first released in 1983 on the 65-back Return of the Jedi cardback. He looks complete, with his helmet and vibro axe.");
   assert.equal(skiff.flowState.displayName, "Lando Calrissian (Skiff Guard Disguise)");
 
   const general = await identify("Lando Calrissian (General Pilot)", { visible: ["cape"], cues: ["blue shirt"] });
@@ -393,7 +393,7 @@ await test("same-name photos stay on the original figure unless the later outfit
   assert.doesNotMatch(general.reply, /General Pilot/);
 
   const generalSeen = await identify("Lando", { visible: ["cape", "blaster"], cues: ["general uniform"] });
-  assert.equal(generalSeen.reply, "The figure in your photo appears to be Lando Calrissian (General Pilot), first released in 1985 on the 92-back Power of the Force cardback. He looks complete, with his cape and blaster.");
+  assert.equal(generalSeen.reply, "The figure in your photo appears to be Lando Calrissian (General Pilot), first released in 1985 on the 92-back Power of the Force cardback. He looks complete, with his cape and palace blaster.");
 
   const luke = await identify("Luke Skywalker (X-Wing Pilot)", { visible: ["lightsaber"], cues: ["tunic"] });
   assert.equal(luke.reply, "The figure in your photo appears to be Luke Skywalker, first released in 1977 on the 12-back Star Wars cardback. He looks complete, with his lightsaber.");
@@ -1866,11 +1866,23 @@ await test("owner VF-CB reference pack rules stay on the accessory files", async
   assert.equal(variant.id, "accvar_dt_lightsaber_m2_yellow");
   assert.equal(variant.variant_code, "M1");
   const gaps = read("docs/variantvillain-gaps.md");
-  assert.match(gaps, /\(c\) Accessories with no page or no details: 12/);
+  assert.match(gaps, /\(c\) Accessories with no page or no details: 26/);
   assert.match(gaps, /Luke Skywalker — lightsaber — Telescoping Lightsaber/);
+  assert.match(gaps, /4-LOM — 4-lom rifle/);
+  assert.match(gaps, /Zuckuss — zuckuss rifle/);
+  assert.match(gaps, /Rancor Keeper — staff/);
+  assert.match(gaps, /Barada — skiff vibro staff/);
+  assert.match(gaps, /Lando Calrissian \(General Pilot\) — cape/);
+  assert.match(gaps, /https:\/\/imperialgunnery\.com\/rifles\.htm/);
   assert.doesNotMatch(gaps, /Han Solo \(Bespin Outfit\) — cape/);
   assert.doesNotMatch(gaps, /Romba — bow/);
   assert.doesNotMatch(gaps, /Paploo — spear/);
+  assert.doesNotMatch(gaps, /R2-D2 \(Sensorscope\) — sensorscope/);
+  assert.doesNotMatch(gaps, /4-LOM — blaster/);
+  assert.doesNotMatch(gaps, /Zuckuss — blaster/);
+  assert.doesNotMatch(gaps, /Rancor Keeper — axe/);
+  assert.doesNotMatch(gaps, /Barada — polearm/);
+  assert.doesNotMatch(gaps, /Lando Calrissian \(Skiff Guard Disguise\) — cape/);
 });
 
 await test("Han Bespin, Romba and Paploo have no cape, bow or spear", async () => {
@@ -1900,6 +1912,28 @@ await test("Han Bespin, Romba and Paploo have no cape, bow or spear", async () =
   const note = fs.readFileSync(path.join(root, "data/references/accessory-list-corrections.txt"), "utf8");
   assert.match(note, /Wikipedia has no accessory column|does not name accessories/);
   assert.match(note, /variantvillain.com stays the authority/);
+  const byProduct = Object.fromEntries(debut.figures.map(figure => [figure.product, figure]));
+  assert.deepEqual(byProduct["69420"].accessories, []);
+  assert.deepEqual(byProduct["70010"].accessories, ["4-lom rifle", "4-lom cloak"]);
+  assert.deepEqual(byProduct["70020"].accessories, ["zuckuss rifle"]);
+  assert.deepEqual(byProduct["71350"].accessories, ["staff", "hood"]);
+  assert.deepEqual(byProduct["93750"].accessories, ["skiff vibro staff"]);
+  assert.deepEqual(byProduct["70830"].accessories, ["helmet", "vibro axe"]);
+  assert.deepEqual(byProduct["70760"].accessories, ["vibro axe"]);
+  assert.deepEqual(byProduct["71190"].accessories, ["vibro axe"]);
+  assert.deepEqual(byProduct["39030"].accessories, ["imperial blaster"]);
+  assert.equal(completenessLine(byProduct["69420"], ["sensorscope"]), "");
+  assert.equal(completenessLine(byProduct["70830"], ["helmet", "vibro axe"]), "He looks complete, with his helmet and vibro axe.");
+  assert.equal(completenessLine(byProduct["70830"], ["helmet", "cape"]), "He appears to be missing his vibro axe.");
+  const teebo = fs.readFileSync(path.join(root, "data/figures/teebo-reference.txt"), "utf8");
+  assert.doesNotMatch(teebo, /round tip/);
+  assert.match(teebo, /Teebo has no lightsaber/);
+  const sensorscope = fs.readFileSync(path.join(root, "data/figures/r2-d2-sensorscope-reference.txt"), "utf8");
+  assert.match(sensorscope, /built into the figure/);
+  const gunnery = fs.readFileSync(path.join(root, "data/references/imperial-gunnery-notes.txt"), "utf8");
+  assert.match(gunnery, /https:\/\/imperialgunnery\.com\/rifles\.htm/);
+  assert.match(gunnery, /Zuckuss Rifle/);
+  assert.match(gunnery, /no User-agent block and no Disallow/);
 });
 
 console.error = quietErrors;

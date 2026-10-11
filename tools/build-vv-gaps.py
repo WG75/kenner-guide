@@ -130,7 +130,6 @@ SAME_ACCESSORY = {
     ("luke skywalker", "lightsaber"): "Telescoping Lightsaber",
     ("darth vader", "lightsaber"): "Telescoping Lightsaber",
     ("ben obi wan kenobi", "lightsaber"): "Telescoping Lightsaber",
-    ("luke skywalker x wing pilot", "lightsaber"): "Telescoping Lightsaber",
     ("luke skywalker jedi knight outfit", "lightsaber"): "Handheld Lightsaber",
     ("artoo detoo r2 d2 with pop up lightsaber", "lightsaber"): "Pop-Up Saber",
     ("han solo", "blaster"): "Rebel Blaster",
@@ -138,25 +137,18 @@ SAME_ACCESSORY = {
     ("snaggletooth", "blaster"): "Rebel Blaster",
     ("han solo hoth outfit", "blaster"): "Rebel Blaster",
     ("han solo in trench coat", "blaster"): "Rebel Blaster",
-    ("luke skywalker bespin fatigues", "blaster"): "Rebel Blaster",
     ("death squad commander", "blaster"): "Imperial Blaster",
     ("walrus man", "blaster"): "Imperial Blaster",
     ("boba fett", "blaster"): "Imperial Blaster",
-    ("luke skywalker imperial stormtrooper outfit", "blaster"): "Imperial Blaster",
     ("han solo bespin outfit", "blaster"): "Bespin Blaster",
     ("lando calrissian", "blaster"): "Bespin Blaster",
     ("lobot", "blaster"): "Bespin Blaster",
-    ("at at commander", "blaster"): "Bespin Blaster",
-    ("squid head", "rifle"): "Bespin Blaster",
-    ("dengar", "rifle"): "Imperial Hoth Rifle",
     ("luke skywalker hoth battle gear", "blaster"): "Hoth Rebel Rifle",
     ("imperial stormtrooper hoth battle gear", "skirt"): "Hoth Trooper Skirt",
-    ("twin pod cloud car pilot", "blaster"): "Pilot Blaster",
+    ("twin pod cloud car pilot", "commlink"): "Commlink Guide",
     ("nien nunb", "blaster"): "Pilot Blaster",
     ("at st driver", "blaster"): "Endor Blaster",
-    ("luke skywalker in battle poncho", "blaster"): "Palace Blaster",
-    ("lando calrissian general pilot", "blaster"): "Palace Blaster",
-    ("weequay", "pike"): "Vibro Axe",
+    ("emperor s royal guard", "staff"): "Emperor’s Royal Guard Pike",
     ("wicket w warrick", "spear"): "Ewok Spear",
     ("teebo", "hood"): "Teebo Headpiece",
 }
@@ -169,6 +161,35 @@ NOT_THE_SAME = {
 # Wikipedia lists a lightsaber. Variant Villain and Rebelscum say he was never packed with one.
 NOT_AN_ACCESSORY = {
     ("anakin skywalker", "lightsaber"): "Variant Villain and Rebelscum say Anakin Skywalker was never packaged with an accessory.",
+}
+
+# Verified on imperialgunnery.com, 11 Oct 2026. Not a substitute for a Variant Villain page.
+IG_NOTES = {
+    ("4 lom", "4 lom rifle"): "Imperial Gunnery documents the 4-LOM Rifle: original V1 with a circle, V2 without, and a black-plastic repro. https://imperialgunnery.com/rifles.htm",
+    ("4 lom", "4 lom cloak"): "Imperial Gunnery documents the 4-LOM Cloak: V2 has a less sharp neck cut and a creamy-white lining, against the beige lining of V1. https://imperialgunnery.com/clothcapesskirts.htm",
+    ("zuckuss", "zuckuss rifle"): "Imperial Gunnery documents the Zuckuss Rifle: originals V1, V2, V3 (Lili Ledy) and V4 (issued with the Glasslite Chewbacca). https://imperialgunnery.com/rifles.htm",
+    ("chief chirpa", "staff"): "Imperial Gunnery documents the Chief Chirpa Staff in brown, including a Lili Ledy staff with a moulded letter L and a Top Toys staff. https://imperialgunnery.com/staffs-axes.htm",
+    ("logray ewok medicine man", "staff"): "Imperial Gunnery documents the Logray Staff: V1 has three ejector-pin marks, V3 has two, and V4 has none. https://imperialgunnery.com/staffs-axes.htm",
+    ("rancor keeper", "staff"): "The owner identifies this as a staff, not an axe. Imperial Gunnery documents it as the Rancor Keeper Gaderffii Stick / Vibroblade, with a Hong Kong original and a Taiwan original. https://imperialgunnery.com/otherweapons.htm",
+    ("rancor keeper", "hood"): "Imperial Gunnery documents the Rancor Keeper Hood. A second version is a darker colour, a harder material, and has no ejector-pin mark. https://imperialgunnery.com/helmets-hoods.htm",
+    ("lumat", "bow"): "Imperial Gunnery documents the Lumat Bow as the light brown Ewok bow. https://imperialgunnery.com/otherweapons.htm",
+    ("lumat", "hood"): "Imperial Gunnery documents the Lumat Hood. https://imperialgunnery.com/helmets-hoods.htm",
+    ("lumat", "quiver"): "Imperial Gunnery lists a Lumat Quiver on the other-accessories page. https://imperialgunnery.com/other-accessories.htm",
+    ("barada", "skiff vibro staff"): "Imperial Gunnery says the Skiff Vibro Staff came with Barada, Nikto and the Yak Face Canadian Power of the Force release. The Lili Ledy staff is a darker grey than the Kenner. https://imperialgunnery.com/staffs-axes.htm",
+    ("warok", "bow"): "Imperial Gunnery documents the Warok Bow as the dark brown Ewok bow. https://imperialgunnery.com/otherweapons.htm",
+    ("warok", "hood"): "Imperial Gunnery documents the Warok Hood. https://imperialgunnery.com/helmets-hoods.htm",
+    ("warok", "quiver"): "Imperial Gunnery lists a Warok Quiver on the other-accessories page. https://imperialgunnery.com/other-accessories.htm",
+    ("yak face", "skiff vibro staff"): "Imperial Gunnery says the Skiff Vibro Staff came with Barada, Nikto and the Yak Face Canadian Power of the Force release. https://imperialgunnery.com/staffs-axes.htm",
+    ("lando calrissian general pilot", "cape"): "Lando Calrissian Cape is the Bespin cape. Imperial Gunnery documents a separate Lando Calrissian (General) cloth cape. https://imperialgunnery.com/clothcapesskirts.htm",
+    ("squid head", "cape"): "Imperial Gunnery documents the Squid Head Cloak, including a Lili Ledy burgundy cloak. https://imperialgunnery.com/clothcapesskirts.htm",
+    ("yoda", "cloak"): "Imperial Gunnery documents the Yoda Cloth Cloak. https://imperialgunnery.com/clothcapesskirts.htm",
+    ("prune face", "cloak"): "Imperial Gunnery documents the Prune Face Cloth Cape. https://imperialgunnery.com/clothcapesskirts.htm",
+    ("princess leia organa in combat poncho", "leia endor helmet"): "Imperial Gunnery documents the Princess Leia Poncho Helmet. Numbers 1 with a dot, 2, 3 and 4 are recorded inside. https://imperialgunnery.com/helmets-hoods.htm",
+    ("princess leia organa in combat poncho", "leia endor belt"): "Imperial Gunnery documents the Princess Leia Poncho Belt: two notches, shorter than the Luke poncho belt. https://imperialgunnery.com/belts.htm",
+    ("luke skywalker in battle poncho", "poncho"): "Imperial Gunnery documents the Luke Skywalker Battle Poncho, original and two repros. https://imperialgunnery.com/clothcapesskirts.htm",
+    ("luke skywalker in battle poncho", "belt"): "Imperial Gunnery documents the Luke Skywalker Poncho Belt: three notches, longer than the Leia poncho belt. https://imperialgunnery.com/belts.htm",
+    ("luke skywalker imperial stormtrooper outfit", "helmet"): "Imperial Gunnery documents the Luke Stormtrooper Helmet. https://imperialgunnery.com/helmets-hoods.htm",
+    ("klaatu in skiff guard outfit", "skiff vibro staff"): "Imperial Gunnery documents a Klaatu Skiff Force Pike separately from the Skiff Vibro Staff. The staff page names Barada, Nikto and Yak Face, not this Klaatu. https://imperialgunnery.com/staffs-axes.htm",
 }
 
 
@@ -290,7 +311,7 @@ def main():
                 continue
             if key not in NOT_THE_SAME and any(accessory_covers(piece, fig["name"], name) for name in acc_names):
                 continue
-            note = NOT_THE_SAME.get(key, "Original bubble piece with no Variant Villain accessory-guide page.")
+            note = IG_NOTES.get(key) or NOT_THE_SAME.get(key, "Original bubble piece with no Variant Villain accessory-guide page.")
             rows.append({
                 "kind": "accessory",
                 "name": f"{fig['name']} — {piece}",
@@ -360,6 +381,17 @@ def main():
             why = "no page" if row["has_page"] == "no" else "page has no mould, factory, or COO tells"
             url = row["page_url"] or "no page"
             md.append(f"- {row['name']} — {why} — {url}")
+    md.append("")
+    md.append("## Imperial Gunnery notes for pieces still missing a Variant Villain page")
+    md.append("")
+    md.append("These notes are from https://imperialgunnery.com/ (robots.txt fetched 11 Oct 2026 has no Disallow). They do not replace a Variant Villain page, so the pieces stay in (c). The sensorscope is not listed: it is built into R2-D2 (Sensorscope).")
+    md.append("")
+    ig_lines = []
+    for row in acc_gaps:
+        note = row.get("detail_note") or ""
+        if "imperialgunnery.com" in note:
+            ig_lines.append(f"- {row['name']} — {note}")
+    md.extend(ig_lines or ["None."])
     md.append("")
     md.append("## Bubble pieces counted with an existing guide")
     md.append("")
