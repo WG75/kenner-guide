@@ -44,13 +44,19 @@ Important:
 
 --------------------------------------------------
 
+STAMP
+
+The stamp is on the back of the left thigh. Three side-by-side columns: Kader M1, Kader M7, Poch M1, Kader China and Smile with the COO. On Kader M1 and Kader M7, the H of HONG starts under the ©. Kader China is 'CHINA' on a raised bar, not 'Made in China'. Unitoy is two side-by-side columns. Smile without the COO is two columns and no country. Top Toys has no markings at all.
+
 FIGURE VARIANT FAMILIES
 
-COO Family 1: Kader / Poch / Nina  
-COO Family 2: Unitoy / PBP  
-COO Family 3: Unitoy / Poch / PBP / Lili Ledy  
-COO Family 4: Smile  
-COO Family 5: Smile (No COO)
+- Family I: Kader M1, Poch M1 and Kader China. Rocket mouth. A dimple on the chest knob tells the two torso moulds apart. Poch M1 has extra mouthpiece flaps.
+- Family II: Unitoy, and Poch M2. Poch M2 has a HONG KONG COO. Line mouth. Extra mouthpiece flaps mark Poch.
+- Family III with HONG KONG is Unitoy. With no country, a hard torso and a very wide mouth is Lili Ledy, a thin or small mouth is PBP, and extra mouthpiece flaps is Poch.
+- Family IV: Smile. With the COO it is three side-by-side columns. Without the COO it is two columns and a soft torso. Helmet back A or B tells the torso moulds apart.
+- Family V: Takara. Just 'JAPAN', no 'MADE IN', and a cross-slot screw. COO guide 3.1 shows 1978.
+- Family VI: Top Toys. No markings at all, and no peg holes.
+- Family VII: Kader M7. Three side-by-side columns. The H of HONG starts under the ©. Warren's Kader M8 is not a third variant on this sheet.
 
 --------------------------------------------------
 
@@ -70,37 +76,6 @@ Important:
   - helmet details
   - plastic colour
   - mould features
-
---------------------------------------------------
-
-HARD TORSO VARIANT (IMPORTANT)
-
-Definition:
-- Torso made from a noticeably harder plastic compared to standard versions
-
-Factory:
-- Smile
-
-COO:
-- Always No COO (Family V)
-
-Key Traits:
-- Hard, rigid torso plastic
-- Visual similarity to Lili Ledy / PBP figures (but different COO)
-
-Important Warning:
-- Do NOT confuse with:
-  - Lili Ledy Stormtrooper
-  - PBP Stormtrooper
-
-Helmet Subvariant:
-- Back of helmet shows two known variations:
-  - curved (arc shape)
-  - flat line
-
-Collector Tip:
-- Hard torso version is typically found alongside standard Smile figures for comparison
-- Best identified by feel + COO + helmet detail combination
 
 --------------------------------------------------
 
@@ -159,6 +134,14 @@ COMMON MISTAKES
 - Not checking torso material
 
 --------------------------------------------------
+
+BLASTERS
+
+Imperial Blaster moulds are a different series from the figure families. Kader uses M3 then M4. Kader China uses M7. Unitoy uses M1 then M2. Smile uses M5. PBP uses M5. Lili Ledy uses M7. Takara uses M9. Top Toys uses M10. Taiwan M6 is Boba Fett only. Kader M8 is the Survival Kit only.
+
+POON REPRODUCTION
+
+Poon is a reproduction, not a COO family. It is very white. The feet do not point together, and the right leg sits slightly out. A larger flat area sits on top of the torso where the arm meets. The stamp is two side-by-side columns, like family II. The Poon blaster is hard and sinks.
 
 Sources:
 - Variant Villain Stormtrooper Guide

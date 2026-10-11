@@ -2829,6 +2829,233 @@
         "id": "darth-vader-coo-guide-3.2"
       },
       "missing": ""
+    },
+    {
+      "name": "Stormtrooper",
+      "recorded": "2026-10-11",
+      "source": "owner",
+      "whereToLook": "Look on the back of the left thigh. The stamp runs vertically in side-by-side columns. A partial or cut-off country name counts as No COO. The picture is COO guide 3.1.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Kader M1 = Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'. The H of HONG starts under the ©. Family I on the guide.",
+        "Kader M7 = Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'. The H of HONG starts under the ©. Family VII on the guide. Warren's Kader M8 is not a third variant.",
+        "Poch M1 = the family I three-column HONG KONG stamp, with extra mouthpiece flaps.",
+        "Kader China = 'CHINA' on a raised bar. No 'MADE IN'. Not 'Made in China'.",
+        "Unitoy family II = Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'.",
+        "Poch M2 = the family II two-column HONG KONG stamp, with extra mouthpiece flaps. Poch M2 has a HONG KONG COO.",
+        "Unitoy family III = Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'.",
+        "Smile M4 with the COO = three side-by-side columns. Family IV. Helmet back A or B.",
+        "Smile M4 without the COO = Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I.' and '1977', with no country. A soft torso is Smile.",
+        "Lili Ledy = the licensing line only. A hard torso and a very wide mouth.",
+        "PBP = the licensing line only. A thin or small mouth.",
+        "Poch No COO = the licensing line only, with extra mouthpiece flaps.",
+        "Takara = Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'. No 'MADE IN' and no raised bar. A cross-slot screw is in the back.",
+        "Top Toys = no markings at all, and no peg holes."
+      ],
+      "options": [
+        {
+          "id": "hong-kong-3",
+          "label": "Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader M1",
+            "Kader M7",
+            "Poch M1",
+            "Smile M4"
+          ],
+          "examples": [
+            "Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "kader-m1",
+              "label": "The H of HONG starts under the ©, and it matches family I on the guide, with no extra mouthpiece flaps",
+              "factories": [
+                "Kader M1"
+              ],
+              "conclusion": "That is the Kader M1, family I. The stamp is on the back of the left thigh. The H of HONG starts under the ©. A dimple on the chest knob tells the two torso moulds apart. Compare family I on COO guide 3.1.",
+              "sure": true
+            },
+            {
+              "id": "kader-m7",
+              "label": "The H of HONG starts under the ©, and it matches family VII on the guide",
+              "factories": [
+                "Kader M7"
+              ],
+              "conclusion": "That is the Kader M7, family VII. The stamp is on the back of the left thigh. The H of HONG starts under the ©. Warren's Kader M8 is not stored as a third Hong Kong Kader. Figure family VII is not Imperial Blaster M7. Compare family VII on COO guide 3.1.",
+              "sure": true
+            },
+            {
+              "id": "poch-m1",
+              "label": "Extra mouthpiece flaps",
+              "factories": [
+                "Poch M1"
+              ],
+              "conclusion": "That is the Poch M1. It uses the family I three-column HONG KONG stamp, with extra mouthpiece flaps.",
+              "sure": true
+            },
+            {
+              "id": "smile-m4",
+              "label": "It matches family IV on the guide",
+              "factories": [
+                "Smile M4"
+              ],
+              "conclusion": "That is the Smile M4 with the COO. Three side-by-side columns, family IV on COO guide 3.1. Helmet back A or B tells the torso moulds apart.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "kader-china",
+          "label": "Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'CHINA' on a raised bar, and '1977'",
+          "coo": "China",
+          "factories": [
+            "Kader China"
+          ],
+          "examples": [
+            "Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'CHINA' on a raised bar, and '1977'"
+          ],
+          "conclusion": "That is Kader China. 'CHINA' is on a raised bar. There is no 'MADE IN'.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "hong-kong-2",
+          "label": "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy II",
+            "Poch M2",
+            "Unitoy III"
+          ],
+          "examples": [
+            "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "unitoy-ii",
+              "label": "It matches family II on the guide, with no extra mouthpiece flaps",
+              "factories": [
+                "Unitoy II"
+              ],
+              "conclusion": "That is the Unitoy on family II. Two side-by-side columns. Imperial Blaster M1 and M2 are a different series.",
+              "sure": true
+            },
+            {
+              "id": "poch-m2",
+              "label": "It matches family II on the guide, with extra mouthpiece flaps",
+              "factories": [
+                "Poch M2"
+              ],
+              "conclusion": "That is the Poch M2. It has a HONG KONG COO, so Poch is not only No COO. Extra mouthpiece flaps.",
+              "sure": true
+            },
+            {
+              "id": "unitoy-iii",
+              "label": "It matches family III on the guide",
+              "factories": [
+                "Unitoy III"
+              ],
+              "conclusion": "That is the Unitoy on family III. Two side-by-side columns of HONG KONG. Compare family III on COO guide 3.1.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "smile-no-coo",
+          "label": "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I.' and '1977', with no country",
+          "coo": "No COO",
+          "factories": [
+            "Smile M4 No COO"
+          ],
+          "examples": [
+            "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I.' and '1977', with no country"
+          ],
+          "conclusion": "That is the Smile M4 without the COO. Two side-by-side columns, '© G.M.F.G.I.' and '1977', with no country. A soft torso is Smile. A hard torso on this stamp, without the very wide mouth, is not assigned.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "licensing-line",
+          "label": "Only the licensing line on the back of the left thigh: '© G.M.F.G.I. 1977', with no country",
+          "coo": "No COO",
+          "factories": [
+            "Lili Ledy",
+            "PBP",
+            "Poch No COO"
+          ],
+          "examples": [
+            "Only the licensing line on the back of the left thigh: '© G.M.F.G.I. 1977', with no country"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "lili-ledy",
+              "label": "A hard torso and a very wide mouth",
+              "factories": [
+                "Lili Ledy"
+              ],
+              "conclusion": "That is the Lili Ledy. A hard torso and a very wide mouth. The licensing line is the only marking.",
+              "sure": true
+            },
+            {
+              "id": "pbp",
+              "label": "A thin or small mouth",
+              "factories": [
+                "PBP"
+              ],
+              "conclusion": "That is the PBP. A thin or small mouth. The licensing line is the only marking.",
+              "sure": true
+            },
+            {
+              "id": "poch-no-coo",
+              "label": "Extra mouthpiece flaps",
+              "factories": [
+                "Poch No COO"
+              ],
+              "conclusion": "That is the Poch with no country. Extra mouthpiece flaps. Family III limbs. Poch M2 is the one with a HONG KONG COO.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "takara",
+          "label": "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'",
+          "coo": "Japan",
+          "factories": [
+            "Takara"
+          ],
+          "examples": [
+            "Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'"
+          ],
+          "conclusion": "That is the Takara. '© G.M.F.G.I. 1978' and 'JAPAN', with no 'MADE IN' and no raised bar. A cross-slot screw is in the back. The year is the year on COO guide 3.1.",
+          "sure": true,
+          "followUps": []
+        },
+        {
+          "id": "top-toys",
+          "label": "No markings at all on the back of the left thigh: no copyright line and no country, and no peg holes",
+          "coo": "",
+          "factories": [
+            "Top Toys"
+          ],
+          "examples": [
+            "No markings at all on the back of the left thigh: no copyright line and no country, and no peg holes"
+          ],
+          "conclusion": "That is the Top Toys. There are no markings at all, and no peg holes.",
+          "sure": true,
+          "followUps": []
+        }
+      ],
+      "referenceImage": {
+        "id": "stormtrooper-coo-guide-3.1"
+      },
+      "missing": ""
     }
   ],
   "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported.",
@@ -2837,5 +3064,6 @@
   "r2Note": "R2-D2 stamps follow data/references/owner-verified/r2-d2.md (owner Warren, 2026-10-11).",
   "chewbaccaNote": "Chewbacca stamps follow data/references/owner-verified/chewbacca.md (owner Warren, 2026-10-11).",
   "c3poNote": "C-3PO stamps follow data/references/owner-verified/c-3po.md (owner Warren, 2026-10-11).",
-  "vaderNote": "Darth Vader stamps follow data/references/owner-verified/darth-vader.md (owner Warren, 2026-10-11)."
+  "vaderNote": "Darth Vader stamps follow data/references/owner-verified/darth-vader.md (owner Warren, 2026-10-11).",
+  "stormtrooperNote": "Stormtrooper stamps follow data/references/owner-verified/stormtrooper.md (owner Warren, 2026-10-11)."
 }
