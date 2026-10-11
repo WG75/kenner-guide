@@ -149,12 +149,12 @@ function pickTell(record, candidates, used) {
 }
 
 function photoHit(tell, photoTells) {
-  const blob = norm((photoTells || []).join(" "));
-  if (!blob) return false;
+  const blobWords = new Set(norm((photoTells || []).join(" ")).split(" ").filter(Boolean));
+  if (!blobWords.size) return false;
   const skip = new Set(["with", "from", "that", "this", "figure", "early", "later", "smile", "kader", "unitoy", "taiwan", "poch", "glasslite"]);
   const words = norm(tell.detail).split(" ").filter(word => word.length > 4 && !skip.has(word));
-  const hits = words.filter(word => blob.includes(word));
-  return hits.length >= 2 || hits.some(word => word.length > 5);
+  const hits = new Set(words.filter(word => blobWords.has(word)));
+  return hits.size >= 2 || [...hits].some(word => word.length > 5);
 }
 
 function settleLine(record, candidates, used) {
