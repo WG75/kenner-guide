@@ -1936,32 +1936,331 @@
       ]
     },
     {
-      "id": "stormtrooper--kader-china",
+      "id": "stormtrooper--kader-m1",
       "figure": "Stormtrooper",
-      "factory": "Kader/ China",
-      "mould": "",
-      "source": "variantvillain.com",
+      "factory": "Kader M1",
+      "mould": "M1",
+      "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Made in China",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'. The H of HONG starts under the ©. Family I on COO guide 3.1.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "A dimple on the chest knob tells the two torso moulds apart.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "paint",
+          "detail": "Rocket mouth.",
+          "where": "Look at the paint on the helmet."
         }
       ]
     },
     {
-      "id": "stormtrooper--kader-poch-kader-china",
+      "id": "stormtrooper--kader-m7",
       "figure": "Stormtrooper",
-      "factory": "Kader/ Poch/ Kader China",
-      "mould": "",
-      "source": "variantvillain.com",
+      "factory": "Kader M7",
+      "mould": "M7",
+      "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Made in China",
-          "where": "Look at the country stamp."
+          "detail": "The stamp is on the back of the left thigh. Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'. The H of HONG starts under the ©. Family VII on COO guide 3.1. Warren's Kader M8 is not stored as a third Hong Kong Kader.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--poch-m1",
+      "figure": "Stormtrooper",
+      "factory": "Poch M1",
+      "mould": "M1",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'. Family I, the same stamp as Kader M1.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "A dimple on the chest knob tells the two torso moulds apart.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "paint",
+          "detail": "Extra mouthpiece flaps.",
+          "where": "Look at the paint on the helmet."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--kader-china",
+      "figure": "Stormtrooper",
+      "factory": "Kader China",
+      "mould": "M1",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'CHINA' on a raised bar, and '1977'. There is no 'MADE IN'.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "A dimple on the chest knob tells the two torso moulds apart.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "paint",
+          "detail": "Rocket mouth.",
+          "where": "Look at the paint on the helmet."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--unitoy-ii",
+      "figure": "Stormtrooper",
+      "factory": "Unitoy II",
+      "mould": "II",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family II on COO guide 3.1.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "paint",
+          "detail": "Line mouth, slim or wide.",
+          "where": "Look at the paint on the helmet."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--poch-m2",
+      "figure": "Stormtrooper",
+      "factory": "Poch M2",
+      "mould": "M2",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family II. Poch M2 has a HONG KONG COO.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "paint",
+          "detail": "Extra mouthpiece flaps.",
+          "where": "Look at the paint on the helmet."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--unitoy-iii",
+      "figure": "Stormtrooper",
+      "factory": "Unitoy III",
+      "mould": "III",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family III on COO guide 3.1.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "paint",
+          "detail": "Mouth slim or wide.",
+          "where": "Look at the paint on the helmet."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--smile-m4",
+      "figure": "Stormtrooper",
+      "factory": "Smile M4",
+      "mould": "M4",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Three side-by-side columns on the back of the left thigh: '© G.M.F.G.I.', 'HONG KONG' and '1977'. Family IV on COO guide 3.1.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "Helmet back A or B tells the two torso moulds apart.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "paint",
+          "detail": "Rocket mouth or a standard mouth.",
+          "where": "Look at the paint on the helmet."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--smile-m4-no-coo",
+      "figure": "Stormtrooper",
+      "factory": "Smile M4 No COO",
+      "mould": "M4",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I.' and '1977', with no country. A soft torso is Smile.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "Soft torso. A hard torso on this stamp, without the very wide mouth, is not assigned.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "mould",
+          "detail": "Helmet back A or B tells the two torso moulds apart.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--lili-ledy",
+      "figure": "Stormtrooper",
+      "factory": "Lili Ledy",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Only the licensing line on the back of the left thigh: '© G.M.F.G.I. 1977', with no country. Family III.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "Hard ABS torso.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "paint",
+          "detail": "Very wide mouth.",
+          "where": "Look at the paint on the helmet."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--pbp",
+      "figure": "Stormtrooper",
+      "factory": "PBP",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Only the licensing line on the back of the left thigh: '© G.M.F.G.I. 1977', with no country. Family III.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "Hard ABS torso.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "paint",
+          "detail": "Thin or small mouth.",
+          "where": "Look at the paint on the helmet."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--poch-no-coo",
+      "figure": "Stormtrooper",
+      "factory": "Poch No COO",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Only the licensing line on the back of the left thigh: '© G.M.F.G.I. 1977', with no country. Family III. This is not Poch M2.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "Hard ABS torso.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
+        },
+        {
+          "category": "paint",
+          "detail": "Extra mouthpiece flaps.",
+          "where": "Look at the paint on the helmet."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--takara",
+      "figure": "Stormtrooper",
+      "factory": "Takara",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. Two side-by-side columns on the back of the left thigh: '© G.M.F.G.I. 1978' and 'JAPAN'. No 'MADE IN' and no raised bar. The year is the year on COO guide 3.1.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "assembly",
+          "detail": "A cross-slot screw is in the back.",
+          "where": "Look at how the figure is put together."
+        }
+      ]
+    },
+    {
+      "id": "stormtrooper--top-toys",
+      "figure": "Stormtrooper",
+      "factory": "Top Toys",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/stormtrooper/",
+      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/stormtrooper.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "The stamp is on the back of the left thigh. No markings at all on the back of the left thigh: no copyright line and no country, and no peg holes.",
+          "where": "Look at the country stamp on the back of the left thigh."
+        },
+        {
+          "category": "mould",
+          "detail": "No peg holes.",
+          "where": "Look at the mould: shape, proportions, tip or hilt."
         }
       ]
     },
@@ -7483,7 +7782,10 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "stormtrooper--unitoy-ii",
+        "stormtrooper--unitoy-iii"
+      ]
     },
     {
       "id": "imperial-blaster--unitoy-m2",
@@ -7509,7 +7811,10 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "stormtrooper--unitoy-ii",
+        "stormtrooper--unitoy-iii"
+      ]
     },
     {
       "id": "imperial-blaster--kader-m3",
@@ -7540,7 +7845,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "stormtrooper--kader-m1"
+      ]
     },
     {
       "id": "imperial-blaster--kader-m4",
@@ -7597,7 +7904,9 @@
         }
       ],
       "cardedWith": [
-        "luke-skywalker-imperial-stormtrooper-outfit--kader"
+        "luke-skywalker-imperial-stormtrooper-outfit--kader",
+        "stormtrooper--kader-m1",
+        "stormtrooper--kader-m7"
       ]
     },
     {
@@ -7712,7 +8021,11 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "stormtrooper--smile-m4",
+        "stormtrooper--smile-m4-no-coo",
+        "stormtrooper--pbp"
+      ]
     },
     {
       "id": "imperial-blaster--taiwan-m6",
@@ -7731,6 +8044,11 @@
           "category": "plastic",
           "detail": "black-blue",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "mould",
+          "detail": "Boba Fett with a Taiwan COO only. Not the Imperial Stormtrooper.",
+          "where": "This mould is not an Imperial Stormtrooper blaster."
         }
       ],
       "cardedWith": [
@@ -7786,7 +8104,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "stormtrooper--kader-china"
+      ]
     },
     {
       "id": "imperial-blaster--lili-ledy-m7",
@@ -7837,7 +8157,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "stormtrooper--lili-ledy"
+      ]
     },
     {
       "id": "imperial-blaster--kader-m8",
@@ -7856,6 +8178,11 @@
           "category": "plastic",
           "detail": "blue",
           "where": "Look at the plastic colour or shade."
+        },
+        {
+          "category": "mould",
+          "detail": "Survival Kit only. Not carded with the Imperial Stormtrooper.",
+          "where": "This mould is not an Imperial Stormtrooper blaster."
         }
       ],
       "cardedWith": []
@@ -7874,7 +8201,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "stormtrooper--takara"
+      ]
     },
     {
       "id": "imperial-blaster--top-toys-m10",
@@ -7890,7 +8219,9 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "stormtrooper--top-toys"
+      ]
     },
     {
       "id": "rebel-blaster--smile-m1",
@@ -14990,5 +15321,6 @@
   "r2Owner": "data/references/owner-verified/r2-d2.md",
   "chewbaccaOwner": "data/references/owner-verified/chewbacca.md",
   "c3poOwner": "data/references/owner-verified/c-3po.md",
-  "vaderOwner": "data/references/owner-verified/darth-vader.md"
+  "vaderOwner": "data/references/owner-verified/darth-vader.md",
+  "stormtrooperOwner": "data/references/owner-verified/stormtrooper.md"
 }

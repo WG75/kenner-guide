@@ -5,7 +5,7 @@ robots.txt allows /characters/ and /accessory-guide/ (only /wp-admin/ is
 disallowed). Imperial Gunnery's robots.txt has no Disallow. HTML stays in
 /tmp. This file writes the extract, with a source URL on every record.
 
-Owner-verified COO stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, data/references/owner-verified/r2-d2.md, data/references/owner-verified/chewbacca.md, data/references/owner-verified/c-3po.md, and data/references/owner-verified/darth-vader.md override the scrape.
+Owner-verified COO stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, data/references/owner-verified/r2-d2.md, data/references/owner-verified/chewbacca.md, data/references/owner-verified/c-3po.md, data/references/owner-verified/darth-vader.md, and data/references/owner-verified/stormtrooper.md override the scrape.
 """
 
 import html
@@ -646,7 +646,7 @@ def write_report(payload):
     lines = [
         "# Factory-match cross-reference coverage",
         "",
-        "Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, data/references/owner-verified/r2-d2.md, data/references/owner-verified/chewbacca.md, data/references/owner-verified/c-3po.md, and data/references/owner-verified/darth-vader.md override the scrape.",
+        "Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, data/references/owner-verified/r2-d2.md, data/references/owner-verified/chewbacca.md, data/references/owner-verified/c-3po.md, data/references/owner-verified/darth-vader.md, and data/references/owner-verified/stormtrooper.md override the scrape.",
         "",
         f"- Figure records: {len(figures)}",
         f"- Figures with a tell besides the COO stamp: {len(with_tells)} (was 18/104)",
@@ -759,6 +759,7 @@ def main():
     from apply_chewbacca_owner import apply_factory_match as apply_chewbacca_match
     from apply_c3po_owner import apply_factory_match as apply_c3po_match
     from apply_darth_vader_owner import apply_factory_match as apply_vader_match
+    from apply_stormtrooper_owner import apply_factory_match as apply_stormtrooper_match
     for fig in figures:
         names = resolve_accessory_names(fig["name"], debut.get(fig["name"], []), accessories)
         mine = [v for v in figure_variants if v["figure"] == fig["name"]]
@@ -777,6 +778,7 @@ def main():
     apply_chewbacca_match(payload)
     apply_c3po_match(payload)
     apply_vader_match(payload)
+    apply_stormtrooper_match(payload)
     OUT.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
     write_report(payload)
 
