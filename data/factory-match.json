@@ -2265,13 +2265,67 @@
       ]
     },
     {
-      "id": "ben-obi-wan-kenobi--unspecified",
+      "id": "ben-obi-wan-kenobi--unitoy-i",
       "figure": "Ben (Obi-Wan) Kenobi",
-      "factory": "Unspecified",
-      "mould": "",
-      "source": "variantvillain.com",
+      "factory": "Unitoy I",
+      "mould": "I",
+      "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
-      "tells": []
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG'. Family I. The country column runs past 1977, and family II does the same.",
+          "where": "Look at the country stamp on the back of the legs."
+        },
+        {
+          "category": "hair",
+          "detail": "White hair.",
+          "where": "Look at the hair colour."
+        }
+      ]
+    },
+    {
+      "id": "ben-obi-wan-kenobi--unitoy-ii",
+      "figure": "Ben (Obi-Wan) Kenobi",
+      "factory": "Unitoy II with the country",
+      "mould": "II",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG'. Family II. Grey hair separates it from family I.",
+          "where": "Look at the country stamp on the back of the legs."
+        },
+        {
+          "category": "hair",
+          "detail": "Grey hair.",
+          "where": "Look at the hair colour."
+        }
+      ]
+    },
+    {
+      "id": "ben-obi-wan-kenobi--unitoy-ii-no-coo",
+      "figure": "Ben (Obi-Wan) Kenobi",
+      "factory": "Unitoy II No COO",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Only the licensing line on the back of the legs: '© G.M.F.G.I. 1977', with no country. Family II. Match the family II photo. The stamp does not separate the No COO Bens.",
+          "where": "Look at the country stamp on the back of the legs."
+        },
+        {
+          "category": "hair",
+          "detail": "Grey hair, family II.",
+          "where": "Look at the hair colour."
+        }
+      ]
     },
     {
       "id": "ben-obi-wan-kenobi--lili-ledy",
@@ -2280,8 +2334,93 @@
       "mould": "",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
-      "sourceNote": "Owner Warren, 11 Oct 2026. data/references/owner-verified/darth-vader.md. Telescoping Lightsaber M9 is this Lili Ledy Ben.",
-      "tells": []
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Only the licensing line on the back of the legs: '© G.M.F.G.I. 1977', with no country. Family II. Match the photo. The stamp does not separate the No COO Bens.",
+          "where": "Look at the country stamp on the back of the legs."
+        },
+        {
+          "category": "head",
+          "detail": "Three head sizes.",
+          "where": "Look at the head."
+        }
+      ]
+    },
+    {
+      "id": "ben-obi-wan-kenobi--kader-iii-1a",
+      "figure": "Ben (Obi-Wan) Kenobi",
+      "factory": "Kader III 1a",
+      "mould": "III",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'HONG KONG'. HONG KONG starts under the ©.",
+          "where": "Look at the country stamp on the back of the legs."
+        }
+      ]
+    },
+    {
+      "id": "ben-obi-wan-kenobi--kader-iii-1b",
+      "figure": "Ben (Obi-Wan) Kenobi",
+      "factory": "Kader III 1b",
+      "mould": "III",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'HONG KONG'. HONG KONG starts under the first G of G.M.F.G.I.",
+          "where": "Look at the country stamp on the back of the legs."
+        }
+      ]
+    },
+    {
+      "id": "ben-obi-wan-kenobi--poch",
+      "figure": "Ben (Obi-Wan) Kenobi",
+      "factory": "Poch",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'HONG KONG'. The Kader Hong Kong stamp.",
+          "where": "Look at the country stamp on the back of the legs."
+        },
+        {
+          "category": "paint",
+          "detail": "Glossier, thinner black paint, and pale hands.",
+          "where": "Look at the paint."
+        }
+      ]
+    },
+    {
+      "id": "ben-obi-wan-kenobi--kader-iii-no-coo",
+      "figure": "Ben (Obi-Wan) Kenobi",
+      "factory": "Kader III No COO",
+      "mould": "",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Only the licensing line on the back of the legs: '© G.M.F.G.I. 1977', with no country. Family III. The No COO white-hair Trilogo Ben also uses sabre M6. Match the family III photo.",
+          "where": "Look at the country stamp on the back of the legs."
+        },
+        {
+          "category": "hair",
+          "detail": "White hair.",
+          "where": "Look at the hair colour."
+        }
+      ]
     },
     {
       "id": "han-solo--unitoy-m1",
@@ -6620,8 +6759,12 @@
         "darth-vader--unitoy-m5",
         "darth-vader--unitoy-m6",
         "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8"
-      ]
+        "darth-vader--unitoy-m8",
+        "ben-obi-wan-kenobi--unitoy-i",
+        "ben-obi-wan-kenobi--unitoy-ii",
+        "ben-obi-wan-kenobi--unitoy-ii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "telescoping-lightsaber--unitoy-m3",
@@ -6687,8 +6830,12 @@
         "darth-vader--unitoy-m5",
         "darth-vader--unitoy-m6",
         "darth-vader--unitoy-m7",
-        "darth-vader--unitoy-m8"
-      ]
+        "darth-vader--unitoy-m8",
+        "ben-obi-wan-kenobi--unitoy-i",
+        "ben-obi-wan-kenobi--unitoy-ii",
+        "ben-obi-wan-kenobi--unitoy-ii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "telescoping-lightsaber--lili-ledy-m3",
@@ -6855,8 +7002,12 @@
         "luke-skywalker--poch-brown-hair",
         "darth-vader--kader-m1",
         "darth-vader--kader-m3",
-        "darth-vader--poch-m2"
-      ]
+        "darth-vader--poch-m2",
+        "ben-obi-wan-kenobi--kader-iii-1a",
+        "ben-obi-wan-kenobi--kader-iii-1b",
+        "ben-obi-wan-kenobi--kader-iii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "telescoping-lightsaber--smile-m5",
@@ -7084,8 +7235,10 @@
       ],
       "cardedWith": [
         "luke-skywalker--smile-no-coo",
-        "darth-vader--pbp-m8"
-      ]
+        "darth-vader--pbp-m8",
+        "ben-obi-wan-kenobi--kader-iii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "telescoping-lightsaber--taiwan-m7",
@@ -7208,7 +7361,8 @@
       "cardedWith": [
         "darth-vader--lili-ledy-m4-no-coo",
         "ben-obi-wan-kenobi--lili-ledy"
-      ]
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "telescoping-lightsaber--top-toys-m10",
@@ -12724,7 +12878,12 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "ben-obi-wan-kenobi--kader-iii-1a",
+        "ben-obi-wan-kenobi--kader-iii-1b",
+        "ben-obi-wan-kenobi--kader-iii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "ben-obi-wan-kenobi-cape--kader-m2",
@@ -12734,7 +12893,12 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "ben-obi-wan-kenobi--kader-iii-1a",
+        "ben-obi-wan-kenobi--kader-iii-1b",
+        "ben-obi-wan-kenobi--kader-iii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "ben-obi-wan-kenobi-cape--kader-m3",
@@ -12744,7 +12908,12 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "ben-obi-wan-kenobi--kader-iii-1a",
+        "ben-obi-wan-kenobi--kader-iii-1b",
+        "ben-obi-wan-kenobi--kader-iii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "ben-obi-wan-kenobi-cape--kader-m4",
@@ -12754,7 +12923,12 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "ben-obi-wan-kenobi--kader-iii-1a",
+        "ben-obi-wan-kenobi--kader-iii-1b",
+        "ben-obi-wan-kenobi--kader-iii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md. M4 is also the Kader China cape."
     },
     {
       "id": "ben-obi-wan-kenobi-cape--kader-china-m4",
@@ -12764,7 +12938,8 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md. Cape M4 is also the Kader China cape. No separate Kader China Ben stamp was named, so this record is not linked to a figure."
     },
     {
       "id": "ben-obi-wan-kenobi-cape--unitoy-m5",
@@ -12774,7 +12949,10 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "ben-obi-wan-kenobi--unitoy-i"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "ben-obi-wan-kenobi-cape--unitoy-m6",
@@ -12784,7 +12962,10 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "ben-obi-wan-kenobi--unitoy-i"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "ben-obi-wan-kenobi-cape--unitoy-m7",
@@ -12794,7 +12975,10 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "ben-obi-wan-kenobi--unitoy-ii"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "ben-obi-wan-kenobi-cape--unitoy-m8",
@@ -12804,7 +12988,10 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "ben-obi-wan-kenobi--unitoy-ii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "ben-obi-wan-kenobi-cape--lili-ledy-m9",
@@ -12814,7 +13001,10 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/ben-obi-wan-kenobi-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "ben-obi-wan-kenobi--lili-ledy"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md."
     },
     {
       "id": "tusken-raider-cape--unitoy-m1",
@@ -15231,7 +15421,7 @@
       "factory": "Unknown",
       "mould": "M1",
       "source": "owner",
-      "sourceNote": "One M1, made by an unknown company for Kader, Unitoy, Smile and Taiwan. Owner Warren, 11 Oct 2026.",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/ben-obi-wan-kenobi.md.",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/telescoping-lightsaber/",
       "tells": [
         {
@@ -15323,7 +15513,13 @@
         "darth-vader--unitoy-m6",
         "darth-vader--unitoy-m7",
         "darth-vader--unitoy-m8",
-        "darth-vader--taiwan-m10"
+        "darth-vader--taiwan-m10",
+        "ben-obi-wan-kenobi--unitoy-i",
+        "ben-obi-wan-kenobi--unitoy-ii",
+        "ben-obi-wan-kenobi--unitoy-ii-no-coo",
+        "ben-obi-wan-kenobi--kader-iii-1a",
+        "ben-obi-wan-kenobi--kader-iii-1b",
+        "ben-obi-wan-kenobi--kader-iii-no-coo"
       ]
     }
   ],
@@ -15333,5 +15529,6 @@
   "chewbaccaOwner": "data/references/owner-verified/chewbacca.md",
   "c3poOwner": "data/references/owner-verified/c-3po.md",
   "vaderOwner": "data/references/owner-verified/darth-vader.md",
-  "stormtrooperOwner": "data/references/owner-verified/stormtrooper.md"
+  "stormtrooperOwner": "data/references/owner-verified/stormtrooper.md",
+  "benOwner": "data/references/owner-verified/ben-obi-wan-kenobi.md"
 }

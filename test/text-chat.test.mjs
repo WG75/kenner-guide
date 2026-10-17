@@ -1175,9 +1175,9 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   assert.ok(pbpFigure.tells.some(item => /pinkish hands/.test(item.detail)));
 
   const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
-  assert.match(coverage, /Figures with a tell besides the COO stamp: 22 \(was 18\/104\)/);
+  assert.match(coverage, /Figures with a tell besides the COO stamp: 23 \(was 18\/104\)/);
   assert.match(coverage, /Accessory variants with tells: 244/);
-  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 131/);
+  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 164/);
   const blaster = await call({ message: "identify the rebel blaster" });
   assert.equal(blaster.json.flowState.topic, "accessory_factory");
   assert.match(blaster.json.reply, /Let's check Rebel Blaster/);
@@ -1937,6 +1937,146 @@ await test("Stormtrooper stamp is on the left thigh and the COO sheet is shown",
   assert.match(text, /Boba Fett only/);
   assert.doesNotMatch(text, /Factory:\n- Smile/);
   assert.ok(text.length <= 7000, text.length);
+});
+
+await test("Ben Kenobi stamps follow Warren's rulings and the COO sheet is hot-linked", async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  const fig = data.figures.find(item => item.name === "Ben (Obi-Wan) Kenobi");
+  const owner = fs.readFileSync(path.join(root, "data/references/owner-verified/ben-obi-wan-kenobi.md"), "utf8");
+  assert.match(owner, /Date: 2026-10-17/);
+  assert.match(owner, /Source: owner Warren/);
+  assert.match(owner, /38250/);
+  assert.match(owner, /back of the legs/);
+  assert.match(owner, /runs past the end of 1977/);
+  assert.match(owner, /not a stamp rule/);
+  assert.match(owner, /first G of G\.M\.F\.G\.I\./);
+  assert.match(owner, /three head sizes/);
+  assert.match(owner, /extremely rare/);
+  assert.equal(fig.referenceImage.url, "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_BenKenobi.jpg");
+  assert.equal(fig.referenceImage.sourcePage, "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/");
+  assert.equal(fig.tells.length, 0);
+  assert.doesNotMatch(fig.stamps.join("\n"), /left thigh/);
+  assert.match(fig.stamps.join("\n"), /runs past 1977/);
+  assert.match(owner, /Lili Ledy/);
+
+  const unitoyStamp = "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG'";
+  const hongKong = "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'HONG KONG'";
+  const line = "Only the licensing line on the back of the legs: '© G.M.F.G.I. 1977', with no country";
+  const sheet = "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_BenKenobi.jpg";
+  const start = await call({ message: "identify the variant of Ben Kenobi" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.flowState.displayName, "Ben (Obi-Wan) Kenobi");
+  assert.equal(start.json.flowState.step, "coo");
+  assert.match(start.json.reply, /back of the legs/);
+  assert.doesNotMatch(start.json.reply, /left thigh/);
+  assert.equal(start.json.images[0].url, sheet);
+  assert.equal(start.json.images[0].credit, "Photo: Variant Villain");
+  assert.equal(start.json.images[0].sourcePage, "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/");
+  assert.ok(start.json.actions.some(action => action.label === unitoyStamp));
+  assert.ok(start.json.actions.some(action => action.label === hongKong));
+  assert.ok(start.json.actions.some(action => action.label === line));
+
+  const { cooOpening, cooContinue } = await import(pathToFileURL(path.join(root, "api/coo-flow.js")).href);
+  const hidden = cooOpening("Ben (Obi-Wan) Kenobi", { photos: false });
+  assert.equal(hidden.images, undefined);
+  const hiddenNoCoo = cooContinue(hidden.flowState, line, { photos: false });
+  assert.equal(hiddenNoCoo.images, undefined);
+  assert.match(hiddenNoCoo.reply, /photo/);
+
+  const unitoy = await call({ message: unitoyStamp, flowState: start.json.flowState });
+  assert.equal(unitoy.json.flowState.step, "follow");
+  assert.match(unitoy.json.reply, /runs past the end of 1977/);
+  assert.match(unitoy.json.reply, /does not separate/);
+  assert.ok(unitoy.json.images.some(image => image.url.endsWith("/ANH_BenKenobi_01.jpg")));
+  assert.ok(unitoy.json.images.some(image => image.url.endsWith("/ANH_BenKenobi_03.jpg")));
+  assert.equal(unitoy.json.images[0].credit, "Photo: Variant Villain");
+  const familyI = await call({
+    message: "White hair, and it matches family I on the photo",
+    flowState: unitoy.json.flowState
+  });
+  assert.match(familyI.json.reply, /Unitoy family I/);
+  assert.match(familyI.json.reply, /White hair/);
+  assert.match(familyI.json.reply, /Cape M5/);
+  assert.equal(familyI.json.flowState.step, "which");
+
+  const hk = await call({ message: hongKong, flowState: start.json.flowState });
+  assert.equal(hk.json.flowState.step, "follow");
+  assert.equal(hk.json.images[0].url, sheet);
+  assert.ok(hk.json.actions.some(action => action.label === "HONG KONG starts under the ©"));
+  assert.ok(hk.json.actions.some(action => action.label === "HONG KONG starts under the first G of G.M.F.G.I."));
+  assert.ok(hk.json.actions.some(action => action.label === "The black paint is glossier and thinner, and the hands are pale"));
+  const kader = await call({
+    message: "HONG KONG starts under the ©",
+    flowState: hk.json.flowState
+  });
+  assert.match(kader.json.reply, /Kader family III 1a/);
+  assert.match(kader.json.reply, /under the ©/);
+  assert.match(kader.json.reply, /Sabre M1/);
+  const kaderB = await call({
+    message: "HONG KONG starts under the first G of G.M.F.G.I.",
+    flowState: hk.json.flowState
+  });
+  assert.match(kaderB.json.reply, /first G/);
+  assert.match(kaderB.json.reply, /Kader family III 1b/);
+  const poch = await call({
+    message: "The black paint is glossier and thinner, and the hands are pale",
+    flowState: hk.json.flowState
+  });
+  assert.match(poch.json.reply, /Poch/);
+  assert.match(poch.json.reply, /pale/);
+  assert.equal(poch.json.flowState, null);
+
+  const open = await call({ message: line, flowState: start.json.flowState });
+  assert.equal(open.json.flowState.step, "follow");
+  assert.match(open.json.reply, /does not separate/);
+  assert.doesNotMatch(open.json.reply, /starts under/);
+  assert.ok(open.json.images.some(image => image.url.endsWith("/ANH_BenKenobi_03.jpg")));
+  assert.ok(open.json.images.some(image => image.url.endsWith("/ANH_BenKenobi_05.jpg")));
+  assert.ok(open.json.actions.every(action => /photo/.test(action.label)));
+  assert.equal(open.json.images[0].credit, "Photo: Variant Villain");
+  const lili = await call({
+    message: "It matches the Lili Ledy on the photo",
+    flowState: open.json.flowState
+  });
+  assert.match(lili.json.reply, /Lili Ledy/);
+  assert.match(lili.json.reply, /three head sizes/);
+  assert.match(lili.json.reply, /Sabre M9/);
+  const noCoo = await call({
+    message: "It matches the Kader family III figure on the photo",
+    flowState: open.json.flowState
+  });
+  assert.match(noCoo.json.reply, /Kader family III No COO/);
+  assert.match(noCoo.json.reply, /sabre M6/);
+  assert.match(noCoo.json.reply, /white-hair Trilogo/);
+
+  const match = JSON.parse(fs.readFileSync(path.join(root, "data/factory-match.json"), "utf8"));
+  assert.equal(match.figureVariants.find(item => item.id === "ben-obi-wan-kenobi--lili-ledy").factory, "Lili Ledy");
+  assert.equal(match.figureVariants.some(item => item.id === "ben-obi-wan-kenobi--unspecified"), false);
+  const sabres = Object.fromEntries(match.accessoryVariants.map(item => [item.id, item]));
+  assert.ok(sabres["telescoping-lightsaber--lili-ledy-m9"].cardedWith.includes("darth-vader--lili-ledy-m4-no-coo"));
+  assert.ok(sabres["telescoping-lightsaber--lili-ledy-m9"].cardedWith.includes("ben-obi-wan-kenobi--lili-ledy"));
+  assert.ok(sabres["telescoping-lightsaber--unknown-m1"].cardedWith.includes("ben-obi-wan-kenobi--unitoy-i"));
+  assert.ok(sabres["telescoping-lightsaber--unknown-m1"].cardedWith.includes("ben-obi-wan-kenobi--kader-iii-1a"));
+  assert.ok(sabres["telescoping-lightsaber--kader-m5"].cardedWith.includes("ben-obi-wan-kenobi--kader-iii-1b"));
+  assert.ok(sabres["telescoping-lightsaber--pbp-m6"].cardedWith.includes("ben-obi-wan-kenobi--kader-iii-no-coo"));
+  assert.ok(sabres["telescoping-lightsaber--pbp-m6"].cardedWith.includes("luke-skywalker--smile-no-coo"));
+  assert.equal(sabres["telescoping-lightsaber--pbp-m6"].cardedWith.includes("ben-obi-wan-kenobi--poch"), false);
+  assert.deepEqual(sabres["ben-obi-wan-kenobi-cape--unitoy-m5"].cardedWith, ["ben-obi-wan-kenobi--unitoy-i"]);
+  assert.deepEqual(sabres["ben-obi-wan-kenobi-cape--unitoy-m6"].cardedWith, ["ben-obi-wan-kenobi--unitoy-i"]);
+  assert.deepEqual(sabres["ben-obi-wan-kenobi-cape--unitoy-m7"].cardedWith, ["ben-obi-wan-kenobi--unitoy-ii"]);
+  assert.deepEqual(sabres["ben-obi-wan-kenobi-cape--unitoy-m8"].cardedWith, ["ben-obi-wan-kenobi--unitoy-ii-no-coo"]);
+  assert.ok(sabres["ben-obi-wan-kenobi-cape--kader-m4"].cardedWith.includes("ben-obi-wan-kenobi--kader-iii-no-coo"));
+  assert.deepEqual(sabres["ben-obi-wan-kenobi-cape--kader-china-m4"].cardedWith, []);
+  assert.deepEqual(sabres["ben-obi-wan-kenobi-cape--lili-ledy-m9"].cardedWith, ["ben-obi-wan-kenobi--lili-ledy"]);
+  assert.equal(match.accessoryVariants.some(item => (item.cardedWith || []).includes("ben-obi-wan-kenobi--poch")), false);
+
+  const dossier = fs.readFileSync(path.join(root, "data/figures/ben-obi-wan-kenobi-reference.txt"), "utf8");
+  assert.match(dossier, /Family I is Unitoy/);
+  assert.match(dossier, /does not separate them/);
+  assert.match(dossier, /white-hair Trilogo Ben also uses M6/);
+  assert.doesNotMatch(dossier, /Family II:\n- Kader/);
+  assert.ok(dossier.length <= 7000, dossier.length);
+  assert.ok(owner.length <= 7000, owner.length);
 });
 
 function loadCatalog() {
@@ -2821,7 +2961,7 @@ await test("mocked model answers Cloud Car Pilot and identify a figure without c
   // Vercel compiles api/chat.js with ncc into CommonJS. import.meta in that
   // bundle is a SyntaxError, so the function dies on load (FUNCTION_INVOCATION_FAILED)
   // and the page shows "Sorry, there was a problem getting an answer." for every question.
-  for (const file of ["api/chat.js", "api/vv-reference-photos.js", "vfcb-chat-ui.js"]) {
+  for (const file of ["api/chat.js", "api/vv-reference-photos.js", "api/coo-flow.js", "vfcb-chat-ui.js"]) {
     const source = fs.readFileSync(path.join(root, file), "utf8");
     assert.equal(source.includes("import.meta"), false, file);
   }

@@ -3056,6 +3056,184 @@
         "id": "darth-vader-coo-guide-3.2"
       },
       "missing": ""
+    },
+    {
+      "name": "Ben (Obi-Wan) Kenobi",
+      "recorded": "2026-10-17",
+      "source": "owner",
+      "whereToLook": "Look on the back of the legs. Unitoy family I and family II with a country are two lines, '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG'. Kader family III with a country is two lines, 'HONG KONG'. Lili Ledy and the No COO Bens are one line, the licensing line only. The picture is the Variant Villain COO sheet.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Unitoy family I = two lines, '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG'. White hair. The country column runs past 1977, and family II does the same.",
+        "Unitoy family II with the country = the same two lines. Grey hair. The column running past 1977 is not the tell.",
+        "Unitoy family II No COO = the licensing line only. Match it on the family II photo. Not a stamp rule.",
+        "Lili Ledy = the licensing line only. Three head sizes. Match it on the photo. Not a stamp rule.",
+        "Kader family III 1a = two lines, 'HONG KONG'. HONG KONG starts under the ©.",
+        "Kader family III 1b = two lines, 'HONG KONG'. HONG KONG starts under the first G of G.M.F.G.I.",
+        "Poch = the Kader Hong Kong stamp. Glossier, thinner black paint, and pale hands.",
+        "Kader family III No COO = the licensing line only. The No COO white-hair Trilogo Ben also uses sabre M6. Match it on the family III photo."
+      ],
+      "options": [
+        {
+          "id": "made-in-hong-kong",
+          "label": "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy I",
+            "Unitoy II with the country"
+          ],
+          "examples": [
+            "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "unitoy-i",
+              "label": "White hair, and it matches family I on the photo",
+              "factories": [
+                "Unitoy I"
+              ],
+              "conclusion": "That is the Unitoy family I. Two lines, '© G.M.F.G.I. 1977' and 'MADE IN HONG KONG'. White hair. The country column running past 1977 is also true of family II, so that was not the tell. Cape M5 and M6. Sabre M1, then M2, then M3.",
+              "sure": true
+            },
+            {
+              "id": "unitoy-ii",
+              "label": "Grey hair, and it matches family II on the photo",
+              "factories": [
+                "Unitoy II with the country"
+              ],
+              "conclusion": "That is the Unitoy family II with the country. Grey hair. The MADE IN HONG KONG column runs past 1977 on family I as well, so that was not the tell. Cape M7. Sabre M1, then M2, then M3.",
+              "sure": true
+            }
+          ],
+          "compareImages": [
+            {
+              "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/ANH_BenKenobi_01.jpg",
+              "alt": "Ben (Obi-Wan) Kenobi, family I, Unitoy",
+              "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+              "credit": "Photo: Variant Villain"
+            },
+            {
+              "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/ANH_BenKenobi_03.jpg",
+              "alt": "Ben (Obi-Wan) Kenobi, family II, Unitoy and Lili Ledy",
+              "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+              "credit": "Photo: Variant Villain"
+            }
+          ],
+          "compareReply": "Both Unitoy family I and family II use those two lines. On both, the MADE IN HONG KONG column runs past the end of 1977, so that does not separate them. Match the hair to the Variant Villain photo.\n\nWhich of these is it?"
+        },
+        {
+          "id": "hong-kong",
+          "label": "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'HONG KONG'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader III 1a",
+            "Kader III 1b",
+            "Poch"
+          ],
+          "examples": [
+            "Two lines on the back of the legs: '© G.M.F.G.I. 1977' and 'HONG KONG'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "kader-1a",
+              "label": "HONG KONG starts under the ©",
+              "factories": [
+                "Kader III 1a"
+              ],
+              "conclusion": "That is the Kader family III 1a. HONG KONG starts under the ©. Cape M1 to M4. Sabre M1 lettered, then M5.",
+              "sure": true
+            },
+            {
+              "id": "kader-1b",
+              "label": "HONG KONG starts under the first G of G.M.F.G.I.",
+              "factories": [
+                "Kader III 1b"
+              ],
+              "conclusion": "That is the Kader family III 1b. HONG KONG starts under the first G of G.M.F.G.I. Cape M1 to M4. Sabre M1 lettered, then M5.",
+              "sure": true
+            },
+            {
+              "id": "poch",
+              "label": "The black paint is glossier and thinner, and the hands are pale",
+              "factories": [
+                "Poch"
+              ],
+              "conclusion": "That is the Poch. It uses the Kader Hong Kong stamp. The black paint is glossier and thinner, and the hands are pale.",
+              "sure": true
+            }
+          ]
+        },
+        {
+          "id": "licensing-line",
+          "label": "Only the licensing line on the back of the legs: '© G.M.F.G.I. 1977', with no country",
+          "coo": "No COO",
+          "factories": [
+            "Unitoy II No COO",
+            "Lili Ledy",
+            "Kader III No COO"
+          ],
+          "examples": [
+            "Only the licensing line on the back of the legs: '© G.M.F.G.I. 1977', with no country"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "unitoy-ii-no-coo",
+              "label": "It matches the Unitoy family II figure on the photo",
+              "factories": [
+                "Unitoy II No COO"
+              ],
+              "conclusion": "That is the Unitoy family II No COO. The licensing line is the only marking. The stamp does not separate it from the Lili Ledy or the Kader family III No COO. It matches the family II photo. Cape M8. Sabre M1, then M2, then M3.",
+              "sure": true
+            },
+            {
+              "id": "lili-ledy",
+              "label": "It matches the Lili Ledy on the photo",
+              "factories": [
+                "Lili Ledy"
+              ],
+              "conclusion": "That is the Lili Ledy. The licensing line is the only marking. Lili Ledy Ben has three head sizes. The stamp does not separate it. It matches the photo. Cape M9. Sabre M9.",
+              "sure": true
+            },
+            {
+              "id": "kader-no-coo",
+              "label": "It matches the Kader family III figure on the photo",
+              "factories": [
+                "Kader III No COO"
+              ],
+              "conclusion": "That is the Kader family III No COO. The licensing line is the only marking. The No COO white-hair Trilogo Ben also came with sabre M6. The stamp does not separate it. It matches the family III photo. Cape M1 to M4. Sabre M1 lettered, then M5, and also M6.",
+              "sure": true
+            }
+          ],
+          "compareImages": [
+            {
+              "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/ANH_BenKenobi_03.jpg",
+              "alt": "Ben (Obi-Wan) Kenobi, family II, Unitoy and Lili Ledy",
+              "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+              "credit": "Photo: Variant Villain"
+            },
+            {
+              "url": "https://www.variantvillain.com/wp-content/uploads/2022/12/ANH_BenKenobi_05.jpg",
+              "alt": "Ben (Obi-Wan) Kenobi, family III, Kader and Poch",
+              "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+              "credit": "Photo: Variant Villain"
+            }
+          ],
+          "compareReply": "That one licensing line is shared by the Unitoy family II No COO, the Lili Ledy and the Kader family III No COO. The stamp does not separate them. Match the figure to the Variant Villain photo.\n\nWhich of these is it?"
+        }
+      ],
+      "referenceImage": {
+        "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_BenKenobi.jpg",
+        "alt": "Ben (Obi-Wan) Kenobi COO sheet",
+        "sourcePage": "https://www.variantvillain.com/characters/sw/ben-obi-wan-kenobi/",
+        "credit": "Photo: Variant Villain"
+      },
+      "missing": ""
     }
   ],
   "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported.",
@@ -3065,5 +3243,6 @@
   "chewbaccaNote": "Chewbacca stamps follow data/references/owner-verified/chewbacca.md (owner Warren, 2026-10-11).",
   "c3poNote": "C-3PO stamps follow data/references/owner-verified/c-3po.md (owner Warren, 2026-10-11).",
   "vaderNote": "Darth Vader stamps follow data/references/owner-verified/darth-vader.md (owner Warren, 2026-10-11).",
-  "stormtrooperNote": "Stormtrooper stamps follow data/references/owner-verified/stormtrooper.md (owner Warren, 2026-10-11)."
+  "stormtrooperNote": "Stormtrooper stamps follow data/references/owner-verified/stormtrooper.md (owner Warren, 2026-10-11).",
+  "benNote": "Ben (Obi-Wan) Kenobi stamps follow data/references/owner-verified/ben-obi-wan-kenobi.md (owner Warren, 2026-10-17)."
 }
