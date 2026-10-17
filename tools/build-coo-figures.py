@@ -397,6 +397,8 @@ def main():
     from apply_darth_vader_owner import sync_owner_stamps as sync_vader_stamps
     from apply_stormtrooper_owner import apply_coo_figures as apply_stormtrooper_coo
     from apply_stormtrooper_owner import sync_owner_stamps as sync_stormtrooper_stamps
+    from apply_ben_owner import apply_coo_figures as apply_ben_coo
+    from apply_ben_owner import sync_owner_stamps as sync_ben_stamps
     figures = apply_owner_records(figures)
     apply_coo_figures(figures)
     apply_leia_coo(figures)
@@ -405,6 +407,7 @@ def main():
     apply_c3po_coo(figures)
     apply_vader_coo(figures)
     apply_stormtrooper_coo(figures)
+    apply_ben_coo(figures)
     payload = {
         "cooGuideUrl": COO_GUIDE,
         "rule": "A partial or cut-off country name counts as No COO. No vintage figure is offered a Mexico leg stamp.",
@@ -433,6 +436,9 @@ def main():
     trooper = next((fig for fig in figures if fig.get("name") == "Stormtrooper"), None)
     if trooper:
         sync_stormtrooper_stamps(trooper)
+    ben = next((fig for fig in figures if fig.get("name") == "Ben (Obi-Wan) Kenobi"), None)
+    if ben:
+        sync_ben_stamps(ben)
     verified = sum(1 for fig in figures if fig["verified"])
     print(f"wrote {OUT} figures={len(figures)} verified={verified} fetched_now={fetched}")
 

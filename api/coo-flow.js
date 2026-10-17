@@ -1,8 +1,14 @@
 import fs from "fs";
 import path from "path";
+import { VV_REFERENCE_PHOTOS } from "./vv-reference-photos.js";
 
 const FILE = path.join(process.cwd(), "data", "coo-figures.json");
 const VV_MANIFEST = path.join(process.cwd(), "images", "variant-villain", "manifest.json");
+
+function photosEnabled(options) {
+  if (options && options.photos === false) return false;
+  return VV_REFERENCE_PHOTOS;
+}
 
 export const COO_EXPLANATION = "The country of origin (COO) stamp is the small text on the back of the legs saying where it was made. A partial or cut-off country name counts as No COO.";
 
@@ -19,9 +25,27 @@ function vvManifest() {
   }
 }
 
-function stampImage(record) {
+function hotlinkImage(image) {
+  const url = String(image && image.url || "").trim();
+  if (!url) return null;
+  return {
+    url,
+    alt: String(image.alt || "VF-CB reference image"),
+    title: String(image.title || ""),
+    caption: "",
+    credit: "Photo: Variant Villain",
+    sourcePage: String(image.sourcePage || "")
+  };
+}
+
+function stampImage(record, enabled = VV_REFERENCE_PHOTOS) {
   const image = record && record.referenceImage;
-  const id = image && String(image.id || "").trim();
+  if (!image) return null;
+  if (String(image.url || "").trim()) {
+    if (!enabled) return null;
+    return hotlinkImage(image);
+  }
+  const id = String(image.id || "").trim();
   if (!id) return null;
   const manifest = vvManifest();
   if (!manifest || manifest.show !== true) return null;
@@ -39,8 +63,14 @@ function stampImage(record) {
   };
 }
 
-function withStampImage(result, record) {
-  const image = stampImage(record);
+function compareImages(option, enabled) {
+  const list = option && Array.isArray(option.compareImages) ? option.compareImages : [];
+  if (!list.length || !enabled) return [];
+  return list.map(hotlinkImage).filter(Boolean);
+}
+
+function withStampImage(result, record, enabled) {
+  const image = stampImage(record, enabled);
   if (image) result.images = [image];
   return result;
 }
@@ -117,7 +147,8 @@ function figureMatch(record, factory) {
   return { figure: record.name, factory: name, sourceUrl: record.sourceUrl || "" };
 }
 
-export function cooOpening(displayName) {
+export function cooOpening(displayName, settings = {}) {
+  const enabled = photosEnabled(settings);
   const name = String(displayName || "").trim();
   const record = cooRecordFor(name);
   const options = record && Array.isArray(record.options) ? record.options.map(speakable).filter(Boolean) : [];
@@ -156,7 +187,7 @@ export function cooOpening(displayName) {
       photoTells: [],
       usedTells: []
     }
-  }, record);
+  }, record, enabled);
 }
 
 const TELL_ORDER = ["hair", "paint", "plastic", "head", "mould", "date", "cavity", "assembly", "accessory", "cardback"];
@@ -293,7 +324,8 @@ function findFollowUp(option, message) {
   return (option.followUps || []).find(item => norm(item.label) === want || norm(item.id) === want) || null;
 }
 
-export function cooContinue(flowState, message) {
+export function cooContinue(flowState, message, settings = {}) {
+  const enabled = photosEnabled(settings);
   const record = cooRecordFor(flowState && flowState.displayName);
   if (!record || !record.verified) {
     return done("I don't have verified COO details for that figure, so I won't guess a country list.");
@@ -337,8 +369,11 @@ export function cooContinue(flowState, message) {
     return done(`I'm not sure. That isn't one of the verified stamps for ${record.name}.`);
   }
   if (Array.isArray(option.followUps) && option.followUps.length) {
-    return withStampImage({
-      reply: `One more look at ${record.name}. ${record.whereToLook}\n\nWhich of these is it?`,
+    const compared = compareImages(option, enabled);
+    const look = String(option.compareReply || "").trim()
+      || `One more look at ${record.name}. ${record.whereToLook}\n\nWhich of these is it?`;
+    const result = {
+      reply: look,
       actions: option.followUps.map(choice),
       quickReplies: true,
       flowState: {
@@ -350,7 +385,10 @@ export function cooContinue(flowState, message) {
         photoTells: carried.photoTells,
         usedTells: carried.usedTells
       }
-    }, record);
+    };
+    if (compared.length) result.images = compared;
+    else if (!option.compareReply) withStampImage(result, record, enabled);
+    return result;
   }
   return afterStamp(
     record,

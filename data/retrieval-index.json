@@ -2293,6 +2293,8 @@
       "role": "",
       "name": "Ben (Obi-Wan) Kenobi",
       "aliases": [
+        "Ben Kenobi",
+        "Obi-Wan Kenobi",
         "Ben",
         "Obi-Wan",
         "Old Ben",
@@ -2305,6 +2307,8 @@
       ],
       "keywords": [
         "Ben (Obi-Wan) Kenobi",
+        "Ben Kenobi",
+        "Obi-Wan Kenobi",
         "Ben",
         "Obi-Wan",
         "Old Ben",
@@ -2316,7 +2320,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 5063
+      "chars": 6097
     },
     {
       "relPath": "figures/bespin-security-guard-2-reference.txt",
@@ -5072,6 +5076,28 @@
       ],
       "years": [],
       "chars": 4735
+    },
+    {
+      "relPath": "references/owner-verified/ben-obi-wan-kenobi.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/ben",
+        "obi",
+        "wan",
+        "kenobi"
+      ],
+      "keywords": [
+        "owner",
+        "verified/ben",
+        "obi",
+        "wan",
+        "kenobi"
+      ],
+      "years": [],
+      "chars": 3390
     },
     {
       "relPath": "references/owner-verified/c-3po.md",
