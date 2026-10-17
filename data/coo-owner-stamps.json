@@ -3,63 +3,6 @@
   "source": "owner",
   "figures": [
     {
-      "name": "Han Solo",
-      "whereToLook": "Look at the left leg, under the licensing details. 'Hong Kong' is Unitoy or Kader. No COO is Glasslite or PBP.",
-      "ask": "Which stamp do you see?",
-      "stamps": [
-        "Unitoy M1 = 'Hong Kong' left leg under licencing details",
-        "Kader M2 = 'Hong Kong' left leg under licencing details",
-        "Glasslite M2 = No COO, it would be either smooth or dotted remnants of the COO text left leg under licencing details",
-        "PBP M3 = Smooth no COO under licencing text."
-      ],
-      "options": [
-        {
-          "id": "hk-left",
-          "label": "Hong Kong, left leg, under the licensing details",
-          "coo": "No COO",
-          "factories": [
-            "Unitoy M1",
-            "Kader M2"
-          ],
-          "examples": [
-            "Hong Kong, left leg, under the licensing details"
-          ],
-          "conclusion": "That stamp is shared by the Unitoy M1 and the Kader M2. 'Hong Kong' is on the left leg under the licensing details. I'm not sure which of those it is from the stamp alone.",
-          "sure": false,
-          "followUps": []
-        },
-        {
-          "id": "no-coo",
-          "label": "No COO, left leg, under the licensing details",
-          "coo": "No COO",
-          "factories": [
-            "Glasslite M2",
-            "PBP M3"
-          ],
-          "examples": [
-            "No COO, left leg, under the licensing details"
-          ],
-          "conclusion": "",
-          "sure": false,
-          "followUps": [
-            {
-              "id": "dots",
-              "label": "Dotted remnants of the country text",
-              "conclusion": "That is the Glasslite M2. The left leg is No COO, with dotted remnants of the country text under the licensing details.",
-              "sure": true
-            },
-            {
-              "id": "smooth",
-              "label": "Smooth, no country text left",
-              "conclusion": "That stamp is shared by the Glasslite M2 and the PBP M3. A smooth No COO under the licensing text is listed for both. I'm not sure which of those it is from the stamp alone.",
-              "sure": false
-            }
-          ]
-        }
-      ],
-      "missing": "Hong Kong on the left leg does not separate Unitoy M1 from Kader M2. A smooth No COO does not separate Glasslite M2 from PBP M3."
-    },
-    {
       "name": "Death Squad Commander",
       "whereToLook": "Look at the left leg, under the licensing details. A clear 'Hong Kong', an almost smoothed 'Hong Kong', and a smooth No COO are different moulds.",
       "ask": "Which stamp do you see?",
@@ -3234,6 +3177,136 @@
         "credit": "Photo: Variant Villain"
       },
       "missing": ""
+    },
+    {
+      "name": "Han Solo",
+      "recorded": "2026-10-17",
+      "source": "owner",
+      "whereToLook": "Look on the left leg, under the licensing details. Family I is two lines, '© GMFGI 1977' and 'HONG KONG', not 'MADE IN'. Kader family II 1a has the H of HONG KONG under the ©. Kader family II 1b has the H starting after the ©. Glasslite, the Kader with no country, and family III are the licensing line only. The picture is the Variant Villain COO sheet.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Unitoy family I = two lines on the left leg: '© GMFGI 1977' and 'HONG KONG'. Not 'MADE IN'.",
+        "Kader family II 1a = the H of HONG KONG is under the ©.",
+        "Kader family II 1b = the H of HONG KONG starts after the ©.",
+        "Glasslite family II 2a = the licensing line only.",
+        "Kader family II 2b = the licensing line only. No country.",
+        "Family III = the licensing line only. PBP or Euro Kenner. No known tell. Different meltmarks are not a tell."
+      ],
+      "options": [
+        {
+          "id": "hk-left",
+          "label": "Two lines on the left leg, under the licensing details: '© GMFGI 1977' and 'HONG KONG'. Not 'MADE IN'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Unitoy I",
+            "Kader II 1a",
+            "Kader II 1b"
+          ],
+          "examples": [
+            "Two lines on the left leg, under the licensing details: '© GMFGI 1977' and 'HONG KONG'. Not 'MADE IN'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "unitoy-i",
+              "label": "It matches family I on the sheet",
+              "factories": [
+                "Unitoy I"
+              ],
+              "conclusion": "That is the Unitoy, family I. Two lines, '© GMFGI 1977' and 'HONG KONG', not 'MADE IN'. Rebel Blaster M3, then M2.",
+              "sure": true
+            },
+            {
+              "id": "kader-1a",
+              "label": "The H of HONG KONG is under the ©",
+              "factories": [
+                "Kader II 1a"
+              ],
+              "conclusion": "That is the Kader, family II 1a. The H of HONG KONG is under the ©. Rebel Blaster M4, then M5.",
+              "sure": true
+            },
+            {
+              "id": "kader-1b",
+              "label": "The H of HONG KONG starts after the ©",
+              "factories": [
+                "Kader II 1b"
+              ],
+              "conclusion": "That is the Kader, family II 1b. The H of HONG KONG starts after the ©. Rebel Blaster M4, then M5.",
+              "sure": true
+            }
+          ],
+          "compareImages": [
+            {
+              "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_HanSolo.jpg",
+              "alt": "Han Solo COO sheet",
+              "sourcePage": "https://www.variantvillain.com/characters/sw/han-solo/",
+              "credit": "Photo: Variant Villain"
+            }
+          ],
+          "compareReply": "That two-line stamp is '© GMFGI 1977' and 'HONG KONG', not 'MADE IN'. Family I on the sheet is Unitoy. On Kader family II, 1a has the H of HONG KONG under the ©, and 1b has the H starting after the ©.\n\nWhich of these is it?"
+        },
+        {
+          "id": "licensing-line",
+          "label": "Only the licensing line on the left leg: '© GMFGI 1977', with no country",
+          "coo": "No COO",
+          "factories": [
+            "Glasslite",
+            "Kader II No COO",
+            "PBP or Euro Kenner"
+          ],
+          "examples": [
+            "Only the licensing line on the left leg: '© GMFGI 1977', with no country"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "glasslite",
+              "label": "It matches Glasslite, family II 2a, on the sheet",
+              "factories": [
+                "Glasslite"
+              ],
+              "conclusion": "That is the Glasslite, family II 2a. The licensing line is the only marking. The blaster is the black M2 Jawa blaster, not a Rebel Blaster.",
+              "sure": true
+            },
+            {
+              "id": "kader-no-coo",
+              "label": "It matches the Kader with no country, family II 2b, on the sheet",
+              "factories": [
+                "Kader II No COO"
+              ],
+              "conclusion": "That is the Kader with no country, family II 2b. The licensing line is the only marking. Rebel Blaster M4, then M5.",
+              "sure": true
+            },
+            {
+              "id": "pbp-euro",
+              "label": "It matches family III on the sheet",
+              "factories": [
+                "PBP or Euro Kenner"
+              ],
+              "conclusion": "That is PBP or Euro Kenner, family III. The licensing line is the only marking. There is no known tell between them. Both can have different meltmarks, and that is not a tell. Rebel Blaster M5 is the PBP blaster.",
+              "sure": true
+            }
+          ],
+          "compareImages": [
+            {
+              "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_HanSolo.jpg",
+              "alt": "Han Solo COO sheet",
+              "sourcePage": "https://www.variantvillain.com/characters/sw/han-solo/",
+              "credit": "Photo: Variant Villain"
+            }
+          ],
+          "compareReply": "That licensing line is shared by Glasslite, the Kader with no country, and family III. The stamp does not separate them. Match the figure to the COO sheet. Family III is PBP or Euro Kenner. There is no known tell between those two. Both can have different meltmarks, and that is not a tell.\n\nWhich of these is it?"
+        }
+      ],
+      "referenceImage": {
+        "url": "https://www.variantvillain.com/wp-content/uploads/2021/12/SW_HanSolo.jpg",
+        "alt": "Han Solo COO sheet",
+        "sourcePage": "https://www.variantvillain.com/characters/sw/han-solo/",
+        "credit": "Photo: Variant Villain"
+      },
+      "missing": ""
     }
   ],
   "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported.",
@@ -3244,5 +3317,6 @@
   "c3poNote": "C-3PO stamps follow data/references/owner-verified/c-3po.md (owner Warren, 2026-10-11).",
   "vaderNote": "Darth Vader stamps follow data/references/owner-verified/darth-vader.md (owner Warren, 2026-10-11).",
   "stormtrooperNote": "Stormtrooper stamps follow data/references/owner-verified/stormtrooper.md (owner Warren, 2026-10-11).",
-  "benNote": "Ben (Obi-Wan) Kenobi stamps follow data/references/owner-verified/ben-obi-wan-kenobi.md (owner Warren, 2026-10-17)."
+  "benNote": "Ben (Obi-Wan) Kenobi stamps follow data/references/owner-verified/ben-obi-wan-kenobi.md (owner Warren, 2026-10-17).",
+  "hanNote": "Han Solo stamps follow data/references/owner-verified/han-solo.md (owner Warren, 2026-10-17)."
 }

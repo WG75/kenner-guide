@@ -2423,62 +2423,98 @@
       ]
     },
     {
-      "id": "han-solo--unitoy-m1",
+      "id": "han-solo--unitoy-i",
       "figure": "Han Solo",
-      "factory": "Unitoy M1",
-      "mould": "M1",
+      "factory": "Unitoy I",
+      "mould": "I",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/han-solo/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Hong Kong, left leg, under the licensing details",
-          "where": "Look at the country stamp."
+          "detail": "Two lines on the left leg, under the licensing details: '© GMFGI 1977' and 'HONG KONG'. Not 'MADE IN'. Family I.",
+          "where": "Look at the country stamp on the left leg."
         }
       ]
     },
     {
-      "id": "han-solo--kader-m2",
+      "id": "han-solo--kader-ii-1a",
       "figure": "Han Solo",
-      "factory": "Kader M2",
-      "mould": "M2",
+      "factory": "Kader II 1a",
+      "mould": "II",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/han-solo/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Hong Kong, left leg, under the licensing details",
-          "where": "Look at the country stamp."
+          "detail": "Two lines on the left leg, under the licensing details: '© GMFGI 1977' and 'HONG KONG'. Not 'MADE IN'. The H of HONG KONG is under the ©.",
+          "where": "Look at the country stamp on the left leg."
         }
       ]
     },
     {
-      "id": "han-solo--glasslite-m2",
+      "id": "han-solo--kader-ii-1b",
       "figure": "Han Solo",
-      "factory": "Glasslite M2",
-      "mould": "M2",
+      "factory": "Kader II 1b",
+      "mould": "II",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/han-solo/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "No COO, left leg, under the licensing details",
-          "where": "Look at the country stamp."
+          "detail": "Two lines on the left leg, under the licensing details: '© GMFGI 1977' and 'HONG KONG'. Not 'MADE IN'. The H of HONG KONG starts after the ©.",
+          "where": "Look at the country stamp on the left leg."
         }
       ]
     },
     {
-      "id": "han-solo--pbp-m3",
+      "id": "han-solo--glasslite",
       "figure": "Han Solo",
-      "factory": "PBP M3",
-      "mould": "M3",
+      "factory": "Glasslite",
+      "mould": "II",
       "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/han-solo/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "No COO, left leg, under the licensing details",
-          "where": "Look at the country stamp."
+          "detail": "Only the licensing line on the left leg: '© GMFGI 1977', with no country. Family II 2a. The blaster is the black M2 Jawa blaster.",
+          "where": "Look at the country stamp on the left leg."
+        }
+      ]
+    },
+    {
+      "id": "han-solo--kader-ii-no-coo",
+      "figure": "Han Solo",
+      "factory": "Kader II No COO",
+      "mould": "II",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/han-solo/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Only the licensing line on the left leg: '© GMFGI 1977', with no country. Family II 2b.",
+          "where": "Look at the country stamp on the left leg."
+        }
+      ]
+    },
+    {
+      "id": "han-solo--pbp-euro",
+      "figure": "Han Solo",
+      "factory": "PBP or Euro Kenner",
+      "mould": "III",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/han-solo/",
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Only the licensing line on the left leg: '© GMFGI 1977', with no country. Family III. No known tell between PBP and Euro Kenner. Different meltmarks are not a tell.",
+          "where": "Look at the country stamp on the left leg."
         }
       ]
     },
@@ -8463,8 +8499,10 @@
         }
       ],
       "cardedWith": [
-        "luke-skywalker-bespin-fatigues--lili-ledy-guide"
-      ]
+        "luke-skywalker-bespin-fatigues--lili-ledy-guide",
+        "han-solo--unitoy-i"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md."
     },
     {
       "id": "rebel-blaster--unitoy-m3",
@@ -8495,7 +8533,10 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "han-solo--unitoy-i"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md."
     },
     {
       "id": "rebel-blaster--kader-m4",
@@ -8521,7 +8562,12 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "han-solo--kader-ii-1a",
+        "han-solo--kader-ii-1b",
+        "han-solo--kader-ii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md."
     },
     {
       "id": "rebel-blaster--kader-m5",
@@ -8568,8 +8614,12 @@
         }
       ],
       "cardedWith": [
-        "han-solo-hoth-outfit--poch-guide"
-      ]
+        "han-solo-hoth-outfit--poch-guide",
+        "han-solo--kader-ii-1a",
+        "han-solo--kader-ii-1b",
+        "han-solo--kader-ii-no-coo"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md."
     },
     {
       "id": "rebel-blaster--lili-ledy-m5",
@@ -8664,8 +8714,10 @@
         }
       ],
       "cardedWith": [
-        "han-solo-hoth-outfit--poch-guide"
-      ]
+        "han-solo-hoth-outfit--poch-guide",
+        "han-solo--pbp-euro"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md."
     },
     {
       "id": "jawa-blaster--unitoy-m1",
@@ -8811,8 +8863,10 @@
       ],
       "cardedWith": [
         "princess-leia-organa--glasslite-m1",
-        "princess-leia-organa--glasslite-m3"
-      ]
+        "princess-leia-organa--glasslite-m3",
+        "han-solo--glasslite"
+      ],
+      "sourceNote": "Owner Warren, 17 Oct 2026. data/references/owner-verified/han-solo.md. The Glasslite Han uses the black M2 Jawa blaster."
     },
     {
       "id": "jawa-blaster--kader-m3",
@@ -15530,5 +15584,6 @@
   "c3poOwner": "data/references/owner-verified/c-3po.md",
   "vaderOwner": "data/references/owner-verified/darth-vader.md",
   "stormtrooperOwner": "data/references/owner-verified/stormtrooper.md",
-  "benOwner": "data/references/owner-verified/ben-obi-wan-kenobi.md"
+  "benOwner": "data/references/owner-verified/ben-obi-wan-kenobi.md",
+  "hanOwner": "data/references/owner-verified/han-solo.md"
 }

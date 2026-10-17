@@ -34,11 +34,10 @@ General:
 Mould Variants (Summary):
 (More detailed breakdown exists in accessory guide)
 
-M1 – Early Kenner production  
-M2 – Unitoy  
-M3 – Smile  
-M4 – Kader  
-M5 – Taiwan  
+Unitoy family I: Rebel Blaster M3, then M2.
+Kader family II: Rebel Blaster M4, then M5. That includes the Kader with no country.
+PBP, family III: Rebel Blaster M5. Euro Kenner is the same figure result, not its own blaster.
+Glasslite: black M2 Jawa blaster. Not a Rebel Blaster.
 (+ additional subvariants and regional variants)
 
 Notes:
@@ -53,9 +52,10 @@ Notes:
 
 FIGURE VARIANT FAMILIES
 
-COO Family 1: Unitoy  
-COO Family 2: Kader / Glasslite  
-COO Family 3: PBP  
+Family I: Unitoy. Two lines, '© GMFGI 1977' and 'HONG KONG'. Not 'MADE IN'.
+Family II: Kader and Glasslite. 1a, the H of HONG KONG is under the ©. 1b, the H starts after the ©. 2a Glasslite and 2b Kader No COO are the licensing line only.
+Family III: PBP or Euro Kenner. The licensing line only. No known tell. Different meltmarks are not a tell.
+The old names Unitoy M1, Kader M2, Glasslite M2 and PBP M3 are retired. M numbers are blaster moulds.
 
 --------------------------------------------------
 
@@ -115,7 +115,7 @@ Paint & Finish:
 - Rougher finish compared to Kenner
 
 Accessory Pairing:
-- Solid black Jawa blaster (NOT Rebel blaster)
+- Solid black M2 Jawa blaster (NOT a Rebel Blaster). Warren confirmed this on 17 Oct 2026.
 
 Important:
 - Jawa blaster mould is identical to Leia silver blaster mould
@@ -134,7 +134,7 @@ Notes:
 - Colour variation common
 
 Accessory Pairing:
-- Typically Rebel blaster variants (M4 / M5 style)
+- Rebel Blaster M5. Euro Kenner shares this family and is not a separate blaster.
 
 --------------------------------------------------
 

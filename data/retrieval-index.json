@@ -3158,7 +3158,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4286
+      "chars": 4927
     },
     {
       "relPath": "figures/ig-88-reference-2.txt",
@@ -5150,6 +5150,24 @@
       ],
       "years": [],
       "chars": 3673
+    },
+    {
+      "relPath": "references/owner-verified/han-solo.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/han",
+        "solo"
+      ],
+      "keywords": [
+        "owner",
+        "verified/han",
+        "solo"
+      ],
+      "years": [],
+      "chars": 2259
     },
     {
       "relPath": "references/owner-verified/luke-skywalker.md",
