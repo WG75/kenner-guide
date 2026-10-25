@@ -454,6 +454,7 @@ def main():
     from apply_stormtrooper_owner import apply_coo_figures as apply_stormtrooper_coo
     from apply_ben_owner import apply_coo_figures as apply_ben_coo
     from apply_han_owner import apply_coo_figures as apply_han_coo
+    from apply_jawa_owner import apply_coo_figures as apply_jawa_coo
     apply_coo_figures(payload["figures"])
     apply_leia_coo(payload["figures"])
     apply_r2_coo(payload["figures"])
@@ -463,6 +464,7 @@ def main():
     apply_stormtrooper_coo(payload["figures"])
     apply_ben_coo(payload["figures"])
     apply_han_coo(payload["figures"])
+    apply_jawa_coo(payload["figures"])
     payload["ownerStampNote"] = (
         "Six figures were revised by the owner on 11 Oct 2026. "
         "Unchanged rows keep source variantvillain.com, or the earlier owner sheet where that row was already owner-verified."
@@ -494,6 +496,7 @@ def main():
     from apply_stormtrooper_owner import sync_owner_stamps as sync_stormtrooper_stamps
     from apply_ben_owner import sync_owner_stamps as sync_ben_stamps
     from apply_han_owner import sync_owner_stamps as sync_han_stamps
+    from apply_jawa_owner import sync_owner_stamps as sync_jawa_stamps
     luke = next((fig for fig in payload["figures"] if fig.get("name") == "Luke Skywalker"), None)
     if luke:
         sync_owner_stamps(luke)
@@ -521,6 +524,9 @@ def main():
     han = next((fig for fig in payload["figures"] if fig.get("name") == "Han Solo"), None)
     if han:
         sync_han_stamps(han)
+    jawa = next((fig for fig in payload["figures"] if fig.get("name") == "Jawa"), None)
+    if jawa:
+        sync_jawa_stamps(jawa)
     write_report(payload["figures"], edited)
     print("edited", ", ".join(edited))
 

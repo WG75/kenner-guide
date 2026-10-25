@@ -1,14 +1,14 @@
 # Factory-match cross-reference coverage
 
-Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, data/references/owner-verified/r2-d2.md, data/references/owner-verified/chewbacca.md, data/references/owner-verified/c-3po.md, data/references/owner-verified/darth-vader.md, data/references/owner-verified/stormtrooper.md, data/references/owner-verified/ben-obi-wan-kenobi.md, and data/references/owner-verified/han-solo.md override the scrape.
+Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides. robots.txt allows those paths. Imperial Gunnery pages fill accessories Variant Villain does not guide, and those records are labelled imperialgunnery.com. Owner-verified stamps, the Skiff Vibro Staff, data/references/owner-verified/luke-skywalker.md, data/references/owner-verified/princess-leia-organa.md, data/references/owner-verified/r2-d2.md, data/references/owner-verified/chewbacca.md, data/references/owner-verified/c-3po.md, data/references/owner-verified/darth-vader.md, data/references/owner-verified/stormtrooper.md, data/references/owner-verified/ben-obi-wan-kenobi.md, data/references/owner-verified/han-solo.md, and data/references/owner-verified/jawa.md override the scrape.
 
 - Figure records: 104
-- Figures with a tell besides the COO stamp: 23 (was 18/104)
-- Figures with only COO data: 81
+- Figures with a tell besides the COO stamp: 22 (was 18/104)
+- Figures with only COO data: 82
 - Accessory variants: 313
 - Accessory variants with tells: 244
 - Accessory variants with no tells: 69
-- Factory-match links (accessory variant to figure variant): 174
+- Factory-match links (accessory variant to figure variant): 186
 - Character pages fetched: 104
 - Accessory guide pages fetched: 64
 
@@ -21,7 +21,6 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 - Darth Vader: mould, paint, assembly
 - Stormtrooper: mould, paint, assembly
 - Ben (Obi-Wan) Kenobi: hair, head, paint
-- Jawa: plastic
 - Sand People: head
 - R5-D4: assembly, paint
 - IG-88: plastic, head, mould, cardback
@@ -42,6 +41,7 @@ Scraped 11 Oct 2026 from variantvillain.com character pages and accessory guides
 
 - Princess Leia Organa
 - Han Solo
+- Jawa
 - Death Squad Commander
 - Greedo
 - Hammerhead

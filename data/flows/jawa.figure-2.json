@@ -14,33 +14,33 @@
   "steps": {
     "hong_kong_result": {
       "type": "question",
-      "content": "Hong Kong marked Jawa. Good.\n\nCompare the COO alignment against the main Variant Villain Jawa guide.\n\nFull Jawa guide:\nhttps://www.variantvillain.com/characters/jawa/\n\nIf you can match your figure to one of the reference images, please reply with:",
+      "content": "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'.\n\nFamily I is Kader. Family II 1a has the H of HONG KONG under the ©. Family II 1b has the H starting after the ©, under the first G. Toltoys is the same stamp on green plastic. Family III and IV are Unitoy. Lili Ledy and Poch have no stamp of their own.\n\nFull Jawa guide:\nhttps://www.variantvillain.com/characters/sw/jawa/\n\nIf you can match your figure, reply with:",
       "images": [
         {
-          "title": "Jawa Kader M1",
+          "title": "Jawa family I, Kader",
           "url": "/images/jawa_figure_kader_M1.png",
-          "caption": "Kader M1 reference."
+          "caption": "Family I, Kader."
         },
         {
-          "title": "Jawa Kader M2",
+          "title": "Jawa family II, Kader",
           "url": "/images/jawa_figure_kader_M2.png",
-          "caption": "Kader M2 reference."
+          "caption": "Family II, Kader."
         },
         {
-          "title": "Jawa Unitoy M3",
+          "title": "Jawa family III, Unitoy",
           "url": "/images/jawa_figure_unitoy_M3.png",
-          "caption": "Unitoy M3 reference."
+          "caption": "Family III, Unitoy."
         },
         {
-          "title": "Jawa Unitoy / Lili Ledy M4",
+          "title": "Jawa family IV, Unitoy or Lili Ledy",
           "url": "/images/jawa_figure_unitoy_lili-ledy_M4.png",
-          "caption": "Unitoy / Lili Ledy M4 reference."
+          "caption": "Family IV, Unitoy or Lili Ledy."
         }
       ],
       "options": [
         {
           "value": "1",
-          "label": "Kader M1",
+          "label": "Family I, Kader",
           "aliases": [
             "m1",
             "kader m1"
@@ -49,7 +49,7 @@
         },
         {
           "value": "2",
-          "label": "Kader M2",
+          "label": "Family II, Kader Hong Kong",
           "aliases": [
             "m2",
             "kader m2"
@@ -58,7 +58,7 @@
         },
         {
           "value": "3",
-          "label": "Unitoy M3",
+          "label": "Family III or IV, Unitoy",
           "aliases": [
             "m3",
             "unitoy m3"
@@ -67,7 +67,7 @@
         },
         {
           "value": "4",
-          "label": "Unitoy / Lili Ledy M4",
+          "label": "Lili Ledy, Family IV tooling",
           "aliases": [
             "m4",
             "unitoy",
@@ -80,12 +80,12 @@
     },
     "non_hong_kong_result": {
       "type": "message",
-      "content": "If it does not show Hong Kong, you may be looking at a no COO or altered COO Jawa variant.\n\nCompare carefully against the full Variant Villain Jawa guide:\nhttps://www.variantvillain.com/characters/jawa/\n\nFor now, treat this as needing visual reference comparison rather than a confirmed ID.",
+      "content": "One licensing line and no country is Kader China, family II 2. It is not 'Made in China'. 2a sits higher on the leg. 2b sits lower. Check the photo against the Variant Villain Jawa guide:\nhttps://www.variantvillain.com/characters/sw/jawa/\n\nJawa Blaster M2 and Cloak M2.",
       "next": "offer_blaster"
     },
     "unclear_coo_result": {
       "type": "message",
-      "content": "No problem. COO marks can be difficult to read, especially on worn figures.\n\nBest next step: use strong light and compare both legs against the Variant Villain reference images:\nhttps://www.variantvillain.com/characters/jawa/",
+      "content": "No problem. COO marks can be difficult to read, especially on worn figures.\n\nBest next step: use strong light and compare both legs against the Variant Villain reference images:\nhttps://www.variantvillain.com/characters/sw/jawa/",
       "next": "offer_blaster"
     },
     "offer_blaster": {

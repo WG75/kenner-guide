@@ -65,39 +65,40 @@
     },
     "cape_check": {
       "type": "question",
-      "content": "No problem. Start with the easiest visible thing.\n\nWhat does your Jawa have?",
+      "content": "No problem. Start with the cape.\n\nA cloth cape is usual. No cape is the other usual answer. A vinyl cape is extremely rare, about 0.1%, so it is not the split to start with.\n\nWhat does your Jawa have?",
       "options": [
         {
           "value": "1",
-          "label": "Vinyl cape - smooth plastic",
-          "aliases": [
-            "vinyl",
-            "vinyl cape",
-            "plastic cape",
-            "smooth plastic"
-          ],
-          "next": "route_vinyl_cape"
-        },
-        {
-          "value": "2",
-          "label": "Cloth cloak - fabric",
+          "label": "Cloth cape",
           "aliases": [
             "cloth",
+            "cloth cape",
             "cloth cloak",
             "fabric",
             "fabric cloak"
           ],
-          "next": "cloth_choice"
+          "next": "coo_check"
         },
         {
-          "value": "3",
-          "label": "No cape or cloak",
+          "value": "2",
+          "label": "No cape",
           "aliases": [
             "none",
             "no cape",
             "no cloak",
             "naked",
             "missing"
+          ],
+          "next": "coo_check"
+        },
+        {
+          "value": "3",
+          "label": "Vinyl cape, extremely rare",
+          "aliases": [
+            "vinyl",
+            "vinyl cape",
+            "plastic cape",
+            "smooth plastic"
           ],
           "next": "coo_check"
         }
@@ -178,7 +179,7 @@
     },
     "coo_check": {
       "type": "question",
-      "content": "Next step:\nCheck the Country of Origin markings on the legs.\n\nReply with:",
+      "content": "Next, the stamp on the left leg. Not the lower robe.\n\nTwo lines, '© G.M.F.G.I. 1977' and 'HONG KONG', or one licensing line and no country. Kader China is not 'Made in China'.\n\nReply with:",
       "options": [
         {
           "value": "1",

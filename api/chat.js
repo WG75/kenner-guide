@@ -1776,7 +1776,7 @@ async function handleTextChat(res, { message, history, flowState }) {
   let variantNote = "";
   if (flowState && flowState.topic === "variant_identify") {
     if (flowState.step === "need_name") return tcStartVariant(res, question);
-    const stepName = flowState.step === "coo" || flowState.step === "follow" || flowState.step === "tell"
+    const stepName = flowState.step === "cape" || flowState.step === "coo" || flowState.step === "follow" || flowState.step === "tell"
       ? flowState.step
       : "coo";
     const continued = cooContinue({ ...flowState, step: stepName }, question);

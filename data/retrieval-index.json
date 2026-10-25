@@ -3468,7 +3468,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 3243
+      "chars": 3955
     },
     {
       "relPath": "figures/king-gorneesh-reference.txt",
@@ -5168,6 +5168,22 @@
       ],
       "years": [],
       "chars": 2259
+    },
+    {
+      "relPath": "references/owner-verified/jawa.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/jawa"
+      ],
+      "keywords": [
+        "owner",
+        "verified/jawa"
+      ],
+      "years": [],
+      "chars": 2424
     },
     {
       "relPath": "references/owner-verified/luke-skywalker.md",

@@ -3307,6 +3307,211 @@
         "credit": "Photo: Variant Villain"
       },
       "missing": ""
+    },
+    {
+      "name": "Jawa",
+      "recorded": "2026-10-25",
+      "source": "owner",
+      "whereToLook": "Look on the left leg. Not the lower robe. Every stamp but Kader China is two lines, '© G.M.F.G.I. 1977' and 'HONG KONG'. Kader China, family II 2, is one licensing line and no country. The picture is the Variant Villain COO sheet.",
+      "ask": "Which stamp do you see?",
+      "stamps": [
+        "Family I Kader = two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Vinyl on 12a, cloth by 12c.",
+        "Family II 1a Kader = the H of HONG KONG is under the ©.",
+        "Family II 1b Kader = the H of HONG KONG starts after the ©, under the first G.",
+        "Family II 2a Kader China = the licensing line only, no country. The stamp sits higher on the leg.",
+        "Family II 2b Kader China = the licensing line only, no country. The stamp sits lower on the leg.",
+        "Toltoys = the same two lines, on green plastic. Kader Hong Kong tooling.",
+        "Family III and IV Unitoy = the same two lines. No separate stamp.",
+        "Lili Ledy = Family IV tooling. No stamp of its own.",
+        "Poch = mixed Kader and Unitoy parts. No stamp of its own."
+      ],
+      "options": [
+        {
+          "id": "hk-left",
+          "label": "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'",
+          "coo": "Hong Kong",
+          "factories": [
+            "Kader I",
+            "Kader II 1a",
+            "Kader II 1b",
+            "Toltoys",
+            "Unitoy",
+            "Lili Ledy",
+            "Poch"
+          ],
+          "examples": [
+            "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "kader-i",
+              "label": "It matches family I on the sheet",
+              "factories": [
+                "Kader I"
+              ],
+              "conclusion": "That is the Kader, family I. Two lines on the left leg. Vinyl cape on the 12a card, cloth by the 12c card. Jawa Blaster M2.",
+              "sure": true
+            },
+            {
+              "id": "kader-ii",
+              "label": "It matches family II on the sheet",
+              "factories": [],
+              "conclusion": "",
+              "sure": false,
+              "followUps": [
+                {
+                  "id": "kader-1a",
+                  "label": "The H of HONG KONG is under the ©",
+                  "factories": [
+                    "Kader II 1a"
+                  ],
+                  "conclusion": "That is the Kader, family II 1a. The H of HONG KONG is under the ©. Jawa Blaster M3.",
+                  "sure": true
+                },
+                {
+                  "id": "kader-1b",
+                  "label": "The H of HONG KONG starts after the ©",
+                  "factories": [
+                    "Kader II 1b"
+                  ],
+                  "conclusion": "That is the Kader, family II 1b. The H of HONG KONG starts after the ©, under the first G. Jawa Blaster M3.",
+                  "sure": true
+                }
+              ],
+              "compareImages": [
+                {
+                  "url": "https://www.variantvillain.com/wp-content/uploads/2025/09/F2-Kader.jpg",
+                  "alt": "Family II on the Variant Villain sheet. 1a: the H of HONG KONG is under the ©. 1b: the H starts after the ©, under the first G.",
+                  "title": "Kader family II, 1a and 1b",
+                  "caption": "Family II on the Variant Villain sheet. 1a: the H of HONG KONG is under the ©. 1b: the H starts after the ©, under the first G.",
+                  "credit": "Photo: Variant Villain",
+                  "sourcePage": "https://www.variantvillain.com/characters/sw/jawa/"
+                }
+              ],
+              "compareReply": "Family II is Kader Hong Kong. Check the photo. 1a has the H of HONG KONG under the ©. 1b has the H starting after the ©, under the first G.\n\nWhich of these is it?"
+            },
+            {
+              "id": "toltoys",
+              "label": "The plastic is green",
+              "factories": [
+                "Toltoys"
+              ],
+              "conclusion": "That is the Toltoys. Kader Hong Kong tooling, and the plastic is green. The stamp is the same two lines. Bluish Jawa Blaster M3 and Vinyl Cape M2.",
+              "sure": true
+            },
+            {
+              "id": "unitoy",
+              "label": "It matches family III or IV on the sheet",
+              "factories": [
+                "Unitoy"
+              ],
+              "conclusion": "That is the Unitoy, family III or IV. Two lines on the left leg. There is no separate stamp for III and IV. Jawa Blaster M1.",
+              "sure": true
+            },
+            {
+              "id": "lili-ledy",
+              "label": "It matches the Lili Ledy on the sheet",
+              "factories": [
+                "Lili Ledy"
+              ],
+              "conclusion": "That is the Lili Ledy. Family IV tooling, and no stamp of its own. Pilot Blaster M6.",
+              "sure": true
+            },
+            {
+              "id": "poch",
+              "label": "It matches the Poch on the sheet",
+              "factories": [
+                "Poch"
+              ],
+              "conclusion": "That is the Poch. Mixed Kader and Unitoy parts, and no stamp of its own. Jawa Blaster M1.",
+              "sure": true
+            }
+          ],
+          "compareImages": [
+            {
+              "url": "https://www.variantvillain.com/wp-content/uploads/2023/10/Jawa-COO-Sheet-3.3.jpg",
+              "alt": "Jawa COO sheet",
+              "sourcePage": "https://www.variantvillain.com/characters/sw/jawa/",
+              "credit": "Photo: Variant Villain"
+            }
+          ],
+          "compareReply": "That two-line stamp is '© G.M.F.G.I. 1977' and 'HONG KONG', on the left leg. Family I is Kader. Family II is Kader Hong Kong, and the photo separates 1a from 1b. Toltoys is the same stamp on green plastic. Family III and IV are Unitoy. Lili Ledy and Poch have no stamp of their own.\n\nWhich of these is it?"
+        },
+        {
+          "id": "licensing-line",
+          "label": "Only the licensing line on the left leg: '© G.M.F.G.I. 1977', with no country",
+          "coo": "No COO",
+          "factories": [
+            "Kader China II 2a",
+            "Kader China II 2b"
+          ],
+          "examples": [
+            "Only the licensing line on the left leg: '© G.M.F.G.I. 1977', with no country"
+          ],
+          "conclusion": "",
+          "sure": false,
+          "followUps": [
+            {
+              "id": "china-2a",
+              "label": "The stamp sits higher on the leg",
+              "factories": [
+                "Kader China II 2a"
+              ],
+              "conclusion": "That is the Kader China, family II 2a. One licensing line, no country. The stamp sits higher on the leg. Jawa Blaster M2 and Cloak M2.",
+              "sure": true
+            },
+            {
+              "id": "china-2b",
+              "label": "The stamp sits lower on the leg",
+              "factories": [
+                "Kader China II 2b"
+              ],
+              "conclusion": "That is the Kader China, family II 2b. One licensing line, no country. The stamp sits lower on the leg. Jawa Blaster M2 and Cloak M2.",
+              "sure": true
+            }
+          ],
+          "compareImages": [
+            {
+              "url": "https://www.variantvillain.com/wp-content/uploads/2025/09/F2-Kader.jpg",
+              "alt": "Kader China on the Variant Villain family II sheet. 2a sits higher on the leg. 2b sits lower. Both are one licensing line and no country.",
+              "title": "Kader China family II, 2a and 2b",
+              "caption": "Kader China on the Variant Villain family II sheet. 2a sits higher on the leg. 2b sits lower. Both are one licensing line and no country.",
+              "credit": "Photo: Variant Villain",
+              "sourcePage": "https://www.variantvillain.com/characters/sw/jawa/"
+            }
+          ],
+          "compareReply": "That is Kader China, family II 2. One licensing line, and no country. Not 'Made in China'. Check the photo. 2a sits higher on the leg. 2b sits lower.\n\nWhich of these is it?"
+        }
+      ],
+      "referenceImage": {
+        "url": "https://www.variantvillain.com/wp-content/uploads/2023/10/Jawa-COO-Sheet-3.3.jpg",
+        "alt": "Jawa COO sheet",
+        "sourcePage": "https://www.variantvillain.com/characters/sw/jawa/",
+        "credit": "Photo: Variant Villain"
+      },
+      "capeFirst": {
+        "ask": "Cloth cape, or no cape? A vinyl cape is the rare case, not the usual split.",
+        "choices": [
+          {
+            "id": "cloth",
+            "label": "Cloth cape",
+            "note": "Cloth cape. The stamp is next, on the left leg."
+          },
+          {
+            "id": "none",
+            "label": "No cape",
+            "note": "No cape. The stamp is still on the left leg."
+          },
+          {
+            "id": "vinyl",
+            "label": "Vinyl cape, extremely rare",
+            "note": "A vinyl cape is extremely rare, about 0.1%. It is not a factory by itself. The stamp is still the check."
+          }
+        ]
+      },
+      "missing": ""
     }
   ],
   "reviewNote": "11 Oct 2026 review replaced the stamp cells of the edited figures. Blank rows were left as previously exported.",
@@ -3318,5 +3523,6 @@
   "vaderNote": "Darth Vader stamps follow data/references/owner-verified/darth-vader.md (owner Warren, 2026-10-11).",
   "stormtrooperNote": "Stormtrooper stamps follow data/references/owner-verified/stormtrooper.md (owner Warren, 2026-10-11).",
   "benNote": "Ben (Obi-Wan) Kenobi stamps follow data/references/owner-verified/ben-obi-wan-kenobi.md (owner Warren, 2026-10-17).",
-  "hanNote": "Han Solo stamps follow data/references/owner-verified/han-solo.md (owner Warren, 2026-10-17)."
+  "hanNote": "Han Solo stamps follow data/references/owner-verified/han-solo.md (owner Warren, 2026-10-17).",
+  "jawaNote": "Jawa stamps follow data/references/owner-verified/jawa.md (owner Warren, 2026-10-25)."
 }
