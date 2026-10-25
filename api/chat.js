@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   try {
     const { message, image, flowState, history } = req.body || {};
 
-    if (flowState?.topic === "accessory_factory") {
+    if (!image && flowState?.topic === "accessory_factory") {
       const continued = accessoryContinue(flowState, String(message || ""));
       return tcReply(res, continued.reply, {
         flowState: continued.flowState,
@@ -30,12 +30,12 @@ export default async function handler(req, res) {
       });
     }
 
-    if (flowState?.topic === "data_flow") {
+    if (!image && flowState?.topic === "data_flow") {
       const dataFlowReply = continueDataFlow(String(message || ""), flowState);
       return res.status(200).json(dataFlowReply);
     }
 
-    if (flowState?.topic === "image_identified") {
+    if (!image && flowState?.topic === "image_identified") {
       const normalisedMessage = normalise(String(message || ""));
       const figure = flowState.figure || "unknown";
       const identifiedName = typeof flowState.displayName === "string" && flowState.displayName.trim()
@@ -219,7 +219,8 @@ Your job:
   "figure_key": a stable snake_case key
   "display_name": the best broad name
   "item_kind": "figure" or "accessory"
-  "visible_accessories": short names of the original accessories you can see, such as "cape", "blaster", "rifle", "lightsaber", "cloak" or "bowcaster". Use [] when none of those pieces are in the photo. Leave this out when item_kind is "accessory".
+  "visible_accessories": short names of original accessories that are fully in the photo and clearly that piece, such as "cape", "blaster", "rifle", "lightsaber", "cloak" or "bowcaster". Use [] when none are clearly and fully visible. A small, dark, or partly hidden shape is not a bowcaster, blaster, cape or rifle. Do not guess. Leave this out when item_kind is "accessory".
+  "accessories_clear": true or false. True only when the photo clearly settles every accessory this figure came with: each one is fully in frame, or the whole figure is in frame and an accessory is plainly not there. False when the photo is cropped, dark, or any piece is partial or doubtful.
   "confidence": "high", "medium", or "low"
   "is_vintage_star_wars": true or false
 
@@ -294,6 +295,7 @@ confidence: "low"
       const costumeCues = Array.isArray(parsed?.costume_cues)
         ? parsed.costume_cues.filter(item => typeof item === "string")
         : [];
+      const accessoriesClear = parsed?.accessories_clear === true;
 
       if (!isVintage || figureKey === "uncertain") {
         return res.status(200).json({
@@ -317,7 +319,8 @@ confidence: "low"
         displayName,
         figureKey,
         visibleAccessories,
-        costumeCues
+        costumeCues,
+        accessoriesClear
       }));
     }
 
@@ -337,8 +340,8 @@ confidence: "low"
   }
 }
 
-function photoIdentificationReply({ itemKind, displayName, figureKey, visibleAccessories, costumeCues }) {
-  const composed = composePhotoReply({ itemKind, displayName, visibleAccessories, costumeCues });
+function photoIdentificationReply({ itemKind, displayName, figureKey, visibleAccessories, costumeCues, accessoriesClear }) {
+  const composed = composePhotoReply({ itemKind, displayName, visibleAccessories, costumeCues, accessoriesClear });
   const figure = composed.itemKind === "figure" ? normaliseFigureKey(composed.displayName) : figureKey;
   return {
     reply: composed.reply,
