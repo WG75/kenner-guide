@@ -6,6 +6,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { parseFollowUps, fallbackFollowUps, layoutMode, syncLayoutClass, actionIntent, askAboutPrompt, appendTranscriptEntry, loadTranscript, saveTranscript, TRANSCRIPT_KEY } from "../vfcb-chat-ui.js";
+import { decideMoulds, resolveAccessoryName } from "../api/accessory-photo.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 process.chdir(root);
@@ -449,20 +450,155 @@ await test("a quick reply or another photo appends to the transcript", async () 
 });
 
 await test("accessory photo asks about the accessory instead of Yes or No", async () => {
-  nextResponse = async () => ({
-    ok: true, status: 200,
-    json: async () => ({ choices: [{ message: { content: '{"figure_key":"jawa_blaster","display_name":"Jawa Blaster","item_kind":"accessory","confidence":"medium","is_vintage_star_wars":true}' } }] })
-  });
+  let step = 0;
+  nextResponse = async () => {
+    step += 1;
+    const content = step === 1
+      ? '{"figure_key":"jawa_blaster","display_name":"Jawa Blaster","item_kind":"accessory","confidence":"medium","is_vintage_star_wars":true}'
+      : '{"mould_ids":["jawa-blaster--unitoy-m1"]}';
+    return {
+      ok: true, status: 200,
+      json: async () => ({ choices: [{ message: { content } }] })
+    };
+  };
   const { json } = await call({ message: "", image: "data:image/png;base64,AAAA" });
-  assert.equal(json.reply, "The accessory in your photo appears to be Jawa Blaster.");
-  assert.doesNotMatch(json.reply, /Confidence/);
+  assert.equal(json.reply, "The accessory in your photo appears to be Jawa Blaster. That is the Unitoy M1 Jawa Blaster. It was carded with Jawa.");
+  assert.doesNotMatch(json.reply, /Confidence|What mould or sculpt|What colour is it|Any markings/);
+  assert.doesNotMatch(json.reply, /isn't|is not|not the|not a/i);
   assert.deepEqual(json.actions.map(action => action.label), [
-    "Do you have a question about this accessory?",
-    "Would you like to identify its mould, colour or markings?"
+    "Do you have a question about this accessory?"
   ]);
   assert.equal(json.flowState.itemKind, "accessory");
   assert.equal(json.flowState.displayName, "Jawa Blaster");
   assert.equal(json.quickReplies, true);
+  assert.equal(calls.length, 2);
+  const mouldCall = calls[1].body.messages;
+  const mouldText = JSON.stringify(mouldCall);
+  assert.match(mouldText, /secondary/);
+  assert.match(mouldText, /Do not choose a mould from colour alone/);
+  assert.match(mouldText, /jawa-blaster--unitoy-m1/);
+  assert.match(mouldText, /JawaBlaster_/);
+  assert.ok(mouldText.length < 7000, `mould prompt is ${mouldText.length} characters`);
+  assert.equal(json.images.length >= 1, true);
+  assert.equal(json.images[0].credit, "Photo: Variant Villain");
+  assert.match(json.images[0].sourcePage, /variantvillain\.com\/accessory-guide\/jawa-blaster/);
+  assert.match(json.images[0].url, /^https:\/\/www\.variantvillain\.com\//);
+});
+
+await test("a loose blaster photo is matched from the picture, not a mould colour markings quiz", async () => {
+  let step = 0;
+  nextResponse = async () => {
+    step += 1;
+    const content = step === 1
+      ? '{"figure_key":"blaster","display_name":"blaster","item_kind":"accessory","confidence":"medium","is_vintage_star_wars":true}'
+      : step === 2
+        ? '{"accessory":"Rebel Blaster"}'
+        : '{"mould_ids":["rebel-blaster--unitoy-m2","made-up-mould","rebel-blaster--unitoy-m3"]}';
+    return {
+      ok: true, status: 200,
+      json: async () => ({ choices: [{ message: { content } }] })
+    };
+  };
+  const { json } = await call({ message: "", image: "data:image/png;base64,AAAA" });
+  assert.equal(calls.length, 3);
+  assert.match(json.reply, /^The accessory in your photo appears to be Rebel Blaster\./);
+  assert.match(json.reply, /Unitoy M2/);
+  assert.match(json.reply, /Unitoy M3/);
+  assert.doesNotMatch(json.reply, /made-up|What mould or sculpt|What colour is it|Any markings|Let's check blaster/);
+  assert.doesNotMatch(json.reply, /isn't|is not|not the|not a/i);
+  assert.equal(json.actions.some(action => /mould, colour or markings/i.test(action.label)), false);
+  assert.equal(json.flowState.displayName, "Rebel Blaster");
+  assert.equal(json.flowState.itemKind, "accessory");
+  const namesCall = JSON.stringify(calls[1].body.messages);
+  assert.match(namesCall, /Rebel Blaster/);
+  assert.match(namesCall, /Jawa Blaster/);
+  assert.doesNotMatch(namesCall, /What mould or sculpt/);
+  const mouldCall = calls[2].body.messages[1].content;
+  assert.equal(mouldCall[1].image_url.url, "data:image/png;base64,AAAA");
+  assert.ok(mouldCall.some(part => part.type === "image_url" && /RebelBlaster_/.test(part.image_url.url)));
+  assert.match(mouldCall[0].text, /colour \(secondary\)/);
+  assert.match(JSON.stringify(calls[2].body.messages[0].content), /Do not choose a mould from colour alone/);
+  assert.ok(json.images.every(image => image.credit === "Photo: Variant Villain" && /rebel-blaster/.test(image.sourcePage)));
+});
+
+await test("an accessory photo that does not show the sculpt is not quizzed for colour", async () => {
+  let step = 0;
+  nextResponse = async () => {
+    step += 1;
+    const content = step === 1
+      ? '{"figure_key":"rebel_blaster","display_name":"Rebel Blaster","item_kind":"accessory","confidence":"medium","is_vintage_star_wars":true}'
+      : '{"mould_ids":[]}';
+    return {
+      ok: true, status: 200,
+      json: async () => ({ choices: [{ message: { content } }] })
+    };
+  };
+  const { json } = await call({ message: "", image: "data:image/png;base64,AAAA" });
+  assert.equal(json.reply, "The accessory in your photo appears to be Rebel Blaster. I can't tell the mould from this photo.");
+  assert.doesNotMatch(json.reply, /What mould or sculpt|What colour is it|Any markings|dark blue/);
+  assert.equal(json.actions.map(action => action.label).join("\n").includes("mould, colour or markings"), false);
+  assert.equal(json.flowState.topic, "image_identified");
+  assert.ok(json.images.length >= 1);
+});
+
+await test("a photo shortlist asks only for a detail the photo cannot show", async () => {
+  let step = 0;
+  nextResponse = async () => {
+    step += 1;
+    const content = step === 1
+      ? '{"figure_key":"jawa_blaster","display_name":"Jawa Blaster","item_kind":"accessory","confidence":"medium","is_vintage_star_wars":true}'
+      : '{"mould_ids":["jawa-blaster--kader-m2","jawa-blaster--glasslite-m2"]}';
+    return {
+      ok: true, status: 200,
+      json: async () => ({ choices: [{ message: { content } }] })
+    };
+  };
+  const { json } = await call({ message: "", image: "data:image/png;base64,AAAA" });
+  assert.match(json.reply, /Jawa Blaster/);
+  assert.match(json.reply, /Kader M2/);
+  assert.match(json.reply, /Glasslite M2/);
+  assert.match(json.reply, /If it is still carded, which card is it on\?/);
+  assert.doesNotMatch(json.reply, /What mould or sculpt|What colour is it|Any markings/);
+  assert.equal(json.flowState.topic, "accessory_factory");
+  assert.equal(json.flowState.photoMould, true);
+  assert.ok(json.actions.some(action => /Glasslite Brazil Princess Leia/.test(action.label)));
+  const unsure = await call({ message: "I'm not sure", flowState: json.flowState });
+  assert.match(unsure.json.reply, /Kader M2/);
+  assert.match(unsure.json.reply, /Glasslite M2/);
+  assert.doesNotMatch(unsure.json.reply, /plastic colour|What colour is it/);
+  assert.equal(unsure.json.flowState, null);
+});
+
+await test("colour alone does not select a mould when there is no comparison photo", async () => {
+  const colourOnly = [{ id: "rebel-blaster--unitoy-m3", factory: "Unitoy", mould: "M3", tells: [{ category: "plastic", detail: "dark blue" }] }];
+  assert.deepEqual(decideMoulds({ ids: ["rebel-blaster--unitoy-m3"], variants: colourOnly, photosAttached: false }), []);
+  assert.equal(decideMoulds({ ids: ["rebel-blaster--unitoy-m3"], variants: colourOnly, photosAttached: true }).length, 1);
+  assert.equal(decideMoulds({
+    ids: ["jawa-blaster--unitoy-m1", "nope"],
+    variants: [{ id: "jawa-blaster--unitoy-m1", tells: [{ category: "mould", detail: "long rear bump" }] }],
+    photosAttached: false
+  }).length, 1);
+  assert.equal(resolveAccessoryName("blaster").accessory, "");
+  assert.equal(resolveAccessoryName("Jawa Blaster").accessory, "Jawa Blaster");
+  assert.equal(resolveAccessoryName("Rebel Blaster (DL-44)").accessory, "Rebel Blaster");
+});
+
+await test("identify mould on a vague photo name does not ask mould colour and markings", async () => {
+  const { json } = await call({
+    message: "identify-this-accessory",
+    flowState: {
+      topic: "image_identified",
+      itemKind: "accessory",
+      figure: "blaster",
+      displayName: "blaster",
+      step: "post_identification"
+    }
+  });
+  assert.equal(calls.length, 0);
+  assert.match(json.reply, /Which accessory is it\?/);
+  assert.doesNotMatch(json.reply, /What mould or sculpt|What colour is it|Any markings|Let's check blaster/);
+  assert.equal(json.flowState.topic, "accessory_factory");
+  assert.equal(json.flowState.step, "need_name");
 });
 
 await test("UNCHANGED: scripted flow start and continue still work with no model call", async () => {

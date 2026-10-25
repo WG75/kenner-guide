@@ -299,7 +299,19 @@ export function accessoryContinue(flowState, message) {
   }
   const all = load().accessoryVariants || [];
   const variants = all.filter(variant => (flowState.variantIds || []).includes(variant.id));
-  if (wanted === "i m not sure" || wanted === "im not sure") return remain(variants, flowState.figureVariantIds || []);
+  if (wanted === "i m not sure" || wanted === "im not sure") {
+    if (flowState.photoMould) {
+      const labels = variants.map(variant => `${variant.factory} ${variant.mould}`);
+      const named = labels.map(label => `the ${label}`);
+      const list = named.length <= 1
+        ? (named[0] || "those moulds")
+        : named.length === 2
+          ? `${named[0]} and ${named[1]}`
+          : `${named.slice(0, -1).join(", ")}, and ${named[named.length - 1]}`;
+      return done(`The photo matches ${list}. I can't narrow it further from what's stored.`);
+    }
+    return remain(variants, flowState.figureVariantIds || []);
+  }
   const category = (flowState.usedTells || []).slice(-1)[0];
   const tell = variants.flatMap(variant => variant.tells || []).find(item =>
     item.category === category && (norm(item.detail) === wanted || norm(item.detail).startsWith(wanted.replace(/\.\.\.$/, "")))

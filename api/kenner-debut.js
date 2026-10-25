@@ -208,8 +208,7 @@ export function composePhotoReply({ itemKind, displayName, visibleAccessories, c
       possessive: "its",
       accessories: [],
       actions: [
-        { label: ACCESSORY_QUESTION_BUTTON, value: "ask-about-accessory" },
-        { label: "Would you like to identify its mould, colour or markings?", value: "identify-this-accessory" }
+        { label: ACCESSORY_QUESTION_BUTTON, value: "ask-about-accessory" }
       ],
       quickReplies: true,
       helper: PHOTO_HELPER
