@@ -5,6 +5,7 @@ import { selectVvReferencePhotos } from "./vv-reference-photos.js";
 import { composePhotoReply, PHOTO_HELPER } from "./kenner-debut.js";
 import { cooOpening, cooContinue } from "./coo-flow.js";
 import { accessoryOffer, accessoryContinue, startAccessoryIdentify } from "./accessory-match.js";
+import { replyToAccessoryPhoto } from "./accessory-photo.js";
 
 export { tcTopicRoute, tcPalitoyIntent };
 
@@ -82,6 +83,15 @@ export default async function handler(req, res) {
             flowState: started.flowState,
             actions: started.actions,
             quickReplies: started.quickReplies,
+            skipFollowUps: true
+          });
+        }
+        // The photo is already in hand. Do not start the mould, colour and markings quiz.
+        if (flowState.itemKind === "accessory") {
+          return tcReply(res, started ? started.reply : `I can't tell the mould of ${identifiedName || "this accessory"} from the stored records.`, {
+            flowState: started ? started.flowState : null,
+            actions: started ? started.actions : [],
+            quickReplies: Boolean(started && started.quickReplies),
             skipFollowUps: true
           });
         }
@@ -213,7 +223,7 @@ Your job:
   "confidence": "high", "medium", or "low"
   "is_vintage_star_wars": true or false
 
-Use "accessory" for a loose weapon, cape, cloak or other accessory photographed on its own. Otherwise use "figure".
+Use "accessory" for a loose weapon, cape, cloak or other accessory photographed on its own. Otherwise use "figure". For a loose accessory, display_name is the specific stored name when the photo shows which one it is, such as "Rebel Blaster" or "Jawa Blaster". Use a general word such as "blaster" only when the photo does not show which accessory it is.
 
 Use the original Kenner release name. Add a later-outfit name only when that costume is actually visible. A guessed subtitle is not enough.
 
@@ -295,6 +305,11 @@ confidence: "low"
             { label: "Describe it", value: "describe figure" }
           ]
         });
+      }
+
+      if (itemKind === "accessory") {
+        const photoReply = await replyToAccessoryPhoto({ image, displayName, figureKey });
+        return res.status(200).json(photoReply);
       }
 
       return res.status(200).json(photoIdentificationReply({
