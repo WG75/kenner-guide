@@ -28,13 +28,15 @@ function vvManifest() {
 function hotlinkImage(image) {
   const url = String(image && image.url || "").trim();
   if (!url) return null;
+  const sourcePage = String(image.sourcePage || "");
+  const credit = String(image.credit || (sourcePage ? "Photo: Variant Villain" : ""));
   return {
     url,
     alt: String(image.alt || "VF-CB reference image"),
     title: String(image.title || ""),
-    caption: "",
-    credit: "Photo: Variant Villain",
-    sourcePage: String(image.sourcePage || "")
+    caption: String(image.caption || ""),
+    credit,
+    sourcePage
   };
 }
 
@@ -159,6 +161,24 @@ export function cooOpening(displayName, settings = {}) {
   }
   record.options = options;
   record.whereToLook = withoutMexico(record.whereToLook);
+  const cape = record.capeFirst;
+  if (cape && Array.isArray(cape.choices) && cape.choices.length) {
+    const capeAsk = withoutMexico(cape.ask || "Cloth cape, or no cape?");
+    return {
+      reply: [cooExplanation(record), "", `Let's check ${name}. ${capeAsk}`.trim()].join("\n"),
+      actions: cape.choices.map(item => ({ label: item.label, value: item.label })),
+      quickReplies: true,
+      flowState: {
+        topic: "variant_identify",
+        displayName: record.name,
+        step: "cape",
+        optionId: "",
+        answers: [],
+        photoTells: [],
+        usedTells: []
+      }
+    };
+  }
   const where = record.whereToLook;
   const ask = withoutMexico(record.ask || "Which stamp do you see?");
   const lines = [
@@ -336,6 +356,36 @@ export function cooContinue(flowState, message, settings = {}) {
     photoTells: Array.isArray(flowState.photoTells) ? flowState.photoTells : [],
     usedTells: Array.isArray(flowState.usedTells) ? flowState.usedTells : []
   };
+  if (flowState.step === "cape") {
+    const choices = (record.capeFirst && record.capeFirst.choices) || [];
+    const picked = choices.find(item => norm(item.label) === norm(text) || norm(item.id) === norm(text));
+    if (!picked) return done(`I'm not sure. That isn't one of the cape choices for ${record.name}.`);
+    const where = withoutMexico(record.whereToLook);
+    const ask = withoutMexico(record.ask || "Which stamp do you see?");
+    const note = String(picked.note || "").trim();
+    const reply = [
+      note,
+      "",
+      `Let's check ${record.name}. ${where}`.trim(),
+      "",
+      ask
+    ].join("\n").replace(/^\n+/, "");
+    return withStampImage({
+      reply,
+      actions: (record.options || []).map(choice),
+      quickReplies: true,
+      flowState: {
+        topic: "variant_identify",
+        displayName: record.name,
+        step: "coo",
+        optionId: "",
+        answers,
+        photoTells: carried.photoTells,
+        usedTells: carried.usedTells,
+        cape: picked.id || ""
+      }
+    }, record, enabled);
+  }
   if (flowState.step === "tell") {
     const candidates = String(flowState.optionId || "").split("|").filter(Boolean);
     if (norm(text) === "i m not sure" || norm(text) === "im not sure") {
@@ -354,10 +404,34 @@ export function cooContinue(flowState, message, settings = {}) {
     return askTell(record, next, { ...flowState, photoTells: [] }, answers);
   }
   if (flowState.step === "follow") {
-    const parent = (record.options || []).find(option => option.id === flowState.optionId);
-    const follow = parent ? findFollowUp(parent, text) : null;
+    const parent = (record.options || []).find(option => option.id === (flowState.parentOptionId || flowState.optionId));
+    const container = flowState.parentOptionId ? findFollowUp(parent, flowState.optionId) : parent;
+    const follow = container ? findFollowUp(container, text) : null;
     if (!follow) {
       return done(`I'm not sure. That isn't one of the verified stamps for ${record.name}.`);
+    }
+    if (Array.isArray(follow.followUps) && follow.followUps.length) {
+      const compared = compareImages(follow, enabled);
+      const look = String(follow.compareReply || "").trim()
+        || `One more look at ${record.name}.\n\nWhich of these is it?`;
+      const result = {
+        reply: look,
+        actions: follow.followUps.map(choice),
+        quickReplies: true,
+        flowState: {
+          topic: "variant_identify",
+          displayName: record.name,
+          step: "follow",
+          optionId: follow.id,
+          parentOptionId: parent.id,
+          answers,
+          photoTells: carried.photoTells,
+          usedTells: carried.usedTells,
+          cape: flowState.cape || ""
+        }
+      };
+      if (compared.length) result.images = compared;
+      return result;
     }
     if (Array.isArray(follow.factories) && follow.factories.length) {
       return afterStamp(record, follow.factories, follow.conclusion, follow.sure, { ...flowState, ...carried }, answers);

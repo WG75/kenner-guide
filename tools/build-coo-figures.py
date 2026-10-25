@@ -401,6 +401,8 @@ def main():
     from apply_ben_owner import sync_owner_stamps as sync_ben_stamps
     from apply_han_owner import apply_coo_figures as apply_han_coo
     from apply_han_owner import sync_owner_stamps as sync_han_stamps
+    from apply_jawa_owner import apply_coo_figures as apply_jawa_coo
+    from apply_jawa_owner import sync_owner_stamps as sync_jawa_stamps
     figures = apply_owner_records(figures)
     apply_coo_figures(figures)
     apply_leia_coo(figures)
@@ -411,6 +413,7 @@ def main():
     apply_stormtrooper_coo(figures)
     apply_ben_coo(figures)
     apply_han_coo(figures)
+    apply_jawa_coo(figures)
     payload = {
         "cooGuideUrl": COO_GUIDE,
         "rule": "A partial or cut-off country name counts as No COO. No vintage figure is offered a Mexico leg stamp.",
@@ -445,6 +448,9 @@ def main():
     han = next((fig for fig in figures if fig.get("name") == "Han Solo"), None)
     if han:
         sync_han_stamps(han)
+    jawa = next((fig for fig in figures if fig.get("name") == "Jawa"), None)
+    if jawa:
+        sync_jawa_stamps(jawa)
     verified = sum(1 for fig in figures if fig["verified"])
     print(f"wrote {OUT} figures={len(figures)} verified={verified} fetched_now={fetched}")
 

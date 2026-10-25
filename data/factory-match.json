@@ -2519,77 +2519,146 @@
       ]
     },
     {
-      "id": "jawa--i-kader",
+      "id": "jawa--kader-i",
       "figure": "Jawa",
-      "factory": "I Kader",
-      "mould": "",
-      "source": "variantvillain.com",
+      "factory": "Kader I",
+      "mould": "I",
+      "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/jawa/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Made in China",
-          "where": "Look at the country stamp."
+          "detail": "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family I. Vinyl cape on 12a, cloth by 12c.",
+          "where": "Look at the country stamp on the left leg."
         }
       ]
     },
     {
-      "id": "jawa--kader-hong-kong-china",
+      "id": "jawa--kader-ii-1a",
       "figure": "Jawa",
-      "factory": "Kader: HONG KONG & CHINA",
-      "mould": "",
-      "source": "variantvillain.com",
+      "factory": "Kader II 1a",
+      "mould": "II",
+      "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/jawa/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Made in China",
-          "where": "Look at the country stamp."
+          "detail": "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. The H of HONG KONG is under the ©.",
+          "where": "Look at the country stamp on the left leg."
         }
       ]
     },
     {
-      "id": "jawa--kader",
+      "id": "jawa--kader-ii-1b",
       "figure": "Jawa",
-      "factory": "KADER",
-      "mould": "",
-      "source": "variantvillain.com",
+      "factory": "Kader II 1b",
+      "mould": "II",
+      "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/jawa/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Made in China",
-          "where": "Look at the country stamp."
-        },
+          "detail": "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. The H of HONG KONG starts after the ©, under the first G.",
+          "where": "Look at the country stamp on the left leg."
+        }
+      ]
+    },
+    {
+      "id": "jawa--kader-china-2a",
+      "figure": "Jawa",
+      "factory": "Kader China II 2a",
+      "mould": "II",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/jawa/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md.",
+      "tells": [
         {
-          "category": "plastic",
-          "detail": "M2 Kader blue-black Jawa blaster",
-          "where": "Look at the plastic colour or shade."
-        },
+          "category": "coo",
+          "detail": "Only the licensing line on the left leg: '© G.M.F.G.I. 1977', with no country. Family II 2a. The stamp sits higher on the leg.",
+          "where": "Look at the country stamp on the left leg."
+        }
+      ]
+    },
+    {
+      "id": "jawa--kader-china-2b",
+      "figure": "Jawa",
+      "factory": "Kader China II 2b",
+      "mould": "II",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/jawa/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md.",
+      "tells": [
         {
-          "category": "plastic",
-          "detail": "M3 Kader blue-black Jawa blaster",
-          "where": "Look at the plastic colour or shade."
+          "category": "coo",
+          "detail": "Only the licensing line on the left leg: '© G.M.F.G.I. 1977', with no country. Family II 2b. The stamp sits lower on the leg.",
+          "where": "Look at the country stamp on the left leg."
+        }
+      ]
+    },
+    {
+      "id": "jawa--toltoys",
+      "figure": "Jawa",
+      "factory": "Toltoys",
+      "mould": "Toltoys",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/jawa/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Green plastic. Kader Hong Kong tooling.",
+          "where": "Look at the country stamp on the left leg."
         }
       ]
     },
     {
       "id": "jawa--unitoy",
       "figure": "Jawa",
-      "factory": "UNITOY",
-      "mould": "",
-      "source": "variantvillain.com",
+      "factory": "Unitoy",
+      "mould": "III/IV",
+      "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/jawa/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "Hong Kong only",
-          "where": "Look at the country stamp."
-        },
+          "detail": "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family III or IV. No separate stamp.",
+          "where": "Look at the country stamp on the left leg."
+        }
+      ]
+    },
+    {
+      "id": "jawa--lili-ledy",
+      "figure": "Jawa",
+      "factory": "Lili Ledy",
+      "mould": "IV",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/jawa/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md.",
+      "tells": [
         {
-          "category": "plastic",
-          "detail": "M1 Unitoy blue-black Jawa blaster",
-          "where": "Look at the plastic colour or shade."
+          "category": "coo",
+          "detail": "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family IV tooling. No stamp of its own.",
+          "where": "Look at the country stamp on the left leg."
+        }
+      ]
+    },
+    {
+      "id": "jawa--poch",
+      "figure": "Jawa",
+      "factory": "Poch",
+      "mould": "Poch",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/jawa/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Mixed Kader and Unitoy parts. No stamp of its own.",
+          "where": "Look at the country stamp on the left leg."
         }
       ]
     },
@@ -8748,7 +8817,11 @@
           "where": "Look at the mould: shape, proportions, tip or hilt."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "jawa--unitoy",
+        "jawa--poch"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md."
     },
     {
       "id": "jawa-blaster--kader-m2",
@@ -8784,7 +8857,10 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "jawa--kader-i"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md."
     },
     {
       "id": "jawa-blaster--kader-china-m2",
@@ -8820,7 +8896,11 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "jawa--kader-china-2a",
+        "jawa--kader-china-2b"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md."
     },
     {
       "id": "jawa-blaster--glasslite-m2",
@@ -8892,7 +8972,12 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "jawa--kader-ii-1a",
+        "jawa--kader-ii-1b",
+        "jawa--toltoys"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md."
     },
     {
       "id": "bespin-blaster--smile-m1",
@@ -9558,7 +9643,10 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "jawa--lili-ledy"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md."
     },
     {
       "id": "palace-blaster--smile-m1",
@@ -13336,7 +13424,11 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/jawa-cloak/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "jawa--kader-china-2a",
+        "jawa--kader-china-2b"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md."
     },
     {
       "id": "jawa-cloak--kader-m2",
@@ -13419,7 +13511,10 @@
           "where": "If it is still carded, which card is it on?"
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "jawa--toltoys"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/jawa.md."
     },
     {
       "id": "klaatu-skirt--smile-m1",
@@ -15585,5 +15680,6 @@
   "vaderOwner": "data/references/owner-verified/darth-vader.md",
   "stormtrooperOwner": "data/references/owner-verified/stormtrooper.md",
   "benOwner": "data/references/owner-verified/ben-obi-wan-kenobi.md",
-  "hanOwner": "data/references/owner-verified/han-solo.md"
+  "hanOwner": "data/references/owner-verified/han-solo.md",
+  "jawaOwner": "data/references/owner-verified/jawa.md"
 }

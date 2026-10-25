@@ -1175,9 +1175,9 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   assert.ok(pbpFigure.tells.some(item => /pinkish hands/.test(item.detail)));
 
   const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
-  assert.match(coverage, /Figures with a tell besides the COO stamp: 23 \(was 18\/104\)/);
+  assert.match(coverage, /Figures with a tell besides the COO stamp: 22 \(was 18\/104\)/);
   assert.match(coverage, /Accessory variants with tells: 244/);
-  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 174/);
+  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 186/);
   const blaster = await call({ message: "identify the rebel blaster" });
   assert.equal(blaster.json.flowState.topic, "accessory_factory");
   assert.match(blaster.json.reply, /Let's check Rebel Blaster/);
@@ -2220,6 +2220,198 @@ await test("Han Solo stamps follow Warren's rulings and the COO sheet is hot-lin
   assert.match(dossier, /PBP or Euro Kenner/);
   assert.doesNotMatch(dossier, /M5 – Taiwan/);
   assert.doesNotMatch(dossier, /COO Family 1: Unitoy/);
+  assert.ok(dossier.length <= 7000, dossier.length);
+  assert.ok(owner.length <= 7000, owner.length);
+});
+
+await test("Jawa stamps follow Warren's rulings and the visual check is hot-linked", async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  const fig = data.figures.find(item => item.name === "Jawa");
+  const owner = fs.readFileSync(path.join(root, "data/references/owner-verified/jawa.md"), "utf8");
+  assert.match(owner, /Date: 2026-10-25/);
+  assert.match(owner, /Source: owner Warren/);
+  assert.match(owner, /38270/);
+  assert.match(owner, /left leg/);
+  assert.match(owner, /Not the lower robe/);
+  assert.match(owner, /© G\.M\.F\.G\.I\. 1977/);
+  assert.match(owner, /Not 'Made in China'/);
+  assert.match(owner, /under the ©/);
+  assert.match(owner, /under the first G/);
+  assert.match(owner, /licensing line only/);
+  assert.match(owner, /sits higher/);
+  assert.match(owner, /sits lower/);
+  assert.match(owner, /0\.1%/);
+  assert.match(owner, /no stamp of its own/);
+  assert.match(owner, /Jawa Blaster M2/);
+  assert.match(owner, /Jawa Blaster M3/);
+  assert.match(owner, /Jawa Blaster M1/);
+  assert.match(owner, /Pilot Blaster M6/);
+  assert.match(owner, /Vinyl Cape M2/);
+  assert.match(owner, /Cloak M2/);
+  assert.equal(fig.tells.length, 0);
+  assert.match(fig.whereToLook, /left leg/);
+  assert.match(fig.whereToLook, /Not the lower robe/);
+  assert.equal(fig.referenceImage.url, "https://www.variantvillain.com/wp-content/uploads/2023/10/Jawa-COO-Sheet-3.3.jpg");
+  assert.equal(fig.referenceImage.sourcePage, "https://www.variantvillain.com/characters/sw/jawa/");
+  assert.equal(fig.referenceImage.credit, "Photo: Variant Villain");
+  assert.equal(fig.options.find(item => item.id === "hk-left").coo, "Hong Kong");
+  assert.equal(fig.options.find(item => item.id === "licensing-line").coo, "No COO");
+  assert.equal(fig.options.some(item => item.id === "made-in-china" || item.coo === "China"), false);
+  assert.deepEqual(fig.capeFirst.choices.map(item => item.label), [
+    "Cloth cape",
+    "No cape",
+    "Vinyl cape, extremely rare"
+  ]);
+
+  const hongKong = "Two lines on the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'";
+  const line = "Only the licensing line on the left leg: '© G.M.F.G.I. 1977', with no country";
+  const sheet = "https://www.variantvillain.com/wp-content/uploads/2023/10/Jawa-COO-Sheet-3.3.jpg";
+  const family = "https://www.variantvillain.com/wp-content/uploads/2025/09/F2-Kader.jpg";
+  const start = await call({ message: "identify the variant of Jawa" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.flowState.displayName, "Jawa");
+  assert.equal(start.json.flowState.step, "cape");
+  assert.equal(start.json.images, undefined);
+  assert.match(start.json.reply, /country of origin \(COO\) stamp/);
+  assert.match(start.json.reply, /left leg/);
+  assert.match(start.json.reply, /0\.1%/);
+  assert.doesNotMatch(start.json.reply, /The country stamp is the first check/);
+  assert.doesNotMatch(start.json.reply, /Mexico/);
+  assert.deepEqual(start.json.actions.map(action => action.label), [
+    "Cloth cape",
+    "No cape",
+    "Vinyl cape, extremely rare"
+  ]);
+
+  const { cooOpening, cooContinue } = await import(pathToFileURL(path.join(root, "api/coo-flow.js")).href);
+  const hidden = cooOpening("Jawa", { photos: false });
+  assert.equal(hidden.images, undefined);
+  const hiddenCape = cooContinue(hidden.flowState, "Cloth cape", { photos: false });
+  assert.equal(hiddenCape.images, undefined);
+  const hiddenLine = cooContinue(hiddenCape.flowState, line, { photos: false });
+  assert.equal(hiddenLine.images, undefined);
+  const hiddenFamily = cooContinue(hiddenCape.flowState, hongKong, { photos: false });
+  const hiddenSplit = cooContinue(hiddenFamily.flowState, "It matches family II on the sheet", { photos: false });
+  assert.equal(hiddenSplit.images, undefined);
+
+  const cloth = await call({ message: "Cloth cape", flowState: start.json.flowState });
+  assert.equal(cloth.json.flowState.step, "coo");
+  assert.match(cloth.json.reply, /left leg/);
+  assert.equal(cloth.json.images[0].url, sheet);
+  assert.equal(cloth.json.images[0].credit, "Photo: Variant Villain");
+  assert.equal(cloth.json.images[0].sourcePage, "https://www.variantvillain.com/characters/sw/jawa/");
+  assert.deepEqual(cloth.json.actions.map(action => action.label), [hongKong, line]);
+
+  const hkStep = await call({ message: hongKong, flowState: cloth.json.flowState });
+  assert.equal(hkStep.json.flowState.step, "follow");
+  assert.equal(hkStep.json.images[0].url, sheet);
+  assert.ok(hkStep.json.actions.some(action => action.label === "It matches family I on the sheet"));
+  assert.ok(hkStep.json.actions.some(action => action.label === "It matches family II on the sheet"));
+  assert.ok(hkStep.json.actions.some(action => action.label === "The plastic is green"));
+  const familyI = await call({ message: "It matches family I on the sheet", flowState: hkStep.json.flowState });
+  assert.match(familyI.json.reply, /family I/);
+  assert.match(familyI.json.reply, /Jawa Blaster M2/);
+  assert.match(familyI.json.reply, /Shall I check the Jawa Blaster/);
+  assert.equal(familyI.json.flowState.step, "offer");
+  const split = await call({ message: "It matches family II on the sheet", flowState: hkStep.json.flowState });
+  assert.equal(split.json.flowState.step, "follow");
+  assert.equal(split.json.images[0].url, family);
+  assert.equal(split.json.images[0].credit, "Photo: Variant Villain");
+  assert.match(split.json.images[0].alt, /under the ©/);
+  assert.match(split.json.reply, /under the first G/);
+  const under = await call({ message: "The H of HONG KONG is under the ©", flowState: split.json.flowState });
+  assert.match(under.json.reply, /family II 1a/);
+  assert.match(under.json.reply, /Jawa Blaster M3/);
+  assert.equal(under.json.flowState.step, "offer");
+  const after = await call({ message: "The H of HONG KONG starts after the ©", flowState: split.json.flowState });
+  assert.match(after.json.reply, /family II 1b/);
+  assert.match(after.json.reply, /under the first G/);
+  assert.equal(after.json.flowState.step, "offer");
+  const green = await call({ message: "The plastic is green", flowState: hkStep.json.flowState });
+  assert.match(green.json.reply, /Toltoys/);
+  assert.match(green.json.reply, /green/);
+  assert.equal(green.json.flowState.step, "which");
+  assert.deepEqual(green.json.actions.map(action => action.label).sort(), ["Jawa Blaster", "Jawa Vinyl Cape"]);
+  const unitoy = await call({ message: "It matches family III or IV on the sheet", flowState: hkStep.json.flowState });
+  assert.match(unitoy.json.reply, /Unitoy/);
+  assert.match(unitoy.json.reply, /Jawa Blaster M1/);
+  assert.match(unitoy.json.reply, /no separate stamp/);
+  assert.equal(unitoy.json.flowState.step, "offer");
+  const lili = await call({ message: "It matches the Lili Ledy on the sheet", flowState: hkStep.json.flowState });
+  assert.match(lili.json.reply, /Lili Ledy/);
+  assert.match(lili.json.reply, /no stamp of its own/);
+  assert.match(lili.json.reply, /Pilot Blaster M6/);
+  assert.match(lili.json.reply, /Shall I check the Pilot Blaster/);
+  assert.equal(lili.json.flowState.step, "offer");
+  const poch = await call({ message: "It matches the Poch on the sheet", flowState: hkStep.json.flowState });
+  assert.match(poch.json.reply, /Poch/);
+  assert.match(poch.json.reply, /no stamp of its own/);
+  assert.match(poch.json.reply, /Jawa Blaster M1/);
+  assert.equal(poch.json.flowState.step, "offer");
+
+  const open = await call({ message: line, flowState: cloth.json.flowState });
+  assert.equal(open.json.flowState.step, "follow");
+  assert.equal(open.json.images[0].url, family);
+  assert.match(open.json.images[0].alt, /sits higher/);
+  assert.match(open.json.reply, /Not 'Made in China'/);
+  assert.match(open.json.reply, /sits lower/);
+  const higher = await call({ message: "The stamp sits higher on the leg", flowState: open.json.flowState });
+  assert.match(higher.json.reply, /family II 2a/);
+  assert.match(higher.json.reply, /Jawa Blaster M2/);
+  assert.match(higher.json.reply, /Cloak M2/);
+  assert.equal(higher.json.flowState.step, "which");
+  assert.deepEqual(higher.json.actions.map(action => action.label).sort(), ["Jawa Blaster", "Jawa Cloak"]);
+  const lower = await call({ message: "The stamp sits lower on the leg", flowState: open.json.flowState });
+  assert.match(lower.json.reply, /family II 2b/);
+  assert.equal(lower.json.flowState.step, "which");
+
+  const match = JSON.parse(fs.readFileSync(path.join(root, "data/factory-match.json"), "utf8"));
+  const jawas = match.figureVariants.filter(item => item.figure === "Jawa");
+  assert.deepEqual(jawas.map(item => item.id), [
+    "jawa--kader-i",
+    "jawa--kader-ii-1a",
+    "jawa--kader-ii-1b",
+    "jawa--kader-china-2a",
+    "jawa--kader-china-2b",
+    "jawa--toltoys",
+    "jawa--unitoy",
+    "jawa--lili-ledy",
+    "jawa--poch"
+  ]);
+  assert.ok(jawas.every(item => item.tells.every(tell => tell.category === "coo")));
+  assert.equal(match.figureVariants.some(item => item.id === "jawa--i-kader"), false);
+  assert.equal(match.figureVariants.some(item => item.id === "jawa--kader-hong-kong-china"), false);
+  const blasters = Object.fromEntries(match.accessoryVariants.map(item => [item.id, item]));
+  assert.deepEqual(blasters["jawa-blaster--kader-m2"].cardedWith, ["jawa--kader-i"]);
+  assert.deepEqual(blasters["jawa-blaster--kader-m3"].cardedWith, [
+    "jawa--kader-ii-1a",
+    "jawa--kader-ii-1b",
+    "jawa--toltoys"
+  ]);
+  assert.deepEqual(blasters["jawa-blaster--kader-china-m2"].cardedWith, [
+    "jawa--kader-china-2a",
+    "jawa--kader-china-2b"
+  ]);
+  assert.deepEqual(blasters["jawa-cloak--kader-china-m2"].cardedWith, [
+    "jawa--kader-china-2a",
+    "jawa--kader-china-2b"
+  ]);
+  assert.deepEqual(blasters["jawa-vinyl-cape--kader-m2"].cardedWith, ["jawa--toltoys"]);
+  assert.deepEqual(blasters["jawa-blaster--unitoy-m1"].cardedWith, ["jawa--unitoy", "jawa--poch"]);
+  assert.deepEqual(blasters["pilot-blaster--lili-ledy-m6"].cardedWith, ["jawa--lili-ledy"]);
+  assert.deepEqual(blasters["jawa-blaster--glasslite-m2"].cardedWith, [
+    "princess-leia-organa--glasslite-m1",
+    "princess-leia-organa--glasslite-m3",
+    "han-solo--glasslite"
+  ]);
+  assert.match(blasters["jawa-blaster--glasslite-m2"].sourceNote, /17 Oct 2026/);
+  assert.equal(blasters["jawa-blaster--kader-m2"].cardedWith.includes("han-solo--glasslite"), false);
+
+  const dossier = fs.readFileSync(path.join(root, "data/figures/jawa-reference.txt"), "utf8");
+  assert.match(dossier, /left leg/);
+  assert.match(dossier, /Not 'Made in China'/);
+  assert.match(dossier, /0\.1%/);
+  assert.doesNotMatch(dossier, /Taiwan/);
   assert.ok(dossier.length <= 7000, dossier.length);
   assert.ok(owner.length <= 7000, owner.length);
 });

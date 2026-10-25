@@ -10,7 +10,7 @@ First Release:
 
 Overview:
 
-The Jawa is one of the earliest figures in the vintage Star Wars line and is best known for its distinctive body covering and early production vinyl cape variant.
+The Jawa is one of the earliest figures in the vintage Star Wars line. Ask cloth cape or no cape first. A vinyl cape is extremely rare, about 0.1%.
 
 It exists in multiple variants across different factories, COO markings, and production runs.
 
@@ -29,7 +29,7 @@ A Jawa is typically associated with two main accessories:
 
 Body Covering:
 
-The body covering is the most obvious first visual difference.
+Ask cloth cape or no cape first. A vinyl cape is extremely rare, about 0.1%, so it is not the split to start with.
 
 Vinyl Cape:
 - Very early production version
@@ -53,8 +53,8 @@ For serious collectors trying to match a Jawa correctly, the main starting point
 
 The key factors are:
 
-1. COO (Country of Origin) on the figure
-2. Cloak or cape type
+1. Cloth cape, or no cape
+2. COO (Country of Origin) on the left leg
 3. Hood size and shape on cloth cloaks
 4. Stitching and construction details
 5. Blaster mould traits and markings
@@ -84,15 +84,17 @@ Blaster identification should be used alongside the figure COO and body covering
 
 COO (Country of Origin):
 
-Jawa figures exist with multiple COO markings, including:
-- Hong Kong
-- Taiwan
-- No COO (in some cases)
+The stamp is on the left leg, not the lower robe. Warren confirmed this on 25 Oct 2026.
 
-COO is one of the most important advanced identifiers because it helps narrow:
-- production period
-- factory family
-- likely correct accessory pairing
+Every stamp is two lines, '© G.M.F.G.I. 1977' and 'HONG KONG', except Kader China. Kader China, family II 2, is one licensing line and no country. Not 'Made in China'.
+
+Family I, Kader Hong Kong: vinyl cape on the 12a card, cloth by the 12c card. Jawa Blaster M2.
+Family II 1a: the H of HONG KONG is under the ©. Family II 1b: the H starts after the ©, under the first G. Jawa Blaster M3.
+Family II 2a sits higher on the leg. Family II 2b sits lower. Both are Kader China. Jawa Blaster M2 and Cloak M2.
+Toltoys uses Kader Hong Kong tooling. The plastic is green. Bluish Jawa Blaster M3 and Vinyl Cape M2.
+Family III and IV are Unitoy. No separate stamp. Jawa Blaster M1.
+Lili Ledy uses Family IV tooling and has no stamp of its own. Pilot Blaster M6.
+Poch uses mixed Kader and Unitoy parts and has no stamp of its own. Jawa Blaster M1.
 
 ---
 
