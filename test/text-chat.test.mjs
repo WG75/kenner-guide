@@ -338,7 +338,7 @@ await test("UNCHANGED: photo path still calls vision model and returns flowState
 await test("Lando photo reply names the debut card and visible accessories", async () => {
   nextResponse = async () => ({
     ok: true, status: 200,
-    json: async () => ({ choices: [{ message: { content: '{"figure_key":"lando_calrissian","display_name":"Lando Calrissian","confidence":"high","is_vintage_star_wars":true,"visible_accessories":["cape","blaster"]}' } }] })
+    json: async () => ({ choices: [{ message: { content: '{"figure_key":"lando_calrissian","display_name":"Lando Calrissian","confidence":"high","is_vintage_star_wars":true,"visible_accessories":["cape","blaster"],"accessories_clear":true}' } }] })
   });
   const complete = await call({ message: "Analyse this uploaded figure photo.", image: "data:image/png;base64,AAAA" });
   assert.equal(complete.json.reply, "The figure in your photo appears to be Lando Calrissian, first released in 1980 on the 31-back The Empire Strikes Back cardback. He looks complete, with his cape and blaster.");
@@ -346,10 +346,11 @@ await test("Lando photo reply names the debut card and visible accessories", asy
 
   nextResponse = async () => ({
     ok: true, status: 200,
-    json: async () => ({ choices: [{ message: { content: '{"figure_key":"lando","display_name":"Lando Calrissian","confidence":"high","is_vintage_star_wars":true,"visible_accessories":["cape"]}' } }] })
+    json: async () => ({ choices: [{ message: { content: '{"figure_key":"lando","display_name":"Lando Calrissian","confidence":"high","is_vintage_star_wars":true,"visible_accessories":["cape"],"accessories_clear":false}' } }] })
   });
   const missing = await call({ message: "", image: "data:image/png;base64,AAAA" });
-  assert.match(missing.json.reply, /He appears to be missing his blaster\./);
+  assert.match(missing.json.reply, /I can see his cape\./);
+  assert.doesNotMatch(missing.json.reply, /looks complete|appears to be missing/);
   assert.equal(missing.json.actions[1].label, "Would you like to identify his variant or either of his accessories?");
   assert.match(calls[0].body.messages[0].content, /blue shirt/);
   assert.match(calls[0].body.messages[0].content, /Skiff Guard Disguise/);
@@ -369,7 +370,8 @@ await test("same-name photos stay on the original figure unless the later outfit
               confidence: "high",
               is_vintage_star_wars: true,
               visible_accessories: extras.visible || [],
-              costume_cues: extras.cues || []
+              costume_cues: extras.cues || [],
+              accessories_clear: extras.clear === true
             })
           }
         }]
@@ -379,13 +381,13 @@ await test("same-name photos stay on the original figure unless the later outfit
     return json;
   }
 
-  const lando = await identify("Lando Calrissian (Skiff Guard)", { visible: ["cape", "blaster"], cues: ["blue shirt", "cape"] });
+  const lando = await identify("Lando Calrissian (Skiff Guard)", { visible: ["cape", "blaster"], cues: ["blue shirt", "cape"], clear: true });
   assert.equal(lando.reply, "The figure in your photo appears to be Lando Calrissian, first released in 1980 on the 31-back The Empire Strikes Back cardback. He looks complete, with his cape and blaster.");
   assert.equal(lando.flowState.displayName, "Lando Calrissian");
   assert.equal(lando.flowState.figure, "lando_calrissian");
   assert.doesNotMatch(lando.reply, /Skiff|General Pilot/);
 
-  const skiff = await identify("Lando Calrissian", { visible: ["helmet", "vibro axe"], cues: ["skiff outfit", "helmet"] });
+  const skiff = await identify("Lando Calrissian", { visible: ["helmet", "vibro axe"], cues: ["skiff outfit", "helmet"], clear: true });
   assert.equal(skiff.reply, "The figure in your photo appears to be Lando Calrissian (Skiff Guard Disguise), first released in 1983 on the 65-back Return of the Jedi cardback. He looks complete, with his helmet and vibro axe.");
   assert.equal(skiff.flowState.displayName, "Lando Calrissian (Skiff Guard Disguise)");
 
@@ -393,30 +395,99 @@ await test("same-name photos stay on the original figure unless the later outfit
   assert.match(general.reply, /^The figure in your photo appears to be Lando Calrissian, first released in 1980 on the 31-back The Empire Strikes Back cardback\./);
   assert.doesNotMatch(general.reply, /General Pilot/);
 
-  const generalSeen = await identify("Lando", { visible: ["cape", "blaster"], cues: ["general uniform"] });
+  const generalSeen = await identify("Lando", { visible: ["cape", "blaster"], cues: ["general uniform"], clear: true });
   assert.equal(generalSeen.reply, "The figure in your photo appears to be Lando Calrissian (General Pilot), first released in 1985 on the 92-back Power of the Force cardback. He looks complete, with his cape and palace blaster.");
 
-  const luke = await identify("Luke Skywalker (X-Wing Pilot)", { visible: ["lightsaber"], cues: ["tunic"] });
+  const luke = await identify("Luke Skywalker (X-Wing Pilot)", { visible: ["lightsaber"], cues: ["tunic"], clear: true });
   assert.equal(luke.reply, "The figure in your photo appears to be Luke Skywalker, first released in 1977 on the 12-back Star Wars cardback. He looks complete, with his lightsaber.");
 
-  const lukeHoth = await identify("Luke Skywalker", { visible: ["blaster"], cues: ["hoth gear"] });
+  const lukeHoth = await identify("Luke Skywalker", { visible: ["blaster"], cues: ["hoth gear"], clear: true });
   assert.equal(lukeHoth.reply, "The figure in your photo appears to be Luke Skywalker (Hoth Battle Gear), first released in 1982 on the 45-back The Empire Strikes Back cardback. He looks complete, with his blaster.");
 
-  const han = await identify("Han Solo (Hoth Outfit)", { visible: ["blaster"], cues: ["black vest"] });
+  const han = await identify("Han Solo (Hoth Outfit)", { visible: ["blaster"], cues: ["black vest"], clear: true });
   assert.equal(han.reply, "The figure in your photo appears to be Han Solo, first released in 1977 on the 12-back Star Wars cardback. He looks complete, with his blaster.");
 
-  const hanHoth = await identify("Han Solo (Hoth Outfit)", { visible: ["blaster"], cues: ["hoth parka"] });
+  const hanHoth = await identify("Han Solo (Hoth Outfit)", { visible: ["blaster"], cues: ["hoth parka"], clear: true });
   assert.equal(hanHoth.reply, "The figure in your photo appears to be Han Solo (Hoth Outfit), first released in 1980 on the 31-back The Empire Strikes Back cardback. He looks complete, with his blaster.");
 
-  const leia = await identify("Princess Leia Organa (Boushh Disguise)", { visible: ["cape", "blaster"], cues: ["white gown"] });
+  const leia = await identify("Princess Leia Organa (Boushh Disguise)", { visible: ["cape", "blaster"], cues: ["white gown"], clear: true });
   assert.equal(leia.reply, "The figure in your photo appears to be Princess Leia Organa, first released in 1977 on the 12-back Star Wars cardback. She looks complete, with her cape and blaster.");
 
-  const leiaHoth = await identify("Leia (Hoth Outfit)", { visible: ["blaster"], cues: ["hoth"] });
+  const leiaHoth = await identify("Leia (Hoth Outfit)", { visible: ["blaster"], cues: ["hoth"], clear: true });
   assert.equal(leiaHoth.reply, "The figure in your photo appears to be Leia (Hoth Outfit), first released in 1981 on the 41-back The Empire Strikes Back cardback. She looks complete, with her blaster.");
 
-  const chewie = await identify("Chewbacca (Bandolier)", { visible: ["bowcaster"], cues: ["bandolier"] });
+  const chewie = await identify("Chewbacca (Bandolier)", { visible: ["bowcaster"], cues: ["bandolier"], clear: true });
   assert.equal(chewie.reply, "The figure in your photo appears to be Chewbacca, first released in 1977 on the 12-back Star Wars cardback. He looks complete, with his bowcaster.");
   assert.equal(chewie.flowState.displayName, "Chewbacca");
+
+  const doubtful = await identify("Chewbacca", { visible: ["bowcaster"], clear: false });
+  assert.equal(doubtful.reply, "The figure in your photo appears to be Chewbacca, first released in 1977 on the 12-back Star Wars cardback. I can see his bowcaster.");
+  assert.doesNotMatch(doubtful.reply, /complete|missing/);
+
+  const unseen = await identify("Chewbacca", { visible: [] });
+  assert.equal(unseen.reply, "The figure in your photo appears to be Chewbacca, first released in 1977 on the 12-back Star Wars cardback.");
+  assert.doesNotMatch(unseen.reply, /complete|bowcaster|missing/);
+});
+
+await test("a new figure photo leaves the previous figure's questions", async () => {
+  nextResponse = async () => ({
+    ok: true,
+    status: 200,
+    json: async () => ({
+      choices: [{
+        message: {
+          content: '{"figure_key":"darth_vader","display_name":"Darth Vader","item_kind":"figure","confidence":"high","is_vintage_star_wars":true,"visible_accessories":["cape"],"accessories_clear":false}'
+        }
+      }]
+    })
+  });
+  const openFlows = [
+    {
+      topic: "variant_identify",
+      displayName: "Chewbacca",
+      step: "coo",
+      optionId: "",
+      answers: [],
+      photoTells: [],
+      usedTells: []
+    },
+    {
+      topic: "accessory_factory",
+      step: "tell",
+      accessory: "Jawa Blaster",
+      variantIds: ["jawa-blaster--unitoy-m1"],
+      usedTells: ["plastic"]
+    },
+    {
+      topic: "data_flow",
+      flowId: "jawa.figure",
+      stepId: "entry"
+    },
+    {
+      topic: "image_identified",
+      itemKind: "figure",
+      figure: "chewbacca",
+      displayName: "Chewbacca",
+      step: "post_identification"
+    }
+  ];
+  for (const flowState of openFlows) {
+    const before = calls.length;
+    const { json } = await call({
+      message: "Analyse this uploaded figure photo.",
+      image: "data:image/png;base64,AAAA",
+      flowState
+    });
+    assert.equal(calls.length, before + 1, flowState.topic);
+    assert.match(json.reply, /Darth Vader/, flowState.topic);
+    assert.match(json.reply, /I can see his cape\./, flowState.topic);
+    assert.doesNotMatch(json.reply, /looks complete|appears to be missing|Chewbacca|Which stamp|HONG KONG/, flowState.topic);
+    assert.equal(json.flowState.topic, "image_identified", flowState.topic);
+    assert.equal(json.flowState.displayName, "Darth Vader", flowState.topic);
+    assert.equal(json.actions.some(action => /HONG KONG|Chewbacca|stamp/i.test(action.label)), false, flowState.topic);
+  }
+  assert.match(calls[0].body.messages[0].content, /accessories_clear/);
+  assert.match(calls[0].body.messages[0].content, /small, dark, or partly hidden shape is not a bowcaster/);
 });
 
 await test("a quick reply or another photo appends to the transcript", async () => {
@@ -3047,6 +3118,10 @@ await test("photo follow-up buttons ask about the figure or start identification
   assert.match(page, /id="removePhoto"/);
   assert.match(page, /Add a note or press Send to identify/);
   assert.match(page, /submitAttachedPhoto/);
+  const changeAt = page.indexOf('input.addEventListener("change"');
+  const afterChange = page.slice(changeAt, changeAt + 500);
+  assert.match(afterChange, /clearQuickReplies\(\)/);
+  assert.match(afterChange, /submitAttachedPhoto\(""\)/);
   assert.doesNotMatch(page, />Analyse</);
   assert.doesNotMatch(page, />Cancel</);
   assert.doesNotMatch(page, /analysePhoto/);
@@ -3706,8 +3781,10 @@ await test("Han Bespin, Romba and Paploo have no cape, bow or spear", async () =
   assert.deepEqual(romba.accessories, []);
   assert.deepEqual(paploo.accessories, []);
   assert.deepEqual(anakin.accessories, []);
-  assert.equal(completenessLine(han, ["blaster"]), "He looks complete, with his blaster.");
-  assert.equal(completenessLine(han, ["cape", "blaster"]), "He looks complete, with his blaster.");
+  assert.equal(completenessLine(han, ["blaster"]), "I can see his blaster.");
+  assert.equal(completenessLine(han, ["blaster"], true), "He looks complete, with his blaster.");
+  assert.equal(completenessLine(han, ["cape", "blaster"]), "I can see his blaster.");
+  assert.equal(completenessLine(han, ["cape", "blaster"], true), "He looks complete, with his blaster.");
   assert.equal(completenessLine(romba, ["bow"]), "");
   assert.equal(completenessLine(paploo, ["spear"]), "");
   assert.equal(completenessLine(anakin, ["lightsaber"]), "");
@@ -3730,15 +3807,19 @@ await test("Han Bespin, Romba and Paploo have no cape, bow or spear", async () =
   assert.deepEqual(byProduct["70830"].accessories, ["helmet", "vibro axe"]);
   assert.deepEqual(byProduct["70760"].accessories, ["vibro axe"]);
   assert.deepEqual(byProduct["71190"].accessories, ["skiff vibro staff"]);
-  assert.equal(completenessLine(byProduct["71190"], ["skiff vibro staff"]), "He looks complete, with his skiff vibro staff.");
-  assert.equal(completenessLine(byProduct["71190"], ["vibro axe"]), "He appears to be missing his skiff vibro staff.");
+  assert.equal(completenessLine(byProduct["71190"], ["skiff vibro staff"]), "I can see his skiff vibro staff.");
+  assert.equal(completenessLine(byProduct["71190"], ["skiff vibro staff"], true), "He looks complete, with his skiff vibro staff.");
+  assert.equal(completenessLine(byProduct["71190"], ["vibro axe"]), "");
+  assert.equal(completenessLine(byProduct["71190"], ["vibro axe"], true), "He appears to be missing his skiff vibro staff.");
   const niktoFile = fs.readFileSync(path.join(root, "data/figures/nikto-reference.txt"), "utf8");
   assert.match(niktoFile, /Owner-verified, 11 Oct 2026: Nikto's weapon is the Skiff Vibro Staff/);
   assert.match(builder, /"71190": \("Nikto", "he", \["skiff vibro staff"\]\)/);
   assert.deepEqual(byProduct["39030"].accessories, ["imperial blaster"]);
   assert.equal(completenessLine(byProduct["69420"], ["sensorscope"]), "");
-  assert.equal(completenessLine(byProduct["70830"], ["helmet", "vibro axe"]), "He looks complete, with his helmet and vibro axe.");
-  assert.equal(completenessLine(byProduct["70830"], ["helmet", "cape"]), "He appears to be missing his vibro axe.");
+  assert.equal(completenessLine(byProduct["70830"], ["helmet", "vibro axe"]), "I can see his helmet and vibro axe.");
+  assert.equal(completenessLine(byProduct["70830"], ["helmet", "vibro axe"], true), "He looks complete, with his helmet and vibro axe.");
+  assert.equal(completenessLine(byProduct["70830"], ["helmet", "cape"]), "I can see his helmet.");
+  assert.equal(completenessLine(byProduct["70830"], ["helmet", "cape"], true), "He appears to be missing his vibro axe.");
   const teebo = fs.readFileSync(path.join(root, "data/figures/teebo-reference.txt"), "utf8");
   assert.doesNotMatch(teebo, /round tip/);
   assert.match(teebo, /Teebo has no lightsaber/);

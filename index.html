@@ -828,8 +828,8 @@
 
     async function sendMessage(prefilledText) {
       const text = String(prefilledText || inputEl.value || "").trim();
-      if (!prefilledText && pendingPhoto) {
-        await submitAttachedPhoto(text);
+      if (pendingPhoto) {
+        await submitAttachedPhoto(prefilledText ? "" : text);
         return;
       }
       if (!text) return;
@@ -924,9 +924,11 @@
         const file = event.target.files[0];
         if (!file) return;
         pendingPhoto = file;
+        clearQuickReplies();
         const reader = new FileReader();
         reader.onload = function(e) {
           showPhotoPreview(e.target.result);
+          submitAttachedPhoto("");
         };
         reader.readAsDataURL(file);
       });
@@ -970,6 +972,7 @@
         addMessage("assistant", prepared.message);
         return;
       }
+      clearQuickReplies();
       addImageCard({
         url: prepared.dataUrl,
         alt: "Uploaded photo",

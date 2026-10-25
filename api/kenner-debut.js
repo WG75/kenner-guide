@@ -170,16 +170,22 @@ function accessorySeen(name, visible) {
   });
 }
 
-export function completenessLine(figure, visibleAccessories) {
+export function completenessLine(figure, visibleAccessories, accessoriesClear) {
   const accessories = Array.isArray(figure && figure.accessories) ? figure.accessories : [];
   if (!accessories.length || !Array.isArray(visibleAccessories)) return "";
+  const seen = accessories.filter(item => accessorySeen(item, visibleAccessories));
   const missing = accessories.filter(item => !accessorySeen(item, visibleAccessories));
   const pronoun = capitalise(figure.pronoun || "he");
   const possessive = figure.possessive || "his";
-  if (!missing.length) {
+  const clear = accessoriesClear === true;
+  if (clear && !missing.length) {
     return `${pronoun} looks complete, with ${possessive} ${joinList(accessories)}.`;
   }
-  return `${pronoun} appears to be missing ${possessive} ${joinList(missing)}.`;
+  if (clear && missing.length) {
+    return `${pronoun} appears to be missing ${possessive} ${joinList(missing)}.`;
+  }
+  if (seen.length) return `I can see ${possessive} ${joinList(seen)}.`;
+  return "";
 }
 
 export function variantButtonLabel(possessive, accessories) {
@@ -196,7 +202,7 @@ function releaseClause(figure) {
   return `first released in ${figure.year} on the ${figure.cardback} ${figure.line} cardback${outside}`;
 }
 
-export function composePhotoReply({ itemKind, displayName, visibleAccessories, costumeCues }) {
+export function composePhotoReply({ itemKind, displayName, visibleAccessories, costumeCues, accessoriesClear }) {
   const accessory = itemKind === "accessory";
   if (accessory) {
     const name = String(displayName || "").trim() || "an unidentified accessory";
@@ -223,7 +229,7 @@ export function composePhotoReply({ itemKind, displayName, visibleAccessories, c
   let reply = figure
     ? `The figure in your photo appears to be ${name}, ${releaseClause(figure)}.`
     : `The figure in your photo appears to be ${name}.`;
-  const complete = figure ? completenessLine(figure, visibleAccessories) : "";
+  const complete = figure ? completenessLine(figure, visibleAccessories, accessoriesClear === true) : "";
   if (complete) reply += ` ${complete}`;
   return {
     reply,
