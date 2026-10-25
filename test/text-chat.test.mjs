@@ -1175,9 +1175,9 @@ await test("Luke farmboy COO is checked first, then hair separates the shared Ho
   assert.ok(pbpFigure.tells.some(item => /pinkish hands/.test(item.detail)));
 
   const coverage = fs.readFileSync(path.join(root, "docs/cross-reference-coverage.md"), "utf8");
-  assert.match(coverage, /Figures with a tell besides the COO stamp: 22 \(was 18\/104\)/);
+  assert.match(coverage, /Figures with a tell besides the COO stamp: 21 \(was 18\/104\)/);
   assert.match(coverage, /Accessory variants with tells: 244/);
-  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 186/);
+  assert.match(coverage, /Factory-match links \(accessory variant to figure variant\): 224/);
   const blaster = await call({ message: "identify the rebel blaster" });
   assert.equal(blaster.json.flowState.topic, "accessory_factory");
   assert.match(blaster.json.reply, /Let's check Rebel Blaster/);
@@ -2412,6 +2412,180 @@ await test("Jawa stamps follow Warren's rulings and the visual check is hot-link
   assert.match(dossier, /Not 'Made in China'/);
   assert.match(dossier, /0\.1%/);
   assert.doesNotMatch(dossier, /Taiwan/);
+  assert.ok(dossier.length <= 7000, dossier.length);
+  assert.ok(owner.length <= 7000, owner.length);
+});
+
+await test("Sand People stamps follow Warren's rulings and the COO sheet is hot-linked", async () => {
+  const data = JSON.parse(fs.readFileSync(path.join(root, "data/coo-figures.json"), "utf8"));
+  const fig = data.figures.find(item => item.name === "Sand People");
+  const owner = fs.readFileSync(path.join(root, "data/references/owner-verified/sand-people.md"), "utf8");
+  assert.match(owner, /Date: 2026-10-25/);
+  assert.match(owner, /Source: owner Warren/);
+  assert.match(owner, /38280/);
+  assert.match(owner, /back of the left leg/);
+  assert.match(owner, /© G\.M\.F\.G\.I\. 1977/);
+  assert.match(owner, /wider/);
+  assert.match(owner, /tighter/);
+  assert.match(owner, /end of the lines/);
+  assert.match(owner, /no picture/);
+  assert.match(owner, /Meccano is always hollow tubes/);
+  assert.match(owner, /purple-brown/);
+  assert.match(owner, /Cape M7b/);
+  assert.match(owner, /no cloth cloak/);
+  assert.equal(fig.tells.length, 0);
+  assert.match(fig.whereToLook, /back of the left leg/);
+  assert.equal(fig.referenceImage.url, "https://www.variantvillain.com/wp-content/uploads/2021/12/sw_tusken.jpg");
+  assert.equal(fig.referenceImage.sourcePage, "https://www.variantvillain.com/characters/sw/sand-people/");
+  assert.equal(fig.referenceImage.credit, "Photo: Variant Villain");
+  assert.equal(fig.options.find(item => item.id === "hk-left").coo, "Hong Kong");
+  assert.equal(fig.options.find(item => item.id === "licensing-line").coo, "No COO");
+  assert.equal(fig.options.length, 2);
+
+  const hongKong = "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'";
+  const line = "Only the licensing line on the back of the left leg: '© G.M.F.G.I. 1977', with no country";
+  const sheet = "https://www.variantvillain.com/wp-content/uploads/2021/12/sw_tusken.jpg";
+  const start = await call({ message: "identify the variant of Sand People" });
+  assert.equal(calls.length, 0);
+  assert.equal(start.json.flowState.displayName, "Sand People");
+  assert.equal(start.json.flowState.step, "coo");
+  assert.match(start.json.reply, /country of origin \(COO\) stamp/);
+  assert.match(start.json.reply, /back of the left leg/);
+  assert.match(start.json.reply, /no cloth cloak/);
+  assert.doesNotMatch(start.json.reply, /Mexico/);
+  assert.equal(start.json.images[0].url, sheet);
+  assert.equal(start.json.images[0].credit, "Photo: Variant Villain");
+  assert.equal(start.json.images[0].sourcePage, "https://www.variantvillain.com/characters/sw/sand-people/");
+  assert.deepEqual(start.json.actions.map(action => action.label), [hongKong, line]);
+
+  const { cooOpening, cooContinue } = await import(pathToFileURL(path.join(root, "api/coo-flow.js")).href);
+  const hidden = cooOpening("Sand People", { photos: false });
+  assert.equal(hidden.images, undefined);
+  const hiddenHk = cooContinue(hidden.flowState, hongKong, { photos: false });
+  assert.equal(hiddenHk.images, undefined);
+  const hiddenSplit = cooContinue(hiddenHk.flowState, "It matches family I on the sheet", { photos: false });
+  assert.equal(hiddenSplit.images, undefined);
+
+  const hkStep = await call({ message: hongKong, flowState: start.json.flowState });
+  assert.equal(hkStep.json.flowState.step, "follow");
+  assert.equal(hkStep.json.images[0].url, sheet);
+  assert.ok(hkStep.json.actions.some(action => action.label === "It matches family I on the sheet"));
+  assert.ok(hkStep.json.actions.some(action => action.label === "Very dark brown bandolier and gloves, and thin horns"));
+  assert.ok(hkStep.json.actions.some(action => action.label === "The bandolier is purple-brown"));
+  const familyI = await call({ message: "It matches family I on the sheet", flowState: hkStep.json.flowState });
+  assert.equal(familyI.json.flowState.step, "follow");
+  assert.equal(familyI.json.images[0].url, sheet);
+  assert.match(familyI.json.images[0].alt, /wider/);
+  assert.match(familyI.json.reply, /tighter/);
+  const wide = await call({ message: "The gap between the two lines is wider", flowState: familyI.json.flowState });
+  assert.match(wide.json.reply, /family I 1a/);
+  assert.match(wide.json.reply, /Gaderffii Stick M1/);
+  assert.match(wide.json.reply, /Cape M1 or M3/);
+  assert.equal(wide.json.flowState.step, "which");
+  assert.deepEqual(wide.json.actions.map(action => action.label).sort(), ["Gaderffii Stick", "Tusken Raider Cape"]);
+  const tight = await call({ message: "The gap between the two lines is tighter", flowState: familyI.json.flowState });
+  assert.match(tight.json.reply, /family I 1b/);
+  assert.equal(tight.json.flowState.step, "which");
+
+  const familyII = await call({ message: "It matches family II on the sheet", flowState: hkStep.json.flowState });
+  assert.match(familyII.json.reply, /end of the lines/);
+  const ii1a = await call({ message: "It matches 1a on the sheet", flowState: familyII.json.flowState });
+  assert.match(ii1a.json.reply, /family II 1a/);
+  assert.match(ii1a.json.reply, /Cape M1, M2 or M3/);
+  assert.equal(ii1a.json.flowState.step, "which");
+
+  const familyIII = await call({ message: "It matches family III on the sheet", flowState: hkStep.json.flowState });
+  assert.match(familyIII.json.reply, /no picture/);
+  const pictured = await call({ message: "It matches 1a on the sheet", flowState: familyIII.json.flowState });
+  assert.match(pictured.json.reply, /family III 1a/);
+  assert.match(pictured.json.reply, /Cape M6/);
+  assert.equal(pictured.json.flowState.step, "which");
+  const missing = await call({ message: "Family III 1b. The sheet has no picture", flowState: familyIII.json.flowState });
+  assert.match(missing.json.reply, /no picture of family III 1b/);
+  assert.match(missing.json.reply, /will not guess a tell/);
+  assert.equal(missing.json.flowState, null);
+
+  const familyV = await call({ message: "It matches family V on the sheet", flowState: hkStep.json.flowState });
+  assert.match(familyV.json.reply, /how high the © sits/);
+  const v1b = await call({ message: "It matches 1b on the sheet", flowState: familyV.json.flowState });
+  assert.match(v1b.json.reply, /family V 1b/);
+  assert.match(v1b.json.reply, /Cape M5/);
+  const hollow = await call({ message: "Very dark brown bandolier and gloves, and thin horns", flowState: hkStep.json.flowState });
+  assert.match(hollow.json.reply, /hollow tubes/);
+  assert.match(hollow.json.reply, /Gaderffii Stick M3/);
+  assert.match(hollow.json.reply, /Cape M7b/);
+  assert.equal(hollow.json.flowState.step, "which");
+  const poch = await call({ message: "The bandolier is purple-brown", flowState: hkStep.json.flowState });
+  assert.match(poch.json.reply, /Poch/);
+  assert.match(poch.json.reply, /purple-brown/);
+  assert.match(poch.json.reply, /sometimes M2/);
+  assert.match(poch.json.reply, /Shall I check the Gaderffii Stick/);
+  assert.equal(poch.json.flowState.step, "offer");
+
+  const open = await call({ message: line, flowState: start.json.flowState });
+  assert.equal(open.json.flowState.step, "follow");
+  assert.equal(open.json.images[0].url, sheet);
+  assert.match(open.json.reply, /Meccano is always hollow tubes/);
+  const noco = await call({ message: "It matches family II 2 on the sheet", flowState: open.json.flowState });
+  assert.match(noco.json.reply, /weaker/);
+  assert.equal(noco.json.images[0].url, sheet);
+  const low = await call({ message: "It matches 2b on the sheet", flowState: noco.json.flowState });
+  assert.match(low.json.reply, /family II 2b/);
+  assert.match(low.json.reply, /Gaderffii Stick M1/);
+  assert.equal(low.json.flowState.step, "which");
+  const mec = await call({ message: "It matches family IV 2, the Meccano, on the sheet", flowState: open.json.flowState });
+  const mecB = await call({ message: "It matches 2b on the sheet", flowState: mec.json.flowState });
+  assert.match(mecB.json.reply, /Meccano is always hollow tubes/);
+  assert.match(mecB.json.reply, /Cape M7b/);
+  assert.equal(mecB.json.flowState.step, "which");
+
+  const match = JSON.parse(fs.readFileSync(path.join(root, "data/factory-match.json"), "utf8"));
+  const rows = match.figureVariants.filter(item => item.figure === "Sand People");
+  assert.deepEqual(rows.map(item => item.id), [
+    "sand-people--unitoy-i-1a",
+    "sand-people--unitoy-i-1b",
+    "sand-people--unitoy-ii-1a",
+    "sand-people--unitoy-ii-1b",
+    "sand-people--unitoy-ii-2a",
+    "sand-people--unitoy-ii-2b",
+    "sand-people--kader-iii-1a",
+    "sand-people--kader-iv-1a",
+    "sand-people--kader-iv-1b",
+    "sand-people--kader-v-1a",
+    "sand-people--kader-v-1b",
+    "sand-people--hollow-tubes",
+    "sand-people--poch"
+  ]);
+  assert.ok(rows.every(item => item.tells.every(tell => tell.category === "coo")));
+  assert.equal(match.figureVariants.some(item => item.id === "sand-people--unitoy"), false);
+  const byId = Object.fromEntries(match.accessoryVariants.map(item => [item.id, item]));
+  assert.deepEqual(byId["gaderffii-stick--unitoy-m1"].cardedWith, [
+    "sand-people--unitoy-i-1a",
+    "sand-people--unitoy-i-1b",
+    "sand-people--unitoy-ii-1a",
+    "sand-people--unitoy-ii-1b",
+    "sand-people--unitoy-ii-2a",
+    "sand-people--unitoy-ii-2b",
+    "sand-people--poch"
+  ]);
+  assert.deepEqual(byId["gaderffii-stick--kader-m3"].cardedWith, ["sand-people--hollow-tubes"]);
+  assert.ok(byId["gaderffii-stick--kader-m2"].cardedWith.includes("sand-people--poch"));
+  assert.ok(byId["gaderffii-stick--kader-m2"].cardedWith.includes("sand-people--kader-iii-1a"));
+  assert.deepEqual(byId["tusken-raider-cape--kader-m6"].cardedWith, ["sand-people--kader-iii-1a"]);
+  assert.deepEqual(byId["tusken-raider-cape--kader-m5"].cardedWith, [
+    "sand-people--kader-v-1a",
+    "sand-people--kader-v-1b"
+  ]);
+  assert.ok(byId["tusken-raider-cape--kader-m7"].cardedWith.includes("sand-people--hollow-tubes"));
+  assert.ok(byId["tusken-raider-cape--unitoy-m2"].cardedWith.includes("sand-people--unitoy-ii-2a"));
+  assert.equal(byId["tusken-raider-cape--unitoy-m2"].cardedWith.includes("sand-people--unitoy-i-1a"), false);
+
+  const dossier = fs.readFileSync(path.join(root, "data/figures/sand-people-reference.txt"), "utf8");
+  assert.match(dossier, /back of the left leg/);
+  assert.match(dossier, /no cloth cloak/);
+  assert.match(dossier, /Meccano is always hollow tubes/);
+  assert.doesNotMatch(dossier, /Taiwan/);
+  assert.doesNotMatch(dossier, /Lili Ledy/);
   assert.ok(dossier.length <= 7000, dossier.length);
   assert.ok(owner.length <= 7000, owner.length);
 });

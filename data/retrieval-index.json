@@ -4630,7 +4630,7 @@
         "reference"
       ],
       "years": [],
-      "chars": 4587
+      "chars": 5446
     },
     {
       "relPath": "figures/snaggletooth-reference.txt",
@@ -5240,6 +5240,24 @@
       ],
       "years": [],
       "chars": 3725
+    },
+    {
+      "relPath": "references/owner-verified/sand-people.md",
+      "folder": "references",
+      "topic": "reference",
+      "role": "",
+      "name": "owner",
+      "aliases": [
+        "verified/sand",
+        "people"
+      ],
+      "keywords": [
+        "owner",
+        "verified/sand",
+        "people"
+      ],
+      "years": [],
+      "chars": 2260
     },
     {
       "relPath": "references/owner-verified/stormtrooper.md",

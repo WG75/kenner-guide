@@ -131,17 +131,18 @@ Notes:
 
 FACTORY VARIATION (FIGURE)
 
-COO Families include:
-- Hong Kong (various factories)
-- Taiwan
-- No COO variants
-- Possible Poch / Lili Ledy variants
+The stamp is on the back of the left leg. Warren confirmed this on 25 Oct 2026.
 
-Key Figure Traits:
-- Mask sculpt differences
-- Eye paint variation
-- Belt colour variation
-- Robe paint tone differences
+The common stamp is two lines, '© G.M.F.G.I. 1977' and 'HONG KONG'. The other stamp is the licensing line only, and no country.
+
+Family I, Unitoy Hong Kong: 1a has a wider gap between the two lines. 1b is tighter. Gaderffii Stick M1. Cape M1 or M3.
+Family II, Unitoy Hong Kong: check the end of the lines on the sheet. Family II 2 is the licensing line only, and the mould is weaker. Gaderffii Stick M1. Cape M1, M2 or M3.
+Family III, Kader Hong Kong: 1a is pictured. Family III 1b has no picture. Gaderffii Stick M2. Cape M6.
+Family IV, Kader Hong Kong: check 1a and 1b on the sheet. Gaderffii Stick M2. Cape M4 or M7. Family IV 2 is the Meccano. Meccano is always hollow tubes. Gaderffii Stick M3. Cape M7b.
+Family V, Kader Hong Kong: 1a and 1b differ by how high the © sits on the leg. Gaderffii Stick M2. Cape M5.
+Hollow tubes are the late Kader. Very dark brown bandolier and gloves, and thin horns. Gaderffii Stick M3. Cape M7b.
+Poch uses mixed family II and IV parts. The bandolier is purple-brown. Gaderffii Stick M1, sometimes M2.
+The cape is vinyl. There is no cloth cloak.
 
 --------------------------------------------------
 
@@ -149,12 +150,9 @@ PRODUCTION LOGIC
 
 Tusken Raider production shows:
 
-- Early mould variation across multiple factories
-- Independent evolution of cape cuts and weapon moulds
-- No strict 1:1 pairing rules like some figures
-
-Instead:
-👉 Variants must be judged as combinations
+- The stamp on the back of the left leg comes first
+- Then match the family on the Variant Villain COO sheet
+- Cape and gaderffii stick follow the family
 
 --------------------------------------------------
 
@@ -187,12 +185,10 @@ To correctly identify a Tusken Raider:
 
 You must evaluate:
 
-1. Figure sculpt (mask + body)
-2. Cape variant (cut + holes)
-3. Gaderffii stick mould + colour
-4. COO marking
-
-All three components must align.
+1. The stamp on the back of the left leg
+2. The family on the Variant Villain COO sheet
+3. Cape variant
+4. Gaderffii stick mould
 
 --------------------------------------------------
 

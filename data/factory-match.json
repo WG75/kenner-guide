@@ -2663,22 +2663,210 @@
       ]
     },
     {
-      "id": "sand-people--unitoy",
+      "id": "sand-people--unitoy-i-1a",
       "figure": "Sand People",
-      "factory": "UNITOY",
-      "mould": "",
-      "source": "variantvillain.com",
+      "factory": "Unitoy I 1a",
+      "mould": "I",
+      "source": "owner",
       "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
       "tells": [
         {
           "category": "coo",
-          "detail": "No COO",
-          "where": "Look at the country stamp."
-        },
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family I 1a. The gap between the two lines is wider.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--unitoy-i-1b",
+      "figure": "Sand People",
+      "factory": "Unitoy I 1b",
+      "mould": "I",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
         {
-          "category": "head",
-          "detail": "UNITOY late head mould with thin horns and a roughy detailed mouthpiece. This one only came with Fam.2 figures and is the only head mould that appeared on the Fam.II No Coo.",
-          "where": "Look at the head."
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family I 1b. The gap between the two lines is tighter.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--unitoy-ii-1a",
+      "figure": "Sand People",
+      "factory": "Unitoy II 1a",
+      "mould": "II",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family II 1a. Check the end of the lines on the sheet.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--unitoy-ii-1b",
+      "figure": "Sand People",
+      "factory": "Unitoy II 1b",
+      "mould": "II",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family II 1b. Check the end of the lines on the sheet.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--unitoy-ii-2a",
+      "figure": "Sand People",
+      "factory": "Unitoy II 2a",
+      "mould": "II",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Only the licensing line on the back of the left leg: '© G.M.F.G.I. 1977', with no country. Family II 2a. The mould is weaker.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--unitoy-ii-2b",
+      "figure": "Sand People",
+      "factory": "Unitoy II 2b",
+      "mould": "II",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Only the licensing line on the back of the left leg: '© G.M.F.G.I. 1977', with no country. Family II 2b. The mould is weaker.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--kader-iii-1a",
+      "figure": "Sand People",
+      "factory": "Kader III 1a",
+      "mould": "III",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family III 1a. It is pictured on the sheet.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--kader-iv-1a",
+      "figure": "Sand People",
+      "factory": "Kader IV 1a",
+      "mould": "IV",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family IV 1a. Check the sheet.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--kader-iv-1b",
+      "figure": "Sand People",
+      "factory": "Kader IV 1b",
+      "mould": "IV",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family IV 1b. Check the sheet.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--kader-v-1a",
+      "figure": "Sand People",
+      "factory": "Kader V 1a",
+      "mould": "V",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family V 1a. The © height on the leg matches the sheet.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--kader-v-1b",
+      "figure": "Sand People",
+      "factory": "Kader V 1b",
+      "mould": "V",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Family V 1b. The © height on the leg matches the sheet.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--hollow-tubes",
+      "figure": "Sand People",
+      "factory": "Hollow Tubes",
+      "mould": "Hollow Tubes",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Late Kader. Very dark brown bandolier and gloves, and thin horns. Meccano is always hollow tubes.",
+          "where": "Look at the country stamp on the back of the left leg."
+        }
+      ]
+    },
+    {
+      "id": "sand-people--poch",
+      "figure": "Sand People",
+      "factory": "Poch",
+      "mould": "Poch",
+      "source": "owner",
+      "sourceUrl": "https://www.variantvillain.com/characters/sw/sand-people/",
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md.",
+      "tells": [
+        {
+          "category": "coo",
+          "detail": "Two lines on the back of the left leg: '© G.M.F.G.I. 1977' and 'HONG KONG'. Mixed family II and IV parts. The bandolier is purple-brown.",
+          "where": "Look at the country stamp on the back of the left leg."
         }
       ]
     },
@@ -11598,7 +11786,16 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--unitoy-i-1a",
+        "sand-people--unitoy-i-1b",
+        "sand-people--unitoy-ii-1a",
+        "sand-people--unitoy-ii-1b",
+        "sand-people--unitoy-ii-2a",
+        "sand-people--unitoy-ii-2b",
+        "sand-people--poch"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "gaderffii-stick--kader-m2",
@@ -11644,7 +11841,15 @@
           "where": "Look at the plastic colour or shade."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--kader-iii-1a",
+        "sand-people--kader-iv-1a",
+        "sand-people--kader-iv-1b",
+        "sand-people--kader-v-1a",
+        "sand-people--kader-v-1b",
+        "sand-people--poch"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "gaderffii-stick--kader-m3",
@@ -11654,7 +11859,10 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/gaderffii-stick/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--hollow-tubes"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "teebo-axe--unitoy-m1",
@@ -13156,7 +13364,15 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--unitoy-i-1a",
+        "sand-people--unitoy-i-1b",
+        "sand-people--unitoy-ii-1a",
+        "sand-people--unitoy-ii-1b",
+        "sand-people--unitoy-ii-2a",
+        "sand-people--unitoy-ii-2b"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "tusken-raider-cape--unitoy-m2",
@@ -13172,7 +13388,13 @@
           "where": "Look at the mould: shape, proportions, tip or hilt."
         }
       ],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--unitoy-ii-1a",
+        "sand-people--unitoy-ii-1b",
+        "sand-people--unitoy-ii-2a",
+        "sand-people--unitoy-ii-2b"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "tusken-raider-cape--unitoy-m3",
@@ -13182,7 +13404,15 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--unitoy-i-1a",
+        "sand-people--unitoy-i-1b",
+        "sand-people--unitoy-ii-1a",
+        "sand-people--unitoy-ii-1b",
+        "sand-people--unitoy-ii-2a",
+        "sand-people--unitoy-ii-2b"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "tusken-raider-cape--kader-m4",
@@ -13192,7 +13422,11 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--kader-iv-1a",
+        "sand-people--kader-iv-1b"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "tusken-raider-cape--kader-m5",
@@ -13202,7 +13436,11 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--kader-v-1a",
+        "sand-people--kader-v-1b"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "tusken-raider-cape--kader-m6",
@@ -13212,7 +13450,10 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--kader-iii-1a"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "tusken-raider-cape--kader-m7",
@@ -13222,7 +13463,12 @@
       "source": "variantvillain.com",
       "sourceUrl": "https://www.variantvillain.com/accessory-guide/tusken-raider-cape/",
       "tells": [],
-      "cardedWith": []
+      "cardedWith": [
+        "sand-people--kader-iv-1a",
+        "sand-people--kader-iv-1b",
+        "sand-people--hollow-tubes"
+      ],
+      "sourceNote": "Owner Warren, 25 Oct 2026. data/references/owner-verified/sand-people.md."
     },
     {
       "id": "darth-vader-cape--kader-m1",
@@ -15681,5 +15927,6 @@
   "stormtrooperOwner": "data/references/owner-verified/stormtrooper.md",
   "benOwner": "data/references/owner-verified/ben-obi-wan-kenobi.md",
   "hanOwner": "data/references/owner-verified/han-solo.md",
-  "jawaOwner": "data/references/owner-verified/jawa.md"
+  "jawaOwner": "data/references/owner-verified/jawa.md",
+  "sandPeopleOwner": "data/references/owner-verified/sand-people.md"
 }
